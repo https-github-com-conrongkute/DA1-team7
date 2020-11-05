@@ -1,0 +1,214 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    font-family: sans-serif;
+}
+.menu{
+    height: 980px;
+}
+.banner{
+    position: relative;
+}
+.nav{
+    width: calc(100% - 70px);
+    top: 20px;
+    left: 70px;
+    height: 160px;
+    position: absolute;
+}
+.navimg{
+    float: left;
+    width: 20%;
+}
+.navmenu{
+    width: calc(80% - 70px);
+    float: left;
+    text-align: center;
+    margin-top: 35px;
+
+}
+ul li{
+    list-style: none;
+    display: block;
+    overflow: hidden;
+    display: inline;
+    
+}
+ul li a{
+    margin-right: 35px;
+    font-size: 16px;
+    text-decoration: none;
+    overflow: hidden;
+    color: white;
+
+}
+.navtext{
+    position: absolute;
+    width: 100%;
+    top: 180px;
+    text-align: center;
+}
+.navtext h1{
+    color: orange;
+    font-size: 39px;
+    letter-spacing: 6px;
+
+}
+.navtext p{
+    margin-top: 30px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: white;
+    line-height: 27px;
+}
+.dangky{
+    width: 23%;
+    height: 400px;
+    position: absolute;
+    top: 440px;
+    left: 150px;
+    background-color: orange;
+    border-radius: 19px;
+    text-align: center;
+    box-shadow: #ccc 0px 20px 20px;
+
+}
+.dangky h3{
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+.dangky input{
+    width: 75%;
+    height: 42px;
+    margin-top: 25px;
+    border-radius: 16px;
+    border: 0;
+    color: rgb(172, 167, 167);
+}
+.dangky .submit{
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 40px;
+    background-color: #FF4500;
+
+}
+.dangky2{
+    width: 54.8%;
+    height: 310px;
+    top: 485px;
+    right: 150px;
+    position: absolute;
+    background-color: white;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: #ccc 8px 20px 20px;
+
+}
+.dangky2 .text1{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.dangky2 .text2{
+    display: flex;
+    width: 100%;
+    height: 260px;
+    text-align: center;
+
+}
+.dangky2 .box1{
+    width: calc(100%/3);
+}
+.dangky2 .box1 a{
+    font-weight: bold;
+}
+.dangky2 .box1 p{
+    margin-top: 15px;
+    line-height: 25px;
+    font-size: 13px;
+}
+.icon1{
+    width: 65px;
+    margin-left: 90px;
+    margin-top: 19px;
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 50px;
+    height: 65px;
+    border-radius: 100%;
+    background-color: orangered;
+}
+.icon1 img{
+    margin-top: 19px;
+}
+.danhsach{
+    width: 100%;
+    height: 840px;
+}
+.danhsach .tieude{
+    width: 100%;
+    height: 130px;
+    text-align: center;
+}
+.danhsach .tieude h4{
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.danhsach .tieude h2{
+    margin-bottom: 20px;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: orange;
+}
+.danhsach .canho{
+    margin: 0 auto;
+    width: 79%;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.danhsach .box2{
+    width: calc(100%/3 - 10px);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.box2 img{
+    width: 100%;
+    height: 230px;
+    margin-bottom: 10px;
+}
+.box2 a{
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+.box2text{
+    margin-left: 9px;
+    margin-right: 9px;
+}
+.gia{
+    width: 52%;
+    margin-left: 4%;
+    margin-top: 30px;
+    height: 40px;
+    float: left;
+}
+.datlich{
+    width: 34%;
+    margin-top: 20px;
+    border-radius: 20px;
+    margin-left: 3%;
+    float: left;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    font-size: 15px;
+    background-color: orange;
+}
