@@ -5,13 +5,17 @@
 }
 body{
     width: 100%;
-    font-family: sans-serif;
+    font-family: "Sf ui display",sans-serif;
 }
 .menu{
     height: 970px;
 }
 .banner{
     position: relative;
+}
+.banner img{
+    opacity: 0.8;
+
 }
 .nav{
     width: calc(100% - 70px);
@@ -44,7 +48,6 @@ ul li a{
     text-decoration: none;
     overflow: hidden;
     color: white;
-
 }
 .navtext{
     position: absolute;
@@ -54,14 +57,15 @@ ul li a{
 }
 .navtext h1{
     color: orange;
-    font-size: 39px;
-    letter-spacing: 6px;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
 
 }
 .navtext p{
     margin-top: 30px;
-    font-size: 16px;
-    letter-spacing: 2px;
+    font-size: 17px;
+    letter-spacing: 1.5px;
     color: white;
     line-height: 27px;
 }
@@ -92,7 +96,7 @@ ul li a{
     color: rgb(172, 167, 167);
 }
 .dangky .submit{
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 15px;
     margin-top: 40px;
@@ -238,12 +242,12 @@ ul li a{
     height: 450px;
     padding: 30px;
     line-height: 23px;
-    font-size: 15px;
+    font-size: 14px;
     color: rgb(240, 236, 236);
 }
 .textgt h1{
     color: rgb(238, 78, 20);
-    margin: 20px;
+    margin: 15px;
 }
 .thuenha{
     width: 80%;
