@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="menu">
@@ -36,10 +38,10 @@
         </div>
         <div class="dangky">
             <h3>Đăng ký tìm nhà siêu tốc !</h3>
-            <input type="text" value="Họ và tên">
-            <input type="text" value="Email">
-            <input type="text" value="Số điện thoại">
-            <input class="submit" type="submit" value="Tham gia ngay">
+            <input type="text" placeholder="Họ và tên">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Số điện thoại">
+            <input class="submit" type="submit" placeholder="Tham gia ngay">
         </div>
         <div class="dangky2">
             <div class="text1">
@@ -50,7 +52,7 @@
                     <div class="icon1">
                         <img src="img/fast.png" alt="">
                     </div>
-                    <a>Tận tâm</a>
+                    <a href="#">Tận tâm</a>
                     <p>Golden luôn đồng <br>
                         hành, hỗ trợ mọi vấn <br>
                         đề mọi lúc trong thời <br>
@@ -60,7 +62,7 @@
                     <div class="icon1">
                         <img src="img//guard.png" alt="">
                     </div>
-                    <a>Đáng tin cậy</a>
+                    <a href="#">Đáng tin cậy</a>
                     <p>Tất cả nhà thuê  <br>
                         chính chủ, không trung <br>
                         gian, cam kết an <br>
@@ -70,7 +72,7 @@
                     <div class="icon1">
                         <img src="img/like.png" alt="">
                     </div>
-                    <a>Dịch vụ miễn phí</a>
+                    <a href="#">Dịch vụ miễn phí</a>
                     <p>Dịch vụ tìm nhà <br>
                         và dẫn đi xem hoàn <br>
                         toàn miễn phí.</p>
@@ -87,7 +89,7 @@
             <div class="box2">
                 <img src="img/b1.jpg" alt="">
                 <div class="box2text">
-                    <a href="#">Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</a>
+                    <a  data-toggle="modal" data-target="#myModal" href="#">Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</a>
                 </div>
                 <div class="gia">
                   <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
@@ -96,6 +98,7 @@
                     <a href="#">Đặt lịch xem</a> 
                 </div>
             </div>
+            
             <div class="box2">
                 <img src="img/b2.jpg" alt="">
                 <div class="box2text">
@@ -226,7 +229,7 @@
             </div>
         </div>
     </div>
-    <footer>
+    <footer class="footer">
         <div class="box4 b1">
             <img src="img/logo.png" alt="">
             <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
@@ -268,5 +271,80 @@
             <input type="text" value="Địa chỉ email"><input class="ip2" type="submit" value="Đăng ký">
         </div>
     </footer>
+   
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="divlon">
+            <div class="div1">
+            <!-- Modal content-->
+                <div class="divimg">
+                    <div class="imglon">
+                        <img src="img/b3.jpg" width="100%" height="280px" alt="">
+                    </div>
+                    <div class="divnho">
+                        <div class="imgnho nho1">
+                            <img src="img/b1.jpg" alt="">
+                        </div> 
+                        <div class="imgnho">
+                            <img src="img/b2.jpg" alt="">
+                        </div>
+                        <div class="imgnho">
+                            <img src="img/b4.jpg" alt="">
+                        </div>
+                        <div class="imgnho">
+                            <img src="img/b5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="divtext">
+                    <div class="divtext1">
+                        <ul>
+                            <li>- Chiều dài: </li> <br>
+                            <li>- Hẻm: </li> <br>
+                            <li>- Phòng ngủ: 2</li> <br>
+                            <li>- Hướng: Không xác định </li>
+                        </ul>
+                    </div>
+                    <div class="divtext1">
+                        <ul>
+                            <li>- Chiều rộng: </li> <br>
+                            <li>- Tầng: 2 </li> <br>
+                            <li>- Phòng tắm: 1</li> <br>
+                            <li>- Giấy tờ: Không có</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="div2">
+                <i data-dismiss="modal" class="glyphicon glyphicon-remove"></i>
+                <div class="divmota1">
+                    <h3>Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</h3>
+                    <input class="ipmt" type="text" value="Thuê">
+                    <input type="text" value="Đã thẩm định">
+                    <input type="text" value="ID: 234567">
+                    
+                </div>
+                <div class="divmota2">
+                    <h4>Thông tin chi tiết</h4> <hr>
+                    <p>Cho thuê căn hộ dịch vụ - CityLand Park Hill -  Quận Gò Vấp
+
+                        - Diện tích sử dụng:25m2. Gồm 1 phòng ngủ và 1 wc.
+                        
+                        - Căn hộ mới hoàn thiện. Đang để trống. Full nội thất.
+                        
+                        - Tọa lạc ngay trung tâm Q.Gò Vấp, tiếp giáp Bình Thạnh, Tân Bình, Q.12, Phú Nhuận và kết nối với hệ thống giao thông huyết mạch....
+                        
+                        - Vị trí đẹp, thuận lợi giao thông. Khu dân cư văn minh, cao cấp, an ninh 24/7.
+                    </p>
+                    <input type="button" value="Xem thêm">
+                </div>                
+                <div class="divmota3">
+                    Giá: <a>4 triệu - 25 m²</a>
+                    <input type="button" value="Đặt lịch xem">
+                </div>
+            </div>
+          
+        </div>
+      </div>
 </body>
 </html>
+
