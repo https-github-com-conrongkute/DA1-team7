@@ -461,10 +461,11 @@ ul li a{
     height: 50px;
 }
 .divlon .divtext{
-    width: 100%;
     margin-top: 20px;
-    padding: 30px;
     display: flex;
+    border: 1px solid #ccc;
+    margin: 30px;
+    padding: 15px;
 }
 .divtext ul li{
     list-style: block;
@@ -478,20 +479,30 @@ ul li a{
     margin-bottom: 35px;
     margin-top: 40px;
     margin-left: 20px;
+    font-size: 29px;
+    line-height: 35px;
 }
 .divmota1 input{
     text-align: center;
-    width: 90px;
+    width: 100px;
     border: 0;
     height: 27px;
     border-radius: 3px;
-    font-size: 12px;
-    color: white;
+    font-size: 13px;
     font-weight: bold;
-    background: orange;
 }
 .ipmt{
-    margin-left: 20px;
+    margin-left: 20px;    
+    color: orangered;
+    background: rgb(248, 209, 242);
+}
+.ipmt2{
+    color: white;
+    background-color: blue;
+}
+.ipmt3{
+    background-color: #ccc;
+    color: white;
 }
 .divmota2{
     margin: 20px 20px;
@@ -519,4 +530,74 @@ ul li a{
 }
 .modal{
     margin-top: 30px;
+}
+.dl{
+    margin-top: 100px;
+    margin-left: 300px;
+   
+}
+.divdl{
+    background-color: white;
+    width: 45%;
+    position: relative;
+}
+.divdl i{
+    border-radius: 100%;
+    border: 1px solid #333333;
+    float: right;
+    font-size: 18px;
+    color: #333333;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.divdl h1{
+    padding-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.divdl input{
+    height: 35px;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: 0;
+    box-shadow: rgb(233, 229, 229) 3px 6px 6px 3px;
+}
+.divdl .ipdl1{
+    width: 91%;
+    margin:20px;
+    color: #ccc;
+}
+.divdl .ipdl2{
+    margin-bottom: 20px;
+    width: 45%;
+    margin-left: 20px;
+}
+.divdl .ipdl3{
+    width: 45%;
+    margin-bottom: 20px;
+}
+.divdl .ipdl4{
+    margin-bottom: 60px;
+    width: 45%;
+    margin-left: 20px;
+}
+.guitt{
+    top: 90%;
+    left: 30%;
+    right: 0;
+    position: absolute;
+    width: 40%;
+    height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: orangered;
+}
+.guitt a{
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    font-weight: bold;
 }

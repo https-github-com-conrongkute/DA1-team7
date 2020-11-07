@@ -26,8 +26,8 @@
                     <li><a href="#">Danh sách </a> </li>
                     <li><a href="#">Giới thiệu </a></li>
                     <li><a href="#">Liên hệ </a></li>
-                    <li><a href="#">Đăng nhập </a></li>
-                    <li><a href="#">Đăng ký </a></li>
+                    <li><a data-toggle="modal" data-target="#dangnhap" href="#">Đăng nhập </a></li>
+                    <li><a href="#">Đăng tin</a></li>
                 </ul>
             </div>
         </div>
@@ -89,20 +89,20 @@
             <div class="box2">
                 <img src="img/b1.jpg" alt="">
                 <div class="box2text">
-                    <a  data-toggle="modal" data-target="#myModal" href="#">Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</a>
+                    <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</a>
                 </div>
                 <div class="gia">
                   <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
                 </div>
                 <div class="datlich">
-                    <a href="#">Đặt lịch xem</a> 
+                    <a data-toggle="modal" data-target="#datlich" href="#">Đặt lịch xem</a> 
                 </div>
             </div>
             
             <div class="box2">
                 <img src="img/b2.jpg" alt="">
                 <div class="box2text">
-                    <a href="#">Cho Thuê Căn Hộ Chung Cư Tháp Mười Vừa Sửa Sang Mới Đẹp P2 Q6 </a>
+                    <a  data-toggle="modal" data-target="#myModal" href="#">Cho Thuê Căn Hộ Chung Cư Tháp Mười Vừa Sửa Sang Mới Đẹp P2 Q6 </a>
                 </div>
                 <div class="gia">
                     <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
@@ -114,7 +114,7 @@
             <div class="box2">
                 <img src="img/b3.jpg" alt="">
                 <div class="box2text">
-                     <a href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
+                     <a  data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
                 </div>
                 <div class="gia">
                     <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
@@ -218,7 +218,7 @@
     </div>
     <div class="tuvan">
         <div class="tuvanimg">
-            <img src="img/banner-f.jpg" alt="">
+            <img src="img/banner-f.jpg" width="100%" alt="">
             <div class="tuvantext">
                 <h1>Bạn vẫn chưa tìm được nhà ưng ý?</h1>
                 <p>Còn rất nhiều nhà riêng, căn hộ, chung cư chưa được đăng lên, hãy để Propzy tư vấn chọn 
@@ -319,8 +319,8 @@
                 <div class="divmota1">
                     <h3>Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</h3>
                     <input class="ipmt" type="text" value="Thuê">
-                    <input type="text" value="Đã thẩm định">
-                    <input type="text" value="ID: 234567">
+                    <input class="ipmt2" type="text" value="Đã thẩm định">
+                    <input class="ipmt3" type="text" value="ID: 234567">
                     
                 </div>
                 <div class="divmota2">
@@ -345,12 +345,22 @@
           
         </div>
       </div>
-      <script>
-        Swal.fire(
-            'Good job!',
-            'You clicked the button!',
-            'success'
-          )</script>
+     
+    <div class="modal fade dl" id="datlich" role="dialog">
+        <div class="divdl">
+            <i data-dismiss="modal" class="glyphicon glyphicon-remove"></i>
+            <h1>ĐẶT LỊCH XEM</h1>
+            <input class="ipdl1" type="text" placeholder="Họ và tên"> <br>
+            <input class="ipdl2" type="number" placeholder="Số điện thoại">
+            <input class="ipdl3" type="email" placeholder="Địa chỉ Email"> <br>
+            <input class="ipdl4" type="text" placeholder="Chọn ngày">
+
+        <div class="guitt">
+            <a href="#">GỬI THÔNG TIN</a>
+        </div>
+    </div>
+    </div>
 </body>
 </html>
+
 
