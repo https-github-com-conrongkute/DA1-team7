@@ -29,4 +29,5 @@ window.addEventListener("load", event => {
             currentmenuItem.classList.add('open');
         }
     };
+    
 })

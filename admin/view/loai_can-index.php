@@ -11,7 +11,7 @@
                     <th>Trạng Thái</th> -->
                     <th>Sửa</th>
                     <th>Xóa</th>
-                   
+
                 </tr>
             </thead>
             <tbody>
@@ -19,14 +19,52 @@
                 $stt+=1;
                 ?>
                 <tr>
+<<<<<<< HEAD
                     <td><?=$stt?></td>
                     <td><?=$ds["ten_can"]?></td>
                     <td><a href="<?=ADMIN_URL?>/?ctrl=loai_can&act=edit&ma_loai=<?=$ds["ma_loai"]?>" style="color: #455A64;"><i class="fas fa-edit"></i></a></td>
                     <td><a href="<?=ADMIN_URL?>/?ctrl=loai_can&act=delete&ma_loai=<?=$ds["ma_loai"]?>" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a></td>
+=======
+                    <td>1</td>
+                    <td>Chung cư</td>
+                    <td>
+                        <a href="#" style="color: #455A64;"><i class="fas fa-edit"></i></a>
+                    </td>
+                    <td>
+                        <a class="sua" href="#" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                    <!-- <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> -->
+>>>>>>> 74cf3a48a527a176e86af24381b1ec52af8420da
                 </tr>
             <?php }?>
             </tbody>
 
         </table>
+        <div class="delete-loaican">
+            <div class="delete-container">
+                <div class="delete-form">
+                    <h3 style="width: 100%;float: left;line-height: 100px;text-align: center;">Bạn có muốn xóa không ?</h3>
+                    <div class="nut">
+                         <a href="#" class="co" style="padding: 10px 20px;background-color: #f0f0f0;border-radius: 20px;width: 100px;margin-right: 10px;color:black;">Không</a>
+                         <a href="https://www.w3schools.com/"  class="co" style="padding: 10px 20px;background-color: red;border-radius: 20px;width: 100px;color: white;">Có</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('.sua').click(function(add) {
+            var delet = $('.delete-loaican');
+            delet.css('display', 'block');
+        });
+        $('.co').click(function(add) {
+            var delet = $('.delete-loaican');
+            delet.css('display', 'none');
+        });
+    });
+</script>
