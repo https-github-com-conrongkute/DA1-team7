@@ -13,7 +13,33 @@ a:hover{
     text-decoration: none;
     color: black;
 }
-
+.delete-loaican{
+    position: fixed;
+    width: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(116, 116, 156, 0.35);
+}
+.delete-container{
+    width: 30%;
+    margin: 0 auto;
+}
+.delete-form{
+    width: 100%;
+    background-color: white;
+    height: 200px;
+    float: left;
+    border-radius: 20px;
+    margin-top: 200px;
+    box-sizing: border-box;
+}
+.nut{
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+}
 *:focus {
     outline: 0;
 }
