@@ -6,7 +6,7 @@
             <thead>
                 <tr>
                     <th>STT</th>
-                    <th style="text-align: left;">Loại căn hộ</th>
+                    <th style="text-align: center;">Loại căn hộ</th>
                     <!-- <th>ID Sản Phẩm</th>
                     <th>Trạng Thái</th> -->
                     <th>Sửa</th>
@@ -15,7 +15,16 @@
                 </tr>
             </thead>
             <tbody>
+            <?php foreach($ds as $ds) { 
+                $stt+=1;
+                ?>
                 <tr>
+<<<<<<< HEAD
+                    <td><?=$stt?></td>
+                    <td><?=$ds["ten_can"]?></td>
+                    <td><a href="<?=ADMIN_URL?>/?ctrl=loai_can&act=edit&ma_loai=<?=$ds["ma_loai"]?>" style="color: #455A64;"><i class="fas fa-edit"></i></a></td>
+                    <td><a href="<?=ADMIN_URL?>/?ctrl=loai_can&act=delete&ma_loai=<?=$ds["ma_loai"]?>" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a></td>
+=======
                     <td>1</td>
                     <td>Chung cư</td>
                     <td>
@@ -39,7 +48,9 @@
                     <td></td>
                     <td></td>
                     <td></td> -->
+>>>>>>> 74cf3a48a527a176e86af24381b1ec52af8420da
                 </tr>
+            <?php }?>
             </tbody>
 
         </table>
