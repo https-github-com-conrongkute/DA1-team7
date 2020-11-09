@@ -1,12 +1,17 @@
-<div class="right__title">Bảng loại căn hộ</div>
+<div class="right__title">Bảng khách hàng</div>
 <div class="right__table">
-    <p class="right__tableTitle">Danh sách loại căn hộ</p>
+    <p class="right__tableTitle">Danh sách khách hàng</p>
     <div class="right__tableWrapper">
         <table>
             <thead>
                 <tr>
                     <th>STT</th>
-                    <th style="text-align: left;">Loại căn hộ</th>
+                    <th style="text-align: left;">Họ và tên</th>
+                    <th>Tên đăng nhập</th>
+                    <th>Số điện thoại</th>
+                    <th>Email</th>
+                    <th>Vai trò</th>
+                    <th>Trạng thái</th>
                     <!-- <th>ID Sản Phẩm</th>
                     <th>Trạng Thái</th> -->
                     <th>Sửa</th>
@@ -17,7 +22,12 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td>Chung cư</td>
+                    <td>Nguyễn văn a</td>
+                    <td>a tk</td>
+                    <td>09813</td>
+                    <td>Nguyễn@gmail.com</td>
+                    <td>admin</td>
+                    <td>Đang hoạt động</td>
                     <td>
                         <a href="#" style="color: #455A64;"><i class="fas fa-edit"></i></a>
                     </td>
