@@ -1,9 +1,10 @@
 <?php
+$ctrl='home';
 define('ARR_CONTROLLER', ["home", "quan", "hinh", "can_ho", "dat_lich", "tai_khoan", "thong_ke", "binhluan", "login", "loai_can"]);
 if (isset($_GET['ctrl'])==true) {
     $ctrl=$_GET['ctrl'];
 }
-$ctrl='home';
+
 if (in_array($ctrl, ARR_CONTROLLER)== false)  die("Địa chỉ này không tồn tại");
     $pathFile ="controllers/$ctrl.php";
 if (file_exists($pathFile)==true) 
