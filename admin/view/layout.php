@@ -94,6 +94,7 @@
                 <div class="right">
                     <div class="right__content">
                         <div class="right__title">Bảng thống kê</div>
+                        <?php if(isset($view)==true){ require_once $view;}else{ ?>
                         <div class="right__cards">
                             <a class="right__card bg-success" href="view_product.html">
                                 <div class="right__cardTitle">Số căn hộ</div>
@@ -183,6 +184,7 @@
                             <a href="" class="right__tableMore">
                                 <p>Xem tất cả các đơn đặt hàng</p> <img src="./view/assets/arrow-right-black.svg" alt=""></a>
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
