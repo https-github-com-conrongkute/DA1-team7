@@ -7,6 +7,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="./view/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
@@ -30,8 +31,8 @@
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-edit.svg" alt="">Danh sách loại căn hộ<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="insert_product.html">Danh sách loại căn</a>
-                                    <a class="left__link" href="view_product.html">Thêm loại căn hộ</a>
+                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=loai_can&act=index">Danh sách loại căn</a>
+                                    <a class="left__link" href="?ctrl=loai_can&act=addnew">Thêm loại căn hộ</a>
                                 </div>
                             </li>
                             <li class="left__menuItem">
@@ -94,6 +95,7 @@
                 <div class="right">
                     <div class="right__content">
                         <div class="right__title">Bảng thống kê</div>
+                        <?php if(isset($view)==true){ require_once $view;}else{ ?>
                         <div class="right__cards">
                             <a class="right__card bg-success" href="view_product.html">
                                 <div class="right__cardTitle">Số căn hộ</div>
@@ -183,6 +185,7 @@
                             <a href="" class="right__tableMore">
                                 <p>Xem tất cả các đơn đặt hàng</p> <img src="./view/assets/arrow-right-black.svg" alt=""></a>
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
