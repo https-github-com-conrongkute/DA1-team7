@@ -60,7 +60,7 @@
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-users.svg" alt="">Quản lý khách hàng<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="#">Danh sách khách hàng</a>
+                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=tai_khoan&act=index">Danh sách khách hàng</a>
                                     <a class="left__link" href="#">Thêm khách hàng</a>
                                 </div>
                             </li>
@@ -133,3 +133,15 @@
 </body>
 
 </html>
+<script>
+    $(document).ready(function() {
+        $('.sua').click(function(add) {
+            var delet = $('.delete-loaican');
+            delet.css('display', 'block');
+        });
+        $('.co').click(function(add) {
+            var delet = $('.delete-loaican');
+            delet.css('display', 'none');
+        });
+    });
+</script>
