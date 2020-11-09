@@ -37,8 +37,8 @@
                 <div class="delete-form">
                     <h3 style="width: 100%;float: left;line-height: 100px;text-align: center;">Bạn có muốn xóa không ?</h3>
                     <div class="nut">
-                        <button class="co" style="padding: 2px 5px;background-color: #f0f0f0;border-radius: 20px;width: 100px;margin-right: 10px;outline: none;"> <a href="#" style="color: black;">Không</a></button>
-                        <button class="co" style="padding: 2px 5px;background-color: red;border-radius: 20px;width: 100px;outline: none;"> <a href="https://www.w3schools.com/" style="color: white;">Có</a></button>
+                         <a href="#" class="co" style="padding: 10px 20px;background-color: #f0f0f0;border-radius: 20px;width: 100px;margin-right: 10px;color:black;">Không</a>
+                         <a href="https://www.w3schools.com/"  class="co" style="padding: 10px 20px;background-color: red;border-radius: 20px;width: 100px;color: white;">Có</a>
                     </div>
                 </div>
             </div>
