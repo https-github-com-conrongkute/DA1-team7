@@ -7,22 +7,19 @@
                 <tr>
                     <th>STT</th>
                     <th style="text-align: left;">Loại căn hộ</th>
-                    <th>Trạng thái</th>
                     <!-- <th>ID Sản Phẩm</th>
-                    <th>Số Lượng</th>
-                    <th>Kích thước</th>
                     <th>Trạng Thái</th> -->
+                    <th>Sửa</th>
+                    <th>Xóa</th>
+                   
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
                     <td>Chung cư</td>
-                    <td>
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider round"></span>
-                            </label><em style="font-size: 12px;margin-left: 5px;color: red;">Đang hiện</em></td>
+                    <td><a href="" style="color: #455A64;"><i class="fas fa-edit"></i></a></td>
+                    <td><a href="" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a></td>
                             <!-- <td></td>
                     <td></td>
                     <td></td>
