@@ -30,8 +30,8 @@
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-edit.svg" alt="">Danh sách loại căn hộ<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="insert_product.html">Danh sách loại căn</a>
-                                    <a class="left__link" href="view_product.html">Thêm loại căn hộ</a>
+                                    <a class="left__link" href="?ctrl=can_ho&act=index">Danh sách loại căn</a>
+                                    <a class="left__link" href="?ctrl=can_ho&act=addnew">Thêm loại căn hộ</a>
                                 </div>
                             </li>
                             <li class="left__menuItem">
