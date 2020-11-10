@@ -6,6 +6,6 @@
             <label for="title">Tên loại căn hộ</label>
             <input type="text" name="tenloai" placeholder="Tên loại căn">
         </div>
-        <button class="btn" type="submit">Chèn</button>
+        <button class="btn" type="submit">Thêm</button>
     </form>
 </div>
