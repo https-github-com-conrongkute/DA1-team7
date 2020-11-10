@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 define('ARR_CONTROLLER', ["home", "quan", "hinh", "can_ho", "dat_lich", "tai_khoan", "thong_ke", "binhluan", "login", "loai_can"]);
 $ctrl='home';
