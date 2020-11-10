@@ -9,6 +9,31 @@
     color: inherit;
     box-sizing: border-box;
 }
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+    position: absolute;
+    display: none;
+	z-index: -1;
+}
+.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: black;
+    background-color:  #f0f0f0;
+    display: inline-block;
+    cursor: pointer;
+    
+    line-height: 40px;
+    text-align: center;
+}
+
+/* .inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: red;
+} */
 a:hover{
     text-decoration: none;
     color: black;
