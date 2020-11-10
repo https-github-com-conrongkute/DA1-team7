@@ -75,8 +75,8 @@
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-book.svg" alt="">Quản lý bình luận<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="#">Danh sách</a>
-                                    <a class="left__link" href="#">Thêm bình luận</a>
+                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=binhluan&act=index">Danh sách</a>
+                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=binhluan&act=addnew">Thêm bình luận</a>
                                 </div>
                             </li>
 
