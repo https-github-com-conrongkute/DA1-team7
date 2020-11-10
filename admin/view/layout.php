@@ -68,7 +68,7 @@
                                 <div class="left__title"><img src="./view/assets/icon-book.svg" alt="">Quản lý đặt lịch<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
                                     <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=dat_lich&act=index">Danh sách lịch đặt</a>
-                                    <a class="left__link" href="#">Thêm lịch đặt</a>
+                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=dat_lich&act=addnew">Thêm lịch đặt</a>
                                 </div>
                             </li>
 

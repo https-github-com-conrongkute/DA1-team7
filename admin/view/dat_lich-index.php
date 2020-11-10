@@ -26,7 +26,7 @@
                     <td><?=$ds['ngay_xem']?></td>
                     <td><?=$ds['ngay_dat']?></td>
                     <td>
-                        <a href="?ctrl=tai_khoan&act=edit&ma_kh=<?=$ds['ma_tk']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
+                        <a href="?ctrl=dat_lich&act=edit&ma_dl=<?=$ds['ma_dat']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
                     </td>
                     <td>
                         <a class="sua" href="#" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
@@ -36,7 +36,7 @@
                                     <h3 style="width: 100%;float: left;line-height: 100px;text-align: center;">Bạn có muốn xóa không ?</h3>
                                     <div class="nut">
                                         <a href="#" class="co" style="padding: 10px 20px;background-color: #f0f0f0;border-radius: 20px;width: 100px;margin-right: 10px;color:black;">Không</a>
-                                        <a href="<?=ADMIN_URL?>/?ctrl=tai_khoan&act=delete&ma_kh=<?=$ds['ma_tk']?>" class="co" style="padding: 10px 20px;background-color: red;border-radius: 20px;width: 100px;color: white;">Có</a>
+                                        <a href="<?=ADMIN_URL?>/?ctrl=dat_lich&act=delete&ma_dl=<?=$ds['ma_dat']?>" class="co" style="padding: 10px 20px;background-color: red;border-radius: 20px;width: 100px;color: white;">Có</a>
                                     </div>
                                 </div>
                             </div>
