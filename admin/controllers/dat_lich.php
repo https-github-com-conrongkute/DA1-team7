@@ -94,7 +94,7 @@ switch ($act) {
             $view  = "view/dat_lich-edit.php";
             require_once "view/layout.php";
         }else{
-            $messege = "Mời bạn nhập lại !"; 
+            // $messege = "Mời bạn nhập lại !"; 
             $view  = "view/dat_lich-edit.php";
             require_once "view/layout.php";
         }
