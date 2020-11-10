@@ -32,10 +32,14 @@ switch ($act) {
         $email = $_POST['email'];
         $sdt = $_POST['sdt'];
         $pass = $_POST['pass'];
-        $hinh = $_FILES['file']['name'];
-        $pathimg = './uploaded/';
-        $target_files = $pathimg . basename($hinh);
-        move_uploaded_file($_FILES['file']['tmp_name'], $target_files);
+        if ($_FILES['file']['name'] != null) {
+            $hinh = $_FILES['file']['name'];
+            $pathimg = './uploaded/';
+            $target_files = $pathimg . basename($hinh);
+            move_uploaded_file($_FILES['file']['tmp_name'], $target_files);
+        }else{
+            $hinh = $_POST['hinh'];
+        }
         $vai_tro = $_POST['vai_tro'];
         $kich_hoat = 1;
         $random_key = substr(md5('qwert#$%!*'), 12);
@@ -67,7 +71,7 @@ switch ($act) {
         $sdt = $_POST['sdt'];
         $pass = $_POST['pass'];
         $hinh = $_FILES['file']['name'];
-        $pathimg = '../uploaded/';
+        $pathimg = './uploaded/';
         $vai_tro = $_POST['vai_tro'];
         $target_files = $pathimg . basename($hinh);
         move_uploaded_file($_FILES['file']['tmp_name'], $target_files);

@@ -31,7 +31,8 @@
             <!-- <span id="pass"></span> -->
         </div>
         <div class="right__inputWrapper">
-            <input type="file" name="file" id="file" class="inputfile" value="<?=$kh['hinh']?>" />
+            <input type="hidden" name="hinh"  value="<?=$kh['hinh']?>">
+            <input type="file" name="file" id="file" class="inputfile" />
             <label for="file"><i class="fas fa-upload"></i> Tải hình lên</label>
         </div>
         <div class="radion" style="width: 100%;float: left;height:80px;">
