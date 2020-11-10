@@ -21,6 +21,10 @@
                 <tr>
                     <td><?=$stt?></td>
                     <td><?=$ds["ten_can"]?></td>
+<<<<<<< Updated upstream
+=======
+                    
+>>>>>>> Stashed changes
                     <td>
                         <a href="<?=ADMIN_URL?>/?ctrl=loai_can&act=edit&ma_loai=<?=$ds['ma_loai']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
                     </td>
@@ -38,10 +42,6 @@
                             </div>
                         </div>
                     </td>
-                    <!-- <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td> -->
                 </tr>
             <?php }?>
             </tbody>
