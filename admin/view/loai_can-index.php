@@ -19,10 +19,10 @@
                 $stt+=1;
                 ?>
                 <tr>
-                    <td>1</td>
-                    <td>Chung cư</td>
+                    <td><?=$stt?></td>
+                    <td><?=$ds["ten_can"]?></td>
                     <td>
-                        <a href="#" style="color: #455A64;"><i class="fas fa-edit"></i></a>
+                        <a href="<?=ADMIN_URL?>/?ctrl=loai_can&act=edit&ma_loai=<?=$ds['ma_loai']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
                     </td>
                     <td>
                         <a class="sua" href="#" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
