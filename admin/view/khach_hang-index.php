@@ -20,16 +20,17 @@
                 </tr>
             </thead>
             <tbody>
+                <?php foreach($ds_kh as $ds){ ?>
                 <tr>
                     <td>1</td>
-                    <td>Nguyễn văn a</td>
-                    <td>a tk</td>
-                    <td>09813</td>
-                    <td>Nguyễn@gmail.com</td>
-                    <td>admin</td>
-                    <td>Đang hoạt động</td>
+                    <td><?=$ds['ho_ten']?></td>
+                    <td><?=$ds['ten_tk']?></td>
+                    <td><?=$ds['sdt']?></td>
+                    <td><?=$ds['email']?></td>
+                    <td><?=($ds['vai_tro']==1) ? 'Quản trị':"khách hàng"?></td>
+                    <td><?=($ds['kich_hoat']==1)? 'Đã kích hoạt':"Đã bị khóa"?></td>
                     <td>
-                        <a href="#" style="color: #455A64;"><i class="fas fa-edit"></i></a>
+                        <a href="?ctrl=tai_khoan&act=edit&ma_kh=<?=$ds['ma_tk']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
                     </td>
                     <td>
                         <a class="sua" href="#" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
@@ -39,7 +40,7 @@
                                     <h3 style="width: 100%;float: left;line-height: 100px;text-align: center;">Bạn có muốn xóa không ?</h3>
                                     <div class="nut">
                                         <a href="#" class="co" style="padding: 10px 20px;background-color: #f0f0f0;border-radius: 20px;width: 100px;margin-right: 10px;color:black;">Không</a>
-                                        <a href="https://www.w3schools.com/" class="co" style="padding: 10px 20px;background-color: red;border-radius: 20px;width: 100px;color: white;">Có</a>
+                                        <a href="<?=ADMIN_URL?>/?ctrl=tai_khoan&act=delete&ma_kh=<?=$ds['ma_tk']?>" class="co" style="padding: 10px 20px;background-color: red;border-radius: 20px;width: 100px;color: white;">Có</a>
                                     </div>
                                 </div>
                             </div>
@@ -50,6 +51,7 @@
                     <td></td>
                     <td></td> -->
                 </tr>
+                <?php } ?>
             </tbody>
 
         </table>

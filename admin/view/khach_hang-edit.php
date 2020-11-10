@@ -1,43 +1,48 @@
 <div class="right__title">Bảng khách hàng</div>
 <p class="right__desc">Chèn khách hàng</p>
 <div class="right__formWrapper">
-    <form action="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=insert" method="post" enctype="multipart/form-data">
+    <form action="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=update" method="post" enctype="multipart/form-data">
         <div class="right__inputWrapper">
             <label for="title">Tên khách hàng</label>
-            <input type="text" name="tenkh" id="tenkh" placeholder="Họ và tên">
+            <input type="text" name="tenkh" id="tenkh" placeholder="Họ và tên" value="<?=$kh['ho_ten']?>">
+            <input type="hidden" name="ma_kh" value="<?=$kh['ma_tk']?>">
             <?php if(isset($tenkh_tt)==true){ ?>
             <span id="checkuser" ><?=$tenkh_tt?></span>
             <?php } ?>
         </div>
         <div class="right__inputWrapper">
             <label for="title">Tên đăng nhập</label>
-            <input type="text" name="tendn" id="email" placeholder="tên đăng nhập">
+            <input type="text" name="tendn" id="email" placeholder="tên đăng nhập" value="<?=$kh['ten_tk']?>">
             <!-- <span id="email"></span> -->
         </div>
         <div class="right__inputWrapper">
             <label for="title">Email</label>
-            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="email" name="email" id="email" placeholder="Email" value="<?=$kh['email']?>">
             <!-- <span id="email"></span> -->
         </div>
         <div class="right__inputWrapper">
             <label for="title">Số điện thoại</label>
-            <input type="number" name="sdt" id="sdt" placeholder="số điện thoại">
+            <input type="number" name="sdt" id="sdt" placeholder="số điện thoại" value="<?=$kh['sdt']?>">
             <!-- <span id="sdt"></span> -->
         </div>
         <div class="right__inputWrapper">
             <label for="title">Mật khẩu</label>
-            <input type="password" name="pass" id="mk" placeholder="Mật khẩu">
+            <input type="password" name="pass" id="mk" placeholder="Mật khẩu" value="<?=$kh['mat_khau']?>">
             <!-- <span id="pass"></span> -->
         </div>
         <div class="right__inputWrapper">
-            <input type="file" name="file" id="file" class="inputfile" />
+            <input type="file" name="file" id="file" class="inputfile" value="<?=$kh['hinh']?>" />
             <label for="file"><i class="fas fa-upload"></i> Tải hình lên</label>
         </div>
         <div class="radion" style="width: 100%;float: left;height:80px;">
             <label for="title" style="font-weight: 700;">Vai trò</label><br>
-            <label for="" style="margin-right: 10px;"><input type="radio" name="vai_tro" id="" style="margin-right: 5px;" value="1">Quản trị</label>
-            <label for=""><input type="radio" name="vai_tro" id="" style="margin-right: 5px;" value="0">Khách hàng</label>
+            <label for="" style="margin-right: 10px;"><input type="radio" name="vai_tro" id="" style="margin-right: 5px;" value="1" <?php if($kh['vai_tro']==1) echo "checked" ?>>Quản trị</label>
+            <label for=""><input type="radio" name="vai_tro" id="" style="margin-right: 5px;" value="0" <?php if($kh['vai_tro']==0) echo "checked" ?>>Khách hàng</label>
         </div>
+        <!-- <div class="radion" style="width: 100%;float: left;height:80px;">
+            <label for="title" style="font-weight: 700;">Kích hoạt</label><br>
+            <label for="" style="margin-right: 10px;"><input type="radio" name="" id="" style="margin-right: 5px;" value="1" >Khóa tài khoản</label>
+        </div> -->
         <button class="btn" type="submit">Chèn</button>
     </form>
     <?php if(isset($message)==true){ ?>

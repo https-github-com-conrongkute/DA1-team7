@@ -47,6 +47,15 @@ a:hover{
     height: 100%;
     background-color: rgba(116, 116, 156, 0.35);
 }
+.thongbao-khachhang{
+    position: fixed;
+    width: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(116, 116, 156, 0.35);
+}
 .delete-container{
     width: 30%;
     margin: 0 auto;

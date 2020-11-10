@@ -18,8 +18,8 @@
                 <div class="left">
                     <span class="left__icon">
                         <span></span>
-                    <span></span>
-                    <span></span>
+                        <span></span>
+                        <span></span>
                     </span>
                     <div class="left__content">
                         <div class="left__logo">thuecanho.com.vn</div>
@@ -32,7 +32,7 @@
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-edit.svg" alt="">Danh sách loại căn hộ<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=loai_can&act=index">Danh sách loại căn</a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=loai_can&act=index">Danh sách loại căn</a>
                                     <a class="left__link" href="?ctrl=loai_can&act=addnew">Thêm loại căn hộ</a>
                                 </div>
                             </li>
@@ -60,8 +60,8 @@
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-users.svg" alt="">Quản lý khách hàng<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=tai_khoan&act=index">Danh sách khách hàng</a>
-                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=tai_khoan&act=addnew">Thêm khách hàng</a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=index">Danh sách khách hàng</a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=addnew">Thêm khách hàng</a>
                                 </div>
                             </li>
                             <li class="left__menuItem">
@@ -76,7 +76,7 @@
                                 <div class="left__title"><img src="./view/assets/icon-book.svg" alt="">Quản lý bình luận<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
                                     <a class="left__link" href="#">Danh sách</a>
-                                    <a class="left__link" href="#">Thêm  bình luận</a>
+                                    <a class="left__link" href="#">Thêm bình luận</a>
                                 </div>
                             </li>
 
@@ -95,34 +95,36 @@
                 </div>
                 <div class="right">
                     <div class="right__content">
-                        <?php if(isset($view)==true){ require_once $view;}else{ ?>
-                        <div class="right__title">Bảng thống kê</div>
-                       
-                        <div class="right__cards">
-                            <a class="right__card bg-success" href="view_product.html">
-                                <div class="right__cardTitle">Số căn hộ</div>
-                                <div class="right__cardNumber">72</div>
-                                <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
-                            </a>
-                            <a class="right__card bg-danger" href="view_customers.html">
-                                <div class="right__cardTitle">Số khách Hàng</div>
-                                <div class="right__cardNumber">12</div>
-                                <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
-                            </a>
-                            <a class="right__card" href="view_p_category.html">
-                                <div class="right__cardTitle">Số lịch đặt</div>
-                                <div class="right__cardNumber">4</div>
-                                <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
-                            </a>
-                            <a class="right__card" href="view_orders.html">
-                                <div class="right__cardTitle">Số bình luận</div>
-                                <div class="right__cardNumber">72</div>
-                                <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
-                            </a>
-                        </div>
-                        <div class="right__table">
-                         
-                        </div>
+                        <?php if (isset($view) == true) {
+                            require_once $view;
+                        } else { ?>
+                            <div class="right__title">Bảng thống kê</div>
+
+                            <div class="right__cards">
+                                <a class="right__card bg-success" href="view_product.html">
+                                    <div class="right__cardTitle">Số căn hộ</div>
+                                    <div class="right__cardNumber">72</div>
+                                    <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
+                                </a>
+                                <a class="right__card bg-danger" href="view_customers.html">
+                                    <div class="right__cardTitle">Số khách Hàng</div>
+                                    <div class="right__cardNumber">12</div>
+                                    <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
+                                </a>
+                                <a class="right__card" href="view_p_category.html">
+                                    <div class="right__cardTitle">Số lịch đặt</div>
+                                    <div class="right__cardNumber">4</div>
+                                    <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
+                                </a>
+                                <a class="right__card" href="view_orders.html">
+                                    <div class="right__cardTitle">Số bình luận</div>
+                                    <div class="right__cardNumber">72</div>
+                                    <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
+                                </a>
+                            </div>
+                            <div class="right__table">
+
+                            </div>
                         <?php } ?>
                     </div>
                 </div>
@@ -144,5 +146,6 @@
             var delet = $('.delete-loaican');
             delet.css('display', 'none');
         });
+
     });
 </script>
