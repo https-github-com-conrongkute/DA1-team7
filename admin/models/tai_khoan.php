@@ -31,4 +31,9 @@ function DeleteKhachhang($ma_kh){
     execute($sql);
 }
 
+// dang nhap
+function checkdn($user , $pass){
+    $sql = "SELECT * FROM khach_hang WHERE ten_tk = '$user' AND mat_khau = '$pass'";
+    return queryOne($sql);
+}
 ?>

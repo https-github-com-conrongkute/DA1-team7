@@ -89,6 +89,12 @@ switch ($act) {
         $view = 'view/khach_hang-index.php';
         require_once 'view/layout.php';
         break;
+    case 'dangxuat':
+        if(isset($_GET['quantri']) && $_GET['quantri']==1){
+            session_destroy();
+            header('location: login.php');
+        }
+        break;
     default:
         # code...
         break;

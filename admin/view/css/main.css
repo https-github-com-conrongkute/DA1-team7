@@ -9,6 +9,54 @@
     color: inherit;
     box-sizing: border-box;
 }
+/* thông báo login */
+.tblogin-bg{
+    width: 100%;
+    display: none;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    background-color: rgba(116, 116, 156, 0.35);
+}
+.tblogin-form{
+    width: 35%;
+    margin: 0 auto;
+}
+.nut-ys-n{
+    width: 100%;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+}
+.nut-ys-n>a{
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.nut-ys-n>a:nth-child(1){
+    background-color: #b2b9ce;
+    margin-right: 10px;
+    color: black;
+}
+.nut-ys-n>a:nth-child(2){
+    background-color: cornflowerblue;
+    color: white;
+}
+.tblogin-container>h3{
+    width: 100%;
+    float: left;
+    line-height: 125px;
+    text-align: center;
+}
+.tblogin-container{
+    width: 100%;
+    background-color: white;
+    height: 250px;
+    margin-top: 50px;
+    border-radius: 12px;
+}
+/* End */
 .inputfile {
 	width: 0.1px;
 	height: 0.1px;
@@ -40,6 +88,7 @@ a:hover{
 }
 .delete-loaican{
     position: fixed;
+    z-index: 99;
     width: 100%;
     display: none;
     top: 0;
@@ -50,6 +99,7 @@ a:hover{
 .thongbao-khachhang{
     position: fixed;
     width: 100%;
+    z-index: 99;
     display: block;
     top: 0;
     left: 0;
@@ -103,6 +153,7 @@ body {
 
 .btn:hover {
     box-shadow: 0px 0px 0px rgba(33, 33, 107, 0.35);
+    color: white;
 }
 
 .wrapper {
@@ -366,7 +417,15 @@ body {
     align-items: center;
     padding: 0 20px;
 }
-
+.left__linkblock{
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.left__linkblock:hover{
+    opacity: 0.5;
+}
 .left__link:hover {
     opacity: 0.5;
 }
