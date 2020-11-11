@@ -32,14 +32,10 @@ switch ($act) {
         $email = $_POST['email'];
         $sdt = $_POST['sdt'];
         $pass = $_POST['pass'];
-        if ($_FILES['file']['name'] != null) {
-            $hinh = $_FILES['file']['name'];
-            $pathimg = './uploaded/';
-            $target_files = $pathimg . basename($hinh);
-            move_uploaded_file($_FILES['file']['tmp_name'], $target_files);
-        }else{
-            $hinh = $_POST['hinh'];
-        }
+        $hinh = $_FILES['file']['name'];
+        $pathimg = './uploaded/';
+        $target_files = $pathimg . basename($hinh);
+        move_uploaded_file($_FILES['file']['tmp_name'], $target_files);
         $vai_tro = $_POST['vai_tro'];
         $kich_hoat = 1;
         $random_key = substr(md5('qwert#$%!*'), 12);
@@ -70,11 +66,15 @@ switch ($act) {
         $kich_hoat = 1;
         $sdt = $_POST['sdt'];
         $pass = $_POST['pass'];
-        $hinh = $_FILES['file']['name'];
-        $pathimg = './uploaded/';
         $vai_tro = $_POST['vai_tro'];
+        if ($_FILES['file']['name'] != null){
+        $pathimg = './uploaded/';
+        $hinh = $_FILES['file']['name'];
         $target_files = $pathimg . basename($hinh);
         move_uploaded_file($_FILES['file']['tmp_name'], $target_files);
+        }else{
+            $hinh = $_POST['hinh'];
+        }
         updateKhachhang($tenkh, $email, $sdt, $pass, $hinh, $tendn, $kich_hoat, $vai_tro, $ma_kh);
         $message = "Sửa thành công !";
         $kh = getkhachhangByID($ma_kh);
@@ -90,7 +90,7 @@ switch ($act) {
         require_once 'view/layout.php';
         break;
     case 'dangxuat':
-        if(isset($_GET['quantri']) && $_GET['quantri']==1){
+        if (isset($_GET['quantri']) && $_GET['quantri'] == 1) {
             session_destroy();
             header('location: login.php');
         }

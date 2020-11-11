@@ -33,7 +33,10 @@
         <div class="right__inputWrapper">
             <input type="hidden" name="hinh"  value="<?=$kh['hinh']?>">
             <input type="file" name="file" id="file" class="inputfile" />
-            <label for="file"><i class="fas fa-upload"></i> Tải hình lên</label>
+            <label for="file"><i class="fas fa-upload"></i> Tải hình ảnh mới lên</label>
+        </div>
+        <div class="right__inputWrapper">
+            <img src="./uploaded/<?=$kh['hinh']?>" alt="" style="height: 150px;object-fit: cover;">
         </div>
         <div class="radion" style="width: 100%;float: left;height:80px;">
             <label for="title" style="font-weight: 700;">Vai trò</label><br>
