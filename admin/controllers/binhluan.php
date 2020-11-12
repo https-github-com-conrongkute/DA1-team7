@@ -1,6 +1,5 @@
 <?php
 require_once "../system/config.php";
-if(isset($_SESSION['vai_tro']) && $_SESSION['vai_tro']==1){
 require_once "models/binhluan.php";
 $act = "index";
 if (isset($_GET['act']) == true) $act = $_GET['act'];
@@ -115,6 +114,4 @@ switch ($act) {
         # code...
         break;
 }
-}else{
-    require_once "view/layout.php";
-}
+

@@ -24,15 +24,15 @@ switch ($act) {
             $ma_can = $_POST['can_ho'];
             $ngay_di_xem = $_POST['ngay_di_xem'];
             if (strlen($ma_kh) == 0) {
-                $ma_kh_tt = "Đừng để trống chứ !";
+                $ma_kh_tt = "<p>Đừng để trống chứ !</p>";
                 $thongbao = false;
             }
             if (strlen($ma_can) == 0) {
-                $ma_can_tt = "Đừng để trống chứ !";
+                $ma_can_tt = "<p>Đừng để trống chứ !</p>";
                 $thongbao = false;
             }
             if (strlen($ngay_di_xem) == 0) {
-                $ngay_di_xem_tt = "Đừng để trống chứ !";
+                $ngay_di_xem_tt = "<p>Đừng để trống chứ !</p>";
                 $thongbao = false;
             }
         }
@@ -46,7 +46,7 @@ switch ($act) {
             $view  = "view/dat_lich-addnew.php";
             require_once "view/layout.php";
         }else{
-            $messege = "Mời bạn nhập lại !"; 
+            // $messege = "Mời bạn nhập lại !"; 
             $view  = "view/dat_lich-addnew.php";
             require_once "view/layout.php";
         }

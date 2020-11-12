@@ -1,5 +1,5 @@
 <div class="right__title">Bảng khách hàng</div>
-<p class="right__desc">Chèn khách hàng</p>
+<p class="right__desc">Sửa khách hàng</p>
 <div class="right__formWrapper">
     <form action="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=update" method="post" enctype="multipart/form-data">
         <div class="right__inputWrapper">
@@ -36,7 +36,25 @@
             <label for="file"><i class="fas fa-upload"></i> Tải hình ảnh mới lên</label>
         </div>
         <div class="right__inputWrapper">
-            <img src="./uploaded/<?=$kh['hinh']?>" alt="" style="height: 150px;object-fit: cover;">
+            <img src="./uploaded/<?=$kh['hinh']?>" id="loada" alt="" style="height: 150px;object-fit: cover;">
+            <script>
+                // Load hình ảnh lên khi chọn file upload
+                $(document).ready(function () {
+                    function readURL(input){
+                        if(input.files && input.files[0]){
+                        var reader = new FileReader();
+                        reader.onload = function (e){
+                            $('#loada').attr('src', e.target.result);
+                            // $('#loadha').css('display','block');
+                        }
+                        reader.readAsDataURL(input.files[0]);
+                        }
+                    }
+                    $('#file').change(function () { 
+                         readURL(this);
+                    });
+                });
+            </script>
         </div>
         <div class="radion" style="width: 100%;float: left;height:80px;">
             <label for="title" style="font-weight: 700;">Vai trò</label><br>
@@ -47,7 +65,7 @@
             <label for="title" style="font-weight: 700;">Kích hoạt</label><br>
             <label for="" style="margin-right: 10px;"><input type="radio" name="" id="" style="margin-right: 5px;" value="1" >Khóa tài khoản</label>
         </div> -->
-        <button class="btn" type="submit">Chèn</button>
+        <button class="btn" type="submit">Cập nhật</button>
     </form>
     <?php if(isset($message)==true){ ?>
     <div class="thongbao-khachhang">

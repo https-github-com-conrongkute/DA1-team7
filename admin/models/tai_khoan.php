@@ -5,8 +5,30 @@ function getAllkhachhang(){
     $sql = "SELECT * FROM khach_hang";
     return query($sql);
 }
+// check tên khách hàng
 function checkuser($user){
     $sql = "SELECT count(*) as soluong FROM khach_hang WHERE ho_ten = '$user'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['soluong'];
+}
+// check ten tk
+function checktk($user){
+    $sql = "SELECT count(*) as soluong FROM khach_hang WHERE ten_tk = '$user'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['soluong'];
+}
+// check email
+function checkemail($email){
+    $sql = "SELECT count(*) as soluong FROM khach_hang WHERE email = '$email'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['soluong'];
+}
+// check số diện thoai
+function checksdt($sdt){
+    $sql = "SELECT count(*) as soluong FROM khach_hang WHERE sdt = '$sdt'";
     $row = query($sql);
     $kq = $row->fetch();
     return $kq['soluong'];
