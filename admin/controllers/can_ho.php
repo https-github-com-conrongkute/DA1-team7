@@ -166,12 +166,12 @@ switch ($act) {
             }
             break;
 
-//         case 'delete':
-//             $ma_loai=$_GET["ma_loai"];
-//             settype($ma_loai, "int");
-//             deleteloaican($ma_loai);
-//             header("location: ".ADMIN_URL."/?ctrl=loai_can&act=index");
-//         break;
+        case 'delete':
+            $ma_can=$_GET["ma_can"];
+            settype($ma_can, "int");
+            deletecanho($ma_can);
+            header("location: ".ADMIN_URL."/?ctrl=can_ho&act=index");
+        break;
 
 }
 

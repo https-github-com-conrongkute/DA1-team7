@@ -17,4 +17,8 @@ function updatecanho($ma_can,$ma_loai, $ma_quan, $dia_chi, $ten_can_ho, $nam_xd,
           $sql="UPDATE can_ho SET ma_quan='$ma_quan', ma_loai='$ma_loai', dia_chi='$dia_chi', ten_can_ho='$ten_can_ho', nam_xd='$nam_xd', dien_tich='$dien_tich', tang='$tang', huong_nha='$huong_nha', tien_ich='$tien_ich', chi_phi_khac='$chi_phi', so_phong_ngu='$so_phong_ngu', so_phong_vs='$so_phong_vs', gia_thue='$gia_thue', hinh='$hinh', hinha='$hinha', hinhb='$hinhb', hinhc='$hinhc', an_hien='$an_hien', ghi_chu='$ghi_chu' WHERE ma_can='$ma_can' ";
           execute($sql);
 }
+function deletecanho($ma_can){
+          $sql="DELETE FROM can_ho where ma_can='$ma_can'";
+          execute($sql);
+}
 ?>
