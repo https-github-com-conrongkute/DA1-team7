@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +10,7 @@
           
 </body>
 </html>
-=======
+
 <div class="right__title">Bảng loại căn hộ</div>
 <div class="right__table">
     <p class="right__tableTitle">Danh sách loại căn hộ</p>
@@ -106,4 +106,4 @@
 
     </div>
 </div>
->>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
+
