@@ -15,15 +15,16 @@
             <div class="form-backgroud">
                 <div class="form-right">
                     <form action="login.php" method="post" class="auto">
-                        <h2>Đăng nhập</h2>
+                        <h2 class="mt-10">Đăng nhập</h2>
+                        
                         <div class="form-row">
-                            <label for="">Tên đăng nhập</label>
+                            <label for="" >Tên đăng nhập</label>
                             <input type="text" name="tendn" id="" placeholder="Nhập tên đăng nhập" class="tendn">
                         </div>
                         <div class="form-row">
                             <label for="">Mật khẩu</label>
                             <input type="password" name="pass" id="" placeholder="Mật khẩu của bạn" class="pass">
-                            <a href="" style="text-align: right;line-height: 30px;margin-bottom: 20px;color: black;text-decoration: none;font-size: 14px;">Quên mật khẩu ?</a>
+                            <!-- <a href="" style="text-align: right;line-height: 30px;margin-bottom: 20px;color: black;text-decoration: none;font-size: 14px;">Quên mật khẩu ?</a> -->
                         </div>
                         <div class="form-row">
                             <input type="submit" value="Đăng nhập" name="dn" class="dn">
