@@ -1,3 +1,16 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          
+</body>
+</html>
+
 <div class="right__title">Bảng loại căn hộ</div>
 <div class="right__table">
     <p class="right__tableTitle">Danh sách loại căn hộ</p>
@@ -93,3 +106,7 @@
 
     </div>
 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> eed043226cdff11bfbbcb9a1f3c764be47c04511

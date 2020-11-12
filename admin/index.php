@@ -15,6 +15,6 @@ if (file_exists($pathFile)==true)
 
 else echo "Controller $ctrl không tồn tại";
 }else{
-    require_once 'login.php';
+    header("location: login.php");
 }
 ?>
