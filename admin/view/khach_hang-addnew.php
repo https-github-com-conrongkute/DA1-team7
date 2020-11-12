@@ -38,7 +38,6 @@
         <div class="right__inputWrapper hienloi">
             <input type="file" name="file" id="file" class="inputfile" />
             <label for="file"><i class="fas fa-upload"></i> Tải hình lên</label>
-<<<<<<< HEAD
             <img src="#" alt="" id="loadha" style="height: 100px;object-fit: cover;display: none;">
             <script>
                 // Load hình ảnh lên khi chọn file upload
@@ -58,9 +57,9 @@
                     });
                 });
             </script>
-=======
+
             <img id="blah" style="width: 15%;" src="#" alt="your image" />
->>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
+
         </div>
         <div class="radion" style="width: 100%;float: left;height:80px;">
             <label for="title" style="font-weight: 700;">Vai trò</label><br>
