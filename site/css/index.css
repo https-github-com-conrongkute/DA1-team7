@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     padding:0;
     margin: 0;
@@ -18,58 +19,127 @@ body{
 
 }
 .nav{
+=======
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: "Sf ui display", sans-serif;
+}
+
+.menu {
+    height: 970px;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    opacity: 0.8;
+}
+
+.nav {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: calc(100% - 70px);
     top: 20px;
     left: 70px;
     height: 160px;
     position: absolute;
 }
+<<<<<<< HEAD
 .navimg{
     float: left;
     width: 20%;
 }
 .navmenu{
+=======
+
+.navimg {
+    float: left;
+    width: 20%;
+}
+
+.navmenu {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: calc(80% - 70px);
     float: left;
     text-align: center;
     margin-top: 35px;
+<<<<<<< HEAD
 
 }
 ul li{
+=======
+}
+
+ul li {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     list-style: none;
     display: block;
     overflow: hidden;
     display: inline;
+<<<<<<< HEAD
     
 }
 ul li a{
+=======
+}
+
+ul li a {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin-right: 35px;
     font-size: 16px;
     text-decoration: none;
     overflow: hidden;
     color: white;
 }
+<<<<<<< HEAD
 .navtext{
+=======
+
+.navtext {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     position: absolute;
     width: 100%;
     top: 180px;
     text-align: center;
 }
+<<<<<<< HEAD
 .navtext h1{
+=======
+
+.navtext h1 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     color: orange;
     font-size: 40px;
     font-weight: bold;
     letter-spacing: 1px;
+<<<<<<< HEAD
 
 }
 .navtext p{
+=======
+}
+
+.navtext p {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin-top: 30px;
     font-size: 17px;
     letter-spacing: 1.5px;
     color: white;
     line-height: 27px;
 }
+<<<<<<< HEAD
 .dangky{
+=======
+
+.dangky {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 23%;
     height: 400px;
     position: absolute;
@@ -79,6 +149,7 @@ ul li a{
     border-radius: 19px;
     text-align: center;
     box-shadow: #ccc 0px 20px 20px;
+<<<<<<< HEAD
 
 }
 .dangky h3{
@@ -86,24 +157,49 @@ ul li a{
     margin-bottom: 15px;
 }
 .dangky input{
+=======
+    z-index: 2;
+}
+
+.dangky h3 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.dangky input {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     padding-left: 7px;
     width: 75%;
     height: 42px;
     margin-top: 25px;
     border-radius: 16px;
     border: none;
+<<<<<<< HEAD
     outline:none;
     color: rgb(172, 167, 167);
 }
 .dangky .submit{
+=======
+    outline: none;
+    color: rgb(172, 167, 167);
+}
+
+.dangky .submit {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     color: white;
     font-weight: bold;
     font-size: 15px;
     margin-top: 40px;
     background-color: #FF4500;
+<<<<<<< HEAD
 
 }
 .dangky2{
+=======
+}
+
+.dangky2 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 54.8%;
     height: 310px;
     top: 485px;
@@ -112,19 +208,32 @@ ul li a{
     background-color: white;
     border-radius: 0px 20px 20px 0px;
     box-shadow: #ccc 8px 20px 20px;
+<<<<<<< HEAD
 
 }
 .dangky2 .text1{
+=======
+    z-index: 1;
+}
+
+.dangky2 .text1 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 100%;
     height: 50px;
     line-height: 50px;
     text-align: center;
 }
+<<<<<<< HEAD
 .dangky2 .text2{
+=======
+
+.dangky2 .text2 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     display: flex;
     width: 100%;
     height: 260px;
     text-align: center;
+<<<<<<< HEAD
 
 }
 .dangky2 .box1{
@@ -134,11 +243,29 @@ ul li a{
     font-weight: bold;
 }
 .dangky2 .box1 p{
+=======
+}
+
+.dangky2 .box1 {
+    width: calc(100%/3);
+}
+
+.dangky2 .box1 a {
+    font-weight: bold;
+}
+
+.dangky2 .box1 p {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin-top: 15px;
     line-height: 25px;
     font-size: 13px;
 }
+<<<<<<< HEAD
 .icon1{
+=======
+
+.icon1 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 65px;
     margin-left: 90px;
     margin-top: 10px;
@@ -149,6 +276,7 @@ ul li a{
     border-radius: 100%;
     background-color: orangered;
 }
+<<<<<<< HEAD
 .icon1 img{
     margin-top: 19px;
 }
@@ -157,26 +285,55 @@ ul li a{
     /* height: 950px; */
 }
 .danhsach .tieude{
+=======
+
+.icon1 img {
+    margin-top: 19px;
+}
+
+.danhsach {
+    width: 100%;
+    /* height: 950px; */
+}
+
+.danhsach .tieude {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 100%;
     height: 110px;
     text-align: center;
 }
+<<<<<<< HEAD
 .danhsach .tieude h4{
     margin-bottom: 10px;
     font-size: 16px;
 }
 .danhsach .tieude h2{
+=======
+
+.danhsach .tieude h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.danhsach .tieude h2 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     font-size: 32px;
     letter-spacing: 2px;
     color: orange;
 }
+<<<<<<< HEAD
 .danhsach .canho{
+=======
+
+.danhsach .canho {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin: 0 auto;
     width: 79%;
     /* height: 760px; */
     display: flex;
     flex-wrap: wrap;
 }
+<<<<<<< HEAD
 .danhsach .box2{
     width: calc(100%/3 - 10px);
     margin-left: 5px;
@@ -186,28 +343,60 @@ ul li a{
 
 }
 .box2 img{
+=======
+
+.danhsach .box2 {
+    width: calc(100%/3 - 10px);
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: #ccc 0px 10px 10px;
+    margin-bottom: 25px;
+}
+
+.box2 img {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 100%;
     height: 230px;
     margin-bottom: 10px;
 }
+<<<<<<< HEAD
 .box2 a{
+=======
+
+.box2 a {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     text-decoration: none;
     font-size: 15px;
     color: black;
     font-weight: bold;
 }
+<<<<<<< HEAD
 .box2text{
     margin-left: 9px;
     margin-right: 9px;
 }
 .gia{
+=======
+
+.box2text {
+    margin-left: 9px;
+    margin-right: 9px;
+}
+
+.gia {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 52%;
     margin-left: 4%;
     margin-top: 30px;
     height: 40px;
     float: left;
 }
+<<<<<<< HEAD
 .datlich{
+=======
+
+.datlich {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 34%;
     margin-top: 20px;
     border-radius: 20px;
@@ -220,23 +409,44 @@ ul li a{
     font-size: 15px;
     background-color: orangered;
 }
+<<<<<<< HEAD
 .datlich a{
     color: white;
     font-size: 14px;
 }
 .gioithieu{
+=======
+
+.datlich a {
+    color: white;
+    font-size: 14px;
+}
+
+.gioithieu {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin-top: 60px;
     width: 100%;
     height: 450px;
     background-color: orange;
+<<<<<<< HEAD
 
 }
 .gioithieu img{
+=======
+}
+
+.gioithieu img {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 65%;
     height: 450px;
     float: left;
 }
+<<<<<<< HEAD
 .textgt{
+=======
+
+.textgt {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     float: left;
     width: 35%;
     height: 450px;
@@ -245,21 +455,37 @@ ul li a{
     font-size: 14px;
     color: rgb(240, 236, 236);
 }
+<<<<<<< HEAD
 .textgt h1{
     color: rgb(238, 78, 20);
     margin: 15px;
 }
 .thuenha{
+=======
+
+.textgt h1 {
+    color: rgb(238, 78, 20);
+    margin: 15px;
+}
+
+.thuenha {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 80%;
     margin: 0 auto;
     margin-top: 100px;
     height: 410px;
 }
+<<<<<<< HEAD
 .tieude2{
+=======
+
+.tieude2 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     text-align: center;
     width: 100%;
     height: 100px;
 }
+<<<<<<< HEAD
 .tieude2 h4{
     font-size: 18px;
 
@@ -273,12 +499,30 @@ ul li a{
     display: flex;
 }
 .box3{
+=======
+
+.tieude2 h4 {
+    font-size: 18px;
+}
+
+.tieude2 h2 {
+    font-size: 31px;
+    color: orange;
+}
+
+.thuenhatext {
+    display: flex;
+}
+
+.box3 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: calc(100%/3 - 30px);
     width: 100%;
     margin: 0 15px;
     background-color: white;
     box-shadow: #ccc 5px 10px 10px 5px;
 }
+<<<<<<< HEAD
 .box3{
     width: 100%;
     text-align: center;
@@ -287,20 +531,43 @@ ul li a{
     margin: 40px;
 }
 .box3 a{
+=======
+
+.box3 {
+    width: 100%;
+    text-align: center;
+}
+
+.box3 img {
+    margin: 40px;
+}
+
+.box3 a {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin: 30px;
     color: black;
     font-weight: bold;
     text-decoration: none;
 }
+<<<<<<< HEAD
 .box3 p{
     margin: 30px;
     
 }
 .tieude3{
+=======
+
+.box3 p {
+    margin: 30px;
+}
+
+.tieude3 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     text-align: center;
     width: 100%;
     height: 80px;
 }
+<<<<<<< HEAD
 .tieude3 h2{
     font-size: 31px;
     color: orange;
@@ -314,10 +581,30 @@ ul li a{
     margin-top: 90px;
 }
 .tuvanimg{
+=======
+
+.tieude3 h2 {
+    font-size: 31px;
+    color: orange;
+}
+
+.box3 img {
+    width: 30%;
+    height: 90px;
+}
+
+.tuvan {
+    width: 100%;
+    margin-top: 90px;
+}
+
+.tuvanimg {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     position: relative;
     width: 100%;
     text-align: center;
 }
+<<<<<<< HEAD
 .tuvantext{
     position: absolute;
     top: 100px;
@@ -330,12 +617,32 @@ ul li a{
 
 }
 .tuvantext p{
+=======
+
+.tuvantext {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+}
+
+.tuvantext h1 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.tuvantext p {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin-bottom: 20px;
     letter-spacing: 1px;
     color: white;
     line-height: 25px;
 }
+<<<<<<< HEAD
 .tuvan2{
+=======
+
+.tuvan2 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin: 0 auto;
     margin-top: 40px;
     width: 170px;
@@ -343,14 +650,54 @@ ul li a{
     border-radius: 5px;
     background-color: orangered;
 }
+<<<<<<< HEAD
 .tuvan2 a{
+=======
+
+.tuvan2 a {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
     line-height: 50px;
 }
+<<<<<<< HEAD
 .footer{
+=======
+
+.xemthem {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 170px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background: orangered;
+}
+
+.xemthem a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 100%;
+    line-height: 50px;
+    text-align: center;
+    padding: 0px 30%;
+}
+
+.xemthem:hover {
+    background: white;
+    transition-duration: 0.3s;
+}
+
+.xemthem:hover a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 79%;
     margin: 0 auto;
     display: flex;
@@ -358,6 +705,7 @@ ul li a{
     margin-top: 70px;
     /* background-color: #FF4500;    */
 }
+<<<<<<< HEAD
 .footer .box4{
     width: calc(100%/3);
 }
@@ -366,10 +714,23 @@ ul li a{
     width: 120px;
 }
 .footer .b1 p{
+=======
+
+.footer .box4 {
+    width: calc(100%/3);
+}
+
+.footer .b1 img {
+    width: 120px;
+}
+
+.footer .b1 p {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin: 30px 0px;
     line-height: 25px;
     color: #333333;
 }
+<<<<<<< HEAD
 .footer .box4 .tieude4{
     width: 100%;
     height: 30px;   
@@ -385,10 +746,32 @@ ul li a{
     /* background: chartreuse; */
 }
 .quan1{
+=======
+
+.footer .box4 .tieude4 {
+    width: 100%;
+    height: 30px;
+    margin-left: 70px;
+    /* background-color: blue; */
+}
+
+.footer .box4 .tieude4 h4 {
+    font-size: 17px;
+    color: black;
+}
+
+.footer .textquan {
+    display: flex;
+    /* background: chartreuse; */
+}
+
+.quan1 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 50%;
     margin-top: 20px;
     color: #333333;
 }
+<<<<<<< HEAD
 .l1 p{
     margin-left: 70px;
     line-height: 20px;
@@ -398,6 +781,20 @@ ul li a{
     margin-right: 40px;
 }
 .box4 input{
+=======
+
+.l1 p {
+    margin-left: 70px;
+    line-height: 20px;
+}
+
+.l2 p {
+    line-height: 20px;
+    margin-right: 40px;
+}
+
+.box4 input {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     height: 50px;
     background: rgb(247, 243, 243);
     color: rgb(150, 144, 144);
@@ -406,7 +803,12 @@ ul li a{
     padding-left: 5px;
     margin-bottom: 30px;
 }
+<<<<<<< HEAD
 .box4 .ip2{
+=======
+
+.box4 .ip2 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     color: white;
     background-color: orangered;
     border: 0;
@@ -414,37 +816,70 @@ ul li a{
     font-size: 14px;
     font-weight: bold;
 }
+<<<<<<< HEAD
 .divlon{
+=======
+
+.divlon {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 65%;
     margin: 0 auto;
     display: flex;
 }
+<<<<<<< HEAD
 .divlon .div1{
+=======
+
+.divlon .div1 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 45%;
     height: 600px;
     background: white;
 }
+<<<<<<< HEAD
 .divlon .div2{
+=======
+
+.divlon .div2 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 55%;
     height: 600px;
     background: white;
 }
+<<<<<<< HEAD
 .imglon{
+=======
+
+.imglon {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin-bottom: 10px;
     width: 100%;
     padding: 20px;
     padding-bottom: 0px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
 .divimg .imgnho {
     width: 75px;
     height: 50px;
     display: inline;
 }
+<<<<<<< HEAD
 .imgnho{
     margin-left: 10px;
 
 }
 .div2 i{
+=======
+
+.imgnho {
+    margin-left: 10px;
+}
+
+.div2 i {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     border-radius: 100%;
     border: 1px solid #333333;
     float: right;
@@ -453,6 +888,7 @@ ul li a{
     margin-right: 10px;
     margin-top: 10px;
 }
+<<<<<<< HEAD
 .nho1{
     margin-left: 25px;
 }
@@ -461,28 +897,60 @@ ul li a{
     height: 50px;
 }
 .divlon .divtext{
+=======
+
+.nho1 {
+    margin-left: 25px;
+}
+
+.imgnho img {
+    width: 75px;
+    height: 50px;
+}
+
+.divlon .divtext {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin-top: 20px;
     display: flex;
     border: 1px solid #ccc;
     margin: 30px;
     padding: 15px;
 }
+<<<<<<< HEAD
 .divtext ul li{
     list-style: block;
 }
 .divtext1{
+=======
+
+.divtext ul li {
+    list-style: block;
+}
+
+.divtext1 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     width: 48%;
     margin-right: 1%;
     margin-left: 1%;
 }
+<<<<<<< HEAD
 .divmota1 h3{
+=======
+
+.divmota1 h3 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin-bottom: 35px;
     margin-top: 40px;
     margin-left: 20px;
     font-size: 29px;
     line-height: 35px;
 }
+<<<<<<< HEAD
 .divmota1 input{
+=======
+
+.divmota1 input {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     text-align: center;
     width: 100px;
     border: 0;
@@ -491,6 +959,7 @@ ul li a{
     font-size: 13px;
     font-weight: bold;
 }
+<<<<<<< HEAD
 .ipmt{
     margin-left: 20px;    
     color: orangered;
@@ -505,15 +974,45 @@ ul li a{
     color: white;
 }
 .divmota2{
+=======
+
+.ipmt {
+    margin-left: 20px;
+    color: orangered;
+    background: rgb(248, 209, 242);
+}
+
+.ipmt2 {
+    color: white;
+    background-color: blue;
+}
+
+.ipmt3 {
+    background-color: #ccc;
+    color: white;
+}
+
+.divmota2 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin: 20px 20px;
     padding: 20px;
     background: #ccc;
 }
+<<<<<<< HEAD
 .divmota3{
     margin: 20px 20px;
     padding: 20px;
 }
 .divmota3 input{
+=======
+
+.divmota3 {
+    margin: 20px 20px;
+    padding: 20px;
+}
+
+.divmota3 input {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     float: right;
     width: 120px;
     height: 45px;
@@ -523,11 +1022,17 @@ ul li a{
     font-weight: bold;
     color: white;
 }
+<<<<<<< HEAD
 .divmota3 a{
+=======
+
+.divmota3 a {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     font-size: 20px;
     color: orange;
     font-weight: bold;
 }
+<<<<<<< HEAD
 .modal{
     margin-top: 30px;
 }
@@ -537,11 +1042,29 @@ ul li a{
    
 }
 .divdl{
+=======
+
+.modal {
+    margin-top: 30px;
+}
+
+.dl {
+    margin-top: 12%;
+    margin-left: 35%;
+}
+
+.divdl {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     background-color: white;
     width: 45%;
     position: relative;
 }
+<<<<<<< HEAD
 .divdl i{
+=======
+
+.divdl i {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     border-radius: 100%;
     border: 1px solid #333333;
     float: right;
@@ -550,14 +1073,25 @@ ul li a{
     margin-right: 10px;
     margin-top: 10px;
 }
+<<<<<<< HEAD
 .divdl h1{
+=======
+
+.divdl h1 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     padding-top: 20px;
     margin-left: 20px;
     font-size: 30px;
     font-weight: bold;
+<<<<<<< HEAD
 
 }
 .divdl input{
+=======
+}
+
+.divdl input {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     height: 35px;
     outline: none;
     padding-left: 10px;
@@ -565,26 +1099,52 @@ ul li a{
     border: 0;
     box-shadow: rgb(233, 229, 229) 3px 6px 6px 3px;
 }
+<<<<<<< HEAD
 .divdl .ipdl1{
     width: 91%;
     margin:20px;
     color: #ccc;
 }
 .divdl .ipdl2{
+=======
+
+.divdl .ipdl1 {
+    width: 91%;
+    margin: 20px;
+    color: #ccc;
+}
+
+.divdl .ipdl2 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin-bottom: 20px;
     width: 45%;
     margin-left: 20px;
 }
+<<<<<<< HEAD
 .divdl .ipdl3{
     width: 45%;
     margin-bottom: 20px;
 }
 .divdl .ipdl4{
+=======
+
+.divdl .ipdl3 {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.divdl .ipdl4 {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     margin-bottom: 60px;
     width: 45%;
     margin-left: 20px;
 }
+<<<<<<< HEAD
 .guitt{
+=======
+
+.guitt {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     top: 90%;
     left: 30%;
     right: 0;
@@ -595,7 +1155,12 @@ ul li a{
     border-radius: 5px;
     background-color: orangered;
 }
+<<<<<<< HEAD
 .guitt a{
+=======
+
+.guitt a {
+>>>>>>> ed4913dd109945d8221b88149feb61525a7b8987
     color: white;
     text-decoration: none;
     line-height: 50px;

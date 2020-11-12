@@ -10,7 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+    
 </head>
+<style>
+    td p{
+        text-align: left;
+    }
+</style>
 
 <body>
     <div class="wrapper">
@@ -50,17 +56,11 @@
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-edit.svg" alt="">Quản lý căn hộ<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="#">Danh sách căn hộ</a>
-                                    <a class="left__link" href="view_p_category.html">Xem Danh Mục</a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=can_ho&act=index">Danh sách căn hộ</a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=can_ho&act=addnew">Thêm căn hộ</a>
                                 </div>
                             </li>
-                            <li class="left__menuItem">
-                                <div class="left__title"><img src="./view/assets/icon-edit.svg" alt="">Quản lý hình căn hộ<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
-                                <div class="left__text">
-                                    <a class="left__link" href="">Danh sách hình </a>
-                                    <a class="left__link" href="">Thêm hình căn hộ</a>
-                                </div>
-                            </li>
+
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-edit.svg" alt="">Quản lý các quận<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
@@ -147,6 +147,8 @@
     </div>
 
     <script src="./view/js/main.js"></script>
+
+
 </body>
 
 </html>
