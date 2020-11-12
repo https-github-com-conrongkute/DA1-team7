@@ -9,8 +9,11 @@
     color: inherit;
     box-sizing: border-box;
 }
+
+
 /* thông báo login */
-.tblogin-bg{
+
+.tblogin-bg {
     width: 100%;
     display: none;
     height: 100%;
@@ -20,73 +23,86 @@
     z-index: 99;
     background-color: rgba(116, 116, 156, 0.35);
 }
-.tblogin-form{
+
+.tblogin-form {
     width: 35%;
     margin: 0 auto;
 }
-.nut-ys-n{
+
+.nut-ys-n {
     width: 100%;
     float: left;
     line-height: 50px;
     text-align: center;
 }
-.nut-ys-n>a{
+
+.nut-ys-n>a {
     padding: 10px 20px;
     border-radius: 20px;
 }
-.nut-ys-n>a:nth-child(1){
+
+.nut-ys-n>a:nth-child(1) {
     background-color: #b2b9ce;
     margin-right: 10px;
     color: black;
 }
-.nut-ys-n>a:nth-child(2){
+
+.nut-ys-n>a:nth-child(2) {
     background-color: cornflowerblue;
     color: white;
 }
-.tblogin-container>h3{
+
+.tblogin-container>h3 {
     width: 100%;
     float: left;
     line-height: 125px;
     text-align: center;
 }
-.tblogin-container{
+
+.tblogin-container {
     width: 100%;
     background-color: white;
     height: 250px;
     margin-top: 50px;
     border-radius: 12px;
 }
+
+
 /* End */
+
 .inputfile {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
     position: absolute;
     display: none;
-	z-index: -1;
+    z-index: -1;
 }
-.inputfile + label {
+
+.inputfile+label {
     font-size: 1.25em;
     font-weight: 700;
     color: black;
-    background-color:  #f0f0f0;
+    background-color: #f0f0f0;
     display: inline-block;
     cursor: pointer;
-    
     line-height: 40px;
     text-align: center;
 }
+
 
 /* .inputfile:focus + label,
 .inputfile + label:hover {
     background-color: red;
 } */
-a:hover{
+
+a:hover {
     text-decoration: none;
     color: black;
 }
-.delete-loaican{
+
+.delete-loaican {
     position: fixed;
     z-index: 99;
     width: 100%;
@@ -96,7 +112,8 @@ a:hover{
     height: 100%;
     background-color: rgba(116, 116, 156, 0.35);
 }
-.thongbao-khachhang{
+
+.thongbao-khachhang {
     position: fixed;
     width: 100%;
     z-index: 99;
@@ -106,11 +123,13 @@ a:hover{
     height: 100%;
     background-color: rgba(116, 116, 156, 0.35);
 }
-.delete-container{
+
+.delete-container {
     width: 30%;
     margin: 0 auto;
 }
-.delete-form{
+
+.delete-form {
     width: 100%;
     background-color: white;
     height: 200px;
@@ -119,11 +138,13 @@ a:hover{
     margin-top: 200px;
     box-sizing: border-box;
 }
-.nut{
+
+.nut {
     width: 100%;
     line-height: 50px;
     text-align: center;
 }
+
 *:focus {
     outline: 0;
 }
@@ -417,15 +438,18 @@ body {
     align-items: center;
     padding: 0 20px;
 }
-.left__linkblock{
+
+.left__linkblock {
     margin-bottom: 14px;
     display: flex;
     align-items: center;
     padding: 0 20px;
 }
-.left__linkblock:hover{
+
+.left__linkblock:hover {
     opacity: 0.5;
 }
+
 .left__link:hover {
     opacity: 0.5;
 }
@@ -1035,7 +1059,7 @@ body {
         margin-bottom: 0px;
     }
     .right table td {
-        text-align: right !important;
+        text-align: left !important;
         position: relative;
         padding-left: 80px !important;
     }
@@ -1176,7 +1200,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 320px;
+    max-width: 80%;
     margin: 0 auto;
 }
 

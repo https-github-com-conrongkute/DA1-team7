@@ -32,6 +32,7 @@
         <div class="right__inputWrapper">
             <input type="file" name="file" id="file" class="inputfile" />
             <label for="file"><i class="fas fa-upload"></i> Tải hình lên</label>
+            <img id="blah" style="width: 15%;" src="#" alt="your image" />
         </div>
         <div class="radion" style="width: 100%;float: left;height:80px;">
             <label for="title" style="font-weight: 700;">Vai trò</label><br>
@@ -53,3 +54,20 @@
     </div>
     <?php } ?>
 </div>
+<script>
+            function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#file").change(function(){
+        readURL(this);
+    });
+    </script>
