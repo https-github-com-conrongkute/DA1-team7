@@ -14,24 +14,29 @@ switch ($act) {
         require_once 'view/layout.php';
         break;
     case 'insert':
-        $thongbao = true;
+        // $thongbao = true;
         // Kiểm lỗi
         if ($_POST != NULL) {
-            $tendn = $_POST['tendn'];
             $tenkh = $_POST['tenkh'];
             $email = $_POST['email'];
             $sdt = $_POST['sdt'];
             $pass = $_POST['pass'];
-            if (checkuser($tenkh)) {
-                $thongbao = false;
-                $tenkh_tt = "<p>Tên khách hàng đã tồn tại !</p>";
-            } elseif (strlen($tenkh) == 0) {
+            $tendn = $_POST['tendn'];
+            // $thongbao = true;
+            if (strlen($tenkh)==0) {
                 $thongbao = false;
                 $tenkh_tt = "<p>không nên để trống !</p>";
-            }
-            if (checktk($tendn)) {
+            }elseif(strlen($tendn)==0){
+                $thongbao = false;
+                $tendn_tt = "<p>không nên để trống !</p>";
+            } elseif (checkuser($tenkh)) {
+                $thongbao = false;
+                $tenkh_tt = "<p>Tên khách hàng đã tồn tại !</p>";
+            }elseif (checktk($tendn)) {
                 $thongbao = false;
                 $tendn_tt = "<p>Tên tài khoản đã tồn tại !</p>";
+            }else{
+                $thongbao = true;
             }
         }
         $hinh = $_FILES['file']['name'];
@@ -47,11 +52,10 @@ switch ($act) {
             addnewKhachhang($tenkh, $email, $sdt, $pass, $hinh, $tendn, $kich_hoat, $vai_tro, $random_key);
             $view = 'view/khach_hang-addnew.php';
             require_once 'view/layout.php';
-        } else {
-            header('?ctrl=tai_khoan&act=addnew');
-        }
+        }else{
         $view = 'view/khach_hang-addnew.php';
         require_once 'view/layout.php';
+        }
         break;
     case 'edit':
         $ma_kh = $_GET['ma_kh'];
@@ -101,12 +105,8 @@ switch ($act) {
     case 'kiemloi':
         if (isset($_GET['username']) == true) {
             $user = $_GET['username'];
-            if (checkuser($user)) {
-                echo "<p>Tên khách hàng đã tồn tại !</p>";
-            } elseif (strlen($user) == 0) {
+            if (strlen($user)==0) {
                 echo "<p>Đừng để trống chứ bạn !</p>";
-            } else {
-                echo "<p  style='background-color: green;'>Bạn có thể dùng tên này</p>";
             }
         }
 
@@ -151,6 +151,8 @@ switch ($act) {
                 echo "<p>Mật khẩu của bạn quá ngắn !</p>";
             }elseif(strlen($pass)==0){
                 echo "<p>Đừng để trống chứ bạn !</p>";
+            }else{
+                echo "<p  style='background-color: green;'>An toàn</p>";
             }
         }
         break;
