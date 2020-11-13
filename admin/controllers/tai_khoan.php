@@ -23,21 +23,44 @@ switch ($act) {
             $pass = $_POST['pass'];
             $tendn = $_POST['tendn'];
             // $thongbao = true;
+            // check lỗi tên khách hàng 
             if (strlen($tenkh)==0) {
                 $thongbao = false;
-                $tenkh_tt = "<p>không nên để trống !</p>";
-            }elseif(strlen($tendn)==0){
+                $tenkh_tt = "<span>không để trống !</span>";
+            }else{
+                $thongbao =true;
+            }
+            // check lỗi tên tk
+            if(strlen($tendn)==0){
                 $thongbao = false;
-                $tendn_tt = "<p>không nên để trống !</p>";
-            } elseif (checkuser($tenkh)) {
-                $thongbao = false;
-                $tenkh_tt = "<p>Tên khách hàng đã tồn tại !</p>";
+                $ten_dn_tt = "<span>không để trống !</span>";
             }elseif (checktk($tendn)) {
                 $thongbao = false;
-                $tendn_tt = "<p>Tên tài khoản đã tồn tại !</p>";
+                $ten_dn_tt = "<span>Tên tài khoản đã tồn tại !</span>";
             }else{
                 $thongbao = true;
             }
+            // check lỗi email
+            if(strlen($email)==0){
+                $thongbao = false;
+                $email_tt = "<span>không để trống !</span>";
+            }elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                $thongbao = false;
+                $email_tt = "<span>Email không hợp lệ !</span>";
+            }else{
+                $thongbao = true;
+            }
+            // check error password
+            if(strlen($pass)==0){
+                $thongbao = false;
+                $pass_tt = "<span>Không để trống !</span>";
+            }elseif(strlen($pass) < 4){
+                $thongbao = false;
+                $pass_tt = "<span>Mật khẩu của bạn quá ngắn !</span>";
+            }else{
+                $thongbao = true;
+            }
+            
         }
         $hinh = $_FILES['file']['name'];
         $pathimg = './uploaded/';
@@ -106,7 +129,7 @@ switch ($act) {
         if (isset($_GET['username']) == true) {
             $user = $_GET['username'];
             if (strlen($user)==0) {
-                echo "<p>Đừng để trống chứ bạn !</p>";
+                echo "<span>Không để trống !</span>";
             }
         }
 
@@ -114,15 +137,15 @@ switch ($act) {
             $email = $_GET['email'];
 
             if (strlen($email)==0) {
-                echo "<p>Đừng để trống chứ bạn !</p>";
+                echo "<span>Không để trống !</span>";
             } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 echo "<p>Địa chỉ email không hợp lệ !</p>";
             }
             elseif(checkemail($email)){
-                echo "<p>Email đã tồn tại !</p>";
+                echo "<span>Email đã tồn tại !</span>";
             } 
             else {
-                echo "<p style='background-color: green;'>Bạn có thể dùng email này </p>";
+                echo "<span style='background-color: green;'>Bạn có thể dùng email này </span>";
             }
         }
         if(isset($_GET['ten_dn'])==true){
@@ -130,29 +153,29 @@ switch ($act) {
             if(checktk($ten_dn)){
                 echo "<p>Tên đăng nhập đã tồn tại !</p>";
             }elseif (strlen($ten_dn) == 0) {
-                echo "<p>Đừng để trống chứ bạn !</p>";
+                echo "<span>Không để trống !</span>";
             } else {
-                echo "<p  style='background-color: green;'>Bạn có thể dùng tên này</p>";
+                echo "<span  style='background-color: green;'>Bạn có thể dùng tên này</span>";
             }
         }
         if(isset($_GET['sdt'])==true){
             $sdt = $_GET['sdt'];
             if(checksdt($sdt)){
-                echo "<p>Số điện thoại đã tồn tại !</p>";
+                echo "<span>Số điện thoại đã tồn tại !</span>";
             }elseif(strlen($sdt)==0){
-                echo "<p>Đừng để trống chứ bạn !</p>";
+                echo "<span>Không để trống !</span>";
             }else{
-                echo "<p style='background-color: green;'>Bạn có thể dùng số diện thoại này này </p>";
+                echo "<span style='background-color: green;'>Bạn có thể dùng số diện thoại này này </span>";
             }
         }
         if(isset($_GET['pass'])==true){
             $pass = $_GET['pass'];
             if(strlen($pass) < 6){
-                echo "<p>Mật khẩu của bạn quá ngắn !</p>";
+                echo "<span>Mật khẩu của bạn quá ngắn !</span>";
             }elseif(strlen($pass)==0){
-                echo "<p>Đừng để trống chứ bạn !</p>";
+                echo "<span>không để trống !</span>";
             }else{
-                echo "<p  style='background-color: green;'>An toàn</p>";
+                echo "<span  style='background-color: green;'>An toàn</span>";
             }
         }
         break;

@@ -5,40 +5,46 @@
         <div class="right__inputWrapper hienloi">
             <label for="title">Tên khách hàng</label>
             <input type="text" name="tenkh" id="tenkh" placeholder="Họ và tên">
-            <span class="bage-check-kh"></span>
+            <p class="bage-check-kh"></p>
             <?php if(isset($tenkh_tt)==true){ ?>
-            <span class="bage-check-php" ><?=$tenkh_tt?></span>
+            <p class="bage-check-php" ><?=$tenkh_tt?></p>
             <?php } ?>
         </div>
         <div class="right__inputWrapper hienloi">
             <label for="title">Tên đăng nhập</label>
             <input type="text" name="tendn" id="tendn" placeholder="tên đăng nhập">
             <!-- <span id="email"></span> -->
-            <span class="bage-check-dn"></span>
-            <?php if(isset($tendn_tt)==true){ ?>
-            <span class="bage-check-php"><?=$tendn_tt?></span>
+            <p class="bage-check-dn"></p>
+            <?php if(isset($ten_dn_tt)==true){ ?>
+            <p class="bage-check-php"><?=$ten_dn_tt?></p>
             <?php } ?>
         </div>
         <div class="right__inputWrapper hienloi">
             <label for="title">Email</label>
             <input type="email" name="email" id="email" placeholder="Email">
-            <span class="bage-check-email"></span>
+            <p class="bage-check-email"></p>
+            <?php if(isset($email_tt)==true){ ?>
+            <p class="bage-check-php"><?=$email_tt?></p>
+            <?php } ?>
             <!-- <span id="email"></span> -->
         </div>
         <div class="right__inputWrapper hienloi">
             <label for="title">Số điện thoại</label>
             <input type="number" name="sdt" id="sdt" placeholder="số điện thoại">
-            <span class="bage-check-sdt"></span>
+            <p class="bage-check-sdt"></p>
         </div>
         <div class="right__inputWrapper hienloi">
             <label for="title">Mật khẩu</label>
             <input type="password" name="pass" id="mk" placeholder="Mật khẩu">
-            <span class="bage-check-pass"></span>
+            <p class="bage-check-pass"></p>
+            <?php if(isset($pass_tt)==true){ ?>
+            <p class="bage-check-php"><?=$pass_tt?></p>
+            <?php } ?>
         </div>
         <div class="right__inputWrapper hienloi">
             <input type="file" name="file" id="file" class="inputfile" />
             <label for="file"><i class="fas fa-upload"></i> Tải hình lên</label>
-            <img src="#" alt="" id="loadha" style="height: 100px;object-fit: cover;display: none;">
+            <img src="#" alt="" id="loadha" style="height: 100px;object-fit: cover;display: none;width: 15%;">
             <script>
                 // Load hình ảnh lên khi chọn file upload
                 $(document).ready(function () {
