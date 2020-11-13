@@ -1,75 +1,84 @@
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     width: 100%;
-    font-family: "Sf ui display",sans-serif;
+    font-family: "Sf ui display", sans-serif;
 }
-.menu{
+
+.menu {
     height: 970px;
 }
-.banner{
+
+.banner {
     position: relative;
 }
-.banner img{
-    opacity: 0.8;
 
+.banner img {
+    opacity: 0.8;
 }
-.nav{
+
+.nav {
     width: calc(100% - 70px);
     top: 20px;
     left: 70px;
     height: 160px;
     position: absolute;
 }
-.navimg{
+
+.navimg {
     float: left;
     width: 20%;
 }
-.navmenu{
+
+.navmenu {
     width: calc(80% - 70px);
     float: left;
     text-align: center;
     margin-top: 35px;
-
 }
-ul li{
+
+ul li {
     list-style: none;
     display: block;
     overflow: hidden;
     display: inline;
-    
 }
-ul li a{
+
+ul li a {
     margin-right: 35px;
     font-size: 16px;
     text-decoration: none;
     overflow: hidden;
     color: white;
 }
-.navtext{
+
+.navtext {
     position: absolute;
     width: 100%;
     top: 180px;
     text-align: center;
 }
-.navtext h1{
+
+.navtext h1 {
     color: orange;
     font-size: 40px;
     font-weight: bold;
     letter-spacing: 1px;
-
 }
-.navtext p{
+
+.navtext p {
     margin-top: 30px;
     font-size: 17px;
     letter-spacing: 1.5px;
     color: white;
     line-height: 27px;
 }
-.dangky{
+
+.dangky {
     width: 23%;
     height: 400px;
     position: absolute;
@@ -79,31 +88,34 @@ ul li a{
     border-radius: 19px;
     text-align: center;
     box-shadow: #ccc 0px 20px 20px;
-
+    z-index: 2;
 }
-.dangky h3{
+
+.dangky h3 {
     margin-top: 35px;
     margin-bottom: 15px;
 }
-.dangky input{
+
+.dangky input {
     padding-left: 7px;
     width: 75%;
     height: 42px;
     margin-top: 25px;
     border-radius: 16px;
     border: none;
-    outline:none;
+    outline: none;
     color: rgb(172, 167, 167);
 }
-.dangky .submit{
+
+.dangky .submit {
     color: white;
     font-weight: bold;
     font-size: 15px;
     margin-top: 40px;
     background-color: #FF4500;
-
 }
-.dangky2{
+
+.dangky2 {
     width: 54.8%;
     height: 310px;
     top: 485px;
@@ -112,33 +124,38 @@ ul li a{
     background-color: white;
     border-radius: 0px 20px 20px 0px;
     box-shadow: #ccc 8px 20px 20px;
-
+    z-index: 1;
 }
-.dangky2 .text1{
+
+.dangky2 .text1 {
     width: 100%;
     height: 50px;
     line-height: 50px;
     text-align: center;
 }
-.dangky2 .text2{
+
+.dangky2 .text2 {
     display: flex;
     width: 100%;
     height: 260px;
     text-align: center;
-
 }
-.dangky2 .box1{
+
+.dangky2 .box1 {
     width: calc(100%/3);
 }
-.dangky2 .box1 a{
+
+.dangky2 .box1 a {
     font-weight: bold;
 }
-.dangky2 .box1 p{
+
+.dangky2 .box1 p {
     margin-top: 15px;
     line-height: 25px;
     font-size: 13px;
 }
-.icon1{
+
+.icon1 {
     width: 65px;
     margin-left: 90px;
     margin-top: 10px;
@@ -149,65 +166,76 @@ ul li a{
     border-radius: 100%;
     background-color: orangered;
 }
-.icon1 img{
+
+.icon1 img {
     margin-top: 19px;
 }
-.danhsach{
+
+.danhsach {
     width: 100%;
     /* height: 950px; */
 }
-.danhsach .tieude{
+
+.danhsach .tieude {
     width: 100%;
     height: 110px;
     text-align: center;
 }
-.danhsach .tieude h4{
+
+.danhsach .tieude h4 {
     margin-bottom: 10px;
     font-size: 16px;
 }
-.danhsach .tieude h2{
+
+.danhsach .tieude h2 {
     font-size: 32px;
     letter-spacing: 2px;
     color: orange;
 }
-.danhsach .canho{
+
+.danhsach .canho {
     margin: 0 auto;
     width: 79%;
     /* height: 760px; */
     display: flex;
     flex-wrap: wrap;
 }
-.danhsach .box2{
+
+.danhsach .box2 {
     width: calc(100%/3 - 10px);
     margin-left: 5px;
     margin-right: 5px;
-    box-shadow: #ccc 0px 10px 10px ;
+    box-shadow: #ccc 0px 10px 10px;
     margin-bottom: 25px;
-
 }
-.box2 img{
+
+.box2 img {
     width: 100%;
     height: 230px;
     margin-bottom: 10px;
 }
-.box2 a{
+
+.box2 a {
     text-decoration: none;
     font-size: 15px;
     color: black;
     font-weight: bold;
 }
-.box2text{
+
+.box2text {
     margin-left: 9px;
     margin-right: 9px;
 }
-.gia{
+
+.gia {
     width: 52%;
     margin-left: 4%;
     margin-top: 30px;
     height: 40px;
     float: left;
 }
-.datlich{
+
+.datlich {
     width: 34%;
     margin-top: 20px;
     border-radius: 20px;
@@ -220,23 +248,26 @@ ul li a{
     font-size: 15px;
     background-color: orangered;
 }
-.datlich a{
+
+.datlich a {
     color: white;
     font-size: 14px;
 }
-.gioithieu{
+
+.gioithieu {
     margin-top: 60px;
     width: 100%;
     height: 450px;
     background-color: orange;
-
 }
-.gioithieu img{
+
+.gioithieu img {
     width: 65%;
     height: 450px;
     float: left;
 }
-.textgt{
+
+.textgt {
     float: left;
     width: 35%;
     height: 450px;
@@ -245,97 +276,112 @@ ul li a{
     font-size: 14px;
     color: rgb(240, 236, 236);
 }
-.textgt h1{
+
+.textgt h1 {
     color: rgb(238, 78, 20);
     margin: 15px;
 }
-.thuenha{
+
+.thuenha {
     width: 80%;
     margin: 0 auto;
     margin-top: 100px;
     height: 410px;
 }
-.tieude2{
+
+.tieude2 {
     text-align: center;
     width: 100%;
     height: 100px;
 }
-.tieude2 h4{
-    font-size: 18px;
 
+.tieude2 h4 {
+    font-size: 18px;
 }
-.tieude2 h2{
+
+.tieude2 h2 {
     font-size: 31px;
     color: orange;
-    
 }
-.thuenhatext{
+
+.thuenhatext {
     display: flex;
 }
-.box3{
+
+.box3 {
     width: calc(100%/3 - 30px);
     width: 100%;
     margin: 0 15px;
     background-color: white;
     box-shadow: #ccc 5px 10px 10px 5px;
 }
-.box3{
+
+.box3 {
     width: 100%;
     text-align: center;
 }
-.box3 img{
+
+.box3 img {
     margin: 40px;
 }
-.box3 a{
+
+.box3 a {
     margin: 30px;
     color: black;
     font-weight: bold;
     text-decoration: none;
 }
-.box3 p{
+
+.box3 p {
     margin: 30px;
-    
 }
-.tieude3{
+
+.tieude3 {
     text-align: center;
     width: 100%;
     height: 80px;
 }
-.tieude3 h2{
+
+.tieude3 h2 {
     font-size: 31px;
     color: orange;
 }
-.box3 img{
+
+.box3 img {
     width: 30%;
     height: 90px;
 }
-.tuvan{
+
+.tuvan {
     width: 100%;
     margin-top: 90px;
 }
-.tuvanimg{
+
+.tuvanimg {
     position: relative;
     width: 100%;
     text-align: center;
 }
-.tuvantext{
+
+.tuvantext {
     position: absolute;
     top: 100px;
     width: 100%;
-
 }
-.tuvantext h1{
-    margin-bottom: 20px;   
+
+.tuvantext h1 {
+    margin-bottom: 20px;
     color: white;
-
 }
-.tuvantext p{
+
+.tuvantext p {
     margin-bottom: 20px;
     letter-spacing: 1px;
     color: white;
     line-height: 25px;
 }
-.tuvan2{
+
+.tuvan2 {
     margin: 0 auto;
     margin-top: 40px;
     width: 170px;
@@ -343,14 +389,46 @@ ul li a{
     border-radius: 5px;
     background-color: orangered;
 }
-.tuvan2 a{
+
+.tuvan2 a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
     line-height: 50px;
 }
-.footer{
+
+.xemthem {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 170px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background: orangered;
+}
+
+.xemthem a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 100%;
+    line-height: 50px;
+    text-align: center;
+    padding: 0px 30%;
+}
+
+.xemthem:hover {
+    background: white;
+    transition-duration: 0.3s;
+}
+
+.xemthem:hover a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer {
     width: 79%;
     margin: 0 auto;
     display: flex;
@@ -358,46 +436,55 @@ ul li a{
     margin-top: 70px;
     /* background-color: #FF4500;    */
 }
-.footer .box4{
+
+.footer .box4 {
     width: calc(100%/3);
 }
 
-.footer .b1 img{
+.footer .b1 img {
     width: 120px;
 }
-.footer .b1 p{
+
+.footer .b1 p {
     margin: 30px 0px;
     line-height: 25px;
     color: #333333;
 }
-.footer .box4 .tieude4{
+
+.footer .box4 .tieude4 {
     width: 100%;
-    height: 30px;   
-     margin-left: 70px;
+    height: 30px;
+    margin-left: 70px;
     /* background-color: blue; */
 }
-.footer .box4 .tieude4 h4{
+
+.footer .box4 .tieude4 h4 {
     font-size: 17px;
     color: black;
 }
-.footer .textquan{
+
+.footer .textquan {
     display: flex;
     /* background: chartreuse; */
 }
-.quan1{
+
+.quan1 {
     width: 50%;
     margin-top: 20px;
     color: #333333;
 }
-.l1 p{
+
+.l1 p {
     margin-left: 70px;
     line-height: 20px;
 }
-.l2 p{
+
+.l2 p {
     line-height: 20px;
     margin-right: 40px;
 }
-.box4 input{
+
+.box4 input {
     height: 50px;
     background: rgb(247, 243, 243);
     color: rgb(150, 144, 144);
@@ -406,7 +493,8 @@ ul li a{
     padding-left: 5px;
     margin-bottom: 30px;
 }
-.box4 .ip2{
+
+.box4 .ip2 {
     color: white;
     background-color: orangered;
     border: 0;
@@ -414,37 +502,43 @@ ul li a{
     font-size: 14px;
     font-weight: bold;
 }
-.divlon{
+
+.divlon {
     width: 65%;
     margin: 0 auto;
     display: flex;
 }
-.divlon .div1{
+
+.divlon .div1 {
     width: 45%;
     height: 600px;
     background: white;
 }
-.divlon .div2{
+
+.divlon .div2 {
     width: 55%;
     height: 600px;
     background: white;
 }
-.imglon{
+
+.imglon {
     margin-bottom: 10px;
     width: 100%;
     padding: 20px;
     padding-bottom: 0px;
 }
+
 .divimg .imgnho {
     width: 75px;
     height: 50px;
     display: inline;
 }
-.imgnho{
-    margin-left: 10px;
 
+.imgnho {
+    margin-left: 10px;
 }
-.div2 i{
+
+.div2 i {
     border-radius: 100%;
     border: 1px solid #333333;
     float: right;
@@ -453,36 +547,43 @@ ul li a{
     margin-right: 10px;
     margin-top: 10px;
 }
-.nho1{
+
+.nho1 {
     margin-left: 25px;
 }
-.imgnho img{
+
+.imgnho img {
     width: 75px;
     height: 50px;
 }
-.divlon .divtext{
+
+.divlon .divtext {
     margin-top: 20px;
     display: flex;
     border: 1px solid #ccc;
     margin: 30px;
     padding: 15px;
 }
-.divtext ul li{
+
+.divtext ul li {
     list-style: block;
 }
-.divtext1{
+
+.divtext1 {
     width: 48%;
     margin-right: 1%;
     margin-left: 1%;
 }
-.divmota1 h3{
+
+.divmota1 h3 {
     margin-bottom: 35px;
     margin-top: 40px;
     margin-left: 20px;
     font-size: 29px;
     line-height: 35px;
 }
-.divmota1 input{
+
+.divmota1 input {
     text-align: center;
     width: 100px;
     border: 0;
@@ -491,29 +592,35 @@ ul li a{
     font-size: 13px;
     font-weight: bold;
 }
-.ipmt{
-    margin-left: 20px;    
+
+.ipmt {
+    margin-left: 20px;
     color: orangered;
     background: rgb(248, 209, 242);
 }
-.ipmt2{
+
+.ipmt2 {
     color: white;
     background-color: blue;
 }
-.ipmt3{
+
+.ipmt3 {
     background-color: #ccc;
     color: white;
 }
-.divmota2{
+
+.divmota2 {
     margin: 20px 20px;
     padding: 20px;
     background: #ccc;
 }
-.divmota3{
+
+.divmota3 {
     margin: 20px 20px;
     padding: 20px;
 }
-.divmota3 input{
+
+.divmota3 input {
     float: right;
     width: 120px;
     height: 45px;
@@ -523,25 +630,29 @@ ul li a{
     font-weight: bold;
     color: white;
 }
-.divmota3 a{
+
+.divmota3 a {
     font-size: 20px;
     color: orange;
     font-weight: bold;
 }
-.modal{
+
+.modal {
     margin-top: 30px;
 }
-.dl{
+
+.dl {
     margin-top: 12%;
     margin-left: 35%;
-   
 }
-.divdl{
+
+.divdl {
     background-color: white;
     width: 45%;
     position: relative;
 }
-.divdl i{
+
+.divdl i {
     border-radius: 100%;
     border: 1px solid #333333;
     float: right;
@@ -550,14 +661,15 @@ ul li a{
     margin-right: 10px;
     margin-top: 10px;
 }
-.divdl h1{
+
+.divdl h1 {
     padding-top: 20px;
     margin-left: 20px;
     font-size: 30px;
     font-weight: bold;
-
 }
-.divdl input{
+
+.divdl input {
     height: 35px;
     outline: none;
     padding-left: 10px;
@@ -565,26 +677,31 @@ ul li a{
     border: 0;
     box-shadow: rgb(233, 229, 229) 3px 6px 6px 3px;
 }
-.divdl .ipdl1{
+
+.divdl .ipdl1 {
     width: 91%;
-    margin:20px;
+    margin: 20px;
     color: #ccc;
 }
-.divdl .ipdl2{
+
+.divdl .ipdl2 {
     margin-bottom: 20px;
     width: 45%;
     margin-left: 20px;
 }
-.divdl .ipdl3{
+
+.divdl .ipdl3 {
     width: 45%;
     margin-bottom: 20px;
 }
-.divdl .ipdl4{
+
+.divdl .ipdl4 {
     margin-bottom: 60px;
     width: 45%;
     margin-left: 20px;
 }
-.guitt{
+
+.guitt {
     top: 90%;
     left: 30%;
     right: 0;
@@ -595,7 +712,8 @@ ul li a{
     border-radius: 5px;
     background-color: orangered;
 }
-.guitt a{
+
+.guitt a {
     color: white;
     text-decoration: none;
     line-height: 50px;
