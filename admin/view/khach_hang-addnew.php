@@ -38,7 +38,7 @@
         <div class="right__inputWrapper hienloi">
             <input type="file" name="file" id="file" class="inputfile" />
             <label for="file"><i class="fas fa-upload"></i> Tải hình lên</label>
-            <img src="#" alt="" id="loadha" style="height: 100px;object-fit: cover;display: none;">
+            <img src="#" alt="" id="loadha" style="height: 100px; width: 15%; object-fit: cover;display: none;">
             <script>
                 // Load hình ảnh lên khi chọn file upload
                 $(document).ready(function () {
@@ -57,9 +57,7 @@
                     });
                 });
             </script>
-
-            <img id="blah" style="width: 15%;" src="#" alt="your image" />
-
+          
         </div>
         <div class="radion" style="width: 100%;float: left;height:80px;">
             <label for="title" style="font-weight: 700;">Vai trò</label><br>
@@ -87,26 +85,31 @@
             var user = $(this).val();
             $('.bage-check-kh').css('display','block');
             $('.bage-check-kh').load('<?=ADMIN_URL?>/?ctrl=tai_khoan&act=kiemloi&username=' + user);
+            $('.bage-check-php').css('display','none');
         });
         $('#email').blur(function (e) { 
             var email = $(this).val();
             $('.bage-check-email').css('display','block');
             $('.bage-check-email').load('<?=ADMIN_URL?>/?ctrl=tai_khoan&act=kiemloi&email=' + email);
+            $('.bage-check-php').css('display','none');
         });
         $('#tendn').blur(function (e) { 
             var tendn = $(this).val();
             $('.bage-check-dn').css('display','block');
             $('.bage-check-dn').load('<?=ADMIN_URL?>/?ctrl=tai_khoan&act=kiemloi&ten_dn=' + tendn);
+            $('.bage-check-php').css('display','none');
         });
         $('#sdt').blur(function (e) { 
             var sdt = $(this).val();
             $('.bage-check-sdt').css('display','block');
             $('.bage-check-sdt').load('<?=ADMIN_URL?>/?ctrl=tai_khoan&act=kiemloi&ten_dn=' + sdt);
+            $('.bage-check-php').css('display','none');
         });
         $('#mk').blur(function (e) { 
             var sdt = $(this).val();
             $('.bage-check-pass').css('display','block');
             $('.bage-check-pass').load('<?=ADMIN_URL?>/?ctrl=tai_khoan&act=kiemloi&pass=' + sdt);
+            $('.bage-check-php').css('display','none');
         });
     });
 </script>
