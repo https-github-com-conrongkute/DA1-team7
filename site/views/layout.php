@@ -73,9 +73,9 @@
             </div>
         </div>
     </div>
-    <div class="danhsach">
+    <div class="danhsach ">
         <div class="tieude">
-            <h3 style="font-weight: bold;">DANH SÁCH</h3>
+            <h3 style="font-weight: bold; color: orange;">DANH SÁCH</h3>
             <h2>Nhà cho thuê nhiều nhất</h2>
         </div>
         <div class="canho">
