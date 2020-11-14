@@ -10,7 +10,7 @@ body {
 }
 
 .menu {
-    height: 900px;
+    height: 970px;
 }
 
 .banner {
@@ -718,16 +718,4 @@ ul li a {
     text-decoration: none;
     line-height: 50px;
     font-weight: bold;
-}
-
-.divcuoi {
-    background-color: orangered;
-    color: aliceblue;
-    height: 40px;
-    width: 100%;
-    text-align: center;
-}
-
-.divcuoi span {
-    line-height: 40px;
 }
