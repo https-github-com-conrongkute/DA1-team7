@@ -1,8 +1,8 @@
 <div class="right__title">Bảng đặt lịch</div>
 <p class="right__desc">Sửa dặt lịch xem</p>
-<div class="right__formWrapper">
+<div class="right__formWrapper ">
     <form action="<?= ADMIN_URL ?>/?ctrl=dat_lich&act=update" method="post" enctype="multipart/form-data">
-        <div class="right__inputWrapper">
+        <div class="right__inputWrapper hienloi">
         <label for="title">Căn hộ</label>
              <select name="can_ho" id="">
                  <option value="">Chọn căn hộ</option>
@@ -15,10 +15,10 @@
                  <?php } } ?>
              </select>
              <?php if(isset($ma_can_tt)==true){ ?>
-             <span class="tt"><?=$ma_kh_tt?></span>
+             <p class="bage-check-php"><?=$ma_kh_tt?></p>
              <?php } ?>
         </div>
-        <div class="right__inputWrapper">
+        <div class="right__inputWrapper hienloi">
             <label for="title">Khách hàng</label>
             <select name="kh" id="">
                 <option value="">Chọn khách hàng</option>
@@ -31,19 +31,19 @@
                  <?php }} ?>
             </select>
             <?php if(isset($ma_kh_tt)==true){ ?>
-             <span class="tt"><?=$ma_kh_tt?></span>
+             <p class="bage-check-php"><?=$ma_kh_tt?></p>
              <?php } ?>
         </div>
-        <div class="right__inputWrapper">
+        <div class="right__inputWrapper hienloi">
             <label for="title">Ngày đi xem</label>
             <input type="date" name="ngay_di_xem" id="email" value="<?=$row['ngay_xem']?>">
             <input type="hidden" name="ma_dat" value="<?=$row['ma_dat']?>">
             <?php if(isset($ngay_di_xem_tt)==true){ ?>
-             <span class="tt"><?=$ma_kh_tt?></span>
+             <p class="bage-check-php"><?=$ma_kh_tt?></p>
              <?php } ?>
             <!-- <span id="email"></span> -->
         </div>
-        <button class="btn" type="submit">Chèn</button>
+        <button class="btn" type="submit">Cập nhật</button>
     </form>
     <?php if(isset($message)==true){ ?>
     <div class="thongbao-khachhang">

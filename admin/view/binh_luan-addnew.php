@@ -2,7 +2,7 @@
 <p class="right__desc">Thêm bình luận</p>
 <div class="right__formWrapper">
     <form action="<?= ADMIN_URL ?>/?ctrl=binhluan&act=insert" method="post" enctype="multipart/form-data">
-        <div class="right__inputWrapper">
+        <div class="right__inputWrapper hienloi">
         <label for="title">Căn hộ</label>
              <select name="can_ho" id="">
                  <option value="">Chọn căn hộ</option>
@@ -12,10 +12,10 @@
                  <?php } ?>
              </select>
              <?php if(isset($ma_can_tt)==true){ ?>
-             <span class="tt"><?=$ma_can_tt?></span>
+             <p class="bage-check-php"><?=$ma_can_tt?></p>
              <?php } ?>
         </div>
-        <div class="right__inputWrapper">
+        <div class="right__inputWrapper hienloi">
             <label for="title">Khách hàng</label>
             <select name="kh" id="">
                 <option value="">Chọn khách hàng</option>
@@ -24,14 +24,14 @@
                  <?php } ?>
             </select>
             <?php if(isset($ma_kh_tt)==true){ ?>
-             <span class="tt"><?=$ma_kh_tt?></span>
+             <p class="bage-check-php"><?=$ma_kh_tt?></p>
              <?php } ?>
         </div>
-        <div class="right__inputWrapper">
+        <div class="right__inputWrapper hienloi">
             <label for="title">Nội dung</label>
             <textarea name="noi_dung" id="" cols="30" rows="5" placeholder="Nội dung bình luận"></textarea>
             <?php if(isset($noi_dung_tt)==true){ ?>
-             <span class="tt"><?=$noi_dung_tt?></span>
+             <p class="bage-check-php"><?=$noi_dung_tt?></p>
              <?php } ?>
             <!-- <span id="email"></span> -->
         </div>
