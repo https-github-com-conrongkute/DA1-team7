@@ -73,10 +73,10 @@
                                 </div>
                             </li>
                             <li class="left__menuItem">
-                                <div class="left__title"><img src="./view/assets/icon-users.svg" alt="">Quản lý khách hàng<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
+                                <div class="left__title"><img src="./view/assets/icon-users.svg" alt="">Quản lý tài khoản<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=index">Danh sách khách hàng</a>
-                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=addnew">Thêm khách hàng</a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=index">Danh sách </a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=addnew">Thêm tài khoản</a>
                                 </div>
                             </li>
                             <li class="left__menuItem">

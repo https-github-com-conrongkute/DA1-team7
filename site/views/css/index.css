@@ -7,10 +7,11 @@
 body {
     width: 100%;
     font-family: "Sf ui display", sans-serif;
+    margin: 0 auto;
 }
 
 .menu {
-    height: 970px;
+    height: 900px;
 }
 
 .banner {
@@ -718,4 +719,16 @@ ul li a {
     text-decoration: none;
     line-height: 50px;
     font-weight: bold;
+}
+
+.divcuoi {
+    background-color: orangered;
+    color: aliceblue;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.divcuoi span {
+    line-height: 40px;
 }

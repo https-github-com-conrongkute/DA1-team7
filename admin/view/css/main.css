@@ -51,54 +51,57 @@
     background-color: rgba(116, 116, 156, 0.35);
 }
 /* Kiêm lỗi */
-.hienloi>p>span{
+.hienloi>span>p{
     background-color: red;
     border-radius: 20px;
     color: white;
-    padding: 1px 10px;
-    font-size: 12px;
     font-weight: bold;
 }
 .bage-check-pass{
-    width: 100%;
+    width: 75%;
     height: 20px;
     display: none;
+    text-align: center;
     margin: 5px 0px;
     line-height: 20px;
 }
 .bage-check-kh{
-    width: 100%;
+    width: 70%;
     height: 20px;
     display: none;
-    /* text-align: center; */
+    text-align: center;
     margin: 5px 0px;
     line-height: 20px;
 }
 .bage-check-sdt{
-    width: 100%;
+    width: 70%;
     height: 20px;
     display: none;
+    text-align: center;
     margin: 5px 0px;
     line-height: 20px;
 }
 .bage-check-dn{
-    width: 100%;
+    width: 75%;
     height: 20px;
     display: none;
+    text-align: center;
     margin: 5px 0px;
     line-height: 20px;
 }
 .bage-check-email{
-    width: 100%;
+    width: 75%;
     height: 20px;
     display: none;
+    text-align: center;
     margin: 5px 0px;
     line-height: 20px;
 }
 
 .bage-check-php{
-    width: 100%;
+    width: 65%;
     height: 20px;
+    text-align: center;
     margin: 5px 0px;
     line-height: 20px;
 }
@@ -120,16 +123,16 @@
     border-radius: 20px;
 }
 
-.nut-ys-n>a {
-    background-color:   #ef6c00;
+.nut-ys-n>a:nth-child(1) {
+    background-color: #b2b9ce;
     margin-right: 10px;
-    color: white;
+    color: black;
 }
 
-/* .nut-ys-n>a:nth-child(2) {
+.nut-ys-n>a:nth-child(2) {
     background-color: cornflowerblue;
     color: white;
-} */
+}
 
 .tblogin-container>h3 {
     width: 100%;
