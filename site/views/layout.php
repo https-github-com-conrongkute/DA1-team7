@@ -153,7 +153,7 @@
                 </div>
             </div>
             <div class="xemthem">
-            <a href="#">Xem thêm</a>
+            <a href="#">Xem thêm </a><span>>></span>
         </div>
         </div>
         
