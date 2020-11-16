@@ -98,7 +98,7 @@ ul li a {
 }
 
 .dangky input {
-    padding-left: 7px;
+    padding-left: 5%;
     width: 75%;
     height: 42px;
     margin-top: 25px;
@@ -114,6 +114,12 @@ ul li a {
     font-size: 15px;
     margin-top: 40px;
     background-color: #FF4500;
+    transition-duration: 0.5s;
+}
+
+.dangky .submit:active {
+    color: #ff4500;
+    background: white;
 }
 
 .dangky2 {
