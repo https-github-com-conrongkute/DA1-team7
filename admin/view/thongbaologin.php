@@ -17,7 +17,7 @@
                     <h3><?= $message ?></h3>
                     <div class="nut-ys-n">
                         <!-- <a class="t-dn" href="#">Thoát</a> -->
-                        <a class="t-dn" href="index.php">OK</a>
+                        <a class="t-dn" href="index.php" style="color: white;">OK</a>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                     <h3><?= $messege ?></h3>
                     <div class="nut-ys-n">
                         <!-- <a class="t-dn" href="#">Thoát</a> -->
-                        <a class="t-dn" href="login.php">OK</a>
+                        <a class="t-dn" href="login.php"  style="color: white;">OK</a>
                     </div>
                 </div>
             </div>

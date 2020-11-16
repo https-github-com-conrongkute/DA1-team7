@@ -9,7 +9,35 @@
     color: inherit;
     box-sizing: border-box;
 }
-
+/* load trang */
+.loader{
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    position: fixed;
+    z-index: 3123123;
+    display: block;
+    overflow: hidden;
+}
+.icon{
+    font-size: 80px;
+    color: burlywood;
+    top: 50%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    position: absolute;
+}
+.xoay{
+    animation: xoay 1s linear infinite;
+}@-webkit-keyframes xoay{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+       transform: rotate(360deg);
+    }
+}
 
 /* thông báo login */
 
@@ -23,8 +51,10 @@
     background-color: rgba(116, 116, 156, 0.35);
 }
 /* Kiêm lỗi */
-.hienloi>span>p{
+.hienloi>p>span{
     background-color: red;
+    padding: 0px 10px;
+    font-size: 13px;
     border-radius: 20px;
     color: white;
     font-weight: bold;
@@ -33,7 +63,6 @@
     width: 75%;
     height: 20px;
     display: none;
-    text-align: center;
     margin: 5px 0px;
     line-height: 20px;
 }
@@ -41,7 +70,6 @@
     width: 70%;
     height: 20px;
     display: none;
-    text-align: center;
     margin: 5px 0px;
     line-height: 20px;
 }
@@ -49,7 +77,6 @@
     width: 70%;
     height: 20px;
     display: none;
-    text-align: center;
     margin: 5px 0px;
     line-height: 20px;
 }
@@ -57,7 +84,6 @@
     width: 75%;
     height: 20px;
     display: none;
-    text-align: center;
     margin: 5px 0px;
     line-height: 20px;
 }
@@ -65,7 +91,6 @@
     width: 75%;
     height: 20px;
     display: none;
-    text-align: center;
     margin: 5px 0px;
     line-height: 20px;
 }
@@ -73,7 +98,6 @@
 .bage-check-php{
     width: 65%;
     height: 20px;
-    text-align: center;
     margin: 5px 0px;
     line-height: 20px;
 }
@@ -87,24 +111,26 @@
     width: 100%;
     float: left;
     line-height: 50px;
+   
     text-align: center;
 }
 
 .nut-ys-n>a {
-    padding: 10px 20px;
+    padding: 10px 20px; 
     border-radius: 20px;
+    color: white;
+    background-color: #FFA000;
 }
-
-.nut-ys-n>a:nth-child(1) {
-    background-color: #b2b9ce;
+/* .nut-ys-n>a:nth-child(1) {
+    background-color: #FFA000;
     margin-right: 10px;
-    color: black;
-}
+    color: white;
+} */
 
-.nut-ys-n>a:nth-child(2) {
+/* .nut-ys-n>a:nth-child(2) {
     background-color: cornflowerblue;
     color: white;
-}
+} */
 
 .tblogin-container>h3 {
     width: 100%;
@@ -156,7 +182,7 @@ a:hover {
     color: black;
 }
 
-.delete-loaican {
+#delete-loaican {
     position: fixed;
     z-index: 99;
     width: 100%;

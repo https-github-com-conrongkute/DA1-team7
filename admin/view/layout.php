@@ -21,6 +21,10 @@
 <body>
     <div class="wrapper">
         <div class="container">
+        <!-- Load trang -->
+           <div class='loader'>
+               <span class="fas fa-spinner xoay icon"></span>
+           </div>
             <div class="dashboard">
                 <div class="left">
                     <span class="left__icon">
@@ -155,11 +159,12 @@
 <script>
     $(document).ready(function() {
         $('.sua').click(function(add) {
-            var delet = $('.delete-loaican');
+            // console.log($(this).text('đã có'));
+            var delet = $('#delete-loaican');
             delet.css('display', 'block');
         });
         $('.co').click(function(add) {
-            var delet = $('.delete-loaican');
+            var delet = $('#delete-loaican');
             delet.css('display', 'none');
         });
         // Thông báo đăng nhập
@@ -170,5 +175,8 @@
         //     $('.tblogin-bg').css('display','none');
         // });
         CKEDITOR.replace('noi_dung');
+    });
+    $(window).on('load', function () {
+        $('.loader').delay(600).fadeOut('fast');
     });
 </script>

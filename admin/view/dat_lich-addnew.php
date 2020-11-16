@@ -13,7 +13,7 @@
                  <?php } ?>
              </select>
              <?php if(isset($ma_can_tt)==true){ ?>
-             <span class="bage-check-php"><?=$ma_kh_tt?></span>
+             <p class="bage-check-php"><?=$ma_kh_tt?></p>
              <?php } ?>
         </div>
         <div class="right__inputWrapper hienloi">
@@ -25,18 +25,18 @@
                  <?php } ?>
             </select>
             <?php if(isset($ma_kh_tt)==true){ ?>
-             <span class="bage-check-php"><?=$ma_kh_tt?></span>
+             <p class="bage-check-php"><?=$ma_kh_tt?></p>
              <?php } ?>
         </div>
         <div class="right__inputWrapper hienloi">
             <label for="title">Ngày đi xem</label>
             <input type="date" name="ngay_di_xem" id="email" >
             <?php if(isset($ngay_di_xem_tt)==true){ ?>
-             <span class="bage-check-php"><?=$ngay_di_xem_tt?></span>
+             <p class="bage-check-php"><?=$ngay_di_xem_tt?></p>
              <?php } ?>
             <!-- <span id="email"></span> -->
         </div>
-        <button class="btn" type="submit">Chèn</button>
+        <button class="btn" type="submit">Chèn lịch xem</button>
     </form>
     <?php if(isset($message)==true){ ?>
     <div class="thongbao-khachhang">

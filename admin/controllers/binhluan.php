@@ -22,15 +22,15 @@ switch ($act) {
             $ma_kh = $_POST['kh'];
             $noi_dung = $_POST['noi_dung'];
             if (strlen($ma_can) == 0) {
-                $ma_can_tt = "Đừng để trống chứ !";
+                $ma_can_tt = "<span>Không để trống !</span>";
                 $thongbao = false;
             }
             if (strlen($ma_kh) == 0) {
-                $ma_kh_tt = "Đừng để trống chứ !";
+                $ma_kh_tt = "<span>Không để trống !</span>";
                 $thongbao = false;
             }
             if (strlen($noi_dung) == 0) {
-                $noi_dung_tt = "Đừng để trống chứ !";
+                $noi_dung_tt = "<span>Không để trống !</span>";
                 $thongbao = false;
             }
         }
@@ -69,15 +69,15 @@ switch ($act) {
             $ma_kh = $_POST['kh'];
             $noi_dung = $_POST['noi_dung'];
             if (strlen($ma_can) == 0) {
-                $ma_can_tt = "Đừng để trống chứ !";
+                $ma_can_tt = "<span>Không để trống !</span>";
                 $thongbao = false;
             }
             if (strlen($ma_kh) == 0) {
-                $ma_kh_tt = "Đừng để trống chứ !";
+                $ma_kh_tt = "<span>Không để trống !</span>";
                 $thongbao = false;
             }
             if (strlen($noi_dung) == 0) {
-                $noi_dung_tt = "Đừng để trống chứ !";
+                $noi_dung_tt = "<span>Không để trống !</span>";
                 $thongbao = false;
             }
         }

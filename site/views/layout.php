@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="navtext">
-            <h1>THUÊ CĂN HỘ SIÊU TỐC</h1>
+            <h1 style="text-shadow: 2px 2px 2px black;">THUÊ CĂN HỘ SIÊU TỐC</h1>
             <p>Hơn 16.000 nhà riêng, chung cư, căn hộ đang cho thuê. Cam kết luôn có 10 <br> căn hộ trong 48 giờ.</p>
         </div>
         <div class="dangky">
@@ -73,9 +73,9 @@
             </div>
         </div>
     </div>
-    <div class="danhsach">
+    <div class="danhsach ">
         <div class="tieude">
-            <h3 style="font-weight: bold;">DANH SÁCH</h3>
+            <h3 style="font-weight: bold; color: orange;">DANH SÁCH</h3>
             <h2>Nhà cho thuê nhiều nhất</h2>
         </div>
         <div class="canho">
@@ -153,7 +153,7 @@
                 </div>
             </div>
             <div class="xemthem">
-            <a href="#">Xem thêm</a>
+            <a href="#">Xem thêm </a>
         </div>
         </div>
         
@@ -161,7 +161,7 @@
     <div class="gioithieu">
         <img src="img/gioithieu.jpg" alt="">
         <div class="textgt">
-            <h1>Về chúng tôi</h1>
+            <h1 style="color: white; font-weight: bold;">Về chúng tôi</h1>
             Đội ngũ chuyên viên tư vấn của chúng tôi với kinh nghiệm dày dặn và nắm vững thị trường sẽ giúp bạn tìm kiếm căn hộ phù hợp với nhu cầu của bạn. Bạn chỉ cần đưa ra thông tin, chúng tôi sẽ tư vấn hỗ trợ bạn tìm ra căn hộ như mình mong muốn. Tùy theo diện
             tích của phòng ngủ rộng hay chật hẹp, có vuông vắn hay không mà chúng ta lựa chọn cách bài trí nội thất và trang trí sao cho phù hợp nhất. Chính vì vậy trước khi bắt tay vào thiết kế phòng ngủ bạn nên nghiên cứu thật kỹ kết cấu và diện tích
             căn phòng để đưa ra ý tưởng Decor hợp lý nhất. Thiết kế phòng ngủ có diện tích nhỏ siêu đẹp: sử dụng các đồ nội thất đa năng để tiết kiệm diện tích vừa mang lại công năng sử dụng tuyệt vời. Chúng ta nên lựa chọn phong cách thiết kế nội thất
@@ -170,7 +170,7 @@
     </div>
     <div class="thuenha">
         <div class="tieude2">
-            <h4>LÀM SAO</h4>
+            <h3 style="font-weight: bold;">LÀM SAO</h3>
             <h2>Thuê nhà với Golden Home ?</h2>
         </div>
         <div class="thuenhatext">
@@ -316,9 +316,9 @@
                 <i data-dismiss="modal" class="glyphicon glyphicon-remove"></i>
                 <div class="divmota1">
                     <h3>Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</h3>
-                    <input class="ipmt" type="text" value="Thuê">
-                    <input class="ipmt2" type="text" value="Đã thẩm định">
-                    <input class="ipmt3" type="text" value="ID: 234567">
+                    <input class="ipmt" type="submit" value="Thuê">
+                    <input class="ipmt2" type="submit" value="Đã thẩm định">
+                    <input class="ipmt3" type="submit" value="ID: 234567">
 
                 </div>
                 <div class="divmota2">
@@ -352,6 +352,11 @@
             </div>
         </div>
     </div>
+    <div class="divcuoi">
+   <span> 2020 © Bản quyền GoldenHome. Đã đăng ký Bản quyền.</span>
+    </div>
+
+    
 </body>
 
 </html>
