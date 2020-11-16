@@ -48,7 +48,7 @@
              <?php } ?>
             <!-- <span id="email"></span> -->
         </div>
-        <button class="btn" type="submit">Chèn bình luận</button>
+        <button class="btn" type="submit">Cập nhật</button>
     </form>
     <?php if(isset($message)==true){ ?>
     <div class="thongbao-khachhang">
