@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../system/config.php';
 require_once 'models/tai_khoan.php';
 $act = 'index';
@@ -47,7 +48,12 @@ switch ($act) {
             }elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
                 $thongbao = false;
                 $email_tt = "<span>Email không hợp lệ !</span>";
-            }else{
+            }elseif(checkemail($email))
+            {
+                $thongbao = false;
+                $email_tt = "<span>Email đả tồn tại !</span>";
+            }
+            else{
                 $thongbao = true;
             }
             // check error password
@@ -72,10 +78,14 @@ switch ($act) {
 
         if ($thongbao == true) {
             $message = "Thêm thành công";
+            $tk=1;
             addnewKhachhang($tenkh, $email, $sdt, $pass, $hinh, $tendn, $kich_hoat, $vai_tro, $random_key);
             $view = 'view/khach_hang-addnew.php';
             require_once 'view/layout.php';
-        }else{
+        }
+        if ($thongbao == false) {
+        $message = "Thêm không thành công";
+        $tkb=0;
         $view = 'view/khach_hang-addnew.php';
         require_once 'view/layout.php';
         }
@@ -114,9 +124,7 @@ switch ($act) {
         $ma_kh = $_GET['ma_kh'];
         settype($ma_kh, "int");
         DeleteKhachhang($ma_kh);
-        $ds_kh = getAllkhachhang();
-        $view = 'view/khach_hang-index.php';
-        require_once 'view/layout.php';
+        header("location: ".ADMIN_URL."/?ctrl=tai_khoan&act=index");
         break;
     case 'dangxuat':
         if (isset($_GET['quantri']) && $_GET['quantri'] == 1) {
@@ -178,6 +186,47 @@ switch ($act) {
                 echo "<span  style='background-color: green;'>An toàn</span>";
             }
         }
+        break;
+        case 'admin':
+            $ma_kh=$_GET['sid'];
+            $ds_kh=getadminByID($ma_kh);
+            $view="view/admin-index.php";
+            require_once "view/layout.php";
+        break;
+        case 'adminedit':
+            $ma_kh = $_GET['ma_kh'];
+            settype($ma_kh, 'int');
+            $kh = getkhachhangByID($ma_kh);
+            $view = 'view/admin-edit.php';
+            require_once 'view/layout.php';
+        break;
+        case 'updateadmin':
+            $ma_kh = $_POST['ma_kh'];
+        $tenkh = $_POST['tenkh'];
+        $tendn = $_POST['tendn'];
+        $email = $_POST['email'];
+        $kich_hoat = 1;
+        $sdt = $_POST['sdt'];
+        $pass = $_POST['pass'];
+        $vai_tro = $_POST['vai_tro'];
+        if ($_FILES['file']['name'] != null) {
+            $pathimg = './uploaded/';
+            $hinh = $_FILES['file']['name'];
+            $target_files = $pathimg . basename($hinh);
+            move_uploaded_file($_FILES['file']['tmp_name'], $target_files);
+        } else {
+            $hinh = $_POST['hinh'];
+        }
+        updateKhachhang($tenkh, $email, $sdt, $pass, $hinh, $tendn, $kich_hoat, $vai_tro, $ma_kh);
+        $message = "Sửa thành công !";
+        $kh = getkhachhangByID($ma_kh);
+     
+        $_SESSION['sid']=$kh['ma_tk'];
+        $_SESSION['user'] = $kh['ho_ten'];
+        $_SESSION['vai_tro'] = $kh['vai_tro'];
+        $_SESSION['hinh'] = $kh['hinh'];
+        $view = 'view/admin-edit.php';
+        require_once 'view/layout.php';
         break;
     default:
         # code...

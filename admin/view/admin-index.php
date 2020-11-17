@@ -16,7 +16,7 @@
                     <!-- <th>ID Sản Phẩm</th>
                     <th>Trạng Thái</th> -->
                     <th>Sửa</th>
-                    <th>Xóa</th>
+                 
 
                 </tr>
             </thead>
@@ -37,20 +37,9 @@
                     <?php } ?>
                     </td>
                     <td>
-                        <a href="?ctrl=tai_khoan&act=edit&ma_kh=<?=$ds['ma_tk']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
+                        <a href="?ctrl=tai_khoan&act=adminedit&ma_kh=<?=$ds['ma_tk']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
                     </td>
-                    <td>
-                      <?php if ($ds['ma_tk']==$_SESSION['sid']) {
-                          echo "";
-                      }
-                      else
-                      {
-                          ?>
-                          <a class="sua" href="javascript:hoi('index.php?ctrl=tai_khoan&act=delete&ma_kh=<?=$ds['ma_tk']?>')" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
-
-                          <?php
-                      }?>
-                    </td>
+                   
 
                 </tr>
                 <?php } ?>
