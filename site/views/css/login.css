@@ -5,7 +5,6 @@
 
 body {
     background: #f6f5f7;
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -134,6 +133,7 @@ input {
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    margin: 0 auto;
 }
 
 .form-container {
