@@ -26,7 +26,7 @@
                     <td>1</td>
                     <td><?=$ds['ho_ten']?></td>
                     <td><?=$ds['ten_tk']?></td>
-                    <td><?=$ds['sdt']?></td>
+                    <td>(+84) <?=$ds['sdt']?></td>
                     <td><?=$ds['email']?></td>
                     <td><?=($ds['vai_tro']==1) ? 'Quản trị':"khách hàng"?></td>
                     <td><?=($ds['kich_hoat']==1)? 'Đã kích hoạt':"Đã bị khóa"?></td>
@@ -40,8 +40,8 @@
                         <a href="?ctrl=tai_khoan&act=edit&ma_kh=<?=$ds['ma_tk']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
                     </td>
                     <td>
-                        <a class="sua" href="#" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
-                        <div id="delete-loaican">
+                        <a  onclick="return Delete(this);"  href="?ctrl=tai_khoan&act=delete&ma_kh=<?=$ds['ma_tk']?>" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
+                        <!-- <div id="delete-loaican">
                             <div class="delete-container">
                                 <div class="delete-form">
                                     <h3 style="width: 100%;float: left;line-height: 100px;text-align: center;">Bạn có muốn xóa không ?</h3>
@@ -51,7 +51,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </td>
                     <!-- <td></td>
                     <td></td>

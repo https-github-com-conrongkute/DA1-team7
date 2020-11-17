@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, red , blue);
+  overflow: hidden;
+  font-family: sans-serif;
+}
+.container{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+    width: 32%;
+    background-color: white;
+    min-height: 450px;
+    border-radius: 10px;
+}
+.container h1{
+    text-align: center;
+    padding:0 0 5px 0;
+}
+.container form{
+    padding:0 40px;
+    box-sizing: border-box;
+}
+form .txt-filed{
+    padding: 30px 0px;
+    outline:none;
+    position: relative;
+}
+.txt-filed input{
+    width: 100%;
+    height: 30px;
+    border:none;
+    outline: none;
+}
+.txt-filed label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color:#a6a6a6;
+    transform:translateY(-50%);
+    font-size:16px;
+    pointer-events: none;
+    transition: 1s;
+}
+.txt-filed span::before{
+    content:'';
+    position: absolute;
+    top:40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+.txt-filed input:focus ~ label,
+.txt-filed input:valid ~ label{
+    top: 20%;   
+}
+input[type="text"],input[type="password"]{
+    border-bottom: 1px solid grey;
+    /* border: 1px black solid; */
+}
+.forgot-pass{
+   margin: -5px 0 20px 5px;
+}
+.forgot-pass a{
+    text-decoration: none;
+    color:#a6a6a6;
+    position: absolute;
+    top: 260px;
+    right: 40px;
+}
+input[type="submit"]{
+    width: 80%;
+    height: 40px;
+    cursor: pointer;
+    margin: 50px 10%;
+    background-image: linear-gradient(120deg,red , blue);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.link{
+    width:30%;
+    margin: auto;
+    height: 50px;
+}
+.face{
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+    background: #0000cc;
+    border-radius: 50px;
+    float: left;
+    text-align: center;
+}
+.face p{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom:5px
+}
+.google{
+    width:50px;
+    height: 50px;
+    line-height: 30px;
+    background: red;
+    border-radius: 50px;
+    float: right;
+    text-align: center;
+    font-size: 16px;
+}
+i{
+    font-size: 20px;
+}
+
+.forgot-pass a:hover{
+    text-decoration: underline;
+}
+h4{
+    font-family: 'Noto Sans JP', sans-serif;
+}
