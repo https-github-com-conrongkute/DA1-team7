@@ -101,8 +101,8 @@
                                 <img class="left__iconDown" src="./view/assets/arrow-down.svg" alt="">
                             </div>
                                 <div class="left__text">
-                                    <a class="left__link" href="">Chèn Admin</a>
-                                    <a class="left__link" href="">Xem Admins</a>
+                                    
+                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=tai_khoan&act=admin&sid=<?=$_SESSION['sid']?>">Xem Admins</a>
                                 </div>
                             </li>
                             <li class="left__menuItem">
