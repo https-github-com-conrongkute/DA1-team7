@@ -58,4 +58,8 @@ function checkdn($user , $pass){
     $sql = "SELECT * FROM khach_hang WHERE ten_tk = '$user' AND mat_khau = '$pass'";
     return queryOne($sql);
 }
+function getadminByID($ma_kh){
+    $sql = "SELECT * FROM khach_hang WHERE ma_tk = '$ma_kh'";
+    return query($sql);
+}
 ?>

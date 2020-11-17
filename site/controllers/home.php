@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
  require_once '../system/config.php';
 require_once "models/home.php";
 require 'global.php';
@@ -25,3 +26,17 @@ switch ($act) {
     break;
 }
 ?>
+=======
+$act = "index";
+if(isset($_GET['act'])==true) $act = $_GET['act'];
+switch ($act) {
+    case 'index':
+        require_once 'views/layout.php';
+        break;
+          case 'danhnhap':
+          require_once 'views/login.php';
+          break;
+}
+
+?>
+>>>>>>> 50dadafd0738b6d0f331437b1db575d96ec15c17
