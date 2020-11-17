@@ -736,3 +736,8 @@ ul li a {
     line-height: 50px;
     font-weight: bold;
 }
+
+#submit {
+    box-shadow: none;
+    color: green;
+}
