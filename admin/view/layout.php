@@ -180,3 +180,10 @@
         $('.loader').delay(600).fadeOut('fast');
     });
 </script>
+<script type="text/javascript">
+        function hoi(url){
+            if (confirm("Bạn chắc chắn muốn xóa chứ")) {
+                document.location = url;
+            }
+        }
+    </script>

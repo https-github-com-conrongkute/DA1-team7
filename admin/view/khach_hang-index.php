@@ -21,7 +21,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($ds_kh as $ds){ ?>
+                <?php foreach($ds_kh as $ds) { ?>
                 <tr>
                     <td>1</td>
                     <td><?=$ds['ho_ten']?></td>
@@ -40,23 +40,18 @@
                         <a href="?ctrl=tai_khoan&act=edit&ma_kh=<?=$ds['ma_tk']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
                     </td>
                     <td>
-                        <a class="sua" href="#" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
-                        <div id="delete-loaican">
-                            <div class="delete-container">
-                                <div class="delete-form">
-                                    <h3 style="width: 100%;float: left;line-height: 100px;text-align: center;">Bạn có muốn xóa không ?</h3>
-                                    <div class="nut">
-                                        <a href="#" class="co" style="padding: 10px 20px;background-color: #f0f0f0;border-radius: 20px;width: 100px;margin-right: 10px;color:black;">Không</a>
-                                        <a href="<?=ADMIN_URL?>/?ctrl=tai_khoan&act=delete&ma_kh=<?=$ds['ma_tk']?>" class="co" style="padding: 10px 20px;background-color: red;border-radius: 20px;width: 100px;color: white;">Có</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      <?php if ($ds['ma_tk']==$_SESSION['sid']) {
+                          echo "";
+                      }
+                      else
+                      {
+                          ?>
+                          <a class="sua" href="javascript:hoi('index.php?ctrl=tai_khoan&act=delete&ma_kh=<?=$ds['ma_tk']?>')" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
+
+                          <?php
+                      }?>
                     </td>
-                    <!-- <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td> -->
+
                 </tr>
                 <?php } ?>
             </tbody>

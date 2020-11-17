@@ -70,16 +70,26 @@
             <label for="" style="margin-right: 10px;"><input type="radio" name="vai_tro" id="" style="margin-right: 5px;" value="1">Quản trị</label>
             <label for=""><input type="radio" name="vai_tro" id="" style="margin-right: 5px;" value="0">Khách hàng</label>
         </div>
-        <button class="btn" type="submit">Chèn khách hàng</button>
+        <button class="btn" type="submit">Thêm khách hàng</button>
     </form>
     <?php if(isset($message)==true){ ?>
     <div class="thongbao-khachhang">
         <div class="delete-container">
             <div class="delete-form">
                 <h3 style="width: 100%;float: left;line-height: 100px;text-align: center;"><?=$message?></h3>
+                <?php if($tk !=NULL) {?>
                 <div class="nut">
                     <a href="?ctrl=tai_khoan&act=index" class="co" style="padding: 10px 20px;background-color: aqua;border-radius: 20px;width: 100px;color: white;">OK</a>
                 </div>
+                <?php } 
+                else {
+                    ?>
+                <div class="nut">   
+                    <a href="?ctrl=tai_khoan&act=addnew" class="co" style="padding: 10px 20px;background-color: orangered;border-radius: 20px;width: 100px;color: white;">OK</a>
+                </div>                   
+                 <?php
+                }
+                ?>
             </div>
         </div>
     </div>

@@ -47,7 +47,12 @@ switch ($act) {
             }elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
                 $thongbao = false;
                 $email_tt = "<span>Email không hợp lệ !</span>";
-            }else{
+            }elseif(checkemail($email))
+            {
+                $thongbao = false;
+                $email_tt = "<span>Email đả tồn tại !</span>";
+            }
+            else{
                 $thongbao = true;
             }
             // check error password
@@ -72,10 +77,14 @@ switch ($act) {
 
         if ($thongbao == true) {
             $message = "Thêm thành công";
+            $tk=1;
             addnewKhachhang($tenkh, $email, $sdt, $pass, $hinh, $tendn, $kich_hoat, $vai_tro, $random_key);
             $view = 'view/khach_hang-addnew.php';
             require_once 'view/layout.php';
-        }else{
+        }
+        if ($thongbao == false) {
+        $message = "Thêm không thành công";
+        $tkb=0;
         $view = 'view/khach_hang-addnew.php';
         require_once 'view/layout.php';
         }
@@ -114,9 +123,7 @@ switch ($act) {
         $ma_kh = $_GET['ma_kh'];
         settype($ma_kh, "int");
         DeleteKhachhang($ma_kh);
-        $ds_kh = getAllkhachhang();
-        $view = 'view/khach_hang-index.php';
-        require_once 'view/layout.php';
+        header("location: ".ADMIN_URL."/?ctrl=tai_khoan&act=index");
         break;
     case 'dangxuat':
         if (isset($_GET['quantri']) && $_GET['quantri'] == 1) {

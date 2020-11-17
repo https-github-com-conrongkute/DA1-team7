@@ -36,7 +36,7 @@
             <label for="file"><i class="fas fa-upload"></i> Tải hình ảnh mới lên</label>
         </div>
         <div class="right__inputWrapper">
-            <img src="./uploaded/<?=$kh['hinh']?>" id="loada" alt="" style="height: 150px;object-fit: cover;">
+            <img src="./uploaded/<?=$kh['hinh']?>" id="loada" alt="" style="height: 150px;width: 20%; object-fit: cover;">
             <script>
                 // Load hình ảnh lên khi chọn file upload
                 $(document).ready(function () {
