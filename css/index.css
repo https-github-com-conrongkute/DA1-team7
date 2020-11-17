@@ -431,13 +431,14 @@ ul li a {
 .xemthem span {
     opacity: 0;
     font-weight: bold;
-    margin-left: -20%;
+    margin-left: -10%;
 }
 
 .xemthem:hover span {
     transition-duration: 0.3s;
     opacity: 1;
     color: orangered;
+    margin-left: 0%;
 }
 
 .xemthem:hover {
@@ -737,7 +738,11 @@ ul li a {
     font-weight: bold;
 }
 
-#submit {
+.guitt input[type=submit] {
     box-shadow: none;
-    color: green;
+    color: white;
+    background-color: orangered;
+    font-weight: bold;
+    margin-top: 8px;
+    margin-left: -10px;
 }

@@ -1,5 +1,5 @@
 <?php
-<<<<<<< HEAD
+
  require_once '../system/config.php';
 require_once "models/home.php";
 require 'global.php';
