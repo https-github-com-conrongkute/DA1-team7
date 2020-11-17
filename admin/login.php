@@ -7,6 +7,7 @@ if(isset($_POST['dn']) && $_POST['dn']){
     $pass = $_POST['pass'];
     $check = checkdn($user, $pass);
     if(is_array($check)){
+        $_SESSION['sid']=$check['ma_tk'];
        $_SESSION['user'] = $check['ho_ten'];
        $_SESSION['vai_tro'] = $check['vai_tro'];
        $_SESSION['hinh'] = $check['hinh'];

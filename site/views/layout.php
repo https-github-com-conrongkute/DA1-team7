@@ -28,7 +28,7 @@
                     <li><a href="#">Danh sách </a> </li>
                     <li><a href="#">Giới thiệu </a></li>
                     <li><a href="#">Liên hệ </a></li>
-                    <li><a href="?act=login">Đăng nhập </a></li>
+                    <li><a href="?ctrl=home&act=danhnhap">Đăng nhập </a></li>
                     <li><a href="#">Đăng tin</a></li>
                 </ul>
             </div>
