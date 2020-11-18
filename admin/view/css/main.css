@@ -33,6 +33,10 @@
     position: absolute;
 }
 
+td p {
+    text-align: left;
+}
+
 .xoay {
     animation: xoay 1s linear infinite;
 }

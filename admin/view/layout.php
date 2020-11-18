@@ -12,12 +12,6 @@
     <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
     
 </head>
-<style>
-    td p{
-        text-align: left;
-    }
-</style>
-
 <body>
     <div class="wrapper">
         <div class="container">
@@ -106,7 +100,7 @@
                                 </div>
                             </li>
                             <li class="left__menuItem">
-                                <a href="<?=ADMIN_URL?>?ctrl=tai_khoan&act=dangxuat&quantri=1" class="left__title"><img src="./view/assets/icon-logout.svg" alt="">Đăng Xuất</a>
+                                <a href="<?=ADMIN_URL?>/?ctrl=tai_khoan&act=dangxuat&quantri=1" class="left__title"><img src="./view/assets/icon-logout.svg" alt="">Đăng Xuất</a>
                             </li>
                         </ul>
                     </div>
