@@ -4,13 +4,13 @@
     margin: 0 auto;
     padding: 0;
 }
-
 body {
-    background: #f6f5f7;
+    /* background: #f6f5f7; */
     /* display: flex; */
-    justify-content: center;
+    /* justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
     /* margin: -20px 0 50px; */
@@ -19,8 +19,76 @@ body {
     object-fit: cover;
     background-image: url(https://sites.google.com/site/neohousevnjsc/_/rsrc/1565408584919/thiet-ke-noi-that-can-ho/can-ho-cao-cap-lacasa-q7-neohouse-6.jpg);
 }
+/* menu */
+.menu-logo{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    height: 80px;
+    background-color: white;
+    color: black;
+    box-shadow: 5px 5px 5px #ccc;
+    top: 0px;
+    z-index: 312384183481083;
+}
+.nav-logo{
+    width: 30%;
+    float: left;
+    height: 80px;
+}
 
-.header {
+.nav-logo>img{
+    width: 100%;
+    height: 70px;
+    margin: 5px 0px;
+    object-fit: contain;
+}
+.nav-menu{
+    float: right;
+    width: 70%;
+    height: 80px;
+}
+.hienra{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    height: 80px;
+    background-color: white;
+    color: black;
+    box-shadow: 5px 5px 5px #ccc;
+    top: 0;
+    z-index: 99;
+}
+.nav-menu>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.nav-menu>ul>li{
+    list-style: none;
+    /* width: 100px;
+    line-height: 80px; */
+    line-height: 80px;
+    margin: 0;
+    padding: 0px 20px;
+}
+.nav-menu>ul>li>a{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: bold; */
+    text-decoration: none;
+}
+.menu-logo-bg{
+    width: 90%;
+    /* margin-top: 20px; */
+    position: relative;
+    left: 0%;
+    top: 0;
+}
+/* end */
+
+
+/* .header {
     display: flex;
     width: 100%;
     box-shadow: rgb(231, 226, 226) 0px 5px 5px 0px;
@@ -30,11 +98,11 @@ body {
 
 .img {
     width: 30%;
-}
+} */
 
-.hdtext {
+/* .hdtext {
     width: 70%;
-}
+} */
 
 .img img {
     width: 30%;
@@ -45,7 +113,7 @@ body {
     margin-top: 30px;
 }
 
-.hdtext ul li {
+/* .hdtext ul li {
     display: inline;
 }
 
@@ -55,7 +123,7 @@ ul li a {
     margin-left: 25px;
     color: orange;
     font-weight: bold;
-}
+} */
 
 h1 {
     font-weight: bold;
