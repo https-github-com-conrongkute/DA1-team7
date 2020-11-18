@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    background-color: orangered;
+    width: 100%;
+    height: 30px;
+    color: white;
+}
+
+.right {
+    float: right;
+}
+
+.menu span a {
+    margin-right: 10px;
+    width: 40%;
+    color: white;
+}
