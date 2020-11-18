@@ -7,7 +7,7 @@
     <title>Trang chủ</title>
     <link rel="stylesheet" href="./views/css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -21,20 +21,20 @@
         </div>
         <nav class="menu-logo">
             <div class="menu-logo-bg">
-            <div class="nav-logo">
-                <img src="img/logo.png" alt="">
-            </div>
-            <div class="nav-menu">
-                <ul>
-                    <li><a href="#">Trang chủ </a> </li>
-                    <li><a href="#">Dịch vụ </a></li>
-                    <li><a href="#">Danh sách </a> </li>
-                    <li><a href="#">Giới thiệu </a></li>
-                    <li><a href="#">Liên hệ </a></li>
-                    <li><a href="?ctrl=home&act=danhnhap">Đăng nhập </a></li>
-                    <li><a href="#" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
-                </ul>
-            </div>
+                <div class="nav-logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="#">Trang chủ </a> </li>
+                        <li><a href="#">Dịch vụ </a></li>
+                        <li><a href="#">Danh sách </a> </li>
+                        <li><a href="#">Giới thiệu </a></li>
+                        <li><a href="#">Liên hệ </a></li>
+                        <li><a href="?ctrl=home&act=danhnhap">Đăng nhập </a></li>
+                        <li><a href="#" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <!-- <div class="nav">
@@ -296,20 +296,20 @@
                 <!-- Modal content-->
                 <div class="divimg">
                     <div class="imglon">
-                        <img src="img/b3.jpg" width="100%" height="280px" alt="">
+                        <img src="img/b3.jpg" width="100%" height="280px" alt="" id="images">
                     </div>
                     <div class="divnho">
-                        <div class="imgnho nho1">
-                            <img src="img/b1.jpg" alt="">
+                        <div class="imgnho nho1" onclick="images(1)">
+                            <img src="img/b1.jpg" alt="" >
                         </div>
-                        <div class="imgnho">
+                        <div class="imgnho"  onclick="images(2)">
                             <img src="img/b2.jpg" alt="">
                         </div>
-                        <div class="imgnho">
-                            <img src="img/b4.jpg" alt="">
+                        <div class="imgnho" onclick="images(3)">
+                            <img src="img/b4.jpg" alt="" >
                         </div>
-                        <div class="imgnho">
-                            <img src="img/b5.png" alt="">
+                        <div class="imgnho" onclick="images(4)">
+                            <img src="img/b5.png" alt="" >
                         </div>
                     </div>
                 </div>
@@ -381,17 +381,37 @@
 
 </html>
 <script>
-    $(document).ready(function () {
-    $(window).scroll(function () { 
-        var body = $('html,body').scrollTop();
-        // console.log(body);
-       if(body>400){
-           $('nav').addClass('hienra');
-           $('.nav-menu ul li a').css('color','black');
-       }else{
-           $('nav').removeClass('hienra');
-           $('.nav-menu ul li a').css('color','white');
-       }
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            var body = $('html,body').scrollTop();
+            // console.log(body);
+            if (body > 400) {
+                $('nav').addClass('hienra');
+                $('.nav-menu ul li a').css('color', 'black');
+            } else {
+                $('nav').removeClass('hienra');
+                $('.nav-menu ul li a').css('color', 'white');
+            }
+        });
     });
-});
+
+    function images(x) {
+        var img = document.getElementById('images');
+        switch (x) {
+            case '1':
+                img.src = "img/b1.jpg";
+                break;
+            case '2':
+                img.src = "img/b2.jpg";
+                break;
+            case '3':
+                img.src = "img/b3.jpg";
+                break;
+            case '4':
+                img.src = "img/b4.jpg";
+                break;
+            default:
+                break;
+        }
+    }
 </script>
