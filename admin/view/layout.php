@@ -68,8 +68,13 @@
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-edit.svg" alt="">Quản lý các quận<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
+<<<<<<< HEAD
                                     <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=quan&act=index">Danh sách các quận</a>
                                     <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=quan&act=addnew">Thêm các quận</a>
+=======
+                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=quan&act=index">Danh sách quận</a>
+                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=quan&act=addnew">Thêm các quận</a>
+>>>>>>> 966878cecc18286499043109f6fabeb98e48d195
                                 </div>
                             </li>
                             <li class="left__menuItem">

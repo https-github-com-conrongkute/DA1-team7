@@ -759,6 +759,10 @@ body {
     font-weight: bold;
 }
 
+.guitt input[type='submit'] {
+    box-shadow: none;
+}
+
 .divcuoi {
     background-color: orangered;
     color: aliceblue;
@@ -769,4 +773,9 @@ body {
 
 .divcuoi span {
     line-height: 40px;
+}
+
+#submit {
+    box-shadow: none;
+    color: green;
 }
