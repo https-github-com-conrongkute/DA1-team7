@@ -102,7 +102,7 @@
             <h2>Nhà cho thuê nhiều nhất</h2>
         </div>
         <div class="boxcenter">
-        <div class="canho">
+        <div class="canho slider1" >
             <div class="box2">
                 <img src="img/b1.jpg" alt="">
                 <div class="box2text">
@@ -140,8 +140,33 @@
                     <a href="#">Đặt lịch xem</a>
                 </div>
             </div>
+            <div class="box2">
+                <img src="img/b3.jpg" alt="">
+                <div class="box2text">
+                    <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
+                </div>
+                <div class="gia">
+                    <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                </div>
+                <div class="datlich">
+                    <a href="#">Đặt lịch xem</a>
+                </div>
+            </div>
+            <div class="box2" style="margin-right: 30px;">
+                <img src="img/b3.jpg" alt="">
+                <div class="box2text">
+                    <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
+                </div>
+                <div class="gia">
+                    <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                </div>
+                <div class="datlich">
+                    <a href="#">Đặt lịch xem</a>
+                </div>
+            </div>
+            
         </div>
-        <div class="canho">
+        <div class="canho slider2">
             <div class="box2">
                 <img src="img/b4.jpg" alt="">
                 <div class="box2text">
@@ -178,10 +203,35 @@
                     <a href="#">Đặt lịch xem</a>
                 </div>
             </div>
-            <div class="xemthem">
+            <div class="box2">
+                <img src="img/b6.jpg" alt="">
+                <div class="box2text">
+                    <a href="#">Cho thuê Văn Phòng Tầng 5 đường Ung Văn Khiêm - Phường 25 – Bình Thạnh</a>
+                </div>
+                <div class="gia">
+                    <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                </div>
+                <div class="datlich">
+                    <a href="#">Đặt lịch xem</a>
+                </div>
+            </div>
+            <div class="box2" style="margin-right: 30px;">
+                <img src="img/b6.jpg" alt="">
+                <div class="box2text">
+                    <a href="#">Cho thuê Văn Phòng Tầng 5 đường Ung Văn Khiêm - Phường 25 – Bình Thạnh</a>
+                </div>
+                <div class="gia">
+                    <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                </div>
+                <div class="datlich">
+                    <a href="#">Đặt lịch xem</a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="xemthem">
                 <a href="#">Xem thêm </a>
             </div>
-        </div>
         </div>
     </div>
     <div class="gioithieu">
@@ -424,82 +474,7 @@
         <span> 2020 © Bản quyền GoldenHome. Đã đăng ký Bản quyền.</span>
     </div>
 
-
+<script src="./views/js/index.js"></script>
 </body>
 
 </html>
-<script>
-    $(document).ready(function() {
-        $(window).scroll(function() {
-            var body = $('html,body').scrollTop();
-            // console.log(body);
-            if (body > 200) {
-                $('nav').addClass('hienra');
-                $('.nav-menu ul li a').css('color', 'black');
-            } else {
-                $('nav').removeClass('hienra');
-                $('.nav-menu ul li a').css('color', 'white');
-            }
-        });
-        // !--slick carousel-- >
-     
-        $('.slider').slick({
-            dots: true,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 1500,
-            infinite: true,
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
-            ]
-        });
-    });
-
-    function images(x) {
-        var img = document.getElementById('images');
-        switch (x) {
-            case '1':
-                img.src = "img/b1.jpg";
-                break;
-            case '2':
-                img.src = "img/b2.jpg";
-                break;
-            case '3':
-                img.src = "img/b3.jpg";
-                break;
-            case '4':
-                img.src = "img/b4.jpg";
-                break;
-            default:
-                break;
-        }
-    }
-</script>
