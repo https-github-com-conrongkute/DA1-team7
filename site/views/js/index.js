@@ -2,7 +2,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
         var body = $('html,body').scrollTop();
         // console.log(body);
-        if (body > 200) {
+        if (body > 100) {
             $('nav').addClass('hienra');
             $('.nav-menu ul li a').css('color', 'black');
         } else {

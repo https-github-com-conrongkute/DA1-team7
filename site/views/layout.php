@@ -96,10 +96,10 @@
             </div>
         </div>
     </div>
-    <div class="danhsach " style="margin-top: 100px;">
+    <div class="danhsach " style="margin-top: 20px;">
         <div class="tieude">
             <h3 style="font-weight: bold; color: orange;color:black;">DANH SÁCH</h3>
-            <h2>Nhà cho thuê nhiều nhất</h2>
+            <h2 style="font-size: 30pt;">Nhà cho thuê nhiều nhất</h2>
         </div>
         <div class="boxcenter">
         <div class="canho slider1" >
@@ -474,7 +474,8 @@
         <span> 2020 © Bản quyền GoldenHome. Đã đăng ký Bản quyền.</span>
     </div>
 
-<script src="./views/js/index.js"></script>
+
 </body>
 
 </html>
+<script src="./views/js/index.js"></script>
