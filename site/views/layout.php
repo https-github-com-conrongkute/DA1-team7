@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 </head>
 
 <body>
@@ -93,11 +96,12 @@
             </div>
         </div>
     </div>
-    <div class="danhsach ">
+    <div class="danhsach " style="margin-top: 100px;">
         <div class="tieude">
-            <h3 style="font-weight: bold; color: orange;">DANH SÁCH</h3>
+            <h3 style="font-weight: bold; color: orange;color:black;">DANH SÁCH</h3>
             <h2>Nhà cho thuê nhiều nhất</h2>
         </div>
+        <div class="boxcenter">
         <div class="canho">
             <div class="box2">
                 <img src="img/b1.jpg" alt="">
@@ -136,6 +140,8 @@
                     <a href="#">Đặt lịch xem</a>
                 </div>
             </div>
+        </div>
+        <div class="canho">
             <div class="box2">
                 <img src="img/b4.jpg" alt="">
                 <div class="box2text">
@@ -176,7 +182,7 @@
                 <a href="#">Xem thêm </a>
             </div>
         </div>
-
+        </div>
     </div>
     <div class="gioithieu">
         <img src="img/gioithieu.jpg" alt="">
@@ -195,19 +201,31 @@
         </div>
         <div class="thuenhatext">
             <div class="box3">
-                <img src="img/sale.png" alt=""> <br>
-                <a href="#">Điền form đăng ký</a> <br>
-                <p>Để lại SĐT, email để Propzy liên hệ tư vấn</p>
+                <div class="box-img">
+                    <img src="img/sale.png" alt="">
+                </div>
+                <div class="thuenhatext-text">
+                    <a href="#">Điền form đăng ký</a>
+                    <p>Để lại SĐT, email để Propzy liên hệ tư vấn</p>
+                </div>
             </div>
             <div class="box3">
-                <img src="img/address.png" alt=""> <br>
-                <a href="#">Propzy tìm nhà giúp</a> <br>
-                <p>Golden tìm kiếm nhà thuê theo khu vực và nhu cầu của bạn</p>
+                <div class="box-img">
+                    <img src="img/address.png" alt="">
+                </div>
+                <div class="thuenhatext-text">
+                    <a href="#">Propzy tìm nhà giúp</a>
+                    <p>Golden tìm kiếm nhà thuê theo khu vực và nhu cầu của bạn</p>
+                </div>
             </div>
             <div class="box3">
-                <img src="img/clock.png" alt=""> <br>
-                <a href="#">Xem nhà trong vòng 48h</a> <br>
-                <p>Dẫn bạn đi xem nhà trong vòng 48h</p>
+                <div class="box-img">
+                    <img src="img/clock.png" alt="">
+                </div>
+                <div class="thuenhatext-text">
+                    <a href="#">Xem nhà trong vòng 48h</a>
+                    <p>Dẫn bạn đi xem nhà trong vòng 48h</p>
+                </div>
             </div>
         </div>
     </div>
@@ -215,22 +233,52 @@
         <div class="tieude3">
             <h2>Khách hàng nói gì về Golden Home ?</h2>
         </div>
-        <div class="thuenhatext">
-            <div class="box3">
-                <img src="img/avt.PNG" alt=""> <br>
-                <a href="#">Selena Gomez</a> <br>
-                <p>“Nếu không thể bán ngay tôi cũng có thể cho thuê đầu tư dài hạn mà không bao giờ sợ lỗ”</p>
+        <div class="thuenhatext slider">
+            <div class="box5">
+                <div class="box-img">
+                    <img src="img/avt.PNG" alt="">
+                </div>
+                <div class="thuenhatext-text">
+                    <a href="#">Selena Gomez</a>
+                    <p>“Nếu không thể bán ngay tôi cũng có thể cho thuê đầu tư dài hạn mà không bao giờ sợ lỗ”</p>
+                </div>
             </div>
-            <div class="box3">
-                <img src="img/avt.PNG" alt=""> <br>
-                <a href="#">Charlie Puth</a> <br>
-                <p>"Rất ok. Lần sau chắc chắn sẽ ghé lại đây. view đẹp, giá rẻ, ngay trung tâm."
-                </p>
+            <div class="box5">
+                <div class="box-img">
+                    <img src="img/avt.PNG" alt=""> <br>
+                </div>
+                <div class="thuenhatext-text">
+                    <a href="#">Charlie Puth</a> <br>
+                    <p>"Rất ok. Lần sau chắc chắn sẽ ghé lại đây. view đẹp, giá rẻ, ngay trung tâm."
+                    </p>
+                </div>
             </div>
-            <div class="box3">
-                <img src="img/avt.PNG" alt=""> <br>
-                <a href="#">T-ARA</a> <br>
-                <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+            <div class="box5">
+                <div class="box-img">
+                    <img src="img/avt.PNG" alt=""> <br>
+                </div>
+                <div class="thuenhatext-text">
+                    <a href="#">T-ARA</a> <br>
+                    <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                </div>
+            </div>
+            <div class="box5">
+                <div class="box-img">
+                    <img src="img/avt.PNG" alt=""> <br>
+                </div>
+                <div class="thuenhatext-text">
+                    <a href="#">T-ARA</a> <br>
+                    <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                </div>
+            </div>
+            <div class="box5">
+                <div class="box-img">
+                    <img src="img/avt.PNG" alt=""> <br>
+                </div>
+                <div class="thuenhatext-text">
+                    <a href="#">T-ARA</a> <br>
+                    <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                </div>
             </div>
         </div>
     </div>
@@ -300,16 +348,16 @@
                     </div>
                     <div class="divnho">
                         <div class="imgnho nho1" onclick="images(1)">
-                            <img src="img/b1.jpg" alt="" >
+                            <img src="img/b1.jpg" alt="">
                         </div>
-                        <div class="imgnho"  onclick="images(2)">
+                        <div class="imgnho" onclick="images(2)">
                             <img src="img/b2.jpg" alt="">
                         </div>
                         <div class="imgnho" onclick="images(3)">
-                            <img src="img/b4.jpg" alt="" >
+                            <img src="img/b4.jpg" alt="">
                         </div>
                         <div class="imgnho" onclick="images(4)">
-                            <img src="img/b5.png" alt="" >
+                            <img src="img/b5.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -385,13 +433,53 @@
         $(window).scroll(function() {
             var body = $('html,body').scrollTop();
             // console.log(body);
-            if (body > 400) {
+            if (body > 200) {
                 $('nav').addClass('hienra');
                 $('.nav-menu ul li a').css('color', 'black');
             } else {
                 $('nav').removeClass('hienra');
                 $('.nav-menu ul li a').css('color', 'white');
             }
+        });
+        // !--slick carousel-- >
+     
+        $('.slider').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            infinite: true,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
         });
     });
 
