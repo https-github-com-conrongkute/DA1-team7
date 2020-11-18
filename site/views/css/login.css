@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 * {
     box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
 }
 
 body {
     background: #f6f5f7;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
-    margin: -20px 0 50px;
+    /* margin: -20px 0 50px; */
     background-repeat: no-repeat;
     background-size: 100%;
     object-fit: cover;
@@ -21,7 +24,7 @@ body {
     display: flex;
     width: 100%;
     box-shadow: rgb(231, 226, 226) 0px 5px 5px 0px;
-    height: 120px;
+    height: 100px;
     background-color: white;
 }
 
@@ -34,7 +37,10 @@ body {
 }
 
 .img img {
-    width: 25%;
+    width: 30%;
+    height: 70px;
+    object-fit: contain;
+    margin: 3%;
     margin-left: 35%;
     margin-top: 30px;
 }
