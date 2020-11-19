@@ -5,6 +5,7 @@ $(document).ready(function() {
         if (body > 100) {
             $('nav').addClass('hienra');
             $('.nav-menu ul li a').css('color', 'black');
+            $('.nav-menu2 ul li a').css('color', 'black');
         } else {
             $('nav').removeClass('hienra');
             $('.nav-menu ul li a').css('color', 'white');

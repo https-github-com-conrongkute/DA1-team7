@@ -37,10 +37,10 @@
                         <li><a href="index.php">Trang chủ </a> </li>
                         <li><a href="#">Dịch vụ </a></li>
                         <li><a href="?ctrl=home&act=danhsach">Danh sách nhà thuê</a> </li>
-                        <li><a href="?ctrl=home&act=gioithieu">Giới thiệu </a></li>
+                        <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                         <li><a href="#">Liên hệ </a></li>
-                        <li><a href="?ctrl=home&act=danhnhap">Đăng nhập </a></li>
                         <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
+                        <li><a href="?ctrl=home&act=dangnhap">Đăng nhập </a></li>
                     </ul>
                 </div>
             </div>

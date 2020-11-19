@@ -108,7 +108,8 @@ body {
     padding: 0px 20px;
 }
 .nav-menu2>ul>li>a{
-    color: black;
+    color: white;
+    font-size: 15px;
     font-family: 'Roboto', sans-serif;
     /* font-weight: bold; */
     text-decoration: none;
