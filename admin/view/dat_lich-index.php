@@ -29,8 +29,8 @@
                         <a href="?ctrl=dat_lich&act=edit&ma_dl=<?=$ds['ma_dat']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
                     </td>
                     <td>
-                        <a class="sua" href="#" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
-                        <div id="delete-loaican">
+                    <a href="javascript:Delete('<?=ADMIN_URL?>/?ctrl=dat_lich&act=delete&ma_dl=<?=$ds['ma_dat']?>')" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
+                        <!-- <div id="delete-loaican">
                             <div class="delete-container">
                                 <div class="delete-form">
                                     <h3 style="width: 100%;float: left;line-height: 100px;text-align: center;">Bạn có muốn xóa không ?</h3>
@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </td>
                     <!-- <td></td>
                     <td></td>

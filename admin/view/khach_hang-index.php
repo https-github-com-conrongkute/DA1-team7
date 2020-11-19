@@ -26,7 +26,7 @@
                     <td>1</td>
                     <td><?=$ds['ho_ten']?></td>
                     <td><?=$ds['ten_tk']?></td>
-                    <td><?=$ds['sdt']?></td>
+                    <td>(+84) <?=$ds['sdt']?></td>
                     <td><?=$ds['email']?></td>
                     <td><?=($ds['vai_tro']==1) ? 'Quản trị':"khách hàng"?></td>
                     <td><?=($ds['kich_hoat']==1)? 'Đã kích hoạt':"Đã bị khóa"?></td>
@@ -46,7 +46,7 @@
                       else
                       {
                           ?>
-                          <a class="sua" href="javascript:hoi('index.php?ctrl=tai_khoan&act=delete&ma_kh=<?=$ds['ma_tk']?>')" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
+                          <a class="sua" href="javascript:Delete('index.php?ctrl=tai_khoan&act=delete&ma_kh=<?=$ds['ma_tk']?>')" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
 
                           <?php
                       }?>

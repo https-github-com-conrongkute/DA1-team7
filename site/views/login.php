@@ -12,9 +12,9 @@
 
 <body>
 
-    <div class="header">
+    <!-- <div class="header">
         <div class="img">
-            <img src="img/logo.png" alt="">
+            <img src="../img/logo.png"  alt="">
         </div>
         <div class="hdtext">
             <ul>
@@ -27,8 +27,28 @@
                 <li><a href="#">Đăng Ký</a></li>
             </ul>
         </div>
-    </div>
-    <div class="container" style="margin-top: 30px;" id="container">
+        
+    </div> -->
+    <nav class="menu-logo">
+            <div class="menu-logo-bg">
+                <div class="nav-logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="index.php">Trang chủ </a> </li>
+                        <li><a href="#">Dịch vụ </a></li>
+                        <li><a href="#">Danh sách </a> </li>
+                        <li><a href="#">Giới thiệu </a></li>
+                        <li><a href="#">Liên hệ </a></li>
+                        <!-- <li><a href="?act=danhnhap">Đăng nhập </a></li> -->
+                        <li><a href="#" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
+                        <li><a href="?act=danhnhap"><i class="fas fa-user" style="font-size: 18pt;"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class="container mt" style="margin-top: 160px;" id="container">
         <div class="form-container sign-up-container">
             <form action="#">
                 <h1>Đăng ký </h1>

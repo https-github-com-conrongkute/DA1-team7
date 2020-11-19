@@ -4,10 +4,19 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     width: 100%;
     font-family: "Sf ui display", sans-serif;
     margin: 0 auto;
+}
+
+.row {
+    float: left;
+    width: 100%;
 }
 
 .menu {
@@ -22,40 +31,81 @@ body {
     opacity: 0.8;
 }
 
-.nav {
-    width: calc(100% - 70px);
+
+/* menu */
+
+.menu-logo {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    height: 80px;
+    /* background-color: #ccc; */
     top: 20px;
-    left: 70px;
-    height: 160px;
-    position: absolute;
+    z-index: 99;
 }
 
-.navimg {
+.nav-logo {
+    width: 30%;
     float: left;
-    width: 20%;
+    height: 80px;
 }
 
-.navmenu {
-    width: calc(80% - 70px);
-    float: left;
-    text-align: center;
-    margin-top: 35px;
+.nav-logo>img {
+    width: 100%;
+    height: 70px;
+    margin: 5px 0px;
+    object-fit: contain;
 }
 
-ul li {
+.nav-menu {
+    float: right;
+    width: 70%;
+    height: 80px;
+}
+
+.hienra {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    height: 80px;
+    background-color: white;
+    color: black;
+    box-shadow: 5px 5px 5px #ccc;
+    top: 0;
+    z-index: 99;
+}
+
+.nav-menu>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav-menu>ul>li {
     list-style: none;
-    display: block;
-    overflow: hidden;
-    display: inline;
+    /* width: 100px;
+    line-height: 80px; */
+    line-height: 80px;
+    padding: 0px 20px;
 }
 
-ul li a {
-    margin-right: 35px;
-    font-size: 16px;
-    text-decoration: none;
-    overflow: hidden;
+.nav-menu>ul>li>a{
     color: white;
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: bold; */
+    text-decoration: none;
 }
+
+.menu-logo-bg {
+    width: 90%;
+    /* margin-top: 20px; */
+    position: relative;
+    left: 5%;
+    top: 0;
+}
+
+
+/* end */
 
 .navtext {
     position: absolute;
@@ -187,8 +237,64 @@ ul li a {
     width: 100%;
     height: 110px;
     text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+.loc-canho{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.select{
+    border: 1px solid sandybrown;
+    width: 160px;
+    position: relative;
+    height: 35px;
+    margin: 0px 5px;
+    color: sandybrown;
+    outline: none;
+    border-radius: 8px;
+   
 }
 
+.loc-canho>select>option{
+    content: '';
+    border: 1px solid sandybrown;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    height: 50px;
+    color: black;
+    /* width: 160px; */
+    /* height: 35px; */
+    /* margin: 0px 5px; */
+    outline: none;
+    /* border-radius: 8px; */
+}
+.btn-loc{
+    width: 40px;
+    height: 40px;
+    color: white;
+    outline: none;
+    border-radius: 12px;
+    background-color: #ef6c00;
+    border: none;
+}
+.btn-loc:hover{
+    box-shadow: 0px 0px 5px 2px #ccc;
+}
+.tieude::before{
+    width: 80px;
+    height: 3px;
+    content: '';
+    background-color: dodgerblue;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
 .danhsach .tieude h4 {
     margin-bottom: 10px;
     font-size: 16px;
@@ -201,19 +307,32 @@ ul li a {
 }
 
 .danhsach .canho {
-    margin: 0 auto;
-    width: 79%;
     /* height: 760px; */
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    height: 420px;
+}
+
+.boxcenter {
+    margin: 0 auto;
+    width: 80%;
 }
 
 .danhsach .box2 {
-    width: calc(100%/3 - 10px);
-    margin-left: 5px;
-    margin-right: 5px;
+    width: 31.6%;
+    margin-right: 25px;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
     box-shadow: #ccc 0px 10px 10px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
+}
+
+.danhsach .box2:nth-child(3) {
+    margin-right: 0;
 }
 
 .box2 img {
@@ -231,20 +350,21 @@ ul li a {
 
 .box2text {
     margin-left: 9px;
+    margin-top: 10px;
     margin-right: 9px;
 }
 
 .gia {
     width: 52%;
     margin-left: 4%;
-    margin-top: 30px;
+    margin-top: 40px;
     height: 40px;
     float: left;
 }
 
 .datlich {
     width: 34%;
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: 20px;
     margin-left: 3%;
     float: left;
@@ -293,12 +413,13 @@ ul li a {
     width: 80%;
     margin: 0 auto;
     margin-top: 100px;
-    height: 410px;
+    min-height: 410px;
 }
 
 .tieude2 {
     text-align: center;
     width: 100%;
+    margin-top: 80px;
     height: 100px;
 }
 
@@ -313,50 +434,84 @@ ul li a {
 
 .thuenhatext {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
 }
 
 .box3 {
-    width: calc(100%/3 - 30px);
-    width: 100%;
-    margin: 0 15px;
-    background-color: white;
-    box-shadow: #ccc 5px 10px 10px 5px;
+    width: 31.6%;
+    height: 350px;
+    margin-right: 20px;
+    /* background-color: #f0f0f0; */
+    box-shadow: #ccc 2px 1px 8px 4px;
 }
 
-.box3 {
+.box5 {
+    width: 31.6%;
+    height: 350px;
+    margin: 20px;
+    /* background-color: #f0f0f0; */
+    box-shadow: #ccc 2px 1px 8px 4px;
+}
+
+.box3:nth-child(3) {
+    margin-right: 0;
+}
+
+.thuenhatext-text {
     width: 100%;
+    float: left;
+    height: 150px;
     text-align: center;
 }
 
-.box3 img {
-    margin: 40px;
+
+/* .box3 {
+    width: 100%;
+    text-align: center;
+} */
+
+.box-img>img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    text-align: center;
 }
 
-.box3 a {
-    margin: 30px;
+.box-img {
+    width: 30%;
+    margin: 20px auto;
+    height: 150px;
+}
+
+.thuenhatext-text a {
     color: black;
     font-weight: bold;
+    font-size: 14pt;
     text-decoration: none;
 }
 
-.box3 p {
-    margin: 30px;
+.thuenhatext-text>p {
+    margin: 20px 0px;
+    padding: 0px 15px;
 }
+
+
+/* .box3 p {
+    margin: 30px;
+} */
 
 .tieude3 {
     text-align: center;
     width: 100%;
+    margin-top: 50px;
     height: 80px;
 }
 
 .tieude3 h2 {
     font-size: 31px;
     color: orange;
-}
-
-.box3 img {
-    width: 30%;
-    height: 90px;
 }
 
 .tuvan {
@@ -727,6 +882,10 @@ ul li a {
     font-weight: bold;
 }
 
+.guitt input[type='submit'] {
+    box-shadow: none;
+}
+
 .divcuoi {
     background-color: orangered;
     color: aliceblue;
@@ -737,4 +896,9 @@ ul li a {
 
 .divcuoi span {
     line-height: 40px;
+}
+
+#submit {
+    box-shadow: none;
+    color: green;
 }

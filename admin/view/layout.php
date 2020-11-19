@@ -10,21 +10,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.1/bootbox.min.js"></script>
 </head>
+<<<<<<< HEAD
+=======
 <style>
-    td p{
+    td p {
         text-align: left;
     }
 </style>
 
+>>>>>>> 526246677f70796e722e672226fe95311d59be83
 <body>
     <div class="wrapper">
         <div class="container">
-        <!-- Load trang -->
-           <div class='loader'>
-               <span class="fas fa-spinner xoay icon"></span>
-           </div>
+            <!-- Load trang -->
+            <div class='loader'>
+                <span class="fas fa-spinner xoay icon"></span>
+            </div>
             <div class="dashboard">
                 <div class="left">
                     <span class="left__icon">
@@ -35,19 +38,19 @@
                     <div class="left__content">
                         <div class="left__logo"><a href="index.php">thuecanho.com.vn</a></div>
                         <div class="left__profile">
-                            <?php if(isset($_SESSION['user'])==true){ ?>
-                            <?php if(isset($_SESSION['hinh']) && $_SESSION['hinh']==null){ ?>
-                            <div class="left__image"><img src="./uploaded/user.jpg" class="" alt=""></div>
-                            <?php }else{ ?>
-                                <div class="left__image"><img src="./uploaded/<?=$_SESSION['hinh']?>" class="" alt=""></div>
-                            <?php } ?>
-                            <p class="left__name"><?=$_SESSION['user']?></p>
-                            <?php }else{ ?>
+                            <?php if (isset($_SESSION['user']) == true) { ?>
+                                <?php if (isset($_SESSION['hinh']) && $_SESSION['hinh'] == null) { ?>
+                                    <div class="left__image"><img src="./uploaded/user.jpg" class="" alt=""></div>
+                                <?php } else { ?>
+                                    <div class="left__image"><img src="./uploaded/<?= $_SESSION['hinh'] ?>" class="" alt=""></div>
+                                <?php } ?>
+                                <p class="left__name"><?= $_SESSION['user'] ?></p>
+                            <?php } else { ?>
                                 <!-- <div class="left__image"><img src="./uploaded/user.jpg" class="" alt=""></div> -->
                                 <div class="left__image"><img src="./uploaded/godenhome.png" class="" alt=""></div>
                                 <p class="left__name">Quản trị</p>
                             <?php } ?>
-                            
+
                         </div>
                         <ul class="left__menu">
                             <li class="left__menuItem">
@@ -68,8 +71,13 @@
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-edit.svg" alt="">Quản lý các quận<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=quan&act=index">Danh sách các quận</a>
+<<<<<<< HEAD
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=quan&act=index">Danh sách các quận</a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=quan&act=addnew">Thêm các quận</a>
+=======
+                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=quan&act=index">Danh sách quận</a>
                                     <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=quan&act=addnew">Thêm các quận</a>
+>>>>>>> 966878cecc18286499043109f6fabeb98e48d195
                                 </div>
                             </li>
                             <li class="left__menuItem">
@@ -82,31 +90,35 @@
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-book.svg" alt="">Quản lý đặt lịch<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=dat_lich&act=index">Danh sách lịch đặt</a>
-                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=dat_lich&act=addnew">Thêm lịch đặt</a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=dat_lich&act=index">Danh sách lịch đặt</a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=dat_lich&act=addnew">Thêm lịch đặt</a>
                                 </div>
                             </li>
 
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-book.svg" alt="">Quản lý bình luận<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=binhluan&act=index">Danh sách</a>
-                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=binhluan&act=addnew">Thêm bình luận</a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=binhluan&act=index">Danh sách</a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=binhluan&act=addnew">Thêm bình luận</a>
                                 </div>
                             </li>
 
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-user.svg" alt="">
-                                <?php if(isset($_SESSION['user'])==true) echo $_SESSION['user'];?>
-                                <img class="left__iconDown" src="./view/assets/arrow-down.svg" alt="">
-                            </div>
+                                    <?php if (isset($_SESSION['user']) == true) echo $_SESSION['user']; ?>
+                                    <img class="left__iconDown" src="./view/assets/arrow-down.svg" alt="">
+                                </div>
                                 <div class="left__text">
                                     
                                     <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=tai_khoan&act=admin&sid=<?=$_SESSION['sid']?>">Xem Admins</a>
                                 </div>
                             </li>
                             <li class="left__menuItem">
-                                <a href="<?=ADMIN_URL?>?ctrl=tai_khoan&act=dangxuat&quantri=1" class="left__title"><img src="./view/assets/icon-logout.svg" alt="">Đăng Xuất</a>
+<<<<<<< HEAD
+                                <a href="<?=ADMIN_URL?>/?ctrl=tai_khoan&act=dangxuat&quantri=1" class="left__title"><img src="./view/assets/icon-logout.svg" alt="">Đăng Xuất</a>
+=======
+                                <a href="<?= ADMIN_URL ?>?ctrl=tai_khoan&act=dangxuat&quantri=1" class="left__title"><img src="./view/assets/icon-logout.svg" alt="">Đăng Xuất</a>
+>>>>>>> 526246677f70796e722e672226fe95311d59be83
                             </li>
                         </ul>
                     </div>
@@ -158,15 +170,17 @@
 </html>
 <script>
     $(document).ready(function() {
-        $('.sua').click(function(add) {
-            // console.log($(this).text('đã có'));
-            var delet = $('#delete-loaican');
-            delet.css('display', 'block');
-        });
-        $('.co').click(function(add) {
-            var delet = $('#delete-loaican');
-            delet.css('display', 'none');
-        });
+        // $('.sua').click(function(add) {
+        //     // console.log($(this).text('đã có'));
+        //     var delet = $('#delete-loaican');
+        //     delet.css('display', 'block');
+        // });
+        // $('.co').click(function(add) {
+        //     var delet = $('#delete-loaican');
+        //     delet.css('display', 'none');
+        // });
+      
+        // });
         // Thông báo đăng nhập
         // $('.left__linkblock').click(function (e) { 
         //     $('.tblogin-bg').css('display','block');
@@ -176,14 +190,13 @@
         // });
         CKEDITOR.replace('noi_dung');
     });
-    $(window).on('load', function () {
+    $(window).on('load', function() {
         $('.loader').delay(600).fadeOut('fast');
     });
+      function Delete(url){
+          if(confirm('Bạn muốn xóa')){
+              document.location = url;
+          }
+          return false;
+       }
 </script>
-<script type="text/javascript">
-        function hoi(url){
-            if (confirm("Bạn chắc chắn muốn xóa chứ")) {
-                document.location = url;
-            }
-        }
-    </script>
