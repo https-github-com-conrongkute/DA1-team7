@@ -32,7 +32,7 @@
                         <li><a href="#">Trang chủ </a> </li>
                         <li><a href="#">Dịch vụ </a></li>
                         <li><a href="#">Danh sách </a> </li>
-                        <li><a href="#">Giới thiệu </a></li>
+                        <li><a href="?ctrl=home&act=gioithieu">Giới thiệu </a></li>
                         <li><a href="#">Liên hệ </a></li>
                         <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                         <li><a href="?ctrl=home&act=danhnhap"><i class="fas fa-user" style="font-size: 18pt;"></i></a></li>

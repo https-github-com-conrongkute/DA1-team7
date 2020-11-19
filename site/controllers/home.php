@@ -11,6 +11,8 @@ switch ($act) {
     case 'dangtin':
       require_once 'views/dangtin.php';
       break;
-  case 'dangnhap_':
+  case 'gioithieu':
+    require_once 'views/about.php';
+      break;
     break;
 }
