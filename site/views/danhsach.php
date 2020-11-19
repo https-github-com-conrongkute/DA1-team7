@@ -45,7 +45,7 @@
     </script>
     <!-- End Google Tag Manager -->
 
-    <link rel="stylesheet" href="assets/css/app/search.css?ver=20.30.13.11.2020" async/>
+    <link rel="stylesheet" href="./danhsach/assets/css/app/search.css?ver=20.30.13.11.2020" async/>
     <script src="sdks/OneSignalSDK.js" defer></script>
     <script>
         var version = "20.30.13.11.2020";
@@ -87,7 +87,7 @@
         </div> -->
         <header id="header" class="fixe" role="banner">
             <div class="container">
-                <a href="" id="logo"><img src="assets/images/ver-4/pc/logo.png" alt="Propzy"></a>
+                <a href="" id="logo"><img src="./danhsach/assets/images/ver-4/pc/logo.png" alt="Propzy"></a>
                 <ul class="menu-top-header left" data-style="1">
                     <li> <a href="#"><span>Trang Chủ</span></a>
 
@@ -291,7 +291,7 @@
                                 </div>
                                 <div class="col-6 col-lg-4">
                                     <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="assets/images/ver-4/pc/b2.jpg" alt="Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất"> </a>
+                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b2.jpg" alt="Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất"> </a>
                                         <div class="divtext ">
                                             <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất</a></h2>
                                             <div class="imeta-1"> <b>Đ. Võ Thị Sáu, P.8, Q.3</b> </div>
@@ -309,7 +309,7 @@
                                 </div>
                                 <div class="col-6 col-lg-4">
                                     <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="assets/images/ver-4/pc/b3.jpg" alt="Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14"> </a>
+                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b3.jpg" alt="Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14"> </a>
                                         <div class="divtext ">
                                             <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14</a></h2>
                                             <div class="imeta-1"> <b>Đ. Nguyễn Đình Chiểu, P.6, Q.3</b> </div>
@@ -327,7 +327,7 @@
                                 </div>
                                 <div class="col-6 col-lg-4">
                                     <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="assets/images/ver-4/pc/b4.jpg" alt="Cho thuê căn hộ cực sang trọng nội thất hoàng gia trung tâm quận 3"> </a>
+                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/b4.jpg" alt="Cho thuê căn hộ cực sang trọng nội thất hoàng gia trung tâm quận 3"> </a>
                                         <div class="divtext ">
                                             <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ cực sang trọng nội thất hoàng gia trung tâm quận 3</a></h2>
                                             <div class="imeta-1"> <b>Đ. Nguyễn Đình Chiểu, P.6, Q.3</b> </div>
@@ -345,7 +345,7 @@
                                 </div>
                                 <div class="col-6 col-lg-4">
                                     <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="assets/images/ver-4/pc/b6.jpg" alt="Căn hộ dịch vụ tầng 1 đầy đủ nội thất quận 1"> </a>
+                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/b6.jpg" alt="Căn hộ dịch vụ tầng 1 đầy đủ nội thất quận 1"> </a>
                                         <div class="divtext ">
                                             <h2 class="height-search"><a href="#" class="title">Căn hộ dịch vụ tầng 1 đầy đủ nội thất quận 1</a></h2>
                                             <div class="imeta-1"> <b>Đ. Nguyễn Thái Bình, P.Nguyễn Thái Bình, Q.1</b> </div>
@@ -363,7 +363,7 @@
                                 </div>
                                 <div class="col-6 col-lg-4">
                                     <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="assets/images/ver-4/pc/b7.jpg" alt="Căn hộ studio đầy đủ nội thất quận 1"> </a>
+                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/b7.jpg" alt="Căn hộ studio đầy đủ nội thất quận 1"> </a>
                                         <div class="divtext ">
                                             <h2 class="height-search"><a href="#" class="title">Căn hộ studio đầy đủ nội thất quận 1</a></h2>
                                             <div class="imeta-1"> <b>Đ. Nguyễn Thái Bình, P.Nguyễn Thái Bình, Q.1</b> </div>
@@ -381,7 +381,7 @@
                                 </div>
                                 <div class="col-6 col-lg-4">
                                     <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="assets/images/ver-4/pc/b8.jpg" alt="Căn hộ dịch vụ 40m2 tầng 2 đầy đủ nội thất quận 1"></a>
+                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/b8.jpg" alt="Căn hộ dịch vụ 40m2 tầng 2 đầy đủ nội thất quận 1"></a>
                                         <div class="divtext ">
                                             <h2 class="height-search"><a href="#" class="title">Căn hộ dịch vụ 40m2 tầng 2 đầy đủ nội thất quận 1</a></h2>
                                             <div class="imeta-1"> <b>Đ. Nguyễn Thái Bình, P.Nguyễn Thái Bình, Q.1</b> </div>
@@ -399,7 +399,7 @@
                                 </div>
                                 <div class="col-6 col-lg-4">
                                     <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="assets/images/ver-4/pc/b10.jpg" alt="Căn hộ dịch vụ 40m2 đầy đủ nội thất quận 1"> </a>
+                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/b10.jpg" alt="Căn hộ dịch vụ 40m2 đầy đủ nội thất quận 1"> </a>
                                         <div class="divtext ">
                                             <h2 class="height-search"><a href="#" class="title">Căn hộ dịch vụ 40m2 đầy đủ nội thất quận 1</a></h2>
                                             <div class="imeta-1"> <b>Đ. Nguyễn Thái Bình, P.Nguyễn Thái Bình, Q.1</b> </div>
@@ -417,7 +417,7 @@
                                 </div>
                                 <div class="col-6 col-lg-4">
                                     <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="assets/images/ver-4/pc/b10.jpg" alt="Cho thuê căn Officetel dự án Thủ Thiêm Dragon Phường Thạnh Mỹ Lợi Quận 2"> </a>
+                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/b10.jpg" alt="Cho thuê căn Officetel dự án Thủ Thiêm Dragon Phường Thạnh Mỹ Lợi Quận 2"> </a>
                                         <div class="divtext ">
                                             <h2 class="height-search"><a href="#" class="title">Cho thuê căn Officetel dự án Thủ Thiêm Dragon Phường Thạnh Mỹ Lợi Quận 2</a></h2>
                                             <div class="imeta-1"> <b>Đ. Quách Giai, P.Thạnh Mỹ Lợi, Q.2</b> </div>
@@ -588,7 +588,7 @@
                         <div class="col-lg-6 col-md-5 efch-1 ef-img-t">
                             <div class="widget widget-info">
                                 <p>
-                                    <a href="#" class="logo logo-footer"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="assets/images/ver-4/pc/logo.png" alt="Propzy"> Propzy </a>
+                                    <a href="#" class="logo logo-footer"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/logo.png" alt="Propzy"> Propzy </a>
                                 </p>
                                 <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
                                 <p>Email: <a href="#">Golden Home.com</a></p>
@@ -1409,7 +1409,7 @@
         <!-- /.modal -->
 
         <!-- Start of Tawk.to Script-->
-        <script type="text/javascript">
+        <script type=text/javascript">
             var Tawk_API = Tawk_API || {},
                 Tawk_LoadStart = new Date();
             (function() {
@@ -1423,7 +1423,7 @@
             })();
         </script>
         <!--End of Tawk.to Script-->
-        <script type="text/javascript" src="assets/js/app/search-listing-city-min.js?v=20.30.13.11.2020"></script>
+        <script type="text/javascript" src="./danhsach/assets/js/app/search-listing-city-min.js?v=20.30.13.11.2020"></script>
 </body>
 
 </html>

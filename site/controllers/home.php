@@ -10,11 +10,11 @@ switch ($act) {
     $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
     break;
-  // thay doi thông tin tk
+    // thay doi thông tin tk
   case 'thaydoitt':
     $tentk = $_POST['tenkh'];
 
-  break;
+    break;
   case 'dangnhap':
     require_once 'views/login.php';
     break;
@@ -52,32 +52,35 @@ switch ($act) {
   case 'doimk':
     $view = 'views/doimk.php';
     require_once 'views/layout.php';
-  break;
-  // dôi mk
+    break;
+    // dôi mk
   case 'doimk_':
-     $pass_cu = $_POST['passcu'];
-     $pass_new = $_POST['passnew'];
-     $repass = $_POST['repassnew'];
-     $ma_tk = $_POST['ma_tk'];
-     if (checkmkcu($pass_cu, $ma_tk)) {
-        if($pass_new == $repass){
-          UpdatePassnew($pass_new,$ma_tk);
-          $message = 'Đổi mật khẩu thành công !';
-          $view = 'views/doimk.php';
-          require_once 'views/layout.php';
-      }else{
+    $pass_cu = $_POST['passcu'];
+    $pass_new = $_POST['passnew'];
+    $repass = $_POST['repassnew'];
+    $ma_tk = $_POST['ma_tk'];
+    if (checkmkcu($pass_cu, $ma_tk)) {
+      if ($pass_new == $repass) {
+        UpdatePassnew($pass_new, $ma_tk);
+        $message = 'Đổi mật khẩu thành công !';
+        $view = 'views/doimk.php';
+        require_once 'views/layout.php';
+      } else {
         $message = 'Mật khẩu mới không trùng khớp !';
         $view = 'views/doimk.php';
         require_once 'views/layout.php';
       }
-     }else{
+    } else {
       $message = 'Mật khẩu cũ không trùng khớp !';
       $view = 'views/doimk.php';
       require_once 'views/layout.php';
-     }
+    }
     break;
   case 'dangtin':
     require_once 'views/dangtin.php';
+    break;
+  case 'danhsach':
+    require_once 'views/danhsach.php';
     break;
   case 'about':
     require_once 'views/about.php';

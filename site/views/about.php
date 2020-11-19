@@ -51,10 +51,17 @@
                     <li><a href="index.php">Trang chủ </a> </li>
                     <li><a href="#">Dịch vụ </a></li>
                     <li><a href="#">Danh sách </a> </li>
+<<<<<<< HEAD
                     <li><a href="?act=about">Giới thiệu </a></li>
                     <li><a href="#">Liên hệ </a></li>
                     <li><a href="?ctrl=home&act=dangnhap">Đăng nhập </a></li>
                     <li><a href="?act=dangtin">Đăng tin</a></li>
+=======
+                    <li><a href="#">Giới thiệu </a></li>
+                    <li><a href="?ctrl=home&act=gioithieu">Liên hệ </a></li>
+                    <li><a href="?ctrl=home&act=dangnhap">Đăng nhập </a></li>
+                    <li><a href="?ctrl=home&act=dangtin">Đăng tin</a></li>
+>>>>>>> 5e9563c4023c511c6e173568658acb247bfdcdc4
                 </ul>
             </div>
         </div> -->
@@ -346,6 +353,7 @@
             <input type="text" value="Địa chỉ email"><input class="ip2" type="submit" value="Đăng ký">
         </div>
     </footer>
+
 </body>
 
 </html>
