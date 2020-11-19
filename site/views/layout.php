@@ -29,7 +29,7 @@
                         <li><a href="index.php">Trang chủ </a> </li>
                         <li><a href="#">Dịch vụ </a></li>
                         <li><a href="#">Danh sách </a> </li>
-                        <li><a href="?ctrl=home&act=gioithieu">Giới thiệu </a></li>
+                        <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                         <li><a href="#">Liên hệ </a></li>
                         <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                         <?php if (isset($_SESSION['user']) == true) { ?>
@@ -42,7 +42,7 @@
                                 </ul>
                             </li>
                         <?php } else { ?>
-                            <li><a href="?act=danhnhap"><i class="fas fa-user" style="font-size: 18pt;"></i></a></li>
+                            <li><a href="?act=dangnhap">Đăng nhập</a></li>
                         <?php } ?>
                     </ul>
                 </div>
@@ -60,10 +60,10 @@
                     </div>
                     <div class="nav-menu">
                         <ul>
-                            <li><a href="#">Trang chủ </a> </li>
+                            <li><a href="index.php">Trang chủ </a> </li>
                             <li><a href="#">Dịch vụ </a></li>
                             <li><a href="#">Danh sách </a> </li>
-                            <li><a href="#">Giới thiệu </a></li>
+                            <li><a href="?act=about">Giới thiệu </a></li>
                             <li><a href="#">Liên hệ </a></li>
                             <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                             <?php if (isset($_SESSION['user']) == true) { ?>
@@ -76,7 +76,7 @@
                                     </ul>
                                 </li>
                             <?php } else { ?>
-                                <li><a href="?act=danhnhap"><i class="fas fa-user" style="font-size: 18pt;"></i></a>
+                                <li><a href="?act=dangnhap">Đăng nhập</a>
                                 </li>
                             <?php } ?>
                         </ul>

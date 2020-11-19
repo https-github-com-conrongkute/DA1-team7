@@ -23,6 +23,7 @@
                    <div class="tt-right-row">
                        <label>Họ và tên</label>
                        <input type="text" name="tenkh" id="" value="<?=$_SESSION['name']?>">
+                       <input type="hidden" name="ma_tk" value="<?=$_SESSION['id']?>">
                    </div>
                    <div class="tt-right-row">
                        <label>Ngày sinh</label>
@@ -32,8 +33,8 @@
                      <label>Giới tính</label>
                       <select name="gt" id="">
                           <option value="">Giới tính</option>
-                          <option value="">Nam</option>
-                          <option value="">Nữ</option>
+                          <option value="" <?php if($_SESSION['gioitinh']==1) echo 'selected'?>>Nam</option>
+                          <option value="" <?php if($_SESSION['gioitinh']==0) echo 'selected'?>>Nữ</option>
                       </select>
                    </div>
                    <div class="tt-right-row">

@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="./views/css/about.css">
 </head>
+
 <body>
+    <nav class="hienra">
+        <div class="menu-logo-bg">
+            <div class="nav-logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="nav-menu2">
+                <ul>
+                    <li><a href="index.php">Trang chủ </a> </li>
+                    <li><a href="#">Dịch vụ </a></li>
+                    <li><a href="#">Danh sách </a> </li>
+                    <li><a href="?ctrl=home&act=gioithieu">Giới thiệu </a></li>
+                    <li><a href="#">Liên hệ </a></li>
+                    <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
+                    <?php if (isset($_SESSION['user']) == true) { ?>
+                        <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
+                            <ul class="sub-menu">
+                                <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
+                                <li><a href="">Đổi mật khẩu</a></li>
+                                <li><a href="">Căn hộ cửa tôi</a></li>
+                                <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                    <?php } else { ?>
+                        <li><a href="?act=danhnhap">Đăng nhập</a></li>
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="menu">
         <div class="banner">
             <img src="../img/banner9.jpg" width="100%" height="600px" alt="">
         </div>
-        <div class="nav">
+        <!-- <div class="nav">
             <div class="navimg">
                 <img src="../img/logo.png" width="140px" alt="">
             </div>
             <div class="navmenu">
                 <ul>
-                    <li><a href="#">Trang chủ </a> </li>
+                    <li><a href="index.php">Trang chủ </a> </li>
                     <li><a href="#">Dịch vụ </a></li>
                     <li><a href="#">Danh sách </a> </li>
-                    <li><a href="#">Giới thiệu </a></li>
+                    <li><a href="?act=about">Giới thiệu </a></li>
                     <li><a href="#">Liên hệ </a></li>
                     <li><a href="?ctrl=home&act=dangnhap">Đăng nhập </a></li>
-                    <li><a href="#">Đăng tin</a></li>
+                    <li><a href="?act=dangtin">Đăng tin</a></li>
                 </ul>
             </div>
-        </div>
+        </div> -->
         <div class="navtext">
             <h1 style="text-shadow: 2px 2px 2px black;">GIỚI THIỆU VỀ CHÚNG TÔI</h1>
             <p>Hơn 16.000 nhà riêng, chung cư, căn hộ đang cho thuê. Cam kết luôn có 10 <br> căn hộ trong 48 giờ.</p>
@@ -39,11 +70,11 @@
         <div class="divth1 ">
             <div class="divtext">
                 <h1>Chúng tôi không bao giờ thỏa hiệp
-                <br>  với chất lượng công việc ...</h1>
+                    <br> với chất lượng công việc ...</h1>
                 <p>Golden Home là một trong những công ty bất động sản nổi tiếng nhất <br>
-                    trên khắp nước Mỹ. Bạn có thể tìm thấy tài sản mơ ước của mình  <br>
+                    trên khắp nước Mỹ. Bạn có thể tìm thấy tài sản mơ ước của mình <br>
                     hoặc xây dựng tài sản</p>
-            </div>    
+            </div>
             <div class="divicon">
                 <div class="divicon1">
                     <div class="icon">
@@ -51,7 +82,7 @@
                     </div>
                     <div class="divicontext">
                         <h3> Giá trị nhỏ nhất</h3>
-                        <p>Ưu tiên chi phí thấp giúp tất <br> 
+                        <p>Ưu tiên chi phí thấp giúp tất <br>
                             cả mọi người xây dựng bất <br>
                             động sản nhiều hơn</p>
                     </div>
@@ -62,7 +93,7 @@
                     </div>
                     <div class="divicontext">
                         <h3> Tiếp thị tốt nhất</h3>
-                        <p>Ưu tiên chi phí thấp giúp tất <br> 
+                        <p>Ưu tiên chi phí thấp giúp tất <br>
                             cả mọi người xây dựng bất <br>
                             động sản nhiều hơn</p>
                     </div>
@@ -73,7 +104,7 @@
                     </div>
                     <div class="divicontext">
                         <h3>Dễ dàng tìm kiếm</h3>
-                        <p>Bạn có thể tìm tài sản của<br> 
+                        <p>Bạn có thể tìm tài sản của<br>
                             mình một cách đơn giản và <br>
                             dễ dàng</p>
                     </div>
@@ -84,7 +115,7 @@
                     </div>
                     <div class="divicontext">
                         <h3>Đảm bảo</h3>
-                        <p>Bạn có thể tìm tài sản của<br> 
+                        <p>Bạn có thể tìm tài sản của<br>
                             mình một cách đơn giản và <br>
                             dễ dàng</p>
                     </div>
@@ -106,7 +137,7 @@
                 </div>
                 <div class="dvicontext">
                     <h3> Mua tài sản</h3>
-                    <p>Chúng tôi mua nhiều tài sản khác nhau giống <br> 
+                    <p>Chúng tôi mua nhiều tài sản khác nhau giống <br>
                         như những người khác, những người muốn<br>
                         bán con của họ với sự tin tưởng</p>
                 </div>
@@ -117,7 +148,7 @@
                 </div>
                 <div class="dvicontext">
                     <h3> Bán tài sản</h3>
-                    <p>Số lượng tài sản để bán khác nhau của các <br> 
+                    <p>Số lượng tài sản để bán khác nhau của các <br>
                         tài sản như nhiều người muốn bán con cháu<br>
                         của họ</p>
                 </div>
@@ -128,7 +159,7 @@
                 </div>
                 <div class="dvicontext">
                     <h3> Cho thuê tài sản</h3>
-                    <p>Nếu bạn cần tài sản cho thuê nhiều tài sản<br> 
+                    <p>Nếu bạn cần tài sản cho thuê nhiều tài sản<br>
                         khác nhau như nhiều người muốn bán đức<br>
                         tin của họ</p>
                 </div>
@@ -157,11 +188,11 @@
         <div class="price2">
             <div class="divtext">
                 <h1>Chúng tôi luôn mang lại chất lượng
-                <br>   tốt nhất </h1>
+                    <br> tốt nhất </h1>
                 <p>Golden Home là một trong những công ty bất động sản nổi tiếng nhất <br>
-                    trên khắp nước Mỹ. Bạn có thể tìm thấy tài sản mơ ước của mình  <br>
+                    trên khắp nước Mỹ. Bạn có thể tìm thấy tài sản mơ ước của mình <br>
                     hoặc xây dựng tài sản</p>
-            </div>    
+            </div>
             <div class="divicon">
                 <div class="divicon1">
                     <div class="icon">
@@ -169,8 +200,8 @@
                     </div>
                     <div class="divicontext">
                         <h3>Sơn cảm ứng Royel</h3>
-                        <p>Sơn là tấm gương phản chiếu vẻ<br> 
-                            đẹp  ngôi nhà mơ ước cùng chúng<br>
+                        <p>Sơn là tấm gương phản chiếu vẻ<br>
+                            đẹp ngôi nhà mơ ước cùng chúng<br>
                             tôi xây dựng tài sản</p>
                     </div>
                 </div>
@@ -180,8 +211,8 @@
                     </div>
                     <div class="divicontext">
                         <h3> Đầy đủ nội thất</h3>
-                        <p>Các tài sản được trang trí đẹp và <br> 
-                            đầy đủ tiện nghi luôn sẵn sàng  <br>
+                        <p>Các tài sản được trang trí đẹp và <br>
+                            đầy đủ tiện nghi luôn sẵn sàng <br>
                             cho tất cả mọi người</p>
                     </div>
                 </div>
@@ -191,7 +222,7 @@
                     </div>
                     <div class="divicontext">
                         <h3>Thiết kế nội thất mới nhất</h3>
-                        <p>Tất cả nội thất đều là gương mới<br> 
+                        <p>Tất cả nội thất đều là gương mới<br>
                             nhất và sang trọng của ngôi nhà <br>
                             đẹp trong mơ</p>
                     </div>
@@ -202,7 +233,7 @@
                     </div>
                     <div class="divicontext">
                         <h3> Không ngừng bảo mật</h3>
-                        <p>An ninh trong khu vực tài sản của<br> 
+                        <p>An ninh trong khu vực tài sản của<br>
                             chúng tôi là ưu tiên chính cho tất cả<br>
                             các nhân viên của chúng tôi</p>
                     </div>
@@ -316,4 +347,6 @@
         </div>
     </footer>
 </body>
+
 </html>
+<script src="./views/js/index.js"></script>
