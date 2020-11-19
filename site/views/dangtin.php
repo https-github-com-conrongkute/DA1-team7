@@ -35,13 +35,13 @@
                 </div>
                 <div class="nav-menu">
                     <ul>
-                        <li><a href="#">Trang chủ </a> </li>
+                        <li><a href="index.php">Trang chủ </a> </li>
                         <li><a href="#">Dịch vụ </a></li>
-                        <li><a href="#">Danh sách </a> </li>
-                        <li><a href="#">Giới thiệu </a></li>
+                        <li><a href="?ctrl=home&act=danhsach">Danh sách nhà thuê</a> </li>
+                        <li><a href="?ctrl=home&act=gioithieu">Giới thiệu </a></li>
                         <li><a href="#">Liên hệ </a></li>
                         <li><a href="?ctrl=home&act=danhnhap">Đăng nhập </a></li>
-                        <li><a href="#" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
+                        <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
                     </ul>
                 </div>
             </div>

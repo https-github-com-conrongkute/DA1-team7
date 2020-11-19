@@ -17,13 +17,13 @@
             </div>
             <div class="navmenu">
                 <ul>
-                    <li><a href="#">Trang chủ </a> </li>
+                    <li><a href="index.php">Trang chủ </a> </li>
                     <li><a href="#">Dịch vụ </a></li>
                     <li><a href="#">Danh sách </a> </li>
                     <li><a href="#">Giới thiệu </a></li>
-                    <li><a href="#">Liên hệ </a></li>
+                    <li><a href="?ctrl=home&act=gioithieu">Liên hệ </a></li>
                     <li><a href="?ctrl=home&act=dangnhap">Đăng nhập </a></li>
-                    <li><a href="#">Đăng tin</a></li>
+                    <li><a href="?ctrl=home&act=dangtin">Đăng tin</a></li>
                 </ul>
             </div>
         </div>
