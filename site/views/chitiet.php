@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
-    <link rel="stylesheet" href="../trangchitiet/css/chitiet.css">
+    <link rel="stylesheet" href="./views/css/chitiet.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <div class="menu">
+    <!-- <div class="menu">
         <div class="banner">
             <img src="../site/img/banner9.jpg" width="100%" height="600px" alt="">
         </div>
@@ -42,9 +42,38 @@
                 </div>
             </div>
         </nav>
-    </div>
+    </div> -->
+    <nav class="hienra">
+            <div class="menu-logo-bg">
+                <div class="nav-logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="nav-menu2">
+                    <ul>
+                        <li><a href="index.php">Trang chủ </a> </li>
+                        <li><a href="#">Dịch vụ </a></li>
+                        <li><a href="?ctrl=home&act=danhsach">Danh sách </a> </li>
+                        <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
+                        <li><a href="#">Liên hệ </a></li>
+                        <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
+                        <?php if (isset($_SESSION['user']) == true) { ?>
+                            <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
+                                <ul class="sub-menu">
+                                    <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
+                                    <li><a href="">Đổi mật khẩu</a></li>
+                                    <li><a href="">Căn hộ cửa tôi</a></li>
+                                    <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
+                                </ul>
+                            </li>
+                        <?php } else { ?>
+                            <li><a href="?act=dangnhap">Đăng nhập</a></li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     <!-- đây là phần show sản phẩm lên có hình ảnh và có tên,giá,id -->
-    <div id="wrapper">
+    <div id="wrapper" style="margin-top: 100px;">
         <div class="item1">
             <div class="box-slideshow"><p>
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

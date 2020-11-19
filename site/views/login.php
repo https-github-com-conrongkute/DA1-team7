@@ -43,7 +43,7 @@
                         <li><a href="#">Liên hệ </a></li>
                         <!-- <li><a href="?act=danhnhap">Đăng nhập </a></li> -->
                         <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
-                        <li><a href="?ctrl=home&act=dangnhap"><i class="fas fa-user" style="font-size: 18pt;"></i></a></li>
+                        <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a></li>
                     </ul>
                 </div>
             </div>

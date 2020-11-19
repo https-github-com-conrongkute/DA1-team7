@@ -40,12 +40,12 @@ body {
 
 .menu-logo {
     width: 100%;
-    position: absolute;
+    position: fixed;
     left: 0;
     height: 80px;
     /* background-color: #ccc; */
     top: 20px;
-  
+    z-index: 99;
 }
 
 .nav-logo {
@@ -66,46 +66,110 @@ body {
     width: 70%;
     height: 80px;
 }
+
+.hienra {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    height: 80px;
+    background-color: white;
+    color: black;
+    box-shadow: 5px 5px 5px #ccc;
+    top: 0;
+    z-index: 99;
+}
+
 .nav-menu>ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+
 .nav-menu>ul>li {
     list-style: none;
+    position: relative;
     /* width: 100px;
     line-height: 80px; */
     line-height: 80px;
     padding: 0px 20px;
 }
-
-.nav-menu>ul>li>a {
+.sub-menu{
+    position: absolute;
+    content: '';
+    top: 60px;
+    display: inline-block;
+    width: 150px;
+    min-height: 100px;
+    left: 0;
+    background-color: #FFA000;
+    border-radius: 20px;
+    display: none;
+}
+.sub-menu>li{
+    line-height: 20px;
+    margin: 10px 0px;
+    list-style: none; 
+}
+.sub-menu>li>a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+.nav-menu>ul>li>a{
     color: white;
     font-family: 'Roboto', sans-serif;
     /* font-weight: bold; */
     text-decoration: none;
-    font-size: 10pt;
-    font-family: 'Lato', sans-serif;
+}
+.nav-menu2>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-
+.nav-menu2>ul>li {
+    list-style: none;
+    position: relative;
+    /* width: 100px;
+    line-height: 80px; */
+    line-height: 80px;
+    padding: 0px 20px;
+}
+.nav-menu2>ul>li>a{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: bold; */
+    text-decoration: none;
+}
+.menu-logo-bg {
+    width: 90%;
+    /* margin-top: 20px; */
+    position: relative;
+    left: 5%;
+    top: 0;
+}
+/* end */
  #wrapper{
      display: grid;
-     width: 95%;
+     width: 80%;
      min-height: 1400px;
      margin: auto;
      margin-top: 20px;
      display:grid;
-     grid-template-columns: 69% 30%;
-     grid-column-gap: 1%;
+     grid-template-columns: 74% 22%;
+     grid-column-gap: 4%;
  }
 .item1{
+    width: 100%;
+    padding: 0;
     min-height: 700px;
-    padding:20px 30px;
+    /* padding:20px 30px; */
 }
 .item2{
+    width: 100%;
+    padding: 0;
     min-height: 700px;
-    padding:30px 20px;
+    /* padding:30px 20px; */
 }
 
 .box-slideshow{
@@ -125,11 +189,11 @@ body {
 }
 /* item 2 */
 .form-timkiem{
-    width: 80%;
+    width: 100%;
     height: 350px;
     background-color: white;
     box-shadow: 2px 3px 4px #5c8a8a;
-    margin: auto;
+    margin: 10px 0px;
 }
 .row{
     float: left;
@@ -142,7 +206,7 @@ body {
     float: left;
     display: grid;
     grid-template-columns: 63% 35%;
-    grid-column-gap: 4%;
+    grid-column-gap: 2%;
     
 }
 .gioithieu{
@@ -365,10 +429,12 @@ form{
  }
 
 .container
-{   width: 60%;
+{   width: 70%;
     position: absolute;
     top: 70px;
-    left: 7%;
+    left: 13%;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
     height: 200px;

@@ -85,4 +85,7 @@ switch ($act) {
   case 'about':
     require_once 'views/about.php';
     break;
+  case 'chitiet':
+    require_once 'views/chitiet.php';
+  break;
 }
