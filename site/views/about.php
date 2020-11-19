@@ -15,11 +15,11 @@
             <div class="nav-logo">
                 <img src="img/logo.png" alt="">
             </div>
-            <div class="nav-menu2">
+            <div class="nav-menu3">
                 <ul>
                     <li><a href="index.php">Trang chủ </a> </li>
                     <li><a href="#">Dịch vụ </a></li>
-                    <li><a href="#">Danh sách </a> </li>
+                    <li><a href="?act=danhsach">Danh sách </a> </li>
                     <li><a href="?ctrl=home&act=gioithieu">Giới thiệu </a></li>
                     <li><a href="#">Liên hệ </a></li>
                     <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>

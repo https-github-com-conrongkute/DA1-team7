@@ -93,13 +93,13 @@ body {
     /* font-weight: bold; */
     text-decoration: none;
 }
-.nav-menu2>ul {
+.nav-menu3>ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.nav-menu2>ul>li {
+.nav-menu3>ul>li {
     list-style: none;
     position: relative;
     /* width: 100px;
@@ -107,7 +107,7 @@ body {
     line-height: 80px;
     padding: 0px 20px;
 }
-.nav-menu2>ul>li>a{
+.nav-menu3>ul>li>a{
     color: white;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
