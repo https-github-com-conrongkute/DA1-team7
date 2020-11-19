@@ -132,16 +132,16 @@ $(document).ready(function() {
 function images(x) {
     var img = document.getElementById('images');
     switch (x) {
-        case '1':
+        case 1:
             img.src = "img/b1.jpg";
             break;
-        case '2':
+        case 2:
             img.src = "img/b2.jpg";
             break;
-        case '3':
+        case 3:
             img.src = "img/b3.jpg";
             break;
-        case '4':
+        case 4:
             img.src = "img/b4.jpg";
             break;
         default:
