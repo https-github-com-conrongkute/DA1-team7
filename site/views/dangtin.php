@@ -292,7 +292,7 @@
                 <div class="sdichvu">
                     <h4>DỊCH VỤ NỔI BẬT CỦA GOLDENHOME</h4>
                     <div class="row">
-                        <div class="col-5 " style="background-color: #ef7733; padding: 40px 20px; margin-top: 20px; margin-right: 170px;">
+                        <div class="col-5 " style="background-color: #ef7733; padding: 40px 20px; margin-top: 20px; margin-right: 170px; border-radius: 20px;">
                             <div class="row">
                                 <div class="col-3"><i class="fa fa-home" style="font-size:100px;color:white"></i></div>
                                 <div class="col-9" style="text-align: left;">
@@ -302,12 +302,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-5 " style="background-color: #ef7733; padding: 40px 20px; margin-top: 20px; ">
+                        <div class="col-5 " style="background-color: #ef7733; padding: 40px 20px; margin-top: 20px; border-radius: 20px; ">
                             <div class="row">
                                 <div class="col-3"><i class="fa fa-home" style="font-size:100px;color:white"></i></div>
                                 <div class="col-9" style="text-align: left;">
-                                    <h5 style="color: white; font-weight: bolder;">ĐĂNG TIN VÀ CHO THUÊ MIỄN PHÍ</h5>
-                                    <p style="color: white;">Tiếp cận khách hàng sẳn có và quảng cáo tin đăng miễn phí</p>
+                                    <h5 style="color: white; font-weight: bolder;">TÌM VÀ THUÊ NHÀ NHƯ Ý</h5>
+                                    <p style="color: white;">Tìm theo tiêu chí đảm bảo an toàn pháp lý của nhà nước</p>
                                     <button style="background-color: rgb(1, 62, 167); color: #ffffff; border: none; padding: 10px 40px ; border-radius: 20px;">Đăng tin ngay</button>
                                 </div>
                             </div>
