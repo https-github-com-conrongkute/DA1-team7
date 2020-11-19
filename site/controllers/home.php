@@ -8,6 +8,9 @@ switch ($act) {
   case 'danhnhap':
     require_once 'views/login.php';
     break;
+    case 'dangtin':
+      require_once 'views/dangtin.php';
+      break;
   case 'dangnhap_':
     break;
 }
