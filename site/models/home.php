@@ -9,4 +9,10 @@ function datlich($ma_can,$hoten,$email,$sdt,$ngay_xem){
     VALUES ('$ma_can','$hoten','$email','$sdt','$ngay_xem')";
     execute($sql);
 }
+
+// check tài khoản dang nhap
+function checktk($tentk, $pass){
+    $sql = "SELECT * FROM khach_hang WHERE ten_tk = '$tentk' AND mat_khau = '$pass'";
+    return queryOne($sql);
+}
 ?> -->

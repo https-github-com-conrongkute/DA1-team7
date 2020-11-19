@@ -8,22 +8,12 @@ $(document).ready(function() {
         } else {
             $('nav').removeClass('hienra');
             $('.nav-menu ul li a').css('color', 'white');
+            // $('.sum-menu ul li a').css('color', 'black');
         }
     });
-    //trang đăng tin
-    $(window).scroll(function() {
-        var body = $('html,body').scrollTop();
-        // console.log(body);
-        if (body > 100) {
-            $('nav1').addClass('hienra');
-            $('.nav-menu ul li a').css('color', 'black');
-        } else {
-            $('nav1').removeClass('hienra');
-            $('.nav-menu ul li a').css('color', 'white');
-        }
-    });
+  
     // !--slick carousel-- >
-
+  
     $('.slider').slick({
         dots: true,
         infinite: false,
@@ -174,5 +164,15 @@ function images(x) {
             break;
         default:
             break;
+    }
+}
+
+function toogle(){
+    var submenu = document.getElementsByClassName('sub-menu')[0];
+    if(submenu.style.display == 'none'){
+        submenu.style.display = 'block';
+    }else{
+        submenu.style.display = 'none';
+        
     }
 }
