@@ -62,8 +62,8 @@
                         <ul>
                             <li><a href="#">Trang chủ </a> </li>
                             <li><a href="#">Dịch vụ </a></li>
-                            <li><a href="#">Danh sách </a> </li>
-                            <li><a href="#">Giới thiệu </a></li>
+                            <li><a href="?ctrl=home&act=danhsach">Danh sách </a> </li>
+                            <li><a href="?ctrl=home&act=gioithieu">Giới thiệu </a></li>
                             <li><a href="#">Liên hệ </a></li>
                             <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                             <?php if (isset($_SESSION['user']) == true) { ?>

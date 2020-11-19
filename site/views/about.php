@@ -315,5 +315,6 @@
             <input type="text" value="Địa chỉ email"><input class="ip2" type="submit" value="Đăng ký">
         </div>
     </footer>
+
 </body>
 </html>

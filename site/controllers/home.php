@@ -46,11 +46,16 @@ switch ($act) {
     case 'doimk':
       $view = 'views/doimk.php';
       require_once 'views/layout.php';
+    break;
       case 'dangtin':
         require_once 'views/dangtin.php';
       break;
       case 'danhsach':
         require_once 'views/danhsach.php';
+        break;
+      case 'gioithieu':
+          require_once 'views/about.php';
           break;
-    break;
+
+    
 }
