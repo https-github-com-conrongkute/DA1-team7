@@ -3,18 +3,22 @@
     margin: 0;
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 body {
     width: 100%;
     font-family: "Sf ui display", sans-serif;
     margin: 0 auto;
 }
-.row{
+
+.row {
     float: left;
     width: 100%;
 }
+
 .menu {
     height: 900px;
 }
@@ -26,8 +30,11 @@ body {
 .banner img {
     opacity: 0.8;
 }
+
+
 /* menu */
-.menu-logo{
+
+.menu-logo {
     width: 100%;
     position: fixed;
     left: 0;
@@ -36,23 +43,27 @@ body {
     top: 20px;
     z-index: 99;
 }
-.nav-logo{
+
+.nav-logo {
     width: 30%;
     float: left;
     height: 80px;
 }
-.nav-logo>img{
+
+.nav-logo>img {
     width: 100%;
     height: 70px;
     margin: 5px 0px;
     object-fit: contain;
 }
-.nav-menu{
+
+.nav-menu {
     float: right;
     width: 70%;
     height: 80px;
 }
-.hienra{
+
+.hienra {
     width: 100%;
     position: fixed;
     left: 0;
@@ -63,12 +74,14 @@ body {
     top: 0;
     z-index: 99;
 }
-.nav-menu>ul{
+
+.nav-menu>ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.nav-menu>ul>li{
+
+.nav-menu>ul>li {
     list-style: none;
     /* width: 100px;
     line-height: 80px; */
@@ -76,19 +89,26 @@ body {
     padding: 0px 20px;
 }
 
+<<<<<<< HEAD
 .nav-menu>ul>li>a{
+=======
+.nav-menu>ul>li>a {
+>>>>>>> 605ee3c2608453fb47eb1889cef6a99f89ed8a39
     color: white;
     font-family: 'Roboto', sans-serif;
     /* font-weight: bold; */
     text-decoration: none;
 }
-.menu-logo-bg{
+
+.menu-logo-bg {
     width: 90%;
     /* margin-top: 20px; */
     position: relative;
     left: 5%;
     top: 0;
 }
+
+
 /* end */
 
 .navtext {
@@ -296,21 +316,26 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    overflow: hidden;
+    height: 420px;
 }
-.boxcenter{
+
+.boxcenter {
     margin: 0 auto;
     width: 80%;
 }
+
 .danhsach .box2 {
     width: 31.6%;
-    margin-right: 20px;
+    margin-right: 25px;
     height: 400px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: #ccc 0px 10px 10px;
     margin-bottom: 40px;
 }
-.danhsach .box2:nth-child(3){
+
+.danhsach .box2:nth-child(3) {
     margin-right: 0;
 }
 
@@ -422,26 +447,30 @@ body {
     width: 31.6%;
     height: 350px;
     margin-right: 20px;
-   
     /* background-color: #f0f0f0; */
     box-shadow: #ccc 2px 1px 8px 4px;
 }
-.box5{
+
+.box5 {
     width: 31.6%;
     height: 350px;
     margin: 20px;
     /* background-color: #f0f0f0; */
     box-shadow: #ccc 2px 1px 8px 4px;
 }
-.box3:nth-child(3){
+
+.box3:nth-child(3) {
     margin-right: 0;
 }
-.thuenhatext-text{
+
+.thuenhatext-text {
     width: 100%;
     float: left;
     height: 150px;
     text-align: center;
 }
+
+
 /* .box3 {
     width: 100%;
     text-align: center;
@@ -453,7 +482,8 @@ body {
     object-fit: contain;
     text-align: center;
 }
-.box-img{
+
+.box-img {
     width: 30%;
     margin: 20px auto;
     height: 150px;
@@ -465,10 +495,13 @@ body {
     font-size: 14pt;
     text-decoration: none;
 }
-.thuenhatext-text>p{
+
+.thuenhatext-text>p {
     margin: 20px 0px;
     padding: 0px 15px;
 }
+
+
 /* .box3 p {
     margin: 30px;
 } */
@@ -484,7 +517,6 @@ body {
     font-size: 31px;
     color: orange;
 }
-
 
 .tuvan {
     width: 100%;
