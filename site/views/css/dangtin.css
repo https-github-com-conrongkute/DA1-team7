@@ -72,7 +72,32 @@ body {
     top: 0;
     z-index: 99;
 }
-
+/* dropdown */
+.sub-menu{
+    position: absolute;
+    z-index: 99999;
+    content: '';
+    top: 60px;
+    display: inline-block;
+    width: 150px;
+    min-height: 100px;
+    left: 0;
+    background-color: #FFA000;
+    border-radius: 20px;
+    display: none;
+}
+.sub-menu>li{
+    line-height: 20px;
+    margin: 10px 0px;
+    list-style: none; 
+}
+.sub-menu>li>a{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+/* End */
 .nav-menu>ul {
     display: flex;
     flex-direction: row;
@@ -81,6 +106,7 @@ body {
 
 .nav-menu>ul>li {
     list-style: none;
+    position: relative;
     /* width: 100px;
     line-height: 80px; */
     line-height: 80px;

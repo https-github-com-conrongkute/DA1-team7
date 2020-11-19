@@ -9,6 +9,7 @@ $(document).ready(function() {
         } else {
             $('nav').removeClass('hienra');
             $('.nav-menu ul li a').css('color', 'white');
+            $('.nav-menu2 ul li a').css('color', 'white');
             // $('.sum-menu ul li a').css('color', 'black');
         }
     });

@@ -27,7 +27,7 @@
                         <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
                             <ul class="sub-menu">
                                 <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
-                                <li><a href="">Đổi mật khẩu</a></li>
+                                <li><a href="?act=doimk">Đổi mật khẩu</a></li>
                                 <li><a href="">Căn hộ cửa tôi</a></li>
                                 <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
                             </ul>

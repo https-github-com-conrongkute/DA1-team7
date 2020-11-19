@@ -21,7 +21,7 @@
             <span class="col-4 right">
                 <a href="#" class="col-3"><i class="fa fa-phone">(+84) 978 942 472</i></a>
                 <a href="#" class="col-6"><i class="fa fa-envelope">vietnam@goldenhome.com</i></a>
-                </span>
+            </span>
         </div>
 
     </header>
@@ -40,7 +40,18 @@
                         <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                         <li><a href="#">Liên hệ </a></li>
                         <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
-                        <li><a href="?ctrl=home&act=dangnhap">Đăng nhập </a></li>
+                        <?php if (isset($_SESSION['user']) == true) { ?>
+                            <li><a href="#" onclick="toogle()"><?= $_SESSION['user'] ?></a>
+                                <ul class="sub-menu">
+                                    <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
+                                    <li><a href="">Đổi mật khẩu</a></li>
+                                    <li><a href="">Căn hộ cửa tôi</a></li>
+                                    <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
+                                </ul>
+                            </li>
+                        <?php } else { ?>
+                            <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -71,9 +82,9 @@
                             <div class="row mtop">
                                 <div class="col-3">
                                     <select name="" id="" class="select1 ">
-                                    <option value="">Tp Hồ Chí minh</option>
-                                    
-                                </select></div>
+                                        <option value="">Tp Hồ Chí minh</option>
+
+                                    </select></div>
                                 <div class="col-3">
                                     <select name="" id="" class="select1 ">
                                         <option value="">Quận/Huyện</option>
@@ -92,7 +103,7 @@
                                         <option value="">10 triệu - 15 triệu</option>
                                         <option value="">15 triệu - 20 triệu</option>
                                         <option value="">Trên 20 triệu</option>
-                                   </select>
+                                    </select>
                                 </div>
                                 <div class="col-3">
                                     <select name="" id="" class="select1 ">
@@ -194,8 +205,8 @@
                             <div class="col-3">
                                 <label for="">Đơn vị tiền tệ</label><br>
                                 <select name="" id="" class="form-control w-100">
-                                        <option value="">VND</option>
-                                    </select>
+                                    <option value="">VND</option>
+                                </select>
                             </div>
                             <div class="col-12" style="margin: 20px 0px;">
                                 <label for="">Tiêu đề cho thuê</label><br>
@@ -232,10 +243,10 @@
                                     </div>
                                     <div class="col-6">
                                         <select name="" class="form-control" id="">
-                                        <option value="">Quận / Huyện</option>
-                                        <option value="">Quận 1</option>
-                                        <option value="">Quận 2</option>
-                                    </select>
+                                            <option value="">Quận / Huyện</option>
+                                            <option value="">Quận 1</option>
+                                            <option value="">Quận 2</option>
+                                        </select>
                                     </div>
                                     <div class="col-6" style="margin: 20px 0px;">
                                         <label for="">Địa chỉ cụ thể</label>
