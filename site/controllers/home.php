@@ -46,5 +46,8 @@ switch ($act) {
     case 'doimk':
       $view = 'views/doimk.php';
       require_once 'views/layout.php';
+      case 'dangtin':
+        require_once 'views/dangtin.php';
+      break;
     break;
 }

@@ -31,8 +31,7 @@
                         <li><a href="#">Danh sách </a> </li>
                         <li><a href="?ctrl=home&act=gioithieu">Giới thiệu </a></li>
                         <li><a href="#">Liên hệ </a></li>
-<<<<<<< HEAD
-                        <li><a href="#" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
+                        <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                         <?php if (isset($_SESSION['user']) == true) { ?>
                             <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
                                 <ul class="sub-menu">
@@ -45,10 +44,6 @@
                         <?php } else { ?>
                             <li><a href="?act=danhnhap"><i class="fas fa-user" style="font-size: 18pt;"></i></a></li>
                         <?php } ?>
-=======
-                        <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
-                        <li><a href="?ctrl=home&act=danhnhap"><i class="fas fa-user" style="font-size: 18pt;"></i></a></li>
->>>>>>> de5a0d9f9070dad4bf5e31a28045acf6e26667fa
                     </ul>
                 </div>
             </div>
@@ -70,7 +65,7 @@
                             <li><a href="#">Danh sách </a> </li>
                             <li><a href="#">Giới thiệu </a></li>
                             <li><a href="#">Liên hệ </a></li>
-                            <li><a href="#" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
+                            <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                             <?php if (isset($_SESSION['user']) == true) { ?>
                                 <li><a onclick="toogle()" onclick="toogle()" href="#"><?= $_SESSION['user'] ?></a>
                                     <ul class="sub-menu">
