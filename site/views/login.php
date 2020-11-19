@@ -50,7 +50,7 @@
         </nav>
     <div class="container mt" style="margin-top: 160px;" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form action="#" method="post">
                 <h1>Đăng ký </h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -64,17 +64,17 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="?act=dangnhap_" method="post">
                 <h1>Đăng nhập </h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                 </div>
                 <span>hoặc sử dụng tài khoản của bạn</span>
-                <input type="text" placeholder="Tên đăng nhập" />
-                <input type="password" placeholder="Mật khẩu" />
+                <input type="text" placeholder="Tên đăng nhập" name="tentk" />
+                <input type="password" placeholder="Mật khẩu" name="pass" />
                 <a href="#">quên mật khâu ?</a>
-                <button>Đăng nhập</button>
+                <button type="submit">Đăng nhập</button>
             </form>
         </div>
         <div class="overlay-container">

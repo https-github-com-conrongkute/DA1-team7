@@ -8,10 +8,12 @@ $(document).ready(function() {
         } else {
             $('nav').removeClass('hienra');
             $('.nav-menu ul li a').css('color', 'white');
+            // $('.sum-menu ul li a').css('color', 'black');
         }
     });
+  
     // !--slick carousel-- >
-
+  
     $('.slider').slick({
         dots: true,
         infinite: false,
@@ -129,7 +131,7 @@ $(document).ready(function() {
     });
 });
 
-function images(x) {
+function showimages(x) {
     var img = document.getElementById('images');
     switch (x) {
         case 1:
@@ -146,5 +148,15 @@ function images(x) {
             break;
         default:
             break;
+    }
+}
+
+function toogle(){
+    var submenu = document.getElementsByClassName('sub-menu')[0];
+    if(submenu.style.display == 'none'){
+        submenu.style.display = 'block';
+    }else{
+        submenu.style.display = 'none';
+        
     }
 }

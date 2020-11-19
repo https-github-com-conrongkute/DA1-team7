@@ -18,29 +18,72 @@
 </head>
 
 <body>
-    <div class="menu">
-        <div class="banner">
-            <img src="img/banner9.jpg" width="100%" height="600px" alt="">
-        </div>
-        <nav class="menu-logo">
+    <?php if (isset($view) == true) { ?>
+        <nav class="hienra">
             <div class="menu-logo-bg">
                 <div class="nav-logo">
                     <img src="img/logo.png" alt="">
                 </div>
-                <div class="nav-menu">
+                <div class="nav-menu2">
                     <ul>
-                        <li><a href="#">Trang chủ </a> </li>
+                        <li><a href="index.php">Trang chủ </a> </li>
                         <li><a href="#">Dịch vụ </a></li>
                         <li><a href="#">Danh sách </a> </li>
                         <li><a href="#">Giới thiệu </a></li>
                         <li><a href="#">Liên hệ </a></li>
                         <li><a href="#" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
-                        <li><a href="?act=danhnhap"><i class="fas fa-user" style="font-size: 18pt;"></i></a></li>
+                        <?php if (isset($_SESSION['user']) == true) { ?>
+                            <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
+                                <ul class="sub-menu">
+                                    <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
+                                    <li><a href="">Đổi mật khẩu</a></li>
+                                    <li><a href="">Căn hộ cửa tôi</a></li>
+                                    <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
+                                </ul>
+                            </li>
+                        <?php } else { ?>
+                            <li><a href="?act=danhnhap"><i class="fas fa-user" style="font-size: 18pt;"></i></a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- <div class="nav">
+    <?php } else { ?>
+        <div class="menu">
+            <div class="banner">
+                <img src="img/banner9.jpg" width="100%" height="600px" alt="">
+            </div>
+            <nav class="menu-logo">
+                <div class="menu-logo-bg">
+                    <div class="nav-logo">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="nav-menu">
+                        <ul>
+                            <li><a href="#">Trang chủ </a> </li>
+                            <li><a href="#">Dịch vụ </a></li>
+                            <li><a href="#">Danh sách </a> </li>
+                            <li><a href="#">Giới thiệu </a></li>
+                            <li><a href="#">Liên hệ </a></li>
+                            <li><a href="#" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
+                            <?php if (isset($_SESSION['user']) == true) { ?>
+                                <li><a onclick="toogle()" onclick="toogle()" href="#"><?= $_SESSION['user'] ?></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
+                                        <li><a href="">Đổi mật khẩu</a></li>
+                                        <li><a href="">Căn hộ cửa tôi</a></li>
+                                        <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
+                                    </ul>
+                                </li>
+                            <?php } else { ?>
+                                <li><a href="?act=danhnhap"><i class="fas fa-user" style="font-size: 18pt;"></i></a>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- <div class="nav">
             <div class="navimg">
                 <img src="img/logo.png" width="140px" alt="">
             </div>
@@ -56,322 +99,327 @@
                 </ul>
             </div>
         </div> -->
-        <?php if (file_exists($view)) require_once $view; ?>
-        <div class="navtext">
-            <h1 style="text-shadow: 2px 2px 2px black;">THUÊ CĂN HỘ SIÊU TỐC</h1>
-            <p>Hơn 16.000 nhà riêng, chung cư, căn hộ đang cho thuê. Cam kết luôn có 10 <br> căn hộ trong 48 giờ.</p>
-        </div>
-        <div class="dangky">
-            <h3>Đăng ký tìm nhà siêu tốc !</h3>
-            <input type="text" placeholder="Họ và tên">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Số điện thoại">
-            <input class="submit" type="submit" value="Tham gia ngay">
-        </div>
-        <div class="dangky2">
-            <div class="text1">
-                <h2>Tại sao nên chọn chúng tôi ?</h2>
-            </div>
-            <div class="text2">
-                <div class="box1">
-                    <div class="icon1">
-                        <img src="img/fast.png" alt="">
-                    </div>
-                    <a href="#">Tận tâm</a>
-                    <p>Golden luôn đồng <br> hành, hỗ trợ mọi vấn <br> đề mọi lúc trong thời <br> gian ngắn nhất.</p>
-                </div>
-                <div class="box1">
-                    <div class="icon1">
-                        <img src="img//guard.png" alt="">
-                    </div>
-                    <a href="#">Đáng tin cậy</a>
-                    <p>Tất cả nhà thuê <br> chính chủ, không trung <br> gian, cam kết an <br> tâm khi thuê.</p>
-                </div>
-                <div class="box1">
-                    <div class="icon1">
-                        <img src="img/like.png" alt="">
-                    </div>
-                    <a href="#">Dịch vụ miễn phí</a>
-                    <p>Dịch vụ tìm nhà <br> và dẫn đi xem hoàn <br> toàn miễn phí.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="danhsach " style="margin-top: 160px;">
-        <div class="tieude">
-            <h3 style="font-weight: bold; color: orange;color:black;">DANH SÁCH</h3>
-            <h2 style="font-size: 30pt;">Nhà cho thuê nhiều nhất</h2>
-        </div>
-        <div class="loc-canho">
-            <select name="" id="" class="select">
-                <option value="">Giá từ thấp đến cao</option>
-                <option value="">Giá từ cao đến thấp</option>
-                <option value="">Mới nhất</option>
-            </select>
-            <select name="" id="" class="select">
-                 <option value="">Mức giá</option>
-                 <option value="">Dưới 3 triệu</option>
-                 <option value="">3 triệu - 5 triệu</option>
-                 <option value="">5 triệu - 8 triệu</option>
-                 <option value="">8 triệu - 10 triệu</option>
-                 <option value="">10 triệu - 15 triệu</option>
-                 <option value="">15 triệu - 20 triệu</option>
-                 <option value="">Trên 20 triệu</option>
-            </select>
-            <select name="" id="" class="select">
-                 <option value="">Loại căn hộ</option>
-                 <option value="">Chung cư</option>
-                 <option value="">Nhà ở</option>
-            </select>
-            <select name="" id="" class="select">
-                <option value="">Tp. Hồ Chí Minh</option>
-            </select>
-            <button class="btn-loc"><i class="fas fa-search"></i></button>
-        </div>
-        <div class="boxcenter">
-            <div class="canho slider1">
-                <div class="box2">
-                    <img src="img/b1.jpg" alt="">
-                    <div class="box2text">
-                        <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</a>
-                    </div>
-                    <div class="gia">
-                        <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
-                    </div>
-                    <div class="datlich">
-                        <a data-toggle="modal" data-target="#datlich" href="#">Đặt lịch xem</a>
-                    </div>
-                </div>
 
-                <div class="box2">
-                    <img src="img/b2.jpg" alt="">
-                    <div class="box2text">
-                        <a data-toggle="modal" data-target="#myModal" href="#">Cho Thuê Căn Hộ Chung Cư Tháp Mười Vừa Sửa Sang Mới Đẹp P2 Q6 </a>
+            <div class="navtext">
+                <h1 style="text-shadow: 2px 2px 2px black;">THUÊ CĂN HỘ SIÊU TỐC</h1>
+                <p>Hơn 16.000 nhà riêng, chung cư, căn hộ đang cho thuê. Cam kết luôn có 10 <br> căn hộ trong 48 giờ.</p>
+            </div>
+            <div class="dangky">
+                <h3>Đăng ký tìm nhà siêu tốc !</h3>
+                <input type="text" placeholder="Họ và tên">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Số điện thoại">
+                <input class="submit" type="submit" value="Tham gia ngay">
+            </div>
+            <div class="dangky2">
+                <div class="text1">
+                    <h2>Tại sao nên chọn chúng tôi ?</h2>
+                </div>
+                <div class="text2">
+                    <div class="box1">
+                        <div class="icon1">
+                            <img src="img/fast.png" alt="">
+                        </div>
+                        <a href="#">Tận tâm</a>
+                        <p>Golden luôn đồng <br> hành, hỗ trợ mọi vấn <br> đề mọi lúc trong thời <br> gian ngắn nhất.</p>
                     </div>
-                    <div class="gia">
-                        <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                    <div class="box1">
+                        <div class="icon1">
+                            <img src="img//guard.png" alt="">
+                        </div>
+                        <a href="#">Đáng tin cậy</a>
+                        <p>Tất cả nhà thuê <br> chính chủ, không trung <br> gian, cam kết an <br> tâm khi thuê.</p>
                     </div>
-                    <div class="datlich">
-                        <a href="#">Đặt lịch xem</a>
+                    <div class="box1">
+                        <div class="icon1">
+                            <img src="img/like.png" alt="">
+                        </div>
+                        <a href="#">Dịch vụ miễn phí</a>
+                        <p>Dịch vụ tìm nhà <br> và dẫn đi xem hoàn <br> toàn miễn phí.</p>
                     </div>
                 </div>
-                <div class="box2">
-                    <img src="img/b3.jpg" alt="">
-                    <div class="box2text">
-                        <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
+            </div>
+        </div>
+    <?php } ?>
+    <?php if (isset($view) == true) {
+        require_once $view;
+    } else { ?>
+        <div class="danhsach " style="margin-top: 160px;">
+            <div class="tieude">
+                <h3 style="font-weight: bold; color: orange;color:black;">DANH SÁCH</h3>
+                <h2 style="font-size: 30pt;">Nhà cho thuê nhiều nhất</h2>
+            </div>
+            <div class="loc-canho">
+                <select name="" id="" class="select">
+                    <option value="">Giá từ thấp đến cao</option>
+                    <option value="">Giá từ cao đến thấp</option>
+                    <option value="">Mới nhất</option>
+                </select>
+                <select name="" id="" class="select">
+                    <option value="">Mức giá</option>
+                    <option value="">Dưới 3 triệu</option>
+                    <option value="">3 triệu - 5 triệu</option>
+                    <option value="">5 triệu - 8 triệu</option>
+                    <option value="">8 triệu - 10 triệu</option>
+                    <option value="">10 triệu - 15 triệu</option>
+                    <option value="">15 triệu - 20 triệu</option>
+                    <option value="">Trên 20 triệu</option>
+                </select>
+                <select name="" id="" class="select">
+                    <option value="">Loại căn hộ</option>
+                    <option value="">Chung cư</option>
+                    <option value="">Nhà ở</option>
+                </select>
+                <select name="" id="" class="select">
+                    <option value="">Tp. Hồ Chí Minh</option>
+                </select>
+                <button class="btn-loc"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="boxcenter">
+                <div class="canho slider1">
+                    <div class="box2">
+                        <img src="img/b1.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a data-toggle="modal" data-target="#datlich" href="#">Đặt lịch xem</a>
+                        </div>
                     </div>
-                    <div class="gia">
-                        <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
-                    </div>
-                    <div class="datlich">
-                        <a href="#">Đặt lịch xem</a>
-                    </div>
-                </div>
-                <div class="box2">
-                    <img src="img/b3.jpg" alt="">
-                    <div class="box2text">
-                        <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
-                    </div>
-                    <div class="gia">
-                        <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
-                    </div>
-                    <div class="datlich">
-                        <a href="#">Đặt lịch xem</a>
-                    </div>
-                </div>
-                <div class="box2" style="margin-right: 30px;">
-                    <img src="img/b3.jpg" alt="">
-                    <div class="box2text">
-                        <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
-                    </div>
-                    <div class="gia">
-                        <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
-                    </div>
-                    <div class="datlich">
-                        <a href="#">Đặt lịch xem</a>
-                    </div>
-                </div>
 
-            </div>
-            <div class="canho slider2">
-                <div class="box2">
-                    <img src="img/b4.jpg" alt="">
-                    <div class="box2text">
-                        <a href="#">Cho thuê căn hộ dịch vụ Quận Bình Thạnh - Hẻm Nguyễn Xí</a>
+                    <div class="box2">
+                        <img src="img/b2.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho Thuê Căn Hộ Chung Cư Tháp Mười Vừa Sửa Sang Mới Đẹp P2 Q6 </a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
                     </div>
-                    <div class="gia">
-                        <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                    <div class="box2">
+                        <img src="img/b3.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
                     </div>
-                    <div class="datlich">
-                        <a href="#">Đặt lịch xem</a>
+                    <div class="box2">
+                        <img src="img/b3.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
                     </div>
-                </div>
-                <div class="box2">
-                    <img src="img/b5.png" alt="">
-                    <div class="box2text">
-                        <a href="#">Cho thuê căn hộ dịch vụ - CityLand Park Hill - Quận Gò Vấp</a>
+                    <div class="box2" style="margin-right: 30px;">
+                        <img src="img/b3.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
                     </div>
-                    <div class="gia">
-                        <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
-                    </div>
-                    <div class="datlich">
-                        <a href="#">Đặt lịch xem</a>
-                    </div>
-                </div>
-                <div class="box2">
-                    <img src="img/b6.jpg" alt="">
-                    <div class="box2text">
-                        <a href="#">Cho thuê Văn Phòng Tầng 5 đường Ung Văn Khiêm - Phường 25 – Bình Thạnh</a>
-                    </div>
-                    <div class="gia">
-                        <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
-                    </div>
-                    <div class="datlich">
-                        <a href="#">Đặt lịch xem</a>
-                    </div>
-                </div>
-                <div class="box2">
-                    <img src="img/b6.jpg" alt="">
-                    <div class="box2text">
-                        <a href="#">Cho thuê Văn Phòng Tầng 5 đường Ung Văn Khiêm - Phường 25 – Bình Thạnh</a>
-                    </div>
-                    <div class="gia">
-                        <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
-                    </div>
-                    <div class="datlich">
-                        <a href="#">Đặt lịch xem</a>
-                    </div>
-                </div>
-                <div class="box2" style="margin-right: 30px;">
-                    <img src="img/b6.jpg" alt="">
-                    <div class="box2text">
-                        <a href="#">Cho thuê Văn Phòng Tầng 5 đường Ung Văn Khiêm - Phường 25 – Bình Thạnh</a>
-                    </div>
-                    <div class="gia">
-                        <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
-                    </div>
-                    <div class="datlich">
-                        <a href="#">Đặt lịch xem</a>
-                    </div>
-                </div>
 
-            </div>
-            <div class="xemthem">
-                <a href="#">Xem thêm </a>
-            </div>
-        </div>
-    </div>
-    <div class="gioithieu">
-        <img src="img/gioithieu.jpg" alt="">
-        <div class="textgt">
-            <h1 style="color: white; font-weight: bold;">Về chúng tôi</h1>
-            Đội ngũ chuyên viên tư vấn của chúng tôi với kinh nghiệm dày dặn và nắm vững thị trường sẽ giúp bạn tìm kiếm căn hộ phù hợp với nhu cầu của bạn. Bạn chỉ cần đưa ra thông tin, chúng tôi sẽ tư vấn hỗ trợ bạn tìm ra căn hộ như mình mong muốn. Tùy theo diện
-            tích của phòng ngủ rộng hay chật hẹp, có vuông vắn hay không mà chúng ta lựa chọn cách bài trí nội thất và trang trí sao cho phù hợp nhất. Chính vì vậy trước khi bắt tay vào thiết kế phòng ngủ bạn nên nghiên cứu thật kỹ kết cấu và diện tích
-            căn phòng để đưa ra ý tưởng Decor hợp lý nhất. Thiết kế phòng ngủ có diện tích nhỏ siêu đẹp: sử dụng các đồ nội thất đa năng để tiết kiệm diện tích vừa mang lại công năng sử dụng tuyệt vời. Chúng ta nên lựa chọn phong cách thiết kế nội thất
-            tối giản với 3 tông màu tối đa trong căn phòng.
-        </div>
-    </div>
-    <div class="thuenha">
-        <div class="tieude2">
-            <h3 style="font-weight: bold;">LÀM SAO</h3>
-            <h2>Thuê nhà với Golden Home ?</h2>
-        </div>
-        <div class="thuenhatext">
-            <div class="box3">
-                <div class="box-img">
-                    <img src="img/sale.png" alt="">
                 </div>
-                <div class="thuenhatext-text">
-                    <a href="#">Điền form đăng ký</a>
-                    <p>Để lại SĐT, email để Propzy liên hệ tư vấn</p>
+                <div class="canho slider2">
+                    <div class="box2">
+                        <img src="img/b4.jpg" alt="">
+                        <div class="box2text">
+                            <a href="#">Cho thuê căn hộ dịch vụ Quận Bình Thạnh - Hẻm Nguyễn Xí</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <img src="img/b5.png" alt="">
+                        <div class="box2text">
+                            <a href="#">Cho thuê căn hộ dịch vụ - CityLand Park Hill - Quận Gò Vấp</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <img src="img/b6.jpg" alt="">
+                        <div class="box2text">
+                            <a href="#">Cho thuê Văn Phòng Tầng 5 đường Ung Văn Khiêm - Phường 25 – Bình Thạnh</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <img src="img/b6.jpg" alt="">
+                        <div class="box2text">
+                            <a href="#">Cho thuê Văn Phòng Tầng 5 đường Ung Văn Khiêm - Phường 25 – Bình Thạnh</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+                    <div class="box2" style="margin-right: 30px;">
+                        <img src="img/b6.jpg" alt="">
+                        <div class="box2text">
+                            <a href="#">Cho thuê Văn Phòng Tầng 5 đường Ung Văn Khiêm - Phường 25 – Bình Thạnh</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-            <div class="box3">
-                <div class="box-img">
-                    <img src="img/address.png" alt="">
-                </div>
-                <div class="thuenhatext-text">
-                    <a href="#">Propzy tìm nhà giúp</a>
-                    <p>Golden tìm kiếm nhà thuê theo khu vực và nhu cầu của bạn</p>
-                </div>
-            </div>
-            <div class="box3">
-                <div class="box-img">
-                    <img src="img/clock.png" alt="">
-                </div>
-                <div class="thuenhatext-text">
-                    <a href="#">Xem nhà trong vòng 48h</a>
-                    <p>Dẫn bạn đi xem nhà trong vòng 48h</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="thuenha">
-        <div class="tieude3">
-            <h2>Khách hàng nói gì về Golden Home ?</h2>
-        </div>
-        <div class="thuenhatext slider">
-            <div class="box5">
-                <div class="box-img">
-                    <img src="img/avt.PNG" alt="">
-                </div>
-                <div class="thuenhatext-text">
-                    <a href="#">Selena Gomez</a>
-                    <p>“Nếu không thể bán ngay tôi cũng có thể cho thuê đầu tư dài hạn mà không bao giờ sợ lỗ”</p>
-                </div>
-            </div>
-            <div class="box5">
-                <div class="box-img">
-                    <img src="img/avt.PNG" alt=""> <br>
-                </div>
-                <div class="thuenhatext-text">
-                    <a href="#">Charlie Puth</a> <br>
-                    <p>"Rất ok. Lần sau chắc chắn sẽ ghé lại đây. view đẹp, giá rẻ, ngay trung tâm."
-                    </p>
-                </div>
-            </div>
-            <div class="box5">
-                <div class="box-img">
-                    <img src="img/avt.PNG" alt=""> <br>
-                </div>
-                <div class="thuenhatext-text">
-                    <a href="#">T-ARA</a> <br>
-                    <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
-                </div>
-            </div>
-            <div class="box5">
-                <div class="box-img">
-                    <img src="img/avt.PNG" alt=""> <br>
-                </div>
-                <div class="thuenhatext-text">
-                    <a href="#">T-ARA</a> <br>
-                    <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
-                </div>
-            </div>
-            <div class="box5">
-                <div class="box-img">
-                    <img src="img/avt.PNG" alt=""> <br>
-                </div>
-                <div class="thuenhatext-text">
-                    <a href="#">T-ARA</a> <br>
-                    <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                <div class="xemthem">
+                    <a href="#">Xem thêm </a>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="tuvan">
-        <div class="tuvanimg">
-            <img src="img/banner-f.jpg" width="100%" alt="">
-            <div class="tuvantext">
-                <h1>Bạn vẫn chưa tìm được nhà ưng ý?</h1>
-                <p>Còn rất nhiều nhà riêng, căn hộ, chung cư chưa được đăng lên, hãy để Propzy tư vấn chọn
-                    <br> giúp bạn!</p>
-                <div class="tuvan2">
-                    <a href="#">TƯ VẤN MIỄN PHÍ</a>
+        <div class="gioithieu">
+            <img src="img/gioithieu.jpg" alt="">
+            <div class="textgt">
+                <h1 style="color: white; font-weight: bold;">Về chúng tôi</h1>
+                Đội ngũ chuyên viên tư vấn của chúng tôi với kinh nghiệm dày dặn và nắm vững thị trường sẽ giúp bạn tìm kiếm căn hộ phù hợp với nhu cầu của bạn. Bạn chỉ cần đưa ra thông tin, chúng tôi sẽ tư vấn hỗ trợ bạn tìm ra căn hộ như mình mong muốn. Tùy theo diện
+                tích của phòng ngủ rộng hay chật hẹp, có vuông vắn hay không mà chúng ta lựa chọn cách bài trí nội thất và trang trí sao cho phù hợp nhất. Chính vì vậy trước khi bắt tay vào thiết kế phòng ngủ bạn nên nghiên cứu thật kỹ kết cấu và diện tích
+                căn phòng để đưa ra ý tưởng Decor hợp lý nhất. Thiết kế phòng ngủ có diện tích nhỏ siêu đẹp: sử dụng các đồ nội thất đa năng để tiết kiệm diện tích vừa mang lại công năng sử dụng tuyệt vời. Chúng ta nên lựa chọn phong cách thiết kế nội thất
+                tối giản với 3 tông màu tối đa trong căn phòng.
+            </div>
+        </div>
+        <div class="thuenha">
+            <div class="tieude2">
+                <h3 style="font-weight: bold;">LÀM SAO</h3>
+                <h2>Thuê nhà với Golden Home ?</h2>
+            </div>
+            <div class="thuenhatext">
+                <div class="box3">
+                    <div class="box-img">
+                        <img src="img/sale.png" alt="">
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">Điền form đăng ký</a>
+                        <p>Để lại SĐT, email để Propzy liên hệ tư vấn</p>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="box-img">
+                        <img src="img/address.png" alt="">
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">Propzy tìm nhà giúp</a>
+                        <p>Golden tìm kiếm nhà thuê theo khu vực và nhu cầu của bạn</p>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="box-img">
+                        <img src="img/clock.png" alt="">
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">Xem nhà trong vòng 48h</a>
+                        <p>Dẫn bạn đi xem nhà trong vòng 48h</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="thuenha">
+            <div class="tieude3">
+                <h2>Khách hàng nói gì về Golden Home ?</h2>
+            </div>
+            <div class="thuenhatext slider">
+                <div class="box5">
+                    <div class="box-img">
+                        <img src="img/avt.PNG" alt="">
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">Selena Gomez</a>
+                        <p>“Nếu không thể bán ngay tôi cũng có thể cho thuê đầu tư dài hạn mà không bao giờ sợ lỗ”</p>
+                    </div>
+                </div>
+                <div class="box5">
+                    <div class="box-img">
+                        <img src="img/avt.PNG" alt=""> <br>
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">Charlie Puth</a> <br>
+                        <p>"Rất ok. Lần sau chắc chắn sẽ ghé lại đây. view đẹp, giá rẻ, ngay trung tâm."
+                        </p>
+                    </div>
+                </div>
+                <div class="box5">
+                    <div class="box-img">
+                        <img src="img/avt.PNG" alt=""> <br>
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">T-ARA</a> <br>
+                        <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                    </div>
+                </div>
+                <div class="box5">
+                    <div class="box-img">
+                        <img src="img/avt.PNG" alt=""> <br>
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">T-ARA</a> <br>
+                        <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                    </div>
+                </div>
+                <div class="box5">
+                    <div class="box-img">
+                        <img src="img/avt.PNG" alt=""> <br>
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">T-ARA</a> <br>
+                        <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tuvan">
+            <div class="tuvanimg">
+                <img src="img/banner-f.jpg" width="100%" alt="">
+                <div class="tuvantext">
+                    <h1>Bạn vẫn chưa tìm được nhà ưng ý?</h1>
+                    <p>Còn rất nhiều nhà riêng, căn hộ, chung cư chưa được đăng lên, hãy để Propzy tư vấn chọn
+                        <br> giúp bạn!</p>
+                    <div class="tuvan2">
+                        <a href="#">TƯ VẤN MIỄN PHÍ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
     <footer class="footer">
         <div class="box4 b1">
             <img src="img/logo.png" alt="">
@@ -424,17 +472,17 @@
                         <img id="images" src="img/b3.jpg" width="100%" height="280px" alt="">
                     </div>
                     <div class="divnho">
-                        <div class="imgnho nho1" onclick="images(1)">
-                            <img src="img/b1.jpg" alt="">
+                        <div class="imgnho nho1">
+                            <img src="img/b1.jpg" alt="" onclick="showimages(1)">
                         </div>
-                        <div class="imgnho" onclick="images(2)">
-                            <img src="img/b2.jpg" alt="">
+                        <div class="imgnho">
+                            <img src="img/b2.jpg" alt="" onclick="showimages(2)">
                         </div>
-                        <div class="imgnho" onclick="images(3)">
-                            <img src="img/b4.jpg" alt="">
+                        <div class="imgnho">
+                            <img src="img/b4.jpg" alt="" onclick="showimages(3)">
                         </div>
-                        <div class="imgnho" onclick="images(4)">
-                            <img src="img/b5.png" alt="">
+                        <div class="imgnho">
+                            <img src="img/b5.png" alt="" onclick="showimages(4)">
                         </div>
                     </div>
                 </div>
