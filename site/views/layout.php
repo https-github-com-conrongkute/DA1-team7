@@ -62,21 +62,21 @@
                         <ul>
                             <li><a href="index.php">Trang chủ </a> </li>
                             <li><a href="#">Dịch vụ </a></li>
-                            <li><a href="?act=danhsach">Danh sách </a> </li>
-                            <li><a href="?act=about">Giới thiệu </a></li>
+                            <li><a href="?ctrl=home&act=danhsach">Danh sách </a> </li>
+                            <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                             <li><a href="#">Liên hệ </a></li>
-                            <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
+                            <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                             <?php if (isset($_SESSION['user']) == true) { ?>
                                 <li><a onclick="toogle()" onclick="toogle()" href="#"><?= $_SESSION['user'] ?></a>
                                     <ul class="sub-menu">
                                         <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
                                         <li><a href="">Đổi mật khẩu</a></li>
                                         <li><a href="">Căn hộ cửa tôi</a></li>
-                                        <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
+                                        <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
                                     </ul>
                                 </li>
                             <?php } else { ?>
-                                <li><a href="?act=dangnhap">Đăng nhập</a>
+                                <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a>
                                 </li>
                             <?php } ?>
                         </ul>

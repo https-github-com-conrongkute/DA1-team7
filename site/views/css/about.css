@@ -9,7 +9,10 @@ body {
     font-family: "Sf ui display", sans-serif;
     margin: 0 auto;
 }
+
+
 /* menu */
+
 .menu-logo {
     width: 100%;
     position: fixed;
@@ -65,7 +68,8 @@ body {
     line-height: 80px;
     padding: 0px 20px;
 }
-.sub-menu{
+
+.sub-menu {
     position: absolute;
     content: '';
     top: 60px;
@@ -77,22 +81,26 @@ body {
     border-radius: 20px;
     display: none;
 }
-.sub-menu>li{
+
+.sub-menu>li {
     line-height: 20px;
     margin: 10px 0px;
-    list-style: none; 
+    list-style: none;
 }
-.sub-menu>li>a{
+
+.sub-menu>li>a {
     color: white;
     text-decoration: none;
     padding: 5px 10px;
 }
-.nav-menu>ul>li>a{
+
+.nav-menu>ul>li>a {
     color: white;
     font-family: 'Roboto', sans-serif;
     /* font-weight: bold; */
     text-decoration: none;
 }
+
 .nav-menu3>ul {
     display: flex;
     flex-direction: row;
@@ -107,13 +115,15 @@ body {
     line-height: 80px;
     padding: 0px 20px;
 }
-.nav-menu3>ul>li>a{
+
+.nav-menu3>ul>li>a {
     color: white;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     /* font-weight: bold; */
     text-decoration: none;
 }
+
 .menu-logo-bg {
     width: 90%;
     /* margin-top: 20px; */
@@ -121,7 +131,10 @@ body {
     left: 5%;
     top: 0;
 }
+
+
 /* ENd */
+
 .menu {
     height: 700px;
 }
@@ -133,6 +146,7 @@ body {
 .banner img {
     opacity: 0.8;
 }
+
 
 /* .nav {
     width: calc(100% - 70px);
@@ -192,150 +206,176 @@ ul li a {
     line-height: 27px;
     text-shadow: 1px 1px rgb(73, 72, 72);
 }
+
+
 /*  Thỏa  hiệp */
-.thoahiep{
+
+.thoahiep {
     width: 80%;
     margin: 0 auto;
     display: flex;
 }
-.imgth img{
+
+.imgth img {
     width: 90%;
     margin: 0 auto;
     padding-right: 7%;
 }
-.divth1{
+
+.divth1 {
     width: 50%;
 }
-.divtext h1{
-    font-size: 29px;
-    margin-bottom: 20px ;
-    color: orange;
 
+.divtext h1 {
+    font-size: 29px;
+    margin-bottom: 20px;
+    color: orange;
 }
-.divtext p{
+
+.divtext p {
     line-height: 25px;
 }
-.divtext{
+
+.divtext {
     width: 100%;
     height: 200px;
 }
-.divicon{
+
+.divicon {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
-.divicon1{
+
+.divicon1 {
     width: 50%;
     height: 150px;
 }
-.divicon1 .icon{
+
+.divicon1 .icon {
     width: 15%;
     height: 150px;
     float: left;
     margin-top: 10px;
     text-align: center;
 }
-.divicon1 .divicontext{
+
+.divicon1 .divicontext {
     width: 80%;
     height: 150px;
     float: left;
     margin-left: 4%;
 }
-.divicon1 .divicontext h3{
+
+.divicon1 .divicontext h3 {
     margin-bottom: 15px;
     font-size: 18px;
-
 }
-.divicon1 .divicontext p{
+
+.divicon1 .divicontext p {
     line-height: 20px;
     font-size: 14px;
 }
 
+
 /* dịch vụ */
-.dichvu{
+
+.dichvu {
     width: 100%;
     margin-top: 60px;
 }
-.dichvu .dvtext{
+
+.dichvu .dvtext {
     text-align: center;
     height: 190px;
 }
-.dvicon{
+
+.dvicon {
     width: 90%;
     height: 190px;
     margin: 0 auto;
     display: flex;
 }
-.dviconimg img{
+
+.dviconimg img {
     margin-bottom: 15px;
 }
-.dvicon1{
+
+.dvicon1 {
     width: 33.3%;
     padding-left: 40px;
 }
-.dvicontext h3{
+
+.dvicontext h3 {
     margin-bottom: 15px;
     font-size: 22px;
 }
-.dvicontext p{
+
+.dvicontext p {
     line-height: 20px;
     font-size: 15px;
 }
-.dvtext h1{
+
+.dvtext h1 {
     font-size: 29px;
     color: orange;
     margin-bottom: 20px;
 }
-.dvtext p{
+
+.dvtext p {
     line-height: 23px;
     font-size: 15px;
 }
-.price{
+
+.price {
     width: 84%;
     margin: 0 auto;
     margin-top: 90px;
     display: flex;
 }
-.price1{
+
+.price1 {
     width: 50%;
     top: 25px;
     position: relative;
 }
-.priceimg1{
+
+.priceimg1 {
     width: 60%;
     margin-bottom: 40px;
     height: 280px;
     position: absolute;
     z-index: 99;
 }
-.priceimg2{
+
+.priceimg2 {
     width: 60%;
     height: 260px;
     top: 110px;
     left: 30%;
     position: absolute;
-
 }
+
 .price1 .priceimg1 .priceimga img {
     width: 100%;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
     height: 220px;
-
 }
+
 .price1 .priceimg2 .priceimga img {
     width: 100%;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
     height: 220px;
-
 }
-.priceimga{
+
+.priceimga {
     width: 100%;
     height: 220px;
-    
 }
-.priceimgtext{
+
+.priceimgtext {
     background-color: white;
     text-align: center;
     line-height: 70px;
@@ -346,72 +386,87 @@ ul li a {
     box-shadow: 1px 2px 0px 1px rgb(211, 207, 207);
 }
 
-.priceimgtext p{
+.priceimgtext p {
     font-size: 23px;
     color: #54a0ff;
     font-weight: bold;
 }
-.price2{
+
+.price2 {
     width: 50%;
 }
-.daili{
+
+.daili {
     width: 90%;
     margin: 0 auto;
     text-align: center;
     margin-top: 60px;
 }
-.dltext{
+
+.dltext {
     height: 160px;
     width: 100%;
 }
-.dltext h1{
+
+.dltext h1 {
     font-size: 29px;
     margin-bottom: 20px;
     color: orange;
 }
-.dltext p{
+
+.dltext p {
     font-size: 15px;
     line-height: 22px;
 }
-.dlimg{
+
+.dlimg {
     width: 100%;
     display: flex;
 }
-.dlimg1{
+
+.dlimg1 {
     width: 25%;
     margin: 1%;
     border-radius: 15px;
     border: 1px solid #ccc;
     height: 440px;
 }
-.dlimg1 img{
+
+.dlimg1 img {
     width: 80%;
     height: 325px;
     margin-top: 25px;
     border-radius: 10px;
 }
-.dlimg1 h3{
+
+.dlimg1 h3 {
     margin-top: 18px;
     font-size: 17px;
 }
-.dlimg1 p{
+
+.dlimg1 p {
     margin-top: 8px;
     font-size: 15px;
 }
-.divlogo{
+
+.divlogo {
     width: 85%;
     margin: 0 auto;
     margin: 100px 13%;
     display: flex;
 }
-.logo{
-    width: 20%;
 
+.logo {
+    width: 20%;
 }
-.logo img{
+
+.logo img {
     margin: 0 auto;
 }
+
+
 /* Tư vấn */
+
 .tuvan {
     width: 100%;
     margin-top: 90px;
@@ -487,6 +542,7 @@ ul li a {
     color: black;
     text-decoration: none;
 }
+
 .footer {
     width: 79%;
     margin: 0 auto;

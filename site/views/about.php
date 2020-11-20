@@ -19,21 +19,21 @@
                 <ul>
                     <li><a href="index.php">Trang chủ </a> </li>
                     <li><a href="#">Dịch vụ </a></li>
-                    <li><a href="?act=danhsach">Danh sách </a> </li>
+                    <li><a href="?ctrl=home&act=danhsach">Danh sách </a> </li>
                     <li><a href="?ctrl=home&act=gioithieu">Giới thiệu </a></li>
                     <li><a href="#">Liên hệ </a></li>
                     <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                     <?php if (isset($_SESSION['user']) == true) { ?>
                         <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
                             <ul class="sub-menu">
-                                <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
-                                <li><a href="?act=doimk">Đổi mật khẩu</a></li>
+                                <li><a href="?ctrl=home&act=thongtintk">Thông tin tài khoản</a></li>
+                                <li><a href="?ctrl=home&act=doimk">Đổi mật khẩu</a></li>
                                 <li><a href="">Căn hộ cửa tôi</a></li>
-                                <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
+                                <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
                             </ul>
                         </li>
                     <?php } else { ?>
-                        <li><a href="?act=danhnhap">Đăng nhập</a></li>
+                        <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a></li>
                     <?php } ?>
                 </ul>
             </div>
@@ -250,25 +250,25 @@
                 khách hàng của mình</p>
         </div>
         <div class="dlimg">
-            <div class="dlimg1">
-                <img src="../img/dl22.jpg" alt="">
+            <div class="dlimg1" style="height: 400px; margin-top: 40px;">
+                <img src="../img/avt.PNG" alt="" style="height: 250px;">
                 <h3>Park Jiyeon</h3>
                 <p>Đại lý bất động sản</p>
             </div>
-            <div class="dlimg1">
-                <img src="../img/dl11.jpg" alt="">
+            <div class="dlimg1" style="height: 400px; margin-top: 40px;">
+                <img src="../img/avt.PNG" alt="" style="height: 250px;">
                 <h3>Park Soyeon</h3>
                 <p>Đại lý bất động sản</p>
 
             </div>
-            <div class="dlimg1">
-                <img src="../img/dl3.jpg" alt="">
+            <div class="dlimg1" style="height: 400px; margin-top: 40px;">
+                <img src="../img/avt.PNG" alt="" style="height: 250px;">
                 <h3>Park Hyomin</h3>
                 <p>Đại lý bất động sản</p>
 
             </div>
-            <div class="dlimg1">
-                <img src="../img/dl4.jpg" alt="">
+            <div class="dlimg1" style="height: 400px; margin-top: 40px;">
+                <img src="../img/avt.PNG" alt="" style="height: 250px;">
                 <h3>Ham Eunjung</h3>
                 <p>Đại lý bất động sản</p>
 

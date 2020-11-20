@@ -256,6 +256,7 @@ body {
     width: 90%;
     height: 700px;
     box-shadow: 0 2px 13px rgba(0, 0, 0, .1);
+    background-color: rgb(253, 253, 253);
 }
 
 .thongtinca {

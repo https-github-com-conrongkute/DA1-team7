@@ -281,7 +281,7 @@
                                             </div>
                                             <div class="group"> <a href="#"> Dự án : <span class="cl1 w5" title=""></span></a> </div>
                                             <div class="imeta-3"> <span> <a href="#"> Thuê: <strong class="cl1">5</strong> </a> </span> </div>
-                                            <div class="wprice">
+                                            <div class="wprice"  >
                                                 <div class="imeta-2"> <span><b>8,5 triệu</b></span> <span><b>45 m²</b></span> </div>
                                                 <div link="thue/can-ho/hcm/quan-3/id277377" listingid="277377" object='{"id":277377 }' class="btnlike  save-listing save-listing-277377"> <span><i class="fa fa-heart-o"></i></span> </div>
                                             </div>
@@ -299,7 +299,7 @@
                                             <div class="label"> <span class="label-1">Thuê</span>
                                                 <div class="price2"><b>219,5 ngàn/m²</b></div>
                                             </div>
-                                            <div class="wprice">
+                                            <div class="wprice" style="margin-top: -50px;">
                                                 <div class="imeta-2"> <span><b>9 triệu</b></span> <span><b>41 m²</b></span> </div>
                                                 <div link="thue/can-ho/hcm/quan-3/id277418" listingid="277418" object='{"id":277418 }' class="btnlike  save-listing save-listing-277418"> <span><i class="fa fa-heart-o"></i></span> </div>
                                             </div>
