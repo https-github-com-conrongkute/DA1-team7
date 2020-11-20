@@ -274,17 +274,18 @@
                             <div class="col-12">
                                 <h4>Hình căn hộ</h4>
                                 <div class="row">
-                                    <div class="col-6">
-                                        <input type="file" class="form-control">
+                                    <div class="col-6 anh">
+                                        <input type="file" class="form-control" style="overflow: hidden;">
+                                        <!-- <label for="" class="w-100 tailen">Tải ảnh lên <i class="fa fa-upload"></i></label> -->
                                     </div>
                                     <div class="col-6">
-                                        <input type="file" class="form-control">
+                                        <input type="file" class="form-control" style="overflow: hidden;">
                                     </div>
                                     <div class="col-6 mt-5">
-                                        <input type="file" class="form-control">
+                                        <input type="file" class="form-control" style="overflow: hidden;">
                                     </div>
                                     <div class="col-6 mt-5">
-                                        <input type="file" class="form-control">
+                                        <input type="file" class="form-control" style="overflow: hidden;">
                                     </div>
                                 </div>
                             </div>

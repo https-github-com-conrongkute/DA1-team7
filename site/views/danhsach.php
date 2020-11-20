@@ -85,11 +85,11 @@
                 </div>
             </div>
         </div> -->
-        <header id="header" class="fixe" role="banner">
+        <header id="header" class="fixe"  role="banner">
             <div class="container">
                 <a href="" id="logo"><img src="./danhsach/assets/images/ver-4/pc/logo.png" alt="Propzy"></a>
                 <ul class="menu-top-header left" data-style="1">
-                    <li> <a href="#"><span>Trang Chủ</span></a>
+                    <li> <a href="index.php"><span>Trang Chủ</span></a>
 
                     </li>
                     <li> <a href="#"><span>Thuê <i class="fas fa-caret-down"></i></span></a>
@@ -273,7 +273,7 @@
                                     <div class="item is-feature">
                                         <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="../img/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
                                         <div class="divtext ">
-                                            <h2 class="height-search"><a href="?act=chitiet" class="title">Căn hộ Singapore cho thuê trung tâm Quận 3</a></h2>
+                                            <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title">Căn hộ Singapore cho thuê trung tâm Quận 3</a></h2>
                                             <div class="imeta-1"> <b>Đ. Trần Quang Diệu, P.13, Q.3</b> </div>
                                             <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
                                             <div class="label"> <span class="label-1">Thuê</span>

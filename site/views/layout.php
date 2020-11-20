@@ -144,7 +144,7 @@
     <?php if (isset($view) == true) {
         require_once $view;
     } else { ?>
-        <div class="danhsach " style="margin-top: 160px;">
+        <div class="danhsach " >
             <div class="tieude">
                 <h3 style="font-weight: bold; color: orange;color:black;">DANH SÁCH</h3>
                 <h2 style="font-size: 30pt;">Nhà cho thuê nhiều nhất</h2>
