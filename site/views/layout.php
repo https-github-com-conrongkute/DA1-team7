@@ -61,40 +61,6 @@
             <div class="banner">
                 <img src="img/banner9.jpg" width="100%" height="600px" alt="">
             </div>
-<<<<<<< HEAD
-
-=======
-            <nav class="menu-logo">
-                <div class="menu-logo-bg">
-                    <div class="nav-logo">
-                        <img src="img/logo.png" alt="">
-                    </div>
-                    <div class="nav-menu">
-                        <ul>
-                            <li><a href="index.php">Trang chủ </a> </li>
-                            <li><a href="#">Dịch vụ </a></li>
-                            <li><a href="?ctrl=home&act=danhsach">Danh sách </a> </li>
-                            <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
-                            <li><a href="#">Liên hệ </a></li>
-                            <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
-                            <?php if (isset($_SESSION['user']) == true) { ?>
-                                <li><a onclick="toogle()" onclick="toogle()" href="#"><?= $_SESSION['user'] ?></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
-                                        <li><a href="">Đổi mật khẩu</a></li>
-                                        <li><a href="">Căn hộ cửa tôi</a></li>
-                                        <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
-                                    </ul>
-                                </li>
-                            <?php } else { ?>
-                                <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a>
-                                </li>
-                            <?php } ?>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
->>>>>>> 53541abcb5ad730cd42e48ab39c5e661d54065b8
             <!-- <div class="nav">
             <div class="navimg">
                 <img src="img/logo.png" width="140px" alt="">
@@ -154,16 +120,8 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
 
         <div class="danhsach " style="margin-top: 160px;">
-=======
-    <?php } ?>
-    <?php if (isset($view) == true) {
-        require_once $view;
-    } else { ?>
-        <div class="danhsach " >
->>>>>>> 53541abcb5ad730cd42e48ab39c5e661d54065b8
             <div class="tieude">
                 <h3 style="font-weight: bold; color: orange;color:black;">DANH SÁCH</h3>
                 <h2 style="font-size: 30pt;">Nhà cho thuê nhiều nhất</h2>
