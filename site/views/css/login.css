@@ -22,17 +22,19 @@ body {
 /* menu */
 .menu-logo{
     width: 100%;
-    position: fixed;
-    left: 0;
+    /* position: fixed; */
+    /* left: 0; */
     height: 80px;
     background-color: white;
+    margin-bottom: 60px;
     color: black;
-    box-shadow: 5px 5px 5px #ccc;
+    /* box-shadow: 5px 5px 5px #ccc; */
+    float: left;
     top: 0px;
     z-index: 312384183481083;
 }
 .nav-logo{
-    width: 30%;
+    width: 10%;
     float: left;
     height: 80px;
 }
@@ -62,7 +64,7 @@ body {
 .nav-menu>ul{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .nav-menu>ul>li{
     list-style: none;
@@ -79,11 +81,9 @@ body {
     text-decoration: none;
 }
 .menu-logo-bg{
-    width: 90%;
+    width: 80%;
     /* margin-top: 20px; */
-    position: relative;
-    left: 0%;
-    top: 0;
+    margin: 0 auto;
 }
 /* end */
 

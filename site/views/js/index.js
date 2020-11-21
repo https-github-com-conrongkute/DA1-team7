@@ -6,10 +6,11 @@ $(document).ready(function() {
             $('nav').addClass('hienra');
             $('.nav-menu ul li a').css('color', 'black');
             $('.nav-menu3 ul li a').css('color', 'black');
+            // $('.menu').css('top','80px');
         } else {
             $('nav').removeClass('hienra');
-            $('.nav-menu ul li a').css('color', 'white');
-            $('.nav-menu3 ul li a').css('color', 'white');
+            // $('.nav-menu ul li a').css('color', 'white');
+            // $('.nav-menu3 ul li a').css('color', 'white');
             // $('.sum-menu ul li a').css('color', 'black');
         }
     });
@@ -149,7 +150,7 @@ function exit() {
     hien.style.display = 'none';
 }
 
-function images(x) {
+function showimages(x) {
     var img = document.getElementById('images');
     switch (x) {
         case 1:

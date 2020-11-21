@@ -18,71 +18,50 @@
 </head>
 
 <body>
-    <?php if (isset($view) == true) { ?>
-        <nav class="hienra">
-            <div class="menu-logo-bg">
-                <div class="nav-logo">
-                    <img src="img/logo.png" alt="">
-                </div>
-                <div class="nav-menu2">
-                    <ul>
-                        <li><a href="index.php">Trang chủ </a> </li>
-                        <li><a href="#">Dịch vụ </a></li>
-                        <li><a href="?ctrl=home&act=danhsach">Danh sách </a> </li>
-                        <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
-                        <li><a href="#">Liên hệ </a></li>
-                        <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
-                        <?php if (isset($_SESSION['user']) == true) { ?>
-                            <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
-                                <ul class="sub-menu">
-                                    <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
-                                    <li><a href="">Đổi mật khẩu</a></li>
-                                    <li><a href="">Căn hộ cửa tôi</a></li>
-                                    <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
-                                </ul>
-                            </li>
-                        <?php } else { ?>
-                            <li><a href="?act=dangnhap">Đăng nhập</a></li>
-                        <?php } ?>
-                    </ul>
-                </div>
+    <div class=" menu1">
+        <span class="col-4 right">
+            <a href="#" class="col-3"><i class="fa fa-phone">(+84) 978 942 472</i></a>
+            <a href="#" class="col-6"><i class="fa fa-envelope">vietnam@goldenhome.com</i></a>
+        </span>
+    </div>
+    <nav class="menu-logo">
+        <div class="menu-logo-bg">
+            <div class="nav-logo">
+                <img src="img/logo.png" alt="">
             </div>
-        </nav>
-    <?php } else { ?>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.php">Trang chủ </a> </li>
+                    <li><a href="#">Dịch vụ </a></li>
+                    <li><a href="?act=danhsach">Danh sách </a> </li>
+                    <li><a href="?act=about">Giới thiệu </a></li>
+                    <li><a href="#">Liên hệ </a></li>
+                    <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
+                    <?php if (isset($_SESSION['user']) == true) { ?>
+                        <li><a onclick="toogle()" onclick="toogle()" href="#"><?= $_SESSION['user'] ?></a>
+                            <ul class="sub-menu">
+                                <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
+                                <li><a href="">Đổi mật khẩu</a></li>
+                                <li><a href="">Căn hộ cửa tôi</a></li>
+                                <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                    <?php } else { ?>
+                        <li><a href="?act=dangnhap">Đăng nhập</a>
+                        </li>
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <?php if (isset($view) == true) {
+        require_once $view;
+    } else { ?>
         <div class="menu">
             <div class="banner">
                 <img src="img/banner9.jpg" width="100%" height="600px" alt="">
             </div>
-            <nav class="menu-logo">
-                <div class="menu-logo-bg">
-                    <div class="nav-logo">
-                        <img src="img/logo.png" alt="">
-                    </div>
-                    <div class="nav-menu">
-                        <ul>
-                            <li><a href="index.php">Trang chủ </a> </li>
-                            <li><a href="#">Dịch vụ </a></li>
-                            <li><a href="?act=danhsach">Danh sách </a> </li>
-                            <li><a href="?act=about">Giới thiệu </a></li>
-                            <li><a href="#">Liên hệ </a></li>
-                            <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
-                            <?php if (isset($_SESSION['user']) == true) { ?>
-                                <li><a onclick="toogle()" onclick="toogle()" href="#"><?= $_SESSION['user'] ?></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
-                                        <li><a href="">Đổi mật khẩu</a></li>
-                                        <li><a href="">Căn hộ cửa tôi</a></li>
-                                        <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
-                                    </ul>
-                                </li>
-                            <?php } else { ?>
-                                <li><a href="?act=dangnhap">Đăng nhập</a>
-                                </li>
-                            <?php } ?>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+
             <!-- <div class="nav">
             <div class="navimg">
                 <img src="img/logo.png" width="140px" alt="">
@@ -104,46 +83,45 @@
                 <h1 style="text-shadow: 2px 2px 2px black;">THUÊ CĂN HỘ SIÊU TỐC</h1>
                 <p>Hơn 16.000 nhà riêng, chung cư, căn hộ đang cho thuê. Cam kết luôn có 10 <br> căn hộ trong 48 giờ.</p>
             </div>
-            <div class="dangky">
-                <h3>Đăng ký tìm nhà siêu tốc !</h3>
-                <input type="text" placeholder="Họ và tên">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Số điện thoại">
-                <input class="submit" type="submit" value="Tham gia ngay">
-            </div>
-            <div class="dangky2">
-                <div class="text1">
-                    <h2>Tại sao nên chọn chúng tôi ?</h2>
+            <div class="bao-dangky">
+                <div class="dangky">
+                    <h3>Đăng ký tìm nhà siêu tốc !</h3>
+                    <input type="text" placeholder="Họ và tên">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Số điện thoại">
+                    <input class="submit" type="submit" value="Tham gia ngay">
                 </div>
-                <div class="text2">
-                    <div class="box1">
-                        <div class="icon1">
-                            <img src="img/fast.png" alt="">
-                        </div>
-                        <a href="#">Tận tâm</a>
-                        <p>Golden luôn đồng <br> hành, hỗ trợ mọi vấn <br> đề mọi lúc trong thời <br> gian ngắn nhất.</p>
+                <div class="dangky2">
+                    <div class="text1">
+                        <h2>Tại sao nên chọn chúng tôi ?</h2>
                     </div>
-                    <div class="box1">
-                        <div class="icon1">
-                            <img src="img//guard.png" alt="">
+                    <div class="text2">
+                        <div class="box1">
+                            <div class="icon1">
+                                <img src="img/fast.png" alt="">
+                            </div>
+                            <a href="#">Tận tâm</a>
+                            <p>Golden luôn đồng <br> hành, hỗ trợ mọi vấn <br> đề mọi lúc trong thời <br> gian ngắn nhất.</p>
                         </div>
-                        <a href="#">Đáng tin cậy</a>
-                        <p>Tất cả nhà thuê <br> chính chủ, không trung <br> gian, cam kết an <br> tâm khi thuê.</p>
-                    </div>
-                    <div class="box1">
-                        <div class="icon1">
-                            <img src="img/like.png" alt="">
+                        <div class="box1">
+                            <div class="icon1">
+                                <img src="img//guard.png" alt="">
+                            </div>
+                            <a href="#">Đáng tin cậy</a>
+                            <p>Tất cả nhà thuê <br> chính chủ, không trung <br> gian, cam kết an <br> tâm khi thuê.</p>
                         </div>
-                        <a href="#">Dịch vụ miễn phí</a>
-                        <p>Dịch vụ tìm nhà <br> và dẫn đi xem hoàn <br> toàn miễn phí.</p>
+                        <div class="box1">
+                            <div class="icon1">
+                                <img src="img/like.png" alt="">
+                            </div>
+                            <a href="#">Dịch vụ miễn phí</a>
+                            <p>Dịch vụ tìm nhà <br> và dẫn đi xem hoàn <br> toàn miễn phí.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    <?php } ?>
-    <?php if (isset($view) == true) {
-        require_once $view;
-    } else { ?>
+
         <div class="danhsach " style="margin-top: 160px;">
             <div class="tieude">
                 <h3 style="font-weight: bold; color: orange;color:black;">DANH SÁCH</h3>
@@ -318,94 +296,99 @@
                 tối giản với 3 tông màu tối đa trong căn phòng.
             </div>
         </div>
-        <div class="thuenha">
-            <div class="tieude2">
-                <h3 style="font-weight: bold;">LÀM SAO</h3>
-                <h2>Thuê nhà với Golden Home ?</h2>
-            </div>
-            <div class="thuenhatext">
-                <div class="box3">
-                    <div class="box-img">
-                        <img src="img/sale.png" alt="">
-                    </div>
-                    <div class="thuenhatext-text">
-                        <a href="#">Điền form đăng ký</a>
-                        <p>Để lại SĐT, email để Propzy liên hệ tư vấn</p>
-                    </div>
+        <div class="row2 mt">
+            <div class="thuenha">
+                <div class="tieude2">
+                    <h3 style="font-weight: bold;">LÀM SAO</h3>
+                    <h2>Thuê nhà với Golden Home ?</h2>
                 </div>
-                <div class="box3">
-                    <div class="box-img">
-                        <img src="img/address.png" alt="">
+                <div class="thuenhatext">
+                    <div class="box3">
+                        <div class="box-img">
+                            <img src="img/sale.png" alt="">
+                        </div>
+                        <div class="thuenhatext-text">
+                            <a href="#">Điền form đăng ký</a>
+                            <p>Để lại SĐT, email để Propzy liên hệ tư vấn</p>
+                        </div>
                     </div>
-                    <div class="thuenhatext-text">
-                        <a href="#">Propzy tìm nhà giúp</a>
-                        <p>Golden tìm kiếm nhà thuê theo khu vực và nhu cầu của bạn</p>
+                    <div class="box3">
+                        <div class="box-img">
+                            <img src="img/address.png" alt="">
+                        </div>
+                        <div class="thuenhatext-text">
+                            <a href="#">Propzy tìm nhà giúp</a>
+                            <p>Golden tìm kiếm nhà thuê theo khu vực và nhu cầu của bạn</p>
+                        </div>
                     </div>
-                </div>
-                <div class="box3">
-                    <div class="box-img">
-                        <img src="img/clock.png" alt="">
-                    </div>
-                    <div class="thuenhatext-text">
-                        <a href="#">Xem nhà trong vòng 48h</a>
-                        <p>Dẫn bạn đi xem nhà trong vòng 48h</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="thuenha">
-            <div class="tieude3">
-                <h2>Khách hàng nói gì về Golden Home ?</h2>
-            </div>
-            <div class="thuenhatext slider">
-                <div class="box5">
-                    <div class="box-img">
-                        <img src="img/avt.PNG" alt="">
-                    </div>
-                    <div class="thuenhatext-text">
-                        <a href="#">Selena Gomez</a>
-                        <p>“Nếu không thể bán ngay tôi cũng có thể cho thuê đầu tư dài hạn mà không bao giờ sợ lỗ”</p>
-                    </div>
-                </div>
-                <div class="box5">
-                    <div class="box-img">
-                        <img src="img/avt.PNG" alt=""> <br>
-                    </div>
-                    <div class="thuenhatext-text">
-                        <a href="#">Charlie Puth</a> <br>
-                        <p>"Rất ok. Lần sau chắc chắn sẽ ghé lại đây. view đẹp, giá rẻ, ngay trung tâm."
-                        </p>
-                    </div>
-                </div>
-                <div class="box5">
-                    <div class="box-img">
-                        <img src="img/avt.PNG" alt=""> <br>
-                    </div>
-                    <div class="thuenhatext-text">
-                        <a href="#">T-ARA</a> <br>
-                        <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
-                    </div>
-                </div>
-                <div class="box5">
-                    <div class="box-img">
-                        <img src="img/avt.PNG" alt=""> <br>
-                    </div>
-                    <div class="thuenhatext-text">
-                        <a href="#">T-ARA</a> <br>
-                        <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
-                    </div>
-                </div>
-                <div class="box5">
-                    <div class="box-img">
-                        <img src="img/avt.PNG" alt=""> <br>
-                    </div>
-                    <div class="thuenhatext-text">
-                        <a href="#">T-ARA</a> <br>
-                        <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                    <div class="box3">
+                        <div class="box-img">
+                            <img src="img/clock.png" alt="">
+                        </div>
+                        <div class="thuenhatext-text">
+                            <a href="#">Xem nhà trong vòng 48h</a>
+                            <p>Dẫn bạn đi xem nhà trong vòng 48h</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row2 mt">
+            <div class="thuenha">
+                <div class="tieude3">
+                    <h2>Khách hàng nói gì về Golden Home ?</h2>
+                </div>
+                <div class="thuenhatext slider">
+                    <div class="box5">
+                        <div class="box-img">
+                            <img src="img/avt.PNG" alt="">
+                        </div>
+                        <div class="thuenhatext-text">
+                            <a href="#">Selena Gomez</a>
+                            <p>“Nếu không thể bán ngay tôi cũng có thể cho thuê đầu tư dài hạn mà không bao giờ sợ lỗ”</p>
+                        </div>
+                    </div>
+                    <div class="box5">
+                        <div class="box-img">
+                            <img src="img/avt.PNG" alt=""> <br>
+                        </div>
+                        <div class="thuenhatext-text">
+                            <a href="#">Charlie Puth</a> <br>
+                            <p>"Rất ok. Lần sau chắc chắn sẽ ghé lại đây. view đẹp, giá rẻ, ngay trung tâm."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box5">
+                        <div class="box-img">
+                            <img src="img/avt.PNG" alt=""> <br>
+                        </div>
+                        <div class="thuenhatext-text">
+                            <a href="#">T-ARA</a> <br>
+                            <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                        </div>
+                    </div>
+                    <div class="box5">
+                        <div class="box-img">
+                            <img src="img/avt.PNG" alt=""> <br>
+                        </div>
+                        <div class="thuenhatext-text">
+                            <a href="#">T-ARA</a> <br>
+                            <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                        </div>
+                    </div>
+                    <div class="box5">
+                        <div class="box-img">
+                            <img src="img/avt.PNG" alt=""> <br>
+                        </div>
+                        <div class="thuenhatext-text">
+                            <a href="#">T-ARA</a> <br>
+                            <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <div class="row2">
         <div class="tuvan">
             <div class="tuvanimg">
                 <img src="img/banner-f.jpg" width="100%" alt="">
@@ -418,6 +401,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     <?php } ?>
     <footer class="footer">
