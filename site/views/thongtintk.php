@@ -6,7 +6,7 @@
                     <div style="width: 100px;height: 100px;border-radius: 50%;background-color: #ccc;">
                    <span class="fas fa-user" style="font-size: 30pt;line-height: 100px;color:white;"></span>
                    </div>
-                   <h4>Đinh Long</h4>
+                   <h4><?=$_SESSION["user"]?></h4>
                    <em>Thành viên từ 1/1/2020</em>   
                 </center>
                 <hr>
@@ -30,12 +30,13 @@
                        <input type="date" name="ns" id="" >
                    </div>
                    <div class="tt-right-row">
-                     <label>Giới tính</label>
-                      <select name="gt" id="">
-                          <option value="">Giới tính</option>
-                          <option value="" <?php if($_SESSION['gioitinh']==1) echo 'selected'?>>Nam</option>
-                          <option value="" <?php if($_SESSION['gioitinh']==0) echo 'selected'?>>Nữ</option>
-                      </select>
+                     <label>Mật khẩu</label>
+                     <p><?php
+                     for($i=0; $i<strlen($_SESSION['mat_khau']); $i++){
+                         echo "*";
+                     }
+                     ?></p>
+                      
                    </div>
                    <div class="tt-right-row">
                        <label>Email</label>

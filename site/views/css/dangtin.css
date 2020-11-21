@@ -72,8 +72,11 @@ body {
     top: 0;
     z-index: 99;
 }
+
+
 /* dropdown */
-.sub-menu{
+
+.sub-menu {
     position: absolute;
     z-index: 99999;
     content: '';
@@ -86,18 +89,23 @@ body {
     border-radius: 20px;
     display: none;
 }
-.sub-menu>li{
+
+.sub-menu>li {
     line-height: 20px;
     margin: 10px 0px;
-    list-style: none; 
+    list-style: none;
 }
-.sub-menu>li>a{
+
+.sub-menu>li>a {
     color: white;
     cursor: pointer;
     text-decoration: none;
     padding: 5px 10px;
 }
+
+
 /* End */
+
 .nav-menu>ul {
     display: flex;
     flex-direction: row;
@@ -246,6 +254,7 @@ body {
     width: 90%;
     height: 700px;
     box-shadow: 0 2px 13px rgba(0, 0, 0, .1);
+    background-color: rgb(253, 253, 253);
 }
 
 .thongtinca {
@@ -379,3 +388,6 @@ body {
 .divcuoi span {
     line-height: 40px;
 }
+
+
+/* tai ảnh */

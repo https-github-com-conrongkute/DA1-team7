@@ -28,6 +28,7 @@ switch ($act) {
       $_SESSION['email'] = $checktk['email'];
       $_SESSION['id'] = $checktk['ma_tk'];
       $_SESSION['hinh'] = $checktk['hinh'];
+      $_SESSION['mat_khau'] = $checktk['mat_khau'];
       $_SESSION['vai_tro'] = $checktk['vai_tro'];
       $_SESSION['sdt'] = $checktk['sdt'];
       $_SESSION['gioitinh'] = $checktk['gioitinh'];

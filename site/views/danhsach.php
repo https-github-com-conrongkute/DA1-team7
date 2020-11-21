@@ -85,11 +85,11 @@
                 </div>
             </div>
         </div> -->
-        <header id="header" class="fixe" role="banner">
+        <header id="header" class="fixe"  role="banner">
             <div class="container">
                 <a href="" id="logo"><img src="./danhsach/assets/images/ver-4/pc/logo.png" alt="Propzy"></a>
                 <ul class="menu-top-header left" data-style="1">
-                    <li> <a href="#"><span>Trang Chủ</span></a>
+                    <li> <a href="index.php"><span>Trang Chủ</span></a>
 
                     </li>
                     <li> <a href="#"><span>Thuê <i class="fas fa-caret-down"></i></span></a>
@@ -273,7 +273,7 @@
                                     <div class="item is-feature">
                                         <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="../img/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
                                         <div class="divtext ">
-                                            <h2 class="height-search"><a href="?act=chitiet" class="title">Căn hộ Singapore cho thuê trung tâm Quận 3</a></h2>
+                                            <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title">Căn hộ Singapore cho thuê trung tâm Quận 3</a></h2>
                                             <div class="imeta-1"> <b>Đ. Trần Quang Diệu, P.13, Q.3</b> </div>
                                             <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
                                             <div class="label"> <span class="label-1">Thuê</span>
@@ -281,7 +281,7 @@
                                             </div>
                                             <div class="group"> <a href="#"> Dự án : <span class="cl1 w5" title=""></span></a> </div>
                                             <div class="imeta-3"> <span> <a href="#"> Thuê: <strong class="cl1">5</strong> </a> </span> </div>
-                                            <div class="wprice">
+                                            <div class="wprice"  >
                                                 <div class="imeta-2"> <span><b>8,5 triệu</b></span> <span><b>45 m²</b></span> </div>
                                                 <div link="thue/can-ho/hcm/quan-3/id277377" listingid="277377" object='{"id":277377 }' class="btnlike  save-listing save-listing-277377"> <span><i class="fa fa-heart-o"></i></span> </div>
                                             </div>
@@ -299,7 +299,7 @@
                                             <div class="label"> <span class="label-1">Thuê</span>
                                                 <div class="price2"><b>219,5 ngàn/m²</b></div>
                                             </div>
-                                            <div class="wprice">
+                                            <div class="wprice" style="margin-top: -50px;">
                                                 <div class="imeta-2"> <span><b>9 triệu</b></span> <span><b>41 m²</b></span> </div>
                                                 <div link="thue/can-ho/hcm/quan-3/id277418" listingid="277418" object='{"id":277418 }' class="btnlike  save-listing save-listing-277418"> <span><i class="fa fa-heart-o"></i></span> </div>
                                             </div>

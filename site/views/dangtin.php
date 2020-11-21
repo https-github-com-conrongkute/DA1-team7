@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="./views/css/dangtin.css">
+    <link rel="stylesheet" href="css/dangtin.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -166,13 +166,13 @@
                 <!-- The slideshow -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./views/img/dangtin2.jpg" alt="Los Angeles" width="100%" height="300px">
+                        <img src="img/dangtin2.jpg" alt="Los Angeles" width="100%" height="300px">
                     </div>
                     <div class="carousel-item">
-                        <img src="./views/img/banner7.jpg" alt="Chicago" width="100%" height="300px">
+                        <img src="img/banner7.jpg" alt="Chicago" width="100%" height="300px">
                     </div>
                     <div class="carousel-item">
-                        <img src="./views/img/banner8.jpg" alt="New York" width="100%" height="300px">
+                        <img src="img/banner8.jpg" alt="New York" width="100%" height="300px">
                     </div>
                 </div>
 
@@ -274,17 +274,18 @@
                             <div class="col-12">
                                 <h4>Hình căn hộ</h4>
                                 <div class="row">
-                                    <div class="col-6">
-                                        <input type="file" class="form-control">
+                                    <div class="col-6 anh">
+                                        <input type="file" class="form-control" style="overflow: hidden;">
+                                        <!-- <label for="" class="w-100 tailen">Tải ảnh lên <i class="fa fa-upload"></i></label> -->
                                     </div>
                                     <div class="col-6">
-                                        <input type="file" class="form-control">
+                                        <input type="file" class="form-control" style="overflow: hidden;">
                                     </div>
                                     <div class="col-6 mt-5">
-                                        <input type="file" class="form-control">
+                                        <input type="file" class="form-control" style="overflow: hidden;">
                                     </div>
                                     <div class="col-6 mt-5">
-                                        <input type="file" class="form-control">
+                                        <input type="file" class="form-control" style="overflow: hidden;">
                                     </div>
                                 </div>
                             </div>
@@ -297,7 +298,7 @@
         </div>
         <div class="dichvu">
 
-            <img src="./views/img/dichvu.jpg" alt="">
+            <img src="img/dichvu.jpg" alt="">
             <div class="row dichvunew">
                 <div class="sdichvu">
                     <h4>DỊCH VỤ NỔI BẬT CỦA GOLDENHOME</h4>
@@ -375,7 +376,7 @@
         <span> 2020 © Bản quyền GoldenHome. Đã đăng ký Bản quyền.</span>
     </div>
 
-    <script src="./views/js/index.js"></script>
+    <script src="js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>

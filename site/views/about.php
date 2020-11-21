@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="./views/css/about.css">
+    <link rel="stylesheet" href="css/about.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -25,21 +25,21 @@
                 <ul>
                     <li><a href="index.php">Trang chủ </a> </li>
                     <li><a href="#">Dịch vụ </a></li>
-                    <li><a href="?act=danhsach">Danh sách </a> </li>
+                    <li><a href="?ctrl=home&act=danhsach">Danh sách </a> </li>
                     <li><a href="?ctrl=home&act=gioithieu">Giới thiệu </a></li>
                     <li><a href="#">Liên hệ </a></li>
                     <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                     <?php if (isset($_SESSION['user']) == true) { ?>
                         <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
                             <ul class="sub-menu">
-                                <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
-                                <li><a href="?act=doimk">Đổi mật khẩu</a></li>
+                                <li><a href="?ctrl=home&act=thongtintk">Thông tin tài khoản</a></li>
+                                <li><a href="?ctrl=home&act=doimk">Đổi mật khẩu</a></li>
                                 <li><a href="">Căn hộ cửa tôi</a></li>
-                                <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
+                                <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
                             </ul>
                         </li>
                     <?php } else { ?>
-                        <li><a href="?act=danhnhap">Đăng nhập</a></li>
+                        <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a></li>
                     <?php } ?>
                 </ul>
             </div>
@@ -47,7 +47,7 @@
     </nav>
     <div class="menu">
         <div class="banner">
-            <img src="../img/banner9.jpg" width="100%" height="600px" alt="">
+            <img src="img/banner9.jpg" width="100%" height="600px" alt="">
         </div>
         <!-- <div class="nav">
             <div class="navimg">
@@ -256,25 +256,25 @@
                 khách hàng của mình</p>
         </div>
         <div class="dlimg">
-            <div class="dlimg1">
-                <img src="../img/dl22.jpg" alt="">
+            <div class="dlimg1" style="height: 400px; margin-top: 40px;">
+                <img src="../img/avt.PNG" alt="" style="height: 250px;">
                 <h3>Park Jiyeon</h3>
                 <p>Đại lý bất động sản</p>
             </div>
-            <div class="dlimg1">
-                <img src="../img/dl11.jpg" alt="">
+            <div class="dlimg1" style="height: 400px; margin-top: 40px;">
+                <img src="../img/avt.PNG" alt="" style="height: 250px;">
                 <h3>Park Soyeon</h3>
                 <p>Đại lý bất động sản</p>
 
             </div>
-            <div class="dlimg1">
-                <img src="../img/dl3.jpg" alt="">
+            <div class="dlimg1" style="height: 400px; margin-top: 40px;">
+                <img src="../img/avt.PNG" alt="" style="height: 250px;">
                 <h3>Park Hyomin</h3>
                 <p>Đại lý bất động sản</p>
 
             </div>
-            <div class="dlimg1">
-                <img src="../img/dl4.jpg" alt="">
+            <div class="dlimg1" style="height: 400px; margin-top: 40px;">
+                <img src="../img/avt.PNG" alt="" style="height: 250px;">
                 <h3>Ham Eunjung</h3>
                 <p>Đại lý bất động sản</p>
 
@@ -300,7 +300,7 @@
     </div>
     <div class="tuvan">
         <div class="tuvanimg">
-            <img src="../img/banner-f.jpg" width="100%" alt="">
+            <img src="img/banner-f.jpg" width="100%" alt="">
             <div class="tuvantext">
                 <h1>Bạn vẫn chưa tìm được nhà ưng ý?</h1>
                 <p>Còn rất nhiều nhà riêng, căn hộ, chung cư chưa được đăng lên, hãy để Golden Home tư vấn chọn
@@ -313,7 +313,7 @@
     </div>
     <footer class="footer">
         <div class="box4 b1">
-            <img src="../img/logo.png" alt="">
+            <img src="img/logo.png" alt="">
             <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
             <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
         </div>
