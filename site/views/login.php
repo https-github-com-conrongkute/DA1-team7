@@ -14,7 +14,7 @@
 
     <!-- <div class="header">
         <div class="img">
-            <img src="../img/logo.png"  alt="">
+            <img src=".././uploaded/logo.png"  alt="">
         </div>
         <div class="hdtext">
             <ul>
@@ -32,7 +32,7 @@
     <nav class="menu-logo">
             <div class="menu-logo-bg">
                 <div class="nav-logo">
-                    <img src="img/logo.png" alt="">
+                    <img src="./uploaded/logo.png" alt="">
                 </div>
                 <div class="nav-menu">
                     <ul>

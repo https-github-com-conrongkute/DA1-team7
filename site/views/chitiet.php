@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
-    <link rel="stylesheet" href="css/chitiet.css">
+    <link rel="stylesheet" href="./views/css/chitiet.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,12 +22,12 @@
 <body>
     <!-- <div class="menu">
         <div class="banner">
-            <img src="../site/img/banner9.jpg" width="100%" height="600px" alt="">
+            <img src="site/./uploaded/banner9.jpg" width="100%" height="600px" alt="">
         </div>
         <nav class="menu-logo">
             <div class="menu-logo-bg">
                 <div class="nav-logo">
-                    <img src="img/logo.png" alt="">
+                    <img src="./uploaded/logo.png" alt="">
                 </div>
                 <div class="nav-menu">
                     <ul>
@@ -43,39 +43,150 @@
             </div>
         </nav>
     </div> -->
-    <nav class="hienra">
+    <header>
+        <div class=" menu1">
+            <span class="col-4 right">
+                <a href="#" class="col-3"><i class="fa fa-phone">(+84) 978 942 472</i></a>
+                <a href="#" class="col-6"><i class="fa fa-envelope">vietnam@goldenhome.com</i></a>
+            </span>
+        </div>
+
+    </header>
+    <nav class="menu-logo">
             <div class="menu-logo-bg">
                 <div class="nav-logo">
-                    <img src="img/logo.png" alt="">
+                    <img src="./uploaded/logo.png" alt="">
                 </div>
-                <div class="nav-menu2">
+                <div class="nav-menu">
                     <ul>
                         <li><a href="index.php">Trang chủ </a> </li>
                         <li><a href="#">Dịch vụ </a></li>
-                        <li><a href="?ctrl=home&act=danhsach">Danh sách </a> </li>
+                        <li><a href="?ctrl=home&act=danhsach">Danh sách nhà thuê</a> </li>
                         <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                         <li><a href="#">Liên hệ </a></li>
-                        <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
+                        <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
                         <?php if (isset($_SESSION['user']) == true) { ?>
-                            <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
+                            <li><a href="#" onclick="toogle()"><?= $_SESSION['user'] ?></a>
                                 <ul class="sub-menu">
                                     <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
                                     <li><a href="">Đổi mật khẩu</a></li>
                                     <li><a href="">Căn hộ cửa tôi</a></li>
                                     <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
                                 </ul>
-
-
                             </li>
                         <?php } else { ?>
-                            <li><a href="?act=dangnhap">Đăng nhập</a></li>
+                            <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a></li>
                         <?php } ?>
                     </ul>
                 </div>
             </div>
+            <div class="menutimkiem w-100  position-relative">
+                <a href="#" onclick="showtimkiem()" id="an">Tìm kiếm <i class="fa fa-search"></i></a>
+                <a href="#" onclick="exit()" id="hien">Tìm kiếm <i class="fa fa-close"></i></a>
+                <div class="w-100 boxtim position-absolute" id="showtim">
+                    <!--Tiềm kiếm ẩn-->
+                    <div class="tiemkiemtrong">
+                        <h4>Thuê</h4>
+                        <form action="" class="formtimkiem1">
+                            <div class="row mtop">
+                                <div class="col-3">
+                                    <select name="" id="" class="w-75 select pad">
+                                        <option value="">Căn hộ/Chung cư</option>
+                                        <option value="">Nhà ở</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="w-100 select2 pad" style="border: none;" placeholder="Nhập địa chỉ để tiềm kiếm căn hộ...">
+                                </div>
+                                <div class="col-3">
+                                    <button class="w-75 select2 bgcam">Tìm kiếm <i class="fa fa-search"></i></button>
+                                </div>
+                                <!--Thành phố quận huyện-->
+
+                            </div>
+                            <div class="row mtop">
+                                <div class="col-3">
+                                    <select name="" id="" class="select1 ">
+                                        <option value="">Tp Hồ Chí minh</option>
+
+                                    </select></div>
+                                <div class="col-3">
+                                    <select name="" id="" class="select1 ">
+                                        <option value="">Quận/Huyện</option>
+                                        <option value="">Quận 1</option>
+                                        <option value="">Quận 2</option>
+                                        <option value="">Quận 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <select name="" id="" class="select1">
+                                        <option value="">Mức giá</option>
+                                        <option value="">Dưới 3 triệu</option>
+                                        <option value="">3 triệu - 5 triệu</option>
+                                        <option value="">5 triệu - 8 triệu</option>
+                                        <option value="">8 triệu - 10 triệu</option>
+                                        <option value="">10 triệu - 15 triệu</option>
+                                        <option value="">15 triệu - 20 triệu</option>
+                                        <option value="">Trên 20 triệu</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <select name="" id="" class="select1 ">
+                                        <option value="">Diện tích</option>
+                                        <option value="">10 - 20 m2</option>
+                                        <option value="">20 - 30 m2</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="row mtop">
+                            <div class="col-3">
+                                    <select name="" id="" class="select1 ">
+                                        <option value="">Số tầng</option>
+                                        <?php for ($i=1; $i <= 10 ; $i++) { 
+                                            ?>
+                                            <option value=""><?=$i?></option>
+                                            <?php
+                                        }?>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                <select name="" id="" class="select1 ">
+                                        <option value="">Số phòng ngủ</option>
+                                        <?php for ($i=1; $i <= 10 ; $i++) { 
+                                            ?>
+                                            <option value=""><?=$i?></option>
+                                            <?php
+                                        }?>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                <select name="" id="" class="select1 ">
+                                        <option value="">Số phòng vệ sinh</option>
+                                        <?php for ($i=1; $i <= 10 ; $i++) { 
+                                            ?>
+                                            <option value=""><?=$i?></option>
+                                            <?php
+                                        }?>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <select name="" id="" class="select1 ">
+                                        <option value="">Hướng nhà</option>
+                                        <option value="">Đông</option>
+                                        <option value="">Tây</option>
+                                        <option value="">Nam</option>
+                                        <option value="">Bắc</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </nav>
     <!-- đây là phần show sản phẩm lên có hình ảnh và có tên,giá,id -->
-    <div id="wrapper" style="margin-top: 100px;">
+    <div id="wrapper" style="margin-top: 150px;">
         <div class="item1">
             <div class="box-slideshow"><p>
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -86,13 +197,13 @@
                     </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img class="d-block w-100" src="../img/b1.jpg" alt="First slide" style="width:100%;" height="500px">
+                        <img class="d-block w-100" src="./uploaded/b1.jpg" alt="First slide" style="width:100%;" height="500px">
+                      </div>
+                      <div class="carousel-item">   
+                        <img class="d-block w-100" src="./uploaded/b2.jpg" alt="Second slide" style="width:100%;" height="500px">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="../img/b2.jpg" alt="Second slide" style="width:100%;" height="500px">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="../img/b3.jpg" alt="Third slide" style="width:100%;" height="500px">
+                        <img class="d-block w-100" src="./uploaded/b3.jpg" alt="Third slide" style="width:100%;" height="500px">
                       </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -122,9 +233,9 @@
                     <p class="txt4">Giá : 173,4 triệu/m²</p>
                 </div>
                 <div class="btn">
-                    <div ><button class="btn1">LƯU <i class="fa fa-download" style="color:#ef7733;margin-left:5px;"></i></button></div>
-                    <div ><button class="btn1">CHIA SẺ <i class="fa fa-share" style="color:#ef7733;margin-left:5px;"></i></button></div>
-                    <div ><button class="btn1">VỊ TRÍ <i class="fa fa-map-marker" style="color:#ef7733;margin-left:5px;"></i></button></div>
+                    <div ><button class="btn1">LƯU <i class="fa fa-download" style="margin-left:5px;"></i></button></div>
+                    <div ><button class="btn1">CHIA SẺ <i class="fa fa-share" style="margin-left:5px;"></i></button></div>
+                    <div ><button class="btn1">VỊ TRÍ <i class="fa fa-map-marker" style="margin-left:5px;"></i></button></div>
                 </div>
             </div>
             <!-- phần giới thiệu nhà -->
@@ -133,15 +244,24 @@
                     <h3 class="txt8">Giới thiệu</h3>
                     <p class="txt5">Bán nhà hẻm đường Đỗ Quang Đẩu, khu vực an tĩnh, Quận 1.</p>
                     <p class="txt6">
-                       <ul>
+                       <div class="row">
+                           <div class="col-6 txtx">
+                           <ul>
                            <li class="li1">Hướng: T.Nam</li>
                            <li>Phòng ngủ: 2</li>
                            <li>Phòng tắm: 1</li>
-                           <li>Tầng: 1 trệt, 1 lửng + 1 lầu</li>
-                           <li>Giấy tờ: Sổ hồng</li>
-                           <li>Chiều dài: 3.85m</li>
-                           <li>Hẻm: 1.5m</li>
+                           <li>Tầng: 1 </li>
+                           
                        </ul>
+                           </div>
+                           <div class="col-6 txtx">
+                               <ul>
+                            <li>Giấy tờ: Sổ hồng</li>
+                           <li>Diện tích: 15m2</li>
+                           <li>Hẻm: 1.5m</li>
+                               </ul>
+                           </div>
+                       </div>
                     </p>
                 </div>
                 <div class="tuvan ">
@@ -169,15 +289,19 @@
             <div class="ttct">
                 <h3 class="txt9">Thông tin chi tiết</h3>
                 <p class="txt7">
-                    Diện tích nhà ngang 3.05m x  dài 3.85m, tổng diện tích sử dụng 25m vuông 
-                    Kết cấu Nhà gồm 1 trệt 1 lững 1 lầu, 2 phòng ngủ, 1 nhà vệ sinh. Hẻm trước nhà 1.5m, có eo hẻm 1m. <br>
-                    Giao thông thuận lợi.tiện di chuyển ra trung tâm quận 1 khu thương mại, chợ Bến Thành, các công ty văn phòng..., hay có thể di chuyển sang các quận lân cận như quận 3 ,quận 4 ,bình thạnh ...<br>
+                <p class="txt77"> Bán Nhà Mặt Tiền Đường Thái Phiên Gần Khu Cư Xá Bình Thới, Phường 09 Quận 11</p>
 
-                    Khu vực: an ninh KHÔNG phức tạp, trộm cắp. Gần khu sầm uất
+         <p class="txt77"> Diện tích: 3.5m x 14m, diện tích đất 47.4m2 và tổng diện tích sử dụng 152.9m2. </p>
 
-                    ngoài mặt tiền đường có đầy đủ tiện ích ăn uống, ATM, ngân hàng, siêu thị mini
+   <p class="txt77">  Hiện trạng nhà 1 trệt 1 lửng 2 lầu + sân thượng, gồm 3 phòng ngủ và 3 WC. Kết cấu nhà cứng cáp, dọn vào ở ngay không cần sửa chữa.</p>
 
-                   <br> - Sổ hồng chính chủ,Mua vào ở ngay giao dịch an toàn, minh bạch.
+<p class="txt77"> Nhà mặt tiền 16m xe tải lưu thông ra nhiều đường như Minh Phụng, Hàn Hải Nguyên, Xóm Đất, Cư Xá Bình Thới.</p>
+
+ <p class="txt77"> Tiện ích xung quanh đầy đủ như: Vinmart, Bệnh viện Quận 11 ( tuyến sau của các BV lớn như 115, ĐH Y Dược), Trường TH Hàn Hải Nguyên, Cư xá Bình Thới, đoạn đường ăn uống sầm uất Minh Phụng - Xóm Đất,...</p>
+
+ <p class="txt77">Vị trí trung tâm Quận 11, thuận tiện di chuyển sang các quận lân cận như Quận 5, 6, 10, Tân Bình, Bình Tân,....</p>
+
+ <p class="txt77">Sổ hồng riêng chính chủ, giao dịch an toàn, dọn vào ở ngay.</p>
                 </p>
             </div>
         </div>
@@ -221,12 +345,75 @@
                   </div>
                 </form>
             </div>
+
+            <div class="form-timkiem">
+                <div class="div-text"><p>Các quận lân cận</p></div>
+                <form action="#" method="post" class="tim-kiemm">
+                  
+                  
+                  <ul class="lancan">
+                                        <li>
+                                            
+                                                <a href="#"> <span class=""> Quận 2 </span> <span class="count">(1186)</span> </a>
+                                            
+                                        </li>
+                                        <li>
+                                            
+                                                <a href="#"> <span class=""> Quận 7 </span> <span class="count">(652)</span> </a>
+                                            
+                                        </li>
+                                        <li>
+                                            
+                                                <a href="#"> <span class=""> Quận 9 </span> <span class="count">(611)</span> </a>
+                                            
+                                        </li>
+                                        <li>
+                                            
+                                                <a href="#"> <span class=""> Quận 4 </span> <span class="count">(514)</span> </a>
+                                            
+                                        </li>
+                                        <li>
+                                            
+                                                <a href="#"> <span class=""> Quận Bình Thạnh </span> <span class="count">(496)</span> </a>
+                                            
+                                        </li>
+                                        <li>
+                                            
+                                                <a href="#"> <span class=""> Quận Tân Phú </span> <span class="count">(381)</span> </a>
+                                            
+                                        </li>
+                                        <li>
+                                            
+                                                <a href="#"> <span class=""> Quận 1 </span> <span class="count">(312)</span> </a>
+                                            
+                                        </li>
+                                        <li>
+                                            
+                                                <a href="#"> <span class=""> Quận 10 </span> <span class="count">(278)</span> </a>
+                                            
+                                        </li>
+                                        <li>
+                                            
+                                                <a href="#"> <span class=""> Huyện Nhà Bè </span> <span class="count">(223)</span> </a>
+                                            
+                                        </li>
+                                        <li>
+                                            
+                                                <a href="#"> <span class=""> Quận Bình Tân </span> <span class="count">(212)</span> </a>
+                                            
+                                        </li>
+                                    </ul>
+                  
+                  
+                </form>
+            </div>
         </div>
+        
     </div>
     <!-- dịch vụ khác của Golden Home -->
     <div class="dichvukhac">
         <div class="img-bg">
-            <img src="../img/banner-f.jpg" alt="">
+            <img src="./uploaded/banner-f.jpg" alt="">
             <div class="font">
                 <p class="text">DỊCH VỤ NỔI BẬT CỦA GOLDEN HOME</p>
             </div>
@@ -273,6 +460,7 @@
         <div class="divcuoi">
             <span> 2020 © Bản quyền GoldenHome. Đã đăng ký Bản quyền.</span>
         </div>
+        <script src="./views/js/index.js"></script>
 </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

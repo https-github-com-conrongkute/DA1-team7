@@ -271,7 +271,7 @@
                             <div id="view-as-grid" class="row list-layout-0 list-item">
                                 <div class="col-6 col-lg-4">
                                     <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="../img/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
+                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
                                         <div class="divtext ">
                                             <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title">Căn hộ Singapore cho thuê trung tâm Quận 3</a></h2>
                                             <div class="imeta-1"> <b>Đ. Trần Quang Diệu, P.13, Q.3</b> </div>
