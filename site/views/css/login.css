@@ -20,6 +20,21 @@ body {
     object-fit: cover;
 }
 /* menu */
+.menu1 {
+    background-color: #ef7733;
+    width: 100%;
+    height: 30px;
+    color: white;
+    margin: 0 auto;
+    /* margin-bottom: 5px; */
+}
+.menu1>span>a {
+    margin-right: 10px;
+    margin-left: 20px;
+    width: 40%;
+    color: white;
+    line-height: 30px;
+}
 .menu-logo{
     width: 100%;
     /* position: fixed; */
@@ -76,6 +91,7 @@ body {
 }
 .nav-menu>ul>li>a{
     color: black;
+    font-size: 12pt;
     font-family: 'Roboto', sans-serif;
     /* font-weight: bold; */
     text-decoration: none;

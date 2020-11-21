@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
-    <link rel="stylesheet" href="css/chitiet.css">
+    <link rel="stylesheet" href="./views/css/chitiet.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -86,13 +86,13 @@
                     </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img class="d-block w-100" src="../img/b1.jpg" alt="First slide" style="width:100%;" height="500px">
+                        <img class="d-block w-100" src="./views/img/b1.jpg" alt="First slide" style="width:100%;" height="500px">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="../img/b2.jpg" alt="Second slide" style="width:100%;" height="500px">
+                        <img class="d-block w-100" src="./views/img/b2.jpg" alt="Second slide" style="width:100%;" height="500px">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="../img/b3.jpg" alt="Third slide" style="width:100%;" height="500px">
+                        <img class="d-block w-100" src="./views/img/b3.jpg" alt="Third slide" style="width:100%;" height="500px">
                       </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -226,7 +226,7 @@
     <!-- dịch vụ khác của Golden Home -->
     <div class="dichvukhac">
         <div class="img-bg">
-            <img src="../img/banner-f.jpg" alt="">
+            <img src="./views/img/banner-f.jpg" alt="">
             <div class="font">
                 <p class="text">DỊCH VỤ NỔI BẬT CỦA GOLDEN HOME</p>
             </div>
@@ -269,10 +269,52 @@
       
     </div>
     <!-- Footer Golden Home -->
-   
+    <footer class="footer">
+        <div class="box4 b1">
+            <img src="img/logo.png" alt="">
+            <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
+            <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
+        </div>
+        <div class="box4 b2">
+            <div class="tieude4">
+                <h4>Danh sách thuê nhà</h4>
+            </div>
+            <div class="textquan">
+                <div class="quan1 l1">
+                    <P>Quận 1</P>
+                    <P>Quận 2</P>
+                    <P>Quận 3</P>
+                    <P>Quận 4</P>
+                    <P>Quận 5</P>
+                    <P>Quận 6</P>
+                    <P>Quận 7</P>
+                    <P>Quận 8</P>
+                    <P>Quận 9</P>
+                    <P>Quận 10</P>
+                </div>
+                <div class="quan1 l2">
+                    <P>Quận 11</P>
+                    <P>Quận 12</P>
+                    <P>Quận Bình Thạnh</P>
+                    <P>Quận Phú Nhuận</P>
+                    <p>Quận Tân Bình</p>
+                    <p>Quận Tân Phú</p>
+                    <p>Quận Bình Tân</p>
+                    <p>Huyện Nhà Bè</p>
+                    <p>Huyện Hóc Môn</p>
+                    <p>Huyện Bình Chánh</p>
+                </div>
+            </div>
+        </div>
+        <div class="box4">
+            <h4>Đăng ký để biết thêm thông tin từ Golden</h4> <br>
+            <input type="text" value="Địa chỉ email"><input class="ip2" type="submit" value="Đăng ký">
+        </div>
+    </footer>
         <div class="divcuoi">
             <span> 2020 © Bản quyền GoldenHome. Đã đăng ký Bản quyền.</span>
         </div>
+        
 </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
