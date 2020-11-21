@@ -166,9 +166,11 @@ body {
     /* padding:20px 30px; */
 }
 .item2{
-    width: 100%;
+    width: 17%;
     padding: 0;
+    right: 10%;
     min-height: 700px;
+    position: fixed;
     /* padding:30px 20px; */
 }
 
@@ -320,34 +322,54 @@ footer{
     color: #bababa;
 }
 .btn1{
-    width: 80%;
-    height: 40px;
-    margin-bottom: 5px;
+    width: 43%;
+    height: 35px;
+    margin-bottom: 15px;
     border: 1px solid #ef7733;
     border-radius: 5px;
-    font-size: 10pt;
+    font-size: 11px;
     font-weight: bold;
     color:#ef7733;
     outline: none;
     transition:0.5s;
 }
+.btn1 i{
+    font-size: 13px;
+}
+.btn1 i:hover{
+    color: white !important;
+}
 .btn1:hover{
     background-color:  #ef7733;
-    color: white;
+    color: white ;
     border: none;
 }
 .txt5{
     font-size: 10pt;
-    font-weight: bold;
+    color: black ;
+
+}
+.gioithieu ul .li1{
+    margin-top:19px;
+
+}
+.gioithieu ul li{
+    font-size: 11pt;
+    margin-top:9px;
+    margin-left: 17px;
 }
 .txt7{
-    font-size: 12pt;
+    font-size: 10.2pt;
     font-weight: 200;
+    letter-spacing: 1.5px;
+    line-height: 23px;
 }
 .txt8{
     font-size: 14pt;
+    color: #ef7733 ;
+    padding-bottom: 5px;
     font-weight: bold;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #ef7733;
 }
 ul li {
     font-size: 12pt;
@@ -373,11 +395,12 @@ form{
     width: 100%;
     height:40px;
     line-height:40px;
-    font-size: 14pt;
+    font-size: 13pt;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
     font-weight: bold;
     color: white;
+    margin-bottom: 25px;
 }
  .radio{
      width: 100%;height: 30px;
@@ -387,28 +410,31 @@ form{
  /* form */
 
  .form-txt{
-     font-size: 10pt;
-     margin-bottom: 10px;
+     font-size: 9pt;
+     margin-bottom: 19px;
  }
  select{
      width: 100%;
      margin: 20px;
      height: 30px;
+     border: 1px solid #ef7733;
+    border-radius: 5px;
  }
  option{
-     font-size: 10pt;
+     font-size: 9pt;
  }
  .div{
      margin-bottom: 20px;
  }
  .sub{
-     width: 70%;
+     width: 55%;
      margin:auto;
+     margin-top: 30px;
  }
  input[type="submit"]{
      width: 100%;height: 40px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     background-color: #ef7733;
     font-size: 10pt;
     font-weight: bold;
@@ -432,7 +458,8 @@ form{
 {   width: 70%;
     position: absolute;
     top: 70px;
-    left: 13%;
+    left: 0%;
+    right: 0%;
     margin: 0;
     padding: 0;
     display: flex;
@@ -442,15 +469,14 @@ form{
 }
 .team7{
     background: #ef7733;
-    width: 50%;
-    margin: 10px;
+    width: 48%;
+    margin: 25px;
     display: flex;
     flex-direction: row;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 .icon{
     width: 30%;
-  
     padding:30px 40px;
 
 }
@@ -489,6 +515,12 @@ form{
 .text-cuoi{
     font-size: 13pt;
     color: white;
+    
+}
+.text-cuoi2{
+    font-size: 10pt;
+    color: white;
+    
 }
 .submit{
     width: 50%;
@@ -509,9 +541,13 @@ input[type="text"],input[type="email"],input[type="number"],input[type="date"]{
     width: 100%;
     height:40px;
     outline:none;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid #ef7733;
+    padding-left: 5px;
 }
 .label-end{
-    width: 160px;
+    width: 130px;
     background-color: #0d58ac;
     border-radius: 20px;
     height: 30px;

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="./views/css/about.css">
+    <link rel="stylesheet" href="css/about.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -41,7 +41,7 @@
     </nav>
     <div class="menu">
         <div class="banner">
-            <img src="../img/banner9.jpg" width="100%" height="600px" alt="">
+            <img src="img/banner9.jpg" width="100%" height="600px" alt="">
         </div>
         <!-- <div class="nav">
             <div class="navimg">
@@ -294,7 +294,7 @@
     </div>
     <div class="tuvan">
         <div class="tuvanimg">
-            <img src="../img/banner-f.jpg" width="100%" alt="">
+            <img src="img/banner-f.jpg" width="100%" alt="">
             <div class="tuvantext">
                 <h1>Bạn vẫn chưa tìm được nhà ưng ý?</h1>
                 <p>Còn rất nhiều nhà riêng, căn hộ, chung cư chưa được đăng lên, hãy để Golden Home tư vấn chọn
@@ -307,7 +307,7 @@
     </div>
     <footer class="footer">
         <div class="box4 b1">
-            <img src="../img/logo.png" alt="">
+            <img src="img/logo.png" alt="">
             <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
             <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
         </div>

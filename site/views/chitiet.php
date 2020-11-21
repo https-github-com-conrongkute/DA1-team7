@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
-    <link rel="stylesheet" href="./views/css/chitiet.css">
+    <link rel="stylesheet" href="css/chitiet.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -64,6 +64,8 @@
                                     <li><a href="">Căn hộ cửa tôi</a></li>
                                     <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
                                 </ul>
+
+
                             </li>
                         <?php } else { ?>
                             <li><a href="?act=dangnhap">Đăng nhập</a></li>
@@ -120,9 +122,9 @@
                     <p class="txt4">Giá : 173,4 triệu/m²</p>
                 </div>
                 <div class="btn">
-                    <div ><button class="btn1">LƯU <img src="../trangchitiet/img/download.svg" alt="" width="15px" height="15px" color="#ef7733"></button></div>
-                    <div ><button class="btn1">CHIA SẺ <img src="../trangchitiet/img/share.svg" alt="" width="15px" height="15px" color="#ef7733"</button></div>
-                    <div ><button class="btn1">VỊ TRÍ <img src="../trangchitiet/img/pin.svg" alt="" width="15px" height="15px" color="#ef7733"</button></div>
+                    <div ><button class="btn1">LƯU <i class="fa fa-download" style="color:#ef7733;margin-left:5px;"></i></button></div>
+                    <div ><button class="btn1">CHIA SẺ <i class="fa fa-share" style="color:#ef7733;margin-left:5px;"></i></button></div>
+                    <div ><button class="btn1">VỊ TRÍ <i class="fa fa-map-marker" style="color:#ef7733;margin-left:5px;"></i></button></div>
                 </div>
             </div>
             <!-- phần giới thiệu nhà -->
@@ -131,8 +133,8 @@
                     <h3 class="txt8">Giới thiệu</h3>
                     <p class="txt5">Bán nhà hẻm đường Đỗ Quang Đẩu, khu vực an tĩnh, Quận 1.</p>
                     <p class="txt6">
-                       <ul class="ul" class="padding">
-                           <li>Hướng: T.Nam</li>
+                       <ul>
+                           <li class="li1">Hướng: T.Nam</li>
                            <li>Phòng ngủ: 2</li>
                            <li>Phòng tắm: 1</li>
                            <li>Tầng: 1 trệt, 1 lửng + 1 lầu</li>
@@ -167,23 +169,23 @@
             <div class="ttct">
                 <h3 class="txt9">Thông tin chi tiết</h3>
                 <p class="txt7">
-                    Diện tích nhà ngang 3.05m x  dài 3.85m, tổng diện tích sử dụng 25m vuông <br>
-                    Kết cấu Nhà gồm 1 trệt 1 lững 1 lầu, 2 phòng ngủ, 1 nhà vệ sinh. Hẻm trước nhà 1.5m. có eo hẻm 1m, <br>
-                    Giao thông thuận lợi.tiện di chuyển ra trung tâm quận 1 khu thương mại, chợ Bến Thành, các công ty văn phòng..., hay có thể di chuyển sang các quận lân cận như q3,q4,bình thạnh ,,,,
+                    Diện tích nhà ngang 3.05m x  dài 3.85m, tổng diện tích sử dụng 25m vuông 
+                    Kết cấu Nhà gồm 1 trệt 1 lững 1 lầu, 2 phòng ngủ, 1 nhà vệ sinh. Hẻm trước nhà 1.5m, có eo hẻm 1m. <br>
+                    Giao thông thuận lợi.tiện di chuyển ra trung tâm quận 1 khu thương mại, chợ Bến Thành, các công ty văn phòng..., hay có thể di chuyển sang các quận lân cận như quận 3 ,quận 4 ,bình thạnh ...<br>
 
-                    Khu vực: an ninh KHÔNG phức tạp, trộm cắp. Gần khu sầm uất, 
+                    Khu vực: an ninh KHÔNG phức tạp, trộm cắp. Gần khu sầm uất
 
-                    Ngoài mặt tiền đường có đầy đủ tiện ích ăn uống, ATM, ngân hàng, siêu thị mini
+                    ngoài mặt tiền đường có đầy đủ tiện ích ăn uống, ATM, ngân hàng, siêu thị mini
 
-                    - Sổ hồng chính chủ,Mua vào ở ngay giao dịch an toàn, minh bạch
+                   <br> - Sổ hồng chính chủ,Mua vào ở ngay giao dịch an toàn, minh bạch.
                 </p>
             </div>
         </div>
         <div class="item2">
             <div class="form-timkiem">
-                <div class="div-text"><p>TÌM NHANH</p></div>
+                <div class="div-text"><p>Tìm nhanh</p></div>
                 <form action="#" method="post" class="tim-kiemm">
-                  <label for="" class="form-txt">Loại BĐS :</label>
+                  <label for="" class="form-txt">LOẠI BĐS :</label>
                   <div class="div">
                       <select name="" id="">
                           <option value="" checked>Nhà Riêng</option>
@@ -224,21 +226,21 @@
     <!-- dịch vụ khác của Golden Home -->
     <div class="dichvukhac">
         <div class="img-bg">
-            <img src="../img/bg-apertment.jpg" alt="">
+            <img src="../img/banner-f.jpg" alt="">
             <div class="font">
-                <p class="text">DỊCH VỤ NỔI BẬT CỦA PROPZY</p>
+                <p class="text">DỊCH VỤ NỔI BẬT CỦA GOLDEN HOME</p>
             </div>
             <div class="container">
                 <div class="team7">
                     <div class="icon">
-                        <img src="../trangchitiet/img/home.svg" alt="" width="50px" height="30px">
+                        <i class="fa fa-home" style="font-size:90px;color:white;"></i>
                     </div>
                     <div class="gui">
                         <div class="hypert-text">
                             <p class="text-cuoi">
                                 Đăng Bán và Cho Thuê Miễn Phí
                             </p >
-                            <p class="text-cuoi">
+                            <p class="text-cuoi2">
                                 Tiếp cận khách hàng sẵn có, quảng cáo tin đăng
                                 miễn phí</p>
                         </div>
@@ -249,12 +251,12 @@
                 </div>
                 <div class="team7">
                     <div class="icon">
-                        <img src="../trangchitiet/img/home2.svg" alt="" width="50px" height="30px">
+                    <i class="fa fa-home" style="font-size:90px;color:white;"></i>
                     </div>
                     <div class="gui">
                         <div class="hypert-text">
                            <p class="text-cuoi">Tìm Mua và Thuê Như Ý</p>
-                           <p class="text-cuoi">
+                           <p class="text-cuoi2">
                             Tìm kiếm theo tiêu chí, đảm bảo an toàn pháp lý</p>
                         </div>
                         <div class="submit">
