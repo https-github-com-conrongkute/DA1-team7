@@ -940,3 +940,12 @@ input[type="date"] {
 .height-search:hover a {
     text-decoration: none;
 }
+
+.imeta-3 i {
+    font-size: 15pt;
+    margin-top: -2px;
+}
+
+.imeta-2 {
+    font-size: 9pt;
+}
