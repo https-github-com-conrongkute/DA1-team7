@@ -22,12 +22,12 @@
 <body>
     <!-- <div class="menu">
         <div class="banner">
-            <img src="site/./uploaded/banner9.jpg" width="100%" height="600px" alt="">
+            <img src="site/../uploaded/banner9.jpg" width="100%" height="600px" alt="">
         </div>
         <nav class="menu-logo">
             <div class="menu-logo-bg">
                 <div class="nav-logo">
-                    <img src="./uploaded/logo.png" alt="">
+                    <img src="../uploaded/logo.png" alt="">
                 </div>
                 <div class="nav-menu">
                     <ul>
@@ -55,7 +55,7 @@
     <nav class="menu-logo">
             <div class="menu-logo-bg">
                 <div class="nav-logo">
-                    <img src="./uploaded/logo.png" alt="">
+                    <img src="../uploaded/logo.png" alt="">
                 </div>
                 <div class="nav-menu">
                     <ul>
@@ -197,13 +197,13 @@
                     </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img class="d-block w-100" src="./uploaded/b1.jpg" alt="First slide" style="width:100%;" height="500px">
+                        <img class="d-block w-100" src="../uploaded/b1.jpg" alt="First slide" style="width:100%;" height="500px">
                       </div>
                       <div class="carousel-item">   
-                        <img class="d-block w-100" src="./uploaded/b2.jpg" alt="Second slide" style="width:100%;" height="500px">
+                        <img class="d-block w-100" src="../uploaded/b2.jpg" alt="Second slide" style="width:100%;" height="500px">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="./uploaded/b3.jpg" alt="Third slide" style="width:100%;" height="500px">
+                        <img class="d-block w-100" src="../uploaded/b3.jpg" alt="Third slide" style="width:100%;" height="500px">
                       </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -413,7 +413,7 @@
     <!-- dịch vụ khác của Golden Home -->
     <div class="dichvukhac">
         <div class="img-bg">
-            <img src="./uploaded/banner-f.jpg" alt="">
+            <img src="../uploaded/banner-f.jpg" alt="">
             <div class="font">
                 <p class="text">DỊCH VỤ NỔI BẬT CỦA GOLDEN HOME</p>
             </div>
@@ -457,7 +457,7 @@
     </div>
     <div class="footer">
         <div class="box4 b1">
-            <img src="./uploaded/logo.png" alt="">
+            <img src="../uploaded/logo.png" alt="">
             <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
             <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
         </div>

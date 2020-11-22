@@ -391,5 +391,11 @@ body {
     line-height: 40px;
 }
 
+.taianhlen::before {
+    content: 'Tải ảnh lên';
+    position: absolute;
+    top: 0;
+}
+
 
 /* tai ảnh */
