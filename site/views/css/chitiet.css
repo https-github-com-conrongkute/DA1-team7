@@ -107,6 +107,7 @@ body {
 .tiemkiemtrong {
     width: 90%;
     margin: 0 auto;
+    margin-top: 40px;
 }
 
 .tiemkiemtrong h4 {
@@ -121,7 +122,6 @@ body {
     background-color: white;
     box-shadow: 0 2px 13px rgba(0, 0, 0, .1);
     color: black;
-    margin-top: 50px;
 }
 
 .select2 {

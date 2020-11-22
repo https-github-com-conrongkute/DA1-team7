@@ -221,6 +221,10 @@ body {
     border: none;
 }
 
+.mtop {
+    margin-top: 40px;
+}
+
 
 /* slide */
 
@@ -233,10 +237,6 @@ body {
     width: 100%;
     margin-top: 130px;
     height: 500px;
-}
-
-.mtop {
-    margin-top: 40px;
 }
 
 .dangtin {
