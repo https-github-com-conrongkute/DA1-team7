@@ -30,7 +30,7 @@
         <nav class="menu-logo">
             <div class="menu-logo-bg">
                 <div class="nav-logo">
-                    <img src="./uploaded/logo.png" alt="">
+                    <img src="../uploaded/logo.png" alt="">
                 </div>
                 <div class="nav-menu">
                     <ul>
@@ -178,13 +178,13 @@
                 <!-- The slideshow -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./uploaded/dangtin2.jpg" alt="Los Angeles" width="100%" height="300px">
+                        <img src="../uploaded/dangtin2.jpg" alt="Los Angeles" width="100%" height="300px">
                     </div>
                     <div class="carousel-item">
-                        <img src="./uploaded/banner7.jpg" alt="Chicago" width="100%" height="300px">
+                        <img src="../uploaded/banner7.jpg" alt="Chicago" width="100%" height="300px">
                     </div>
                     <div class="carousel-item">
-                        <img src="./uploaded/banner8.jpg" alt="New York" width="100%" height="300px">
+                        <img src="../uploaded/banner8.jpg" alt="New York" width="100%" height="300px">
                     </div>
                 </div>
 
@@ -310,7 +310,7 @@
         </div>
         <div class="dichvu">
 
-            <img src="./uploaded/dichvu.jpg" alt="">
+            <img src="../uploaded/dichvu.jpg" alt="">
             <div class="row dichvunew">
                 <div class="sdichvu">
                     <h4>DỊCH VỤ NỔI BẬT CỦA GOLDENHOME</h4>
@@ -344,7 +344,7 @@
     </div>
     <footer class="footer">
         <div class="box4 b1">
-            <img src="./uploaded/logo.png" alt="">
+            <img src="../uploaded/logo.png" alt="">
             <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
             <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
         </div>
