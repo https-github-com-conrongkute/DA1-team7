@@ -11995,7 +11995,7 @@ textarea.input {
     overflow: hidden;
     position: relative;
     background-color: #fff;
-    height: 100%
+    height: 90%
 }
 
 .list-layout-0 .item+.item {
@@ -12878,7 +12878,7 @@ textarea.input {
     color: #bababa;
     position: absolute;
     bottom: 0;
-    right: 0
+    left: 100px;
 }
 
 .p-project-detail {
@@ -17970,7 +17970,7 @@ ul.menu-top-header>li .wrapul li a {
 }
 
 .dichvu-hot {
-    background: url(/assets) ;
+    background: url(/assets);
     background-size: cover;
     padding: 45px 0 60px
 }

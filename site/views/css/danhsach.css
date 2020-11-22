@@ -182,12 +182,12 @@ body {
 }
 
 .item2 {
-    width: 17%;
+    width: 21%;
     padding: 0;
-    right: 10%;
+    right: 2%;
     min-height: 700px;
-    position: fixed;
-    /* padding:30px 20px; */
+    position: absolute;
+    /* padding: 30px 20px; */
 }
 
 .box-slideshow {
@@ -219,6 +219,16 @@ body {
 
 .row {
     float: left;
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
 }
 
 .gioithieu-tuvan {
@@ -711,4 +721,10 @@ input[type="date"] {
 
 .label a {
     color: white;
+}
+
+.pages {
+    margin: 0 auto;
+    margin-top: -30px;
+    margin-bottom: 20px;
 }
