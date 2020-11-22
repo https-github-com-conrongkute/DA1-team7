@@ -90,28 +90,28 @@
                         <form action="" class="formtimkiem1">
                             <div class="row mtop">
                                 <div class="col-3">
-                                    <select name="" id="" class="w-75 select pad">
+                                    <select name="" id="" class="w-75 select pad" style="font-size: 10pt;">
                                         <option value="">Căn hộ/Chung cư</option>
                                         <option value="">Nhà ở</option>
                                     </select>
                                 </div>
                                 <div class="col-6">
-                                    <input type="text" class="w-100 select2 pad" style="border: none;" placeholder="Nhập địa chỉ để tiềm kiếm căn hộ...">
+                                    <input type="text" class="w-100 select2 pad" style="border: none; font-size: 12pt; height: 50px; border-bottom: 1px gray solid;" placeholder="Nhập địa chỉ để tiềm kiếm căn hộ...">
                                 </div>
                                 <div class="col-3">
-                                    <button class="w-75 select2 bgcam">Tìm kiếm <i class="fa fa-search"></i></button>
+                                    <button class="w-75 select2 bgcam" style="font-size: 10pt; color: white;">Tìm kiếm <i class="fa fa-search"></i></button>
                                 </div>
                                 <!--Thành phố quận huyện-->
 
                             </div>
                             <div class="row mtop">
                                 <div class="col-3">
-                                    <select name="" id="" class="select1 ">
+                                    <select name="" id="" class="select1 " style="font-size: 10pt;">
                                         <option value="">Tp Hồ Chí minh</option>
 
                                     </select></div>
                                 <div class="col-3">
-                                    <select name="" id="" class="select1 ">
+                                    <select name="" id="" class="select1 " style="font-size: 10pt;">
                                         <option value="">Quận/Huyện</option>
                                         <option value="">Quận 1</option>
                                         <option value="">Quận 2</option>
@@ -119,7 +119,7 @@
                                     </select>
                                 </div>
                                 <div class="col-3">
-                                    <select name="" id="" class="select1">
+                                    <select name="" id="" class="select1" style="font-size: 10pt;">
                                         <option value="">Mức giá</option>
                                         <option value="">Dưới 3 triệu</option>
                                         <option value="">3 triệu - 5 triệu</option>
@@ -131,7 +131,7 @@
                                     </select>
                                 </div>
                                 <div class="col-3">
-                                    <select name="" id="" class="select1 ">
+                                    <select name="" id="" class="select1 " style="font-size: 10pt;">
                                         <option value="">Diện tích</option>
                                         <option value="">10 - 20 m2</option>
                                         <option value="">20 - 30 m2</option>
@@ -141,7 +141,7 @@
                             </div>
                             <div class="row mtop">
                             <div class="col-3">
-                                    <select name="" id="" class="select1 ">
+                                    <select name="" id="" class="select1 " style="font-size: 10pt;">
                                         <option value="">Số tầng</option>
                                         <?php for ($i=1; $i <= 10 ; $i++) { 
                                             ?>
@@ -151,7 +151,7 @@
                                     </select>
                                 </div>
                                 <div class="col-3">
-                                <select name="" id="" class="select1 ">
+                                <select name="" id="" class="select1 " style="font-size: 10pt;">
                                         <option value="">Số phòng ngủ</option>
                                         <?php for ($i=1; $i <= 10 ; $i++) { 
                                             ?>
@@ -161,7 +161,7 @@
                                     </select>
                                 </div>
                                 <div class="col-3">
-                                <select name="" id="" class="select1 ">
+                                <select name="" id="" class="select1 " style="font-size: 10pt;">
                                         <option value="">Số phòng vệ sinh</option>
                                         <?php for ($i=1; $i <= 10 ; $i++) { 
                                             ?>
@@ -171,7 +171,7 @@
                                     </select>
                                 </div>
                                 <div class="col-3">
-                                    <select name="" id="" class="select1 ">
+                                    <select name="" id="" class="select1 " style="font-size: 10pt;">
                                         <option value="">Hướng nhà</option>
                                         <option value="">Đông</option>
                                         <option value="">Tây</option>
@@ -268,19 +268,19 @@
                     <div class="div-text"><p>Đăng ký tư vấn</p></div>
                     <form action="#" method="post" class="form-tuvan">
                         <div class="fiel">
-                            <input type="text" name="" id="" placeholder="Nhập tên của bạn">
+                            <input type="text" name="" id="" style="font-size: 10pt;" placeholder="Nhập tên của bạn">
                         </div>
                         <div class="fiel">
-                            <input type="email" name="" id="" placeholder="Nhập Email">
+                            <input type="email" name="" id="" style="font-size: 10pt;" placeholder="Nhập Email">
                         </div>
                         <div class="fiel">
-                            <input type="number" name="" id="" placeholder="Nhập Số Điện Thoại">
+                            <input type="number" name="" id="" style="font-size: 10pt;" placeholder="Nhập Số Điện Thoại">
                         </div>
                         <div class="fiel">
-                            <input type="date" name="" id="" placeholder="">
+                            <input type="date" name="" id="" style="font-size: 10pt;" placeholder="">
                         </div>
                         <div class="fiel-sub">
-                            <input type="submit" value="Đặt lịch xem">
+                            <input type="submit" value="Đặt lịch xem" style="font-size: 10pt;">
                         </div>
                     </form>
                 </div>
@@ -309,9 +309,9 @@
             <div class="form-timkiem">
                 <div class="div-text"><p>Tìm nhanh</p></div>
                 <form action="#" method="post" class="tim-kiemm">
-                  <label for="" class="form-txt">LOẠI BĐS :</label>
+                  <label for="" class="form-txt">Loại căn hộ :</label>
                   <div class="div">
-                      <select name="" id="">
+                      <select name="" id="" style="font-size: 10pt;">
                           <option value="" checked>Nhà Riêng</option>
                           <option value="">Đất Nền</option>
                           <option value="">Chung Cư/Căn Hộ</option>
@@ -319,12 +319,12 @@
                       </select>
                   </div>
                   <div class="div">
-                    <select name="" id="">
+                    <select name="" id="" style="font-size: 10pt;">
                         <option value="" checked>Hồ Chí Minh</option>
                     </select>
                   </div>
                   <div class="div">
-                    <select name="" id="">
+                    <select name="" id="" style="font-size: 10pt;">
                         <option value="" checked>Quận 1</option>
                         <option value="">Quận 2</option>
                         <option value="">Quận 3</option>
@@ -351,7 +351,7 @@
                 <form action="#" method="post" class="tim-kiemm">
                   
                   
-                  <ul class="lancan">
+                                    <ul class="lancan">
                                         <li>
                                             
                                                 <a href="#"> <span class=""> Quận 2 </span> <span class="count">(1186)</span> </a>
@@ -455,6 +455,48 @@
         </div>
       
     </div>
+    <div class="footer">
+        <div class="box4 b1">
+            <img src="./uploaded/logo.png" alt="">
+            <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
+            <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
+        </div>
+        <div class="box4 b2">
+            <div class="tieude4">
+                <h4>Danh sách các quận</h4>
+            </div>
+            <div class="textquan">
+                <div class="quan1 l1">
+                    <P>Quận 1</P>
+                    <P>Quận 2</P>
+                    <P>Quận 3</P>
+                    <P>Quận 4</P>
+                    <P>Quận 5</P>
+                    <P>Quận 6</P>
+                    <P>Quận 7</P>
+                    <P>Quận 8</P>
+                    <P>Quận 9</P>
+                    <P>Quận 10</P>
+                </div>
+                <div class="quan1 l2">
+                    <P>Quận 11</P>
+                    <P>Quận 12</P>
+                    <P>Quận Bình Thạnh</P>
+                    <P>Quận Phú Nhuận</P>
+                    <p>Quận Tân Bình</p>
+                    <p>Quận Tân Phú</p>
+                    <p>Quận Bình Tân</p>
+                    <p>Huyện Nhà Bè</p>
+                    <p>Huyện Hóc Môn</p>
+                    <p>Huyện Bình Chánh</p>
+                </div>
+            </div>
+        </div>
+        <div class="box4">
+            <h4>Đăng ký để biết thêm thông tin từ Golden</h4> <br>
+            <input type="text" placeholder="Địa chỉ email" style="font-size: 11pt;"><input class="ip2"  type="submit" value="Đăng ký">
+        </div>
+                                    </div>
     <!-- Footer Golden Home -->
    
         <div class="divcuoi">

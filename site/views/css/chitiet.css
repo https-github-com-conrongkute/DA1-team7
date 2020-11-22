@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -11,7 +12,7 @@ a {
 body {
     width: 100%;
     margin: 0 auto;
-    min-height: 1800px;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .menu1 {
@@ -25,6 +26,10 @@ body {
 
 .right {
     text-align: right;
+}
+
+.right a {
+    font-size: 10pt;
 }
 
 .menu1 span a {
@@ -116,6 +121,7 @@ body {
     background-color: white;
     box-shadow: 0 2px 13px rgba(0, 0, 0, .1);
     color: black;
+    margin-top: 50px;
 }
 
 .select2 {
@@ -354,6 +360,7 @@ body {
 
 .lancan li a {
     color: black;
+    font-family: 'Work Sans', sans-serif;
 }
 
 
@@ -389,7 +396,6 @@ footer {
     width: 100%;
     border-top: 1px solid black;
     height: 500px;
-    background-color: black;
     float: left;
     margin-top: 30px;
 }
@@ -456,7 +462,6 @@ footer {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
 .txt3 {
     font-size: 14pt;
     color: red;
@@ -586,11 +591,10 @@ select {
     height: 50px;
     border: 1px solid #ef7733;
     border-radius: 5px;
-    font-size: 15pt;
 }
 
 option {
-    font-size: 12pt;
+    font-size: 11pt;
 }
 
 .div {
@@ -747,4 +751,83 @@ input[type="date"] {
 
 .label a {
     color: white;
+}
+
+.footer {
+    width: 79%;
+    margin: 0 auto;
+    display: flex;
+    height: 350px;
+    margin-top: 70px;
+    /* background-color: #FF4500;    */
+}
+
+.footer .box4 {
+    width: calc(100%/3);
+}
+
+.footer .b1 img {
+    width: 120px;
+}
+
+.footer .b1 p {
+    margin: 30px 0px;
+    line-height: 25px;
+    color: #333333;
+    font-size: 12pt;
+}
+
+.footer .box4 .tieude4 {
+    width: 100%;
+    height: 30px;
+    margin-left: 70px;
+    /* background-color: blue; */
+}
+
+.footer .box4 .tieude4 h4 {
+    font-size: 17px;
+    color: black;
+}
+
+.footer .textquan {
+    display: flex;
+    /* background: chartreuse; */
+}
+
+.quan1 {
+    width: 50%;
+    margin-top: 20px;
+    color: #333333;
+}
+
+.l1 p {
+    margin-left: 70px;
+    line-height: 20px;
+    font-size: 12pt;
+}
+
+.l2 p {
+    line-height: 20px;
+    margin-right: 40px;
+    font-size: 12pt;
+}
+
+.box4 input {
+    height: 50px;
+    background: rgb(247, 243, 243);
+    color: rgb(150, 144, 144);
+    border: 0;
+    border-radius: 3px;
+    padding-left: 5px;
+    margin-bottom: 30px;
+}
+
+.box4 .ip2 {
+    color: white;
+    background-color: orangered;
+    border: 0;
+    width: 110px;
+    font-size: 14px;
+    font-weight: bold;
+    font-weight: bold;
 }
