@@ -674,6 +674,64 @@
                                     </ul>
                                 </div>
                             </div>
+                            <!-- Phường -->
+                            <div class="widget widget-menu">
+                                <h2 class="widget-title">Các phường trong Quận</h2>
+                                <div class="widget-content">
+                                    <ul>
+                                        <li>
+                                            <h3>
+                                                <a href="#"> <span class="text"> Phường 1 </span>  </a>
+                                            </h3>
+                                        </li>
+                                        <li>
+                                            <h3>
+                                                <a href="#"> <span class="text"> Phường 2 </span>  </a>
+                                            </h3>
+                                        </li>
+                                        <li>
+                                            <h3>
+                                                <a href="#"> <span class="text"> Phường 3 </span>  </a>
+                                            </h3>
+                                        </li>
+                                        <li>
+                                            <h3>
+                                                <a href="#"> <span class="text"> Phường 4 </span> </a>
+                                            </h3>
+                                        </li>
+                                        <li>
+                                            <h3>
+                                                <a href="#"> <span class="text"> Phường 5 </span></a>
+                                            </h3>
+                                        </li>
+                                        <li>
+                                            <h3>
+                                                <a href="#"> <span class="text"> Phường 6 </span> </a>
+                                            </h3>
+                                        </li>
+                                        <li>
+                                            <h3>
+                                                <a href="#"> <span class="text"> Phường 7 </span> </a>
+                                            </h3>
+                                        </li>
+                                        <li>
+                                            <h3>
+                                                <a href="#"> <span class="text"> Phường 8 </span>  </a>
+                                            </h3>
+                                        </li>
+                                        <li>
+                                            <h3>
+                                                <a href="#"> <span class="text"> Phường 9</span> </a>
+                                            </h3>
+                                        </li>
+                                        <li>
+                                            <h3>
+                                                <a href="#"> <span class="text"> Phường 10 </span> </a>
+                                            </h3>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
