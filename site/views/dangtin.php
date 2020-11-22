@@ -30,7 +30,7 @@
         <nav class="menu-logo">
             <div class="menu-logo-bg">
                 <div class="nav-logo">
-                    <img src="img/logo.png" alt="">
+                    <img src="../uploaded/logo.png" alt="">
                 </div>
                 <div class="nav-menu">
                     <ul>
@@ -115,25 +115,37 @@
 
                             </div>
                             <div class="row mtop">
-                                <div class="col-4">
+                                <div class="col-3">
                                     <select name="" id="" class="select1 ">
-                                        <option value="">Hướng nhà</option>
-                                        <option value="">Đông</option>
-                                        <option value="">Tây</option>
-                                        <option value="">Nam</option>
-                                        <option value="">Bắc</option>
+                                        <option value="">Số tầng</option>
+                                        <?php for ($i=1; $i <= 10 ; $i++) { 
+                                            ?>
+                                            <option value=""><?=$i?></option>
+                                            <?php
+                                        }?>
                                     </select>
                                 </div>
-                                <div class="col-4">
-                                    <select name="" id="" class="select1 ">
-                                        <option value="">Hướng nhà</option>
-                                        <option value="">Đông</option>
-                                        <option value="">Tây</option>
-                                        <option value="">Nam</option>
-                                        <option value="">Bắc</option>
+                                <div class="col-3">
+                                <select name="" id="" class="select1 ">
+                                        <option value="">Số phòng ngủ</option>
+                                        <?php for ($i=1; $i <= 10 ; $i++) { 
+                                            ?>
+                                            <option value=""><?=$i?></option>
+                                            <?php
+                                        }?>
                                     </select>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-3">
+                                <select name="" id="" class="select1 ">
+                                        <option value="">Số phòng vệ sinh</option>
+                                        <?php for ($i=1; $i <= 10 ; $i++) { 
+                                            ?>
+                                            <option value=""><?=$i?></option>
+                                            <?php
+                                        }?>
+                                    </select>
+                                </div>
+                                <div class="col-3">
                                     <select name="" id="" class="select1 ">
                                         <option value="">Hướng nhà</option>
                                         <option value="">Đông</option>
@@ -166,13 +178,13 @@
                 <!-- The slideshow -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./views/img/dangtin2.jpg" alt="Los Angeles" width="100%" height="300px">
+                        <img src="../uploaded/dangtin2.jpg" alt="Los Angeles" width="100%" height="300px">
                     </div>
                     <div class="carousel-item">
-                        <img src="./views/img/banner7.jpg" alt="Chicago" width="100%" height="300px">
+                        <img src="../uploaded/banner7.jpg" alt="Chicago" width="100%" height="300px">
                     </div>
                     <div class="carousel-item">
-                        <img src="./views/img/banner8.jpg" alt="New York" width="100%" height="300px">
+                        <img src="../uploaded/banner8.jpg" alt="New York" width="100%" height="300px">
                     </div>
                 </div>
 
@@ -214,24 +226,28 @@
                             </div>
                             <div class="col-12" style="margin: 20px 0px;">
                                 <label for="">Chi phí khác</label><br>
-                                <textarea name="noi_dung" id="" cols="60" rows="2" placeholder="Nội dung "></textarea>
+                                <textarea name="noi_dung" id="" cols="70" rows="4" style="outline: none;" placeholder="Nội dung "></textarea>
                             </div>
                             <div class="col-12" style="margin: 20px 0px;">
                                 <label for="">Các tiện ích xung quanh căn hộ</label><br>
-                                <textarea name="noi_dung" id="" cols="60" rows="5" placeholder="Nội dung "></textarea>
+                                <textarea name="noi_dung" id="" cols="70" rows="4" style="outline: none;" placeholder="Nội dung "></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="col-5">
                         <h4>*Loại căn hộ</h4>
                         <div class="row" style="margin: 20px 0px;">
-                            <div class="col-6">
-                                <input type="radio" class="mr-3" checked>
-                                <label for="">Chung cư / căn hộ</label>
+                            <div class="col-4">
+                                <input type="radio" class="mr-3" >
+                                <label for="">Chung cư/căn hộ</label>
                             </div>
-                            <div class="col-6">
+                            <div class="col-4">
                                 <input type="radio" class="mr-3">
                                 <label for="">Nhà riêng</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="radio" class="mr-3">
+                                <label for="">Nhà trọ</label>
                             </div>
                             <div class="col-12" style="margin: 20px 0px;">
                                 <h4>Địa chỉ căn hộ</h4>
@@ -254,7 +270,11 @@
                                     </div>
                                     <div class="col-6" style="margin: 20px 0px;">
                                         <label for="">Hướng nhà</label>
-                                        <input type="text" name="" class="form-control" id="">
+                                        <select name="" class="form-control" id="">
+                                            <option value="">Hướng nhà</option>
+                                            <option value="">Đông</option>
+                                            <option value="">Tây</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -263,11 +283,11 @@
                                 <div class="row">
                                     <div class="col-6" style="margin: 20px 0px;">
                                         <label for="">Số phòng ngủ</label>
-                                        <input type="text" name="" class="form-control" id="">
+                                        <input type="number" name="" class="form-control" id="">
                                     </div>
                                     <div class="col-6" style="margin: 20px 0px;">
                                         <label for="">Phòng vệ sinh</label>
-                                        <input type="text" name="" class="form-control" id="">
+                                        <input type="number" name="" class="form-control" id="">
                                     </div>
                                 </div>
                             </div>
@@ -298,7 +318,7 @@
         </div>
         <div class="dichvu">
 
-            <img src="./views/img/dichvu.jpg" alt="">
+            <img src="../uploaded/dichvu.jpg" alt="">
             <div class="row dichvunew">
                 <div class="sdichvu">
                     <h4>DỊCH VỤ NỔI BẬT CỦA GOLDENHOME</h4>
@@ -332,7 +352,7 @@
     </div>
     <footer class="footer">
         <div class="box4 b1">
-            <img src="./views/img/logo.png" alt="">
+            <img src="../uploaded/logo.png" alt="">
             <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
             <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
         </div>

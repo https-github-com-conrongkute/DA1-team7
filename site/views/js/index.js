@@ -2,21 +2,33 @@ $(document).ready(function() {
     $(window).scroll(function() {
         var body = $('html,body').scrollTop();
         // console.log(body);
-        if (body > 100) {
+        if (body > 50) {
             $('nav').addClass('hienra');
             $('.nav-menu ul li a').css('color', 'black');
             $('.nav-menu3 ul li a').css('color', 'black');
-            // $('.menu').css('top','80px');
         } else {
             $('nav').removeClass('hienra');
-            // $('.nav-menu ul li a').css('color', 'white');
-            // $('.nav-menu3 ul li a').css('color', 'white');
+            $('.nav-menu ul li a').css('color', 'white');
+            $('.nav-menu3 ul li a').css('color', 'white');
             // $('.sum-menu ul li a').css('color', 'black');
         }
     });
-  
+
+    $(window).scroll(function() {
+        var body = $('html,body').scrollTop();
+        // console.log(body);
+        if (body > 1280) {
+            $('.item2').addClass('display');
+
+        } else {
+            $('.item2').removeClass('display');
+
+            // $('.sum-menu ul li a').css('color', 'black');
+        }
+    });
+
     // !--slick carousel-- >
-  
+
     $('.slider').slick({
         dots: true,
         infinite: false,
@@ -150,7 +162,7 @@ function exit() {
     hien.style.display = 'none';
 }
 
-function showimages(x) {
+function images(x) {
     var img = document.getElementById('images');
     switch (x) {
         case 1:
@@ -170,12 +182,12 @@ function showimages(x) {
     }
 }
 
-function toogle(){
+function toogle() {
     var submenu = document.getElementsByClassName('sub-menu')[0];
-    if(submenu.style.display == 'none'){
+    if (submenu.style.display == 'none') {
         submenu.style.display = 'block';
-    }else{
+    } else {
         submenu.style.display = 'none';
-        
+
     }
 }

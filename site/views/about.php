@@ -10,24 +10,17 @@
 </head>
 
 <body>
-<div class=" menu1">
-        <span class="col-4 right">
-            <a href="#" class="col-3"><i class="fa fa-phone">(+84) 978 942 472</i></a>
-            <a href="#" class="col-6"><i class="fa fa-envelope">vietnam@goldenhome.com</i></a>
-        </span>
-    </div>
     <nav class="menu-logo">
         <div class="menu-logo-bg">
             <div class="nav-logo">
-                <img src="img/logo.png" alt="">
+                <img src="../uploaded/logo.png" alt="">
             </div>
             <div class="nav-menu3">
                 <ul>
                     <li><a href="index.php">Trang chủ </a> </li>
                     <li><a href="#">Dịch vụ </a></li>
                     <li><a href="?ctrl=home&act=danhsach">Danh sách </a> </li>
-                    <li><a href="?ctrl=home&act=gioithieu">Giới thiệu </a></li>
-                    <li><a href="#">Liên hệ </a></li>
+                    <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                     <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                     <?php if (isset($_SESSION['user']) == true) { ?>
                         <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
@@ -47,11 +40,11 @@
     </nav>
     <div class="menu">
         <div class="banner">
-            <img src="img/banner9.jpg" width="100%" height="600px" alt="">
+            <img src="../uploaded//banner9.jpg" width="100%" height="600px" alt="">
         </div>
         <!-- <div class="nav">
             <div class="navimg">
-                <img src="../img/logo.png" width="140px" alt="">
+                <img src="../uploaded//logo.png" width="140px" alt="">
             </div>
             <div class="navmenu">
                 <ul>
@@ -72,7 +65,7 @@
     </div>
     <div class="thoahiep">
         <div class="divth1 imgth">
-            <img src="../img/ab1.jpg" alt="">
+            <img src="../uploaded/ab1.jpg" alt="">
         </div>
         <div class="divth1 ">
             <div class="divtext">
@@ -85,7 +78,7 @@
             <div class="divicon">
                 <div class="divicon1">
                     <div class="icon">
-                        <img src="../img/feature-1.png" alt="">
+                        <img src="../uploaded//feature-1.png" alt="">
                     </div>
                     <div class="divicontext">
                         <h3> Giá trị nhỏ nhất</h3>
@@ -96,7 +89,7 @@
                 </div>
                 <div class="divicon1">
                     <div class="icon">
-                        <img src="../img/feature-2.png" alt="">
+                        <img src="../uploaded//feature-2.png" alt="">
                     </div>
                     <div class="divicontext">
                         <h3> Tiếp thị tốt nhất</h3>
@@ -107,7 +100,7 @@
                 </div>
                 <div class="divicon1">
                     <div class="icon">
-                        <img src="../img/feature-3.png" alt="">
+                        <img src="../uploaded//feature-3.png" alt="">
                     </div>
                     <div class="divicontext">
                         <h3>Dễ dàng tìm kiếm</h3>
@@ -118,7 +111,7 @@
                 </div>
                 <div class="divicon1">
                     <div class="icon">
-                        <img src="../img/feature-4.png" alt="">
+                        <img src="../uploaded//feature-4.png" alt="">
                     </div>
                     <div class="divicontext">
                         <h3>Đảm bảo</h3>
@@ -140,7 +133,7 @@
         <div class="dvicon">
             <div class="dvicon1">
                 <div class="dviconimg">
-                    <img src="../img/service-1.png" alt="">
+                    <img src="../uploaded//service-1.png" alt="">
                 </div>
                 <div class="dvicontext">
                     <h3> Mua tài sản</h3>
@@ -151,7 +144,7 @@
             </div>
             <div class="dvicon1">
                 <div class="dviconimg">
-                    <img src="../img/service-2.png" alt="">
+                    <img src="../uploaded//service-2.png" alt="">
                 </div>
                 <div class="dvicontext">
                     <h3> Bán tài sản</h3>
@@ -162,7 +155,7 @@
             </div>
             <div class="dvicon1">
                 <div class="dviconimg">
-                    <img src="../img/service-3.png" alt="">
+                    <img src="../uploaded//service-3.png" alt="">
                 </div>
                 <div class="dvicontext">
                     <h3> Cho thuê tài sản</h3>
@@ -177,7 +170,7 @@
         <div class="price1">
             <div class="priceimg1">
                 <div class="priceimga">
-                    <img src="../img/ch2.jpg" alt="">
+                    <img src="../uploaded//ch2.jpg" alt="">
                 </div>
                 <div class="priceimgtext">
                     <p>Giá $ 89,000</p>
@@ -185,7 +178,7 @@
             </div>
             <div class="priceimg2">
                 <div class="priceimga">
-                    <img src="../img/ch1.jpg" alt="">
+                    <img src="../uploaded//ch1.jpg" alt="">
                 </div>
                 <div class="priceimgtext">
                     <p>Giá $1,53,000</p>
@@ -203,7 +196,7 @@
             <div class="divicon">
                 <div class="divicon1">
                     <div class="icon">
-                        <img src="../img/feature-5.png" alt="">
+                        <img src="../uploaded//feature-5.png" alt="">
                     </div>
                     <div class="divicontext">
                         <h3>Sơn cảm ứng Royel</h3>
@@ -214,7 +207,7 @@
                 </div>
                 <div class="divicon1">
                     <div class="icon">
-                        <img src="../img/feature-6.png" alt="">
+                        <img src="../uploaded//feature-6.png" alt="">
                     </div>
                     <div class="divicontext">
                         <h3> Đầy đủ nội thất</h3>
@@ -225,7 +218,7 @@
                 </div>
                 <div class="divicon1">
                     <div class="icon">
-                        <img src="../img/feature-7.png" alt="">
+                        <img src="../uploaded//feature-7.png" alt="">
                     </div>
                     <div class="divicontext">
                         <h3>Thiết kế nội thất mới nhất</h3>
@@ -236,7 +229,7 @@
                 </div>
                 <div class="divicon1">
                     <div class="icon">
-                        <img src="../img/feature-8.png" alt="">
+                        <img src="../uploaded//feature-8.png" alt="">
                     </div>
                     <div class="divicontext">
                         <h3> Không ngừng bảo mật</h3>
@@ -257,24 +250,24 @@
         </div>
         <div class="dlimg">
             <div class="dlimg1" style="height: 400px; margin-top: 40px;">
-                <img src="../img/avt.PNG" alt="" style="height: 250px;">
+                <img src="../uploaded//avt.PNG" alt="" style="height: 250px;">
                 <h3>Park Jiyeon</h3>
                 <p>Đại lý bất động sản</p>
             </div>
             <div class="dlimg1" style="height: 400px; margin-top: 40px;">
-                <img src="../img/avt.PNG" alt="" style="height: 250px;">
+                <img src="../uploaded//avt.PNG" alt="" style="height: 250px;">
                 <h3>Park Soyeon</h3>
                 <p>Đại lý bất động sản</p>
 
             </div>
             <div class="dlimg1" style="height: 400px; margin-top: 40px;">
-                <img src="../img/avt.PNG" alt="" style="height: 250px;">
+                <img src="../uploaded//avt.PNG" alt="" style="height: 250px;">
                 <h3>Park Hyomin</h3>
                 <p>Đại lý bất động sản</p>
 
             </div>
             <div class="dlimg1" style="height: 400px; margin-top: 40px;">
-                <img src="../img/avt.PNG" alt="" style="height: 250px;">
+                <img src="../uploaded//avt.PNG" alt="" style="height: 250px;">
                 <h3>Ham Eunjung</h3>
                 <p>Đại lý bất động sản</p>
 
@@ -283,24 +276,24 @@
     </div>
     <div class="divlogo">
         <div class="logo">
-            <img src="../img/01.png" alt="">
+            <img src="../uploaded//01.png" alt="">
         </div>
         <div class="logo">
-            <img src="../img/02.png" alt="">
+            <img src="../uploaded//02.png" alt="">
         </div>
         <div class="logo">
-            <img src="../img/03.png" alt="">
+            <img src="../uploaded//03.png" alt="">
         </div>
         <div class="logo">
-            <img src="../img/04.png" alt="">
+            <img src="../uploaded//04.png" alt="">
         </div>
         <div class="logo">
-            <img src="../img/05.png" alt="">
+            <img src="../uploaded//05.png" alt="">
         </div>
     </div>
     <div class="tuvan">
         <div class="tuvanimg">
-            <img src="img/banner-f.jpg" width="100%" alt="">
+            <img src="../uploaded/banner-f.jpg" width="100%" alt="">
             <div class="tuvantext">
                 <h1>Bạn vẫn chưa tìm được nhà ưng ý?</h1>
                 <p>Còn rất nhiều nhà riêng, căn hộ, chung cư chưa được đăng lên, hãy để Golden Home tư vấn chọn
@@ -313,13 +306,13 @@
     </div>
     <footer class="footer">
         <div class="box4 b1">
-            <img src="img/logo.png" alt="">
+            <img src="../uploaded/logo.png" alt="">
             <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
             <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
         </div>
         <div class="box4 b2">
             <div class="tieude4">
-                <h4>Danh sách thuê nhà</h4>
+                <h4>Danh sách các quận</h4>
             </div>
             <div class="textquan">
                 <div class="quan1 l1">

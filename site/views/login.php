@@ -11,15 +11,10 @@
 </head>
 
 <body>
-<div class=" menu1">
-        <span class="col-4 right">
-            <a href="#" class="col-3"><i class="fa fa-phone">(+84) 978 942 472</i></a>
-            <a href="#" class="col-6"><i class="fa fa-envelope">vietnam@goldenhome.com</i></a>
-        </span>
-    </div>
+
     <!-- <div class="header">
         <div class="img">
-            <img src="../img/logo.png"  alt="">
+            <img src="../../uploaded/logo.png"  alt="">
         </div>
         <div class="hdtext">
             <ul>
@@ -37,7 +32,7 @@
     <nav class="menu-logo">
             <div class="menu-logo-bg">
                 <div class="nav-logo">
-                    <img src="img/logo.png" alt="">
+                    <img src="../uploaded/logo.png" alt="">
                 </div>
                 <div class="nav-menu">
                     <ul>

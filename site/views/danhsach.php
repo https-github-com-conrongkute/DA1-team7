@@ -9,6 +9,7 @@
     <title>danhsach</title>
     <!-- amp -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./views/css/danhsach.css">
 
     <script type="application/ld+json">
         {
@@ -89,6 +90,10 @@
             <div class="container">
                 <a href="" id="logo"><img src="./danhsach/assets/images/ver-4/pc/logo.png" alt="Propzy"></a>
                 <ul class="menu-top-header left" data-style="1">
+                    
+                </ul>
+                <div class="wrap-menu-header right">
+                    <ul class="menu-top-header " data-style="1">
                     <li> <a href="index.php"><span>Trang Chủ</span></a>
 
                     </li>
@@ -100,30 +105,123 @@
 
                         </ul>
                     </li>
-                    <li><a href="du-an/hcm"><span>Dự án</span></a></li>
-                </ul>
-                <div class="wrap-menu-header right">
-                    <ul class="menu-top-header " data-style="1">
-                        <li><a href="#"><span>Tin tức</span></a></li>
-                        <li><a href="#">Giá nhà đất</a></li>
-                        <li> <a href="#"><span>Dịch vụ <i class="fas fa-caret-down"></i></span></a>
-                            <ul>
-                                <li><a href="#">Thuê nhà miễn phí</a></li>
-                                <li><a href="#">Thuê nhà siêu tốc</a></li>
-                                <li><a href="#">Dịch vụ 0Đ</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><span>Điểm giao dịch</span></a></li>
-                        <li><a href="#"><span>Giới thiệu</span></a></li>
+                        <li><a href="#"><span></span></a></li>
+                        <li><a href="?ctrl=home&act=danhsach" style="color: orangered;">Danh sách</a></li>
+                        <li><a href="?ctrl=home&act=dangtin"><span>Đăng tin</span></a></li>
+                        <li><a href="?ctrl=home&act=about"><span>Giới thiệu</span></a></li>
                     </ul>
                 </div>
                 <div class="group-header">
 
 
                     <div class="item">
-                        <a href="#" class="btn" data-toggle="modal" data-target="#popup-login"> <i class="fa fa-user"></i> Đăng nhập</a>
+                        <a href="?ctrl=home&act=dangnhap" class="btn" > <i class="fa fa-user"></i> Đăng nhập</a>
                     </div>
                     <div href="#menu-toggle" id="menu-toggle" class="item imenu"> <span class="menu-btn x"><span></span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="menutimkiem w-100  position-relative">
+                <a href="#" onclick="showtimkiem()" id="an">Tìm kiếm <i class="fa fa-search"></i></a>
+                <a href="#" onclick="exit()" id="hien">Tìm kiếm <i class="fa fa-close"></i></a>
+                <div class="w-100 boxtim position-absolute" id="showtim">
+                    <!--Tiềm kiếm ẩn-->
+                    <div class="tiemkiemtrong">
+                        <h4>Thuê</h4>
+                        <form action="" class="formtimkiem">
+                            <div class="row mtop">
+                                <div class="col-3">
+                                    <select name="" id="" class="w-75 select pad" style="width: 90%;">
+                                        <option value="">Căn hộ/Chung cư</option>
+                                        <option value="">Nhà ở</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="w-100 select pad" style="width: 90%;" placeholder="Nhập địa chỉ để tiềm kiếm căn hộ...">
+                                </div>
+                                <div class="col-3">
+                                    <button class="bgcam but">Tìm kiếm <i class="fa fa-search" ></i></button>
+                                </div>
+                                <!--Thành phố quận huyện-->
+
+                            </div>
+                            <div class="row mtop">
+                                <div class="col-3">
+                                    <select name="" id="" class="select1 ">
+                                        <option value="">Tp Hồ Chí minh</option>
+
+                                    </select></div>
+                                <div class="col-3">
+                                    <select name="" id="" class="select1 ">
+                                        <option value="">Quận/Huyện</option>
+                                        <option value="">Quận 1</option>
+                                        <option value="">Quận 2</option>
+                                        <option value="">Quận 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <select name="" id="" class="select1">
+                                        <option value="">Mức giá</option>
+                                        <option value="">Dưới 3 triệu</option>
+                                        <option value="">3 triệu - 5 triệu</option>
+                                        <option value="">5 triệu - 8 triệu</option>
+                                        <option value="">8 triệu - 10 triệu</option>
+                                        <option value="">10 triệu - 15 triệu</option>
+                                        <option value="">15 triệu - 20 triệu</option>
+                                        <option value="">Trên 20 triệu</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <select name="" id="" class="select1 ">
+                                        <option value="">Diện tích</option>
+                                        <option value="">10 - 20 m2</option>
+                                        <option value="">20 - 30 m2</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="row mtop">
+                                <div class="col-3">
+                                    <select name="" id="" class="select1 ">
+                                        <option value="">Số tầng</option>
+                                        <?php for ($i=1; $i <= 10 ; $i++) { 
+                                            ?>
+                                            <option value=""><?=$i?></option>
+                                            <?php
+                                        }?>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                <select name="" id="" class="select1 ">
+                                        <option value="">Số phòng ngủ</option>
+                                        <?php for ($i=1; $i <= 10 ; $i++) { 
+                                            ?>
+                                            <option value=""><?=$i?></option>
+                                            <?php
+                                        }?>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                <select name="" id="" class="select1 ">
+                                        <option value="">Số phòng vệ sinh</option>
+                                        <?php for ($i=1; $i <= 10 ; $i++) { 
+                                            ?>
+                                            <option value=""><?=$i?></option>
+                                            <?php
+                                        }?>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <select name="" id="" class="select1 ">
+                                        <option value="">Hướng nhà</option>
+                                        <option value="">Đông</option>
+                                        <option value="">Tây</option>
+                                        <option value="">Nam</option>
+                                        <option value="">Bắc</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -153,7 +251,7 @@
                             <li><a href="#">Dịch vụ 0Đ</a></li>
                         </ul>
                     </li>
-                    <li class="li-8"><a href="diem-giao-dich">Điểm giao dịch</a></li>
+                    <li class="li-8"><a href="diem-giao-dich">Đăng tin</a></li>
                     <li class="li-9 dropdown"> <a href="#" class="dropdown-toggle text-other" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">Về Team 7</a>
                         <ul class="dropdown-menu sub-menu">
                             <li><a href="#">Giới thiệu</a></li>
@@ -271,7 +369,7 @@
                             <div id="view-as-grid" class="row list-layout-0 list-item">
                                 <div class="col-6 col-lg-4">
                                     <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="../img/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
+                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
                                         <div class="divtext ">
                                             <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title">Căn hộ Singapore cho thuê trung tâm Quận 3</a></h2>
                                             <div class="imeta-1"> <b>Đ. Trần Quang Diệu, P.13, Q.3</b> </div>
@@ -1409,7 +1507,7 @@
         <!-- /.modal -->
 
         <!-- Start of Tawk.to Script-->
-        <script type=text/javascript>
+        <script type=text/javascript">
             var Tawk_API = Tawk_API || {},
                 Tawk_LoadStart = new Date();
             (function() {
@@ -1424,6 +1522,7 @@
         </script>
         <!--End of Tawk.to Script-->
         <script type="text/javascript" src="./danhsach/assets/js/app/search-listing-city-min.js?v=20.30.13.11.2020"></script>
+        <script src="./views/js/danhsach.js"></script>
 </body>
 
 </html>

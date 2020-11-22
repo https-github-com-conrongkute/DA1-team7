@@ -18,52 +18,73 @@
 </head>
 
 <body>
-    <div class=" menu1">
-        <span class="col-4 right">
-            <a href="#" class="col-3"><i class="fa fa-phone">(+84) 978 942 472</i></a>
-            <a href="#" class="col-6"><i class="fa fa-envelope">vietnam@goldenhome.com</i></a>
-        </span>
-    </div>
-    <nav class="menu-logo">
-        <div class="menu-logo-bg">
-            <div class="nav-logo">
-                <img src="img/logo.png" alt="">
+    <?php if (isset($view) == true) { ?>
+        <nav class="hienra">
+            <div class="menu-logo-bg">
+                <div class="nav-logo">
+                    <img src="../uploaded/logo.png" alt="">
+                </div>
+                <div class="nav-menu2">
+                    <ul>
+                        <li><a href="index.php">Trang chủ </a> </li>
+                        <li><a href="#">Dịch vụ </a></li>
+                        <li><a href="?ctrl=home&act=danhsach">Danh sách </a> </li>
+                        <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
+                        <li><a href="#">Liên hệ </a></li>
+                        <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
+                        <?php if (isset($_SESSION['user']) == true) { ?>
+                            <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
+                                <ul class="sub-menu">
+                                    <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
+                                    <li><a href="">Đổi mật khẩu</a></li>
+                                    <li><a href="">Căn hộ cửa tôi</a></li>
+                                    <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
+                                </ul>
+                            </li>
+                        <?php } else { ?>
+                            <li><a href="?act=dangnhap">Đăng nhập</a></li>
+                        <?php } ?>
+                    </ul>
+                </div>
             </div>
-            <div class="nav-menu">
-                <ul>
-                    <li><a href="index.php">Trang chủ </a> </li>
-                    <li><a href="#">Dịch vụ </a></li>
-                    <li><a href="?act=danhsach">Danh sách </a> </li>
-                    <li><a href="?act=about">Giới thiệu </a></li>
-                    <li><a href="#">Liên hệ </a></li>
-                    <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
-                    <?php if (isset($_SESSION['user']) == true) { ?>
-                        <li><a onclick="toogle()" onclick="toogle()" href="#"><?= $_SESSION['user'] ?></a>
-                            <ul class="sub-menu">
-                                <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
-                                <li><a href="">Đổi mật khẩu</a></li>
-                                <li><a href="">Căn hộ cửa tôi</a></li>
-                                <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
-                            </ul>
-                        </li>
-                    <?php } else { ?>
-                        <li><a href="?act=dangnhap">Đăng nhập</a>
-                        </li>
-                    <?php } ?>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <?php if (isset($view) == true) {
-        require_once $view;
-    } else { ?>
+        </nav>
+    <?php } else { ?>
         <div class="menu">
             <div class="banner">
-                <img src="img/banner9.jpg" width="100%" height="600px" alt="">
+                <img src="../uploaded/banner9.jpg" width="100%" height="600px" alt="">
             </div>
+            <nav class="menu-logo">
+                <div class="menu-logo-bg">
+                    <div class="nav-logo">
+                        <img src="../uploaded/logo.png" alt="">
+                    </div>
+                    <div class="nav-menu">
+                        <ul>
+                            <li><a href="index.php">Trang chủ </a> </li>
+                            <li><a href="#">Dịch vụ </a></li>
+                            <li><a href="?ctrl=home&act=danhsach">Danh sách </a> </li>
+                            <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
+                            <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
+                            <?php if (isset($_SESSION['user']) == true) { ?>
+                                <li><a onclick="toogle()" onclick="toogle()" href="#"><?= $_SESSION['user'] ?></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
+                                        <li><a href="">Đổi mật khẩu</a></li>
+                                        <li><a href="">Căn hộ cửa tôi</a></li>
+                                        <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
+                                    </ul>
+                                </li>
+                            <?php } else { ?>
+                                <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             <!-- <div class="nav">
             <div class="navimg">
-                <img src="img/logo.png" width="140px" alt="">
+                <img src="../uploaded/logo.png" width="140px" alt="">
             </div>
             <div class="navmenu">
                 <ul>
@@ -82,46 +103,47 @@
                 <h1 style="text-shadow: 2px 2px 2px black;">THUÊ CĂN HỘ SIÊU TỐC</h1>
                 <p>Hơn 16.000 nhà riêng, chung cư, căn hộ đang cho thuê. Cam kết luôn có 10 <br> căn hộ trong 48 giờ.</p>
             </div>
-            <div class="bao-dangky">
-                <div class="dangky">
-                    <h3>Đăng ký tìm nhà siêu tốc !</h3>
-                    <input type="text" placeholder="Họ và tên">
-                    <input type="text" placeholder="Email">
-                    <input type="text" placeholder="Số điện thoại">
-                    <input class="submit" type="submit" value="Tham gia ngay">
+            <div class="dangky">
+                <h3>Đăng ký tìm nhà siêu tốc !</h3>
+                <input type="text" placeholder="Họ và tên">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Số điện thoại">
+                <input class="submit" type="submit" value="Tham gia ngay">
+            </div>
+            <div class="dangky2">
+                <div class="text1">
+                    <h2>Tại sao nên chọn chúng tôi ?</h2>
                 </div>
-                <div class="dangky2">
-                    <div class="text1">
-                        <h2>Tại sao nên chọn chúng tôi ?</h2>
+                <div class="text2">
+                    <div class="box1">
+                        <div class="icon1">
+                            <img src="../uploaded/fast.png" alt="">
+                        </div>
+                        <a href="#">Tận tâm</a>
+                        <p>Golden luôn đồng <br> hành, hỗ trợ mọi vấn <br> đề mọi lúc trong thời <br> gian ngắn nhất.</p>
                     </div>
-                    <div class="text2">
-                        <div class="box1">
-                            <div class="icon1">
-                                <img src="img/fast.png" alt="">
-                            </div>
-                            <a href="#">Tận tâm</a>
-                            <p>Golden luôn đồng <br> hành, hỗ trợ mọi vấn <br> đề mọi lúc trong thời <br> gian ngắn nhất.</p>
+                    <div class="box1">
+                        <div class="icon1">
+                            <img src="../uploaded//guard.png" alt="">
                         </div>
-                        <div class="box1">
-                            <div class="icon1">
-                                <img src="img//guard.png" alt="">
-                            </div>
-                            <a href="#">Đáng tin cậy</a>
-                            <p>Tất cả nhà thuê <br> chính chủ, không trung <br> gian, cam kết an <br> tâm khi thuê.</p>
+                        <a href="#">Đáng tin cậy</a>
+                        <p>Tất cả nhà thuê <br> chính chủ, không trung <br> gian, cam kết an <br> tâm khi thuê.</p>
+                    </div>
+                    <div class="box1">
+                        <div class="icon1">
+                            <img src="../uploaded/like.png" alt="">
                         </div>
-                        <div class="box1">
-                            <div class="icon1">
-                                <img src="img/like.png" alt="">
-                            </div>
-                            <a href="#">Dịch vụ miễn phí</a>
-                            <p>Dịch vụ tìm nhà <br> và dẫn đi xem hoàn <br> toàn miễn phí.</p>
-                        </div>
+                        <a href="#">Dịch vụ miễn phí</a>
+                        <p>Dịch vụ tìm nhà <br> và dẫn đi xem hoàn <br> toàn miễn phí.</p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="danhsach " style="margin-top: 160px;">
+    <?php } ?>
+    <?php if (isset($view) == true) {
+        require_once $view;
+    } else { ?>
+        <div class="danhsach " >
             <div class="tieude">
                 <h3 style="font-weight: bold; color: orange;color:black;">DANH SÁCH</h3>
                 <h2 style="font-size: 30pt;">Nhà cho thuê nhiều nhất</h2>
@@ -155,7 +177,7 @@
             <div class="boxcenter">
                 <div class="canho slider1">
                     <div class="box2">
-                        <img src="img/b1.jpg" alt="">
+                        <img src="../uploaded/b1.jpg" alt="">
                         <div class="box2text">
                             <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</a>
                         </div>
@@ -168,7 +190,7 @@
                     </div>
 
                     <div class="box2">
-                        <img src="img/b2.jpg" alt="">
+                        <img src="../uploaded/b2.jpg" alt="">
                         <div class="box2text">
                             <a data-toggle="modal" data-target="#myModal" href="#">Cho Thuê Căn Hộ Chung Cư Tháp Mười Vừa Sửa Sang Mới Đẹp P2 Q6 </a>
                         </div>
@@ -180,7 +202,7 @@
                         </div>
                     </div>
                     <div class="box2">
-                        <img src="img/b3.jpg" alt="">
+                        <img src="../uploaded/b3.jpg" alt="">
                         <div class="box2text">
                             <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
                         </div>
@@ -192,7 +214,7 @@
                         </div>
                     </div>
                     <div class="box2">
-                        <img src="img/b3.jpg" alt="">
+                        <img src="../uploaded/b3.jpg" alt="">
                         <div class="box2text">
                             <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
                         </div>
@@ -204,7 +226,7 @@
                         </div>
                     </div>
                     <div class="box2" style="margin-right: 30px;">
-                        <img src="img/b3.jpg" alt="">
+                        <img src="../uploaded/b3.jpg" alt="">
                         <div class="box2text">
                             <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
                         </div>
@@ -219,7 +241,7 @@
                 </div>
                 <div class="canho slider2">
                     <div class="box2">
-                        <img src="img/b4.jpg" alt="">
+                        <img src="../uploaded/b4.jpg" alt="">
                         <div class="box2text">
                             <a href="#">Cho thuê căn hộ dịch vụ Quận Bình Thạnh - Hẻm Nguyễn Xí</a>
                         </div>
@@ -231,7 +253,7 @@
                         </div>
                     </div>
                     <div class="box2">
-                        <img src="img/b5.png" alt="">
+                        <img src="../uploaded/b5.png" alt="">
                         <div class="box2text">
                             <a href="#">Cho thuê căn hộ dịch vụ - CityLand Park Hill - Quận Gò Vấp</a>
                         </div>
@@ -243,7 +265,7 @@
                         </div>
                     </div>
                     <div class="box2">
-                        <img src="img/b6.jpg" alt="">
+                        <img src="../uploaded/b6.jpg" alt="">
                         <div class="box2text">
                             <a href="#">Cho thuê Văn Phòng Tầng 5 đường Ung Văn Khiêm - Phường 25 – Bình Thạnh</a>
                         </div>
@@ -255,7 +277,7 @@
                         </div>
                     </div>
                     <div class="box2">
-                        <img src="img/b6.jpg" alt="">
+                        <img src="../uploaded/b6.jpg" alt="">
                         <div class="box2text">
                             <a href="#">Cho thuê Văn Phòng Tầng 5 đường Ung Văn Khiêm - Phường 25 – Bình Thạnh</a>
                         </div>
@@ -267,7 +289,7 @@
                         </div>
                     </div>
                     <div class="box2" style="margin-right: 30px;">
-                        <img src="img/b6.jpg" alt="">
+                        <img src="../uploaded/b6.jpg" alt="">
                         <div class="box2text">
                             <a href="#">Cho thuê Văn Phòng Tầng 5 đường Ung Văn Khiêm - Phường 25 – Bình Thạnh</a>
                         </div>
@@ -286,7 +308,7 @@
             </div>
         </div>
         <div class="gioithieu">
-            <img src="img/gioithieu.jpg" alt="">
+            <img src="../uploaded/gioithieu.jpg" alt="">
             <div class="textgt">
                 <h1 style="color: white; font-weight: bold;">Về chúng tôi</h1>
                 Đội ngũ chuyên viên tư vấn của chúng tôi với kinh nghiệm dày dặn và nắm vững thị trường sẽ giúp bạn tìm kiếm căn hộ phù hợp với nhu cầu của bạn. Bạn chỉ cần đưa ra thông tin, chúng tôi sẽ tư vấn hỗ trợ bạn tìm ra căn hộ như mình mong muốn. Tùy theo diện
@@ -295,102 +317,97 @@
                 tối giản với 3 tông màu tối đa trong căn phòng.
             </div>
         </div>
-        <div class="row2 mt">
-            <div class="thuenha">
-                <div class="tieude2">
-                    <h3 style="font-weight: bold;">LÀM SAO</h3>
-                    <h2>Thuê nhà với Golden Home ?</h2>
+        <div class="thuenha">
+            <div class="tieude2">
+                <h3 style="font-weight: bold;">LÀM SAO</h3>
+                <h2>Thuê nhà với Golden Home ?</h2>
+            </div>
+            <div class="thuenhatext">
+                <div class="box3">
+                    <div class="box-img">
+                        <img src="../uploaded/sale.png" alt="">
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">Điền form đăng ký</a>
+                        <p>Để lại SĐT, email để Propzy liên hệ tư vấn</p>
+                    </div>
                 </div>
-                <div class="thuenhatext">
-                    <div class="box3">
-                        <div class="box-img">
-                            <img src="img/sale.png" alt="">
-                        </div>
-                        <div class="thuenhatext-text">
-                            <a href="#">Điền form đăng ký</a>
-                            <p>Để lại SĐT, email để Propzy liên hệ tư vấn</p>
-                        </div>
+                <div class="box3">
+                    <div class="box-img">
+                        <img src="../uploaded/address.png" alt="">
                     </div>
-                    <div class="box3">
-                        <div class="box-img">
-                            <img src="img/address.png" alt="">
-                        </div>
-                        <div class="thuenhatext-text">
-                            <a href="#">Propzy tìm nhà giúp</a>
-                            <p>Golden tìm kiếm nhà thuê theo khu vực và nhu cầu của bạn</p>
-                        </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">Propzy tìm nhà giúp</a>
+                        <p>Golden tìm kiếm nhà thuê theo khu vực và nhu cầu của bạn</p>
                     </div>
-                    <div class="box3">
-                        <div class="box-img">
-                            <img src="img/clock.png" alt="">
-                        </div>
-                        <div class="thuenhatext-text">
-                            <a href="#">Xem nhà trong vòng 48h</a>
-                            <p>Dẫn bạn đi xem nhà trong vòng 48h</p>
-                        </div>
+                </div>
+                <div class="box3">
+                    <div class="box-img">
+                        <img src="../uploaded/clock.png" alt="">
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">Xem nhà trong vòng 48h</a>
+                        <p>Dẫn bạn đi xem nhà trong vòng 48h</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row2 mt">
-            <div class="thuenha">
-                <div class="tieude3">
-                    <h2>Khách hàng nói gì về Golden Home ?</h2>
-                </div>
-                <div class="thuenhatext slider">
-                    <div class="box5">
-                        <div class="box-img">
-                            <img src="img/avt.PNG" alt="">
-                        </div>
-                        <div class="thuenhatext-text">
-                            <a href="#">Selena Gomez</a>
-                            <p>“Nếu không thể bán ngay tôi cũng có thể cho thuê đầu tư dài hạn mà không bao giờ sợ lỗ”</p>
-                        </div>
+        <div class="thuenha">
+            <div class="tieude3">
+                <h2>Khách hàng nói gì về Golden Home ?</h2>
+            </div>
+            <div class="thuenhatext slider">
+                <div class="box5">
+                    <div class="box-img">
+                        <img src="../uploaded/avt.PNG" alt="">
                     </div>
-                    <div class="box5">
-                        <div class="box-img">
-                            <img src="img/avt.PNG" alt=""> <br>
-                        </div>
-                        <div class="thuenhatext-text">
-                            <a href="#">Charlie Puth</a> <br>
-                            <p>"Rất ok. Lần sau chắc chắn sẽ ghé lại đây. view đẹp, giá rẻ, ngay trung tâm."
-                            </p>
-                        </div>
-                    </div>
-                    <div class="box5">
-                        <div class="box-img">
-                            <img src="img/avt.PNG" alt=""> <br>
-                        </div>
-                        <div class="thuenhatext-text">
-                            <a href="#">T-ARA</a> <br>
-                            <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
-                        </div>
-                    </div>
-                    <div class="box5">
-                        <div class="box-img">
-                            <img src="img/avt.PNG" alt=""> <br>
-                        </div>
-                        <div class="thuenhatext-text">
-                            <a href="#">T-ARA</a> <br>
-                            <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
-                        </div>
-                    </div>
-                    <div class="box5">
-                        <div class="box-img">
-                            <img src="img/avt.PNG" alt=""> <br>
-                        </div>
-                        <div class="thuenhatext-text">
-                            <a href="#">T-ARA</a> <br>
-                            <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
-                        </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">Selena Gomez</a>
+                        <p>“Nếu không thể bán ngay tôi cũng có thể cho thuê đầu tư dài hạn mà không bao giờ sợ lỗ”</p>
                     </div>
                 </div>
+                <div class="box5">
+                    <div class="box-img">
+                        <img src="../uploaded/avt.PNG" alt=""> <br>
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">Charlie Puth</a> <br>
+                        <p>"Rất ok. Lần sau chắc chắn sẽ ghé lại đây. view đẹp, giá rẻ, ngay trung tâm."
+                        </p>
+                    </div>
+                </div>
+                <div class="box5">
+                    <div class="box-img">
+                        <img src="../uploaded/avt.PNG" alt=""> <br>
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">T-ARA</a> <br>
+                        <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                    </div>
+                </div>
+                <div class="box5">
+                    <div class="box-img">
+                        <img src="../uploaded/avt.PNG" alt=""> <br>
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">T-ARA</a> <br>
+                        <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                    </div>
+                </div>
+                <div class="box5">
+                    <div class="box-img">
+                        <img src="../uploaded/avt.PNG" alt=""> <br>
+                    </div>
+                    <div class="thuenhatext-text">
+                        <a href="#">T-ARA</a> <br>
+                        <p>Phòng ốc vị trí thuận lợi , nhân viên tư vấn nhiệt tình</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-        <div class="row2">
         <div class="tuvan">
             <div class="tuvanimg">
-                <img src="img/banner-f.jpg" width="100%" alt="">
+                <img src="../uploaded/banner-f.jpg" width="100%" alt="">
                 <div class="tuvantext">
                     <h1>Bạn vẫn chưa tìm được nhà ưng ý?</h1>
                     <p>Còn rất nhiều nhà riêng, căn hộ, chung cư chưa được đăng lên, hãy để Propzy tư vấn chọn
@@ -401,17 +418,16 @@
                 </div>
             </div>
         </div>
-        </div>
     <?php } ?>
     <footer class="footer">
         <div class="box4 b1">
-            <img src="img/logo.png" alt="">
+            <img src="../uploaded/logo.png" alt="">
             <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
             <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
         </div>
         <div class="box4 b2">
             <div class="tieude4">
-                <h4>Danh sách thuê nhà</h4>
+                <h4>Danh sách các quận</h4>
             </div>
             <div class="textquan">
                 <div class="quan1 l1">
@@ -452,20 +468,20 @@
                 <!-- Modal content-->
                 <div class="divimg">
                     <div class="imglon">
-                        <img id="images" src="img/b3.jpg" width="100%" height="280px" alt="">
+                        <img id="images" src="../uploaded/b3.jpg" width="100%" height="280px" alt="">
                     </div>
                     <div class="divnho">
                         <div class="imgnho nho1">
-                            <img src="img/b1.jpg" alt="" onclick="showimages(1)">
+                            <img src="../uploaded/b1.jpg" alt="" onclick="showimages(1)">
                         </div>
                         <div class="imgnho">
-                            <img src="img/b2.jpg" alt="" onclick="showimages(2)">
+                            <img src="../uploaded/b2.jpg" alt="" onclick="showimages(2)">
                         </div>
                         <div class="imgnho">
-                            <img src="img/b4.jpg" alt="" onclick="showimages(3)">
+                            <img src="../uploaded/b4.jpg" alt="" onclick="showimages(3)">
                         </div>
                         <div class="imgnho">
-                            <img src="img/b5.png" alt="" onclick="showimages(4)">
+                            <img src="../uploaded/b5.png" alt="" onclick="showimages(4)">
                         </div>
                     </div>
                 </div>

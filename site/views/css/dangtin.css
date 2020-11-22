@@ -43,7 +43,7 @@ body {
 }
 
 .nav-logo {
-    width: 10%;
+    width: 30%;
     float: left;
     height: 80px;
 }
@@ -109,7 +109,7 @@ body {
 .nav-menu>ul {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .nav-menu>ul>li {
@@ -123,7 +123,6 @@ body {
 
 .nav-menu>ul>li>a {
     color: rgb(0, 0, 0) !important;
-    font-size: 12pt;
     font-family: 'Roboto', sans-serif;
     /* font-weight: bold; */
     text-decoration: none;
@@ -131,8 +130,11 @@ body {
 }
 
 .menu-logo-bg {
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
+    /* margin-top: 20px; */
+    position: relative;
+    left: 5%;
+    top: 0;
 }
 
 .menutimkiem {
@@ -219,6 +221,10 @@ body {
     border: none;
 }
 
+.mtop {
+    margin-top: 40px;
+}
+
 
 /* slide */
 
@@ -231,10 +237,6 @@ body {
     width: 100%;
     margin-top: 130px;
     height: 500px;
-}
-
-.mtop {
-    margin-top: 40px;
 }
 
 .dangtin {
