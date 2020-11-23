@@ -124,7 +124,7 @@
                     </div>
                     <div class="box1">
                         <div class="icon1">
-                            <img src="../uploaded//guard.png" alt="">
+                            <img src="../uploaded/guard.png" alt="">
                         </div>
                         <a href="#">Đáng tin cậy</a>
                         <p>Tất cả nhà thuê <br> chính chủ, không trung <br> gian, cam kết an <br> tâm khi thuê.</p>
@@ -176,7 +176,7 @@
             </div>
             <div class="boxcenter">
                 <div class="canho slider1">
-                    <div class="box2">
+                    <div class="box2" >
                         <img src="../uploaded/b1.jpg" alt="">
                         <div class="box2text">
                             <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</a>
@@ -303,7 +303,7 @@
 
                 </div>
                 <div class="xemthem">
-                    <a href="#">Xem thêm </a>
+                    <a href="?ctrl=home&act=danhsach">Xem thêm </a>
                 </div>
             </div>
         </div>

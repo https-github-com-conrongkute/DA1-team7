@@ -37,11 +37,14 @@ switch ($act) {
         header("location: index.php");
       } else {
         $message = 'Đăng nhập thất bại !';
-        header("location: index.php?act=dangnhap");
+        require_once 'views/login.php';
+   
       }
-    } else {
+    }
+     else {
       $message = 'Sai tài khoản hoặc mật khẩu !';
     }
+    require_once 'views/login.php';
     break;
     //dang xuat
   case 'dangxuat':

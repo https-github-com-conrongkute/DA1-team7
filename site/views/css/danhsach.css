@@ -410,10 +410,10 @@ body {
 /* item 2 */
 
 .form-timkiem {
-    width: 100%;
+    width: 98%;
     height: 350px;
     background-color: white;
-    box-shadow: 2px 3px 4px #5c8a8a;
+    box-shadow: 0 2px 13px rgba(0, 0, 0, .1);
     margin: 10px 0px;
     margin-bottom: 40px;
 }
@@ -948,4 +948,12 @@ input[type="date"] {
 
 .imeta-2 {
     font-size: 9pt;
+}
+
+.col-lg-4 {
+    height: 420px;
+}
+
+.page-numbers {
+    color: orangered;
 }

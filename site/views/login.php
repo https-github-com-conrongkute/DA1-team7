@@ -75,6 +75,10 @@
                 <input type="password" placeholder="Mật khẩu" name="pass" />
                 <a href="#">quên mật khâu ?</a>
                 <button type="submit">Đăng nhập</button>
+                <p>
+                <?php if (isset($message)&&($message!="")) {
+                    echo $message;
+                }?></p>
             </form>
         </div>
         <div class="overlay-container">
