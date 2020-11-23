@@ -41,6 +41,19 @@ switch ($act) {
             }else{
                 $thongbao = true;
             }
+            //check lỗi số điện thoại
+            if (strlen($sdt)==0) {
+                $sdt_tt ="<span>không để trống !</span>";
+                $thongbao= false;
+            }
+            elseif(strlen($sdt) > 10 || strlen($sdt) < 10 || substr("".$sdt."",0,1) != 0 ){
+                $sdt_tt ="<span>Số điện thoại không đúng!</span>";
+                $thongbao= false;
+            }
+            
+            else{
+                $thongbao=true;
+            }
             // check lỗi email
             if(strlen($email)==0){
                 $thongbao = false;
@@ -159,11 +172,11 @@ switch ($act) {
         if(isset($_GET['ten_dn'])==true){
             $ten_dn = $_GET['ten_dn'];
             if(checktk($ten_dn)){
-                echo "<p>Tên đăng nhập đã tồn tại !</p>";
+                echo "<span>Tên đăng nhập đã tồn tại !</span>";
             }elseif (strlen($ten_dn) == 0) {
                 echo "<span>Không để trống !</span>";
             } else {
-                echo "<span  style='background-color: green;'>Bạn có thể dùng tên này</span>";
+                echo "<span style='background-color: green;'>Bạn có thể dùng tên tài khoản này</span>";
             }
         }
         if(isset($_GET['sdt'])==true){
@@ -172,8 +185,8 @@ switch ($act) {
                 echo "<span>Số điện thoại đã tồn tại !</span>";
             }elseif(strlen($sdt)==0){
                 echo "<span>Không để trống !</span>";
-            }else{
-                echo "<span style='background-color: green;'>Bạn có thể dùng số diện thoại này này </span>";
+            }elseif(strlen($sdt) > 10 || strlen($sdt) < 10 || substr("".$sdt."",0,1) != 0){
+                echo "<span>Số điện thoại không đúng</span>";
             }
         }
         if(isset($_GET['pass'])==true){

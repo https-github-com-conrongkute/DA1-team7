@@ -535,7 +535,7 @@
             <i data-dismiss="modal" class="glyphicon glyphicon-remove"></i>
             <h1>ĐẶT LỊCH XEM</h1>
             <input class="ipdl1" type="text" placeholder="Họ và tên"> <br>
-            <input class="ipdl2" type="number" placeholder="Số điện thoại">
+            <input class="ipdl2" type="number" id="sdt" placeholder="Số điện thoại">
             <input class="ipdl3" type="email" placeholder="Địa chỉ Email"> <br>
             <input class="ipdl4" type="date" placeholder="Chọn ngày">
 
