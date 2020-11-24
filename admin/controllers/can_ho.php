@@ -1,8 +1,10 @@
 <?php
+session_start();
 require_once "../system/config.php";
 require_once "models/can_ho.php";
 require_once "models/loai_can.php";
 require_once "models/quan.php";
+require_once "models/tai_khoan.php";
 
 $act = "index";
 if(isset($_GET['act'])==true) $act = $_GET['act'];
@@ -170,6 +172,13 @@ switch ($act) {
             $ma_can=$_GET["ma_can"];
             settype($ma_can, "int");
             deletecanho($ma_can);
+            header("location: ".ADMIN_URL."/?ctrl=can_ho&act=index");
+        break;
+        case 'duyetbai':
+            $ma_can=$_GET["ma_can"];
+            settype($ma_can, "int");
+            $an_hien=1;
+            duyetcanho($ma_can, $an_hien);
             header("location: ".ADMIN_URL."/?ctrl=can_ho&act=index");
         break;
 

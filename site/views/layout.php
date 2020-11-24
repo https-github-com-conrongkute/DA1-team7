@@ -66,9 +66,9 @@
                             <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                             <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                             <?php if (isset($_SESSION['user']) == true) { ?>
-                                <li><a onclick="toogle()" onclick="toogle()" href="#"><?= $_SESSION['user'] ?></a>
+                                <li><a onclick="toogle()" onclick="toogle()" href="#"><?= $_SESSION['user'] ?> <i class="fa fa-caret-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
+                                        <li><a href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>">Thông tin tài khoản</a></li>
                                         <li><a href="">Đổi mật khẩu</a></li>
                                         <li><a href="">Căn hộ cửa tôi</a></li>
                                         <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>

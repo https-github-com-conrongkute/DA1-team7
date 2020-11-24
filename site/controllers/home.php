@@ -7,6 +7,8 @@ switch ($act) {
     require_once 'views/layout.php';
     break;
   case 'thongtintk':
+    $ma_tk=$_GET['ma_tk'];
+    $canhodadang= canhodadang($ma_tk);
     $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
     break;
@@ -27,7 +29,7 @@ switch ($act) {
       $_SESSION['name'] = $checktk['ho_ten'];
       $_SESSION['email'] = $checktk['email'];
       $_SESSION['id'] = $checktk['ma_tk'];
-      $_SESSION['hinh'] = $checktk['hinh'];
+      $_SESSION['shinh'] = $checktk['hinh'];
       $_SESSION['mat_khau'] = $checktk['mat_khau'];
       $_SESSION['vai_tro'] = $checktk['vai_tro'];
       $_SESSION['sdt'] = $checktk['sdt'];
