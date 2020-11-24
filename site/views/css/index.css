@@ -7,7 +7,16 @@
 a {
     text-decoration: none;
 }
-
+.thongbao-datlic{
+    width: 30%;
+    margin-right:  20px;
+    float: right;
+}
+.ch-dd{
+    width: calc(100% - 20px);
+    float: left;
+    margin-right: 20px;
+}
 body {
     width: 100%;
     font-family: "Sf ui display", sans-serif;
@@ -155,7 +164,7 @@ label{
     margin: 10px 0px;
 }
 .form-tk{
-    width: 40%;
+    width: 60%;
     margin: 0px 20px;
     float: left;
 }

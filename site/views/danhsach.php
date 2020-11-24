@@ -106,16 +106,16 @@
                         </ul>
                     </li>
                         <li><a href="#"><span></span></a></li>
-                        <li><a href="#" style="color: orangered;">Danh sách</a></li>
-                        <li><a href="#"><span>Đăng tin</span></a></li>
-                        <li><a href="#"><span>Giới thiệu</span></a></li>
+                        <li><a href="?ctrl=home&act=danhsach" style="color: orangered;">Danh sách</a></li>
+                        <li><a href="?ctrl=home&act=dangtin"><span>Đăng tin</span></a></li>
+                        <li><a href="?ctrl=home&act=about"><span>Giới thiệu</span></a></li>
                     </ul>
                 </div>
                 <div class="group-header">
 
 
                     <div class="item">
-                        <a href="#" class="btn" data-toggle="modal" data-target="#popup-login"> <i class="fa fa-user"></i> Đăng nhập</a>
+                        <a href="?ctrl=home&act=dangnhap" class="btn" > <i class="fa fa-user"></i> Đăng nhập</a>
                     </div>
                     <div href="#menu-toggle" id="menu-toggle" class="item imenu"> <span class="menu-btn x"><span></span></span>
                     </div>

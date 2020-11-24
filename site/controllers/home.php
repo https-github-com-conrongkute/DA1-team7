@@ -89,4 +89,12 @@ switch ($act) {
   case 'chitiet':
     require_once 'views/chitiet.php';
   break;
+  case 'ch-dd':
+    $view = 'views/canhodadang.php';
+    require_once 'views/layout.php';
+  break;
+  case 'ds-ld':
+    $view = 'views/dslich_dat.php';
+    require_once 'views/layout.php';
+  break;
 }
