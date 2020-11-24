@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE HTML>
 <html lang="vi">
 <html prefix="og: http://ogp.me/ns#">
@@ -45,45 +46,41 @@
         })(window, document, 'script', 'dataLayer', 'GTM-MH7WSC');
     </script>
     <!-- End Google Tag Manager -->
+=======
+<!DOCTYPE html>
+<html lang="en">
+>>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
     <link rel="stylesheet" href="./danhsach/assets/css/app/search.css?ver=20.30.13.11.2020" async/>
-    <script src="sdks/OneSignalSDK.js" defer></script>
-    <script>
-        var version = "20.30.13.11.2020";
-        var keysGoogle = "AIzaSyDJ2xydBginE0QUgScAZvYljT2-1SuEAWM";
-        var isLogin = false,
-            userInfo = null;
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(function() {
-            OneSignal.init({
-                appId: 'd75bfbf5-fbf8-4557-ad36-4e9339307780',
-                autoRegister: true,
-                notifyButton: {
-                    enable: false
-                },
-                promptOptions: {
-                    actionMessage: "Nhận thông tin mới nhất về Bất động sản từ Propzy!",
-                    acceptButtonText: "Đồng ý",
-                    cancelButtonText: "Bỏ qua"
-                }
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="./views/css/danhsach.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </head>
 
-<body itemscope="" itemtype="http://schema.org/Website" class="page-desktop thue/can-ho/hcm searchListingCity chrome">
-    <script type="text/javascript">
-        var url_active = "thue/can-ho/hcm";
-    </script>
-    <!-- Google Tag Manager (noscript) --><noscript><iframe src="ns.html?id=GTM-MH7WSC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <div id="wrapper">
-        <!-- <div id="panel">
-            <div class="container">
-                <div class="meta">
-                    <a href="tel:*4663"> <i class="fa fa-phone"></i> *4663</a>
-                    <a href="mailto:vietnam@propzy.com?Subject=Liên hệ"> <i class="fa fa-envelope"></i> vietnam@propzy.com </a>
+<body>
+    <!-- <div class="menu">
+        <div class="banner">
+            <img src="site/./uploaded/banner9.jpg" width="100%" height="600px" alt="">
+        </div>
+        <nav class="menu-logo">
+            <div class="menu-logo-bg">
+                <div class="nav-logo">
+                    <img src="./uploaded/logo.png" alt="">
                 </div>
+<<<<<<< HEAD
             </div>
         </div> -->
         <header id="header" class="fixe"  role="banner">
@@ -238,9 +235,57 @@
                             <li><a href="#">Căn hộ</a></li>
                             <li><a href="#">Phòng trọ</a></li>
 
+=======
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="#">Trang chủ </a> </li>
+                        <li><a href="#">Dịch vụ </a></li>
+                        <li><a href="#">Danh sách </a> </li>
+                        <li><a href="#">Giới thiệu </a></li>
+                        <li><a href="#">Liên hệ </a></li>
+                        <li><a href="#">Đăng nhập </a></li>
+                        <li><a href="#" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div> -->
+    <header>
+        <div class=" menu1">
+            <span class="col-4 right">
+                <a href="#" class="col-3"><i class="fa fa-phone">(+84) 978 942 472</i></a>
+                <a href="#" class="col-6"><i class="fa fa-envelope">vietnam@goldenhome.com</i></a>
+            </span>
+        </div>
+>>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
 
+    </header>
+    <nav class="menu-logo">
+        <div class="menu-logo-bg">
+            <div class="nav-logo">
+                <img src="../uploaded/logo.png" alt="">
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.php">Trang chủ </a> </li>
+                    <li><a href="#">Dịch vụ </a></li>
+                    <li><a href="?ctrl=home&act=danhsach">Danh sách nhà thuê</a> </li>
+                    <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
+                    <li><a href="#">Liên hệ </a></li>
+                    <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
+                    <?php if (isset($_SESSION['user']) == true) { ?>
+                    <li>
+                        <a href="#" onclick="toogle()">
+                            <?= $_SESSION['user'] ?>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
+                            <li><a href="">Đổi mật khẩu</a></li>
+                            <li><a href="">Căn hộ cửa tôi</a></li>
+                            <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
                         </ul>
                     </li>
+<<<<<<< HEAD
                     <li class="li-3"><a href="#" id="nav-du-an">Dự án</a></li>
                     <li class="li-6"><a href="#">Tin tức</a></li>
                     <li class="li-15"><a href="#">Giá nhà đất</a></li>
@@ -257,114 +302,53 @@
                             <li><a href="#">Giới thiệu</a></li>
                         </ul>
                     </li>
+=======
+                    <?php } else { ?>
+                    <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a></li>
+                    <?php } ?>
+>>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
                 </ul>
-                <div class="bl-hotline">
-                    <p class="title-hotline"> Hotline <a href="#" itemprop="telephone" class="phone">*****</a> </p>
-                </div>
-
             </div>
-            <!-- /#sidebar-wrapper -->
-
-            <script type="text/javascript">
-                var options = {
-                    "listingTypeList": 2,
-                    "propertyList": "1",
-                    "directionList": "1,2,3,4,5,6,7,8",
-                    "minSize": 0,
-                    "maxSize": 999999,
-                    "minBedroom": 0,
-                    "maxBedroom": "99",
-                    "minBathroom": 0,
-                    "maxBathroom": "99",
-                    "minNumberFloor": null,
-                    "maxNumberFloor": null,
-                    "minPrice": 0,
-                    "maxPrice": "1000000000000000",
-                    "position": null,
-                    "currencyCode": "VND",
-                    "minAlley": null,
-                    "maxAlley": null,
-                    "minYearBuilt": 0,
-                    "maxYearBuilt": 9999,
-                    "statusListing": null,
-                    "cityIds": 1,
-                    "wardIds": null,
-                    "districtIds": null,
-                    "forMap": false,
-                    "guaranteed": 0,
-                    "locations": null,
-                    "keyword": null,
-                    "streetIds": null,
-                    "typePrice": "1"
-                };
-                var dataPost = {
-                    "filter": {
-                        "listingTypeList": 2,
-                        "propertyList": "1",
-                        "directionList": "1,2,3,4,5,6,7,8",
-                        "minSize": 0,
-                        "maxSize": 999999,
-                        "minBedroom": 0,
-                        "maxBedroom": "99",
-                        "minBathroom": 0,
-                        "maxBathroom": "99",
-                        "minNumberFloor": null,
-                        "maxNumberFloor": null,
-                        "minPrice": 0,
-                        "maxPrice": "1000000000000000",
-                        "position": null,
-                        "currencyCode": "VND",
-                        "minAlley": null,
-                        "maxAlley": null,
-                        "minYearBuilt": 0,
-                        "maxYearBuilt": 9999,
-                        "statusListing": null,
-                        "cityIds": 1,
-                        "wardIds": null,
-                        "districtIds": null,
-                        "forMap": false,
-                        "guaranteed": 0,
-                        "locations": null,
-                        "keyword": null,
-                        "streetIds": null,
-                        "typePrice": "1"
-                    },
-                    "additional": {
-                        "paging": {
-                            "limit": 30,
-                            "page": 1
-                        },
-                        "ordering": {
-                            "name": null,
-                            "operator": null,
-                            "orderType": 5
-                        }
-                    }
-                };
-                var totalPages = 211;
-            </script>
-            <!-- breabbrumb -->
-
-            <main id="main" class="sec-tb page-listing search-page-listing">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-8">
-                            <p> Có <strong class="cl1">6317 BĐS</strong> </p>
-                            <div class="entry-head-3">
-                                <h1 class="ht"> <span class="ht1 efch-1 ef-img-l">Cho thuê chung cư / căn hộ</span>
-                                    <div class="ht2 efch-2 ef-img-l">TP.HCM</div>
-                                </h1>
-                                <div class="group-header">
-                                    <div class="item"> <select class="select sort">
-                                     <option val="">Sắp xếp</option> 
-                                     <option value="1" >Giá từ thấp đến cao</option> 
-                                     <option value="2" >Giá từ cao xuống thấp</option> 
-                                     <option value="3" >Diện tích từ nhỏ đến lớn</option> 
-                                     <option value="4" >Diện tích từ lớn đến nhỏ</option> 
-                                     </select>
-                                    </div>
-                                </div>
+        </div>
+        <div class="menutimkiem w-100  position-relative">
+            <a href="#" onclick="showtimkiem()" id="an">Tìm kiếm <i class="fa fa-search"></i></a>
+            <a href="#" onclick="exit()" id="hien">Tìm kiếm <i class="fa fa-close"></i></a>
+            <div class="w-100 boxtim position-absolute" id="showtim">
+                <!--Tiềm kiếm ẩn-->
+                <div class="tiemkiemtrong">
+                    <h4>Thuê</h4>
+                    <form action="" class="formtimkiem1">
+                        <div class="row mtop">
+                            <div class="col-3">
+                                <select name="" id="" class="w-75 select pad" style="font-size: 10pt;">
+                                        <option value="">Căn hộ/Chung cư</option>
+                                        <option value="">Nhà ở</option>
+                                    </select>
                             </div>
+                            <div class="col-6">
+                                <input type="text" class="w-100 select2 pad" style="border: none; font-size: 12pt; height: 50px; border-bottom: 1px gray solid;" placeholder="Nhập địa chỉ để tiềm kiếm căn hộ...">
+                            </div>
+                            <div class="col-3">
+                                <button class="w-75 select2 bgcam" style="font-size: 10pt; color: white;">Tìm kiếm <i class="fa fa-search"></i></button>
+                            </div>
+                            <!--Thành phố quận huyện-->
+
+                        </div>
+                        <div class="row mtop">
+                            <div class="col-3">
+                                <select name="" id="" class="select1 " style="font-size: 10pt;">
+                                        <option value="">Tp Hồ Chí minh</option>
+
+                                    </select></div>
+                            <div class="col-3">
+                                <select name="" id="" class="select1 " style="font-size: 10pt;">
+                                        <option value="">Quận/Huyện</option>
+                                        <option value="">Quận 1</option>
+                                        <option value="">Quận 2</option>
+                                        <option value="">Quận 3</option>
+                                    </select>
+                            </div>
+<<<<<<< HEAD
                             <!-- mua/thuê -->
                             <div id="view-as-grid" class="row list-layout-0 list-item">
                                 <div class="col-6 col-lg-4">
@@ -533,10 +517,257 @@
                                         <a href="#"> </a>
                                     </div>
                                 </div>
+=======
+                            <div class="col-3">
+                                <select name="" id="" class="select1" style="font-size: 10pt;">
+                                        <option value="">Mức giá</option>
+                                        <option value="">Dưới 3 triệu</option>
+                                        <option value="">3 triệu - 5 triệu</option>
+                                        <option value="">5 triệu - 8 triệu</option>
+                                        <option value="">8 triệu - 10 triệu</option>
+                                        <option value="">10 triệu - 15 triệu</option>
+                                        <option value="">15 triệu - 20 triệu</option>
+                                        <option value="">Trên 20 triệu</option>
+                                    </select>
+>>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
+                            </div>
+                            <div class="col-3">
+                                <select name="" id="" class="select1 " style="font-size: 10pt;">
+                                        <option value="">Diện tích</option>
+                                        <option value="">10 - 20 m2</option>
+                                        <option value="">20 - 30 m2</option>
+                                    </select>
                             </div>
 
-                            <!-- paging -->
-                            <div class="pages">
+                        </div>
+                        <div class="row mtop">
+                            <div class="col-3">
+                                <select name="" id="" class="select1 " style="font-size: 10pt;">
+                                        <option value="">Số tầng</option>
+                                        <?php for ($i=1; $i <= 10 ; $i++) { 
+                                            ?>
+                                            <option value=""><?=$i?></option>
+                                            <?php
+                                        }?>
+                                    </select>
+                            </div>
+                            <div class="col-3">
+                                <select name="" id="" class="select1 " style="font-size: 10pt;">
+                                        <option value="">Số phòng ngủ</option>
+                                        <?php for ($i=1; $i <= 10 ; $i++) { 
+                                            ?>
+                                            <option value=""><?=$i?></option>
+                                            <?php
+                                        }?>
+                                    </select>
+                            </div>
+                            <div class="col-3">
+                                <select name="" id="" class="select1 " style="font-size: 10pt;">
+                                        <option value="">Số phòng vệ sinh</option>
+                                        <?php for ($i=1; $i <= 10 ; $i++) { 
+                                            ?>
+                                            <option value=""><?=$i?></option>
+                                            <?php
+                                        }?>
+                                    </select>
+                            </div>
+                            <div class="col-3">
+                                <select name="" id="" class="select1 " style="font-size: 10pt;">
+                                        <option value="">Hướng nhà</option>
+                                        <option value="">Đông</option>
+                                        <option value="">Tây</option>
+                                        <option value="">Nam</option>
+                                        <option value="">Bắc</option>
+                                    </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- đây là phần show sản phẩm lên có hình ảnh và có tên,giá,id -->
+
+    <div id="wrapper" style="margin-top: 150px;">
+        <div class="item1">
+       
+                                    <div class="row" style="margin-bottom: 10px; border-bottom: 1px gainsboro solid; height: 35px;">
+                                    <div class="col-6"><h2 style="font-weight: bold; color: orangered; font-family: sans-serif;">// DANH SÁCH CÁC CĂN HỘ QUẬN 3 </h2></div>
+                                    <div class="col-6"><select name="" id="" class="form-control" style="width: 70%; float: right; font-size: 10pt;">
+                                        <option value="">Sắp xếp</option>
+                                        <option value="">Tăng dần</option>
+                                        <option value="">Giảm dần</option>
+                                </select></div>
+                                    </div>
+               
+            <div id="view-as-grid" class="row list-layout-0 list-item">
+                <div class="col-6 col-lg-4" >
+                    <div class="item is-feature">
+                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
+                        <div class="divtext " >
+                            <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title">Căn hộ Singapore cho thuê trung tâm Quận 3</a></h2>
+                            <div class="imeta-1"> <b>Đ. Trần Quang Diệu, P.13, Q.3</b> </div>
+                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
+                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
+                                <div class="price2"><b>188,9 ngàn/m²</b></div>
+                            </div>
+                            <div class="wprice">
+                                <div class="imeta-2"> <span><b>8,5 triệu</b></span> <span><b>45 m²</b></span> </div>
+                                <div link="thue/can-ho/hcm/quan-3/id277377" listingid="277377" object='{"id":277377 }' class="btnlike  save-listing save-listing-277377"> <span> </span> </div>
+                            </div>
+                        </div>
+                        <a href="#"> </a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <div class="item is-feature">
+                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b2.jpg" alt="Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất"> </a>
+                        <div class="divtext ">
+                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất</a></h2>
+                            <div class="imeta-1"> <b>Đ. Võ Thị Sáu, P.8, Q.3</b> </div>
+                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
+                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span> 
+                                <div class="price2"><b>219,5 ngàn/m²</b></div>
+                            </div>
+                            <div class="wprice" style="margin-top: -50px;">
+                                <div class="imeta-2"> <span><b>9 triệu</b></span> <span><b>41 m²</b></span> </div>
+                                <div link="thue/can-ho/hcm/quan-3/id277418" listingid="277418" object='{"id":277418 }' class="btnlike  save-listing save-listing-277418"> <span> </span> </div>
+                            </div>
+                            <!-- Phường -->
+                            
+                        </div>
+                        <a href="#"> </a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <div class="item is-feature">
+                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b3.jpg" alt="Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14"> </a>
+                        <div class="divtext ">
+                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14</a></h2>
+                            <div class="imeta-1"> <b>Đ. Nguyễn Đình Chiểu, P.6, Q.3</b> </div>
+                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>2</strong></span> <span><i class="fa fa-building"></i> <strong>2</strong></span> </div>
+                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
+                                <div class="price2"><b>591,7 ngàn/m²</b></div>
+                            </div>
+                            <div class="wprice">
+                                <div class="imeta-2"> <span><b>44,374 triệu</b></span> <span><b>75 m²</b></span> </div>
+                                <div link="thue/can-ho/hcm/quan-3/id277620" listingid="277620" object='{"id":277620 }' class="btnlike  save-listing save-listing-277620"> <span> </span> </div>
+                            </div>
+                        </div>
+                        <a href="#"> </a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <div class="item is-feature">
+                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b2.jpg" alt="Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất"> </a>
+                        <div class="divtext ">
+                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất</a></h2>
+                            <div class="imeta-1"> <b>Đ. Võ Thị Sáu, P.8, Q.3</b> </div>
+                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
+                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
+                                <div class="price2"><b>219,5 ngàn/m²</b></div>
+                            </div>
+                            <div class="wprice" style="margin-top: -50px;">
+                                <div class="imeta-2"> <span><b>9 triệu</b></span> <span><b>41 m²</b></span> </div>
+                                <div link="thue/can-ho/hcm/quan-3/id277418" listingid="277418" object='{"id":277418 }' class="btnlike  save-listing save-listing-277418"> <span> </span> </div>
+                            </div>
+                        </div>
+                        <a href="#"> </a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <div class="item is-feature">
+                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
+                        <div class="divtext ">
+                            <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title">Căn hộ Singapore cho thuê trung tâm Quận 3</a></h2>
+                            <div class="imeta-1"> <b>Đ. Trần Quang Diệu, P.13, Q.3</b> </div>
+                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
+                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
+                                <div class="price2"><b>188,9 ngàn/m²</b></div>
+                            </div>
+                            <div class="wprice">
+                                <div class="imeta-2"> <span><b>8,5 triệu</b></span> <span><b>45 m²</b></span> </div>
+                                <div link="thue/can-ho/hcm/quan-3/id277377" listingid="277377" object='{"id":277377 }' class="btnlike  save-listing save-listing-277377"> <span> </span> </div>
+                            </div>
+                        </div>
+                        <a href="#"> </a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <div class="item is-feature">
+                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b2.jpg" alt="Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất"> </a>
+                        <div class="divtext ">
+                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất</a></h2>
+                            <div class="imeta-1"> <b>Đ. Võ Thị Sáu, P.8, Q.3</b> </div>
+                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
+                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
+                                <div class="price2"><b>219,5 ngàn/m²</b></div>
+                            </div>
+                            <div class="wprice" style="margin-top: -50px;">
+                                <div class="imeta-2"> <span><b>9 triệu</b></span> <span><b>41 m²</b></span> </div>
+                                <div link="thue/can-ho/hcm/quan-3/id277418" listingid="277418" object='{"id":277418 }' class="btnlike  save-listing save-listing-277418"> <span> </span> </div>
+                            </div>
+                        </div>
+                        <a href="#"> </a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <div class="item is-feature">
+                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b3.jpg" alt="Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14"> </a>
+                        <div class="divtext ">
+                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14</a></h2>
+                            <div class="imeta-1"> <b>Đ. Nguyễn Đình Chiểu, P.6, Q.3</b> </div>
+                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>2</strong></span> <span><i class="fa fa-building"></i> <strong>2</strong></span> </div>
+                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
+                                <div class="price2"><b>591,7 ngàn/m²</b></div>
+                            </div>
+                            <div class="wprice">
+                                <div class="imeta-2"> <span><b>44,374 triệu</b></span> <span><b>75 m²</b></span> </div>
+                                <div link="thue/can-ho/hcm/quan-3/id277620" listingid="277620" object='{"id":277620 }' class="btnlike  save-listing save-listing-277620"> <span> </span> </div>
+                            </div>
+                        </div>
+                        <a href="#"> </a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <div class="item is-feature">
+                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
+                        <div class="divtext ">
+                            <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title">Căn hộ Singapore cho thuê trung tâm Quận 3</a></h2>
+                            <div class="imeta-1"> <b>Đ. Trần Quang Diệu, P.13, Q.3</b> </div>
+                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
+                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
+                                <div class="price2"><b>188,9 ngàn/m²</b></div>
+                            </div>
+                            <div class="wprice">
+                                <div class="imeta-2"> <span><b>8,5 triệu</b></span> <span><b>45 m²</b></span> </div>
+                                <div link="thue/can-ho/hcm/quan-3/id277377" listingid="277377" object='{"id":277377 }' class="btnlike  save-listing save-listing-277377"> <span> </span> </div>
+                            </div>
+                        </div>
+                        <a href="#"> </a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <div class="item is-feature">
+                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b3.jpg" alt="Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14"> </a>
+                        <div class="divtext ">
+                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14</a></h2>
+                            <div class="imeta-1"> <b>Đ. Nguyễn Đình Chiểu, P.6, Q.3</b> </div>
+                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>2</strong></span> <span><i class="fa fa-building"></i> <strong>2</strong></span> </div>
+                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
+                                <div class="price2"><b>591,7 ngàn/m²</b></div>
+                            </div>
+                            <div class="wprice">
+                                <div class="imeta-2"> <span><b>44,374 triệu</b></span> <span><b>75 m²</b></span> </div>
+                                <div link="thue/can-ho/hcm/quan-3/id277620" listingid="277620" object='{"id":277620 }' class="btnlike  save-listing save-listing-277620"> <span> </span> </div>
+                            </div>
+                        </div>
+                        <a href="#"> </a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="pages">
                                 <ul class="page-numbers">
                                     <li class="hidden">
                                         <a class="prev page-numbers" href="#"> <i class="fa fa-arrow-right ix"></i> </a>
@@ -551,961 +782,269 @@
                                     </li>
                                 </ul>
                             </div>
-
-                        </div>
-                        <!-- side bar -->
-                        <div class="col-lg-3 col-md-4 sidebar">
-                            <div class="widget widget-filter">
-                                <h2 class="widget-title">Tìm nhanh</h2>
-                                <div class="cttab">
-                                    <div class="row grid-space-0 tab-menu type-listing_sb">
-                                        <div class="col-4 item search-type_sb search-rent active" data-value="2"><span>Thuê</span></div>
-                                    </div>
-                                    <div class="content-filter-search filter-house-sidebar">
-                                        <div class="active">
-                                            <div class="tab-inner">
-                                                <div class="search-muaban group-range-price_sb">
-                                                    <form id="form-search-buy-sidebar">
-                                                        <div class="widget-content">
-                                                            <div class="f-s-2 input-group col-listing-type_sb">
-                                                                <div class="input-group-addon none">Loại hình BĐS</div>
-                                                                <select class="select property_type_sb" id="select-property_sb" name="property_type_sb" multiple=""> 
-                                                                <option selected value="1">Chung cư/Căn hộ</option> 
-                                                                <option value="2">Nhà riêng</option> </select>
-                                                            </div>
-                                                            <div class="col-city_sb">
-                                                                <select class="select" id="select-city_sb" name="select_city_sb"> 
-                                                                <option value="1">Tp Hồ Chí Minh</option> 
-                                    
-                                                            </select>
-                                                            </div>
-                                                            <div class="col-district_sb">
-                                                                <select id="select-district_sb" name="select_district_sb" multiple="" class="" style="display: none;"> 
-                                                                <option value="1">Quận 1</option> 
-                                                                <option value="2">Quận 2</option> 
-                                                                <option value="3">Quận 3</option> 
-                                                                <option value="4">Quận 4</option> 
-                                                                <option value="5">Quận 5</option> 
-                                                                <option value="6">Quận 6</option> 
-                                                                <option value="7">Quận 7</option> 
-                                                                <option value="8">Quận 8</option> 
-                                                                <option value="9">Quận 9</option> 
-                                                                <option value="10">Quận 10</option> 
-                                                                <option value="11">Quận 11</option> 
-                                                                <option value="12">Quận 12</option> 
-                                                                <option value="13">Quận Bình Tân</option> 
-                                                                <option value="14">Quận Bình Thạnh</option> 
-                                                                <option value="15">Quận Gò Vấp</option> 
-                                                                <option value="16">Quận Phú Nhuận</option> 
-                                                                <option value="17">Quận Tân Bình</option> 
-                                                                <option value="18">Quận Tân Phú</option> 
-                                                                <option value="19">Quận Thủ Đức</option> 
-                                                                <option value="20">Huyện Củ Chi</option> 
-                                                                <option value="21">Huyện Hóc Môn</option> 
-                                                                <option value="22">Huyện Bình Chánh</option> 
-                                                                <option value="23">Huyện Nhà Bè</option> 
-                                                                <option value="24">Huyện Cần Giờ</option> 
-                                                            </select>
-                                                            </div>
-
-                                                        </div>
-                                                    </form>
-                                                    <div class="widget-content btn-search-sidebar"> <button id="apply-search_sb" class="btn full">Tìm ngay!</button> </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget widget-menu">
-                                <h2 class="widget-title">Chung cư / căn hộ quận lân cận</h2>
-                                <div class="widget-content">
-                                    <ul>
-                                        <li>
-                                            <h3>
-                                                <a href="#"> <span class="text"> Quận 2 </span> <span class="count">(1186)</span> </a>
-                                            </h3>
-                                        </li>
-                                        <li>
-                                            <h3>
-                                                <a href="#"> <span class="text"> Quận 7 </span> <span class="count">(652)</span> </a>
-                                            </h3>
-                                        </li>
-                                        <li>
-                                            <h3>
-                                                <a href="#"> <span class="text"> Quận 9 </span> <span class="count">(611)</span> </a>
-                                            </h3>
-                                        </li>
-                                        <li>
-                                            <h3>
-                                                <a href="#"> <span class="text"> Quận 4 </span> <span class="count">(514)</span> </a>
-                                            </h3>
-                                        </li>
-                                        <li>
-                                            <h3>
-                                                <a href="#"> <span class="text"> Quận Bình Thạnh </span> <span class="count">(496)</span> </a>
-                                            </h3>
-                                        </li>
-                                        <li>
-                                            <h3>
-                                                <a href="#"> <span class="text"> Quận Tân Phú </span> <span class="count">(381)</span> </a>
-                                            </h3>
-                                        </li>
-                                        <li>
-                                            <h3>
-                                                <a href="#"> <span class="text"> Quận 1 </span> <span class="count">(312)</span> </a>
-                                            </h3>
-                                        </li>
-                                        <li>
-                                            <h3>
-                                                <a href="#"> <span class="text"> Quận 10 </span> <span class="count">(278)</span> </a>
-                                            </h3>
-                                        </li>
-                                        <li>
-                                            <h3>
-                                                <a href="#"> <span class="text"> Huyện Nhà Bè </span> <span class="count">(223)</span> </a>
-                                            </h3>
-                                        </li>
-                                        <li>
-                                            <h3>
-                                                <a href="#"> <span class="text"> Quận Bình Tân </span> <span class="count">(212)</span> </a>
-                                            </h3>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-
-
-            <div id="footer" class=" group-ef lazy-hidden">
-                <div class="container">
-                    <div class="row grid-space-10">
-                        <div class="col-lg-6 col-md-5 efch-1 ef-img-t">
-                            <div class="widget widget-info">
-                                <p>
-                                    <a href="#" class="logo logo-footer"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/logo.png" alt="Propzy"> Propzy </a>
-                                </p>
-                                <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
-                                <p>Email: <a href="#">Golden Home.com</a></p>
-                                <div class="w5">Hãy gọi cho chúng tôi để được tư vấn 24/7</div>
-                                <div class="call"><a href="#"><i class="fa fa-phone"></i> *****</a></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-7">
-                            <div class="row grid-space-10">
-                                <div class="col-md-4 efch-2 ef-img-t">
-                                    <div class="widget">
-                                        <div class="widget-title">Về Golden Home</div>
-                                        <ul class="menu">
-                                            <li><a href="#">Giới thiệu</a></li>
-                                            <li><a href="#">Tuyển dụng</a></li>
-                                            <li><a href="#">Liên hệ</a></li>
-                                            <li><a href="#">Chính sách bảo mật</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 efch-3 ef-img-t">
-                                    <div class="widget">
-                                        <div class="widget-title">Dịch vụ của Golden Home</div>
-                                        <ul class="menu">
-                                            <li><a href="#">Gửi BĐS miễn phí</a></li>
-                                            <li><a href="#">Thông tin quy hoạch</a></li>
-                                            <li><a href="#">Thẩm định giá BĐS</a></li>
-                                            <li><a href="#">Pháp lý BĐS</a></li>
-                                            <li><a href="#">Thủ tục vay mua nhà</a></li>
-                                            <li><a href="#">Đảm bảo thanh toán qua Ngân hàng</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 efch-4 ef-img-t">
-                                    <div class="widget">
-                                        <div class="widget-title">Hệ thống Golden Home</div>
-                                        <ul class="menu">
-                                            <li><a href="#">Mua nhà</a></li>
-                                            <li><a href="#">Bán nhà</a></li>
-                                            <li><a href="#">Thuê nhà</a></li>
-                                            <li><a href="#">Cộng đồng môi giới Golden Home</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <!--End #footer-->
-            <div class="copyright">
-                <div class="container"> 2020 © Copyright Golden Home. All rights reserved. </div>
-            </div>
-            <!-- Chat Desktop + Ipad -->
-            <!--End #wrapper--><input type="hidden" name="price_for_buy" id="price_for_buy" data-min="0" data-max="10" data-step="1" data-text="Tỷ"><input type="hidden" name="price_for_rent" id="price_for_rent" data-min="0" data-max="30" data-step="1" data-text="Triệu">
-            <!-- reload select propertyType when change listing type --><select class="select style-0 property_type" id="select-property-buy" hidden> <option value="11">Nhà riêng</option> <option value="13">Đất nền</option> <option value="8">Chung cư/Căn hộ</option> <option value="14">Đất nền dự án</option> </select>
-            <select class="select style-0 property_type" id="select-property-rent" hidden>
-        <option value="1">Chung cư/Căn hộ</option>
-        <option value="2">Nhà riêng</option>
-        </select>
-            <!-- giá: khi change listing type -->
-
-            <script type="text/javascript">
-                var selectValuables = {
-                    "1": [{
-                        "propertyTypeId": 0,
-                        "propertyTypeName": "T\u1ea5t c\u1ea3",
-                        "propertyTypeSlug": "bat-dong-san",
-                        "prices": [{
-                            "value": 2000000000,
-                            "name": "< 2 t\u1ef7"
-                        }, {
-                            "value": 3000000000,
-                            "name": "3 t\u1ef7"
-                        }, {
-                            "value": 4000000000,
-                            "name": "4 t\u1ef7"
-                        }, {
-                            "value": 5000000000,
-                            "name": "5 t\u1ef7"
-                        }, {
-                            "value": 6000000000,
-                            "name": "6 t\u1ef7"
-                        }, {
-                            "value": 7000000000,
-                            "name": "7 t\u1ef7"
-                        }, {
-                            "value": 8000000000,
-                            "name": "8 t\u1ef7"
-                        }, {
-                            "value": 9000000000,
-                            "name": "9 t\u1ef7"
-                        }, {
-                            "value": 10000000000,
-                            "name": "10 t\u1ef7"
-                        }, {
-                            "value": 1.0e+15,
-                            "name": "> 10 t\u1ef7"
-                        }],
-                        "sizes": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 30,
-                            "name": "30 m\u00b2"
-                        }, {
-                            "value": 50,
-                            "name": "50 m\u00b2"
-                        }, {
-                            "value": 70,
-                            "name": "70 m\u00b2"
-                        }, {
-                            "value": 90,
-                            "name": "90 m\u00b2"
-                        }, {
-                            "value": 120,
-                            "name": "120 m\u00b2"
-                        }, {
-                            "value": 150,
-                            "name": "150 m\u00b2"
-                        }, {
-                            "value": 999999,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }]
-                    }, {
-                        "propertyTypeId": 11,
-                        "propertyTypeName": "Nh\u00e0 ri\u00eang",
-                        "propertyTypeSlug": "nha-rieng",
-                        "prices": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 1000000000,
-                            "name": "1 t\u1ef7"
-                        }, {
-                            "value": 2000000000,
-                            "name": "2 t\u1ef7"
-                        }, {
-                            "value": 3000000000,
-                            "name": "3 t\u1ef7"
-                        }, {
-                            "value": 4000000000,
-                            "name": "4 t\u1ef7"
-                        }, {
-                            "value": 5000000000,
-                            "name": "5 t\u1ef7"
-                        }, {
-                            "value": 7000000000,
-                            "name": "7 t\u1ef7"
-                        }, {
-                            "value": 10000000000,
-                            "name": "10 t\u1ef7"
-                        }, {
-                            "value": 1.0e+15,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }],
-                        "sizes": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 30,
-                            "name": "30 m\u00b2"
-                        }, {
-                            "value": 50,
-                            "name": "50 m\u00b2"
-                        }, {
-                            "value": 70,
-                            "name": "70 m\u00b2"
-                        }, {
-                            "value": 90,
-                            "name": "90 m\u00b2"
-                        }, {
-                            "value": 120,
-                            "name": "120 m\u00b2"
-                        }, {
-                            "value": 150,
-                            "name": "150 m\u00b2"
-                        }, {
-                            "value": 999999,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }]
-                    }, {
-                        "propertyTypeId": 13,
-                        "propertyTypeName": "\u0110\u1ea5t n\u1ec1n",
-                        "propertyTypeSlug": "dat-nen",
-                        "prices": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 1000000000,
-                            "name": "1 t\u1ef7"
-                        }, {
-                            "value": 2000000000,
-                            "name": "2 t\u1ef7"
-                        }, {
-                            "value": 3000000000,
-                            "name": "3 t\u1ef7"
-                        }, {
-                            "value": 4000000000,
-                            "name": "4 t\u1ef7"
-                        }, {
-                            "value": 5000000000,
-                            "name": "5 t\u1ef7"
-                        }, {
-                            "value": 7000000000,
-                            "name": "7 t\u1ef7"
-                        }, {
-                            "value": 10000000000,
-                            "name": "10 t\u1ef7"
-                        }, {
-                            "value": 1.0e+15,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }],
-                        "sizes": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 30,
-                            "name": "30 m\u00b2"
-                        }, {
-                            "value": 50,
-                            "name": "50 m\u00b2"
-                        }, {
-                            "value": 70,
-                            "name": "70 m\u00b2"
-                        }, {
-                            "value": 90,
-                            "name": "90 m\u00b2"
-                        }, {
-                            "value": 120,
-                            "name": "120 m\u00b2"
-                        }, {
-                            "value": 150,
-                            "name": "150 m\u00b2"
-                        }, {
-                            "value": 999999,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }]
-                    }, {
-                        "propertyTypeId": 8,
-                        "propertyTypeName": "Chung c\u01b0\/C\u0103n h\u1ed9",
-                        "propertyTypeSlug": "chung-cu-can-ho",
-                        "prices": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 1000000000,
-                            "name": "1 t\u1ef7"
-                        }, {
-                            "value": 2000000000,
-                            "name": "2 t\u1ef7"
-                        }, {
-                            "value": 3000000000,
-                            "name": "3 t\u1ef7"
-                        }, {
-                            "value": 4000000000,
-                            "name": "4 t\u1ef7"
-                        }, {
-                            "value": 5000000000,
-                            "name": "5 t\u1ef7"
-                        }, {
-                            "value": 7000000000,
-                            "name": "7 t\u1ef7"
-                        }, {
-                            "value": 10000000000,
-                            "name": "10 t\u1ef7"
-                        }, {
-                            "value": 1.0e+15,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }],
-                        "sizes": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 30,
-                            "name": "30 m\u00b2"
-                        }, {
-                            "value": 50,
-                            "name": "50 m\u00b2"
-                        }, {
-                            "value": 70,
-                            "name": "70 m\u00b2"
-                        }, {
-                            "value": 90,
-                            "name": "90 m\u00b2"
-                        }, {
-                            "value": 120,
-                            "name": "120 m\u00b2"
-                        }, {
-                            "value": 150,
-                            "name": "150 m\u00b2"
-                        }, {
-                            "value": 999999,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }]
-                    }, {
-                        "propertyTypeId": 14,
-                        "propertyTypeName": "\u0110\u1ea5t n\u1ec1n d\u1ef1 \u00e1n",
-                        "propertyTypeSlug": "dat-nen-du-an",
-                        "prices": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 1000000000,
-                            "name": "1 t\u1ef7"
-                        }, {
-                            "value": 2000000000,
-                            "name": "2 t\u1ef7"
-                        }, {
-                            "value": 3000000000,
-                            "name": "3 t\u1ef7"
-                        }, {
-                            "value": 4000000000,
-                            "name": "4 t\u1ef7"
-                        }, {
-                            "value": 5000000000,
-                            "name": "5 t\u1ef7"
-                        }, {
-                            "value": 7000000000,
-                            "name": "7 t\u1ef7"
-                        }, {
-                            "value": 10000000000,
-                            "name": "10 t\u1ef7"
-                        }, {
-                            "value": 99999999999999,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }],
-                        "sizes": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 30,
-                            "name": "30 m\u00b2"
-                        }, {
-                            "value": 50,
-                            "name": "50 m\u00b2"
-                        }, {
-                            "value": 70,
-                            "name": "70 m\u00b2"
-                        }, {
-                            "value": 90,
-                            "name": "90 m\u00b2"
-                        }, {
-                            "value": 120,
-                            "name": "120 m\u00b2"
-                        }, {
-                            "value": 150,
-                            "name": "150 m\u00b2"
-                        }, {
-                            "value": 99999999,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }]
-                    }],
-                    "2": [{
-                        "propertyTypeId": 0,
-                        "propertyTypeName": "T\u1ea5t c\u1ea3",
-                        "propertyTypeSlug": "bat-dong-san",
-                        "prices": [{
-                            "value": 2000000000,
-                            "name": "< 2 t\u1ef7"
-                        }, {
-                            "value": 3000000000,
-                            "name": "3 t\u1ef7"
-                        }, {
-                            "value": 4000000000,
-                            "name": "4 t\u1ef7"
-                        }, {
-                            "value": 5000000000,
-                            "name": "5 t\u1ef7"
-                        }, {
-                            "value": 6000000000,
-                            "name": "6 t\u1ef7"
-                        }, {
-                            "value": 7000000000,
-                            "name": "7 t\u1ef7"
-                        }, {
-                            "value": 8000000000,
-                            "name": "8 t\u1ef7"
-                        }, {
-                            "value": 9000000000,
-                            "name": "9 t\u1ef7"
-                        }, {
-                            "value": 10000000000,
-                            "name": "10 t\u1ef7"
-                        }, {
-                            "value": 1.0e+15,
-                            "name": "> 10 t\u1ef7"
-                        }],
-                        "sizes": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 30,
-                            "name": "30 m\u00b2"
-                        }, {
-                            "value": 50,
-                            "name": "50 m\u00b2"
-                        }, {
-                            "value": 70,
-                            "name": "70 m\u00b2"
-                        }, {
-                            "value": 90,
-                            "name": "90 m\u00b2"
-                        }, {
-                            "value": 120,
-                            "name": "120 m\u00b2"
-                        }, {
-                            "value": 150,
-                            "name": "150 m\u00b2"
-                        }, {
-                            "value": 999999,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }]
-                    }, {
-                        "propertyTypeId": 1,
-                        "propertyTypeName": "Chung c\u01b0\/C\u0103n h\u1ed9",
-                        "propertyTypeSlug": "chung-cu-can-ho",
-                        "prices": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 5000000,
-                            "name": "5 tri\u1ec7u"
-                        }, {
-                            "value": 6000000,
-                            "name": "6 tri\u1ec7u"
-                        }, {
-                            "value": 8000000,
-                            "name": "8 tri\u1ec7u"
-                        }, {
-                            "value": 10000000,
-                            "name": "10 tri\u1ec7u"
-                        }, {
-                            "value": 15000000,
-                            "name": "15 tri\u1ec7u"
-                        }, {
-                            "value": 20000000,
-                            "name": "20 tri\u1ec7u"
-                        }, {
-                            "value": 30000000,
-                            "name": "30 tri\u1ec7u"
-                        }, {
-                            "value": 1.0e+15,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }],
-                        "sizes": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 30,
-                            "name": "30 m\u00b2"
-                        }, {
-                            "value": 40,
-                            "name": "40 m\u00b2"
-                        }, {
-                            "value": 50,
-                            "name": "50 m\u00b2"
-                        }, {
-                            "value": 70,
-                            "name": "70 m\u00b2"
-                        }, {
-                            "value": 90,
-                            "name": "90 m\u00b2"
-                        }, {
-                            "value": 120,
-                            "name": "120 m\u00b2"
-                        }, {
-                            "value": 150,
-                            "name": "150 m\u00b2"
-                        }, {
-                            "value": 999999,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }]
-                    }, {
-                        "propertyTypeId": 2,
-                        "propertyTypeName": "Nh\u00e0 ri\u00eang",
-                        "propertyTypeSlug": "nha-rieng",
-                        "prices": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 5000000,
-                            "name": "5 tri\u1ec7u"
-                        }, {
-                            "value": 6000000,
-                            "name": "6 tri\u1ec7u"
-                        }, {
-                            "value": 8000000,
-                            "name": "8 tri\u1ec7u"
-                        }, {
-                            "value": 10000000,
-                            "name": "10 tri\u1ec7u"
-                        }, {
-                            "value": 15000000,
-                            "name": "15 tri\u1ec7u"
-                        }, {
-                            "value": 20000000,
-                            "name": "20 tri\u1ec7u"
-                        }, {
-                            "value": 30000000,
-                            "name": "30 tri\u1ec7u"
-                        }, {
-                            "value": 1.0e+15,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }],
-                        "sizes": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 30,
-                            "name": "30 m\u00b2"
-                        }, {
-                            "value": 40,
-                            "name": "40 m\u00b2"
-                        }, {
-                            "value": 50,
-                            "name": "50 m\u00b2"
-                        }, {
-                            "value": 70,
-                            "name": "70 m\u00b2"
-                        }, {
-                            "value": 90,
-                            "name": "90 m\u00b2"
-                        }, {
-                            "value": 120,
-                            "name": "120 m\u00b2"
-                        }, {
-                            "value": 150,
-                            "name": "150 m\u00b2"
-                        }, {
-                            "value": 999999,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }]
-                    }],
-                    "99": [{
-                        "propertyTypeId": 0,
-                        "propertyTypeName": "T\u1ea5t c\u1ea3",
-                        "propertyTypeSlug": "bat-dong-san",
-                        "prices": [{
-                            "value": 2000000000,
-                            "name": "< 2 t\u1ef7"
-                        }, {
-                            "value": 3000000000,
-                            "name": "3 t\u1ef7"
-                        }, {
-                            "value": 4000000000,
-                            "name": "4 t\u1ef7"
-                        }, {
-                            "value": 5000000000,
-                            "name": "5 t\u1ef7"
-                        }, {
-                            "value": 6000000000,
-                            "name": "6 t\u1ef7"
-                        }, {
-                            "value": 7000000000,
-                            "name": "7 t\u1ef7"
-                        }, {
-                            "value": 8000000000,
-                            "name": "8 t\u1ef7"
-                        }, {
-                            "value": 9000000000,
-                            "name": "9 t\u1ef7"
-                        }, {
-                            "value": 10000000000,
-                            "name": "10 t\u1ef7"
-                        }, {
-                            "value": 1.0e+15,
-                            "name": "> 10 t\u1ef7"
-                        }],
-                        "sizes": [{
-                            "value": 0,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }, {
-                            "value": 30,
-                            "name": "30 m\u00b2"
-                        }, {
-                            "value": 50,
-                            "name": "50 m\u00b2"
-                        }, {
-                            "value": 70,
-                            "name": "70 m\u00b2"
-                        }, {
-                            "value": 90,
-                            "name": "90 m\u00b2"
-                        }, {
-                            "value": 120,
-                            "name": "120 m\u00b2"
-                        }, {
-                            "value": 150,
-                            "name": "150 m\u00b2"
-                        }, {
-                            "value": 999999,
-                            "name": "Kh\u00f4ng ch\u1ecdn"
-                        }]
-                    }]
-                };
-                var currentPropertyData = selectValuables[2][0];
-                var slugListingType = "thue/";
-                var listingTypeId = "2";
-                var propertyTypeId = "1";
-                var propertyTypeIdSearchKeyword = "1";
-            </script>
-
-
-            <!-- POpup Register Success-->
-
-            <!-- POpup LOGIN-->
-            <div class="modal modal-popup modal-login" id="popup-login" data-redirect="reload" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-                        <div class="modal-body">
-                            <div class="bl-logo-title">Đăng nhập tài khoản với Golden Home</div> <button class="btn btn-login-fb">Đăng nhập qua Facebook</button>
-                            <p class="p-text">-Hoặc đăng nhập bằng email/ số điện thoại-</p>
-                            <div class="bl-input form-horizontal">
-                                <div class="row">
-                                    <form id="form-login" class="form-login">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <div class="bl-div div-phone"> <input type="text" name="acount" class="form-control" value="" placeholder="email@example.com / 073023000"> </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <div class="bl-div div-password"> <input data-type="password" type="password" name="password" value="" class="form-control" placeholder="Mật khẩu"> <span class="span-eyes"></span> </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 bl-remember">
-                                            <div class="bl-inline bl-brand">
-                                                <div class="checkbox bl-checkbox"> <input id="remenber_pass_1" class="requestType" type="checkbox" name="remenber_pass" value="1"> <label for="remenber_pass_1">Ghi nhớ tài khoản</label> </div>
-                                            </div>
-                                            <div class="bl-inline pull-right">
-                                                <p id="forgot-password">Quên mật khẩu?</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 bl-button text-center">
-                                            <div class="form-group"> <button type="button" class="btn btn-login" id="login-normal">Đăng Nhập</button> </div>
-                                        </div>
-                                        <div class="col-sm-12 text-center">
-                                            <div class="bl-creat-account"><a href="javascript:;" onclick="$('#popup-login').modal('hide'); $('#popup-signup').modal('show');">Tạo tài khoản mới</a></div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- POpup SIGNUP-->
-            <div class="modal modal-popup modal-login" id="popup-signup" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-                        <div class="modal-body">
-                            <div class="bl-logo-title">Đăng ký tài khoản với Golden Home</div>
-                            <div class="bl-user">
-                                <div class="bl-radio">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <p>Bạn là?</p>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="i-radio"> <input type="radio" checked id="procedureTypeId1" name="procedureTypeId" class="procedureTypeId" value="0"> <label for="procedureTypeId1">Chủ nhà</label> </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="i-radio"> <input type="radio" id="procedureTypeId2" name="procedureTypeId" class="procedureTypeId" value="1"> <label for="procedureTypeId2">Môi giới</label> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <button class="btn btn-register-fb" id="register-facebook">Đăng ký qua Facebook</button>
-                            <p class="p-text">-Hoặc đăng ký mới-</p>
-                            <div class="bl-input form-horizontal">
-                                <div class="row">
-                                    <form id="form-register" class="form-register">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <div class="bl-div div-fullname"> <input type="text" name="fullname" id="fullname_register" class="form-control" placeholder="" required="required"> <label for="fullname_register">Họ và tên</label> </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <div class="bl-div div-phone"> <input type="text" name="phone" id="phone_register" class="form-control" placeholder="" required="required"> <label for="phone_register">Số điện thoại</label> </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <div class="bl-div div-email"> <input type="email" name="email" class="form-control" placeholder="Email"> </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <div class="bl-div div-password"> <input type="password" name="password" id="password_register" class="form-control" placeholder="" required="required"> <label for="password_register">Mật khẩu</label> <span class="span-eyes"></span> </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 bl-button text-center">
-                                            <div class="form-group"> <button id="register-normal" class="btn btn-login">Đăng Ký</button> </div>
-                                        </div>
-                                        <div class="bl-remember">
-                                            <div class="bl-inline bl-creat-account pull-right"><a href="javascript:;" onclick="$('#popup-signup').modal('hide'); $('#popup-login').modal('show');">Đã có tài khoản</a></div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- POpup FORGOTPASSWORD-->
-            <div class="modal fade modal-popup modal-login" id="popup-forgot-password" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-                        <div class="modal-body">
-                            <div class="bl-logo-title">Quên Mật Khẩu</div>
-                            <p class="p-text">Nhập email/sđt để nhận lại mật khẩu mới</p>
-                            <div class="bl-input form-horizontal">
-                                <div class="row">
-                                    <form class="forgotPassword" id="forgotPassword">
-                                        <div class="col-sm-12">
-                                            <div id="form-input" class="form-group">
-                                                <div class="bl-div div-email"> <input id="forgot_input" name="forgot_input" title="Vui lòng nhập giá trị" type="text" class="form-control" placeholder="email@example.com">
-                                                    <div class="errors_input"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 bl-button text-center">
-                                            <div class="form-group"> <button id="continue-forgot-password" class="btn btn-login">Tiếp tục</button> </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- POpup RE-PASSWORD Phone -->
-            <div class="modal fade modal-popup modal-login" id="popup-re-password-phone" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-                        <div class="modal-body">
-                            <div class="bl-logo-title">Đặt Lại Mật Khẩu Mới</div>
-                            <p class="p-remind">Vui lòng kiểm tra tin nhắn để nhận mã kích hoạt!</p>
-                            <p class="p-text">Nhập lại mật khẩu mới và xác nhận <br> để thay đổi</p>
-                            <div class="bl-input form-horizontal">
-                                <div class="rows">
-                                    <div class="resetPassword" id="resetPassword">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <div class="bl-div div-password"> <input id="password" name="password" type="password" data-type="password" class="form-control" placeholder="Mật khẩu"> <span class="span-eyes"></span> </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <div class="bl-div div-confirm-code"> <input id="code" name="code" type="text" class="form-control" placeholder="Mã xác nhận"> </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 bl-button text-center">
-                                            <div class="form-group"> <button id="reset-pass-phone" class="btn btn-login">Thay Đổi Mật Khẩu</button> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end -->
-            <!-- Popup user-change-pass -->
-            <div class="modal fade modal-popup modal-login" id="popup-user-change-pass" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-                        <div class="modal-body">
-                            <div class="bl-logo-title">Thay Đổi Mật Khẩu</div>
-                            <p class="p-text">Nhập mật khẩu mới và xác nhận <br> để thay đổi</p>
-                            <div class="bl-input form-horizontal">
-                                <div class="row">
-                                    <form class="form-user-change-pass" id="form-user-change-pass">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <div class="bl-div div-password"> <input id="user_pass_old" name="user_pass_old" type="password" class="form-control" placeholder="Mật khẩu cũ"> <span class="span-eyes"></span> </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <div class="bl-div div-password"> <input id="user_pass" name="user_pass" type="password" class="form-control" placeholder="Mật khẩu mới"> <span class="span-eyes"></span> </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <div class="bl-div div-password"> <input id="user_repass" name="user_repass" type="password" class="form-control" placeholder="Nhập lại mật khẩu mới"> <span class="span-eyes"></span> </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 bl-button text-center">
-                                            <div class="form-group"> <button id="save-user-change-pass" class="btn btn-login">Lưu</button> </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end user change pass -->
-            <!-- popup confirm hủy hợp tác -->
-            <div class="modal modal-popup" id="modal-confirm-stop-contact" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="text-center modal-content"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-                        <div class="modal-body">
-                            <p>Tạm ngưng hợp tác?</p> <button class="btn btn-confirm-stop">Đồng ý</button> </div>
-                    </div>
-                </div>
-            </div>
-            <!-- popup confirm hợp tác lại -->
-
-            <!-- popup otp when đlx, request find house -->
-
-            <!-- /.modal-dialog -->
         </div>
-        <!-- /.modal -->
+        
+        <div class="item2">
+            <div class="form-timkiem">
+                <div class="div-text">
+                    <p>Tìm nhanh</p>
+                </div>
+                <form action="#" method="post" class="tim-kiemm">
+                    <label for="" class="form-txt">Loại căn hộ :</label>
+                    <div class="div">
+                        <select name="" id="" style="font-size: 10pt;">
+                          <option value="" checked>Nhà Riêng</option>
+                          <option value="">Nhà trọ</option>
+                          <option value="">Chung Cư/Căn Hộ</option>
+                      </select>
+                    </div>
+                    <div class="div">
+                        <select name="" id="" style="font-size: 10pt;">
+                        <option value="" checked>Hồ Chí Minh</option>
+                    </select>
+                    </div>
+                    <div class="div">
+                        <select name="" id="" style="font-size: 10pt;">
+                        <option value="" checked>Quận 1</option>
+                        <option value="">Quận 2</option>
+                        <option value="">Quận 3</option>
+                        <option value="">Quận 4</option>
+                        <option value="">Quận 5</option>
+                        <option value="">Quận 6</option>
+                        <option value="">Quận 7</option>
+                        <option value="">Quận 8</option>
+                        <option value="">Quận 9</option>
+                        <option value="">Quận 10</option>
+                        <option value="">Quận 11</option>
+                        <option value="">Quận 12</option>
+                        <option value="">Quận Gò Vấp</option>
+                    </select>
+                    </div>
+                    <div class="sub">
+                        <input type="submit" value="Tìm nhanh">
+                    </div>
+                </form>
+            </div>
 
+            <div class="form-timkiem">
+                <div class="div-text">
+                    <p>Các quận lân cận</p>
+                </div>
+                <form action="#" method="post" class="tim-kiemm">
+
+
+                    <ul class="lancan">
+                        <li>
+
+                            <a href="#"> <span class=""> Quận 2 </span> <span class="count">(1186)</span> </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Quận 7 </span> <span class="count">(652)</span> </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Quận 9 </span> <span class="count">(611)</span> </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Quận 4 </span> <span class="count">(514)</span> </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Quận Bình Thạnh </span> <span class="count">(496)</span> </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Quận Tân Phú </span> <span class="count">(381)</span> </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Quận 1 </span> <span class="count">(312)</span> </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Quận 10 </span> <span class="count">(278)</span> </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Huyện Nhà Bè </span> <span class="count">(223)</span> </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Quận Bình Tân </span> <span class="count">(212)</span> </a>
+
+                        </li>
+                    </ul>
+
+
+                </form>
+            </div>
+            <!-- Phường -->
+            <div class="form-timkiem">
+                <div class="div-text">
+                    <p>Các phường trong Quận</p>
+                </div>
+                <form action="#" method="post" class="tim-kiemm">
+
+
+                    <ul class="lancan">
+                        <li>
+
+                            <a href="#"> <span class=""> Phường 1 </span>  </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Phường 2 </span>  </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Phường 3 </span>  </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Phường 4 </span>  </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Phường 5 </span>  </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Phường 6 </span>  </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Phường 7 </span>  </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Phường 8 </span>  </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Phường 9 </span>  </a>
+
+                        </li>
+                        <li>
+
+                            <a href="#"> <span class=""> Phường 10</span>  </a>
+
+                        </li>
+                    </ul>
+
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- dịch vụ khác của Golden Home -->
+    <div class="dichvukhac">
+        <div class="img-bg">
+            <img src="../uploaded/banner-f.jpg" alt="">
+            <div class="font">
+                <p class="text">DỊCH VỤ NỔI BẬT CỦA GOLDEN HOME</p>
+            </div>
+            <div class="container">
+                <div class="team7">
+                    <div class="icon">
+                        <i class="fa fa-home" style="font-size:90px;color:white;"></i>
+                    </div>
+                    <div class="gui">
+                        <div class="hypert-text">
+                            <p class="text-cuoi">
+                                Đăng Bán và Cho Thuê Miễn Phí
+                            </p>
+                            <p class="text-cuoi2">
+                                Tiếp cận khách hàng sẵn có, quảng cáo tin đăng miễn phí</p>
+                        </div>
+                        <div class="submit">
+                            <label for="" class="label-end"><a href="#"  style="color: white;font-size: 10pt;">Đăng tin ngay</a></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="team7">
+                    <div class="icon">
+                        <i class="fa fa-home" style="font-size:90px;color:white;"></i>
+                    </div>
+                    <div class="gui">
+                        <div class="hypert-text">
+                            <p class="text-cuoi">Tìm Mua và Thuê Như Ý</p>
+                            <p class="text-cuoi2">
+                                Tìm kiếm theo tiêu chí, đảm bảo an toàn pháp lý</p>
+                        </div>
+                        <div class="submit">
+                            <label for="" class="label-end"><a href="#" style="color: white;font-size: 10pt;">Liên hệ ngay</a></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="box4 b1">
+            <img src="./uploaded/logo.png" alt="">
+            <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
+            <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
+        </div>
+        <div class="box4 b2">
+            <div class="tieude4">
+                <h4>Danh sách các quận</h4>
+            </div>
+            <div class="textquan">
+                <div class="quan1 l1">
+                    <P>Quận 1</P>
+                    <P>Quận 2</P>
+                    <P>Quận 3</P>
+                    <P>Quận 4</P>
+                    <P>Quận 5</P>
+                    <P>Quận 6</P>
+                    <P>Quận 7</P>
+                    <P>Quận 8</P>
+                    <P>Quận 9</P>
+                    <P>Quận 10</P>
+                </div>
+                <div class="quan1 l2">
+                    <P>Quận 11</P>
+                    <P>Quận 12</P>
+                    <P>Quận Bình Thạnh</P>
+                    <P>Quận Phú Nhuận</P>
+                    <p>Quận Tân Bình</p>
+                    <p>Quận Tân Phú</p>
+                    <p>Quận Bình Tân</p>
+                    <p>Huyện Nhà Bè</p>
+                    <p>Huyện Hóc Môn</p>
+                    <p>Huyện Bình Chánh</p>
+                </div>
+            </div>
+        </div>
+        <div class="box4">
+            <h4>Đăng ký để biết thêm thông tin từ Golden</h4> <br>
+            <input type="text" placeholder="Địa chỉ email" style="font-size: 11pt;"><input class="ip2" type="submit" value="Đăng ký">
+        </div>
+    </div>
+    <!-- Footer Golden Home -->
+
+<<<<<<< HEAD
         <!-- Start of Tawk.to Script-->
         <script type=text/javascript">
             var Tawk_API = Tawk_API || {},
@@ -1523,6 +1062,15 @@
         <!--End of Tawk.to Script-->
         <script type="text/javascript" src="./danhsach/assets/js/app/search-listing-city-min.js?v=20.30.13.11.2020"></script>
         <script src="./views/js/danhsach.js"></script>
+=======
+    <div class="divcuoi">
+        <span> 2020 © Bản quyền GoldenHome. Đã đăng ký Bản quyền.</span>
+    </div>
+    <script src="./views/js/index.js"></script>
+>>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
 </body>
 
 </html>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>

@@ -25,11 +25,7 @@
             <div class="sub">
                 <input type="submit" value="Đăng Nhập">
             </div>
-            <!-- <h4>đăng nhập với</h4>
-           <div class="link">
-              <div class="face row"><a href="#"><i class="fa fa-facebook-f" style="font-size:20pt;margin-top:10px;color: white;"></i></a></div>
-              <div class="google row"><a href="#"><i class="fa fa-google-plus" style="font-size:20pt;margin-top:10px;color: white;"></i></a></div>
-           </div> -->
+            
          </form>
     </div>
 </body>

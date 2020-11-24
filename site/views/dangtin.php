@@ -87,7 +87,7 @@
                                     </select></div>
                                 <div class="col-3">
                                     <select name="" id="" class="select1 ">
-                                        <option value="">Quận/Huyện</option>
+                                        <option value="">Quận</option>
                                         <option value="">Quận 1</option>
                                         <option value="">Quận 2</option>
                                         <option value="">Quận 3</option>
@@ -226,26 +226,37 @@
                             </div>
                             <div class="col-12" style="margin: 20px 0px;">
                                 <label for="">Chi phí khác</label><br>
-                                <textarea name="noi_dung" id="" cols="60" rows="2" placeholder="Nội dung "></textarea>
+                                <textarea name="noi_dung" id="" cols="70" rows="4" style="outline: none;" placeholder="Nội dung "></textarea>
                             </div>
                             <div class="col-12" style="margin: 20px 0px;">
                                 <label for="">Các tiện ích xung quanh căn hộ</label><br>
-                                <textarea name="noi_dung" id="" cols="60" rows="5" placeholder="Nội dung "></textarea>
+                                <textarea name="noi_dung" id="" cols="70" rows="4" style="outline: none;" placeholder="Nội dung "></textarea>
                             </div>
+                            <div class="col-12">
+                            <input type="checkbox" class="ml-5" > 
+                            <label for="">Tôi đồng ý với các điều khoản giao dịch</label><br>
+                            <button >Gửi thông tin</button>
+                            </div>
+                            
                         </div>
+                        
                     </div>
                     <div class="col-5">
                         <h4>*Loại căn hộ</h4>
                         <div class="row" style="margin: 20px 0px;">
-                            <div class="col-6">
-                                <input type="radio" class="mr-3" checked>
-                                <label for="">Chung cư / căn hộ</label>
+                            <div class="col-4">
+                                <input type="checkbox" class="" > 
+                                <label for=""> Chung cư/căn hộ</label>
                             </div>
-                            <div class="col-6">
-                                <input type="radio" class="mr-3">
+                            <div class="col-4">
+                                <input type="checkbox" class="mr-3">
                                 <label for="">Nhà riêng</label>
                             </div>
-                            <div class="col-12" style="margin: 20px 0px;">
+                            <div class="col-4">
+                                <input type="checkbox" class="mr-3">
+                                <label for="">Nhà trọ</label>
+                            </div>
+                            <div class="col-12" style="margin: 0px 0px;">
                                 <h4>Địa chỉ căn hộ</h4>
                                 <div class="row">
                                     <div class="col-6">
@@ -261,25 +272,37 @@
                                         </select>
                                     </div>
                                     <div class="col-6" style="margin: 20px 0px;">
-                                        <label for="">Địa chỉ cụ thể</label>
-                                        <input type="text" name="" class="form-control" id="">
+                                    <label for="">Phường</label>
+                                    <select name="" class="form-control" id="">
+                                            <option value="">Phường 1</option>
+                                            <option value="">Phường 2</option>
+                                            <option value="">Phường 3</option>
+                                        </select>
                                     </div>
                                     <div class="col-6" style="margin: 20px 0px;">
                                         <label for="">Hướng nhà</label>
+                                        <select name="" class="form-control" id="">
+                                            <option value="">Hướng nhà</option>
+                                            <option value="">Đông</option>
+                                            <option value="">Tây</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12" style="margin: 10px 0px;">
+                                        <label for="">Địa chỉ cụ thể</label>
                                         <input type="text" name="" class="form-control" id="">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <h4>Địa chỉ căn hộ</h4>
+                                
                                 <div class="row">
                                     <div class="col-6" style="margin: 20px 0px;">
                                         <label for="">Số phòng ngủ</label>
-                                        <input type="text" name="" class="form-control" id="">
+                                        <input type="number" name="" class="form-control" id="">
                                     </div>
                                     <div class="col-6" style="margin: 20px 0px;">
                                         <label for="">Phòng vệ sinh</label>
-                                        <input type="text" name="" class="form-control" id="">
+                                        <input type="number" name="" class="form-control" id="">
                                     </div>
                                 </div>
                             </div>
@@ -287,25 +310,103 @@
                                 <h4>Hình căn hộ</h4>
                                 <div class="row">
                                     <div class="col-6 anh">
-                                        <input type="file" class="form-control" style="overflow: hidden;">
-                                        <!-- <label for="" class="w-100 tailen">Tải ảnh lên <i class="fa fa-upload"></i></label> -->
+                                        <input type="file" class="form-control " id="img" style="overflow: hidden; display: none;">
+                                        <label for="img" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 30%; margin: 0 auto;" alt=""></label>
+                                        <div class="hinhanh"><img src="#" alt="" id="loadha" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
+                                        <script>
+                                            // Load hình ảnh lên khi chọn file upload
+                                            $(document).ready(function () {
+                                                function readURL(input){
+                                                    if(input.files && input.files[0]){
+                                                    var reader = new FileReader();
+                                                    reader.onload = function (e){
+                                                        $('#loadha').attr('src', e.target.result);
+                                                        $('#loadha').css('display','block');
+                                                    }
+                                                    reader.readAsDataURL(input.files[0]);
+                                                    }
+                                                }
+                                                $('#img').change(function () { 
+                                                    readURL(this);
+                                                });
+                                            });
+                                        </script>
                                     </div>
                                     <div class="col-6">
-                                        <input type="file" class="form-control" style="overflow: hidden;">
+                                    <input type="file" class="form-control " id="img1" style="overflow: hidden; display: none;">
+                                        <label for="img1" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 30%; margin: 0 auto;" alt=""></label>
+                                        <div class="hinhanh"><img src="#" alt="" id="loadha1" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
+                                        <script>
+                                            // Load hình ảnh lên khi chọn file upload
+                                            $(document).ready(function () {
+                                                function readURL(input){
+                                                    if(input.files && input.files[0]){
+                                                    var reader = new FileReader();
+                                                    reader.onload = function (e){
+                                                        $('#loadha1').attr('src', e.target.result);
+                                                        $('#loadha1').css('display','block');
+                                                    }
+                                                    reader.readAsDataURL(input.files[0]);
+                                                    }
+                                                }
+                                                $('#img1').change(function () { 
+                                                    readURL(this);
+                                                });
+                                            });
+                                        </script>
                                     </div>
                                     <div class="col-6 mt-5">
-                                        <input type="file" class="form-control" style="overflow: hidden;">
+                                    <input type="file" class="form-control " id="img2" style="overflow: hidden; display: none;">
+                                        <label for="img2" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 30%; margin: 0 auto;" alt=""></label>
+                                        <div class="hinhanh"><img src="#" alt="" id="loadha2" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
+                                        <script>
+                                            // Load hình ảnh lên khi chọn file upload
+                                            $(document).ready(function () {
+                                                function readURL(input){
+                                                    if(input.files && input.files[0]){
+                                                    var reader = new FileReader();
+                                                    reader.onload = function (e){
+                                                        $('#loadha2').attr('src', e.target.result);
+                                                        $('#loadha2').css('display','block');
+                                                    }
+                                                    reader.readAsDataURL(input.files[0]);
+                                                    }
+                                                }
+                                                $('#img2').change(function () { 
+                                                    readURL(this);
+                                                });
+                                            });
+                                        </script>
                                     </div>
                                     <div class="col-6 mt-5">
-                                        <input type="file" class="form-control" style="overflow: hidden;">
+                                    <input type="file" class="form-control " id="img3" style="overflow: hidden; display: none;">
+                                        <label for="img3" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 30%; margin: 0 auto;" alt=""></label>
+                                        <div class="hinhanh"><img src="#" alt="" id="loadha3" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
+                                        <script>
+                                            // Load hình ảnh lên khi chọn file upload
+                                            $(document).ready(function () {
+                                                function readURL(input){
+                                                    if(input.files && input.files[0]){
+                                                    var reader = new FileReader();
+                                                    reader.onload = function (e){
+                                                        $('#loadha3').attr('src', e.target.result);
+                                                        $('#loadha3').css('display','block');
+                                                    }
+                                                    reader.readAsDataURL(input.files[0]);
+                                                    }
+                                                }
+                                                $('#img3').change(function () { 
+                                                    readURL(this);
+                                                });
+                                            });
+                                        </script>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <input type="checkbox" class="ml-5"> <label for="">Tôi đồng ý với các điều khoản giao dịch</label><br>
-                <button>Gửi thông tin</button>
+                
             </form>
         </div>
         <div class="dichvu">

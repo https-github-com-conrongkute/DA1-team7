@@ -99,22 +99,22 @@
         <div class="row mt-3">
             <div class="col-12">Hình căn hộ</div>
             <div class="col-6">
-            <label for="file"><i class="fas fa-upload"></i> Tải hình 1</label><br>
-            <input type="file" name="hinh" id="file" class="form-control" />
+            <input type="file" name="hinh" id="file1" style="display: none;" class="form-control" />
+            <label for="file1"><img src="../uploaded/uploadhinh.png" style="width: 30%;" alt=""></label>
             </div>
             <div class="col-6">
-            <label for="file"><i class="fas fa-upload"></i> Tải hình 2</label><br>
-            <input type="file" name="hinha" id="file" class="form-control" />
+            <input type="file" name="hinh" id="file2" style="display: none;" class="form-control" />
+            <label for="file2"><img src="../uploaded/uploadhinh.png" style="width: 30%;" alt=""></label>
             </div>
         </div>
         <div class="row mt-3 mb-2">
             <div class="col-6">
-            <label for="file"><i class="fas fa-upload"></i> Tải hình 3</label><br>
-            <input type="file" name="hinhb" id="file" class="form-control" />
+            <input type="file" name="hinh" id="file3" style="display: none;" class="form-control" />
+            <label for="file3"><img src="../uploaded/uploadhinh.png" style="width: 30%;" alt=""></label>
             </div>
             <div class="col-6">
-            <label for="file"><i class="fas fa-upload"></i> Tải hình 4</label><br>
-            <input type="file" name="hinhc" id="file" class="form-control" />
+            <input type="file" name="hinh" id="file4" style="display: none;" class="form-control" />
+            <label for="file4"><img src="../uploaded/uploadhinh.png" style="width: 30%;" alt=""></label>
             </div>
         </div>
         <div class="right__inputWrapper">

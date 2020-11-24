@@ -391,5 +391,27 @@ body {
     line-height: 40px;
 }
 
+.taianhlen::before {
+    content: 'Tải ảnh lên ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35px;
+    background-color: #ccc;
+    width: 95%;
+    text-align: center;
+    line-height: 35px;
+}
+
+.tailen {
+    position: relative;
+}
+
+.loadh1 {
+    position: absolute;
+    top: 0;
+    right: 40px;
+}
+
 
 /* tai ảnh */

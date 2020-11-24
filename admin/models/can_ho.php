@@ -21,4 +21,8 @@ function deletecanho($ma_can){
           $sql="DELETE FROM can_ho where ma_can='$ma_can'";
           execute($sql);
 }
+function duyetcanho($ma_can, $an_hien){
+          $sql="UPDATE can_ho SET an_hien='$an_hien' WHERE ma_can='$ma_can' ";
+          execute($sql);
+}
 ?>

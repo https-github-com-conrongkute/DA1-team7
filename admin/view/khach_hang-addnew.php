@@ -7,7 +7,7 @@
             <input type="text" name="tenkh" id="tenkh" placeholder="Họ và tên">
             <p class="bage-check-kh"></p>
             <?php if(isset($tenkh_tt)==true){ ?>
-            <p class="bage-check-php" ><?=$tenkh_tt?></p>
+            <p class="bage-check-php"><?=$tenkh_tt?></p>
             <?php } ?>
         </div>
         <div class="right__inputWrapper hienloi">
@@ -31,12 +31,16 @@
         <div class="right__inputWrapper hienloi">
             <label for="title">Số điện thoại</label>
             <input type="number" name="sdt" id="sdt" placeholder="số điện thoại">
-            <p class="bage-check-sdt"></p>
+            <p id="kqsdt"></p><p class="bage-check-sdt"></p>
+            <?php if(isset($sdt_tt)==true) { ?>
+            <p class="bage-check-php"><?=$sdt_tt?></p>
+            <span id="kq"></span>
+            <?php } ?>
         </div>
         <div class="right__inputWrapper hienloi">
             <label for="title">Mật khẩu</label>
             <input type="password" name="pass" id="mk" placeholder="Mật khẩu">
-            <p class="bage-check-pass"></p>
+            <p class="bage-check-pass"></p> 
             <?php if(isset($pass_tt)==true){ ?>
             <p class="bage-check-php"><?=$pass_tt?></p>
             <?php } ?>
@@ -70,7 +74,7 @@
             <label for="" style="margin-right: 10px;"><input type="radio" name="vai_tro" id="" style="margin-right: 5px;" value="1">Quản trị</label>
             <label for=""><input type="radio" name="vai_tro" id="" style="margin-right: 5px;" value="0">Khách hàng</label>
         </div>
-        <button class="btn" type="submit">Thêm khách hàng</button>
+        <button class="btn checkmobile" type="submit">Thêm khách hàng</button>
     </form>
     <?php if(isset($message)==true){ ?>
     <div class="thongbao-khachhang">
@@ -118,7 +122,7 @@
         $('#sdt').blur(function (e) { 
             var sdt = $(this).val();
             $('.bage-check-sdt').css('display','block');
-            $('.bage-check-sdt').load('<?=ADMIN_URL?>/?ctrl=tai_khoan&act=kiemloi&ten_dn=' + sdt);
+            $('.bage-check-sdt').load('<?=ADMIN_URL?>/?ctrl=tai_khoan&act=kiemloi&sdt=' + sdt);
             $('.bage-check-php').css('display','none');
         });
         $('#mk').blur(function (e) { 
@@ -128,4 +132,23 @@
             $('.bage-check-php').css('display','none');
         });
     });
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#sdt').blur(function (e) { 
+    var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+    var mobile = $('#sdt').val();
+    if(mobile !==''){
+        if (vnf_regex.test(mobile) == false) 
+        {
+            $("#kqsdt").html("<span>Số điện thoại của bạn Không đúng định dạng</span>");
+            
+        }else{
+            $("#kqsdt").html("<span style='background-color: green;'>Số điện thoại hợp lệ</span>");
+        }
+    }else{
+        $("#kqsdt").css('display','none');
+    }
+    });
+});
 </script>

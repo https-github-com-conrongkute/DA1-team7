@@ -162,20 +162,20 @@ function exit() {
     hien.style.display = 'none';
 }
 
-function images(x) {
+function showimages(x) {
     var img = document.getElementById('images');
     switch (x) {
         case 1:
-            img.src = "img/b1.jpg";
+            img.src = "../uploaded/b1.jpg";
             break;
         case 2:
-            img.src = "img/b2.jpg";
+            img.src = "../uploaded/b2.jpg";
             break;
         case 3:
-            img.src = "img/b3.jpg";
+            img.src = "../uploaded/b3.jpg";
             break;
         case 4:
-            img.src = "img/b4.jpg";
+            img.src = "../uploaded/b4.jpg";
             break;
         default:
             break;
