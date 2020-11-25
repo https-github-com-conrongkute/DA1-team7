@@ -1,27 +1,7 @@
-<div class="tt-back-gr mt">
-    <div class="boxcenter">
-        <div class="tt-bg">
-            <div class="tt-left">
-                <center style="margin-top: 50px;">
-                    <div style="width: 100px;height: 100px;border-radius: 50%;background-color: #ccc;">
-                        <span class="fas fa-user" style="font-size: 30pt;line-height: 100px;color:white;"></span>
-                    </div>
-                    <h4><?= $_SESSION["user"] ?></h4>
-                    <em>Thành viên từ 1/1/2020</em>
-                </center>
-                <hr>
-                <ul>
-                    <li><i class="fas fa-cog"></i><a href="?act=thongtintk">Thông tin tài khoản</a></li>
-                    <li><i class="fas fa-lock"></i><a href="?act=doimk">Đổi mật khẩu</a></li>
-                    <li><i class="fas fa-home"></i><a href="?act=ch-dd">Căn hộ đã đăng</a></li>
-                    <li><i class="far fa-calendar"></i><a href="?act=ds-ld">Dach sách lịch đặt</a></li>
-                    <li><i class="fas fa-sign-out-alt"></i><a href="">Đăng xuất</a></li>
-                </ul>
-            </div>
-            <div class="tt-right">
+
                 <div class="ch-dd">
-                    <h3 style="font-weight: bold; margin-bottom: 50px;">Căn hộ đã đăng</h3>
-                    <table class="table table-bordered">
+                    <h3 style="font-weight: bold; margin-bottom: 30px; margin-top: 50px;">Lịch sử đặt căn hộ</h3>
+                    <table class="table table-bordered" style="padding: 0px 20px;">
                         <thead>
                             <tr>
                                 <th scope="col">STT</th>
@@ -48,7 +28,4 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+            

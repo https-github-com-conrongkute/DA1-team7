@@ -31,17 +31,16 @@ function getlichdatbyid($ma_tk){
     return queryOne($sql);
 }
 
-//lây mã căn hộ đả đăng thông qua mã tài khoảng sid để đi so sánh
-function getAllLichdat($id){
-    $sql="SELECT * FROM dat_lich WHERE ma_can='$id'";
-    return queryOne($sql);
-}
-function canhodadang($id){
-    $sql="SELECT * FROM can_ho WHERE ma_tk='$id'";
+//thực hiện inner join 3 bảng căn hộ khách hàng và đặt lịch
+
+
+
+function getthongbao($id){
+    $sql="SELECT ch.ten_can_ho, ch.ma_tk, dl.ma_can ,dl.ma_tk, kh.ho_ten, ngay_xem , ngay_dat, sdt, ma_dat
+    FROM can_ho ch INNER JOIN dat_lich dl ON ch.ma_can = dl.ma_can 
+    INNER JOIN khach_hang kh ON kh.ma_tk=dl.ma_tk WHERE ch.ma_tk='$id' order by ma_dat  desc";
     return query($sql);
 }
-function getkhachhangBYid($id){
-    $sql="SELECT * FROM khach_hang WHERE ma_tk='$id'";
-    return queryOne($sql);
-}
+
+
 ?> 

@@ -7,19 +7,7 @@ switch ($act) {
     require_once 'views/layout.php';
     break;
 
-  case 'thongbao':
-    $ma_tk=$_GET['ma_tk'];
-    $canhodadang= canhodadang($ma_tk);
-    $rows='views/thongbao.php';
-    $view= 'views/thongtintk.php';
-    require_once 'views/layout.php';
-  break;
-  case 'thongtintk':
-    $ma_tk=$_GET['ma_tk'];
-    $canhodadang= canhodadang($ma_tk);
-    $view = 'views/thongtintk.php';
-    require_once 'views/layout.php';
-    break;
+
     // thay doi thông tin tk
   case 'thaydoitt':
     $tentk = $_POST['tenkh'];
@@ -63,10 +51,7 @@ switch ($act) {
       header('location: index.php');
     }
     break;
-  case 'doimk':
-    $view = 'views/doimk.php';
-    require_once 'views/layout.php';
-    break;
+
     // dôi mk
   case 'doimk_':
     $pass_cu = $_POST['passcu'];
@@ -103,11 +88,30 @@ switch ($act) {
     require_once 'views/chitiet.php';
   break;
   case 'ch-dd':
-    $view = 'views/canhodadang.php';
+    $rows = 'views/canhodadang.php';
+    $view= 'views/thongtintk.php';
     require_once 'views/layout.php';
   break;
   case 'ds-ld':
-    $view = 'views/dslich_dat.php';
+    $rows = 'views/dslich_dat.php';
+    $view= 'views/thongtintk.php';
     require_once 'views/layout.php';
   break;
+  case 'thongbao':
+    $ma_tk=$_GET["ma_tk"];
+    $showtb=getthongbao($ma_tk);
+    $rows='views/thongbao.php';
+    $view= 'views/thongtintk.php';
+    require_once 'views/layout.php';
+  break;
+  case 'thongtintk':
+
+    $view = 'views/thongtintk.php';
+    require_once 'views/layout.php';
+    break;
+    case 'doimk':
+      $rows = 'views/doimk.php';
+      $view= 'views/thongtintk.php';
+    require_once 'views/layout.php';
+      break;
 }

@@ -68,8 +68,8 @@
                     <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
                     <?php if (isset($_SESSION['user']) == true) { ?>
                     <li>
-                        <a href="#" onclick="toogle()">
-                            <?= $_SESSION['user'] ?>
+                        <a href="?act=thongtintk" >
+                            <?= $_SESSION['user'] ?> <i class="fa fa-caret-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
@@ -78,28 +78,9 @@
                             <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
                         </ul>
                     </li>
-<<<<<<< HEAD
-                    <li class="li-3"><a href="#" id="nav-du-an">Dự án</a></li>
-                    <li class="li-6"><a href="#">Tin tức</a></li>
-                    <li class="li-15"><a href="#">Giá nhà đất</a></li>
-                    <li class="li-5 dropdown"> <a href="#" class="dropdown-toggle text-other" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">Dịch vụ</a>
-                        <ul class="dropdown-menu sub-menu">
-                            <li><a href="#">Thuê nhà miễn phí</a></li>
-                            <li><a href="#">Thuê nhà siêu tốc</a></li>
-                            <li><a href="#">Dịch vụ 0Đ</a></li>
-                        </ul>
-                    </li>
-                    <li class="li-8"><a href="diem-giao-dich">Đăng tin</a></li>
-                    <li class="li-9 dropdown"> <a href="#" class="dropdown-toggle text-other" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">Về Team 7</a>
-                        <ul class="dropdown-menu sub-menu">
-                            <li><a href="#">Giới thiệu</a></li>
-                        </ul>
-                    </li>
-=======
                     <?php } else { ?>
                     <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a></li>
                     <?php } ?>
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
                 </ul>
             </div>
         </div>

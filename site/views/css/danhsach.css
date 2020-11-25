@@ -305,11 +305,11 @@ body {
     content: '';
     top: 60px;
     display: inline-block;
-    width: 150px;
+    width: 180px;
     min-height: 100px;
     left: 0;
     background-color: #FFA000;
-    border-radius: 20px;
+    border-radius: 10px;
     display: none;
 }
 
@@ -319,11 +319,19 @@ body {
     list-style: none;
 }
 
+.sub-menu>li:hover {
+    background-color: white;
+    padding: 5px;
+    width: 100%;
+    color: black;
+}
+
 .sub-menu>li>a {
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     text-decoration: none;
     padding: 5px 10px;
+    font-family: sans-serif;
 }
 
 
@@ -956,4 +964,8 @@ input[type="date"] {
 
 .page-numbers {
     color: orangered;
+}
+
+.nav-menu>ul>li:hover .sub-menu {
+    display: block;
 }

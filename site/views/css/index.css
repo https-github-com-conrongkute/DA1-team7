@@ -263,7 +263,7 @@ label {
     width: 73%;
     float: left;
     height: 100%;
-    margin-left: 1%;
+    padding: 10px 20px;
     overflow-y: scroll;
 }
 
@@ -632,7 +632,7 @@ label {
 
 .boxcenter {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
 }
 
 .danhsach .box2 {
@@ -1325,9 +1325,12 @@ a {
 
 .nav-menu>ul>li:hover .sub-menu {
     display: block;
-    transition: 0.5s;
 }
 
 .sub-menu li a:hover {
     color: white;
+}
+
+.nav-menu2>ul>li:hover .sub-menu {
+    display: block;
 }

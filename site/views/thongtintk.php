@@ -4,7 +4,7 @@
             <div class="tt-left">
                 <center style="margin-top: 50px;">
                     <div style="width: 100px;height: 100px;border-radius: 50%; overflow: hidden;">
-                   <img src="../uploaded/<?=$_SESSION['shinh']?>" style="width: 100%;" alt="">
+                    <img src="../uploaded/<?php if ($_SESSION['shinh']=="") echo "user.png";else echo $_SESSION['shinh'];?>" style="width: 100%;" alt="">
                    </div>
                    <h4><?=$_SESSION["user"]?></h4>
                 </center>
@@ -15,7 +15,7 @@
                     <li><i class="fas fa-lock"></i><a href="?act=doimk">Đổi mật khẩu</a></li>
                     <li><i class="fas fa-home"></i><a href="?act=ch-dd">Căn hộ đã đăng</a></li>
                     <li><i class="far fa-calendar"></i><a href="?act=ds-ld">Dach sách lịch đặt</a></li>
-                    <li><i class="fas fa-sign-out-alt"></i><a href="">Đăng xuất</a></li>
+                    <li><i class="fas fa-sign-out-alt"></i><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
                 </ul>
             </div>
             <div class="tt-right">
