@@ -11995,7 +11995,7 @@ textarea.input {
     overflow: hidden;
     position: relative;
     background-color: #fff;
-    height: 90%
+    height: 100%;
 }
 
 .list-layout-0 .item+.item {

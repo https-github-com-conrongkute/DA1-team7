@@ -38,7 +38,7 @@ function getAllLichdat($id){
 }
 function canhodadang($id){
     $sql="SELECT * FROM can_ho WHERE ma_tk='$id'";
-    return query($sql);
+    return queryOne($sql);
 }
 function getkhachhangBYid($id){
     $sql="SELECT * FROM khach_hang WHERE ma_tk='$id'";

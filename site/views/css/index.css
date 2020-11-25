@@ -1,101 +1,3 @@
-<<<<<<< HEAD
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-}
-.thongbao-datlic{
-    width: 30%;
-    margin-right:  20px;
-    float: right;
-}
-.ch-dd{
-    width: calc(100% - 20px);
-    float: left;
-    margin-right: 20px;
-}
-body {
-    width: 100%;
-    font-family: "Sf ui display", sans-serif;
-    margin: 0 auto;
-}
-
-.row {
-    float: left;
-    width: 100%;
-}
-
-.menu {
-    height: 900px;
-}
-
-.banner {
-    position: relative;
-}
-
-.banner img {
-    opacity: 0.8;
-}
-
-
-/* menu */
-
-.menu-logo {
-    width: 100%;
-    position: fixed;
-    left: 0;
-    height: 80px;
-    /* background-color: #ccc; */
-    top: 20px;
-    z-index: 99;
-}
-
-.nav-logo {
-    width: 30%;
-    float: left;
-    height: 80px;
-}
-
-.nav-logo>img {
-    width: 100%;
-    height: 70px;
-    margin: 5px 0px;
-    object-fit: contain;
-}
-
-.nav-menu {
-    float: right;
-    width: 70%;
-    height: 80px;
-}
-
-.hienra {
-    width: 100%;
-    position: fixed;
-    left: 0;
-    height: 80px;
-    background-color: white;
-    color: black;
-    box-shadow: 5px 5px 5px #ccc;
-    top: 0;
-    z-index: 99;
-}
-
-.nav-menu>ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.nav-menu>ul>li {
-    list-style: none;
-    position: relative;
-    /* width: 100px;
-=======
     * {
         padding: 0;
         margin: 0;
@@ -181,7 +83,6 @@ body {
         list-style: none;
         position: relative;
         /* width: 100px;
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
     line-height: 80px; */
         line-height: 80px;
         padding: 0px 20px;
@@ -230,122 +131,6 @@ body {
         position: relative;
         /* width: 100px;
     line-height: 80px; */
-<<<<<<< HEAD
-    line-height: 80px;
-    padding: 0px 20px;
-}
-.nav-menu2>ul>li>a{
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    /* font-weight: bold; */
-    text-decoration: none;
-}
-.menu-logo-bg {
-    width: 90%;
-    /* margin-top: 20px; */
-    position: relative;
-    left: 5%;
-    top: 0;
-}
-
-
-/* end */
-/* Thông tin tk */
-label{
-    width: 100%;
-    float: left;
-    height: 20px;
-    margin: 10px 0px;
-}
-.form-tk{
-    width: 60%;
-    margin: 0px 20px;
-    float: left;
-}
-.tt-right-row>input{
-    border: none;
-    outline: none;
-    margin-bottom: 20px;
-    height: 30px;
-    border-bottom: 1px solid #ccc;
-}
-.tt-right-row>select{
-    width: 50%;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    outline: none;
-    height: 30px;
-}
-.tt-right-row>input[name='tenkh']{
-    width: 100%;
-}
-.tt-right-row>input[name='email']{
-    width: 100%;
-}
-.tt-right-row>input[name='sdt']{
-    width: 100%;
-}
-.btn-tk{
-    width: 30%;
-    height: 40px;
-    border: #ef6c00 1px solid;
-    outline: none;
-    cursor: pointer;
-    color: #ef6c00;
-    border-radius: 20px;
-    background-color: white;
-}
-.tt-right-row{
-    width: 100%;
-    min-height: 70px;
-    float: left;
-}
-.tt-back-gr{
-    width: 100%;
-    height: 700px;
-    margin-bottom: 50px;
-    /* margin-top: 60px; */
-    background-color: #f1f4f5;
-    float: left;
-}
-.tt-left{
-    width: 25%;
-    float: left;
-    height: 100%;
-    border-right: 2px solid #ccc;
-}
-.tt-left>ul{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.tt-left>ul>li{
-    list-style: none;
-    line-height: 50px;
-    height: 50px;
-    width: 90%;
-    border-bottom: 1px solid #ccc;
-}
-.tt-left>ul>li>i{
-    font-size: 15px;
-    margin: 0 10px;
-    color: black;
-}
-.tt-left>ul>li>a{
-   text-decoration: none;
-   color: black;
-   padding: 0px 10px;
-}
-.tt-right{
-    width: 73%;
-    float: left;
-    height: 100%;
-    margin-left: 2%;
-    overflow-y: scroll;
-}
-/* .mt{
-=======
         line-height: 80px;
         padding: 0px 20px;
     }
@@ -473,7 +258,15 @@ label{
         float: left;
         height: 100%;
         margin-left: 2%;
+        /* overflow-y: hidden; */
         overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        /* overflow-y: scroll;
+        overflow: hidden; */
+    }
+    .tt-right::-webkit-scrollbar{
+        display: none;
     }
     
     .thongbaoch {
@@ -482,8 +275,10 @@ label{
         margin-left: 2%;
         overflow-y: scroll;
     }
+    .thongbaoch::-webkit-scrollbar{
+        display: none;
+    }
     /* .mt{
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
     margin-top: 80px;
 } */
     
