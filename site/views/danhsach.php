@@ -1,55 +1,5 @@
-<<<<<<< HEAD
-<!DOCTYPE HTML>
-<html lang="vi">
-<html prefix="og: http://ogp.me/ns#">
-
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# medium-com: http://ogp.me/ns/fb/medium-com#">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="utf-8">
-    <title>danhsach</title>
-    <!-- amp -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./views/css/danhsach.css">
-
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            css "@type": "BreadcrumbList",
-            "itemListElement": [{
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Chung cư/Căn hộ",
-                "item": "thue/can-ho/hcm"
-            }, {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "HCM",
-                "item": "thue/can-ho/hcm"
-            }]
-        }
-    </script>
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-MH7WSC');
-    </script>
-    <!-- End Google Tag Manager -->
-=======
 <!DOCTYPE html>
 <html lang="en">
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
 
 <head>
     <meta charset="UTF-8">
@@ -80,162 +30,6 @@
                 <div class="nav-logo">
                     <img src="./uploaded/logo.png" alt="">
                 </div>
-<<<<<<< HEAD
-            </div>
-        </div> -->
-        <header id="header" class="fixe"  role="banner">
-            <div class="container">
-                <a href="" id="logo"><img src="./danhsach/assets/images/ver-4/pc/logo.png" alt="Propzy"></a>
-                <ul class="menu-top-header left" data-style="1">
-                    
-                </ul>
-                <div class="wrap-menu-header right">
-                    <ul class="menu-top-header " data-style="1">
-                    <li> <a href="index.php"><span>Trang Chủ</span></a>
-
-                    </li>
-                    <li> <a href="#"><span>Thuê <i class="fas fa-caret-down"></i></span></a>
-                        <ul>
-                            <li><a href="#">Nhà riêng</a></li>
-                            <li><a href="#">Căn hộ</a></li>
-                            <li><a href="#">Phòng trọ</a></li>
-
-                        </ul>
-                    </li>
-                        <li><a href="#"><span></span></a></li>
-                        <li><a href="?ctrl=home&act=danhsach" style="color: orangered;">Danh sách</a></li>
-                        <li><a href="?ctrl=home&act=dangtin"><span>Đăng tin</span></a></li>
-                        <li><a href="?ctrl=home&act=about"><span>Giới thiệu</span></a></li>
-                    </ul>
-                </div>
-                <div class="group-header">
-
-
-                    <div class="item">
-                        <a href="?ctrl=home&act=dangnhap" class="btn" > <i class="fa fa-user"></i> Đăng nhập</a>
-                    </div>
-                    <div href="#menu-toggle" id="menu-toggle" class="item imenu"> <span class="menu-btn x"><span></span></span>
-                    </div>
-                </div>
-            </div>
-            <div class="menutimkiem w-100  position-relative">
-                <a href="#" onclick="showtimkiem()" id="an">Tìm kiếm <i class="fa fa-search"></i></a>
-                <a href="#" onclick="exit()" id="hien">Tìm kiếm <i class="fa fa-close"></i></a>
-                <div class="w-100 boxtim position-absolute" id="showtim">
-                    <!--Tiềm kiếm ẩn-->
-                    <div class="tiemkiemtrong">
-                        <h4>Thuê</h4>
-                        <form action="" class="formtimkiem">
-                            <div class="row mtop">
-                                <div class="col-3">
-                                    <select name="" id="" class="w-75 select pad" style="width: 90%;">
-                                        <option value="">Căn hộ/Chung cư</option>
-                                        <option value="">Nhà ở</option>
-                                    </select>
-                                </div>
-                                <div class="col-6">
-                                    <input type="text" class="w-100 select pad" style="width: 90%;" placeholder="Nhập địa chỉ để tiềm kiếm căn hộ...">
-                                </div>
-                                <div class="col-3">
-                                    <button class="bgcam but">Tìm kiếm <i class="fa fa-search" ></i></button>
-                                </div>
-                                <!--Thành phố quận huyện-->
-
-                            </div>
-                            <div class="row mtop">
-                                <div class="col-3">
-                                    <select name="" id="" class="select1 ">
-                                        <option value="">Tp Hồ Chí minh</option>
-
-                                    </select></div>
-                                <div class="col-3">
-                                    <select name="" id="" class="select1 ">
-                                        <option value="">Quận/Huyện</option>
-                                        <option value="">Quận 1</option>
-                                        <option value="">Quận 2</option>
-                                        <option value="">Quận 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-3">
-                                    <select name="" id="" class="select1">
-                                        <option value="">Mức giá</option>
-                                        <option value="">Dưới 3 triệu</option>
-                                        <option value="">3 triệu - 5 triệu</option>
-                                        <option value="">5 triệu - 8 triệu</option>
-                                        <option value="">8 triệu - 10 triệu</option>
-                                        <option value="">10 triệu - 15 triệu</option>
-                                        <option value="">15 triệu - 20 triệu</option>
-                                        <option value="">Trên 20 triệu</option>
-                                    </select>
-                                </div>
-                                <div class="col-3">
-                                    <select name="" id="" class="select1 ">
-                                        <option value="">Diện tích</option>
-                                        <option value="">10 - 20 m2</option>
-                                        <option value="">20 - 30 m2</option>
-                                    </select>
-                                </div>
-
-                            </div>
-                            <div class="row mtop">
-                                <div class="col-3">
-                                    <select name="" id="" class="select1 ">
-                                        <option value="">Số tầng</option>
-                                        <?php for ($i=1; $i <= 10 ; $i++) { 
-                                            ?>
-                                            <option value=""><?=$i?></option>
-                                            <?php
-                                        }?>
-                                    </select>
-                                </div>
-                                <div class="col-3">
-                                <select name="" id="" class="select1 ">
-                                        <option value="">Số phòng ngủ</option>
-                                        <?php for ($i=1; $i <= 10 ; $i++) { 
-                                            ?>
-                                            <option value=""><?=$i?></option>
-                                            <?php
-                                        }?>
-                                    </select>
-                                </div>
-                                <div class="col-3">
-                                <select name="" id="" class="select1 ">
-                                        <option value="">Số phòng vệ sinh</option>
-                                        <?php for ($i=1; $i <= 10 ; $i++) { 
-                                            ?>
-                                            <option value=""><?=$i?></option>
-                                            <?php
-                                        }?>
-                                    </select>
-                                </div>
-                                <div class="col-3">
-                                    <select name="" id="" class="select1 ">
-                                        <option value="">Hướng nhà</option>
-                                        <option value="">Đông</option>
-                                        <option value="">Tây</option>
-                                        <option value="">Nam</option>
-                                        <option value="">Bắc</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- Sidebar -->
-        <div class="bg-slider-menu"> <i id='close-nav' class="a-close"></i>
-            <div id="sidebar-wrapper" class="slider-scroll">
-                <ul class="sidebar-nav">
-                    <li class="li-1"><a href="" id="">Trang chủ</a></li>
-
-                    <li class="li-12 dropdown"> <a href="#" class="dropdown-toggle text-other" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">Thuê</a>
-                        <ul class="dropdown-menu sub-menu">
-                            <li><a href="#">Nhà riêng</a></li>
-                            <li><a href="#">Căn hộ</a></li>
-                            <li><a href="#">Phòng trọ</a></li>
-
-=======
                 <div class="nav-menu">
                     <ul>
                         <li><a href="#">Trang chủ </a> </li>
@@ -257,7 +51,6 @@
                 <a href="#" class="col-6"><i class="fa fa-envelope">vietnam@goldenhome.com</i></a>
             </span>
         </div>
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
 
     </header>
     <nav class="menu-logo">
@@ -348,176 +141,6 @@
                                         <option value="">Quận 3</option>
                                     </select>
                             </div>
-<<<<<<< HEAD
-                            <!-- mua/thuê -->
-                            <div id="view-as-grid" class="row list-layout-0 list-item">
-                                <div class="col-6 col-lg-4">
-                                    <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
-                                        <div class="divtext ">
-                                            <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title">Căn hộ Singapore cho thuê trung tâm Quận 3</a></h2>
-                                            <div class="imeta-1"> <b>Đ. Trần Quang Diệu, P.13, Q.3</b> </div>
-                                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
-                                            <div class="label"> <span class="label-1">Thuê</span>
-                                                <div class="price2"><b>188,9 ngàn/m²</b></div>
-                                            </div>
-                                            <div class="group"> <a href="#"> Dự án : <span class="cl1 w5" title=""></span></a> </div>
-                                            <div class="imeta-3"> <span> <a href="#"> Thuê: <strong class="cl1">5</strong> </a> </span> </div>
-                                            <div class="wprice"  >
-                                                <div class="imeta-2"> <span><b>8,5 triệu</b></span> <span><b>45 m²</b></span> </div>
-                                                <div link="thue/can-ho/hcm/quan-3/id277377" listingid="277377" object='{"id":277377 }' class="btnlike  save-listing save-listing-277377"> <span><i class="fa fa-heart-o"></i></span> </div>
-                                            </div>
-                                        </div>
-                                        <a href="#"> </a>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4">
-                                    <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b2.jpg" alt="Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất"> </a>
-                                        <div class="divtext ">
-                                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất</a></h2>
-                                            <div class="imeta-1"> <b>Đ. Võ Thị Sáu, P.8, Q.3</b> </div>
-                                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
-                                            <div class="label"> <span class="label-1">Thuê</span>
-                                                <div class="price2"><b>219,5 ngàn/m²</b></div>
-                                            </div>
-                                            <div class="wprice" style="margin-top: -50px;">
-                                                <div class="imeta-2"> <span><b>9 triệu</b></span> <span><b>41 m²</b></span> </div>
-                                                <div link="thue/can-ho/hcm/quan-3/id277418" listingid="277418" object='{"id":277418 }' class="btnlike  save-listing save-listing-277418"> <span><i class="fa fa-heart-o"></i></span> </div>
-                                            </div>
-                                        </div>
-                                        <a href="#"> </a>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4">
-                                    <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b3.jpg" alt="Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14"> </a>
-                                        <div class="divtext ">
-                                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14</a></h2>
-                                            <div class="imeta-1"> <b>Đ. Nguyễn Đình Chiểu, P.6, Q.3</b> </div>
-                                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>2</strong></span> <span><i class="fa fa-building"></i> <strong>2</strong></span> </div>
-                                            <div class="label"> <span class="label-1">Thuê</span>
-                                                <div class="price2"><b>591,7 ngàn/m²</b></div>
-                                            </div>
-                                            <div class="wprice">
-                                                <div class="imeta-2"> <span><b>44,374 triệu</b></span> <span><b>75 m²</b></span> </div>
-                                                <div link="thue/can-ho/hcm/quan-3/id277620" listingid="277620" object='{"id":277620 }' class="btnlike  save-listing save-listing-277620"> <span><i class="fa fa-heart-o"></i></span> </div>
-                                            </div>
-                                        </div>
-                                        <a href="#"> </a>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4">
-                                    <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/b4.jpg" alt="Cho thuê căn hộ cực sang trọng nội thất hoàng gia trung tâm quận 3"> </a>
-                                        <div class="divtext ">
-                                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ cực sang trọng nội thất hoàng gia trung tâm quận 3</a></h2>
-                                            <div class="imeta-1"> <b>Đ. Nguyễn Đình Chiểu, P.6, Q.3</b> </div>
-                                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>2</strong></span> <span><i class="fa fa-building"></i> <strong>2</strong></span> </div>
-                                            <div class="label"> <span class="label-1">Thuê</span>
-                                                <div class="price2"><b>591,7 ngàn/m²</b></div>
-                                            </div>
-                                            <div class="wprice">
-                                                <div class="imeta-2"> <span><b>44,374 triệu</b></span> <span><b>75 m²</b></span> </div>
-                                                <div link="thue/can-ho/hcm/quan-3/id277610" listingid="277610" object='{"id":277610 }' class="btnlike  save-listing save-listing-277610"> <span><i class="fa fa-heart-o"></i></span> </div>
-                                            </div>
-                                        </div>
-                                        <a href="#"> </a>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4">
-                                    <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/b6.jpg" alt="Căn hộ dịch vụ tầng 1 đầy đủ nội thất quận 1"> </a>
-                                        <div class="divtext ">
-                                            <h2 class="height-search"><a href="#" class="title">Căn hộ dịch vụ tầng 1 đầy đủ nội thất quận 1</a></h2>
-                                            <div class="imeta-1"> <b>Đ. Nguyễn Thái Bình, P.Nguyễn Thái Bình, Q.1</b> </div>
-                                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
-                                            <div class="label"> <span class="label-1">Thuê</span>
-                                                <div class="price2"><b>259,3 ngàn/m²</b></div>
-                                            </div>
-                                            <div class="wprice">
-                                                <div class="imeta-2"> <span><b>7 triệu</b></span> <span><b>27 m²</b></span> </div>
-                                                <div link="thue/can-ho/hcm/quan-1/id277826" listingid="277826" object='{"id":277826 }' class="btnlike  save-listing save-listing-277826"> <span><i class="fa fa-heart-o"></i></span> </div>
-                                            </div>
-                                        </div>
-                                        <a href="#"> </a>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4">
-                                    <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/b7.jpg" alt="Căn hộ studio đầy đủ nội thất quận 1"> </a>
-                                        <div class="divtext ">
-                                            <h2 class="height-search"><a href="#" class="title">Căn hộ studio đầy đủ nội thất quận 1</a></h2>
-                                            <div class="imeta-1"> <b>Đ. Nguyễn Thái Bình, P.Nguyễn Thái Bình, Q.1</b> </div>
-                                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
-                                            <div class="label"> <span class="label-1">Thuê</span>
-                                                <div class="price2"><b>266,7 ngàn/m²</b></div>
-                                            </div>
-                                            <div class="wprice">
-                                                <div class="imeta-2"> <span><b>8 triệu</b></span> <span><b>30 m²</b></span> </div>
-                                                <div link="thue/can-ho/hcm/quan-1/id277824" listingid="277824" object='{"id":277824 }' class="btnlike  save-listing save-listing-277824"> <span><i class="fa fa-heart-o"></i></span> </div>
-                                            </div>
-                                        </div>
-                                        <a href="#"> </a>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4">
-                                    <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/b8.jpg" alt="Căn hộ dịch vụ 40m2 tầng 2 đầy đủ nội thất quận 1"></a>
-                                        <div class="divtext ">
-                                            <h2 class="height-search"><a href="#" class="title">Căn hộ dịch vụ 40m2 tầng 2 đầy đủ nội thất quận 1</a></h2>
-                                            <div class="imeta-1"> <b>Đ. Nguyễn Thái Bình, P.Nguyễn Thái Bình, Q.1</b> </div>
-                                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
-                                            <div class="label"> <span class="label-1">Thuê</span>
-                                                <div class="price2"><b>225 ngàn/m²</b></div>
-                                            </div>
-                                            <div class="wprice">
-                                                <div class="imeta-2"> <span><b>9 triệu</b></span> <span><b>40 m²</b></span> </div>
-                                                <div link="thue/can-ho/hcm/quan-1/id277797" listingid="277797" object='{"id":277797 }' class="btnlike  save-listing save-listing-277797"> <span><i class="fa fa-heart-o"></i></span> </div>
-                                            </div>
-                                        </div>
-                                        <a href="#"> </a>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4">
-                                    <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/b10.jpg" alt="Căn hộ dịch vụ 40m2 đầy đủ nội thất quận 1"> </a>
-                                        <div class="divtext ">
-                                            <h2 class="height-search"><a href="#" class="title">Căn hộ dịch vụ 40m2 đầy đủ nội thất quận 1</a></h2>
-                                            <div class="imeta-1"> <b>Đ. Nguyễn Thái Bình, P.Nguyễn Thái Bình, Q.1</b> </div>
-                                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
-                                            <div class="label"> <span class="label-1">Thuê</span>
-                                                <div class="price2"><b>225 ngàn/m²</b></div>
-                                            </div>
-                                            <div class="wprice">
-                                                <div class="imeta-2"> <span><b>9 triệu</b></span> <span><b>40 m²</b></span> </div>
-                                                <div link="#" listingid="277776" object='{"id":277776 }' class="btnlike  save-listing save-listing-277776"> <span><i class="fa fa-heart-o"></i></span> </div>
-                                            </div>
-                                        </div>
-                                        <a href="#"> </a>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4">
-                                    <div class="item is-feature">
-                                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" data-lazy-type="image" data-lazy-src="./danhsach/assets/images/ver-4/pc/b10.jpg" alt="Cho thuê căn Officetel dự án Thủ Thiêm Dragon Phường Thạnh Mỹ Lợi Quận 2"> </a>
-                                        <div class="divtext ">
-                                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn Officetel dự án Thủ Thiêm Dragon Phường Thạnh Mỹ Lợi Quận 2</a></h2>
-                                            <div class="imeta-1"> <b>Đ. Quách Giai, P.Thạnh Mỹ Lợi, Q.2</b> </div>
-                                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>0</strong></span> <span><i class="fa fa-building"></i> <strong>0</strong></span> </div>
-                                            <div class="label"> <span class="label-1">Thuê</span>
-                                                <div class="price2"><b>146,1 ngàn/m²</b></div>
-                                            </div>
-                                            <div class="group"> <a href="du-an/hcm/quan-2/-id572"> Dự án : <span class="cl1 w5" title=""></span></a> </div>
-                                            <div class="imeta-3"> <span> <a href="du-an/hcm/quan-2/-id572/thue"> Thuê: <strong class="cl1">44</strong> </a> </span> </div>
-                                            <div class="wprice">
-                                                <div class="imeta-2"> <span><b>32 triệu</b></span> <span><b>219 m²</b></span> </div>
-                                                <div link="thue/can-ho/hcm/quan-2/id278207" listingid="278207" object='{"id":278207 }' class="btnlike  save-listing save-listing-278207"> <span><i class="fa fa-heart-o"></i></span> </div>
-                                            </div>
-                                        </div>
-                                        <a href="#"> </a>
-                                    </div>
-                                </div>
-=======
                             <div class="col-3">
                                 <select name="" id="" class="select1" style="font-size: 10pt;">
                                         <option value="">Mức giá</option>
@@ -529,7 +152,6 @@
                                         <option value="">15 triệu - 20 triệu</option>
                                         <option value="">Trên 20 triệu</option>
                                     </select>
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
                             </div>
                             <div class="col-3">
                                 <select name="" id="" class="select1 " style="font-size: 10pt;">
@@ -1044,30 +666,10 @@
     </div>
     <!-- Footer Golden Home -->
 
-<<<<<<< HEAD
-        <!-- Start of Tawk.to Script-->
-        <script type=text/javascript">
-            var Tawk_API = Tawk_API || {},
-                Tawk_LoadStart = new Date();
-            (function() {
-                var s1 = document.createElement("script"),
-                    s0 = document.getElementsByTagName("script")[0];
-                s1.async = true;
-                s1.src = 'https://embed.tawk.to/5f16b0407258dc118beea3ea/default';
-                s1.charset = 'UTF-8';
-                s1.setAttribute('crossorigin', '*');
-                s0.parentNode.insertBefore(s1, s0);
-            })();
-        </script>
-        <!--End of Tawk.to Script-->
-        <script type="text/javascript" src="./danhsach/assets/js/app/search-listing-city-min.js?v=20.30.13.11.2020"></script>
-        <script src="./views/js/danhsach.js"></script>
-=======
     <div class="divcuoi">
         <span> 2020 © Bản quyền GoldenHome. Đã đăng ký Bản quyền.</span>
     </div>
     <script src="./views/js/index.js"></script>
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
 </body>
 
 </html>

@@ -33,9 +33,9 @@
                         <li><a href="#">Liên hệ </a></li>
                         <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                         <?php if (isset($_SESSION['user']) == true) { ?>
-                            <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
+                            <li><a  href='?act=thongtintk&ma_tk=<?=$_SESSION['id']?>'><?= $_SESSION['user'] ?></a>
                                 <ul class="sub-menu">
-                                    <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
+                                    <li><a href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>">Thông tin tài khoản</a></li>
                                     <li><a href="">Đổi mật khẩu</a></li>
                                     <li><a href="">Căn hộ cửa tôi</a></li>
                                     <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
@@ -66,11 +66,11 @@
                             <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                             <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                             <?php if (isset($_SESSION['user']) == true) { ?>
-                                <li><a onclick="toogle()" onclick="toogle()" href="#"><?= $_SESSION['user'] ?> <i class="fa fa-caret-down"></i></a>
+                                <li><a  href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>"><?= $_SESSION['user'] ?> <i class="fa fa-caret-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>">Thông tin tài khoản</a></li>
                                         <li><a href="">Đổi mật khẩu</a></li>
-                                        <li><a href="">Căn hộ cửa tôi</a></li>
+                                        <li><a href="">Căn hộ của tôi</a></li>
                                         <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
                                     </ul>
                                 </li>
@@ -124,11 +124,7 @@
                     </div>
                     <div class="box1">
                         <div class="icon1">
-<<<<<<< HEAD
-                            <img src="../uploaded//guard.png" alt="">
-=======
                             <img src="../uploaded/guard.png" alt="">
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
                         </div>
                         <a href="#">Đáng tin cậy</a>
                         <p>Tất cả nhà thuê <br> chính chủ, không trung <br> gian, cam kết an <br> tâm khi thuê.</p>
@@ -180,11 +176,7 @@
             </div>
             <div class="boxcenter">
                 <div class="canho slider1">
-<<<<<<< HEAD
-                    <div class="box2">
-=======
                     <div class="box2" >
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
                         <img src="../uploaded/b1.jpg" alt="">
                         <div class="box2text">
                             <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</a>

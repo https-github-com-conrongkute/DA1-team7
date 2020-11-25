@@ -22,20 +22,12 @@
 <body>
     <!-- <div class="menu">
         <div class="banner">
-<<<<<<< HEAD
-            <img src="site/./uploaded/banner9.jpg" width="100%" height="600px" alt="">
-=======
             <img src="site/../uploaded/banner9.jpg" width="100%" height="600px" alt="">
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
         </div>
         <nav class="menu-logo">
             <div class="menu-logo-bg">
                 <div class="nav-logo">
-<<<<<<< HEAD
-                    <img src="./uploaded/logo.png" alt="">
-=======
                     <img src="../uploaded/logo.png" alt="">
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
                 </div>
                 <div class="nav-menu">
                     <ul>
@@ -314,7 +306,6 @@
                 <p class="txt77"> Bán Nhà Mặt Tiền Đường Thái Phiên Gần Khu Cư Xá Bình Thới, Phường 09 Quận 11</p>
 
          <p class="txt77"> Diện tích: 3.5m x 14m, diện tích đất 47.4m2 và tổng diện tích sử dụng 152.9m2. </p>
-<<<<<<< HEAD
 
    <p class="txt77">  Hiện trạng nhà 1 trệt 1 lửng 2 lầu + sân thượng, gồm 3 phòng ngủ và 3 WC. Kết cấu nhà cứng cáp, dọn vào ở ngay không cần sửa chữa.</p>
 
@@ -322,15 +313,6 @@
 
  <p class="txt77"> Tiện ích xung quanh đầy đủ như: Vinmart, Bệnh viện Quận 11 ( tuyến sau của các BV lớn như 115, ĐH Y Dược), Trường TH Hàn Hải Nguyên, Cư xá Bình Thới, đoạn đường ăn uống sầm uất Minh Phụng - Xóm Đất,...</p>
 
-=======
-
-   <p class="txt77">  Hiện trạng nhà 1 trệt 1 lửng 2 lầu + sân thượng, gồm 3 phòng ngủ và 3 WC. Kết cấu nhà cứng cáp, dọn vào ở ngay không cần sửa chữa.</p>
-
-<p class="txt77"> Nhà mặt tiền 16m xe tải lưu thông ra nhiều đường như Minh Phụng, Hàn Hải Nguyên, Xóm Đất, Cư Xá Bình Thới.</p>
-
- <p class="txt77"> Tiện ích xung quanh đầy đủ như: Vinmart, Bệnh viện Quận 11 ( tuyến sau của các BV lớn như 115, ĐH Y Dược), Trường TH Hàn Hải Nguyên, Cư xá Bình Thới, đoạn đường ăn uống sầm uất Minh Phụng - Xóm Đất,...</p>
-
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
  <p class="txt77">Vị trí trung tâm Quận 11, thuận tiện di chuyển sang các quận lân cận như Quận 5, 6, 10, Tân Bình, Bình Tân,....</p>
 
  <p class="txt77">Sổ hồng riêng chính chủ, giao dịch an toàn, dọn vào ở ngay.</p>
@@ -437,10 +419,6 @@
                                     </ul>
                   
                   
-<<<<<<< HEAD
-                </form>
-            </div>
-=======
                     </form>
                 </div>
                 <div class="form-timkiem">
@@ -504,18 +482,13 @@
                   
                     </form>
                 </div>
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
         </div>
         
     </div>
     <!-- dịch vụ khác của Golden Home -->
     <div class="dichvukhac">
         <div class="img-bg">
-<<<<<<< HEAD
-            <img src="./uploaded/banner-f.jpg" alt="">
-=======
             <img src="../uploaded/banner-f.jpg" alt="">
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
             <div class="font">
                 <p class="text">DỊCH VỤ NỔI BẬT CỦA GOLDEN HOME</p>
             </div>
@@ -559,11 +532,7 @@
     </div>
     <div class="footer">
         <div class="box4 b1">
-<<<<<<< HEAD
-            <img src="./uploaded/logo.png" alt="">
-=======
             <img src="../uploaded/logo.png" alt="">
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
             <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
             <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
         </div>
