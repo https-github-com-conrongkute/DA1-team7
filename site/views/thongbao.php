@@ -3,10 +3,13 @@
                 <?php 
 
                 foreach ($showtb as $showtb){
+                    $stt+=1;
                         ?>
                         <div class="thongbao" style=" width: 95%; margin: 0 auto; background-color: gainsboro; padding: 10px 5px; border-radius: 10px; margin-bottom: 20px;">
                         <div class="pading" style="padding: 10px 10px;">
-                        <p style="font-size: 12pt; "><strong>Thông báo: </strong>Căn hộ của bạn đã có khách hàng đặt!!</p>
+                        <p style="font-size: 12pt; "><strong>Thông báo: </strong>Căn hộ của bạn đã có khách hàng đặt!! <?php if ($stt==1) {
+                            echo "<span style='color: green; float: right;'> New</span>";
+                        }?></p>
                         <strong>Thông tin:</strong>
                         <p><strong>Bài đăng: </strong> <span style="color: orangered; font-weight: bold; font-size: 11pt;"><?=$showtb['ten_can_ho']?></span></p>
                         <strong>Khách hàng: </strong> <span style="color: orangered;"><?php echo $showtb["ho_ten"]?></span> <br>
