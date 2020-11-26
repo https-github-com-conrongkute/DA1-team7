@@ -6,6 +6,14 @@ switch ($act) {
   case 'index':
     require_once 'views/layout.php';
     break;
+
+  case 'thongbao':
+    $ma_tk=$_GET['ma_tk'];
+    $canhodadang= canhodadang($ma_tk);
+    $rows='views/thongbao.php';
+    $view= 'views/thongtintk.php';
+    require_once 'views/layout.php';
+  break;
   case 'thongtintk':
     $ma_tk=  $_GET['ma_tk'];
     $canhodadang= canhodadang($ma_tk);

@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
 <body>
@@ -33,9 +34,9 @@
                         <li><a href="#">Liên hệ </a></li>
                         <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                         <?php if (isset($_SESSION['user']) == true) { ?>
-                            <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
+                            <li><a  href='?act=thongtintk&ma_tk=<?=$_SESSION['id']?>'><?= $_SESSION['user'] ?></a>
                                 <ul class="sub-menu">
-                                    <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
+                                    <li><a href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>">Thông tin tài khoản</a></li>
                                     <li><a href="">Đổi mật khẩu</a></li>
                                     <li><a href="">Căn hộ cửa tôi</a></li>
                                     <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
@@ -66,11 +67,11 @@
                             <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                             <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                             <?php if (isset($_SESSION['user']) == true) { ?>
-                                <li><a onclick="toogle()" onclick="toogle()" href="#"><?= $_SESSION['user'] ?> <i class="fa fa-caret-down"></i></a>
+                                <li><a  href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>"><?= $_SESSION['user'] ?> <i class="fa fa-caret-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>">Thông tin tài khoản</a></li>
                                         <li><a href="">Đổi mật khẩu</a></li>
-                                        <li><a href="">Căn hộ cửa tôi</a></li>
+                                        <li><a href="">Căn hộ của tôi</a></li>
                                         <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
                                     </ul>
                                 </li>
