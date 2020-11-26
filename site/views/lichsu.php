@@ -43,7 +43,7 @@
                                     echo "Chưa xem nhà";
                                 }?></td>
 
-                                <td><a href="">Hủy lịch</a></td>
+                                <td><a href="" style="color: white; background-color: orangered; padding: 2px 5px; border-radius: 10px;">Hủy lịch</a></td>
                                 
                             </tr>
                             <?php
