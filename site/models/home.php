@@ -53,20 +53,39 @@ function getlichdatbyid($ma_tk){
 function getthongbao($id){
     $sql="SELECT ch.ten_can_ho, ch.ma_tk, dl.ma_can ,dl.ma_tk, kh.ho_ten, ngay_xem , ngay_dat, sdt, ma_dat
     FROM can_ho ch INNER JOIN dat_lich dl ON ch.ma_can = dl.ma_can 
-    INNER JOIN khach_hang kh ON kh.ma_tk=dl.ma_tk WHERE ch.ma_tk='$id' order by ma_dat  desc";
+    INNER JOIN khach_hang kh ON kh.ma_tk=dl.ma_tk WHERE ch.ma_tk='$id' order by  ngay_xem  desc";
     return query($sql);
 }
 
-function getAllLichdat(){
-    $sql = "SELECT * FROM dat_lich";
+//show lịch sử đặt căn hộ
+function lichsu($id){
+    $sql="SELECT * FROM dat_lich where ma_tk='$id' order by ngay_xem desc";
     return query($sql);
 }
-function getKhachhangIndl($id){
-    $sql = "SELECT * FROM khach_hang WHERE ma_tk = '$id'";
+function canho($id){
+    $sql="SELECT * FROM can_ho WHERE ma_can='$id'";
     return queryOne($sql);
 }
-function getcanhoIndl($id){
-    $sql = "SELECT * FROM can_ho WHERE ma_can = '$id'";
+function khachhang($id){
+    $sql="SELECT * FROM khach_hang WHERE ma_tk='$id'";
     return queryOne($sql);
 }
+
+//căn hộ đả đăng
+function canhodadang($id){
+    $sql="SELECT * FROM can_ho WHERE ma_tk='$id'";
+    return query($sql);
+}
+function maloaican($id)
+{
+    $sql="SELECT * FROM loai_can WHERE ma_loai='$id'";
+    return queryOne($sql);
+}
+function maquan($id)
+{
+    $sql="SELECT * FROM quan WHERE ma_quan='$id'";
+    return queryOne($sql);
+}
+
+
 ?> 

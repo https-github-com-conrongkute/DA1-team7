@@ -15,96 +15,46 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php foreach($dsch as $c) {
+                                $maloai=maloaican($c["ma_loai"]);
+                                $quan=maquan($c["ma_quan"]);
+                                ?>
+                            
                             <tr>
                                 <th scope="row">1</th>
                                 <td>
-                                <div class="xt-ch">
-                                    <p style="font-weight: bold;">Cho thuê căn hộ dịch vụ - CityLand Park Hill - Quận Gò Vấp</p>
-                                    <p >Loại căn: Căn hộ chung cư</p>
-                                    <p>Quận/Huyện: Quận Gò Vấp</p>
-                                    <p>Số phòng ngủ: 4</p>
-                                    <p>Số phòng vệ sinh: 1</p>
-                                    <p>Diện tích: 15 m2</p>
-                                    <p>Năm xây dựng: 2018</p>
-                                    <p>Tầng: 5</p>
-                                </div>
-                                
+                                    <p style="font-weight: bold;"><?=$c["ten_can_ho"]?></p>
+                                    <p>Loại căn: <?php echo $maloai["ten_can"]?></p>
+                                    <p>Quận/Huyện: <?php echo $quan["ten_quan"]?></p>
+                                    <p>Số phòng ngủ: <?=$c["so_phong_ngu"]?></p>
+                                    <p>Số phòng vệ sinh: <?=$c["so_phong_vs"]?></p>
+                                    <p>Diện tích: <?=$c["dien_tich"]?> </p>
+                                    <p>Năm xây dựng: <?=$c["nam_xd"]?></p>
+                                    <p>Tầng: <?=$c["tang"]?></p>
                                 </td>
                                 <td>
-                                <div class="xt-ch">
-                                    <p>Địa chỉ: 89 Quang Trung, phường 10, Quận Gò Vấp</p>
-                                    <p>Hướng nhà: Đông Nam</p>
+                                    <p>Địa chỉ: <?=$c["dia_chi"]?></p>
+                                    <p>Hướng nhà: <?=$c["huong_nha"]?></p>
                                     <p><strong>Tiện ích:</strong></p>
-                                    <p><strong>-Vị trí đẹp, thuận lợi giao thông</strong> Khu dân cư văn minh, cao cấp, an ninh 24/7</p>
-                                    <p>- Gần các đường di chuyển sang trung tâm, 10 phút di chuyển đến sân bay TSN</p><br>
-                                    <p> Khu dân cư và xung quanh</p>
-                                </div>
-                               
+                                    <p><?=$c["tien_ich"]?></p>
                                 </td>
                                 <td>
-                                <!-- <div class="xt-ch"> -->
-                                <div class="xt-ch">
-                                    <p><img src="../uploaded/b1.jpg" alt="" style="width: 100px;"></p>
-                                    <p><img src="../uploaded/b2.jpg" alt="" style="width: 100px;"></p>
-                                    <p><img src="../uploaded/b3.jpg" alt="" style="width: 100px;"></p>
-                                    <p><img src="../uploaded/b4.jpg" alt="" style="width: 100px;"></p>
-                                </div>
-                               
+                                    <p><img src="../uploaded/<?=$c["hinh"]?>" alt="" style="width: 70px;"></p>
+                                    <p><img src="../uploaded/<?=$c["hinha"]?>" alt="" style="width: 70px;"></p>
+                                    <p><img src="../uploaded/<?=$c["hinhb"]?>" alt="" style="width: 70px;"></p>
+                                    <p><img src="../uploaded/<?=$c["hinhc"]?>" alt="" style="width: 70px;"></p>
                                 </td>
                                 <td>
-                                    <p>5,000,000</p>
+                                    <p><?=$c["gia_thue"]?> VND</p>
                                     <p><strong>Chi phí khác:</strong></p>
-                                    <p>Xe: 100/1tháng Điện nước: Theo giá nhà nước</p>
+                                    <p><?=$c["chi_phi_khac"]?></p>
                                 </td>
-                                <td>Chưa cho thuê</td>
+                                <td><?=$c["ghi_chu"]?></td>
                                 <td><a href="">Sửa</a></td>
                                 <td><a href="">Xóa</a></td>
                             </tr>
-
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>
-                                    <div class="xt-ch">
-                                    <p style="font-weight: bold;">Cho thuê căn hộ dịch vụ - CityLand Park Hill - Quận Gò Vấp</p>
-                                    <p>Loại căn: Căn hộ chung cư</p>
-                                    <p>Quận/Huyện: Quận Gò Vấp</p>
-                                    <p>Số phòng ngủ: 4</p>
-                                    <p>Số phòng vệ sinh: 1</p>
-                                    <p>Diện tích: 15 m2</p>
-                                    <p>Năm xây dựng: 2018</p>
-                                    <p>Tầng: 5</p>
-                                    </div>
-                                   
-                                </td>
-                                <td>
-                                <div class="xt-ch">
-                                    <p>Địa chỉ: 89 Quang Trung, phường 10, Quận Gò Vấp</p>
-                                    <p>Hướng nhà: Đông Nam</p>
-                                    <p><strong>Tiện ích:</strong></p>
-                                    <p><strong>-Vị trí đẹp, thuận lợi giao thông</strong> Khu dân cư văn minh, cao cấp, an ninh 24/7</p>
-                                    <p>- Gần các đường di chuyển sang trung tâm, 10 phút di chuyển đến sân bay TSN</p><br>
-                                    <p> Khu dân cư và xung quanh</p>
-                                </div>
-                               
-                                </td>
-                                <td>
-                                <div class="xt-ch">
-                                    <p><img src="../uploaded/b1.jpg" alt="" style="width: 100px;"></p>
-                                    <p><img src="../uploaded/b2.jpg" alt="" style="width: 100px;"></p>
-                                    <p><img src="../uploaded/b3.jpg" alt="" style="width: 100px;"></p>
-                                    <p><img src="../uploaded/b4.jpg" alt="" style="width: 100px;"></p>
-                                </div>
-                               
-                                </td>
-                                <td>
-                                    <p>5,000,000</p>
-                                    <p><strong>Chi phí khác:</strong></p>
-                                    <p>Xe: 100/1tháng Điện nước: Theo giá nhà nước</p>
-                                </td>
-                                <td>Chưa cho thuê</td>
-                                <td><a href="">Sửa</a></td>
-                                <td><a href="">Xóa</a></td>
-                            </tr>
+                            <?php } ?>
+                            
                         </tbody>
                     </table>
                 </div>

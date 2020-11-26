@@ -143,16 +143,27 @@ switch ($act) {
     require_once 'views/chitiet.php';
     break;
   case 'ch-dd':
+    $ma_tk=$_GET["ma_tk"];
+    $dsch=canhodadang($ma_tk);
     $rows = 'views/canhodadang.php';
     $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
-    break;
+  break;
+  //phần thông báo
   case 'ds-ld':
-    $ds_ld = getAllLichdat();
+    $ma_tk=$_GET["ma_tk"];
+    $dsld=getthongbao($ma_tk);
     $rows = 'views/dslich_dat.php';
     $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
-    break;
+  break;
+  case 'lichsu':
+    $ma_tk=$_GET["ma_tk"];
+    $lichsu=lichsu($ma_tk);
+    $rows = 'views/lichsu.php';
+    $view= 'views/thongtintk.php';
+    require_once 'views/layout.php';
+  break;
   case 'thongbao':
     $ma_tk = $_GET["ma_tk"];
     $showtb = getthongbao($ma_tk);
