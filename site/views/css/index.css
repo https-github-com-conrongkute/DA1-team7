@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -154,10 +155,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     /* text-overflow: clip; */
-
 }
-
-
 
 .menu-logo-bg {
     width: 90%;
@@ -681,13 +679,18 @@ label {
 
 .box2text {
     margin-left: 9px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-right: 9px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    height: 80px;
+    height: 70px;
+}
+
+.box2text a {
+    outline: none;
+    font-family: 'Libre Franklin', sans-serif;
 }
 
 a {

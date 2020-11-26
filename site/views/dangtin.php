@@ -38,7 +38,6 @@
                         <li><a href="#">Dịch vụ </a></li>
                         <li><a href="?ctrl=home&act=danhsach">Danh sách nhà thuê</a> </li>
                         <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
-                        <li><a href="#">Liên hệ </a></li>
                         <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
                         <?php if (isset($_SESSION['user']) == true) { ?>
                             <li><a href="#" onclick="toogle()"><?= $_SESSION['user'] ?></a>
