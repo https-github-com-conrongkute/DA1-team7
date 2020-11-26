@@ -71,12 +71,12 @@ $(document).ready(function() {
     $('.slider1').slick({
         dots: true,
         infinite: false,
-        speed: 400,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 2000,
         infinite: true,
         responsive: [{
                 breakpoint: 1024,
@@ -109,12 +109,12 @@ $(document).ready(function() {
     $('.slider2').slick({
         dots: true,
         infinite: false,
-        speed: 400,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 2000,
         infinite: true,
         responsive: [{
                 breakpoint: 1024,
