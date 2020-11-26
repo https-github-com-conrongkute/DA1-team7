@@ -13,24 +13,6 @@
 </head>
 
 <body>
-
-    <!-- <div class="header">
-        <div class="img">
-            <img src="../../uploaded/logo.png"  alt="">
-        </div>
-        <div class="hdtext">
-            <ul>
-                <li><a href="index.html">Trang chủ</a></li>
-                <li><a href="#">Dịch vụ</a></li>
-                <li><a href="#">Danh sách</a></li>
-                <li><a href="#">Giới thiệu</a></li>
-                <li><a href="#">Liên hệ</a></li>
-                <li><a href="login.html">Đăng nhập</a></li>
-                <li><a href="#">Đăng Ký</a></li>
-            </ul>
-        </div>
-        
-    </div> -->
     <nav class="menu-logo">
         <div class="menu-logo-bg">
             <div class="nav-logo">
