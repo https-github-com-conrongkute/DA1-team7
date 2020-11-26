@@ -12,9 +12,10 @@
                 <ul>
                 <li><i class="fa fa-bell"></i><a href="?act=thongbao&ma_tk=<?=$_SESSION['id']?>">Thông báo</a></li>
                     <li><i class="fas fa-cog"></i><a href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>">Thông tin tài khoản</a></li>
-                    <li><i class="fas fa-lock"></i><a href="?act=doimk">Đổi mật khẩu</a></li>
-                    <li><i class="fas fa-home"></i><a href="?act=ch-dd">Căn hộ đã đăng</a></li>
-                    <li><i class="far fa-calendar"></i><a href="?act=ds-ld">Dach sách lịch đặt</a></li>
+                    <li><i class="fas fa-lock"></i><a href="?act=doimk&ma_tk=<?=$_SESSION['id']?>">Đổi mật khẩu</a></li>
+                    <li><i class="fas fa-home"></i><a href="?act=ch-dd&ma_tk=<?=$_SESSION['id']?>">Căn hộ đã đăng</a></li>
+                    <li><i class="far fa-calendar"></i><a href="?act=ds-ld&ma_tk=<?=$_SESSION['id']?>">Danh sách khách hàng đặt xem</a></li>
+                    <li><i class="far fa-calendar"></i><a href="?act=lichsu&ma_tk=<?=$_SESSION['id']?>">Lịch sử đặt của bạn</a></li>
                     <li><i class="fas fa-sign-out-alt"></i><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
                 </ul>
             </div>

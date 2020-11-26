@@ -687,6 +687,15 @@ a {
     float: left;
 }
 
+.neww {
+    padding: 2px 10px;
+    border-radius: 10px;
+    color: white;
+    float: right;
+    font-weight: bold;
+    background-color: green;
+}
+
 .datlich {
     width: 34%;
     margin-top: 20px;
@@ -1335,4 +1344,9 @@ a {
 
 .nav-menu2>ul>li:hover .sub-menu {
     display: block;
+}
+
+.hethang {
+    color: #FF4500;
+    font-weight: bold;
 }
