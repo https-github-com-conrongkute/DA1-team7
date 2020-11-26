@@ -9,7 +9,24 @@ function datlich($ma_can,$hoten,$email,$sdt,$ngay_xem){
     VALUES ('$ma_can','$hoten','$email','$sdt','$ngay_xem')";
     execute($sql);
 }
-
+// check lỗi tkdn
+function checktkdn($user){
+    $sql = "SELECT count(*) as soluong FROM khach_hang WHERE ten_tk = '$user'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['soluong'];
+}
+// check lỗi email
+function checktkemail($user){
+    $sql = "SELECT count(*) as soluong FROM khach_hang WHERE email = '$user'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['soluong'];
+}
+function Luuthongtintk($user, $pass, $email, $random){
+    $sql = "INSERT INTO khach_hang (ten_tk, mat_khau, email, random_key) VALUES ('$user','$pass','$email','$random')";
+    execute($sql);
+}
 // check tài khoản dang nhap
 function checktk($tentk, $pass){
     $sql = "SELECT * FROM khach_hang WHERE ten_tk = '$tentk' AND mat_khau = '$pass'";

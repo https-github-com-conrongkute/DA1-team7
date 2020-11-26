@@ -19,6 +19,7 @@ function checktk($user){
     $kq = $row->fetch();
     return $kq['soluong'];
 }
+
 // check email
 function checkemail($email){
     $sql = "SELECT count(*) as soluong FROM khach_hang WHERE email = '$email'";

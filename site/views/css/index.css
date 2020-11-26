@@ -150,7 +150,7 @@ body {
     -web-box-orient: vertical;
     overflow: hidden; */
     width: 100%;
-    max-height: 300px;
+    max-height: 70px;
     overflow: hidden;
     text-overflow: ellipsis;
     /* text-overflow: clip; */

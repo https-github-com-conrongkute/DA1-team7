@@ -15,6 +15,44 @@ switch ($act) {
   case 'dangnhap':
     require_once 'views/login.php';
     break;
+    // dang ký:
+  case 'dangky':
+    $erro = array();
+    // Kiểm lỗi
+    if (empty($_POST['user'])) {
+      $erro['user'] = "Tên tài không để trống";
+    } elseif (checktkdn($_POST['user'])) {
+      $erro['user'] = 'Tài khoản tồn tại !';
+    } else {
+      $user = $_POST['user'];
+    }
+    if (empty($_POST['pass'])) {
+      $erro['pass'] = "Mật khẩu không để trống";
+    } elseif (strlen($_POST['pass']) < 6) {
+      $erro['pass'] = "Mật khẩu của bạn quá ngắn !";
+    } else {
+      $pass = $_POST['pass'];
+    }
+    // check email
+    if (empty($_POST['email'])) {
+      $erro['email'] = 'Email không để trống !';
+    } elseif (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $erro['email'] = 'Email không hợp lệ !';
+    } elseif (checktkemail($_POST['email'])) {
+      $erro['email'] = 'Email tồn tại !';
+    } else {
+      $email = $_POST['email'];
+    }
+    
+    if (empty($erro)) {
+      // lưu thông tin đăng nhập
+      $message = "Thành công !";
+      $random = substr(md5('adhwe$#&^'),12);
+      Luuthongtintk($user, $pass, $email, $random);
+      require_once 'views/login.php';
+    }
+    require_once 'views/login.php';
+    break;
   case 'dangnhap_':
     $tentk = $_POST['tentk'];
     $pass = $_POST['pass'];
@@ -35,10 +73,8 @@ switch ($act) {
       } else {
         $message = 'Đăng nhập thất bại !';
         require_once 'views/login.php';
-   
       }
-    }
-     else {
+    } else {
       $message = 'Sai tài khoản hoặc mật khẩu !';
     }
     require_once 'views/login.php';
@@ -85,33 +121,33 @@ switch ($act) {
     break;
   case 'chitiet':
     require_once 'views/chitiet.php';
-  break;
+    break;
   case 'ch-dd':
     $rows = 'views/canhodadang.php';
-    $view= 'views/thongtintk.php';
+    $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
-  break;
+    break;
   case 'ds-ld':
     $ds_ld = getAllLichdat();
     $rows = 'views/dslich_dat.php';
-    $view= 'views/thongtintk.php';
+    $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
-  break;
+    break;
   case 'thongbao':
-    $ma_tk=$_GET["ma_tk"];
-    $showtb=getthongbao($ma_tk);
-    $rows='views/thongbao.php';
-    $view= 'views/thongtintk.php';
+    $ma_tk = $_GET["ma_tk"];
+    $showtb = getthongbao($ma_tk);
+    $rows = 'views/thongbao.php';
+    $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
-  break;
+    break;
   case 'thongtintk':
 
     $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
     break;
-    case 'doimk':
-      $rows = 'views/doimk.php';
-      $view= 'views/thongtintk.php';
+  case 'doimk':
+    $rows = 'views/doimk.php';
+    $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
-      break;
+    break;
 }
