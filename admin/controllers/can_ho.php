@@ -181,6 +181,12 @@ switch ($act) {
             duyetcanho($ma_can, $an_hien);
             header("location: ".ADMIN_URL."/?ctrl=can_ho&act=index");
         break;
+        case 'phuong':
+        $ds_p = getphuongbyid($_POST['quanid']);
+        foreach($ds_p as $p){
+             echo ' <option value="'.$p['id'].'">'.$p['phuong'].'</option>';
+        }
+        break;
 
 }
 

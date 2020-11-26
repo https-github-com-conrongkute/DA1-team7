@@ -55,11 +55,7 @@
     <nav class="menu-logo">
             <div class="menu-logo-bg">
                 <div class="nav-logo">
-<<<<<<< HEAD
-                    <img src="./uploaded/logo.png" alt="">
-=======
                     <img src="../uploaded/logo.png" alt="">
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
                 </div>
                 <div class="nav-menu">
                     <ul>
@@ -201,15 +197,6 @@
                     </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-<<<<<<< HEAD
-                        <img class="d-block w-100" src="./uploaded/b1.jpg" alt="First slide" style="width:100%;" height="500px">
-                      </div>
-                      <div class="carousel-item">   
-                        <img class="d-block w-100" src="./uploaded/b2.jpg" alt="Second slide" style="width:100%;" height="500px">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="./uploaded/b3.jpg" alt="Third slide" style="width:100%;" height="500px">
-=======
                         <img class="d-block w-100" src="../uploaded/b1.jpg" alt="First slide" style="width:100%;" height="500px">
                       </div>
                       <div class="carousel-item">   
@@ -217,7 +204,6 @@
                       </div>
                       <div class="carousel-item">
                         <img class="d-block w-100" src="../uploaded/b3.jpg" alt="Third slide" style="width:100%;" height="500px">
->>>>>>> fa99b1fcd2d1e15fac55b01f1b8d0c103d87861c
                       </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

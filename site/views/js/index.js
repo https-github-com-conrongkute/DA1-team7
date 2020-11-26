@@ -26,9 +26,41 @@ $(document).ready(function() {
             // $('.sum-menu ul li a').css('color', 'black');
         }
     });
-
+    // // Hiện lên văn bản
+    // $('.xthem_ch1').click(function (e) { 
+    //     $('.xt-ch').eq(0).addClass('xthem__ch').removeClass('xt-ch');
+    //     $('.xthem_ch1').addClass('anbot1').text('ẩn đi').removeClass('xthem_ch1');
+    //     // $('.xt-ch').eq(2).css('min-height','300px');
+    // });
+    // $('.xthem_ch2').click(function (e) { 
+    //     $('.xt-ch').eq(1).css('min-height','300px');
+    //     $('.xthem_ch2').addClass('anbot2').text('ẩn đi');
+    //     // $('.xt-ch').eq(2).css('min-height','300px');
+    // });
+    // $('.xthem_ch3').click(function (e) { 
+    //     $('.xt-ch').eq(2).css('min-height','300px');
+    //     $('.xthem_ch3').addClass('anbot3').text('ẩn đi');
+    //     // $('.xt-ch').eq(2).css('min-height','300px');
+    // });
+    // $('.xthem_ch4').click(function (e) { 
+    //     $('.xt-ch').eq(3).css('min-height','300px');
+    //     $('.xthem_ch4').addClass('anbot4').text('ẩn đi');
+    //     // $('.xt-ch').eq(2).css('min-height','300px');
+    // });
+    // $('.xthem_ch5').click(function (e) { 
+    //     $('.xt-ch').eq(5).css('min-height','300px');
+    //     $('.xthem_ch5').addClass('anbot5').text('ẩn đi');
+    //     // $('.xt-ch').eq(2).css('min-height','300px');
+    // });
+    // $('.xthem_ch6').click(function (e) { 
+    //     $('.xt-ch').eq(4).css('min-height','300px');
+    //     $('.xthem_ch6').addClass('anbot6').text('ẩn đi');
+    //     // $('.xt-ch').eq(2).css('min-height','300px');
+    // });
+    // $('.anbot1').click(function (e) { 
+    //     $('.xthem__ch').eq(0).addClass('xt-ch').removeClass('xthem__ch');
+    // });
     // !--slick carousel-- >
-
     $('.slider').slick({
         dots: true,
         infinite: false,
@@ -191,3 +223,4 @@ function toogle() {
 
     }
 }
+

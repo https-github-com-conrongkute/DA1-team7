@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.1/bootbox.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <style>
     td p {
@@ -68,8 +69,8 @@
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-edit.svg" alt="">Quản lý các quận<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=quan&act=index">Danh sách quận</a>
-                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=quan&act=addnew">Thêm các quận</a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=quan&act=index">Danh sách quận</a>
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=quan&act=addnew">Thêm các quận</a>
                                 </div>
                             </li>
                             <li class="left__menuItem">
@@ -101,8 +102,8 @@
                                     <img class="left__iconDown" src="./view/assets/arrow-down.svg" alt="">
                                 </div>
                                 <div class="left__text">
-                                    
-                                    <a class="left__link" href="<?=ADMIN_URL?>/?ctrl=tai_khoan&act=admin&sid=<?=$_SESSION['sid']?>">Xem Admins</a>
+
+                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=admin&sid=<?= $_SESSION['sid'] ?>">Xem Admins</a>
                                 </div>
                             </li>
                             <li class="left__menuItem">
@@ -121,27 +122,28 @@
                             <div class="right__cards">
                                 <a class="right__card bg-success" href="view_product.html">
                                     <div class="right__cardTitle">Số căn hộ</div>
-                                    <div class="right__cardNumber">72</div>
+                                    <div class="right__cardNumber"><?= $ds_ch['soluong'] ?></div>
                                     <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
                                 </a>
                                 <a class="right__card bg-danger" href="view_customers.html">
                                     <div class="right__cardTitle">Số khách Hàng</div>
-                                    <div class="right__cardNumber">12</div>
+                                    <div class="right__cardNumber"><?= $ds_kh['soluong'] ?></div>
                                     <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
                                 </a>
                                 <a class="right__card" href="view_p_category.html">
                                     <div class="right__cardTitle">Số lịch đặt</div>
-                                    <div class="right__cardNumber">4</div>
+                                    <div class="right__cardNumber"><?= $ds_ld['soluong'] ?></div>
                                     <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
                                 </a>
                                 <a class="right__card" href="view_orders.html">
                                     <div class="right__cardTitle">Số bình luận</div>
-                                    <div class="right__cardNumber">72</div>
+                                    <div class="right__cardNumber"><?= $ds_bl['soluong'] ?></div>
                                     <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
                                 </a>
                             </div>
-                            <div class="right__table">
-
+                            <div class="right__table" style="margin-top: 50px;">
+                                <div id="chart"></div>
+                                <div id="chart_div"></div>
                             </div>
                         <?php } ?>
                     </div>
@@ -167,7 +169,7 @@
         //     var delet = $('#delete-loaican');
         //     delet.css('display', 'none');
         // });
-      
+
         // });
         // Thông báo đăng nhập
         // $('.left__linkblock').click(function (e) { 
@@ -179,12 +181,49 @@
         CKEDITOR.replace('noi_dung');
     });
     $(window).on('load', function() {
-        $('.loader').delay(600).fadeOut('fast');
+        $('.loader').delay(100).fadeOut('fast');
     });
-      function Delete(url){
-          if(confirm('Bạn muốn xóa')){
-              document.location = url;
-          }
-          return false;
-       }
+
+    function Delete(url) {
+        if (confirm('Bạn muốn xóa')) {
+            document.location = url;
+        }
+        return false;
+    }
+</script>
+<script>
+    google.charts.load('current', {
+        packages: ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = new google.visualization.DataTable(); // Tạo data table
+        data.addColumn('string', 'Tên loại tin');
+        data.addColumn('number', 'Số tin');
+        data.addRows([
+            ['Căn hộ', <?= $ds_ch['soluong'] ?>],
+            ['Loại căn', <?= $ds_lc['soluong'] ?>],
+            ['Khách hàng', <?= $ds_kh['soluong'] ?>],
+            ['Quận', <?= $ds_q['soluong'] ?>],
+            ['Bình luận', <?= $ds_bl['soluong'] ?>],
+            ['Lịch đặt', <?= $ds_ld['soluong'] ?>]
+        ]);
+        var options = { // Set option của biểu đồ
+            'title': 'Thống kê',
+            'width': '100%',
+            'height': 400,
+            legend: {
+                position: 'bottom'
+            },
+            vAxis: {
+                viewWindow: {
+                    min: 0
+                }
+            }
+        }
+        var chart = new google.visualization.PieChart(document.getElementById('chart'));
+        chart.draw(data, options);
+    }
+   
 </script>

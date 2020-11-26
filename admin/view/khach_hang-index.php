@@ -48,8 +48,7 @@
                           ?>
                           <a class="sua" href="javascript:Delete('index.php?ctrl=tai_khoan&act=delete&ma_kh=<?=$ds['ma_tk']?>')" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
 
-                          <?php
-                      }?>
+                          <?php } ?>
                     </td>
 
                 </tr>

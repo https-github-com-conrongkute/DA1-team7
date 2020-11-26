@@ -4,6 +4,18 @@
     margin: 0 auto;
     padding: 0;
 }
+p#checkid{
+    float: left;
+    width: 100%;
+    margin: 10px 0px;
+}
+#checkid>span{
+    padding: 0px 10px;
+    background-color: red;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+}
 body {
     background-image: url(https://sites.google.com/site/neohousevnjsc/_/rsrc/1565408584919/thiet-ke-noi-that-can-ho/can-ho-cao-cap-lacasa-q7-neohouse-6.jpg);
     /* background: #f6f5f7; */

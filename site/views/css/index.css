@@ -144,6 +144,21 @@ body {
     text-decoration: none;
 }
 
+.xt-ch {
+    /* display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -web-box-orient: vertical;
+    overflow: hidden; */
+    width: 100%;
+    max-height: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* text-overflow: clip; */
+
+}
+
+
+
 .menu-logo-bg {
     width: 90%;
     /* margin-top: 20px; */
