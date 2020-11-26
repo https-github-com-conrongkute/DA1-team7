@@ -566,10 +566,11 @@ label {
 }
 
 .loc-canho {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     margin-bottom: 50px;
     text-align: center;
+    overflow: hidden;
 }
 
 .select {
@@ -651,18 +652,14 @@ label {
 }
 
 .danhsach .box2 {
-    width: 31.6%;
-    margin-right: 25px;
+    width: calc(25% - 20px);
     height: 400px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: #ccc 0px 10px 10px;
     margin-bottom: 40px;
     outline: none;
-}
-
-.danhsach .box2:nth-child(3) {
-    margin-right: 0;
+    margin: 0px 10px;
 }
 
 .box2 {

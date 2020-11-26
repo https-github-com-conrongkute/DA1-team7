@@ -175,8 +175,10 @@
                 </select>
                 <button class="btn-loc"><i class="fas fa-search"></i></button>
             </div>
-            <div class="boxcenter">
-                <div class="canho slider1">
+            <div class="boxcenter ">
+                
+            <div class="canho slider1">
+              
                     <div class="box2" >
                         <img src="../uploaded/b1.jpg" alt="">
                         <div class="box2text">
@@ -202,6 +204,33 @@
                             <a href="#">Đặt lịch xem</a>
                         </div>
                     </div>
+
+                    <div class="box2">
+                        <img src="../uploaded/b2.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho Thuê Căn Hộ Chung Cư Tháp Mười Vừa Sửa Sang Mới Đẹp P2 Q6 </a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+
+                    <div class="box2">
+                        <img src="../uploaded/b3.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+
                     <div class="box2">
                         <img src="../uploaded/b3.jpg" alt="">
                         <div class="box2text">
@@ -226,7 +255,126 @@
                             <a href="#">Đặt lịch xem</a>
                         </div>
                     </div>
-                    <div class="box2" style="margin-right: 30px;">
+                    <div class="box2">
+                        <img src="../uploaded/b3.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <img src="../uploaded/b3.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+
+                    <!-- slide 2 -->
+            </div>
+            <div class="canho slider2">
+                    <div class="box2 " >
+                        <img src="../uploaded/b1.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a data-toggle="modal" data-target="#datlich" href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="box2">
+                        <img src="../uploaded/b2.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho Thuê Căn Hộ Chung Cư Tháp Mười Vừa Sửa Sang Mới Đẹp P2 Q6 </a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <img src="../uploaded/b2.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho Thuê Căn Hộ Chung Cư Tháp Mười Vừa Sửa Sang Mới Đẹp P2 Q6 </a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <img src="../uploaded/b2.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho Thuê Căn Hộ Chung Cư Tháp Mười Vừa Sửa Sang Mới Đẹp P2 Q6 </a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="box2">
+                        <img src="../uploaded/b3.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+
+                    <div class="box2">
+                        <img src="../uploaded/b3.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+                    
+                    <div class="box2">
+                        <img src="../uploaded/b3.jpg" alt="">
+                        <div class="box2text">
+                            <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
+                        </div>
+                        <div class="gia">
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                        </div>
+                        <div class="datlich">
+                            <a href="#">Đặt lịch xem</a>
+                        </div>
+                    </div>
+
+                    <div class="box2">
                         <img src="../uploaded/b3.jpg" alt="">
                         <div class="box2text">
                             <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê căn hộ studio chung cư Vinhomes Grand Park - View hướng Tây Nam</a>
@@ -240,7 +388,7 @@
                     </div>
 
                 </div>
-                <div class="canho slider2">
+                <!-- <div class="canho slider2">
                     <div class="box2">
                         <img src="../uploaded/b4.jpg" alt="">
                         <div class="box2text">
@@ -302,7 +450,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
                 <div class="xemthem">
                     <a href="?ctrl=home&act=danhsach">Xem thêm </a>
                 </div>
