@@ -142,12 +142,10 @@
     $(document).ready(function () {
         $('#quan').change(function (e) { 
             quan = $('#quan').val(); 
-            $.post("<?= ADMIN_URL ?>/?ctrl=can_ho&act=phuong", {'quanid': quan},
+            $.post("?ctrl=can_ho&act=phuong", {'quanid': quan},
                 function (data) {
                     $('#phuong').html(data);
-                },
-                "dataType"
-            );
+                });
         });
     });
 </script>
