@@ -7,6 +7,7 @@
     <title>About</title>
     <link rel="stylesheet" href="./views/css/about.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -23,17 +24,19 @@
                     <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                     <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                     <?php if (isset($_SESSION['user']) == true) { ?>
-                        <li><a onclick="toogle()" href='#'><?= $_SESSION['user'] ?></a>
-                            <ul class="sub-menu">
-                                <li><a href="?ctrl=home&act=thongtintk">Thông tin tài khoản</a></li>
-                                <li><a href="?ctrl=home&act=doimk">Đổi mật khẩu</a></li>
-                                <li><a href="">Căn hộ cửa tôi</a></li>
-                                <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
-                            </ul>
-                        </li>
-                    <?php } else { ?>
-                        <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a></li>
-                    <?php } ?>
+                                <li><a  href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>"><?= $_SESSION['user']?> <i class="fa fa-caret-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>">Thông tin tài khoản</a></li>
+                                        <li><a href="?act=doimk&ma_tk=<?=$_SESSION['id']?>">Đổi mật khẩu</a></li>
+                                        <li><a href="?act=ch-dd&ma_tk=<?=$_SESSION['id']?>">Căn hộ của tôi</a></li>
+                                        <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
+                                    </ul>
+                                </li>
+                            <?php } else { ?>
+                                <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a>
+                                </li>
+                            <?php } ?>
+                    
                 </ul>
             </div>
         </div>

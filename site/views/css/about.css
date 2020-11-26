@@ -60,7 +60,7 @@ body {
     justify-content: center;
 }
 
-.nav-menu>ul>li {
+.nav-menu3>ul>li {
     list-style: none;
     position: relative;
     /* width: 100px;
@@ -69,16 +69,20 @@ body {
     padding: 0px 20px;
 }
 
+.nav-menu3>ul>li:hover .sub-menu {
+    display: block;
+}
+
 .sub-menu {
     position: absolute;
     content: '';
     top: 60px;
     display: inline-block;
-    width: 150px;
+    width: 170px;
     min-height: 100px;
     left: 0;
     background-color: #FFA000;
-    border-radius: 20px;
+    border-radius: 10px;
     display: none;
 }
 
@@ -94,7 +98,7 @@ body {
     padding: 5px 10px;
 }
 
-.nav-menu>ul>li>a {
+.nav-menu3>ul>li>a {
     color: white;
     font-family: 'Roboto', sans-serif;
     /* font-weight: bold; */

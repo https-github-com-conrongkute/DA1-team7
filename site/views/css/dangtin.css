@@ -86,7 +86,7 @@ body {
     min-height: 100px;
     left: 0;
     background-color: #FFA000;
-    border-radius: 20px;
+    border-radius: 10px;
     display: none;
 }
 
@@ -119,6 +119,10 @@ body {
     line-height: 80px; */
     line-height: 80px;
     padding: 0px 20px;
+}
+
+.nav-menu>ul>li:hover .sub-menu {
+    display: block;
 }
 
 .nav-menu>ul>li>a {

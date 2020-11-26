@@ -86,6 +86,10 @@ function maquan($id)
     $sql="SELECT * FROM quan WHERE ma_quan='$id'";
     return queryOne($sql);
 }
-
+//show phường
+function getphuongbyid($id){
+    $sql="SELECT * FROM phuong WHERE id='$id'";
+    return queryOne($sql);
+}
 
 ?> 

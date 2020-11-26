@@ -20,6 +20,7 @@
                                 $stt+=1;
                                 $canho=canho($ds["ma_can"]);
                                 $tk=khachhang($canho["ma_tk"]);
+                                // $phuong=getphuongbyid($canho["id"]);
                                 ?>
                                 
                             <tr>
@@ -30,7 +31,7 @@
                                 }?>
                                 <br>
                                 <p style="width: 100%; float: left;">Chủ căn hộ: <?php echo $tk["ho_ten"]?></p><br>
-                                <p>Số điện thoại: <?php echo $tk["sdt"]?></p>
+                                <p>Số điện thoại: 0<?php echo $tk["sdt"]?></p>
                                 <p>Địa chỉ nhà: <?php echo $canho["dia_chi"]?></p>
                               </td>
                                 <td><?=date_format(date_create($ds['ngay_xem']), "d/m/yy")?></td>
