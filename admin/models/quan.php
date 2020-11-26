@@ -22,4 +22,6 @@ function deletequan($ma_quan){
           $sql="DELETE FROM quan where ma_quan='$ma_quan'";
           execute($sql);
 }
+//phường
+
 ?>

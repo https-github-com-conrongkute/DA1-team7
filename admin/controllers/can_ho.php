@@ -179,6 +179,13 @@ switch ($act) {
         duyetcanho($ma_can, $an_hien);
         header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=index");
         break;
+        case 'anbai':
+            $ma_can = $_GET["ma_can"];
+            settype($ma_can, "int");
+            $an_hien = 0;
+            duyetcanho($ma_can, $an_hien);
+            header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=index");
+            break;
     case 'phuong':
         // require_once "models/can_ho.php";
         

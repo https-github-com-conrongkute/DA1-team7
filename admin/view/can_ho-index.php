@@ -38,6 +38,7 @@
                     $quan = getquanbyid($ds["ma_quan"]);
                     $loaican = getloaicanbyid($ds["ma_loai"]);
                     $tentk = getkhachhangByID($ds["ma_tk"]);
+                    $phuong=getphuongid($ds["id"]);
                     $stt += 1;
                 ?>
                     <tr>
@@ -48,6 +49,7 @@
                             <p style="font-weight: bold;"><?= $ds["ten_can_ho"] ?></p>
                             <p>Loại căn: <?= $loaican["ten_can"] ?></p>
                             <p>Quận/Huyện: <?php echo $quan["ten_quan"] ?></p>
+                            <p>Phường: <?php echo $phuong["phuong"]?></p>
                             <p>Diện tích: <?= $ds["dien_tich"] ?> m2</p>
                             <p>Năm xây dựng: <?= $ds["nam_xd"] ?></p>
                             <p><?php if ($ds["ma_loai"] > 0) echo "Tầng: " . $ds["tang"] . "";
@@ -87,7 +89,11 @@
                                 <p><a href="<?= ADMIN_URL ?>/?ctrl=can_ho&act=duyetbai&ma_can=<?= $ds['ma_can'] ?>"><button style="background-color: orangered; color: white; padding: 2px 5px; border-radius: 10%;">Duyệt bài</button></a></p>
                             <?php
                             } else {
-                                echo "<p style='color: red;'>Đã duyệt</p>";
+                                ?>
+                                <p style="color: orangered;">Đã duyệt bài</p>
+                                <p><a href="<?= ADMIN_URL ?>/?ctrl=can_ho&act=anbai&ma_can=<?= $ds['ma_can'] ?>"><button style="background-color: green; color: white; padding: 2px 5px; border-radius: 10%;">Ẩn bài đăng</button></a></p>
+
+                                <?php
                             } ?>
 
                             <?php if ($_SESSION["sid"] == $ds["ma_tk"]) {

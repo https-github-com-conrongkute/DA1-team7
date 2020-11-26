@@ -53,7 +53,7 @@ function getlichdatbyid($ma_tk){
 function getthongbao($id){
     $sql="SELECT ch.ten_can_ho, ch.ma_tk, dl.ma_can ,dl.ma_tk, kh.ho_ten, ngay_xem , ngay_dat, sdt, ma_dat
     FROM can_ho ch INNER JOIN dat_lich dl ON ch.ma_can = dl.ma_can 
-    INNER JOIN khach_hang kh ON kh.ma_tk=dl.ma_tk WHERE ch.ma_tk='$id' order by  ngay_xem  desc";
+    INNER JOIN khach_hang kh ON kh.ma_tk=dl.ma_tk WHERE ch.ma_tk='$id' and ch.an_hien = 1 order by  ngay_xem  desc";
     return query($sql);
 }
 
@@ -63,7 +63,7 @@ function lichsu($id){
     return query($sql);
 }
 function canho($id){
-    $sql="SELECT * FROM can_ho WHERE ma_can='$id'";
+    $sql="SELECT * FROM can_ho WHERE ma_can='$id' and an_hien= 1";
     return queryOne($sql);
 }
 function khachhang($id){
@@ -73,7 +73,7 @@ function khachhang($id){
 
 //căn hộ đả đăng
 function canhodadang($id){
-    $sql="SELECT * FROM can_ho WHERE ma_tk='$id'";
+    $sql="SELECT * FROM can_ho WHERE ma_tk='$id' and an_hien=1";
     return query($sql);
 }
 function maloaican($id)

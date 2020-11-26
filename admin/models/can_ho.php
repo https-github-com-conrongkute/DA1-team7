@@ -31,4 +31,8 @@ function getphuongbyid($ma_quan){
     $sql = "SELECT * FROM phuong WHERE ma_quan = '$ma_quan'";
     return query($sql);
 }
+function getphuongid($id){
+    $sql="SELECT * FROM phuong WHERE id='$id'";
+    return queryOne($sql);
+}
 ?>
