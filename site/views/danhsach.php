@@ -68,8 +68,8 @@
                     <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
                     <?php if (isset($_SESSION['user']) == true) { ?>
                     <li>
-                        <a href="#" onclick="toogle()">
-                            <?= $_SESSION['user'] ?>
+                        <a href="?act=thongtintk" >
+                            <?= $_SESSION['user'] ?> <i class="fa fa-caret-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>

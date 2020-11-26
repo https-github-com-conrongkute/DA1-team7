@@ -144,6 +144,21 @@ body {
     text-decoration: none;
 }
 
+.xt-ch {
+    /* display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -web-box-orient: vertical;
+    overflow: hidden; */
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* text-overflow: clip; */
+
+}
+
+
+
 .menu-logo-bg {
     width: 90%;
     /* margin-top: 20px; */
@@ -263,7 +278,7 @@ label {
     width: 73%;
     float: left;
     height: 100%;
-    margin-left: 1%;
+    padding: 10px 20px;
     overflow-y: scroll;
 }
 
@@ -632,7 +647,7 @@ label {
 
 .boxcenter {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
 }
 
 .danhsach .box2 {
@@ -1325,9 +1340,12 @@ a {
 
 .nav-menu>ul>li:hover .sub-menu {
     display: block;
-    transition: 0.5s;
 }
 
 .sub-menu li a:hover {
     color: white;
+}
+
+.nav-menu2>ul>li:hover .sub-menu {
+    display: block;
 }
