@@ -88,6 +88,8 @@ switch ($act) {
     require_once 'views/chitiet.php';
   break;
   case 'ch-dd':
+    $ma_tk=$_GET["ma_tk"];
+    $dsch=canhodadang($ma_tk);
     $rows = 'views/canhodadang.php';
     $view= 'views/thongtintk.php';
     require_once 'views/layout.php';

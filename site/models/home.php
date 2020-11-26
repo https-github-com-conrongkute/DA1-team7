@@ -56,5 +56,21 @@ function khachhang($id){
     return queryOne($sql);
 }
 
+//căn hộ đả đăng
+function canhodadang($id){
+    $sql="SELECT * FROM can_ho WHERE ma_tk='$id'";
+    return query($sql);
+}
+function maloaican($id)
+{
+    $sql="SELECT * FROM loai_can WHERE ma_loai='$id'";
+    return queryOne($sql);
+}
+function maquan($id)
+{
+    $sql="SELECT * FROM quan WHERE ma_quan='$id'";
+    return queryOne($sql);
+}
+
 
 ?> 
