@@ -33,13 +33,13 @@ switch ($act) {
       $ho_ten = $_POST['ho_ten'];
     }
     // Kiểm lỗi mật khẩu
-    // if (empty($_POST['pass'])) {
-    //   $erro['pass'] = "Mật khẩu không để trống";
-    // } elseif (strlen($_POST['pass']) < 6) {
-    //   $erro['pass'] = "Mật khẩu của bạn quá ngắn !";
-    // } else {
-    //   $pass = $_POST['pass'];
-    // }
+    if (empty($_POST['pass'])) {
+      $erro['pass'] = "Mật khẩu không để trống";
+    } elseif (strlen($_POST['pass']) < 6) {
+      $erro['pass'] = "Mật khẩu của bạn quá ngắn !";
+    } else {
+      $pass = $_POST['pass'];
+    }
     // check email
     if (empty($_POST['email'])) {
       $erro['email'] = 'Email không để trống !';

@@ -59,10 +59,10 @@
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                 </div>
                 <span>hoặc sửa dụng email để đăng ký</span>
-                <input type="text" placeholder="Họ và tên" name="ho_ten" />
-                <input type="text" placeholder="Tên đăng nhập" name="user" />
+                <input type="text" placeholder="Họ và tên" name="ho_ten" value="<?php if(isset($ho_ten)==true) echo $ho_ten; ?>" />
+                <input type="text" placeholder="Tên đăng nhập" name="user" value="<?php if(isset($user)==true) echo $user; ?>" />
                
-                <input type="text" placeholder="Email" name="email" />
+                <input type="text" placeholder="Email" name="email" value="<?php if(isset($email)==true) echo $email; ?>" />
                 <input type="password" id="mk" placeholder="Mật khẩu" name="pass" />
                  <p id="checkid"></p>
                  <script>
