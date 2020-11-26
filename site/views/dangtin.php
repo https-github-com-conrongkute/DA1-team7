@@ -56,8 +56,8 @@
                 </div>
             </div>
             <div class="menutimkiem w-100  position-relative">
-                <a href="#" onclick="showtimkiem()" id="an">Tìm kiếm <i class="fa fa-search"></i></a>
-                <a href="#" onclick="exit()" id="hien">Tìm kiếm <i class="fa fa-close"></i></a>
+            <span class="anhien"  onclick="showtimkiem()" id="an">Tìm kiếm <i class="fa fa-search"></i></span>
+            <span class="anhien"  onclick="exit()" id="hien">Tìm kiếm <i class="fa fa-close"></i></span>
                 <div class="w-100 boxtim position-absolute" id="showtim">
                     <!--Tiềm kiếm ẩn-->
                     <div class="tiemkiemtrong">

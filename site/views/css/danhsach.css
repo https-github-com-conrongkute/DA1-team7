@@ -148,6 +148,12 @@ body {
     margin-top: 30px;
 }
 
+.anhien {
+    font-size: 15pt;
+    line-height: 50px;
+    cursor: pointer;
+}
+
 
 /* .banner {
     position: relative;
@@ -175,7 +181,7 @@ body {
     font-weight: bolder;
 }
 
-.menutimkiem a i {
+.menutimkiem span i {
     background-color: #ef7733;
     padding: 9px;
     border-radius: 50%;

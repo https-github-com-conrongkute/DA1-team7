@@ -45,7 +45,7 @@
                                     <p><img src="../uploaded/<?=$c["hinhc"]?>" alt="" style="width: 70px;"></p>
                                 </td>
                                 <td>
-                                    <p><?=$c["gia_thue"]?> VND</p>
+                                    <p><?=$c["gia_thue"]?> VNk</p>
                                     <p><strong>Chi phí khác:</strong></p>
                                     <p><?=$c["chi_phi_khac"]?></p>
                                 </td>
