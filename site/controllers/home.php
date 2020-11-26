@@ -26,13 +26,20 @@ switch ($act) {
     } else {
       $user = $_POST['user'];
     }
-    if (empty($_POST['pass'])) {
-      $erro['pass'] = "Mật khẩu không để trống";
-    } elseif (strlen($_POST['pass']) < 6) {
-      $erro['pass'] = "Mật khẩu của bạn quá ngắn !";
+    //Kiểm lỗi họ tên
+    if (empty($_POST['ho_ten'])) {
+      $erro['ho_ten'] = "Họ tên không để trống";
     } else {
-      $pass = $_POST['pass'];
+      $ho_ten = $_POST['ho_ten'];
     }
+    // Kiểm lỗi mật khẩu
+    // if (empty($_POST['pass'])) {
+    //   $erro['pass'] = "Mật khẩu không để trống";
+    // } elseif (strlen($_POST['pass']) < 6) {
+    //   $erro['pass'] = "Mật khẩu của bạn quá ngắn !";
+    // } else {
+    //   $pass = $_POST['pass'];
+    // }
     // check email
     if (empty($_POST['email'])) {
       $erro['email'] = 'Email không để trống !';
@@ -43,15 +50,28 @@ switch ($act) {
     } else {
       $email = $_POST['email'];
     }
-    
+
     if (empty($erro)) {
       // lưu thông tin đăng nhập
       $message = "Thành công !";
-      $random = substr(md5('adhwe$#&^'),12);
-      Luuthongtintk($user, $pass, $email, $random);
+      $random = substr(md5('adhwe$#&^'), 12);
+      Luuthongtintk($ho_ten, $user, $pass, $email, $random);
       require_once 'views/login.php';
     }
     require_once 'views/login.php';
+    break;
+  case 'kiemloi':
+    if (isset($_GET['pass']) == true) {
+      $erro = array();
+      $pass = $_GET['pass'];
+      if (empty($pass)) {
+        echo "<span>Mật khẩu không để trống</span>";
+      } elseif (strlen($pass) < 6) {
+        echo "<span>Mật khẩu của bạn quá ngắn !</span>";
+      } else {
+        echo "<span style='background-color: green;'>An toàn</span>";
+      }
+    }
     break;
   case 'dangnhap_':
     $tentk = $_POST['tentk'];
@@ -68,14 +88,14 @@ switch ($act) {
       $_SESSION['sdt'] = $checktk['sdt'];
       $_SESSION['gioitinh'] = $checktk['gioitinh'];
       if ($_SESSION['vai_tro'] == 0) {
-        $message = 'Đăng nhập thành công';
+        $message_dn = 'Đăng nhập thành công';
         header("location: index.php");
       } else {
-        $message = 'Đăng nhập thất bại !';
+        $error_dn = 'Đăng nhập thất bại !';
         require_once 'views/login.php';
       }
     } else {
-      $message = 'Sai tài khoản hoặc mật khẩu !';
+      $error_dn = 'Sai tài khoản hoặc mật khẩu !';
     }
     require_once 'views/login.php';
     break;

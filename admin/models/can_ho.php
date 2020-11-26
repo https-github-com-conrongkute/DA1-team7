@@ -25,4 +25,10 @@ function duyetcanho($ma_can, $an_hien){
           $sql="UPDATE can_ho SET an_hien='$an_hien' WHERE ma_can='$ma_can' ";
           execute($sql);
 }
+
+// lấy phường 
+function getphuongbyid($ma_quan){
+    $sql = "SELECT * FROM phuong WHERE ma_quan = '$ma_quan'";
+    return query($sql);
+}
 ?>

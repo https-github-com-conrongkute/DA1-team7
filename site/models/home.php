@@ -23,8 +23,8 @@ function checktkemail($user){
     $kq = $row->fetch();
     return $kq['soluong'];
 }
-function Luuthongtintk($user, $pass, $email, $random){
-    $sql = "INSERT INTO khach_hang (ten_tk, mat_khau, email, random_key) VALUES ('$user','$pass','$email','$random')";
+function Luuthongtintk($ho_ten,$user, $pass, $email, $random){
+    $sql = "INSERT INTO khach_hang (ho_ten,ten_tk, mat_khau, email, random_key) VALUES ('$ho_ten','$user','$pass','$email','$random')";
     execute($sql);
 }
 // check tài khoản dang nhap

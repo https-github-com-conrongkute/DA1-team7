@@ -8,7 +8,7 @@
         </div>
         <div class="row">
                   <!-- Loại căn -->
-        <div class="col-6">
+        <div class="col-4">
           <label for="exampleInputEmail1">Loại căn hộ</label>
           <select name="ma_loai" class="form-control" id="">
                     <?php foreach($row as $row) {?>
@@ -17,12 +17,18 @@
           </select>
           </div>
           <!-- Quận -->
-          <div class="col-6">
+          <div class="col-4">
           <label for="exampleInputEmail1">Quận</label>
-          <select name="ma_quan" class="form-control" id="">
+          <select name="ma_quan" class="form-control" id="quan">
                     <?php foreach($quan as $quan) {?>
                     <option value="<?=$quan["ma_quan"]?>"><?=$quan["ten_quan"]?></option>
                     <?php }?>
+          </select>
+          </div>
+          <div class="col-4">
+          <label for="exampleInputEmail1">Phường</label>
+          <select name="ma_quan" class="form-control" id="phuong">
+                  <option value="">Chọn phường</option>
           </select>
           </div>
           </div>
@@ -132,5 +138,17 @@
     </form>
 
 </div>
-
+<script>
+    $(document).ready(function () {
+        $('#quan').change(function (e) { 
+            quan = $('#quan').val(); 
+            $.post("<?= ADMIN_URL ?>/?ctrl=can_ho&act=phuong", {'quanid': quan},
+                function (data) {
+                    $('#phuong').html(data);
+                },
+                "dataType"
+            );
+        });
+    });
+</script>
 

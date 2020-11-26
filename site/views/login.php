@@ -59,31 +59,40 @@
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                 </div>
                 <span>hoặc sửa dụng email để đăng ký</span>
-                <input type="text" placeholder="Họ và tên" name="user" />
-
-                <input type="text" placeholder="Email" name="email" />
-
-                <input type="password" placeholder="Mật khẩu" name="pass" />
+                <input type="text" placeholder="Họ và tên" name="ho_ten" />
+                <input type="text" placeholder="Tên đăng nhập" name="user" />
                
+                <input type="text" placeholder="Email" name="email" />
+                <input type="password" id="mk" placeholder="Mật khẩu" name="pass" />
+                 <p id="checkid"></p>
+                 <script>
+                     $(document).ready(function () {
+                         $('#mk').blur(function (e) { 
+                             var u = $(this).val();
+                             $('#checkid').load('?act=kiemloi&pass=' + u);
+                         });
+                     });
+                 </script>
                 <button id="btn_submit_dk" type="submit">Đăng ký</button>
             </form>
         </div>
-        <!-- Thông báo lỗi matkhau -->
-        <?php if (isset($erro['pass']) == true) { ?>
-            <script>
-                swal("<?= $erro['pass'] ?>", "Nhập lại !", "error");
-            </script>
-        <?php } ?>
-          <!-- Thông báo lỗi email -->
-          <?php if (isset($erro['email']) == true) { ?>
+       
+        <!-- Thông báo lỗi email -->
+        <?php if (isset($erro['email']) == true) { ?>
             <script>
                 swal("<?= $erro['email'] ?>", "Nhập lại !", "error");
             </script>
         <?php } ?>
-         <!-- Thông báo lỗi ten dn -->
+        <!-- Thông báo lỗi ten dn -->
         <?php if (isset($erro['user']) == true) { ?>
             <script>
                 swal("<?= $erro['user'] ?>", "Nhập lại !", "warning");
+            </script>
+        <?php } ?>
+        <!-- Thông báo lỗi ho_ten -->
+        <?php if (isset($erro['ho_ten']) == true) { ?>
+            <script>
+                swal("<?= $erro['ho_ten'] ?>", "Nhập lại !", "warning");
             </script>
         <?php } ?>
         <!-- THông báo đăng ký thành công -->
@@ -104,10 +113,12 @@
                 <input type="password" placeholder="Mật khẩu" name="pass" />
                 <a href="#">quên mật khâu ?</a>
                 <button type="submit">Đăng nhập</button>
-                <p>
-                    <?php if (isset($message) && ($message != "")) {
-                        echo $message;
-                    } ?></p>
+
+                <?php if (isset($error_dn) && ($error_dn != "")) { ?>
+                    <script>
+                        swal("<?= $error_dn?>", "Nhập lại !", "warning");
+                    </script>
+                <?php    } ?>
             </form>
         </div>
         <div class="overlay-container">
@@ -127,7 +138,7 @@
     </div>
 
 
-    <script src="jq/jquery.js"></script>
+    <!-- <script src="jq/jquery.js"></script> -->
     <script>
         const signUpButton = document.getElementById('signUp');
         const signInButton = document.getElementById('signIn');
