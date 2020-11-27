@@ -129,7 +129,7 @@
                                         </script>
             </div>
             <div class="col-6">
-            <input type="file" name="hinh" id="file2" style="display: none;" class="form-control" />
+            <input type="file" name="hinha" id="file2" style="display: none;" class="form-control" />
             <label for="file2" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 25%;" alt=""></label>
             <div class="hinhanh"><img src="#" alt="" id="loadha1" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
                                         <script>
@@ -154,7 +154,7 @@
         </div>
         <div class="row mt-3 mb-2">
             <div class="col-6">
-            <input type="file" name="hinh" id="file3" style="display: none;" class="form-control" />
+            <input type="file" name="hinhb" id="file3" style="display: none;" class="form-control" />
             <label for="file3" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 25%;" alt=""></label>
             <div class="hinhanh"><img src="#" alt="" id="loadha2" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
                                         <script>
@@ -177,7 +177,7 @@
                                         </script>
             </div>
             <div class="col-6">
-            <input type="file" name="hinh" id="file4" style="display: none;" class="form-control" />
+            <input type="file" name="hinhc" id="file4" style="display: none;" class="form-control" />
             <label for="file4" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 25%;" alt=""></label>
             <div class="hinhanh"><img src="#" alt="" id="loadha3" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
                                         <script>
