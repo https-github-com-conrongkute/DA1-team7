@@ -25,6 +25,7 @@ switch ($act) {
         if (isset($_POST["ten_can_ho"]) && $_POST["ten_can_ho"] != "") {
             $ten_can_ho = trim(strip_tags($_POST["ten_can_ho"]));
             $ma_loai = $_POST["ma_loai"];
+            $ma_tk= $_POST['ma_tk'];
             $ma_quan = $_POST["ma_quan"];
             $dia_chi = $_POST["dia_chi"];
             $nam_xd = $_POST["nam_xd"];
@@ -38,6 +39,7 @@ switch ($act) {
             $ghi_chu = $_POST["ghi_chu"];
             $tien_ich = $_POST["noi_dung"];
             $an_hien = $_POST["an_hien"];
+            $ma_phuong=$_POST["ma_phuong"];
             // Hình
             $hinh = $_FILES['hinh']['name'];
             $pathimg = './uploaded/';
@@ -78,7 +80,9 @@ switch ($act) {
             settype($tang, "int");
             settype($gia_thue, "int");
             settype($dien_tich, "int");
-            themcanho($ma_loai, $ma_quan, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien);
+            settype($ma_tk, "int");
+            settype($ma_phuong, "int");
+            themcanho($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien);
             header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=index");
         } else {
             header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=addnew");
@@ -91,6 +95,7 @@ switch ($act) {
         $ds = getcanhobyid($ma_can);
         $row = getallloaican();
         $quan = getalllquan();
+        
         $view = 'view/can_ho-edit.php';
         require_once 'view/layout.php';
         break;
@@ -113,7 +118,7 @@ switch ($act) {
             $ghi_chu = $_POST["ghi_chu"];
             $tien_ich = $_POST["noi_dung"];
             $an_hien = $_POST["an_hien"];
-
+            $ma_phuong=$_POST["ma_phuong"];
             $hinh1 = $_POST["hinh1"];
             $hinha1 = $_POST["hinha1"];
             $hinhb1 = $_POST["hinhb1"];
@@ -159,7 +164,7 @@ switch ($act) {
             settype($gia_thue, "int");
             settype($dien_tich, "int");
             settype($ma_can, "int");
-            updatecanho($ma_can, $ma_loai, $ma_quan, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien);
+            updatecanho($ma_can, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien);
             header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=index");
         } else {
             header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=addnew");
