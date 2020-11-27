@@ -164,6 +164,7 @@ switch ($act) {
             settype($gia_thue, "int");
             settype($dien_tich, "int");
             settype($ma_can, "int");
+            settype($ma_phuong, "int");
             updatecanho($ma_can, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien);
             header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=index");
         } else {
