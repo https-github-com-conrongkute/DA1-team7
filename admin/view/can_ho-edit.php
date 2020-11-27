@@ -118,8 +118,8 @@
             </div>
         </div>
         <div class="row">
-                  <div class="col-6"><img src="./uploaded/<?php if($ds["hinh"]!="") echo $ds["hinh"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
-                  <div class="col-6"><img src="./uploaded/<?php if($ds["hinha"]!="") echo $ds["hinha"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
+                  <div class="col-6"><img src="../uploaded/<?php if($ds["hinh"]!="") echo $ds["hinh"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
+                  <div class="col-6"><img src="../uploaded/<?php if($ds["hinha"]!="") echo $ds["hinha"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
         </div>
         <div class="row mt-3 mb-2">
             <div class="col-6">
@@ -132,8 +132,8 @@
             </div>
         </div>
         <div class="row">
-                  <div class="col-6"><img src="./uploaded/<?php if($ds["hinhb"]!="") echo $ds["hinhb"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
-                  <div class="col-6"><img src="./uploaded/<?php if($ds["hinhc"]!="") echo $ds["hinhc"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
+                  <div class="col-6"><img src="../uploaded/<?php if($ds["hinhb"]!="") echo $ds["hinhb"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
+                  <div class="col-6"><img src="../uploaded/<?php if($ds["hinhc"]!="") echo $ds["hinhc"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
         </div>
         <div class="right__inputWrapper">
             <label for="title">Các tiện ích</label>

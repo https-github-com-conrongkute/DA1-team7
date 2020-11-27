@@ -31,9 +31,9 @@
                     <td><?=($ds['vai_tro']==1) ? 'Quản trị':"khách hàng"?></td>
                     <td><?=($ds['kich_hoat']==1)? 'Đã kích hoạt':"Đã bị khóa"?></td>
                     <td> <?php if($ds['hinh'] == null){ ?>
-                        <img src="./uploaded/user.jpg" alt="" style="width: 100px;height:100px;border-radius: 50%;object-fit: cover;">
+                        <img src="../uploaded/user.jpg" alt="" style="width: 100px;height:100px;border-radius: 50%;object-fit: cover;">
                     <?php }else{ ?>
-                        <img src="./uploaded/<?=$ds['hinh']?>" alt="" style="width: 100px;height:100px;border-radius: 50%;object-fit: cover;">
+                        <img src="../uploaded/<?=$ds['hinh']?>" alt="" style="width: 100px;height:100px;border-radius: 50%;object-fit: cover;">
                     <?php } ?>
                     </td>
                     <td>

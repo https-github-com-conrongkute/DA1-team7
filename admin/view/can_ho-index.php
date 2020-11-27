@@ -67,13 +67,13 @@
                         <td>
                             <p>Số phòng ngủ: <?= $ds["so_phong_ngu"] ?></p>
                             <p>Số phòng vệ sinh: <?= $ds["so_phong_vs"] ?></p>
-                            <p><img src="./uploaded/<?php if ($ds["hinh"] == "") echo "no-img.png";
+                            <p><img src="../uploaded/<?php if ($ds["hinh"] == "") echo "no-img.png";
                                                     else echo $ds["hinh"] ?>" alt="">
-                                <img src="./uploaded/<?php if ($ds["hinha"] == "") echo "no-img.png";
+                                <img src="../uploaded/<?php if ($ds["hinha"] == "") echo "no-img.png";
                                                         else echo $ds["hinha"] ?>" alt="">
-                                <img src="./uploaded/<?php if ($ds["hinhb"] == "") echo "no-img.png";
+                                <img src="../uploaded/<?php if ($ds["hinhb"] == "") echo "no-img.png";
                                                         else echo $ds["hinhb"] ?>" alt="">
-                                <img src="./uploaded/<?php if ($ds["hinhc"] == "") echo "no-img.png";
+                                <img src="../uploaded/<?php if ($ds["hinhc"] == "") echo "no-img.png";
                                                         else echo $ds["hinhc"] ?>" alt=""></p>
                             <p><?= number_format($ds["gia_thue"] . "") ?></p>
                             <p style="text-align: left; font-weight: bold;">Chi phí khác: </p>

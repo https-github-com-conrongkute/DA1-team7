@@ -42,7 +42,7 @@ switch ($act) {
             $ma_phuong=$_POST["ma_phuong"];
             // Hình
             $hinh = $_FILES['hinh']['name'];
-            $pathimg = './uploaded/';
+            $pathimg = '../uploaded/';
             $target_files = $pathimg . basename($hinh);
             move_uploaded_file($_FILES['hinh']['tmp_name'], $target_files);
             if ($hinh == "") {
@@ -50,7 +50,7 @@ switch ($act) {
             }
 
             $hinha = $_FILES['hinha']['name'];
-            $pathimg = './uploaded/';
+            $pathimg = '../uploaded/';
             $target_files = $pathimg . basename($hinha);
             move_uploaded_file($_FILES['hinha']['tmp_name'], $target_files);
             if ($hinha == "") {
@@ -58,7 +58,7 @@ switch ($act) {
             }
 
             $hinhb = $_FILES['hinhb']['name'];
-            $pathimg = './uploaded/';
+            $pathimg = '../uploaded/';
             $target_files = $pathimg . basename($hinhb);
             move_uploaded_file($_FILES['hinhb']['tmp_name'], $target_files);
             if ($hinhb == "") {
@@ -66,7 +66,7 @@ switch ($act) {
             }
 
             $hinhc = $_FILES['hinhc']['name'];
-            $pathimg = './uploaded/';
+            $pathimg = '../uploaded/';
             $target_files = $pathimg . basename($hinhc);
             move_uploaded_file($_FILES['hinhc']['tmp_name'], $target_files);
             if ($hinhc == "") {
@@ -125,7 +125,7 @@ switch ($act) {
             $hinhc1 = $_POST["hinhc1"];
             // Hình
             $hinh = $_FILES['hinh']['name'];
-            $pathimg = './uploaded/';
+            $pathimg = '../uploaded/';
             $target_files = $pathimg . basename($hinh);
             move_uploaded_file($_FILES['hinh']['tmp_name'], $target_files);
             if ($hinh == "") {
@@ -133,7 +133,7 @@ switch ($act) {
             }
 
             $hinha = $_FILES['hinha']['name'];
-            $pathimg = './uploaded/';
+            $pathimg = '../uploaded/';
             $target_files = $pathimg . basename($hinha);
             move_uploaded_file($_FILES['hinha']['tmp_name'], $target_files);
             if ($hinha == "") {
@@ -141,7 +141,7 @@ switch ($act) {
             }
 
             $hinhb = $_FILES['hinhb']['name'];
-            $pathimg = './uploaded/';
+            $pathimg = '../uploaded/';
             $target_files = $pathimg . basename($hinhb);
             move_uploaded_file($_FILES['hinhb']['tmp_name'], $target_files);
             if ($hinhb == "") {
@@ -149,7 +149,7 @@ switch ($act) {
             }
 
             $hinhc = $_FILES['hinhc']['name'];
-            $pathimg = './uploaded/';
+            $pathimg = '../uploaded/';
             $target_files = $pathimg . basename($hinhc);
             move_uploaded_file($_FILES['hinhc']['tmp_name'], $target_files);
             if ($hinhc == "") {
