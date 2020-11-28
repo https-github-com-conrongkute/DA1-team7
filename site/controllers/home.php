@@ -131,11 +131,21 @@ switch ($act) {
     }
     break;
   case 'dangtin':
-    require_once 'views/dangtin.php';
+    $quan=getallquan();
+    $loaican=getallloai_can();
+        require_once 'views/dangtin.php';
     break;
   case 'danhsach':
     require_once 'views/danhsach.php';
     break;
+  case 'phuong':
+      // require_once "models/can_ho.php";
+      
+      $ds_p = getphuongbyidquan($_POST['quanid']);
+      foreach ($ds_p as $p) {
+          echo ' <option value="' . $p['id'] . '">' . $p['phuong'] . '</option>';
+      }
+      break;
   case 'about':
     require_once 'views/about.php';
     break;

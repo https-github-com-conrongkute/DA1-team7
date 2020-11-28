@@ -97,7 +97,16 @@
         <div class="row">
         <div class="col-6">
             <label for="title">Hướng nhà</label>
-            <input type="text" name="huong_nha" class="form-control" id="huong_nha" value="<?=$ds["huong_nha"]?>">
+            <select name="huong_nha" class="form-control" id="huong_nha">
+                                            <option value="1" <?php if($ds["huong_nha"]== 1) echo "selected";?>>Đông</option>
+                                            <option value="2" <?php if($ds["huong_nha"]== 2) echo "selected";?>>Tây</option>
+                                            <option value="3" <?php if($ds["huong_nha"]== 3) echo "selected";?>>Nam</option>
+                                            <option value="4" <?php if($ds["huong_nha"]== 4) echo "selected";?>>Bắc</option>
+                                            <option value="5" <?php if($ds["huong_nha"]== 5) echo "selected";?>>Tây Bắc</option>
+                                            <option value="6" <?php if($ds["huong_nha"]== 6) echo "selected";?>>Tây Nam</option>
+                                            <option value="7" <?php if($ds["huong_nha"]== 7) echo "selected";?>>Đông Bắc</option>
+                                            <option value="8" <?php if($ds["huong_nha"]== 8) echo "selected";?>>Đông Nam</option>
+                                        </select>
             <!-- <span id="email"></span> -->
         </div>
         <div class="col-6">

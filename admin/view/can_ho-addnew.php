@@ -94,7 +94,17 @@
         <div class="row">
         <div class="col-6">
             <label for="title">Hướng nhà</label>
-            <input type="text" name="huong_nha" class="form-control" id="huong_nha" >
+            <select name="huong_nha" class="form-control" id="huong_nha">
+                                            
+                                            <option value="1">Đông</option>
+                                            <option value="2">Tây</option>
+                                            <option value="3">Nam</option>
+                                            <option value="4">Bắc</option>
+                                            <option value="5">Tây Bắc</option>
+                                            <option value="6">Tây Nam</option>
+                                            <option value="7">Đông Bắc</option>
+                                            <option value="8">Đông Nam</option>
+                                        </select>
             <!-- <span id="email"></span> -->
         </div>
         <div class="col-6">

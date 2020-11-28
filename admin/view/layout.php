@@ -38,14 +38,14 @@
                         <div class="left__profile">
                             <?php if (isset($_SESSION['user']) == true) { ?>
                                 <?php if (isset($_SESSION['hinh']) && $_SESSION['hinh'] == null) { ?>
-                                    <div class="left__image"><img src="./uploaded/user.jpg" class="" alt=""></div>
+                                    <div class="left__image"><img src="../uploaded/user.jpg" class="" alt=""></div>
                                 <?php } else { ?>
-                                    <div class="left__image"><img src="./uploaded/<?= $_SESSION['hinh'] ?>" class="" alt=""></div>
+                                    <div class="left__image"><img src="../uploaded/<?= $_SESSION['hinh'] ?>" class="" alt=""></div>
                                 <?php } ?>
                                 <p class="left__name"><?= $_SESSION['user'] ?></p>
                             <?php } else { ?>
-                                <!-- <div class="left__image"><img src="./uploaded/user.jpg" class="" alt=""></div> -->
-                                <div class="left__image"><img src="./uploaded/godenhome.png" class="" alt=""></div>
+                                <!-- <div class="left__image"><img src="../uploaded/user.jpg" class="" alt=""></div> -->
+                                <div class="left__image"><img src="../uploaded/godenhome.png" class="" alt=""></div>
                                 <p class="left__name">Quản trị</p>
                             <?php } ?>
 

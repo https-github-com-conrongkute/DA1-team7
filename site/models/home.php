@@ -91,5 +91,18 @@ function getphuongbyid($id){
     $sql="SELECT * FROM phuong WHERE id='$id'";
     return queryOne($sql);
 }
+function getallquan(){
+    $sql="SELECT * FROM quan";
+    return query($sql);
+}
+function getallloai_can(){
+    $sql="SELECT * FROM loai_can";
+    return query($sql);
+}
+
+function getphuongbyidquan($id){
+    $sql="SELECT * FROM phuong WHERE ma_quan='$id'";
+    return query($sql);
+}
 
 ?> 

@@ -59,7 +59,15 @@
                         <!-- Vị Trí -->
                         <td>
                             <p>Địa chỉ: <?= $ds["dia_chi"] ?></p>
-                            <p>Hướng nhà: <?= $ds["huong_nha"] ?></p>
+                            <p>Hướng nhà: <?php if($ds["huong_nha"] == 1) echo "Đông"; 
+                            elseif($ds["huong_nha"] == 2) echo "Tây";
+                            elseif($ds["huong_nha"] == 3) echo "Nam";
+                            elseif($ds["huong_nha"] == 4) echo "Bắc";
+                            elseif($ds["huong_nha"] == 5) echo "Tây Bắc";
+                            elseif($ds["huong_nha"] == 6) echo "Tây Nam";
+                            elseif($ds["huong_nha"] == 7) echo "Đông Bắc";
+                            elseif($ds["huong_nha"] == 8) echo "Đông Nam";
+                            ?></p>
                             <p style="text-align: left; font-weight: bold;">Tiện ích:</p>
                             <p><?= nl2br($ds["tien_ich"]) ?></p>
                         </td>
