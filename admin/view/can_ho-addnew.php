@@ -2,6 +2,7 @@
 <p class="right__desc">Chèn khách hàng</p>
 <div class="right__formWrapper">
     <form action="<?= ADMIN_URL ?>/?ctrl=can_ho&act=insert" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="ma_tk" value="<?=$_SESSION["sid"]?>">
         <div class="right__inputWrapper">
             <label for="title">Tiêu đề cho thuê</label>
             <input type="text" name="ten_can_ho" id="ten_can_ho" placeholder="">
@@ -27,7 +28,7 @@
           </div>
           <div class="col-4">
           <label for="exampleInputEmail1">Phường</label>
-          <select name="ma_quan" class="form-control" id="phuong">
+          <select name="ma_phuong" class="form-control" id="phuong">
                   <option value="">Chọn phường</option>
           </select>
           </div>
@@ -93,7 +94,17 @@
         <div class="row">
         <div class="col-6">
             <label for="title">Hướng nhà</label>
-            <input type="text" name="huong_nha" class="form-control" id="huong_nha" >
+            <select name="huong_nha" class="form-control" id="huong_nha">
+                                            
+                                            <option value="1">Đông</option>
+                                            <option value="2">Tây</option>
+                                            <option value="3">Nam</option>
+                                            <option value="4">Bắc</option>
+                                            <option value="5">Tây Bắc</option>
+                                            <option value="6">Tây Nam</option>
+                                            <option value="7">Đông Bắc</option>
+                                            <option value="8">Đông Nam</option>
+                                        </select>
             <!-- <span id="email"></span> -->
         </div>
         <div class="col-6">
@@ -106,21 +117,97 @@
             <div class="col-12">Hình căn hộ</div>
             <div class="col-6">
             <input type="file" name="hinh" id="file1" style="display: none;" class="form-control" />
-            <label for="file1"><img src="../uploaded/uploadhinh.png" style="width: 30%;" alt=""></label>
+            <label for="file1" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 25%;" alt=""></label>
+            <div class="hinhanh"><img src="#" alt="" id="loadha" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
+                                        <script>
+                                            // Load hình ảnh lên khi chọn file upload
+                                            $(document).ready(function () {
+                                                function readURL(input){
+                                                    if(input.files && input.files[0]){
+                                                    var reader = new FileReader();
+                                                    reader.onload = function (e){
+                                                        $('#loadha').attr('src', e.target.result);
+                                                        $('#loadha').css('display','block');
+                                                    }
+                                                    reader.readAsDataURL(input.files[0]);
+                                                    }
+                                                }
+                                                $('#file1').change(function () { 
+                                                    readURL(this);
+                                                });
+                                            });
+                                        </script>
             </div>
             <div class="col-6">
-            <input type="file" name="hinh" id="file2" style="display: none;" class="form-control" />
-            <label for="file2"><img src="../uploaded/uploadhinh.png" style="width: 30%;" alt=""></label>
+            <input type="file" name="hinha" id="file2" style="display: none;" class="form-control" />
+            <label for="file2" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 25%;" alt=""></label>
+            <div class="hinhanh"><img src="#" alt="" id="loadha1" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
+                                        <script>
+                                            // Load hình ảnh lên khi chọn file upload
+                                            $(document).ready(function () {
+                                                function readURL(input){
+                                                    if(input.files && input.files[0]){
+                                                    var reader = new FileReader();
+                                                    reader.onload = function (e){
+                                                        $('#loadha1').attr('src', e.target.result);
+                                                        $('#loadha1').css('display','block');
+                                                    }
+                                                    reader.readAsDataURL(input.files[0]);
+                                                    }
+                                                }
+                                                $('#file2').change(function () { 
+                                                    readURL(this);
+                                                });
+                                            });
+                                        </script>
             </div>
         </div>
         <div class="row mt-3 mb-2">
             <div class="col-6">
-            <input type="file" name="hinh" id="file3" style="display: none;" class="form-control" />
-            <label for="file3"><img src="../uploaded/uploadhinh.png" style="width: 30%;" alt=""></label>
+            <input type="file" name="hinhb" id="file3" style="display: none;" class="form-control" />
+            <label for="file3" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 25%;" alt=""></label>
+            <div class="hinhanh"><img src="#" alt="" id="loadha2" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
+                                        <script>
+                                            // Load hình ảnh lên khi chọn file upload
+                                            $(document).ready(function () {
+                                                function readURL(input){
+                                                    if(input.files && input.files[0]){
+                                                    var reader = new FileReader();
+                                                    reader.onload = function (e){
+                                                        $('#loadha2').attr('src', e.target.result);
+                                                        $('#loadha2').css('display','block');
+                                                    }
+                                                    reader.readAsDataURL(input.files[0]);
+                                                    }
+                                                }
+                                                $('#file3').change(function () { 
+                                                    readURL(this);
+                                                });
+                                            });
+                                        </script>
             </div>
             <div class="col-6">
-            <input type="file" name="hinh" id="file4" style="display: none;" class="form-control" />
-            <label for="file4"><img src="../uploaded/uploadhinh.png" style="width: 30%;" alt=""></label>
+            <input type="file" name="hinhc" id="file4" style="display: none;" class="form-control" />
+            <label for="file4" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 25%;" alt=""></label>
+            <div class="hinhanh"><img src="#" alt="" id="loadha3" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
+                                        <script>
+                                            // Load hình ảnh lên khi chọn file upload
+                                            $(document).ready(function () {
+                                                function readURL(input){
+                                                    if(input.files && input.files[0]){
+                                                    var reader = new FileReader();
+                                                    reader.onload = function (e){
+                                                        $('#loadha3').attr('src', e.target.result);
+                                                        $('#loadha3').css('display','block');
+                                                    }
+                                                    reader.readAsDataURL(input.files[0]);
+                                                    }
+                                                }
+                                                $('#file4').change(function () { 
+                                                    readURL(this);
+                                                });
+                                            });
+                                        </script>
             </div>
         </div>
         <div class="right__inputWrapper">

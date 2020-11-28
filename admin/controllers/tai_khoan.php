@@ -82,7 +82,7 @@ switch ($act) {
             
         }
         $hinh = $_FILES['file']['name'];
-        $pathimg = './uploaded/';
+        $pathimg = '../uploaded/';
         $target_files = $pathimg . basename($hinh);
         move_uploaded_file($_FILES['file']['tmp_name'], $target_files);
         $vai_tro = $_POST['vai_tro'];
@@ -120,7 +120,7 @@ switch ($act) {
         $pass = $_POST['pass'];
         $vai_tro = $_POST['vai_tro'];
         if ($_FILES['file']['name'] != null) {
-            $pathimg = './uploaded/';
+            $pathimg = '../uploaded/';
             $hinh = $_FILES['file']['name'];
             $target_files = $pathimg . basename($hinh);
             move_uploaded_file($_FILES['file']['tmp_name'], $target_files);
@@ -223,7 +223,7 @@ switch ($act) {
         $pass = $_POST['pass'];
         $vai_tro = $_POST['vai_tro'];
         if ($_FILES['file']['name'] != null) {
-            $pathimg = './uploaded/';
+            $pathimg = '../uploaded/';
             $hinh = $_FILES['file']['name'];
             $target_files = $pathimg . basename($hinh);
             move_uploaded_file($_FILES['file']['tmp_name'], $target_files);

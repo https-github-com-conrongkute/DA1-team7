@@ -21,29 +21,7 @@
 </head>
 
 <body>
-    <!-- <div class="menu">
-        <div class="banner">
-            <img src="site/./uploaded/banner9.jpg" width="100%" height="600px" alt="">
-        </div>
-        <nav class="menu-logo">
-            <div class="menu-logo-bg">
-                <div class="nav-logo">
-                    <img src="./uploaded/logo.png" alt="">
-                </div>
-                <div class="nav-menu">
-                    <ul>
-                        <li><a href="#">Trang chủ </a> </li>
-                        <li><a href="#">Dịch vụ </a></li>
-                        <li><a href="#">Danh sách </a> </li>
-                        <li><a href="#">Giới thiệu </a></li>
-                        <li><a href="#">Liên hệ </a></li>
-                        <li><a href="#">Đăng nhập </a></li>
-                        <li><a href="#" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div> -->
+
     <header>
         <div class=" menu1">
             <span class="col-4 right">
@@ -71,10 +49,10 @@
                             <?= $_SESSION['user'] ?> <i class="fa fa-caret-down"></i>
                         </a>
                         <ul class="sub-menu">
-                            <li><a href="?act=thongtintk">Thông tin tài khoản</a></li>
-                            <li><a href="">Đổi mật khẩu</a></li>
-                            <li><a href="">Căn hộ cửa tôi</a></li>
-                            <li><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
+                        <li><a href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>">Thông tin tài khoản</a></li>
+                                        <li><a href="?act=doimk&ma_tk=<?=$_SESSION['id']?>">Đổi mật khẩu</a></li>
+                                        <li><a href="?act=ch-dd&ma_tk=<?=$_SESSION['id']?>">Căn hộ của tôi</a></li>
+                                        <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
                         </ul>
                     </li>
                     <?php } else { ?>

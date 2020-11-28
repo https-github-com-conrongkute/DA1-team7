@@ -10,6 +10,16 @@
     box-sizing: border-box;
 }
 
+.tailen {
+    position: relative;
+}
+
+.loadh1 {
+    position: absolute;
+    top: 0;
+    right: 40px;
+}
+
 
 /* load trang */
 

@@ -8,7 +8,7 @@
         </div>
         <div class="row">
                   <!-- Loại căn -->
-        <div class="col-6">
+        <div class="col-4">
           <label for="exampleInputEmail1">Loại căn hộ</label>
           <select name="ma_loai" class="form-control" id="">
                     <?php foreach($row as $row) {?>
@@ -17,11 +17,21 @@
           </select>
           </div>
           <!-- Quận -->
-          <div class="col-6">
+          <div class="col-4">
           <label for="exampleInputEmail1">Quận</label>
-          <select name="ma_quan" class="form-control" id="">
+          <select name="ma_quan" class="form-control" id="quan">
                     <?php foreach($quan as $quan) {?>
                     <option value="<?=$quan["ma_quan"]?>" <?php if($ds["ma_quan"]==$quan["ma_quan"]) echo "selected";?>><?=$quan["ten_quan"]?></option>
+                    <?php }?>
+          </select>
+          </div>
+          <div class="col-4">
+          <label for="exampleInputEmail1">Phường</label>
+          <select name="ma_phuong" class="form-control" id="phuong">
+          <?php
+          $phuong=getphuongbyid($ds["ma_quan"]);
+           foreach($phuong as $phuong) {?>
+                    <option value="<?=$phuong["id"]?>" <?php if($ds["id"]==$phuong["id"]) echo "selected";?>><?=$phuong["phuong"]?></option>
                     <?php }?>
           </select>
           </div>
@@ -87,7 +97,16 @@
         <div class="row">
         <div class="col-6">
             <label for="title">Hướng nhà</label>
-            <input type="text" name="huong_nha" class="form-control" id="huong_nha" value="<?=$ds["huong_nha"]?>">
+            <select name="huong_nha" class="form-control" id="huong_nha">
+                                            <option value="1" <?php if($ds["huong_nha"]== 1) echo "selected";?>>Đông</option>
+                                            <option value="2" <?php if($ds["huong_nha"]== 2) echo "selected";?>>Tây</option>
+                                            <option value="3" <?php if($ds["huong_nha"]== 3) echo "selected";?>>Nam</option>
+                                            <option value="4" <?php if($ds["huong_nha"]== 4) echo "selected";?>>Bắc</option>
+                                            <option value="5" <?php if($ds["huong_nha"]== 5) echo "selected";?>>Tây Bắc</option>
+                                            <option value="6" <?php if($ds["huong_nha"]== 6) echo "selected";?>>Tây Nam</option>
+                                            <option value="7" <?php if($ds["huong_nha"]== 7) echo "selected";?>>Đông Bắc</option>
+                                            <option value="8" <?php if($ds["huong_nha"]== 8) echo "selected";?>>Đông Nam</option>
+                                        </select>
             <!-- <span id="email"></span> -->
         </div>
         <div class="col-6">
@@ -108,8 +127,8 @@
             </div>
         </div>
         <div class="row">
-                  <div class="col-6"><img src="./uploaded/<?php if($ds["hinh"]!="") echo $ds["hinh"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
-                  <div class="col-6"><img src="./uploaded/<?php if($ds["hinha"]!="") echo $ds["hinha"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
+                  <div class="col-6"><img src="../uploaded/<?php if($ds["hinh"]!="") echo $ds["hinh"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
+                  <div class="col-6"><img src="../uploaded/<?php if($ds["hinha"]!="") echo $ds["hinha"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
         </div>
         <div class="row mt-3 mb-2">
             <div class="col-6">
@@ -122,8 +141,8 @@
             </div>
         </div>
         <div class="row">
-                  <div class="col-6"><img src="./uploaded/<?php if($ds["hinhb"]!="") echo $ds["hinhb"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
-                  <div class="col-6"><img src="./uploaded/<?php if($ds["hinhc"]!="") echo $ds["hinhc"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
+                  <div class="col-6"><img src="../uploaded/<?php if($ds["hinhb"]!="") echo $ds["hinhb"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
+                  <div class="col-6"><img src="../uploaded/<?php if($ds["hinhc"]!="") echo $ds["hinhc"]; else echo "no-img.png";?>" style="width: 15%;" alt=""></div>
         </div>
         <div class="right__inputWrapper">
             <label for="title">Các tiện ích</label>
@@ -145,5 +164,16 @@
     </form>
 
 </div>
+<script>
+    $(document).ready(function () {
+        $('#quan').change(function (e) { 
+            quan = $('#quan').val(); 
+            $.post("?ctrl=can_ho&act=phuong", {'quanid': quan},
+                function (data) {
+                    $('#phuong').html(data);
+                });
+        });
+    });
+</script>
 
 

@@ -91,5 +91,23 @@ function getphuongbyid($id){
     $sql="SELECT * FROM phuong WHERE id='$id'";
     return queryOne($sql);
 }
+function getallquan(){
+    $sql="SELECT * FROM quan";
+    return query($sql);
+}
+function getallloai_can(){
+    $sql="SELECT * FROM loai_can";
+    return query($sql);
+}
+
+function getphuongbyidquan($id){
+    $sql="SELECT * FROM phuong WHERE ma_quan='$id'";
+    return query($sql);
+}
+function themcanho($ma_tk, $ma_loai, $ma_quan,$ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien){
+    $sql="INSERT into can_ho(ma_tk, ma_quan, id, ma_loai, dia_chi, ten_can_ho, nam_xd, dien_tich, tang, huong_nha, tien_ich, chi_phi_khac, so_phong_ngu, so_phong_vs, gia_thue, hinh, hinha, hinhb, hinhc, an_hien, ghi_chu)
+     values ('$ma_tk','$ma_quan', '$ma_phuong', '$ma_loai', '$dia_chi', '$ten_can_ho', '$nam_xd', '$dien_tich', '$tang', '$huong_nha', '$tien_ich', '$chi_phi', '$so_phong_ngu', '$so_phong_vs', '$gia_thue', '$hinh', '$hinha', '$hinhb', '$hinhc', '$an_hien', '$ghi_chu')";
+    execute($sql);
+}
 
 ?> 

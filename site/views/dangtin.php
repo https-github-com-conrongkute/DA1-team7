@@ -61,7 +61,7 @@
                     <!--Tiềm kiếm ẩn-->
                     <div class="tiemkiemtrong">
                         <h4>Thuê</h4>
-                        <form action="" class="formtimkiem">
+                        <form action="" class="formtimkiem" >
                             <div class="row mtop">
                                 <div class="col-3">
                                     <select name="" id="" class="w-75 select pad">
@@ -198,7 +198,7 @@
         </div>
         <div class="dangtin">
             <h3>ĐĂNG TIN CĂN HỘ</h3>
-            <form action="" class="formdangtin">
+            <form action="?ctrl=home&act=dangtincanho&ma_tk=<?=$_SESSION["id"]?>" class="formdangtin" method="POST">
                 <div class="row thongtincan">
                     <h4 class="w-75 ml-5">* Thông tin căn hộ</h4>
                     <div class="col-6 ml-5">
@@ -208,33 +208,54 @@
                                 <input type="radio" class="mr-3" checked>
                                 <label for="">Cho thuê</label>
                             </div>
+                            <div class="col-12" style="margin: 20px 0px;">
+                                <label for="">Tiêu đề cho thuê</label><br>
+                                <input type="text" name="ten_can_ho" id="" class="form-control w-75">
+                            </div>
 
                             <div class="col-6">
                                 <label for="">Giá thuê (Tháng)</label><br>
-                                <input type="number" class="form-control w-100" placeholder="Giá thuê hàng tháng">
+                                <input type="number" class="form-control w-100" name="gia_thue" placeholder="Giá thuê hàng tháng">
                             </div>
                             <div class="col-3">
                                 <label for="">Đơn vị tiền tệ</label><br>
-                                <select name="" id="" class="form-control w-100">
+                                <select name="" id="" class="form-control w-100" >
                                     <option value="">VND</option>
                                 </select>
                             </div>
-                            <div class="col-12" style="margin: 20px 0px;">
-                                <label for="">Tiêu đề cho thuê</label><br>
-                                <input type="text" name="" id="" class="form-control w-75">
-                            </div>
+                            <div class="col-6">
+                            <label for="title">Diện thích căn hộ</label>
+                            <input type="number" name="dien_tich" class="form-control" id="dien_tich" placeholder="Diện tích căn hộ m2">
+                            <!-- <span id="email"></span> -->
+                        </div>
+                        <div class="col-3">
+                            <label for="title">Số Tầng</label>
+                            <input type="number" name="tang" class="form-control w-100" id="tang">
+                            <!-- <span id="sdt"></span> -->
+                        </div>
+                            
                             <div class="col-12" style="margin: 20px 0px;">
                                 <label for="">Chi phí khác</label><br>
-                                <textarea name="noi_dung" id="" cols="70" rows="4" style="outline: none;" placeholder="Nội dung "></textarea>
+                                <textarea name="chi_phi_khac" id="" cols="60" rows="4" style="outline: none;" placeholder="Nội dung "></textarea>
                             </div>
                             <div class="col-12" style="margin: 20px 0px;">
                                 <label for="">Các tiện ích xung quanh căn hộ</label><br>
-                                <textarea name="noi_dung" id="" cols="70" rows="4" style="outline: none;" placeholder="Nội dung "></textarea>
+                                <textarea name="tien_ich" id="" cols="60" rows="4" style="outline: none;" placeholder="Nội dung "></textarea>
                             </div>
                             <div class="col-12">
-                            <input type="checkbox" class="ml-5" > 
-                            <label for="">Tôi đồng ý với các điều khoản giao dịch</label><br>
-                            <button >Gửi thông tin</button>
+                            
+                            <?php if (isset($_SESSION["id"])) {
+                                ?>
+                                <button>Gửi thông tin</button>
+                                <?php
+                            }
+                            else
+                            {
+                                ?>
+                                <a href="?ctrl=home&act=dangnhap" style="color: orangered; font-weight: bold;">Bạn cần đăng nhập để có thể đăng tin</a>
+                                <?php
+                            }
+                            ?>
                             </div>
                             
                         </div>
@@ -243,18 +264,18 @@
                     <div class="col-5">
                         <h4>*Loại căn hộ</h4>
                         <div class="row" style="margin: 20px 0px;">
-                            <div class="col-4">
-                                <input type="checkbox" class="" > 
-                                <label for=""> Chung cư/căn hộ</label>
-                            </div>
-                            <div class="col-4">
-                                <input type="checkbox" class="mr-3">
-                                <label for="">Nhà riêng</label>
-                            </div>
-                            <div class="col-4">
-                                <input type="checkbox" class="mr-3">
-                                <label for="">Nhà trọ</label>
-                            </div>
+                        <div class="col-12">
+                            <label for="">Loại căn hộ</label><br>
+                            <select name="ma_loai" class="form-control" id="">
+                                <?php foreach($loaican as $lc){
+                                    ?>
+                                    <option value="<?=$lc["ma_loai"]?>"><?=$lc["ten_can"]?></option>
+                                    <?php
+                                }?>
+                            </select>
+                        </div>
+                        </div>
+                            
                             <div class="col-12" style="margin: 0px 0px;">
                                 <h4>Địa chỉ căn hộ</h4>
                                 <div class="row">
@@ -264,31 +285,39 @@
                                         </select>
                                     </div>
                                     <div class="col-6">
-                                        <select name="" class="form-control" id="">
-                                            <option value="">Quận / Huyện</option>
-                                            <option value="">Quận 1</option>
-                                            <option value="">Quận 2</option>
+                                        <select name="ma_quan" class="form-control" id="quan">
+                                            <option value="">Chọn quận</option>
+                                     
+                                            <?php foreach($quan as $quan){
+                                                ?>
+                                                <option value="<?=$quan["ma_quan"]?>"><?=$quan["ten_quan"]?></option>
+                                                <?php
+                                            }?>
                                         </select>
                                     </div>
                                     <div class="col-6" style="margin: 20px 0px;">
                                     <label for="">Phường</label>
-                                    <select name="" class="form-control" id="">
-                                            <option value="">Phường 1</option>
-                                            <option value="">Phường 2</option>
-                                            <option value="">Phường 3</option>
+                                    <select name="phuong" class="form-control" id="phuong">
+                                            <option value="">Chọn phường</option>
                                         </select>
                                     </div>
                                     <div class="col-6" style="margin: 20px 0px;">
                                         <label for="">Hướng nhà</label>
-                                        <select name="" class="form-control" id="">
-                                            <option value="">Hướng nhà</option>
-                                            <option value="">Đông</option>
-                                            <option value="">Tây</option>
+                                        <select name="huong_nha" class="form-control" id="">
+                                            
+                                            <option value="1">Đông</option>
+                                            <option value="2">Tây</option>
+                                            <option value="3">Nam</option>
+                                            <option value="4">Bắc</option>
+                                            <option value="5">Tây Bắc</option>
+                                            <option value="6">Tây Nam</option>
+                                            <option value="7">Đông Bắc</option>
+                                            <option value="8">Đông Nam</option>
                                         </select>
                                     </div>
                                     <div class="col-12" style="margin: 10px 0px;">
                                         <label for="">Địa chỉ cụ thể</label>
-                                        <input type="text" name="" class="form-control" id="">
+                                        <input type="text" name="dia_chi" class="form-control" id="">
                                     </div>
                                 </div>
                             </div>
@@ -297,11 +326,11 @@
                                 <div class="row">
                                     <div class="col-6" style="margin: 20px 0px;">
                                         <label for="">Số phòng ngủ</label>
-                                        <input type="number" name="" class="form-control" id="">
+                                        <input type="number" name="so_phong_ngu" class="form-control" id="">
                                     </div>
                                     <div class="col-6" style="margin: 20px 0px;">
                                         <label for="">Phòng vệ sinh</label>
-                                        <input type="number" name="" class="form-control" id="">
+                                        <input type="number" name="so_phong_vs" class="form-control" id="">
                                     </div>
                                 </div>
                             </div>
@@ -309,7 +338,7 @@
                                 <h4>Hình căn hộ</h4>
                                 <div class="row">
                                     <div class="col-6 anh">
-                                        <input type="file" class="form-control " id="img" style="overflow: hidden; display: none;">
+                                        <input type="file" name="hinh" class="form-control " id="img" style="overflow: hidden; display: none;">
                                         <label for="img" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 30%; margin: 0 auto;" alt=""></label>
                                         <div class="hinhanh"><img src="#" alt="" id="loadha" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
                                         <script>
@@ -332,7 +361,7 @@
                                         </script>
                                     </div>
                                     <div class="col-6">
-                                    <input type="file" class="form-control " id="img1" style="overflow: hidden; display: none;">
+                                    <input type="file" name="hinha" class="form-control " id="img1" style="overflow: hidden; display: none;">
                                         <label for="img1" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 30%; margin: 0 auto;" alt=""></label>
                                         <div class="hinhanh"><img src="#" alt="" id="loadha1" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
                                         <script>
@@ -355,7 +384,7 @@
                                         </script>
                                     </div>
                                     <div class="col-6 mt-5">
-                                    <input type="file" class="form-control " id="img2" style="overflow: hidden; display: none;">
+                                    <input type="file" name="hinhb" class="form-control " id="img2" style="overflow: hidden; display: none;">
                                         <label for="img2" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 30%; margin: 0 auto;" alt=""></label>
                                         <div class="hinhanh"><img src="#" alt="" id="loadha2" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
                                         <script>
@@ -378,7 +407,7 @@
                                         </script>
                                     </div>
                                     <div class="col-6 mt-5">
-                                    <input type="file" class="form-control " id="img3" style="overflow: hidden; display: none;">
+                                    <input type="file" name="hinhc" class="form-control " id="img3" style="overflow: hidden; display: none;">
                                         <label for="img3" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 30%; margin: 0 auto;" alt=""></label>
                                         <div class="hinhanh"><img src="#" alt="" id="loadha3" class="loadh1" style="display: none;width: 35%; height: 70px; object-fit: cover;"></div>
                                         <script>
@@ -408,6 +437,7 @@
                 
             </form>
         </div>
+        <br>
         <div class="dichvu">
 
             <img src="../uploaded/dichvu.jpg" alt="">
@@ -493,7 +523,15 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 </body>
-
-
-
 </html>
+<script>
+    $(document).ready(function () {
+        $('#quan').change(function (e) { 
+            quan = $('#quan').val(); 
+            $.post("?ctrl=home&act=phuong", {'quanid': quan},
+                function (data) {
+                    $('#phuong').html(data);
+                });
+        });
+    });
+</script>
