@@ -402,6 +402,9 @@ label {
     margin-left: 2%;
     overflow-y: scroll;
 }
+.tt-right::-webkit-scrollbar{
+    display: none;
+}
 
 .thongbaoch {
     width: 73%;

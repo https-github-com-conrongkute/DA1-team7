@@ -60,6 +60,13 @@ switch ($act) {
     }
     require_once 'views/login.php';
     break;
+  case 'kichhoat':
+    if (isset($_GET['id'])) $idUser = $_GET['id'];
+    //Kiểm tra hợp lệ giá trị mới nhận
+    //Gọi hàm cập nhật trạng thái user (đã kích hoạt)
+    //Định nghĩa hàm cập nhật trạng thái user
+    //Nạp view hiện kết quả
+    break;
   case 'kiemloi':
     if (isset($_GET['pass']) == true) {
       $erro = array();

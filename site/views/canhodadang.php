@@ -18,10 +18,11 @@
                             <?php foreach($dsch as $c) {
                                 $maloai=maloaican($c["ma_loai"]);
                                 $quan=maquan($c["ma_quan"]);
+                                $stt+=1;
                                 ?>
                             
                             <tr>
-                                <th scope="row">1</th>
+                                <th scope="row"><?=$stt?></th>
                                 <td>
                                     <p style="font-weight: bold;"><?=$c["ten_can_ho"]?></p>
                                     <p>Loại căn: <?php echo $maloai["ten_can"]?></p>

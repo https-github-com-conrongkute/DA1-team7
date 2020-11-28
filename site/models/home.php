@@ -53,7 +53,7 @@ function getlichdatbyid($ma_tk){
 function getthongbao($id){
     $sql="SELECT ch.ten_can_ho, ch.ma_tk, dl.ma_can ,dl.ma_tk, kh.ho_ten, ngay_xem , ngay_dat, sdt, ma_dat
     FROM can_ho ch INNER JOIN dat_lich dl ON ch.ma_can = dl.ma_can 
-    INNER JOIN khach_hang kh ON kh.ma_tk=dl.ma_tk WHERE ch.ma_tk='$id' and ch.an_hien = 1 order by  ngay_xem  desc";
+    INNER JOIN khach_hang kh ON kh.ma_tk=dl.ma_tk WHERE ch.ma_tk='$id' and ch.an_hien = 1 order by  ma_dat  desc";
     return query($sql);
 }
 
