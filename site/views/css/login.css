@@ -4,15 +4,54 @@
     margin: 0 auto;
     padding: 0;
 }
-p#checkid{
+p#checkid1{
+    float: left;
+    display: none;
+    width: 100%;
+    margin: 0px;
+}
+p#checkid2{
     float: left;
     width: 100%;
-    margin: 10px 0px;
+    display: none;
+    margin: 0px;
 }
-#checkid>span{
-    padding: 0px 10px;
+p#checkid3{
+    float: left;
+    width: 100%;
+    display: none;
+    margin: 5px 0px;
+}
+#checkid1>span{
+    padding: 0px 8px;
+    float: left;
+    height: 12px;
+    line-height: 12px;
     background-color: red;
     border-radius: 12px;
+    font-size: 8pt;
+    color: white;
+    font-weight: bold;
+}
+#checkid2>span{
+    float: left;
+    font-size: 8pt;
+    height: 12px;
+    line-height: 12px;
+    padding: 0px 8px;
+    background-color: red;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+}
+#checkid3>span{
+    float: left;
+    height: 12px;
+    line-height: 12px;
+    padding: 0px 8px;
+    background-color: red;
+    border-radius: 12px;
+     font-size: 8pt;
     color: white;
     font-weight: bold;
 }

@@ -1,5 +1,19 @@
  <?php
 require_once('../system/database.php');
+// Xem căn hộ mới nhất
+function getALLcan_hoNew(){
+    $sql = "SELECT * FROM can_ho ORDER BY ma_can DESC LIMIT 10";
+    return query($sql);
+}
+function getALL_canhoNew2(){
+    $sql = "SELECT * FROM can_ho ORDER BY ma_can ASC LIMIT 10";
+    return query($sql);
+}
+// Xem 1 căn hộ
+function getcan_hoByid($ma_can){
+    $sql = "SELECT * FROM can_ho WHERE ma_can='$ma_can'";
+    return queryOne($sql);
+}
 function get6can(){
     $sql = "SELECT * FROM can_ho limit 6";
     return query($sql);

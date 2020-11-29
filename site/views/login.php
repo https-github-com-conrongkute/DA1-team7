@@ -41,40 +41,40 @@
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                 </div>
                 <span>hoặc sửa dụng email để đăng ký</span>
-                <input type="text" placeholder="Họ và tên" name="ho_ten" value="<?php if(isset($ho_ten)==true) echo $ho_ten; ?>" />
-                <input type="text" placeholder="Tên đăng nhập" name="user" value="<?php if(isset($user)==true) echo $user; ?>" />
-               
+                <input type="text" placeholder="Họ và tên" name="ho_ten" id="ho_ten" value="<?php if(isset($ho_ten)==true) echo $ho_ten; ?>" />
+                <p id="checkid1"></p>
+                <input type="text" placeholder="Tên đăng nhập" name="user" id="user" value="<?php if(isset($user)==true) echo $user; ?>" />
+                <p id="checkid2"></p>
                 <input type="text" placeholder="Email" name="email" value="<?php if(isset($email)==true) echo $email; ?>" />
+                <!-- <p id="checkid"></p> -->
                 <input type="password" id="mk" placeholder="Mật khẩu" name="pass" />
-                 <p id="checkid"></p>
+                 <p id="checkid3"></p>
                  <script>
                      $(document).ready(function () {
                          $('#mk').blur(function (e) { 
                              var u = $(this).val();
-                             $('#checkid').load('?act=kiemloi&pass=' + u);
+                             $('#checkid3').css('display','block');
+                             $('#checkid3').load('?act=kiemloi&pass=' + u);
+                         });
+                         $('#user').blur(function (e) { 
+                             var u = $(this).val();
+                             $('#checkid2').css('display','block');
+                             $('#checkid2').load('?act=kiemloi&user=' + u);
+                         });
+                         $('#ho_ten').blur(function (e) { 
+                             var u = $(this).val();
+                             $('#checkid1').css('display','block');
+                             $('#checkid1').load('?act=kiemloi&ho_ten=' + u);
                          });
                      });
                  </script>
                 <button id="btn_submit_dk" type="submit">Đăng ký</button>
             </form>
         </div>
-       
-        <!-- Thông báo lỗi email -->
-        <?php if (isset($erro['email']) == true) { ?>
+        <!-- Thông báo email -->
+        <?php if(isset($erro['email'])==true){ ?>
             <script>
-                swal("<?= $erro['email'] ?>", "Nhập lại !", "error");
-            </script>
-        <?php } ?>
-        <!-- Thông báo lỗi ten dn -->
-        <?php if (isset($erro['user']) == true) { ?>
-            <script>
-                swal("<?= $erro['user'] ?>", "Nhập lại !", "warning");
-            </script>
-        <?php } ?>
-        <!-- Thông báo lỗi ho_ten -->
-        <?php if (isset($erro['ho_ten']) == true) { ?>
-            <script>
-                swal("<?= $erro['ho_ten'] ?>", "Nhập lại !", "warning");
+                swal("<?=$erro['email']?>", "Nhấn để tiếp tục !", "error");
             </script>
         <?php } ?>
         <!-- THông báo đăng ký thành công -->

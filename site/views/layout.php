@@ -179,21 +179,21 @@
             <div class="boxcenter ">
                 
             <div class="canho slider1">
-              
+                   <?php foreach ($ds_ch as $ch) { ?>
                     <div class="box2" >
-                        <img src="../uploaded/b1.jpg" alt="">
+                        <img src="../uploaded/<?=$ch['hinhb']?>" alt="">
                         <div class="box2text">
-                            <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</a>
+                            <a  href="?act=index&ma_can=<?=$ch['ma_can']?>" data-toggle="modal" data-target="#myModal"><?=$ch['ten_can_ho']?></a>
                         </div>
                         <div class="gia">
-                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: <?=number_format($ch['gia_thue'],0,' ','.')?> VNĐ
                         </div>
                         <div class="datlich">
                             <a data-toggle="modal" data-target="#datlich" href="#">Đặt lịch xem</a>
                         </div>
                     </div>
-
-                    <div class="box2">
+                   <?php } ?>
+                    <!-- <div class="box2">
                         <img src="../uploaded/b2.jpg" alt="">
                         <div class="box2text">
                             <a data-toggle="modal" data-target="#myModal" href="#">Cho Thuê Căn Hộ Chung Cư Tháp Mười Vừa Sửa Sang Mới Đẹp P2 Q6 </a>
@@ -279,26 +279,27 @@
                         <div class="datlich">
                             <a href="#">Đặt lịch xem</a>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- slide 2 -->
             </div>
             <div class="canho slider2">
+                <?php foreach($ds_ch2 as $ch){ ?>
                     <div class="box2 " >
-                        <img src="../uploaded/b1.jpg" alt="">
+                        <img src="../uploaded/<?=$ch['hinh']?>" alt="">
                         <div class="box2text">
-                            <a data-toggle="modal" data-target="#myModal" href="#">Cho thuê phòng CHDV quận 4 - không gian đẹp, nội thất đầy đủ.</a>
+                            <a data-toggle="modal" data-target="#myModal" href="?act=index&ma_can=<?=$ch['ma_can']?>"><?=$ch['ten_can_ho']?></a>
                         </div>
                         <div class="gia">
-                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: 4,000,000 vnđ
+                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: <?=number_format($ch['gia_thue'],0,' ','.')?> VNĐ
                         </div>
                         <div class="datlich">
                             <a data-toggle="modal" data-target="#datlich" href="#">Đặt lịch xem</a>
                         </div>
                     </div>
-
-                    
-                    <div class="box2">
+                  
+                <?php } ?>  
+                    <!-- <div class="box2">
                         <img src="../uploaded/b2.jpg" alt="">
                         <div class="box2text">
                             <a data-toggle="modal" data-target="#myModal" href="#">Cho Thuê Căn Hộ Chung Cư Tháp Mười Vừa Sửa Sang Mới Đẹp P2 Q6 </a>
@@ -388,7 +389,8 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
+            </div>
                 <!-- <div class="canho slider2">
                     <div class="box2">
                         <img src="../uploaded/b4.jpg" alt="">
@@ -611,14 +613,13 @@
             <input type="text" value="Địa chỉ email"><input class="ip2" type="submit" value="Đăng ký">
         </div>
     </footer>
-
     <div class="modal fade" id="myModal" role="dialog">
         <div class="divlon">
             <div class="div1">
                 <!-- Modal content-->
                 <div class="divimg">
                     <div class="imglon">
-                        <img id="images" src="../uploaded/b3.jpg" width="100%" height="280px" alt="">
+                        <img id="images" src="../uploaded/<?=$can_ho['hinh']?>" width="100%" height="280px" alt="">
                     </div>
                     <div class="divnho">
                         <div class="imgnho nho1">
@@ -679,6 +680,7 @@
 
         </div>
     </div>
+<!-- end căn ho ct -->
 
     <div class="modal fade dl" id="datlich" role="dialog">
         <div class="divdl">
