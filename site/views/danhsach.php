@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
-    <link rel="stylesheet" href="./danhsach/assets/css/app/search.css?ver=20.30.13.11.2020" async/>
+    <link rel="stylesheet" href="./danhsach/assets/css/app/search.css?ver=20.30.13.11.2020" async />
     <link rel="stylesheet" href="./views/css/danhsach.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -44,26 +44,26 @@
                     <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                     <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
                     <?php if (isset($_SESSION['user']) == true) { ?>
-                    <li>
-                        <a href="?act=thongtintk" >
-                            <?= $_SESSION['user'] ?> <i class="fa fa-caret-down"></i>
-                        </a>
-                        <ul class="sub-menu">
-                        <li><a href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>">Thông tin tài khoản</a></li>
-                                        <li><a href="?act=doimk&ma_tk=<?=$_SESSION['id']?>">Đổi mật khẩu</a></li>
-                                        <li><a href="?act=ch-dd&ma_tk=<?=$_SESSION['id']?>">Căn hộ của tôi</a></li>
-                                        <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
-                        </ul>
-                    </li>
+                        <li>
+                            <a href="?act=thongtintk">
+                                <?= $_SESSION['user'] ?> <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="?act=thongtintk&ma_tk=<?= $_SESSION['id'] ?>">Thông tin tài khoản</a></li>
+                                <li><a href="?act=doimk&ma_tk=<?= $_SESSION['id'] ?>">Đổi mật khẩu</a></li>
+                                <li><a href="?act=ch-dd&ma_tk=<?= $_SESSION['id'] ?>">Căn hộ của tôi</a></li>
+                                <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
+                            </ul>
+                        </li>
                     <?php } else { ?>
-                    <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a></li>
+                        <li><a href="?ctrl=home&act=dangnhap">Đăng nhập</a></li>
                     <?php } ?>
                 </ul>
             </div>
         </div>
         <div class="menutimkiem w-100  position-relative">
-            <span class="anhien"  onclick="showtimkiem()" id="an">Tìm kiếm <i class="fa fa-search"></i></span>
-            <span class="anhien"  onclick="exit()" id="hien">Tìm kiếm <i class="fa fa-close"></i></span>
+            <span class="anhien" onclick="showtimkiem()" id="an">Tìm kiếm <i class="fa fa-search"></i></span>
+            <span class="anhien" onclick="exit()" id="hien">Tìm kiếm <i class="fa fa-close"></i></span>
 
             <div class="w-100 boxtim position-absolute" id="showtim">
                 <!--Tiềm kiếm ẩn-->
@@ -73,9 +73,9 @@
                         <div class="row mtop">
                             <div class="col-3">
                                 <select name="" id="" class="w-75 select pad" style="font-size: 10pt;">
-                                        <option value="">Căn hộ/Chung cư</option>
-                                        <option value="">Nhà ở</option>
-                                    </select>
+                                    <option value="">Căn hộ/Chung cư</option>
+                                    <option value="">Nhà ở</option>
+                                </select>
                             </div>
                             <div class="col-6">
                                 <input type="text" class="w-100 select2 pad" style="border: none; font-size: 12pt; height: 50px; border-bottom: 1px gray solid;" placeholder="Nhập địa chỉ để tiềm kiếm căn hộ...">
@@ -89,77 +89,77 @@
                         <div class="row mtop">
                             <div class="col-3">
                                 <select name="" id="" class="select1 " style="font-size: 10pt;">
-                                        <option value="">Tp Hồ Chí minh</option>
+                                    <option value="">Tp Hồ Chí minh</option>
 
-                                    </select></div>
+                                </select></div>
                             <div class="col-3">
                                 <select name="" id="" class="select1 " style="font-size: 10pt;">
-                                        <option value="">Quận/Huyện</option>
-                                        <option value="">Quận 1</option>
-                                        <option value="">Quận 2</option>
-                                        <option value="">Quận 3</option>
-                                    </select>
+                                    <option value="">Quận/Huyện</option>
+                                    <option value="">Quận 1</option>
+                                    <option value="">Quận 2</option>
+                                    <option value="">Quận 3</option>
+                                </select>
                             </div>
                             <div class="col-3">
                                 <select name="" id="" class="select1" style="font-size: 10pt;">
-                                        <option value="">Mức giá</option>
-                                        <option value="">Dưới 3 triệu</option>
-                                        <option value="">3 triệu - 5 triệu</option>
-                                        <option value="">5 triệu - 8 triệu</option>
-                                        <option value="">8 triệu - 10 triệu</option>
-                                        <option value="">10 triệu - 15 triệu</option>
-                                        <option value="">15 triệu - 20 triệu</option>
-                                        <option value="">Trên 20 triệu</option>
-                                    </select>
+                                    <option value="">Mức giá</option>
+                                    <option value="">Dưới 3 triệu</option>
+                                    <option value="">3 triệu - 5 triệu</option>
+                                    <option value="">5 triệu - 8 triệu</option>
+                                    <option value="">8 triệu - 10 triệu</option>
+                                    <option value="">10 triệu - 15 triệu</option>
+                                    <option value="">15 triệu - 20 triệu</option>
+                                    <option value="">Trên 20 triệu</option>
+                                </select>
                             </div>
                             <div class="col-3">
                                 <select name="" id="" class="select1 " style="font-size: 10pt;">
-                                        <option value="">Diện tích</option>
-                                        <option value="">10 - 20 m2</option>
-                                        <option value="">20 - 30 m2</option>
-                                    </select>
+                                    <option value="">Diện tích</option>
+                                    <option value="">10 - 20 m2</option>
+                                    <option value="">20 - 30 m2</option>
+                                </select>
                             </div>
 
                         </div>
                         <div class="row mtop">
                             <div class="col-3">
                                 <select name="" id="" class="select1 " style="font-size: 10pt;">
-                                        <option value="">Số tầng</option>
-                                        <?php for ($i=1; $i <= 10 ; $i++) { 
-                                            ?>
-                                            <option value=""><?=$i?></option>
-                                            <?php
-                                        }?>
-                                    </select>
+                                    <option value="">Số tầng</option>
+                                    <?php for ($i = 1; $i <= 10; $i++) {
+                                    ?>
+                                        <option value=""><?= $i ?></option>
+                                    <?php
+                                    } ?>
+                                </select>
                             </div>
                             <div class="col-3">
                                 <select name="" id="" class="select1 " style="font-size: 10pt;">
-                                        <option value="">Số phòng ngủ</option>
-                                        <?php for ($i=1; $i <= 10 ; $i++) { 
-                                            ?>
-                                            <option value=""><?=$i?></option>
-                                            <?php
-                                        }?>
-                                    </select>
+                                    <option value="">Số phòng ngủ</option>
+                                    <?php for ($i = 1; $i <= 10; $i++) {
+                                    ?>
+                                        <option value=""><?= $i ?></option>
+                                    <?php
+                                    } ?>
+                                </select>
                             </div>
                             <div class="col-3">
                                 <select name="" id="" class="select1 " style="font-size: 10pt;">
-                                        <option value="">Số phòng vệ sinh</option>
-                                        <?php for ($i=1; $i <= 10 ; $i++) { 
-                                            ?>
-                                            <option value=""><?=$i?></option>
-                                            <?php
-                                        }?>
-                                    </select>
+                                    <option value="">Số phòng vệ sinh</option>
+                                    <?php for ($i = 1; $i <= 10; $i++) {
+                                    ?>
+                                        <option value=""><?= $i ?></option>
+                                    <?php
+                                    } ?>
+                                </select>
                             </div>
                             <div class="col-3">
                                 <select name="" id="" class="select1 " style="font-size: 10pt;">
-                                        <option value="">Hướng nhà</option>
-                                        <option value="">Đông</option>
-                                        <option value="">Tây</option>
-                                        <option value="">Nam</option>
-                                        <option value="">Bắc</option>
-                                    </select>
+                                    <option value="">Hướng nhà</option>
+                                    <option value="">Đông</option>
+                                    <option value="">Tây</option>
+                                    <option value="">Nam</option>
+                                    <option value="">Bắc</option>
+                                </select>
                             </div>
                         </div>
                     </form>
@@ -171,36 +171,40 @@
 
     <div id="wrapper" style="margin-top: 150px;">
         <div class="item1">
-       
-                                    <div class="row" style="margin-bottom: 10px; border-bottom: 1px gainsboro solid; height: 35px;">
-                                    <div class="col-6"><h2 style="font-weight: bold; color: orangered; font-family: sans-serif;">// DANH SÁCH CÁC CĂN HỘ QUẬN 3 </h2></div>
-                                    <div class="col-6"><select name="" id="" class="form-control" style="width: 70%; float: right; font-size: 10pt;">
-                                        <option value="">Sắp xếp</option>
-                                        <option value="">Tăng dần</option>
-                                        <option value="">Giảm dần</option>
-                                </select></div>
-                                    </div>
-               
-            <div id="view-as-grid" class="row list-layout-0 list-item">
-                <div class="col-6 col-lg-4" >
-                    <div class="item is-feature">
-                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
-                        <div class="divtext " >
-                            <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title">Căn hộ Singapore cho thuê trung tâm Quận 3</a></h2>
-                            <div class="imeta-1"> <b>Đ. Trần Quang Diệu, P.13, Q.3</b> </div>
-                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
-                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
-                                <div class="price2"><b>188,9 ngàn/m²</b></div>
-                            </div>
-                            <div class="wprice">
-                                <div class="imeta-2"> <span><b>8,5 triệu</b></span> <span><b>45 m²</b></span> </div>
-                                <div link="thue/can-ho/hcm/quan-3/id277377" listingid="277377" object='{"id":277377 }' class="btnlike  save-listing save-listing-277377"> <span> </span> </div>
-                            </div>
-                        </div>
-                        <a href="#"> </a>
-                    </div>
+
+            <div class="row" style="margin-bottom: 10px; border-bottom: 1px gainsboro solid; height: 35px;">
+                <div class="col-6">
+                    <h2 style="font-weight: bold; color: orangered; font-family: sans-serif;">// DANH SÁCH CÁC CĂN HỘ QUẬN 3 </h2>
                 </div>
-                <div class="col-6 col-lg-4">
+                <div class="col-6"><select name="" id="" class="form-control" style="width: 70%; float: right; font-size: 10pt;">
+                        <option value="">Sắp xếp</option>
+                        <option value="">Tăng dần</option>
+                        <option value="">Giảm dần</option>
+                    </select></div>
+            </div>
+
+            <div id="view-as-grid" class="row list-layout-0 list-item">
+                <?php foreach ($dsch_tl as $ch) { ?>
+                    <div class="col-6 col-lg-4">
+                        <div class="item is-feature">
+                            <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
+                            <div class="divtext ">
+                                <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title"><?= $ch['ten_can_ho'] ?></a></h2>
+                                <div class="imeta-1"> <b><?= $ch['dia_chi'] ?></b> </div>
+                                <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
+                                <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
+                                    <div class="price2"><b><?= $ch['dien_tich'] ?>/m²</b></div>
+                                </div>
+                                <div class="wprice">
+                                    <div class="imeta-2"> <span><b><?= $ch['gia_thue'] ?></b></span> <span><b>45 m²</b></span> </div>
+                                    <div link="thue/can-ho/hcm/quan-3/id277377" listingid="277377" object='{"id":277377 }' class="btnlike  save-listing save-listing-277377"> <span> </span> </div>
+                                </div>
+                            </div>
+                            <a href="#"> </a>
+                        </div>
+                    </div>
+                <?php } ?>
+                <!-- <div class="col-6 col-lg-4">
                     <div class="item is-feature">
                         <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b2.jpg" alt="Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất"> </a>
                         <div class="divtext ">
@@ -214,7 +218,7 @@
                                 <div class="imeta-2"> <span><b>9 triệu</b></span> <span><b>41 m²</b></span> </div>
                                 <div link="thue/can-ho/hcm/quan-3/id277418" listingid="277418" object='{"id":277418 }' class="btnlike  save-listing save-listing-277418"> <span> </span> </div>
                             </div>
-                            <!-- Phường -->
+                            Phường
                             
                         </div>
                         <a href="#"> </a>
@@ -345,26 +349,28 @@
                         </div>
                         <a href="#"> </a>
                     </div>
-                </div>
-                
+                </div> -->
+
             </div>
             <div class="pages">
-                                <ul class="page-numbers">
-                                    <li class="hidden">
-                                        <a class="prev page-numbers" href="#"> <i class="fa fa-arrow-right ix"></i> </a>
-                                    </li>
-                                    <li><a class="page-numbers current " href="#">1</a></li>
-                                    <li><a class="page-numbers paginate" href="#">2</a></li>
-                                    <li><a class="page-numbers paginate" href="#">3</a></li>
-                                    <li><a class="page-numbers paginate" href="#">4</a></li>
-                                    <li><a class="page-numbers paginate" href="#">5</a></li>
-                                    <li class="">
-                                        <a class="next page-numbers" href="thue/can-ho/hcm/p2"> <i class="fa fa-arrow-right"></i> </a>
-                                    </li>
-                                </ul>
-                            </div>
+               
+                <ul class="page-numbers">
+                    <!-- <li class="hidden">
+                        <a class="prev page-numbers" href="#"> <i class="fa fa-arrow-right ix"></i> </a>
+                    </li>
+                    <li><a class="page-numbers current " href="#">1</a></li>
+                    <li><a class="page-numbers paginate" href="#">2</a></li>
+                    <li><a class="page-numbers paginate" href="#">3</a></li>
+                    <li><a class="page-numbers paginate" href="#">4</a></li>
+                    <li><a class="page-numbers paginate" href="#">5</a></li>
+                    <li class="">
+                        <a class="next page-numbers" href="thue/can-ho/hcm/p2"> <i class="fa fa-arrow-right"></i> </a>
+                    </li> -->
+                    <?=$links?>
+                </ul>
+            </div>
         </div>
-        
+
         <div class="item2">
             <div class="form-timkiem">
                 <div class="div-text">
@@ -374,32 +380,32 @@
                     <label for="" class="form-txt">Loại căn hộ :</label>
                     <div class="div">
                         <select name="" id="" style="font-size: 10pt;">
-                          <option value="" checked>Nhà Riêng</option>
-                          <option value="">Nhà trọ</option>
-                          <option value="">Chung Cư/Căn Hộ</option>
-                      </select>
+                            <option value="" checked>Nhà Riêng</option>
+                            <option value="">Nhà trọ</option>
+                            <option value="">Chung Cư/Căn Hộ</option>
+                        </select>
                     </div>
                     <div class="div">
                         <select name="" id="" style="font-size: 10pt;">
-                        <option value="" checked>Hồ Chí Minh</option>
-                    </select>
+                            <option value="" checked>Hồ Chí Minh</option>
+                        </select>
                     </div>
                     <div class="div">
                         <select name="" id="" style="font-size: 10pt;">
-                        <option value="" checked>Quận 1</option>
-                        <option value="">Quận 2</option>
-                        <option value="">Quận 3</option>
-                        <option value="">Quận 4</option>
-                        <option value="">Quận 5</option>
-                        <option value="">Quận 6</option>
-                        <option value="">Quận 7</option>
-                        <option value="">Quận 8</option>
-                        <option value="">Quận 9</option>
-                        <option value="">Quận 10</option>
-                        <option value="">Quận 11</option>
-                        <option value="">Quận 12</option>
-                        <option value="">Quận Gò Vấp</option>
-                    </select>
+                            <option value="" checked>Quận 1</option>
+                            <option value="">Quận 2</option>
+                            <option value="">Quận 3</option>
+                            <option value="">Quận 4</option>
+                            <option value="">Quận 5</option>
+                            <option value="">Quận 6</option>
+                            <option value="">Quận 7</option>
+                            <option value="">Quận 8</option>
+                            <option value="">Quận 9</option>
+                            <option value="">Quận 10</option>
+                            <option value="">Quận 11</option>
+                            <option value="">Quận 12</option>
+                            <option value="">Quận Gò Vấp</option>
+                        </select>
                     </div>
                     <div class="sub">
                         <input type="submit" value="Tìm nhanh">
@@ -481,52 +487,52 @@
                     <ul class="lancan">
                         <li>
 
-                            <a href="#"> <span class=""> Phường 1 </span>  </a>
+                            <a href="#"> <span class=""> Phường 1 </span> </a>
 
                         </li>
                         <li>
 
-                            <a href="#"> <span class=""> Phường 2 </span>  </a>
+                            <a href="#"> <span class=""> Phường 2 </span> </a>
 
                         </li>
                         <li>
 
-                            <a href="#"> <span class=""> Phường 3 </span>  </a>
+                            <a href="#"> <span class=""> Phường 3 </span> </a>
 
                         </li>
                         <li>
 
-                            <a href="#"> <span class=""> Phường 4 </span>  </a>
+                            <a href="#"> <span class=""> Phường 4 </span> </a>
 
                         </li>
                         <li>
 
-                            <a href="#"> <span class=""> Phường 5 </span>  </a>
+                            <a href="#"> <span class=""> Phường 5 </span> </a>
 
                         </li>
                         <li>
 
-                            <a href="#"> <span class=""> Phường 6 </span>  </a>
+                            <a href="#"> <span class=""> Phường 6 </span> </a>
 
                         </li>
                         <li>
 
-                            <a href="#"> <span class=""> Phường 7 </span>  </a>
+                            <a href="#"> <span class=""> Phường 7 </span> </a>
 
                         </li>
                         <li>
 
-                            <a href="#"> <span class=""> Phường 8 </span>  </a>
+                            <a href="#"> <span class=""> Phường 8 </span> </a>
 
                         </li>
                         <li>
 
-                            <a href="#"> <span class=""> Phường 9 </span>  </a>
+                            <a href="#"> <span class=""> Phường 9 </span> </a>
 
                         </li>
                         <li>
 
-                            <a href="#"> <span class=""> Phường 10</span>  </a>
+                            <a href="#"> <span class=""> Phường 10</span> </a>
 
                         </li>
                     </ul>
@@ -558,7 +564,7 @@
                                 Tiếp cận khách hàng sẵn có, quảng cáo tin đăng miễn phí</p>
                         </div>
                         <div class="submit">
-                            <label for="" class="label-end"><a href="#"  style="color: white;font-size: 10pt;">Đăng tin ngay</a></label>
+                            <label for="" class="label-end"><a href="#" style="color: white;font-size: 10pt;">Đăng tin ngay</a></label>
                         </div>
                     </div>
                 </div>
