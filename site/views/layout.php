@@ -352,28 +352,21 @@
             </div>
             <div class="textquan">
                 <div class="quan1 l1">
-                    <P>Quận 1</P>
-                    <P>Quận 2</P>
-                    <P>Quận 3</P>
-                    <P>Quận 4</P>
-                    <P>Quận 5</P>
-                    <P>Quận 6</P>
-                    <P>Quận 7</P>
-                    <P>Quận 8</P>
-                    <P>Quận 9</P>
-                    <P>Quận 10</P>
-                </div>
+                    <?php foreach( $quan as $q){ $stt+=1;?>
+                    <p><?=$q["ten_quan"]?></p>
+                    
+                    <?php
+                    if ($stt==10) {
+                        ?>
+                        </div>
                 <div class="quan1 l2">
-                    <P>Quận 11</P>
-                    <P>Quận 12</P>
-                    <P>Quận Bình Thạnh</P>
-                    <P>Quận Phú Nhuận</P>
-                    <p>Quận Tân Bình</p>
-                    <p>Quận Tân Phú</p>
-                    <p>Quận Bình Tân</p>
-                    <p>Huyện Nhà Bè</p>
-                    <p>Huyện Hóc Môn</p>
-                    <p>Huyện Bình Chánh</p>
+                        <?php
+                    }
+                }?>
+                    
+                <!-- </div>
+                <div class="quan1 l2"> -->
+                    
                 </div>
             </div>
         </div>

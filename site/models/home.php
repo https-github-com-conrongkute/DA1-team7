@@ -175,6 +175,7 @@ function getallloai_can(){
     return query($sql);
 }
 
+
 function getphuongbyidquan($id){
     $sql="SELECT * FROM phuong WHERE ma_quan='$id'";
     return query($sql);
@@ -196,5 +197,6 @@ function datlichid($ma_can, $ma_tk, $ngay_xem, $ngay_dat){
 //     $kq = $row->fetch();
 //     return $kq['soluong'];
 // }
+
 
 ?> 

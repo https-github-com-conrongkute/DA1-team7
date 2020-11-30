@@ -9,7 +9,7 @@ switch ($act) {
     $ds_lc = getLoaican();
     $ds_ch = getALLcan_hoNew();
     $ds_ch2 = getALL_canhoNew2();
-   
+    $quan=getallquan();
     require_once 'views/layout.php';
     break;
     case 'chi_tiet':
@@ -238,6 +238,9 @@ switch ($act) {
     require_once 'views/about.php';
     break;
   case 'chitiet':
+    $ma_can=$_GET["ma_can"];
+    $ctcanho=getcan_hoByid($ma_can);
+    $quanall=getallquan();
     require_once 'views/chitiet.php';
     break;
   case 'ch-dd':

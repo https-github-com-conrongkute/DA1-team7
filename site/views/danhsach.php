@@ -185,11 +185,13 @@
 
             <div id="view-as-grid" class="row list-layout-0 list-item">
                 <?php foreach ($dsch_tl as $ch) { ?>
+                    
                     <div class="col-6 col-lg-4">
+                    <a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>">
                         <div class="item is-feature">
-                            <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="../uploaded/<?=$ch["hinh"]?>" > </a>
+                            <a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>" class="img tRes_82"> <img class="lazy-hidden" src="../uploaded/<?=$ch["hinh"]?>" > </a>
                             <div class="divtext ">
-                                <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title"><?= $ch['ten_can_ho'] ?></a></h2>
+                                <h2 class="height-search"><a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>" class="title"><?= $ch['ten_can_ho'] ?></a></h2>
                                 <div class="imeta-1"> <b><?= $ch['dia_chi'] ?></b> </div>
                                 <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
                                 <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
@@ -202,7 +204,9 @@
                             </div>
                             <a href="#"> </a>
                         </div>
+                        </a>
                     </div>
+                   
                 <?php } ?>
 
 

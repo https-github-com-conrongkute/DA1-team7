@@ -189,20 +189,24 @@
         <div class="item1">
             <div class="box-slideshow"><p>
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
+                    <ol class="carousel-indicators" style="left: 5%;">
                       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                     </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img class="d-block w-100" src="../uploaded/b1.jpg" alt="First slide" style="width:100%;" height="500px">
+                        <img class="d-block w-100" src="../uploaded/<?=$ctcanho["hinh"]?>" alt="First slide" style="width:100%;" height="500px">
                       </div>
                       <div class="carousel-item">   
-                        <img class="d-block w-100" src="../uploaded/b2.jpg" alt="Second slide" style="width:100%;" height="500px">
+                        <img class="d-block w-100" src="../uploaded/<?=$ctcanho["hinha"]?>" alt="Second slide" style="width:100%;" height="500px">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="../uploaded/b3.jpg" alt="Third slide" style="width:100%;" height="500px">
+                        <img class="d-block w-100" src="../uploaded/<?=$ctcanho["hinhb"]?>" alt="Third slide" style="width:100%;" height="500px">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="../uploaded/<?=$ctcanho["hinhc"]?>" alt="Four slide" style="width:100%;" height="500px">
                       </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -218,18 +222,17 @@
             <!-- thông tin nhà cửa như báo giá,độ lớn độ dài -->
             <div class="thongtin">
                 <div class="tatcatt">
-                    <p class="txt1" style="font-family: 'Noto Sans JP', sans-serif;">BÁN NHÀ HẺM ĐỖ QUANG ĐẨU QUẬN 1</p>
-                    <p class="txt2">Phường Phạm Ngũ Lão | Quận 1</p>
+                    <p class="txt1" style="font-family: 'Noto Sans JP', sans-serif;"><?=$ctcanho["ten_can_ho"]?></p>
+                    <p class="txt2"><?php $phuong=getphuongbyid($ctcanho["id"]); echo $phuong["phuong"];?> | <?php $quan=maquan($ctcanho["ma_quan"]); echo $quan["ten_quan"];?></p>
                     <div class="btn-tt">
                         <!-- <button class="button-cs1"><p class="txt3">Bán</p></button>
                         <button class="button-cs2"><p class="txt3">Đã Thẩm Định</p></button>
                         <button class="button-cs3"><p class="txt3">ID 277418</p></button> -->
-                      <label for="" class="label1">Bán</label>
+                      <label for="" class="label1">Thuê</label>
                       <label for="" class="label2">Đã thẩm định</label>
-                      <label for="" class="label3">ID 277418</label>
+                      <label for="" class="label3">ID <?=$ctcanho["ma_can"]?></label>
                     </div>
-                    <p class="txt3">2,1 tỷ - 12,4m²</p>
-                    <p class="txt4">Giá : 173,4 triệu/m²</p>
+                    <p class="txt3">Giá: <?=number_format($ctcanho["gia_thue"]. "")?> VND - <?=$ctcanho["dien_tich"]?>m²</p>
                 </div>
                 <div class="btn">
                     <div ><button class="btn1">LƯU <i class="fa fa-download" style="margin-left:5px;"></i></button></div>
@@ -241,23 +244,31 @@
             <div class="gioithieu-tuvan ">
                 <div class="gioithieu ">
                     <h3 class="txt8">Giới thiệu</h3>
-                    <p class="txt5">Bán nhà hẻm đường Đỗ Quang Đẩu, khu vực an tĩnh, Quận 1.</p>
+                    <p class="txt5"><?=$ctcanho["ten_can_ho"]?></p>
                     <p class="txt6">
                        <div class="row">
                            <div class="col-6 txtx">
                            <ul>
-                           <li class="li1">Hướng: T.Nam</li>
-                           <li>Phòng ngủ: 2</li>
-                           <li>Phòng tắm: 1</li>
-                           <li>Tầng: 1 </li>
+                           <li class="li1">Hướng: <?php if($ctcanho["huong_nha"] == 1) echo "Đông"; 
+                            elseif($ctcanho["huong_nha"] == 2) echo "Tây";
+                            elseif($ctcanho["huong_nha"] == 3) echo "Nam";
+                            elseif($ctcanho["huong_nha"] == 4) echo "Bắc";
+                            elseif($ctcanho["huong_nha"] == 5) echo "Tây Bắc";
+                            elseif($ctcanho["huong_nha"] == 6) echo "Tây Nam";
+                            elseif($ctcanho["huong_nha"] == 7) echo "Đông Bắc";
+                            elseif($ctcanho["huong_nha"] == 8) echo "Đông Nam";
+                            elseif($ctcanho["huong_nha"] == "") echo "Không xác định";
+                            ?></li>
+                           <li>Phòng ngủ: <?=$ctcanho["so_phong_ngu"]?></li>
+                           <li>Phòng tắm: <?=$ctcanho["so_phong_vs"]?></li>
+                           <li>Tầng: <?=$ctcanho["tang"]?> </li>
                            
                        </ul>
                            </div>
                            <div class="col-6 txtx">
                                <ul>
                             <li>Giấy tờ: Sổ hồng</li>
-                           <li>Diện tích: 15m2</li>
-                           <li>Hẻm: 1.5m</li>
+                           <li>Diện tích: <?=$ctcanho["dien_tich"]?>m2</li>
                                </ul>
                            </div>
                        </div>
@@ -288,20 +299,9 @@
             <div class="ttct">
                 <h3 class="txt9">Thông tin chi tiết</h3>
                 <p class="txt7">
-                <p class="txt77"> Bán Nhà Mặt Tiền Đường Thái Phiên Gần Khu Cư Xá Bình Thới, Phường 09 Quận 11</p>
-
-         <p class="txt77"> Diện tích: 3.5m x 14m, diện tích đất 47.4m2 và tổng diện tích sử dụng 152.9m2. </p>
-
-   <p class="txt77">  Hiện trạng nhà 1 trệt 1 lửng 2 lầu + sân thượng, gồm 3 phòng ngủ và 3 WC. Kết cấu nhà cứng cáp, dọn vào ở ngay không cần sửa chữa.</p>
-
-<p class="txt77"> Nhà mặt tiền 16m xe tải lưu thông ra nhiều đường như Minh Phụng, Hàn Hải Nguyên, Xóm Đất, Cư Xá Bình Thới.</p>
-
- <p class="txt77"> Tiện ích xung quanh đầy đủ như: Vinmart, Bệnh viện Quận 11 ( tuyến sau của các BV lớn như 115, ĐH Y Dược), Trường TH Hàn Hải Nguyên, Cư xá Bình Thới, đoạn đường ăn uống sầm uất Minh Phụng - Xóm Đất,...</p>
-
- <p class="txt77">Vị trí trung tâm Quận 11, thuận tiện di chuyển sang các quận lân cận như Quận 5, 6, 10, Tân Bình, Bình Tân,....</p>
-
- <p class="txt77">Sổ hồng riêng chính chủ, giao dịch an toàn, dọn vào ở ngay.</p>
-                </p>
+                <p class="txt77">Tiện ích: <span style="font-size: 14pt;"><?=$ctcanho["tien_ich"]?></span></p>
+                <p>Chi phí khác: <?=$ctcanho["chi_phi_khac"]?></p>
+                
             </div>
         </div>
         <div class="item2">
@@ -324,19 +324,11 @@
                   </div>
                   <div class="div">
                     <select name="" id="" style="font-size: 10pt;">
-                        <option value="" checked>Quận 1</option>
-                        <option value="">Quận 2</option>
-                        <option value="">Quận 3</option>
-                        <option value="">Quận 4</option>
-                        <option value="">Quận 5</option>
-                        <option value="">Quận 6</option>
-                        <option value="">Quận 7</option>
-                        <option value="">Quận 8</option>
-                        <option value="">Quận 9</option>
-                        <option value="">Quận 10</option>
-                        <option value="">Quận 11</option>
-                        <option value="">Quận 12</option>
-                        <option value="">Quận Gò Vấp</option>
+                    <?php 
+                    foreach($quanall as $a){
+                    ?>
+                        <option value="" ><?=$a["ten_quan"]?></option>
+                    <?php }?>
                     </select>
                   </div>
                   <div class="sub">
@@ -406,62 +398,22 @@
                   
                     </form>
                 </div>
-                <div class="form-timkiem">
+            <div class="form-timkiemlancan">
                 <div class="div-text"><p>Các phường trong quận</p></div>
-                <form action="#" method="post" class="tim-kiemm">
+                    <form action="#" method="post" class="tim-kiemm">
                   
                   
                                     <ul class="lancan">
+                                        <?php $phuonggan=getphuongbyidquan($ctcanho["ma_quan"]);
+                                        foreach ($phuonggan as $p){
+                                        ?>
                                         <li>
                                             
-                                                <a href="#"> <span class=""> Phường 1 </span> <span class="count">(1186)</span> </a>
+                                                <a href="#"> <span class=""> <?php echo $p["phuong"]; ?> </span> <span class="count">(1186)</span> </a>
                                             
                                         </li>
-                                        <li>
-                                            
-                                                <a href="#"> <span class=""> Phường 2 </span> <span class="count">(652)</span> </a>
-                                            
-                                        </li>
-                                        <li>
-                                            
-                                                <a href="#"> <span class=""> Phường 3 </span> <span class="count">(611)</span> </a>
-                                            
-                                        </li>
-                                        <li>
-                                            
-                                                <a href="#"> <span class=""> Phường 4 </span> <span class="count">(514)</span> </a>
-                                            
-                                        </li>
-                                        <li>
-                                            
-                                                <a href="#"> <span class=""> Phường 5 </span> <span class="count">(496)</span> </a>
-                                            
-                                        </li>
-                                        <li>
-                                            
-                                                <a href="#"> <span class=""> Phường 6 </span> <span class="count">(381)</span> </a>
-                                            
-                                        </li>
-                                        <li>
-                                            
-                                                <a href="#"> <span class=""> Phường 7 </span> <span class="count">(312)</span> </a>
-                                            
-                                        </li>
-                                        <li>
-                                            
-                                                <a href="#"> <span class=""> Phường 8 </span> <span class="count">(278)</span> </a>
-                                            
-                                        </li>
-                                        <li>
-                                            
-                                                <a href="#"> <span class=""> Phường 9 </span> <span class="count">(223)</span> </a>
-                                            
-                                        </li>
-                                        <li>
-                                            
-                                                <a href="#"> <span class=""> Phường 10 </span> <span class="count">(212)</span> </a>
-                                            
-                                        </li>
+                                        <?php }?>
+                                        
                                     </ul>
                   
                   
