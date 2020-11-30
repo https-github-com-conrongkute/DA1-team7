@@ -402,7 +402,8 @@ label {
     margin-left: 2%;
     overflow-y: scroll;
 }
-.tt-right::-webkit-scrollbar{
+
+.tt-right::-webkit-scrollbar {
     display: none;
 }
 
@@ -691,9 +692,11 @@ label {
     height: 70px;
 }
 
-.box2text a {
+.box2text span {
     outline: none;
     font-family: 'Libre Franklin', sans-serif;
+    font-weight: bolder;
+    font-size: 12pt;
 }
 
 a {
