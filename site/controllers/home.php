@@ -361,7 +361,11 @@ switch ($act) {
       }
     }
     else{
-      header("location: " . SITE_URL . "/?ctrl=home&act=index");
+      $message="Bạn chưa đặt ngày";
+      $ds_lc = getLoaican();
+    $ds_ch = getALLcan_hoNew();
+    $ds_ch2 = getALL_canhoNew2();
+      require_once "views/layout.php";
     }
  
   break;
