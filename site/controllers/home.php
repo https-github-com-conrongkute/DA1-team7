@@ -6,6 +6,7 @@ if (isset($_GET['act']) == true) $act = $_GET['act'];
 switch ($act) {
   case 'index':
     //Xem căn hộ
+    $ds_lc = getLoaican();
     $ds_ch = getALLcan_hoNew();
     $ds_ch2 = getALL_canhoNew2();
    
@@ -170,6 +171,14 @@ switch ($act) {
     require_once 'views/dangtin.php';
     break;
   case 'danhsach':
+    if(isset($_GET['loai_can'])==true) $loaican = $_GET['loai_can']; 
+    $page_num = 1;
+    if(isset($_GET['page'])==true) $page_num = $_GET['page'];
+    $page_size = PATH_SITE;
+    $dsch_tl = getCanho_theoloai($loaican, $page_num, $page_size);
+    $toltal_rows = Demcanhotheoloai($loaican);
+    $basrurl = SITE_URL . "/?act=danhsach&loai_can={$loaican}";
+     $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
     require_once 'views/danhsach.php';
     break;
   case 'phuong':

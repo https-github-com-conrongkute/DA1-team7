@@ -9,5 +9,6 @@ define('ROOT_URL' , "/GitHub/DA1-team7");
 define('ADMIN_URL' , ROOT_URL."/admin");
 define('SITE_URL' , ROOT_URL."/site");
 define('SYSTEM_PATH' , ROOT_URL."/SYSTEM");
+define('PATH_SITE','12');
 ?>
 

@@ -9,6 +9,24 @@ function getALL_canhoNew2(){
     $sql = "SELECT * FROM can_ho ORDER BY ma_can ASC LIMIT 10";
     return query($sql);
 }
+// loại căn
+function getLoaican(){
+    $sql = "SELECT * FROM loai_can";
+    return query($sql);
+}
+// Xem căn hộ theo loại
+function getCanho_theoloai($loaican, $page_num, $path_size){
+    $start_list = ceil($page_num - 1) * $path_size;
+    $sql = "SELECT * FROM can_ho WHERE ma_loai='$loaican' LIMIT $start_list,$path_size";
+    return query($sql);
+}
+//Đếm căn hộ theo loại căn
+function Demcanhotheoloai($loaican){
+    $sql = "SELECT count(*) as sodong FROM can_ho WHERE ma_loai='$loaican'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['sodong'];
+}
 // Xem 1 căn hộ
 function getcan_hoByid($ma_can){
     $sql = "SELECT * FROM can_ho WHERE ma_can='$ma_can'";
@@ -22,6 +40,34 @@ function datlich($ma_can,$hoten,$email,$sdt,$ngay_xem){
     $sql="INSERT INTO dat_lich (ma_can, ho_ten, sdt, email, ngay_xem) 
     VALUES ('$ma_can','$hoten','$email','$sdt','$ngay_xem')";
     execute($sql);
+}
+// Tạo links
+function taolinks($baseurl, $page_num, $page_size, $toltal_rows){
+    if($toltal_rows <= 0) return "";
+    $toltal_page = ceil($toltal_rows / $page_size);
+    if($toltal_page <= 0) return "";
+    $links =" ";
+    if ($page_num >= 2) {
+        $pr = $page_num - 1;
+        // $links .= "<li class='page-item'><a href='{$baseurl}' class='page-link'><</a></li>";
+        $links .= "<li><a class='page-numbers paginate' href='{$baseurl}&page={$pr}'><i class='fas fa-arrow-left'></i></a></li>";
+    }
+    // -	Tạo item trang hiện hành : Code tiếp theo code tạo Trang đầu, Trang trước 
+    for ($i = 0; $i <= $toltal_page; $i++) {
+        if ($page_num == $i) {
+            $links .= "<li><a class='page-numbers current' href='{$baseurl}&page={$i}'>{$i}</a></li>";
+        } else {
+            $links .= "<li><a class='page-numbers paginate' href='{$baseurl}&page={$i}'>{$i}</a></li>";
+        }
+    }
+    //-	Tạo link Trang kế, Trang cuối (khi user không phải ở trang cuối) Code tiếp sau item trang hiện hành:
+    //Trang kế , Trang cuối
+    if ($page_num < $toltal_page) {
+        $pn = $page_num + 1;
+        $links .= "<li class=''><a class='next page-numbers' href='{$baseurl}&page={$pn}'> <i class='fa fa-arrow-right'></i></a></li>";
+    }
+    // $links .= "<li class='page-item'><a href='{$baseurl}&page_num={$total_pages}' class= 'page-link'>></a></li>";
+    return $links;
 }
 // check lỗi tkdn
 function checktkdn($user){
