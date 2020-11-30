@@ -653,7 +653,7 @@ label {
     width: 90%;
 }
 
-.danhsach .box2 {
+.canho .box2 {
     width: calc(25% - 20px);
     height: 400px;
     border-radius: 12px;
@@ -662,6 +662,7 @@ label {
     margin-bottom: 40px;
     outline: none;
     margin: 0px 10px;
+    cursor: pointer;
 }
 
 .box2 {
@@ -734,7 +735,7 @@ a {
     background-color: orangered;
 }
 
-.datlich a {
+.datlich span {
     color: white;
     font-size: 14px;
 }
@@ -1133,6 +1134,8 @@ a {
     margin: 20px 20px;
     padding: 20px;
     background: #ccc;
+    height: 250px;
+    overflow: scroll;
 }
 
 .divmota3 {

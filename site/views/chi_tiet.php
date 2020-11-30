@@ -20,7 +20,6 @@
                       <img src="../uploaded/<?=$can_ho["hinhc"]?>" alt="" onclick="showimages(4)">
                   </div>
               </div>
-            
           </div>
           <div class="divtext">
               <div class="divtext1">
@@ -28,7 +27,7 @@
                       <li>- Chiều dài: </li> <br>
                       <li>- Phòng ngủ: <?=$can_ho["so_phong_ngu"]?></li> <br>
                       <li>- Hướng: <?=$can_ho["huong_nha"]?> </li><br>
-                      <li>-Diện tich: <?=$can_ho["dien_tich"]?> m2</li><br>
+                      <li>-Diện tich: <?=$can_ho["dien_tich"]?> m²</li><br>
                   </ul>
               </div>
               <div class="divtext1">
@@ -46,7 +45,7 @@
               <h3><?=$can_ho["ten_can_ho"]?></h3>
               <input class="ipmt" type="submit" value="Thuê">
               <input class="ipmt2" type="submit" value="Đã thẩm định">
-              <input class="ipmt3" type="submit" value="ID: 234567">
+              <input class="ipmt3" type="submit" value="ID: <?=$can_ho["ma_can"]?>">
 
           </div>
           <div class="divmota2">
@@ -54,7 +53,6 @@
               <hr>
               <p><?=$can_ho["tien_ich"]?>
               </p>
-              <input type="button" value="Xem thêm">
           </div>
           <div class="divmota3">
               Giá: <a><?=$can_ho["gia_thue"]?> VND - <?=$can_ho["dien_tich"]?> m²</a>

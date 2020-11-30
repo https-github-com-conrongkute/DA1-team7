@@ -182,15 +182,19 @@
                    <?php foreach ($ds_ch as $ch) { ?>
                     <div class="box2"  id="box2" data-toggle="modal"  data-target="#myModal" data-id=<?=$ch["ma_can"]?>>
                     <div class='click' style="display: none;"><?=$ch["ma_can"]?></div>
-                        <img src="../uploaded/<?=$ch['hinhb']?>" alt="" class="img-click">
-                        <div class="box2text">
-                            <span><?=$ch['ten_can_ho']?></span>
-                        </div>
-                        <div class="gia">
-                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: <?=number_format($ch['gia_thue'],0,' ','.')?> VNĐ
-                        </div>
-                        <div class="datlich">
-                            <a data-toggle="modal" data-target="#datlich" href="#">Đặt lịch xem</a>
+                    <div class="img-click">
+                            <img src="../uploaded/<?=$ch['hinh']?>" alt="" >
+                            <input type="hidden" name="ma_can" id="ma_can" value="<?=$ch["ma_can"]?>">
+
+                            <div class="box2text">
+                                <span><?=$ch['ten_can_ho']?></span>
+                            </div>
+                            <div class="gia">
+                                <a href="#" style="color:orange;font-size:18px;"> Giá </a>: <?=number_format($ch['gia_thue'],0,' ','.')?> VNĐ
+                            </div>
+                            <div class="datlich">
+                            <span>Xem căn hộ</span>
+                            </div>
                         </div>
                     </div>
                    <?php } ?>
@@ -200,18 +204,18 @@
                 <?php foreach($ds_ch2 as $ch){ ?>
                     <div class="box2" data-toggle="modal" data-target="#myModal" data-id=<?=$ch["ma_can"]?>>
                     <div class='click' style="display: none;"><?=$ch["ma_can"]?></div>
-
-                        <img src="../uploaded/<?=$ch['hinh']?>" alt="" class="img-click">
-                        <input type="hidden" name="ma_can" id="ma_can" value="<?=$ch["ma_can"]?>">
-
-                        <div class="box2text">
-                            <span><?=$ch['ten_can_ho']?></span>
-                        </div>
-                        <div class="gia">
-                            <a href="#" style="color:orange;font-size:18px;"> Giá </a>: <?=number_format($ch['gia_thue'],0,' ','.')?> VNĐ
-                        </div>
-                        <div class="datlich">
-                            <a data-toggle="modal" data-target="#datlich" href="#">Đặt lịch xem</a>
+                        <div class="img-click">
+                            <img src="../uploaded/<?=$ch['hinh']?>" alt="" >
+                            <input type="hidden" name="ma_can" id="ma_can" value="<?=$ch["ma_can"]?>">
+                            <div class="box2text">
+                                <span><?=$ch['ten_can_ho']?></span>
+                            </div>
+                            <div class="gia">
+                                <a href="#" style="color:orange;font-size:18px;"> Giá </a>: <?=number_format($ch['gia_thue'],0,' ','.')?> VNĐ
+                            </div>
+                            <div class="datlich">
+                                <span>Xem căn hộ</span>
+                            </div>
                         </div>
                     </div>
                   
@@ -417,31 +421,6 @@
                     $('#myModal').html(data);
                 });
     });
-
-   
-
-
-
-    // $(document).ready(function () {
-    //     $("#box2").click(function (e) { 
-    //         $('#box2').change(function (e) { 
-    //         ma_can = $('#box2').val(); 
-    //         alert(ma_can);
-    //         $.post("?ctrl=home&act=ct_canho", {'canhoid': ma_can},
-    //             function (data) {
-    //                 $('#myModal').html(data);
-    //             });
-    //     });
-            
-    //     });
-        
-    // });
-//     var list = document.getElementById("box2").firstElementChild.innerHTML;
-
-
-//     function ok(){
-// alert(list);
-//     }
 
     function showimages(x) {
     var img = document.getElementById('images');
