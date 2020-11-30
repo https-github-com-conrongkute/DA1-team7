@@ -2,11 +2,11 @@
 require_once('../system/database.php');
 // Xem căn hộ mới nhất
 function getALLcan_hoNew(){
-    $sql = "SELECT * FROM can_ho ORDER BY ma_can DESC LIMIT 10";
+    $sql = "SELECT * FROM can_ho WHERE an_hien = 1 ORDER BY ma_can DESC LIMIT 10";
     return query($sql);
 }
 function getALL_canhoNew2(){
-    $sql = "SELECT * FROM can_ho ORDER BY ma_can ASC LIMIT 10";
+    $sql = "SELECT * FROM can_ho  WHERE an_hien = 1 ORDER BY ma_can ASC LIMIT 10";
     return query($sql);
 }
 // loại căn
@@ -17,7 +17,7 @@ function getLoaican(){
 // Xem căn hộ theo loại
 function getCanho_theoloai($loaican, $page_num, $path_size){
     $start_list = ceil($page_num - 1) * $path_size;
-    $sql = "SELECT * FROM can_ho WHERE ma_loai='$loaican' LIMIT $start_list,$path_size";
+    $sql = "SELECT * FROM can_ho WHERE ma_loai='$loaican' AND an_hien = 1 LIMIT $start_list,$path_size";
     return query($sql);
 }
 //Đếm căn hộ theo loại căn
@@ -53,7 +53,7 @@ function taolinks($baseurl, $page_num, $page_size, $toltal_rows){
         $links .= "<li><a class='page-numbers paginate' href='{$baseurl}&page={$pr}'><i class='fas fa-arrow-left'></i></a></li>";
     }
     // -	Tạo item trang hiện hành : Code tiếp theo code tạo Trang đầu, Trang trước 
-    for ($i = 0; $i <= $toltal_page; $i++) {
+    for ($i = 1; $i <= $toltal_page; $i++) {
         if ($page_num == $i) {
             $links .= "<li><a class='page-numbers current' href='{$baseurl}&page={$i}'>{$i}</a></li>";
         } else {
@@ -83,8 +83,23 @@ function checktkemail($user){
     $kq = $row->fetch();
     return $kq['soluong'];
 }
+//Kich hoat 
+function kichhoattk($ma_tk){
+    $sql = "SELECT count(*) as soluong FROM khach_hang WHERE ma_tk = '$ma_tk'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['soluong'];
+}
 function Luuthongtintk($ho_ten,$user, $pass, $email, $random){
+    $conn = getConnection();
     $sql = "INSERT INTO khach_hang (ho_ten,ten_tk, mat_khau, email, random_key) VALUES ('$ho_ten','$user','$pass','$email','$random')";
+    $conn->exec($sql);
+    $idUser = $conn->lastInsertId();
+    return $idUser;
+}
+// Kích hoạt tk
+function updateThongtintk($idUser, $kich_hoat){
+    $sql = "UPDATE khach_hang SET kich_hoat='$kich_hoat' WHERE ma_tk = '$idUser'";
     execute($sql);
 }
 // check tài khoản dang nhap

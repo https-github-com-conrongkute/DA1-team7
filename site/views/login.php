@@ -80,7 +80,12 @@
         <!-- THông báo đăng ký thành công -->
         <?php if (isset($message) == true) { ?>
             <script>
-                swal("Thành công", "Nhấn để tiếp tục !", "success");
+                swal("Kiểm tra email để kích hoạt");
+            </script>
+        <?php } ?>
+        <?php if (isset($kichhoattk) == true) { ?>
+            <script>
+                swal("<?=$kichhoattk?>", "Nhấp vào đây để tiếp tục!", "success");
             </script>
         <?php } ?>
         <div class="form-container sign-in-container">

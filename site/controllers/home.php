@@ -71,9 +71,35 @@ switch ($act) {
 
     if (empty($erro)) {
       // lưu thông tin đăng nhập
-      $message = "Thành công !";
-      $random = substr(md5('adhwe$#&^'), 12);
-      Luuthongtintk($ho_ten, $user, $pass, $email, $random);
+        // GỬi mail
+        $message = "Thành công !";
+        $random = substr(md5('adhwe$#&^'), 12);
+        $idUser = Luuthongtintk($ho_ten, $user, $pass, $email, $random);
+        require_once "PHPMailer-master/src/PHPMailer.php";
+        require_once "PHPMailer-master/src/SMTP.php";
+        $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
+        try {
+            $mail->SMTPDebug = 0;  // Enable verbose debug output
+            $mail->isSMTP();
+            $mail->CharSet  = "utf-8";
+            $mail->Host = 'smtp.gmail.com';  //SMTP servers
+            $mail->SMTPAuth = true; // Enable authentication
+            $mail->Username = 'hailong28092001@gmail.com';  // SMTP username
+            $mail->Password = 'hailong289';   // SMTP password
+            $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
+            $mail->Port = 465;  // port to connect to                
+            $mail->setFrom('hailong28092001@gmail.com', 'goldenhome');
+            $mail->addAddress($email, $user); //mail và tên người nhận       
+            $mail->isHTML(true);  // Set email format to HTML
+            $mail->Subject = 'Kích hoạt tài khoản';
+            $linkKH = "<a href='http://localhost:8888/Github/DA1-team7/site/?act=kichhoat&id=".$idUser."'>Nhấp vào đây</a>";
+            // $linKH = sprintf($linkKH, $idUser);
+            $mail->Body = "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản: ". $linkKH;
+            $mail->send();
+            $message = 'kích hoạt tài khoản !';
+        } catch (Exception $e) {
+            echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
+        }
       require_once 'views/login.php';
     }
     require_once 'views/login.php';
@@ -81,6 +107,12 @@ switch ($act) {
   case 'kichhoat':
     if (isset($_GET['id'])) $idUser = $_GET['id'];
     //Kiểm tra hợp lệ giá trị mới nhận
+    if(kichhoattk($idUser)){
+      $kichhoattk = "Kích hoạt thành công hãy đăng nhập nào";
+      $kich_hoat = 1;
+      updateThongtintk($idUser, $kich_hoat);
+      require_once 'views/login.php';
+    }
     //Gọi hàm cập nhật trạng thái user (đã kích hoạt)
     //Định nghĩa hàm cập nhật trạng thái user
     //Nạp view hiện kết quả
@@ -128,7 +160,7 @@ switch ($act) {
       $_SESSION['vai_tro'] = $checktk['vai_tro'];
       $_SESSION['sdt'] = $checktk['sdt'];
       $_SESSION['gioitinh'] = $checktk['gioitinh'];
-      if ($_SESSION['vai_tro'] == 0) {
+      if ($_SESSION['vai_tro'] == 0 && $checktk['kich_hoat']==1) {
         $message_dn = 'Đăng nhập thành công';
         header("location: index.php");
       } else {
