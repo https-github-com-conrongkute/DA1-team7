@@ -455,7 +455,7 @@
 
                 </div> -->
                 <div class="xemthem">
-                    <a href="?ctrl=home&act=danhsach">Xem thêm </a>
+                    <a href="?ctrl=home&act=danhsach&loai_can=1">Xem thêm </a>
                 </div>
             </div>
         </div>

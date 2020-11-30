@@ -187,7 +187,7 @@
                 <?php foreach ($dsch_tl as $ch) { ?>
                     <div class="col-6 col-lg-4">
                         <div class="item is-feature">
-                            <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
+                            <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="../uploaded/<?=$ch['hinhb']?>" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
                             <div class="divtext ">
                                 <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title"><?= $ch['ten_can_ho'] ?></a></h2>
                                 <div class="imeta-1"> <b><?= $ch['dia_chi'] ?></b> </div>
@@ -352,10 +352,10 @@
                 </div> -->
 
             </div>
-            <div class="pages">
-               
-                <ul class="page-numbers">
-                    <!-- <li class="hidden">
+            <div class="row">
+                <div class="pages" style="width:100%;">
+                    <ul class="page-numbers">
+                        <!-- <li class="hidden">
                         <a class="prev page-numbers" href="#"> <i class="fa fa-arrow-right ix"></i> </a>
                     </li>
                     <li><a class="page-numbers current " href="#">1</a></li>
@@ -366,8 +366,9 @@
                     <li class="">
                         <a class="next page-numbers" href="thue/can-ho/hcm/p2"> <i class="fa fa-arrow-right"></i> </a>
                     </li> -->
-                    <?=$links?>
-                </ul>
+                        <?= $links ?>
+                    </ul>
+                </div>
             </div>
         </div>
 
