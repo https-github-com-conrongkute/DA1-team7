@@ -9,11 +9,16 @@ switch ($act) {
     $ds_lc = getLoaican();
     $ds_ch = getALLcan_hoNew();
     $ds_ch2 = getALL_canhoNew2();
-    if(isset($_GET['ma_can'])==true){
-         $can_ho = getcan_hoByid($_GET['ma_can']);
-    }
+   
     require_once 'views/layout.php';
     break;
+    case 'chi_tiet':
+      if(isset($_GET['canhoid'])==true){
+        $can_ho = getcan_hoByid($_GET['canhoid']);
+        require_once 'views/chi_tiet.php';
+      }
+    break;
+
     // thay doi thông tin tk
   case 'thaydoitt':
     $tentk = $_POST['tenkh'];
@@ -184,6 +189,13 @@ switch ($act) {
       echo ' <option value="' . $p['id'] . '">' . $p['phuong'] . '</option>';
     }
     break;
+    case 'ct_canho':
+      // require_once "models/can_ho.php";
+  
+      $canhoid = canho($_POST['canhoid']);
+     
+      
+      break;
   case 'about':
     require_once 'views/about.php';
     break;

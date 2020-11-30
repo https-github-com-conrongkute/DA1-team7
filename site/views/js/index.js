@@ -194,25 +194,7 @@ function exit() {
     hien.style.display = 'none';
 }
 
-function showimages(x) {
-    var img = document.getElementById('images');
-    switch (x) {
-        case 1:
-            img.src = "../uploaded/b1.jpg";
-            break;
-        case 2:
-            img.src = "../uploaded/b2.jpg";
-            break;
-        case 3:
-            img.src = "../uploaded/b3.jpg";
-            break;
-        case 4:
-            img.src = "../uploaded/b4.jpg";
-            break;
-        default:
-            break;
-    }
-}
+
 
 function toogle() {
     var submenu = document.getElementsByClassName('sub-menu')[0];
@@ -223,4 +205,3 @@ function toogle() {
 
     }
 }
-
