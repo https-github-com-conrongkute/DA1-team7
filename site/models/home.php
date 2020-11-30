@@ -83,8 +83,23 @@ function checktkemail($user){
     $kq = $row->fetch();
     return $kq['soluong'];
 }
+//Kich hoat 
+function kichhoattk($ma_tk){
+    $sql = "SELECT count(*) as soluong FROM khach_hang WHERE ma_tk = '$ma_tk'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['soluong'];
+}
 function Luuthongtintk($ho_ten,$user, $pass, $email, $random){
+    $conn = getConnection();
     $sql = "INSERT INTO khach_hang (ho_ten,ten_tk, mat_khau, email, random_key) VALUES ('$ho_ten','$user','$pass','$email','$random')";
+    $conn->exec($sql);
+    $idUser = $conn->lastInsertId();
+    return $idUser;
+}
+// Kích hoạt tk
+function updateThongtintk($idUser, $kich_hoat){
+    $sql = "UPDATE khach_hang SET kich_hoat='$kich_hoat' WHERE ma_tk = '$idUser'";
     execute($sql);
 }
 // check tài khoản dang nhap
