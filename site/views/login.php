@@ -100,7 +100,7 @@
                     <script>
                         swal("<?= $error_dn?>", "Nhập lại !", "warning");
                     </script>
-                <?php    } ?>
+                <?php  } ?>
             </form>
         </div>
         <div class="overlay-container">

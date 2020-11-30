@@ -56,8 +56,23 @@
           </div>
           <div class="divmota3">
               Giá: <a><?=$can_ho["gia_thue"]?> VND - <?=$can_ho["dien_tich"]?> m²</a>
-              <input type="button" value="Đặt lịch xem" data-toggle="modal" data-target="#datlich" data-dismiss="modal">
+              <span><?=$can_ho["ma_can"]?></span>
+              <input type="button" value="Đặt lịch xem" class="datlichid" data-toggle="modal" data-target="#datlich" data-dismiss="modal">
+              
           </div>
       </div>
 
   </div>
+  <script>
+    $(".datlichid").click(function (e) { 
+        var btnClick = $(this);
+        
+       var id = btnClick.prev().html();
+      
+       $.get("?ctrl=home&act=dat_lich", {'canhoid': id},
+       function (data) {
+                    $('#datlich').html(data);
+                });
+    });
+  </script>
+  </script>

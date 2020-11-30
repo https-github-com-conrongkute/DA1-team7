@@ -35,7 +35,15 @@
                                 </td>
                                 <td>
                                     <p>Địa chỉ: <?=$c["dia_chi"]?></p>
-                                    <p>Hướng nhà: <?=$c["huong_nha"]?></p>
+                                    <p>Hướng nhà: <?php if($c["huong_nha"] == 1) echo "Đông"; 
+                            elseif($c["huong_nha"] == 2) echo "Tây";
+                            elseif($c["huong_nha"] == 3) echo "Nam";
+                            elseif($c["huong_nha"] == 4) echo "Bắc";
+                            elseif($c["huong_nha"] == 5) echo "Tây Bắc";
+                            elseif($c["huong_nha"] == 6) echo "Tây Nam";
+                            elseif($c["huong_nha"] == 7) echo "Đông Bắc";
+                            elseif($c["huong_nha"] == 8) echo "Đông Nam";
+                            ?></p>
                                     <p><strong>Tiện ích:</strong></p>
                                     <p><?=$c["tien_ich"]?></p>
                                 </td>
@@ -46,7 +54,7 @@
                                     <p><img src="../uploaded/<?=$c["hinhc"]?>" alt="" style="width: 70px;"></p>
                                 </td>
                                 <td>
-                                    <p><?=$c["gia_thue"]?> VNk</p>
+                                    <p><?=$c["gia_thue"]?> VND</p>
                                     <p><strong>Chi phí khác:</strong></p>
                                     <p><?=$c["chi_phi_khac"]?></p>
                                 </td>

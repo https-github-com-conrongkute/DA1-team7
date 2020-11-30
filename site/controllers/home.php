@@ -18,6 +18,12 @@ switch ($act) {
         require_once 'views/chi_tiet.php';
       }
     break;
+    case 'dat_lich':
+      if(isset($_GET['canhoid'])==true){
+        $idcanho = getcan_hoByid($_GET['canhoid']);
+        require_once 'views/dat_lich.php';
+      }
+    break;
 
     // thay doi thông tin tk
   case 'thaydoitt':
@@ -304,9 +310,29 @@ switch ($act) {
       settype($ma_phuong, "int");
       settype($huong_nha, "int");
       themcanho($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien);
-      header("location: " . SITE_URL . "/?ctrl=home&act=dangtin");
+      header("location: " . SITE_URL . "/?ctrl=home&act=ch-dd&ma_tk=".$_SESSION["id"]."");
     } else {
-      header("location: " . SITE_URL . "/?ctrl=home&act=index");
+      header("location: " . SITE_URL . "/?ctrl=home&act=dangtin");
     }
     break;
+    case 'datlichxem';
+    if ($_POST["ngay_xem"]!="") {
+    if (isset($_POST["dat"])) {
+
+      $ma_can=$_POST['ma_can'];
+      $ma_tk=$_POST['ma_tk'];
+        $ngay_xem=$_POST["ngay_xem"];
+        $ngay_dat=$_POST["ngay_dat"];
+        datlichid($ma_can, $ma_tk, $ngay_xem, $ngay_dat);
+        header("location: ".SITE_URL."?ctrl=home&act=lichsu&ma_tk=$ma_tk");
+      break;
+      }
+    }
+    else{
+      header("location: " . SITE_URL . "/?ctrl=home&act=index");
+    }
+ 
+  break;
+
+
 }

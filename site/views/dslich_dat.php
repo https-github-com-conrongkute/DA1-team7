@@ -28,12 +28,12 @@
                                                   <p>SĐT: 0<?=$ds['sdt']?></p>
 
                                         </td>
-                                        <td><span style="width: 75%; float: left;"> <?=$ds['ten_can_ho']?></span> <?php if (date("d-m-y") <= date_format(date_create($ds['ngay_xem']), "d/m/yy")) {
+                                        <td><span style="width: 75%; float: left;"> <?=$ds['ten_can_ho']?></span> <?php if (date("Y-m-d") <= date_format(date_create($ds['ngay_dat']), "Y-m-d")) {
                                     echo "<span class='neww' style='width: 25%'>Sắp tới</span>";
                                 }?></td>
                                         <td><?=date_format(date_create($ds['ngay_xem']), "d/m/yy")?></td>
                                         <td><?=date_format(date_create($ds['ngay_dat']), "d/m/yy")?></td>
-                                        <td><?php if (date("d-m-y") >= date_format(date_create($ds['ngay_xem']), "d/m/yy")) {
+                                        <td><?php if (date("Y-m-d") >= date_format(date_create($ds['ngay_xem']), "Y-m-d")) {
                                     echo "<span class='hethang'>Đã hết hạn</span>";
                                 }
                                 else{

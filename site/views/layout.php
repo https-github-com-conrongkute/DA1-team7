@@ -224,7 +224,7 @@
             </div>
 
                 <div class="xemthem">
-                    <a href="?ctrl=home&act=danhsach">Xem thêm </a>
+                    <a href="?ctrl=home&act=danhsach&loai_can=1">Xem thêm </a>
                 </div>
             </div>
         </div>
@@ -388,18 +388,7 @@
 <!-- end căn ho ct -->
 
     <div class="modal fade dl" id="datlich" role="dialog">
-        <div class="divdl">
-            <i data-dismiss="modal" class="glyphicon glyphicon-remove"></i>
-            <h1>ĐẶT LỊCH XEM</h1>
-            <input class="ipdl1" type="text" placeholder="Họ và tên"> <br>
-            <input class="ipdl2" type="number" id="sdt" placeholder="Số điện thoại">
-            <input class="ipdl3" type="email" placeholder="Địa chỉ Email"> <br>
-            <input class="ipdl4" type="date" placeholder="Chọn ngày">
-
-            <div class="guitt">
-                <a href="#">GỬI THÔNG TIN</a>
-            </div>
-        </div>
+        
     </div>
     <div class="divcuoi">
         <span> 2020 © Bản quyền GoldenHome. Đã đăng ký Bản quyền.</span>
@@ -411,6 +400,7 @@
 </html>
 <script src="./views/js/index.js"></script>
 <script>
+    //lấy id căn hộ để show lên
     $(".img-click").click(function (e) { 
         var btnClick = $(this);
         
@@ -421,6 +411,8 @@
                     $('#myModal').html(data);
                 });
     });
+
+  
 
     function showimages(x) {
     var img = document.getElementById('images');
