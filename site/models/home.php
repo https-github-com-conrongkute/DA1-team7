@@ -57,11 +57,11 @@ function get6can(){
     $sql = "SELECT * FROM can_ho limit 6";
     return query($sql);
 }
-function datlich($ma_can,$hoten,$email,$sdt,$ngay_xem){
-    $sql="INSERT INTO dat_lich (ma_can, ho_ten, sdt, email, ngay_xem) 
-    VALUES ('$ma_can','$hoten','$email','$sdt','$ngay_xem')";
-    execute($sql);
-}
+// function datlich($ma_can,$hoten,$email,$sdt,$ngay_xem){
+//     $sql="INSERT INTO dat_lich (ma_can, ho_ten, sdt, email, ngay_xem) 
+//     VALUES ('$ma_can','$hoten','$email','$sdt','$ngay_xem')";
+//     execute($sql);
+// }
 // Tạo links
 function taolinks($baseurl, $page_num, $page_size, $toltal_rows){
     if($toltal_rows <= 0) return "";
@@ -196,6 +196,7 @@ function getallloai_can(){
     return query($sql);
 }
 
+
 function getphuongbyidquan($id){
     $sql="SELECT * FROM phuong WHERE ma_quan='$id'";
     return query($sql);
@@ -205,5 +206,18 @@ function themcanho($ma_tk, $ma_loai, $ma_quan,$ma_phuong, $dia_chi, $ten_can_ho,
      values ('$ma_tk','$ma_quan', '$ma_phuong', '$ma_loai', '$dia_chi', '$ten_can_ho', '$nam_xd', '$dien_tich', '$tang', '$huong_nha', '$tien_ich', '$chi_phi', '$so_phong_ngu', '$so_phong_vs', '$gia_thue', '$hinh', '$hinha', '$hinhb', '$hinhc', '$an_hien', '$ghi_chu')";
     execute($sql);
 }
+function datlichid($ma_can, $ma_tk, $ngay_xem, $ngay_dat){
+    $sql="INSERT into dat_lich(ma_can, ma_tk, ngay_xem, ngay_dat) value ('$ma_can', '$ma_tk', '$ngay_xem', '$ngay_dat')";
+    execute($sql);
+
+}
+//checklichdat
+// function checklich($ma_can, $ma_tk){
+//     $sql = "SELECT count(*) as soluong FROM dat_lich WHERE ma_can = '$ma_can' and ma_tk='$ma_tk'";
+//     $row = query($sql);
+//     $kq = $row->fetch();
+//     return $kq['soluong'];
+// }
+
 
 ?> 

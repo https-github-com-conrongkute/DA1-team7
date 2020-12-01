@@ -26,7 +26,7 @@
                             <tr>
                                 <th scope="row"><?=$stt?></th>
                                
-                                <td><span style="width: 75%; float: left;"><?php echo $canho['ten_can_ho']?></span> <?php if (date("d-m-y") <= date_format(date_create($ds['ngay_xem']), "d/m/yy")) {
+                                <td><span style="width: 75%; float: left;"><?php echo $canho['ten_can_ho']?></span> <?php if (date("d-m-y") <= date_format(date_create($ds['ngay_dat']), "d/m/yy")) {
                                     echo "<span class='neww'>Sắp tới</span>";
                                 }?>
                                 <br>
@@ -36,13 +36,12 @@
                               </td>
                                 <td><?=date_format(date_create($ds['ngay_xem']), "d/m/yy")?></td>
                                 <td><?=date_format(date_create($ds['ngay_dat']), "d/m/yy")?></td>
-                                <td><?php if (date("d-m-y") >= date_format(date_create($ds['ngay_xem']), "d/m/yy")) {
+                                <td><?php if (date("Y-m-d") >= date_format(date_create($ds['ngay_xem']), "Y-m-d")) {
                                     echo "Đã hết hạn";
                                 }
                                 else{
                                     echo "Chưa xem nhà";
                                 }?></td>
-
                                 <td><a href="" style="color: white; background-color: orangered; padding: 2px 5px; border-radius: 10px;">Hủy lịch</a></td>
                                 
                             </tr>

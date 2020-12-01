@@ -317,11 +317,19 @@ body {
 
 .form-timkiem {
     width: 100%;
-    height: 350px;
     background-color: white;
     box-shadow: 2px 3px 4px #5c8a8a;
     margin: 10px 0px;
     margin-bottom: 40px;
+}
+
+.form-timkiemlancan {
+    width: 100%;
+    background-color: white;
+    box-shadow: 2px 3px 4px #5c8a8a;
+    margin: 10px 0px;
+    margin-bottom: 40px;
+    overflow: scroll;
 }
 
 .row {
@@ -375,6 +383,10 @@ body {
     padding: 30px 30px;
     border-radius: 10px;
     box-shadow: 20px 20px 50px #CCCCCC;
+}
+
+.ttct p {
+    font-size: 13pt;
 }
 
 .dichvukhac {
@@ -521,7 +533,7 @@ footer {
 }
 
 .txt77 {
-    font-size: 11pt;
+    font-size: 14pt;
 }
 
 .txt8 {

@@ -9,13 +9,19 @@ switch ($act) {
     $ds_lc = getLoaican();
     $ds_ch = getALLcan_hoNew();
     $ds_ch2 = getALL_canhoNew2();
-   
+    $quan=getallquan();
     require_once 'views/layout.php';
     break;
     case 'chi_tiet':
       if(isset($_GET['canhoid'])==true){
         $can_ho = getcan_hoByid($_GET['canhoid']);
         require_once 'views/chi_tiet.php';
+      }
+    break;
+    case 'dat_lich':
+      if(isset($_GET['canhoid'])==true){
+        $idcanho = getcan_hoByid($_GET['canhoid']);
+        require_once 'views/dat_lich.php';
       }
     break;
 
@@ -232,10 +238,9 @@ switch ($act) {
     require_once 'views/about.php';
     break;
   case 'chitiet':
-    $ma_can = $_GET['ma_ch'];
-    $ds_quan = getALL_Quan();
-    settype($ma_can,'int');
-    $row = getcan_hoByid($ma_can);
+    $ma_can=$_GET["ma_can"];
+    $row=getcan_hoByid($ma_can);
+    $quanall=getallquan();
     require_once 'views/chitiet.php';
     break;
   case 'ch-dd':
@@ -274,19 +279,19 @@ switch ($act) {
       }else{
        
           if(array_key_exists($idproduct, $_SESSION['cart'])){
-             echo 'Có tồn tại trong giỏ';
+            //  echo 'Có tồn tại trong giỏ';
           }else{
             echo 'Sản phẩm có '.$idproduct.' chưa có trong giỏ';
             $newproduct[$idproduct]['sl'] = 1;  
             $_SESSION['cart'][$idproduct] = $newproduct[$idproduct];
           }
       }
-      header("location: index.php?act=chitiet&ma_ch=".$idproduct."");
+      header("location: index.php?act=chitiet&ma_can=".$idproduct."");
     break;
   case 'delete-gh':
     $ma_can = $_GET['id'];
     unset($_SESSION['cart'][$ma_can]);
-    header("location: index.php?act=chitiet&ma_ch=".$ma_can."");
+    header("location: index.php?act=chitiet&ma_can=".$ma_can."");
   break;
   case 'lichsu':
     $ma_tk = $_GET["ma_tk"];
@@ -375,9 +380,33 @@ switch ($act) {
       settype($ma_phuong, "int");
       settype($huong_nha, "int");
       themcanho($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien);
-      header("location: " . SITE_URL . "/?ctrl=home&act=dangtin");
+      header("location: " . SITE_URL . "/?ctrl=home&act=ch-dd&ma_tk=".$_SESSION["id"]."");
     } else {
-      header("location: " . SITE_URL . "/?ctrl=home&act=index");
+      header("location: " . SITE_URL . "/?ctrl=home&act=dangtin");
     }
     break;
+    case 'datlichxem';
+    if ($_POST["ngay_xem"]!="") {
+    if (isset($_POST["dat"])) {
+
+      $ma_can=$_POST['ma_can'];
+      $ma_tk=$_POST['ma_tk'];
+        $ngay_xem=$_POST["ngay_xem"];
+        $ngay_dat=$_POST["ngay_dat"];
+        datlichid($ma_can, $ma_tk, $ngay_xem, $ngay_dat);
+        header("location: ".SITE_URL."?ctrl=home&act=lichsu&ma_tk=$ma_tk");
+      break;
+      }
+    }
+    else{
+      $message="Bạn chưa đặt ngày";
+      $ds_lc = getLoaican();
+    $ds_ch = getALLcan_hoNew();
+    $ds_ch2 = getALL_canhoNew2();
+      require_once "views/layout.php";
+    }
+ 
+  break;
+
+
 }

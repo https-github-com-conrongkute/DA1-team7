@@ -1173,6 +1173,7 @@ a {
     background-color: white;
     width: 45%;
     position: relative;
+    border-radius: 10px;
 }
 
 .divdl i {

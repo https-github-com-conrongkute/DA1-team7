@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập </title>
     <link rel="stylesheet" href="./views/css/login.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>s
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"> </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css">
@@ -105,7 +105,7 @@
                     <script>
                         swal("<?= $error_dn?>", "Nhập lại !", "warning");
                     </script>
-                <?php    } ?>
+                <?php  } ?>
             </form>
         </div>
         <div class="overlay-container">

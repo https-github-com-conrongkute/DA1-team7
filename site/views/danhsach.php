@@ -174,7 +174,7 @@
 
             <div class="row" style="margin-bottom: 10px; border-bottom: 1px gainsboro solid; height: 35px;">
                 <div class="col-6">
-                    <h2 style="font-weight: bold; color: orangered; font-family: sans-serif;">// DANH SÁCH CÁC CĂN HỘ QUẬN 3 </h2>
+                    <h2 style="font-weight: bold; color: orangered; font-family: sans-serif;">// DANH SÁCH CÁC CĂN HỘ  </h2>
                 </div>
                 <div class="col-6"><select name="" id="gia_ds" class="form-control" style="width: 70%; float: right; font-size: 10pt;">
                         <option value="0">Sắp xếp</option>
@@ -185,11 +185,13 @@
 
             <div id="view-as-grid" class="row list-layout-0 list-item">
                 <?php foreach ($dsch_tl as $ch) { ?>
+                    
                     <div class="col-6 col-lg-4">
+                    <a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>">
                         <div class="item is-feature">
-                            <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="../uploaded/<?=$ch['hinhb']?>" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
+                            <a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>" class="img tRes_82"> <img class="lazy-hidden" src="../uploaded/<?=$ch["hinh"]?>" > </a>
                             <div class="divtext ">
-                                <h2 class="height-search"><a href="?ctrl=home&act=chitiet&ma_ch=<?=$ch['ma_can']?>" class="title"><?= $ch['ten_can_ho'] ?></a></h2>
+                                <h2 class="height-search"><a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>" class="title"><?= $ch['ten_can_ho'] ?></a></h2>
                                 <div class="imeta-1"> <b><?= $ch['dia_chi'] ?></b> </div>
                                 <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
                                 <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
@@ -202,173 +204,19 @@
                             </div>
                             <a href="#"> </a>
                         </div>
+                        </a>
                     </div>
+                   
                 <?php } ?>
-                <!-- <div class="col-6 col-lg-4">
-                    <div class="item is-feature">
-                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b2.jpg" alt="Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất"> </a>
-                        <div class="divtext ">
-                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất</a></h2>
-                            <div class="imeta-1"> <b>Đ. Võ Thị Sáu, P.8, Q.3</b> </div>
-                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
-                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span> 
-                                <div class="price2"><b>219,5 ngàn/m²</b></div>
-                            </div>
-                            <div class="wprice" style="margin-top: -50px;">
-                                <div class="imeta-2"> <span><b>9 triệu</b></span> <span><b>41 m²</b></span> </div>
-                                <div link="thue/can-ho/hcm/quan-3/id277418" listingid="277418" object='{"id":277418 }' class="btnlike  save-listing save-listing-277418"> <span> </span> </div>
-                            </div>
-                            Phường
-                            
-                        </div>
-                        <a href="#"> </a>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="item is-feature">
-                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b3.jpg" alt="Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14"> </a>
-                        <div class="divtext ">
-                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14</a></h2>
-                            <div class="imeta-1"> <b>Đ. Nguyễn Đình Chiểu, P.6, Q.3</b> </div>
-                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>2</strong></span> <span><i class="fa fa-building"></i> <strong>2</strong></span> </div>
-                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
-                                <div class="price2"><b>591,7 ngàn/m²</b></div>
-                            </div>
-                            <div class="wprice">
-                                <div class="imeta-2"> <span><b>44,374 triệu</b></span> <span><b>75 m²</b></span> </div>
-                                <div link="thue/can-ho/hcm/quan-3/id277620" listingid="277620" object='{"id":277620 }' class="btnlike  save-listing save-listing-277620"> <span> </span> </div>
-                            </div>
-                        </div>
-                        <a href="#"> </a>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="item is-feature">
-                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b2.jpg" alt="Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất"> </a>
-                        <div class="divtext ">
-                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất</a></h2>
-                            <div class="imeta-1"> <b>Đ. Võ Thị Sáu, P.8, Q.3</b> </div>
-                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
-                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
-                                <div class="price2"><b>219,5 ngàn/m²</b></div>
-                            </div>
-                            <div class="wprice" style="margin-top: -50px;">
-                                <div class="imeta-2"> <span><b>9 triệu</b></span> <span><b>41 m²</b></span> </div>
-                                <div link="thue/can-ho/hcm/quan-3/id277418" listingid="277418" object='{"id":277418 }' class="btnlike  save-listing save-listing-277418"> <span> </span> </div>
-                            </div>
-                        </div>
-                        <a href="#"> </a>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="item is-feature">
-                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
-                        <div class="divtext ">
-                            <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title">Căn hộ Singapore cho thuê trung tâm Quận 3</a></h2>
-                            <div class="imeta-1"> <b>Đ. Trần Quang Diệu, P.13, Q.3</b> </div>
-                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
-                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
-                                <div class="price2"><b>188,9 ngàn/m²</b></div>
-                            </div>
-                            <div class="wprice">
-                                <div class="imeta-2"> <span><b>8,5 triệu</b></span> <span><b>45 m²</b></span> </div>
-                                <div link="thue/can-ho/hcm/quan-3/id277377" listingid="277377" object='{"id":277377 }' class="btnlike  save-listing save-listing-277377"> <span> </span> </div>
-                            </div>
-                        </div>
-                        <a href="#"> </a>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="item is-feature">
-                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b2.jpg" alt="Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất"> </a>
-                        <div class="divtext ">
-                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tầng 4 đầy đủ nội thất</a></h2>
-                            <div class="imeta-1"> <b>Đ. Võ Thị Sáu, P.8, Q.3</b> </div>
-                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
-                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
-                                <div class="price2"><b>219,5 ngàn/m²</b></div>
-                            </div>
-                            <div class="wprice" style="margin-top: -50px;">
-                                <div class="imeta-2"> <span><b>9 triệu</b></span> <span><b>41 m²</b></span> </div>
-                                <div link="thue/can-ho/hcm/quan-3/id277418" listingid="277418" object='{"id":277418 }' class="btnlike  save-listing save-listing-277418"> <span> </span> </div>
-                            </div>
-                        </div>
-                        <a href="#"> </a>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="item is-feature">
-                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b3.jpg" alt="Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14"> </a>
-                        <div class="divtext ">
-                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14</a></h2>
-                            <div class="imeta-1"> <b>Đ. Nguyễn Đình Chiểu, P.6, Q.3</b> </div>
-                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>2</strong></span> <span><i class="fa fa-building"></i> <strong>2</strong></span> </div>
-                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
-                                <div class="price2"><b>591,7 ngàn/m²</b></div>
-                            </div>
-                            <div class="wprice">
-                                <div class="imeta-2"> <span><b>44,374 triệu</b></span> <span><b>75 m²</b></span> </div>
-                                <div link="thue/can-ho/hcm/quan-3/id277620" listingid="277620" object='{"id":277620 }' class="btnlike  save-listing save-listing-277620"> <span> </span> </div>
-                            </div>
-                        </div>
-                        <a href="#"> </a>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="item is-feature">
-                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b1.jpg" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
-                        <div class="divtext ">
-                            <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title">Căn hộ Singapore cho thuê trung tâm Quận 3</a></h2>
-                            <div class="imeta-1"> <b>Đ. Trần Quang Diệu, P.13, Q.3</b> </div>
-                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
-                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
-                                <div class="price2"><b>188,9 ngàn/m²</b></div>
-                            </div>
-                            <div class="wprice">
-                                <div class="imeta-2"> <span><b>8,5 triệu</b></span> <span><b>45 m²</b></span> </div>
-                                <div link="thue/can-ho/hcm/quan-3/id277377" listingid="277377" object='{"id":277377 }' class="btnlike  save-listing save-listing-277377"> <span> </span> </div>
-                            </div>
-                        </div>
-                        <a href="#"> </a>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="item is-feature">
-                        <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="./danhsach/assets/images/ver-4/pc/b3.jpg" alt="Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14"> </a>
-                        <div class="divtext ">
-                            <h2 class="height-search"><a href="#" class="title">Cho thuê căn hộ dịch vụ tòa nhà Léman Luxury tầng 14</a></h2>
-                            <div class="imeta-1"> <b>Đ. Nguyễn Đình Chiểu, P.6, Q.3</b> </div>
-                            <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>2</strong></span> <span><i class="fa fa-building"></i> <strong>2</strong></span> </div>
-                            <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
-                                <div class="price2"><b>591,7 ngàn/m²</b></div>
-                            </div>
-                            <div class="wprice">
-                                <div class="imeta-2"> <span><b>44,374 triệu</b></span> <span><b>75 m²</b></span> </div>
-                                <div link="thue/can-ho/hcm/quan-3/id277620" listingid="277620" object='{"id":277620 }' class="btnlike  save-listing save-listing-277620"> <span> </span> </div>
-                            </div>
-                        </div>
-                        <a href="#"> </a>
-                    </div>
-                </div> -->
+
 
             </div>
-            <div class="row">
-                <div class="pages" style="width:100%;">
-                    <ul class="page-numbers">
-                        <!-- <li class="hidden">
-                        <a class="prev page-numbers" href="#"> <i class="fa fa-arrow-right ix"></i> </a>
-                    </li>
-                    <li><a class="page-numbers current " href="#">1</a></li>
-                    <li><a class="page-numbers paginate" href="#">2</a></li>
-                    <li><a class="page-numbers paginate" href="#">3</a></li>
-                    <li><a class="page-numbers paginate" href="#">4</a></li>
-                    <li><a class="page-numbers paginate" href="#">5</a></li>
-                    <li class="">
-                        <a class="next page-numbers" href="thue/can-ho/hcm/p2"> <i class="fa fa-arrow-right"></i> </a>
-                    </li> -->
-                        <?= $links ?>
-                    </ul>
-                </div>
+            <div class="pages">
+               
+                <ul class="page-numbers">
+
+                    <?=$links?>
+                </ul>
             </div>
         </div>
 
