@@ -1276,7 +1276,28 @@ a {
     background-color: #ccc;
 }
 
-
+/* căn hộ yêu thích */
+.box-yt{
+    width: 100%;
+    margin-bottom: 20px;
+    float: left;
+    height: 200px;
+    border-bottom: 1px solid #666;
+}
+.box-yt__hinh{
+    width: 30%;
+    margin-right: 2%;
+    float: left;
+}
+.box-yt__hinh>img{
+    width: 100%;
+    object-fit: cover;
+    height: 170px;
+}
+.box-yt__nd{
+    width: 68%;
+    float: left;
+}
 /*Tièm kiếm*/
 
 

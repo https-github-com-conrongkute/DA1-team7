@@ -176,10 +176,10 @@
                 <div class="col-6">
                     <h2 style="font-weight: bold; color: orangered; font-family: sans-serif;">// DANH SÁCH CÁC CĂN HỘ QUẬN 3 </h2>
                 </div>
-                <div class="col-6"><select name="" id="" class="form-control" style="width: 70%; float: right; font-size: 10pt;">
-                        <option value="">Sắp xếp</option>
-                        <option value="">Tăng dần</option>
-                        <option value="">Giảm dần</option>
+                <div class="col-6"><select name="" id="gia_ds" class="form-control" style="width: 70%; float: right; font-size: 10pt;">
+                        <option value="0">Sắp xếp</option>
+                        <option value="1">Tăng dần</option>
+                        <option value="2">Giảm dần</option>
                     </select></div>
             </div>
 
@@ -189,14 +189,14 @@
                         <div class="item is-feature">
                             <a href="#" class="img tRes_82"> <img class="lazy-hidden" src="../uploaded/<?=$ch['hinhb']?>" alt="Căn hộ Singapore cho thuê trung tâm Quận 3"> </a>
                             <div class="divtext ">
-                                <h2 class="height-search"><a href="?ctrl=home&act=chitiet" class="title"><?= $ch['ten_can_ho'] ?></a></h2>
+                                <h2 class="height-search"><a href="?ctrl=home&act=chitiet&ma_ch=<?=$ch['ma_can']?>" class="title"><?= $ch['ten_can_ho'] ?></a></h2>
                                 <div class="imeta-1"> <b><?= $ch['dia_chi'] ?></b> </div>
                                 <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
                                 <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
                                     <div class="price2"><b><?= $ch['dien_tich'] ?>/m²</b></div>
                                 </div>
                                 <div class="wprice">
-                                    <div class="imeta-2"> <span><b><?= $ch['gia_thue'] ?></b></span> <span><b>45 m²</b></span> </div>
+                                    <div class="imeta-2"> <span><b><?=number_format($ch['gia_thue'],0,'','.') ?> VNĐ</b></span> <span><b>45 m²</b></span> </div>
                                     <div link="thue/can-ho/hcm/quan-3/id277377" listingid="277377" object='{"id":277377 }' class="btnlike  save-listing save-listing-277377"> <span> </span> </div>
                                 </div>
                             </div>
@@ -639,6 +639,7 @@
 </body>
 
 </html>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>

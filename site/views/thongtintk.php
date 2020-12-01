@@ -16,6 +16,7 @@
                     <li><i class="fas fa-home"></i><a href="?act=ch-dd&ma_tk=<?=$_SESSION['id']?>">Căn hộ đã đăng</a></li>
                     <li><i class="far fa-calendar"></i><a href="?act=ds-ld&ma_tk=<?=$_SESSION['id']?>">Danh sách khách hàng đặt xem</a></li>
                     <li><i class="far fa-calendar"></i><a href="?act=lichsu&ma_tk=<?=$_SESSION['id']?>">Lịch sử đặt của bạn</a></li>
+                    <li><i class="fas fa-heart"></i><a href="?act=ch-yt">Căn hộ yêu thích</a></li>
                     <li><i class="fas fa-sign-out-alt"></i><a href="?act=dangxuat&logout=1">Đăng xuất</a></li>
                 </ul>
             </div>

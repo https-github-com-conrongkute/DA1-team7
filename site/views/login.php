@@ -22,7 +22,7 @@
                 <ul>
                     <li><a href="index.php">Trang chủ </a> </li>
                     <li><a href="#">Dịch vụ </a></li>
-                    <li><a href="#">Danh sách </a> </li>
+                    <li><a href="?ctrl=home&act=danhsach&loai_can=1">Danh sách nhà thuê</a> </li>
                     <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                     <li><a href="#">Liên hệ </a></li>
                     <!-- <li><a href="?act=danhnhap">Đăng nhập </a></li> -->
@@ -96,7 +96,7 @@
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                 </div>
                 <span>hoặc sử dụng tài khoản của bạn</span>
-                <input type="text" placeholder="Tên đăng nhập" name="tentk" />
+                <input type="text" placeholder="Tên đăng nhập" name="tentk" value="<?php if(isset($tentk)==true) echo $tentk;?>" />
                 <input type="password" placeholder="Mật khẩu" name="pass" />
                 <a href="#">quên mật khâu ?</a>
                 <button type="submit">Đăng nhập</button>

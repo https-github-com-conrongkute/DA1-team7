@@ -9,6 +9,11 @@ function getALL_canhoNew2(){
     $sql = "SELECT * FROM can_ho  WHERE an_hien = 1 ORDER BY ma_can ASC LIMIT 10";
     return query($sql);
 }
+// xem tất cả 
+function getALL_canhoNew3(){
+    $sql = "SELECT * FROM can_ho  WHERE an_hien = 1";
+    return query($sql);
+}
 // loại căn
 function getLoaican(){
     $sql = "SELECT * FROM loai_can";
@@ -18,6 +23,22 @@ function getLoaican(){
 function getCanho_theoloai($loaican, $page_num, $path_size){
     $start_list = ceil($page_num - 1) * $path_size;
     $sql = "SELECT * FROM can_ho WHERE ma_loai='$loaican' AND an_hien = 1 LIMIT $start_list,$path_size";
+    return query($sql);
+}
+// Xem căn hộ theo loại giá giảm dàn
+function getCanho_theogia_giam($loaican, $page_num, $path_size){
+    $start_list = ceil($page_num - 1) * $path_size;
+    $sql = "SELECT * FROM can_ho WHERE ma_loai='$loaican' AND an_hien = 1 ORDER BY gia_thue ASC LIMIT $start_list,$path_size";
+    return query($sql);
+}
+function getCanho_theogia_tang($loaican, $page_num, $path_size){
+    $start_list = ceil($page_num - 1) * $path_size;
+    $sql = "SELECT * FROM can_ho WHERE ma_loai='$loaican' AND an_hien = 1 ORDER BY gia_thue ASC LIMIT $start_list,$path_size";
+    return query($sql);
+}
+//Xem quận
+function getALL_Quan(){
+    $sql = "SELECT * FROM quan";
     return query($sql);
 }
 //Đếm căn hộ theo loại căn

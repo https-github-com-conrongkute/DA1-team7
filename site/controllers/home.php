@@ -232,6 +232,10 @@ switch ($act) {
     require_once 'views/about.php';
     break;
   case 'chitiet':
+    $ma_can = $_GET['ma_ch'];
+    $ds_quan = getALL_Quan();
+    settype($ma_can,'int');
+    $row = getcan_hoByid($ma_can);
     require_once 'views/chitiet.php';
     break;
   case 'ch-dd':
@@ -249,6 +253,41 @@ switch ($act) {
     $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
     break;
+    case 'ch-yt':
+      $rows = 'views/can_ho-yt.php';
+      $view = 'views/thongtintk.php';
+      require_once 'views/layout.php';
+      break;
+    case 'add-gh':
+      $idproduct = $_GET['id'];
+      settype($idproduct,'int');
+      $ds_ch = getALL_canhoNew3();
+      $newproduct = array();
+      foreach($ds_ch as $list){
+          $newproduct[$list['ma_can']] = $list;
+      } 
+      // echo "<pre>";
+      // print_r($newproduct[$idproduct]);
+      if(!isset($_SESSION['cart']) && $_SESSION['cart'] == null){
+        $newproduct[$idproduct]['sl'] = 1;
+         $_SESSION['cart'][$idproduct] = $newproduct[$idproduct];
+      }else{
+       
+          if(array_key_exists($idproduct, $_SESSION['cart'])){
+             echo 'Có tồn tại trong giỏ';
+          }else{
+            echo 'Sản phẩm có '.$idproduct.' chưa có trong giỏ';
+            $newproduct[$idproduct]['sl'] = 1;  
+            $_SESSION['cart'][$idproduct] = $newproduct[$idproduct];
+          }
+      }
+      header("location: index.php?act=chitiet&ma_ch=".$idproduct."");
+    break;
+  case 'delete-gh':
+    $ma_can = $_GET['id'];
+    unset($_SESSION['cart'][$ma_can]);
+    header("location: index.php?act=chitiet&ma_ch=".$ma_can."");
+  break;
   case 'lichsu':
     $ma_tk = $_GET["ma_tk"];
     $lichsu = lichsu($ma_tk);
