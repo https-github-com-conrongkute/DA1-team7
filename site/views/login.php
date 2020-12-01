@@ -85,7 +85,12 @@
         <?php } ?>
         <?php if (isset($kichhoattk) == true) { ?>
             <script>
-                swal("<?=$kichhoattk?>", "Nhấp vào đây để tiếp tục!", "success");
+                swal("<?=$kichhoattk?>", "Đăng nhập thôi nào !", "success");
+            </script>
+        <?php } ?>
+        <?php if (isset($error_tk) == true) { ?>
+            <script>
+                swal("<?=$error_tk?>", "Nhấp vào đây để tiếp tục !", "error");
             </script>
         <?php } ?>
         <div class="form-container sign-in-container">

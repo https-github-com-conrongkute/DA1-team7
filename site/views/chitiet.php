@@ -230,8 +230,8 @@
                         <label for="" class="label2">Đã thẩm định</label>
                         <label for="" class="label3">ID 277418</label>
                     </div>
-                    <p class="txt3"><?= (number_format($row['gia_thue'], 0, '', '.') * $row['dien_tich']) ?> VNĐ - <?= $row['dien_tich'] ?>m²</p>
-                    <p class="txt4">Giá : <?= $row['gia_thue'] ?>/m²</p>
+                    <p class="txt3"><?=number_format($row['gia_thue'], 0, '', '.')?> VNĐ - <?= $row['dien_tich'] ?>m²</p>
+                    <p class="txt4">Giá : <?=number_format($row['gia_thue'], 0, '', '.')?>/m²</p>
                 </div>
                 <div class="btn">
                     <?php if (isset($_SESSION['cart']) == true) {
@@ -343,7 +343,7 @@
                     </div>
                     <div class="div">
                         <select name="" id="" style="font-size: 10pt;">
-                            <?php foreach ($ds_quan as $q) { ?>
+                            <?php foreach ($quanall as $q) { ?>
                                 <option value="<?= $q['ma_quan'] ?>"><?= $q['ten_quan'] ?></option>
                             <?php } ?>
                         </select>

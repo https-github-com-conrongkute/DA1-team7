@@ -71,7 +71,7 @@ function taolinks($baseurl, $page_num, $page_size, $toltal_rows){
     if ($page_num >= 2) {
         $pr = $page_num - 1;
         // $links .= "<li class='page-item'><a href='{$baseurl}' class='page-link'><</a></li>";
-        $links .= "<li><a class='page-numbers paginate' href='{$baseurl}&page={$pr}'><i class='fas fa-arrow-left'></i></a></li>";
+        $links .= "<li><a class='page-numbers paginate' href='{$baseurl}&page={$pr}'><i class='fa fa-arrow-left'></i></a></li>";
     }
     // -	Tạo item trang hiện hành : Code tiếp theo code tạo Trang đầu, Trang trước 
     for ($i = 1; $i <= $toltal_page; $i++) {

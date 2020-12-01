@@ -211,7 +211,7 @@
 
 
             </div>
-            <div class="pages">
+            <div class="pages" style="width: 100%; float: left;">
                
                 <ul class="page-numbers">
 

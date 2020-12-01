@@ -55,8 +55,8 @@
               </p>
           </div>
           <div class="divmota3">
-              Giá: <a><?=$can_ho["gia_thue"]?> VND - <?=$can_ho["dien_tich"]?> m²</a>
-              <span><?=$can_ho["ma_can"]?></span>
+              Giá: <a><?=number_format($can_ho["gia_thue"],0,'','.')?> VND - <?=$can_ho["dien_tich"]?> m²</a>
+              
               <input type="button" value="Đặt lịch xem" class="datlichid" data-toggle="modal" data-target="#datlich" data-dismiss="modal">
               
           </div>

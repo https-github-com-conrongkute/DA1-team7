@@ -9,20 +9,20 @@ switch ($act) {
     $ds_lc = getLoaican();
     $ds_ch = getALLcan_hoNew();
     $ds_ch2 = getALL_canhoNew2();
-    $quan=getallquan();
+    $quan = getallquan();
     require_once 'views/layout.php';
     break;
-    case 'chi_tiet':
-      if(isset($_GET['canhoid'])==true){
-        $can_ho = getcan_hoByid($_GET['canhoid']);
-        require_once 'views/chi_tiet.php';
-      }
+  case 'chi_tiet':
+    if (isset($_GET['canhoid']) == true) {
+      $can_ho = getcan_hoByid($_GET['canhoid']);
+      require_once 'views/chi_tiet.php';
+    }
     break;
-    case 'dat_lich':
-      if(isset($_GET['canhoid'])==true){
-        $idcanho = getcan_hoByid($_GET['canhoid']);
-        require_once 'views/dat_lich.php';
-      }
+  case 'dat_lich':
+    if (isset($_GET['canhoid']) == true) {
+      $idcanho = getcan_hoByid($_GET['canhoid']);
+      require_once 'views/dat_lich.php';
+    }
     break;
 
     // thay doi thông tin tk
@@ -71,35 +71,35 @@ switch ($act) {
 
     if (empty($erro)) {
       // lưu thông tin đăng nhập
-        // GỬi mail
-        $message = "Thành công !";
-        $random = substr(md5('adhwe$#&^'), 12);
-        $idUser = Luuthongtintk($ho_ten, $user, $pass, $email, $random);
-        require_once "PHPMailer-master/src/PHPMailer.php";
-        require_once "PHPMailer-master/src/SMTP.php";
-        $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
-        try {
-            $mail->SMTPDebug = 0;  // Enable verbose debug output
-            $mail->isSMTP();
-            $mail->CharSet  = "utf-8";
-            $mail->Host = 'smtp.gmail.com';  //SMTP servers
-            $mail->SMTPAuth = true; // Enable authentication
-            $mail->Username = 'hailong28092001@gmail.com';  // SMTP username
-            $mail->Password = 'hailong289';   // SMTP password
-            $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
-            $mail->Port = 465;  // port to connect to                
-            $mail->setFrom('hailong28092001@gmail.com', 'goldenhome');
-            $mail->addAddress($email, $user); //mail và tên người nhận       
-            $mail->isHTML(true);  // Set email format to HTML
-            $mail->Subject = 'Kích hoạt tài khoản';
-            $linkKH = "<a href='http://localhost:8888/Github/DA1-team7/site/?act=kichhoat&id=".$idUser."'>Nhấp vào đây</a>";
-            // $linKH = sprintf($linkKH, $idUser);
-            $mail->Body = "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản: ". $linkKH;
-            $mail->send();
-            $message = 'kích hoạt tài khoản !';
-        } catch (Exception $e) {
-            echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
-        }
+      // GỬi mail
+      $message = "Thành công !";
+      $random = substr(md5('adhwe$#&^'), 12);
+      $idUser = Luuthongtintk($ho_ten, $user, $pass, $email, $random);
+      require_once "PHPMailer-master/src/PHPMailer.php";
+      require_once "PHPMailer-master/src/SMTP.php";
+      $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
+      try {
+        $mail->SMTPDebug = 0;  // Enable verbose debug output
+        $mail->isSMTP();
+        $mail->CharSet  = "utf-8";
+        $mail->Host = 'smtp.gmail.com';  //SMTP servers
+        $mail->SMTPAuth = true; // Enable authentication
+        $mail->Username = 'longdhai2@gmail.com';  // SMTP username
+        $mail->Password = 'hailong289';   // SMTP password
+        $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
+        $mail->Port = 465;  // port to connect to                
+        $mail->setFrom('longdhai2@gmail.com', 'goldenhome');
+        $mail->addAddress($email, $user); //mail và tên người nhận       
+        $mail->isHTML(true);  // Set email format to HTML
+        $mail->Subject = 'Kích hoạt tài khoản';
+        $linkKH = "<a href='http://localhost:8888/Github/DA1-team7/site/?act=kichhoat&id=" . $idUser . "'>Nhấp vào đây</a>";
+        // $linKH = sprintf($linkKH, $idUser);
+        $mail->Body = "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản: " . $linkKH;
+        $mail->send();
+        $message = 'kích hoạt tài khoản !';
+      } catch (Exception $e) {
+        echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
+      }
       require_once 'views/login.php';
     }
     require_once 'views/login.php';
@@ -107,11 +107,17 @@ switch ($act) {
   case 'kichhoat':
     if (isset($_GET['id'])) $idUser = $_GET['id'];
     //Kiểm tra hợp lệ giá trị mới nhận
-    if(kichhoattk($idUser)){
-      $kichhoattk = "Kích hoạt thành công hãy đăng nhập nào";
-      $kich_hoat = 1;
-      updateThongtintk($idUser, $kich_hoat);
-      require_once 'views/login.php';
+    $ma_tk = khachhang($idUser);
+    if (kichhoattk($idUser)) {
+      if ($ma_tk['kich_hoat'] == 0) {
+        $kichhoattk = "Kích hoạt thành công ";
+        $kich_hoat = 1;
+        updateThongtintk($idUser, $kich_hoat);
+        require_once 'views/login.php';
+      } else {
+        $error_tk = "Tài khoản đã được kích hoạt !";
+        require_once 'views/login.php';
+      }
     }
     //Gọi hàm cập nhật trạng thái user (đã kích hoạt)
     //Định nghĩa hàm cập nhật trạng thái user
@@ -138,10 +144,10 @@ switch ($act) {
     // Kiểm lỗi tên đăng nhập
     if (isset($_GET['user']) == true) {
       if (empty($_GET['user'])) {
-          echo "<span> không để trống</span>";
+        echo "<span> không để trống</span>";
       } elseif (checktkdn($_GET['user'])) {
-          echo "<span>Tên tài khoản đã tồn tại</span>";
-      }else{
+        echo "<span>Tên tài khoản đã tồn tại</span>";
+      } else {
         echo "";
       }
     }
@@ -160,7 +166,7 @@ switch ($act) {
       $_SESSION['vai_tro'] = $checktk['vai_tro'];
       $_SESSION['sdt'] = $checktk['sdt'];
       $_SESSION['gioitinh'] = $checktk['gioitinh'];
-      if ($_SESSION['vai_tro'] == 0 && $checktk['kich_hoat']==1) {
+      if ($_SESSION['vai_tro'] == 0 && $checktk['kich_hoat'] == 1) {
         $message_dn = 'Đăng nhập thành công';
         header("location: index.php");
       } else {
@@ -209,14 +215,14 @@ switch ($act) {
     require_once 'views/dangtin.php';
     break;
   case 'danhsach':
-    if(isset($_GET['loai_can'])==true) $loaican = $_GET['loai_can']; 
+    if (isset($_GET['loai_can']) == true) $loaican = $_GET['loai_can'];
     $page_num = 1;
-    if(isset($_GET['page'])==true) $page_num = $_GET['page'];
+    if (isset($_GET['page']) == true) $page_num = $_GET['page'];
     $page_size = PATH_SITE;
     $dsch_tl = getCanho_theoloai($loaican, $page_num, $page_size);
     $toltal_rows = Demcanhotheoloai($loaican);
     $basrurl = SITE_URL . "/?act=danhsach&loai_can={$loaican}";
-     $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+    $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
     require_once 'views/danhsach.php';
     break;
   case 'phuong':
@@ -227,20 +233,20 @@ switch ($act) {
       echo ' <option value="' . $p['id'] . '">' . $p['phuong'] . '</option>';
     }
     break;
-    case 'ct_canho':
-      // require_once "models/can_ho.php";
-  
-      $canhoid = canho($_POST['canhoid']);
-     
-      
-      break;
+  case 'ct_canho':
+    // require_once "models/can_ho.php";
+
+    $canhoid = canho($_POST['canhoid']);
+
+
+    break;
   case 'about':
     require_once 'views/about.php';
     break;
   case 'chitiet':
-    $ma_can=$_GET["ma_can"];
-    $row=getcan_hoByid($ma_can);
-    $quanall=getallquan();
+    $ma_can = $_GET["ma_can"];
+    $row = getcan_hoByid($ma_can);
+    $quanall = getallquan();
     require_once 'views/chitiet.php';
     break;
   case 'ch-dd':
@@ -258,41 +264,41 @@ switch ($act) {
     $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
     break;
-    case 'ch-yt':
-      $rows = 'views/can_ho-yt.php';
-      $view = 'views/thongtintk.php';
-      require_once 'views/layout.php';
-      break;
-    case 'add-gh':
-      $idproduct = $_GET['id'];
-      settype($idproduct,'int');
-      $ds_ch = getALL_canhoNew3();
-      $newproduct = array();
-      foreach($ds_ch as $list){
-          $newproduct[$list['ma_can']] = $list;
-      } 
-      // echo "<pre>";
-      // print_r($newproduct[$idproduct]);
-      if(!isset($_SESSION['cart']) && $_SESSION['cart'] == null){
+  case 'ch-yt':
+    $rows = 'views/can_ho-yt.php';
+    $view = 'views/thongtintk.php';
+    require_once 'views/layout.php';
+    break;
+  case 'add-gh':
+    $idproduct = $_GET['id'];
+    settype($idproduct, 'int');
+    $ds_ch = getALL_canhoNew3();
+    $newproduct = array();
+    foreach ($ds_ch as $list) {
+      $newproduct[$list['ma_can']] = $list;
+    }
+    // echo "<pre>";
+    // print_r($newproduct[$idproduct]);
+    if (!isset($_SESSION['cart']) && $_SESSION['cart'] == null) {
+      $newproduct[$idproduct]['sl'] = 1;
+      $_SESSION['cart'][$idproduct] = $newproduct[$idproduct];
+    } else {
+
+      if (array_key_exists($idproduct, $_SESSION['cart'])) {
+        //  echo 'Có tồn tại trong giỏ';
+      } else {
+        echo 'Sản phẩm có ' . $idproduct . ' chưa có trong giỏ';
         $newproduct[$idproduct]['sl'] = 1;
-         $_SESSION['cart'][$idproduct] = $newproduct[$idproduct];
-      }else{
-       
-          if(array_key_exists($idproduct, $_SESSION['cart'])){
-            //  echo 'Có tồn tại trong giỏ';
-          }else{
-            echo 'Sản phẩm có '.$idproduct.' chưa có trong giỏ';
-            $newproduct[$idproduct]['sl'] = 1;  
-            $_SESSION['cart'][$idproduct] = $newproduct[$idproduct];
-          }
+        $_SESSION['cart'][$idproduct] = $newproduct[$idproduct];
       }
-      header("location: index.php?act=chitiet&ma_can=".$idproduct."");
+    }
+    header("location: index.php?act=chitiet&ma_can=" . $idproduct . "");
     break;
   case 'delete-gh':
     $ma_can = $_GET['id'];
     unset($_SESSION['cart'][$ma_can]);
-    header("location: index.php?act=chitiet&ma_can=".$ma_can."");
-  break;
+    header("location: index.php?act=chitiet&ma_can=" . $ma_can . "");
+    break;
   case 'lichsu':
     $ma_tk = $_GET["ma_tk"];
     $lichsu = lichsu($ma_tk);
@@ -380,33 +386,30 @@ switch ($act) {
       settype($ma_phuong, "int");
       settype($huong_nha, "int");
       themcanho($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien);
-      header("location: " . SITE_URL . "/?ctrl=home&act=ch-dd&ma_tk=".$_SESSION["id"]."");
+      header("location: " . SITE_URL . "/?ctrl=home&act=ch-dd&ma_tk=" . $_SESSION["id"] . "");
     } else {
       header("location: " . SITE_URL . "/?ctrl=home&act=dangtin");
     }
     break;
-    case 'datlichxem';
-    if ($_POST["ngay_xem"]!="") {
-    if (isset($_POST["dat"])) {
+  case 'datlichxem';
+    if ($_POST["ngay_xem"] != "") {
+      if (isset($_POST["dat"])) {
 
-      $ma_can=$_POST['ma_can'];
-      $ma_tk=$_POST['ma_tk'];
-        $ngay_xem=$_POST["ngay_xem"];
-        $ngay_dat=$_POST["ngay_dat"];
+        $ma_can = $_POST['ma_can'];
+        $ma_tk = $_POST['ma_tk'];
+        $ngay_xem = $_POST["ngay_xem"];
+        $ngay_dat = $_POST["ngay_dat"];
         datlichid($ma_can, $ma_tk, $ngay_xem, $ngay_dat);
-        header("location: ".SITE_URL."?ctrl=home&act=lichsu&ma_tk=$ma_tk");
-      break;
+        header("location: " . SITE_URL . "?ctrl=home&act=lichsu&ma_tk=$ma_tk");
+        break;
       }
-    }
-    else{
-      $message="Bạn chưa đặt ngày";
+    } else {
+      $message = "Bạn chưa đặt ngày";
       $ds_lc = getLoaican();
-    $ds_ch = getALLcan_hoNew();
-    $ds_ch2 = getALL_canhoNew2();
+      $ds_ch = getALLcan_hoNew();
+      $ds_ch2 = getALL_canhoNew2();
       require_once "views/layout.php";
     }
- 
-  break;
 
-
+    break;
 }
