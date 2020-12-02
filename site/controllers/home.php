@@ -256,6 +256,88 @@ switch ($act) {
     $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
     break;
+  case 'edit_ch':
+    $ma_can = $_GET['ma_can'];
+    settype($ma_can,'int');
+    $quan = getallquan();
+    $loaican = getallloai_can();
+    $can_ho = canho($ma_can);
+    require_once 'views/can_ho-edit.php';
+    break;
+  // update căn hô
+  case 'update_ch':
+    if (isset($_POST["ten_can_ho"]) && $_POST["ten_can_ho"] != "") {
+      $ten_can_ho = trim(strip_tags($_POST["ten_can_ho"]));
+      $ma_can = $_POST['ma_can'];
+      $ma_loai = $_POST["ma_loai"];
+      $ma_tk = $_GET['ma_tk'];
+      $ma_quan = $_POST["ma_quan"];
+      $dia_chi = $_POST["dia_chi"];
+      $nam_xd = $_POST["nam_xd"];
+      $dien_tich = $_POST["dien_tich"];
+      $tang = $_POST["tang"];
+      $so_phong_ngu = $_POST["so_phong_ngu"];
+      $so_phong_vs = $_POST["so_phong_vs"];
+      $gia_thue = $_POST["gia_thue"];
+      $chi_phi = $_POST["chi_phi_khac"];
+      $huong_nha = $_POST["huong_nha"];
+      $ghi_chu = $_POST["ghi_chu"];
+      $tien_ich = $_POST["tien_ich"];
+      $an_hien = 0;
+      $ma_phuong = $_POST["phuong"];
+      // Hình
+      if($_FILES['hinh']['name'] != null){
+      $hinh = $_FILES['hinh']['name'];
+      $pathimg = '../uploaded/';
+      $target_files = $pathimg . basename($hinh);
+      move_uploaded_file($_FILES['hinh']['tmp_name'], $target_files);
+      }else{
+         $hinh = $_POST['img'];
+      }
+      if($_FILES['hinha']['name'] != null){
+      $hinha = $_FILES['hinha']['name'];
+      $pathimg = '../uploaded/';
+      $target_files = $pathimg . basename($hinha);
+      move_uploaded_file($_FILES['hinha']['tmp_name'], $target_files);
+      }else{
+         $hinha = $_POST['imga'];
+      }
+     
+      if($_FILES['hinhb']['name'] != null){
+      $hinhb = $_FILES['hinhb']['name'];
+      $pathimg = '../uploaded/';
+      $target_files = $pathimg . basename($hinhb);
+      move_uploaded_file($_FILES['hinhb']['tmp_name'], $target_files);
+      }else{
+        $hinhb = $_POST['imgb'];
+      }
+
+      if($_FILES['hinhc']['name'] != null){
+      $hinhc = $_FILES['hinhc']['name'];
+      $pathimg = '../uploaded/';
+      $target_files = $pathimg . basename($hinhc);
+      move_uploaded_file($_FILES['hinhc']['tmp_name'], $target_files);
+      }else{
+        $hinhc = $_POST['imgc'];
+      }
+      settype($ma_can, 'int');
+      settype($ma_loai, "int");
+      settype($ma_quan, "int");
+      settype($so_phong_ngu, "int");
+      settype($so_phong_vs, "int");
+      settype($tang, "int");
+      settype($gia_thue, "int");
+      settype($dien_tich, "int");
+      settype($ma_tk, "int");
+      settype($ma_phuong, "int");
+      settype($huong_nha, "int");
+      Update_chdt($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien,$ma_can);
+      header("location: " . SITE_URL . "/?ctrl=home&act=ch-dd&ma_tk=" . $_SESSION["id"] . "");
+    } else {
+      header("location: " . SITE_URL . "/?ctrl=home&act=edit_ch");
+    }
+    # code...
+    break;
     //phần thông báo
   case 'ds-ld':
     $ma_tk = $_GET["ma_tk"];

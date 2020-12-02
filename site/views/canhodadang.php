@@ -61,7 +61,7 @@
                         <p><?= $c["ghi_chu"] ?></p>
                         <p><em><?= ($c['an_hien'] == 0) ? "Chờ xét duyệt" : "Đã duyệt" ?></em></p>
                     </td>
-                    <td><a href=""><i class="fas fa-edit"></i></a></td>
+                    <td><a href="?act=edit_ch&ma_can=<?=$c['ma_can']?>"><i class="fas fa-edit"></i></a></td>
                     <td><a class="btn_delete_ch" href="?act=delete_ch&ma_can=<?= $c['ma_can'] ?>"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
             <?php } ?>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
+    <title>Danh sách căn hộ</title>
     <link rel="stylesheet" href="./danhsach/assets/css/app/search.css?ver=20.30.13.11.2020" async />
     <link rel="stylesheet" href="./views/css/danhsach.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
