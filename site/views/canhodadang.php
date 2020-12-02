@@ -58,7 +58,7 @@
                         </p>
                     </td>
                     <td>
-                        <p><?= $c["ghi_chu"] ?></p>
+                        
                         <p><em><?= ($c['an_hien'] == 0) ? "Chờ xét duyệt" : "Đã duyệt" ?></em></p>
                     </td>
                     <td><a href=""><i class="fas fa-edit"></i></a></td>

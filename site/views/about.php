@@ -19,7 +19,6 @@
             <div class="nav-menu3">
                 <ul>
                     <li><a href="index.php">Trang chủ </a> </li>
-                    <li><a href="#">Dịch vụ </a></li>
                     <li><a href="?ctrl=home&act=danhsach">Danh sách </a> </li>
                     <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                     <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>

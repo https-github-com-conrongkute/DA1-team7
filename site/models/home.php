@@ -19,10 +19,16 @@ function getLoaican(){
     $sql = "SELECT * FROM loai_can";
     return query($sql);
 }
-// Xem căn hộ theo loại
+// Xem căn hộ theo loại căn
 function getCanho_theoloai($loaican, $page_num, $path_size){
     $start_list = ceil($page_num - 1) * $path_size;
     $sql = "SELECT * FROM can_ho WHERE ma_loai='$loaican' AND an_hien = 1 LIMIT $start_list,$path_size";
+    return query($sql);
+}
+//xem căn hộ theo quận
+function getCanho_theoquan($ma_quan, $page_num, $path_size){
+    $start_list = ceil($page_num - 1) * $path_size;
+    $sql = "SELECT * FROM can_ho WHERE ma_quan='$ma_quan' AND an_hien = 1 LIMIT $start_list,$path_size";
     return query($sql);
 }
 // Xem căn hộ theo loại giá giảm dàn
@@ -44,6 +50,12 @@ function getALL_Quan(){
 //Đếm căn hộ theo loại căn
 function Demcanhotheoloai($loaican){
     $sql = "SELECT count(*) as sodong FROM can_ho WHERE ma_loai='$loaican'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['sodong'];
+}
+function Demcanhotheoquan($ma_quan){
+    $sql = "SELECT count(*) as sodong FROM can_ho WHERE ma_quan='$ma_quan'";
     $row = query($sql);
     $kq = $row->fetch();
     return $kq['sodong'];

@@ -223,3 +223,71 @@ function toogle() {
 
     }
 }
+//click hình ảnh 
+//lấy id căn hộ để show lên
+$(".img-click").click(function(e) {
+    var btnClick = $(this);
+
+    var id = btnClick.prev().html();
+    //    alert(id);
+    $.get("?ctrl=home&act=chi_tiet", {
+            'canhoid': id
+        },
+        function(data) {
+            $('#myModal').html(data);
+        });
+});
+
+
+
+function showimages(x) {
+    var img = document.getElementById('images');
+    // var hinh = document.getElementById("hinh").value();
+    switch (x) {
+        case 1:
+
+            $("#hinh").click(function(e) {
+                var btnClick = $(this);
+
+                var id = btnClick.prev().html();
+                // alert(id);
+                img.src = "../uploaded/" + id + "";
+
+            });
+
+
+            break;
+        case 2:
+            $("#hinha").click(function(e) {
+                var btnClick = $(this);
+
+                var ida = btnClick.prev().html();
+                // alert(id);
+                img.src = "../uploaded/" + ida + "";
+
+            });
+            break;
+        case 3:
+            $("#hinhb").click(function(e) {
+                var btnClick = $(this);
+
+                var idb = btnClick.prev().html();
+                // alert(id);
+                img.src = "../uploaded/" + idb + "";
+
+            });
+            break;
+        case 4:
+            $("#hinhc").click(function(e) {
+                var btnClick = $(this);
+
+                var idc = btnClick.prev().html();
+                // alert(id);
+                img.src = "../uploaded/" + idc + "";
+
+            });
+            break;
+        default:
+            break;
+    }
+}

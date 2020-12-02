@@ -212,10 +212,12 @@ switch ($act) {
   case 'dangtin':
     $quan = getallquan();
     $loaican = getallloai_can();
+    $quanall = getallquan();
     require_once 'views/dangtin.php';
     break;
   case 'danhsach':
-    if (isset($_GET['loai_can']) == true) $loaican = $_GET['loai_can'];
+    if (isset($_GET['loai_can']) == true)
+    { $loaican = $_GET['loai_can'];
     $page_num = 1;
     if (isset($_GET['page']) == true) $page_num = $_GET['page'];
     $page_size = PATH_SITE;
@@ -223,6 +225,18 @@ switch ($act) {
     $toltal_rows = Demcanhotheoloai($loaican);
     $basrurl = SITE_URL . "/?act=danhsach&loai_can={$loaican}";
     $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+  }
+
+    elseif (isset($_GET['ma_quan']) == true)
+    { $ma_quan = $_GET['ma_quan'];
+    $page_num = 1;
+    if (isset($_GET['page']) == true) $page_num = $_GET['page'];
+    $page_size = PATH_SITE;
+    $dsch_tl = getCanho_theoquan($ma_quan, $page_num, $page_size);
+    $toltal_rows = Demcanhotheoquan($ma_quan);
+    $basrurl = SITE_URL . "/?act=danhsach&ma_quan={$ma_quan}";
+    $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);}
+    $quan = getallquan();
     require_once 'views/danhsach.php';
     break;
   case 'phuong':
@@ -247,6 +261,7 @@ switch ($act) {
     $ma_can = $_GET["ma_can"];
     $row = getcan_hoByid($ma_can);
     $quanall = getallquan();
+    $quan = getallquan();
     require_once 'views/chitiet.php';
     break;
   case 'ch-dd':
@@ -314,7 +329,7 @@ switch ($act) {
     require_once 'views/layout.php';
     break;
   case 'thongtintk':
-
+    $quan=getallquan();
     $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
     break;

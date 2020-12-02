@@ -30,7 +30,6 @@
                 <div class="nav-menu2">
                     <ul>
                         <li><a href="index.php">Trang chủ </a> </li>
-                        <li><a href="#">Dịch vụ </a></li>
                         <li><a href="?ctrl=home&act=danhsach&loai_can=1">Danh sách nhà thuê</a> </li>
                         <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                         <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
@@ -63,7 +62,6 @@
                     <div class="nav-menu">
                         <ul>
                             <li><a href="index.php">Trang chủ </a> </li>
-                            <li><a href="#">Dịch vụ </a></li>
                             <li><a href="?ctrl=home&act=danhsach&loai_can=1">Danh sách nhà thuê</a> </li>
                             <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                             <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
@@ -84,22 +82,7 @@
                     </div>
                 </div>
             </nav>
-            <!-- <div class="nav">
-            <div class="navimg">
-                <img src="../uploaded/logo.png" width="140px" alt="">
-            </div>
-            <div class="navmenu">
-                <ul>
-                    <li><a href="#">Trang chủ </a> </li>
-                    <li><a href="#">Dịch vụ </a></li>
-                    <li><a href="#">Danh sách </a> </li>
-                    <li><a href="#">Giới thiệu </a></li>
-                    <li><a href="#">Liên hệ </a></li>
-                    <li><a href="?ctrl=home&act=danhnhap">Đăng nhập </a></li>
-                    <li><a href="#">Đăng tin</a></li>
-                </ul>
-            </div>
-        </div> -->
+
 
             <div class="navtext">
                 <h1 style="text-shadow: 2px 2px 2px black;">THUÊ CĂN HỘ SIÊU TỐC</h1>
@@ -148,7 +131,7 @@
         <div class="danhsach ">
             <div class="tieude">
                 <h3 style="font-weight: bold; color: orange;color:black;">DANH SÁCH</h3>
-                <h2 style="font-size: 30pt;">Nhà cho thuê nhiều nhất</h2>
+                <h2 style="font-size: 30pt;">Nhà cho thuê mới nhất</h2>
             </div>
             <div class="loc-canho">
                 <form action="" method="get">
@@ -356,7 +339,7 @@
                 <div class="quan1 l1">
                     <?php foreach ($quan as $q) {
                         $stt += 1; ?>
-                        <p><?= $q["ten_quan"] ?></p>
+                        <p><a href="?ctrl=home&act=danhsach&ma_quan=<?= $q["ma_quan"]?>"><?= $q["ten_quan"]?></a></p>
 
                         <?php
                         if ($stt == 10) {
@@ -396,72 +379,3 @@
 
 </html>
 <script src="./views/js/index.js"></script>
-<script>
-    //lấy id căn hộ để show lên
-    $(".img-click").click(function(e) {
-        var btnClick = $(this);
-
-        var id = btnClick.prev().html();
-        //    alert(id);
-        $.get("?ctrl=home&act=chi_tiet", {
-                'canhoid': id
-            },
-            function(data) {
-                $('#myModal').html(data);
-            });
-    });
-
-
-
-    function showimages(x) {
-        var img = document.getElementById('images');
-        // var hinh = document.getElementById("hinh").value();
-        switch (x) {
-            case 1:
-                        
-            $("#hinh").click(function (e) { 
-                var btnClick = $(this);
-                
-                var id = btnClick.prev().html();
-                // alert(id);
-                img.src = "../uploaded/"+id+"";
-            
-                });
-
-                
-                break;
-            case 2:
-                $("#hinha").click(function (e) { 
-                var btnClick = $(this);
-                
-                var ida = btnClick.prev().html();
-                // alert(id);
-                img.src = "../uploaded/"+ida+"";
-            
-                });
-                break;
-            case 3:
-                $("#hinhb").click(function (e) { 
-                var btnClick = $(this);
-                
-                var idb = btnClick.prev().html();
-                // alert(id);
-                img.src = "../uploaded/"+idb+"";
-            
-                });
-                break;
-            case 4:
-                $("#hinhc").click(function (e) { 
-                var btnClick = $(this);
-                
-                var idc = btnClick.prev().html();
-                // alert(id);
-                img.src = "../uploaded/"+idc+"";
-            
-                });
-                break;
-            default:
-                break;
-        }
-    }
-</script>

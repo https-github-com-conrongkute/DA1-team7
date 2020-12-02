@@ -20,29 +20,7 @@
 </head>
 
 <body>
-    <!-- <div class="menu">
-        <div class="banner">
-            <img src="site/../uploaded/banner9.jpg" width="100%" height="600px" alt="">
-        </div>
-        <nav class="menu-logo">
-            <div class="menu-logo-bg">
-                <div class="nav-logo">
-                    <img src="../uploaded/logo.png" alt="">
-                </div>
-                <div class="nav-menu">
-                    <ul>
-                        <li><a href="#">Trang chủ </a> </li>
-                        <li><a href="#">Dịch vụ </a></li>
-                        <li><a href="#">Danh sách </a> </li>
-                        <li><a href="#">Giới thiệu </a></li>
-                        <li><a href="#">Liên hệ </a></li>
-                        <li><a href="#">Đăng nhập </a></li>
-                        <li><a href="#" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div> -->
+
     <header>
         <div class=" menu1">
             <span class="col-4 right">
@@ -60,7 +38,6 @@
             <div class="nav-menu">
                 <ul>
                     <li><a href="index.php">Trang chủ </a> </li>
-                    <li><a href="#">Dịch vụ </a></li>
                     <li><a href="?ctrl=home&act=danhsach&loai_can=1">Danh sách nhà thuê</a> </li>
                     <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                     <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
@@ -263,7 +240,15 @@
                         <div class="row">
                             <div class="col-6 txtx">
                                 <ul>
-                                    <li class="li1">Hướng: <?= $row['huong_nha'] ?></li>
+                                    <li class="li1">Hướng: <?php if ($row["huong_nha"] == 1) echo "Đông";
+                                        elseif ($c["huong_nha"] == 2) echo "Tây";
+                                        elseif ($c["huong_nha"] == 3) echo "Nam";
+                                        elseif ($c["huong_nha"] == 4) echo "Bắc";
+                                        elseif ($c["huong_nha"] == 5) echo "Tây Bắc";
+                                        elseif ($c["huong_nha"] == 6) echo "Tây Nam";
+                                        elseif ($c["huong_nha"] == 7) echo "Đông Bắc";
+                                        elseif ($c["huong_nha"] == 8) echo "Đông Nam";
+                                        ?></li>
                                     <li>Phòng ngủ: <?= $row['so_phong_ngu'] ?></li>
                                     <li>Phòng tắm: <?= $row['so_phong_vs'] ?></li>
                                     <li>Tầng: <?= $row['tang'] ?> </li>
@@ -358,6 +343,7 @@
 
 
                     <ul class="lancan">
+                    
                         <li>
 
                             <a href="#"> <span class=""> Quận 2 </span> <span class="count">(1186)</span> </a>
@@ -413,64 +399,23 @@
 
                 </form>
             </div>
-            <div class="form-timkiem">
-                <div class="div-text">
+            <div class="form-timkiemlancan ">
+                <div class="div-text" >
                     <p>Các phường trong quận</p>
                 </div>
                 <form action="#" method="post" class="tim-kiemm">
 
 
-                    <ul class="lancan">
+                    <ul class="lancan" >
+                    <?php $phuong=getphuongbyidquan($row["ma_quan"]);
+                        foreach($phuong as $p){
+                        ?>
                         <li>
 
-                            <a href="#"> <span class=""> Phường 1 </span> <span class="count">(1186)</span> </a>
+                            <a href="#"> <span class=""> <?=$p["phuong"]?> </span> <span class="count"></span> </a>
 
                         </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 2 </span> <span class="count">(652)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 3 </span> <span class="count">(611)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 4 </span> <span class="count">(514)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 5 </span> <span class="count">(496)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 6 </span> <span class="count">(381)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 7 </span> <span class="count">(312)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 8 </span> <span class="count">(278)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 9 </span> <span class="count">(223)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 10 </span> <span class="count">(212)</span> </a>
-
-                        </li>
+                        <?php }?>
                     </ul>
 
 
@@ -536,28 +481,22 @@
             </div>
             <div class="textquan">
                 <div class="quan1 l1">
-                    <P>Quận 1</P>
-                    <P>Quận 2</P>
-                    <P>Quận 3</P>
-                    <P>Quận 4</P>
-                    <P>Quận 5</P>
-                    <P>Quận 6</P>
-                    <P>Quận 7</P>
-                    <P>Quận 8</P>
-                    <P>Quận 9</P>
-                    <P>Quận 10</P>
+                    <?php foreach ($quan as $q) {
+                        $stt += 1; ?>
+                        <p><a href="?ctrl=home&act=danhsach&ma_quan=<?= $q["ma_quan"]?>"><?= $q["ten_quan"]?></a></p>
+
+                        <?php
+                        if ($stt == 10) {
+                        ?>
                 </div>
                 <div class="quan1 l2">
-                    <P>Quận 11</P>
-                    <P>Quận 12</P>
-                    <P>Quận Bình Thạnh</P>
-                    <P>Quận Phú Nhuận</P>
-                    <p>Quận Tân Bình</p>
-                    <p>Quận Tân Phú</p>
-                    <p>Quận Bình Tân</p>
-                    <p>Huyện Nhà Bè</p>
-                    <p>Huyện Hóc Môn</p>
-                    <p>Huyện Bình Chánh</p>
+            <?php
+                        }
+                    } ?>
+
+            <!-- </div>
+                <div class="quan1 l2"> -->
+
                 </div>
             </div>
         </div>

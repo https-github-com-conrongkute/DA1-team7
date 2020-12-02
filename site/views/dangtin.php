@@ -38,7 +38,6 @@
                 <div class="nav-menu">
                     <ul>
                         <li><a href="index.php">Trang chủ </a> </li>
-                        <li><a href="#">Dịch vụ </a></li>
                         <li><a href="?ctrl=home&act=danhsach">Danh sách nhà thuê</a> </li>
                         <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                         <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
@@ -483,32 +482,26 @@
         </div>
         <div class="box4 b2">
             <div class="tieude4">
-                <h4>Danh sách thuê nhà</h4>
+                <h4>Danh sách các quận</h4>
             </div>
             <div class="textquan">
                 <div class="quan1 l1">
-                    <P>Quận 1</P>
-                    <P>Quận 2</P>
-                    <P>Quận 3</P>
-                    <P>Quận 4</P>
-                    <P>Quận 5</P>
-                    <P>Quận 6</P>
-                    <P>Quận 7</P>
-                    <P>Quận 8</P>
-                    <P>Quận 9</P>
-                    <P>Quận 10</P>
+                    <?php foreach ($quanall as $q) {
+                        $stt += 1; ?>
+                        <p><a href="?ctrl=home&act=danhsach&ma_quan=<?= $q["ma_quan"]?>"><?= $q["ten_quan"]?></a></p>
+
+                        <?php
+                        if ($stt == 10) {
+                        ?>
                 </div>
                 <div class="quan1 l2">
-                    <P>Quận 11</P>
-                    <P>Quận 12</P>
-                    <P>Quận Bình Thạnh</P>
-                    <P>Quận Phú Nhuận</P>
-                    <p>Quận Tân Bình</p>
-                    <p>Quận Tân Phú</p>
-                    <p>Quận Bình Tân</p>
-                    <p>Huyện Nhà Bè</p>
-                    <p>Huyện Hóc Môn</p>
-                    <p>Huyện Bình Chánh</p>
+            <?php
+                        }
+                    } ?>
+
+            <!-- </div>
+                <div class="quan1 l2"> -->
+
                 </div>
             </div>
         </div>

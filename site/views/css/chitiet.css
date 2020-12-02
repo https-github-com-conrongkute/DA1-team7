@@ -329,7 +329,13 @@ body {
     box-shadow: 2px 3px 4px #5c8a8a;
     margin: 10px 0px;
     margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.tim-kiemm {
+    width: 100%;
     overflow: scroll;
+    margin: 0px 10px;
 }
 
 .row {
