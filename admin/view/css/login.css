@@ -26,38 +26,37 @@
 }
 
 .wrapper-auto {
-    width: 40%;
+    width: 31%;
     margin: 0 auto;
 }
 
 .auto {
-    width: 50%;
+    width: 55%;
     margin: 0 auto;
 }
 
 h2 {
     text-align: center;
     font-size: 27pt;
-    margin-top: 30%;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .tendn {
     width: 100%;
-    height: 50px;
     border-radius: 20px;
     background-color: #f0f0f0;
     border: none;
     outline: none;
     box-sizing: border-box;
-    padding: 0px 40px;
+    padding: 0px 10px;
     margin: 10px 0;
-    line-height: 40px;
+    height: 45px;
 }
 
 .pass {
     width: 100%;
-    height: 50px;
-    padding: 0px 40px;
+    padding: 0px 10px;
     box-sizing: border-box;
     border-radius: 20px;
     background-color: #f0f0f0;
@@ -65,13 +64,12 @@ h2 {
     outline: none;
     margin: 10px 0;
     /* margin-bottom: 40px; */
-    line-height: 40px;
+    height: 45px;
 }
 
 .dn {
     width: 100%;
-    height: 40px;
-    padding: 0px 40px;
+  
     box-sizing: border-box;
     border-radius: 20px;
     background-color: #EF6C00;
@@ -82,7 +80,7 @@ h2 {
     outline: none;
     margin: 10px 0;
     /* margin-bottom: 40px; */
-    line-height: 40px;
+    height: 45px;
 }
 
 .form-backgroud {
