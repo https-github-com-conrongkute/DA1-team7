@@ -404,10 +404,11 @@ label {
 }
 
 .tt-right::-webkit-scrollbar {
-    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
     background-color: #F5F5F5;
     width: 5px;
 }
+
 .tt-right::-webkit-scrollbar-thumb {
     background-color: #000000;
 }
@@ -1058,6 +1059,7 @@ a {
     width: 75px;
     height: 50px;
     display: inline;
+    cursor: pointer;
 }
 
 .imgnho {
@@ -1081,6 +1083,7 @@ a {
 .imgnho img {
     width: 75px;
     height: 50px;
+    cursor: pointer;
 }
 
 .divlon .divtext {
@@ -1282,28 +1285,35 @@ a {
     background-color: #ccc;
 }
 
+
 /* căn hộ yêu thích */
-.box-yt{
+
+.box-yt {
     width: 100%;
     margin-bottom: 20px;
     float: left;
     height: 200px;
     border-bottom: 1px solid #666;
 }
-.box-yt__hinh{
+
+.box-yt__hinh {
     width: 30%;
     margin-right: 2%;
     float: left;
 }
-.box-yt__hinh>img{
+
+.box-yt__hinh>img {
     width: 100%;
     object-fit: cover;
     height: 170px;
 }
-.box-yt__nd{
+
+.box-yt__nd {
     width: 68%;
     float: left;
 }
+
+
 /*Tièm kiếm*/
 
 

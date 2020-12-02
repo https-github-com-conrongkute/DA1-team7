@@ -194,16 +194,20 @@
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="../uploaded/<?= $row['hinha'] ?>" alt="First slide" style="width:100%;" height="500px">
+                                <img class="d-block w-100" src="../uploaded/<?= $row['hinh'] ?>" alt="First slide" style="width:100%;" height="500px">
                             </div>
                             <div class="carousel-item">
                                 <img class="d-block w-100" src="../uploaded/<?= $row['hinhb'] ?>" alt="Second slide" style="width:100%;" height="500px">
                             </div>
                             <div class="carousel-item">
                                 <img class="d-block w-100" src="../uploaded/<?= $row['hinhc'] ?>" alt="Third slide" style="width:100%;" height="500px">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="../uploaded/<?= $row['hinhc'] ?>" alt="Four slide" style="width:100%;" height="500px">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -228,7 +232,7 @@
                         <button class="button-cs3"><p class="txt3">ID 277418</p></button> -->
                         <label for="" class="label1">Thuê</label>
                         <label for="" class="label2">Đã thẩm định</label>
-                        <label for="" class="label3">ID 277418</label>
+                        <label for="" class="label3">ID <?=$row["ma_can"]?></label>
                     </div>
                     <p class="txt3"><?=number_format($row['gia_thue'], 0, '', '.')?> VNĐ - <?= $row['dien_tich'] ?>m²</p>
                     <p class="txt4">Giá : <?=number_format($row['gia_thue'], 0, '', '.')?>/m²</p>
@@ -237,14 +241,14 @@
                     <?php if (isset($_SESSION['cart']) == true) {
 
                         if ($_SESSION['cart'][$row['ma_can']]['ma_can'] == $row['ma_can']) {
-                            echo ' <div><button class="btn1"><a href="?act=delete-gh&id='.$_SESSION['cart'][$row['ma_can']]['ma_can'].'">ĐÃ LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
+                            echo ' <div><button class="btn1" style="background-color: orangered;"><a href="?act=delete-gh&id='.$_SESSION['cart'][$row['ma_can']]['ma_can'].'" style="color: white;">ĐÃ LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
                         }else{
-                            echo '<div><button class="btn1"><a href="?act=add-gh&id='.$row['ma_can'].'">LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
+                            echo '<div><button class="btn1" ><a href="?act=add-gh&id='.$row['ma_can'].'" style="color: orangered;">LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
                         }
                     }
                     ?>
                     <?php if (isset($_SESSION['cart']) == false) { ?>
-                        <div><button class="btn1"><a href="?act=add-gh&id=<?= $row['ma_can'] ?>">LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>
+                        <div><button class="btn1" style="color: orangered;"><a href="?act=add-gh&id=<?= $row['ma_can'] ?>" style="color: orangered;">LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>
                     <?php } ?>
                     <div><button class="btn1">CHIA SẺ <i class="fa fa-share" style="margin-left:5px;"></i></button></div>
                     <div><button class="btn1">VỊ TRÍ <i class="fa fa-map-marker" style="margin-left:5px;"></i></button></div>
@@ -304,19 +308,11 @@
                 <h3 class="txt9">Thông tin chi tiết</h3>
                 <p class="txt7">
 
-                    <p class="txt77"> Bán Nhà Mặt Tiền Đường Thái Phiên Gần <?= $row['dia_chi'] ?></p>
+                    <p class="txt77"> Địa chỉ: <?= $row['dia_chi'] ?></p>
 
-                    <p class="txt77"> Tổng diện tích sử dụng <?= $row['dien_tich'] ?>m2. </p>
+                    <p class="txt77"> Diện tích <?= $row['dien_tich'] ?>m2. </p>
 
-                    <p class="txt77"> Hiện trạng nhà <?= $row['tang'] ?> tầng, gồm <?= $row['so_phong_ngu'] ?> phòng ngủ và <?= $row['so_phong_vs'] ?> phòng vệ sinh. Kết cấu nhà cứng cáp, dọn vào ở ngay không cần sửa chữa.</p>
-
-                    <p class="txt77"> Nhà mặt tiền 16m xe tải lưu thông ra nhiều đường </p>
-
-                    <p class="txt77"> Tiện ích xung quanh đầy đủ như: Vinmart, Bệnh viện ( tuyến sau của các BV lớn ), Trường học...</p>
-
-                    <p class="txt77">Vị trí trung tâm , thuận tiện di chuyển sang các quận lân cận như Quận 5, 6, 10, Tân Bình, Bình Tân,....</p>
-
-                    <p class="txt77">Sổ hồng riêng chính chủ, giao dịch an toàn, dọn vào ở ngay.</p>
+                    <p class="txt77"> <?=$row["tien_ich"]?></p>
 
                 </p>
             </div>

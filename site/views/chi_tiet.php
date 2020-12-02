@@ -8,16 +8,20 @@
               </div>
               <div class="divnho">
                   <div class="imgnho nho1">
-                      <img src="../uploaded/<?=$can_ho["hinh"]?>"  alt="" onclick="showimages(1)">
+                      <span  style="display: none;"><?=$can_ho["hinh"]?></span>
+                      <img src="../uploaded/<?=$can_ho["hinh"]?>" id="hinh"  alt="" onclick="showimages(1)">
                   </div>
                   <div class="imgnho">
-                      <img src="../uploaded/<?=$can_ho["hinha"]?>" alt="" onclick="showimages(2)">
+                  <span  style="display: none;"><?=$can_ho["hinha"]?></span>
+                      <img src="../uploaded/<?=$can_ho["hinha"]?>" id="hinha" alt="" onclick="showimages(2)">
                   </div>
                   <div class="imgnho">
-                      <img src="../uploaded/<?=$can_ho["hinhb"]?>" alt="" onclick="showimages(3)">
+                  <span  style="display: none;"><?=$can_ho["hinhb"]?></span>
+                      <img src="../uploaded/<?=$can_ho["hinhb"]?>" id="hinhb" alt="" onclick="showimages(3)">
                   </div>
                   <div class="imgnho">
-                      <img src="../uploaded/<?=$can_ho["hinhc"]?>" alt="" onclick="showimages(4)">
+                  <span  style="display: none;"><?=$can_ho["hinhc"]?></span>
+                      <img src="../uploaded/<?=$can_ho["hinhc"]?>" id="hinhc" alt="" onclick="showimages(4)">
                   </div>
               </div>
           </div>
@@ -68,11 +72,11 @@
         var btnClick = $(this);
         
        var id = btnClick.prev().html();
-      alert(id);
+    //   alert(id);
        $.get("?ctrl=home&act=dat_lich", {'canhoid': id},
        function (data) {
                     $('#datlich').html(data);
                 });
     });
   </script>
-  </script>
+

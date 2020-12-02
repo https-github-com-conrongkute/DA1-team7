@@ -415,18 +415,50 @@
 
     function showimages(x) {
         var img = document.getElementById('images');
+        // var hinh = document.getElementById("hinh").value();
         switch (x) {
             case 1:
-                img.src = "../uploaded/b1.jpg";
+                        
+            $("#hinh").click(function (e) { 
+                var btnClick = $(this);
+                
+                var id = btnClick.prev().html();
+                // alert(id);
+                img.src = "../uploaded/"+id+"";
+            
+                });
+
+                
                 break;
             case 2:
-                img.src = "../uploaded/b2.jpg";
+                $("#hinha").click(function (e) { 
+                var btnClick = $(this);
+                
+                var ida = btnClick.prev().html();
+                // alert(id);
+                img.src = "../uploaded/"+ida+"";
+            
+                });
                 break;
             case 3:
-                img.src = "../uploaded/b3.jpg";
+                $("#hinhb").click(function (e) { 
+                var btnClick = $(this);
+                
+                var idb = btnClick.prev().html();
+                // alert(id);
+                img.src = "../uploaded/"+idb+"";
+            
+                });
                 break;
             case 4:
-                img.src = "../uploaded/b4.jpg";
+                $("#hinhc").click(function (e) { 
+                var btnClick = $(this);
+                
+                var idc = btnClick.prev().html();
+                // alert(id);
+                img.src = "../uploaded/"+idc+"";
+            
+                });
                 break;
             default:
                 break;
