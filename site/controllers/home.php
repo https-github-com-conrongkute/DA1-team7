@@ -255,6 +255,7 @@ switch ($act) {
 
     break;
   case 'about':
+    $quan=getallquan();
     require_once 'views/about.php';
     break;
   case 'chitiet':

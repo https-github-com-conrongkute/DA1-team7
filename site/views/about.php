@@ -19,7 +19,7 @@
             <div class="nav-menu3">
                 <ul>
                     <li><a href="index.php">Trang chủ </a> </li>
-                    <li><a href="?ctrl=home&act=danhsach">Danh sách </a> </li>
+                    <li><a href="?ctrl=home&act=danhsach&loai_can=1">Danh sách nhà thuê</a> </li>
                     <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                     <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                     <?php if (isset($_SESSION['user']) == true) { ?>
@@ -44,22 +44,7 @@
         <div class="banner">
             <img src="../uploaded//banner9.jpg" width="100%" height="600px" alt="">
         </div>
-        <!-- <div class="nav">
-            <div class="navimg">
-                <img src="../uploaded//logo.png" width="140px" alt="">
-            </div>
-            <div class="navmenu">
-                <ul>
-                    <li><a href="index.php">Trang chủ </a> </li>
-                    <li><a href="#">Dịch vụ </a></li>
-                    <li><a href="#">Danh sách </a> </li>
-                    <li><a href="#">Giới thiệu </a></li>
-                    <li><a href="?ctrl=home&act=gioithieu">Liên hệ </a></li>
-                    <li><a href="?ctrl=home&act=dangnhap">Đăng nhập </a></li>
-                    <li><a href="?ctrl=home&act=dangtin">Đăng tin</a></li>
-                </ul>
-            </div>
-        </div> -->
+
         <div class="navtext">
             <h1 style="text-shadow: 2px 2px 2px black;">GIỚI THIỆU VỀ CHÚNG TÔI</h1>
             <p>Hơn 16.000 nhà riêng, chung cư, căn hộ đang cho thuê. Cam kết luôn có 10 <br> căn hộ trong 48 giờ.</p>
@@ -306,9 +291,9 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
+    <div class="footer">
         <div class="box4 b1">
-            <img src="../uploaded/logo.png" alt="">
+            <img src="./uploaded/logo.png" alt="">
             <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
             <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
         </div>
@@ -318,36 +303,35 @@
             </div>
             <div class="textquan">
                 <div class="quan1 l1">
-                    <P>Quận 1</P>
-                    <P>Quận 2</P>
-                    <P>Quận 3</P>
-                    <P>Quận 4</P>
-                    <P>Quận 5</P>
-                    <P>Quận 6</P>
-                    <P>Quận 7</P>
-                    <P>Quận 8</P>
-                    <P>Quận 9</P>
-                    <P>Quận 10</P>
+                    <?php foreach ($quan as $q) {
+                        $stt += 1; ?>
+                        <p><a href="?ctrl=home&act=danhsach&ma_quan=<?= $q["ma_quan"]?>"><?= $q["ten_quan"]?></a></p>
+
+                        <?php
+                        if ($stt == 10) {
+                        ?>
                 </div>
                 <div class="quan1 l2">
-                    <P>Quận 11</P>
-                    <P>Quận 12</P>
-                    <P>Quận Bình Thạnh</P>
-                    <P>Quận Phú Nhuận</P>
-                    <p>Quận Tân Bình</p>
-                    <p>Quận Tân Phú</p>
-                    <p>Quận Bình Tân</p>
-                    <p>Huyện Nhà Bè</p>
-                    <p>Huyện Hóc Môn</p>
-                    <p>Huyện Bình Chánh</p>
+            <?php
+                        }
+                    } ?>
+
+            <!-- </div>
+                <div class="quan1 l2"> -->
+
                 </div>
             </div>
         </div>
         <div class="box4">
             <h4>Đăng ký để biết thêm thông tin từ Golden</h4> <br>
-            <input type="text" value="Địa chỉ email"><input class="ip2" type="submit" value="Đăng ký">
+            <input type="text" placeholder="Địa chỉ email" style="font-size: 11pt;"><input class="ip2" type="submit" value="Đăng ký">
         </div>
-    </footer>
+    </div>
+    <!-- Footer Golden Home -->
+
+    <div class="divcuoi">
+        <span> 2020 © Bản quyền GoldenHome. Đã đăng ký Bản quyền.</span>
+    </div>
 
 </body>
 

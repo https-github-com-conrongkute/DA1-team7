@@ -596,11 +596,17 @@ ul li a {
 .l1 p {
     margin-left: 70px;
     line-height: 20px;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .l2 p {
     line-height: 20px;
     margin-right: 40px;
+    margin-top: 10px;
 }
 
 .box4 input {
@@ -620,4 +626,16 @@ ul li a {
     width: 110px;
     font-size: 14px;
     font-weight: bold;
+}
+
+.divcuoi {
+    background-color: orangered;
+    color: aliceblue;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.divcuoi span {
+    line-height: 40px;
 }
