@@ -13,7 +13,25 @@ $(document).ready(function() {
             // $('.sum-menu ul li a').css('color', 'black');
         }
     });
-
+    $('.btn_delete_ch').on('click', function(e) {
+        e.preventDefault();
+        var url = $(this).attr('href');
+        // console.log(url);
+        swal({
+                title: "Bạn có chắc chắn xóa?",
+                text: "Bạn sẽ không thể khôi phục căn hộ này!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Có tôi chắc chắn!",
+                cancelButtonText: "Không!",
+                closeOnConfirm: false
+            },
+            function() {
+                window.location.href = url;
+                swal("Xóa thành công!", "căn hộ của bạn đã bị xóa.", "success");
+            });
+    });
     $(window).scroll(function() {
         var body = $('html,body').scrollTop();
         // console.log(body);

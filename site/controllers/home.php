@@ -413,4 +413,10 @@ switch ($act) {
     }
 
     break;
+    case 'delete_ch':
+      $ma_can = $_GET['ma_can'];
+      settype($ma_can,'int');
+      DeleteCanho_dd($ma_can);
+      header('location: index.php?act=ch-dd&ma_tk='.$_SESSION['id'].'');
+      break;
 }
