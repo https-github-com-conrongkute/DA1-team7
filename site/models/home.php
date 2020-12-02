@@ -152,6 +152,11 @@ function getthongbao($id){
     INNER JOIN khach_hang kh ON kh.ma_tk=dl.ma_tk WHERE ch.ma_tk='$id' and ch.an_hien = 1 order by  ma_dat  desc";
     return query($sql);
 }
+// Xóa căn hộ đã đăng
+function DeleteCanho_dd($ma_can){
+    $sql = "DELETE FROM can_ho WHERE ma_can='$ma_can'";
+    execute($sql);
+}
 
 //show lịch sử đặt căn hộ
 function lichsu($id){
@@ -169,7 +174,7 @@ function khachhang($id){
 
 //căn hộ đả đăng
 function canhodadang($id){
-    $sql="SELECT * FROM can_ho WHERE ma_tk='$id' and an_hien=1";
+    $sql="SELECT * FROM can_ho WHERE ma_tk='$id' ORDER BY ma_can DESC";
     return query($sql);
 }
 function maloaican($id)
