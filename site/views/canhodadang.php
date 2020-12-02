@@ -6,8 +6,8 @@
                 <th scope="col">STT</th>
                 <th scope="col">Thông tin căn hộ</th>
                 <th scope="col">Vị tí</th>
-                <th scope="col">Hình</th>
-                <th scope="col">Giá thuê</th>
+                <!-- <th scope="col">Hình</th> -->
+                <!-- <th scope="col">Giá thuê</th> -->
                 <th scope="col">Trạng thái</th>
                 <th scope="col">Sửa</th>
                 <th scope="col">Xóa</th>
@@ -31,6 +31,10 @@
                         <p>Diện tích: <?= $c["dien_tich"] ?> </p>
                         <p>Năm xây dựng: <?= $c["nam_xd"] ?></p>
                         <p>Tầng: <?= $c["tang"] ?></p>
+                        <p><strong>Giá thuê:</strong></p>
+                        <p> <?=number_format($c["gia_thue"],0,'','.') ?> VND</p>
+                        <p><strong>Chi phí khác:</strong></p>
+                        <p><?= $c["chi_phi_khac"] ?></p>
                     </td>
                     <td>
                         <p>Địa chỉ: <?= $c["dia_chi"] ?></p>
@@ -45,24 +49,20 @@
                                         ?></p>
                         <p><strong>Tiện ích:</strong></p>
                         <p><?= $c["tien_ich"] ?></p>
-                    </td>
-                    <td>
-                        <p><img src="../uploaded/<?= $c["hinh"] ?>" alt="" style="width: 70px;"></p>
-                        <p><img src="../uploaded/<?= $c["hinha"] ?>" alt="" style="width: 70px;"></p>
-                        <p><img src="../uploaded/<?= $c["hinhb"] ?>" alt="" style="width: 70px;"></p>
-                        <p><img src="../uploaded/<?= $c["hinhc"] ?>" alt="" style="width: 70px;"></p>
-                    </td>
-                    <td>
-                        <p><?= $c["gia_thue"] ?> VND</p>
-                        <p><strong>Chi phí khác:</strong></p>
-                        <p><?= $c["chi_phi_khac"] ?></p>
+                        <p><strong>Hình ảnh</strong></p>
+                          <p>
+                            <img src="../uploaded/<?= $c["hinh"] ?>" alt="" style="width: 70px;height: 50px;float: left;margin: 10px 10px;" >
+                            <img src="../uploaded/<?= $c["hinha"] ?>" alt="" style="width: 70px;height: 50px;float: left;margin: 10px 10px;" >
+                            <img src="../uploaded/<?= $c["hinhb"] ?>" alt="" style="width: 70px;height: 50px;float: left;margin: 10px 10px;" >
+                            <img src="../uploaded/<?= $c["hinhc"] ?>" alt="" style="width: 70px;height: 50px;float: left;margin: 10px 10px;" >
+                        </p>
                     </td>
                     <td>
                         <p><?= $c["ghi_chu"] ?></p>
                         <p><em><?= ($c['an_hien'] == 0) ? "Chờ xét duyệt" : "Đã duyệt" ?></em></p>
                     </td>
-                    <td><a href="">Sửa</a></td>
-                    <td><a class="btn_delete_ch" href="?act=delete_ch&ma_can=<?= $c['ma_can'] ?>">Xóa</a></td>
+                    <td><a href=""><i class="fas fa-edit"></i></a></td>
+                    <td><a class="btn_delete_ch" href="?act=delete_ch&ma_can=<?= $c['ma_can'] ?>"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
             <?php } ?>
 

@@ -231,7 +231,7 @@
                         <label for="" class="label3">ID 277418</label>
                     </div>
                     <p class="txt3"><?=number_format($row['gia_thue'], 0, '', '.')?> VNĐ - <?= $row['dien_tich'] ?>m²</p>
-                    <p class="txt4">Giá : <?=number_format($row['gia_thue'], 0, '', '.')?>/m²</p>
+                    <p class="txt4">Giá : <?php $gia = $row['gia_thue'] / $row['dien_tich']; echo number_format($gia,0,'','.')?> VNĐ/m²</p>
                 </div>
                 <div class="btn">
                     <?php if (isset($_SESSION['cart']) == true) {
