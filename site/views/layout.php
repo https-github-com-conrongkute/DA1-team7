@@ -35,13 +35,13 @@
                         <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                         <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                         <?php if (isset($_SESSION['user']) == true) { ?>
-                            <li><a  href='?act=thongtintk&ma_tk=<?=$_SESSION['id']?>'><?= $_SESSION['user'] ?></a>
-                            <ul class="sub-menu">
-                                        <li><a href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>">Thông tin tài khoản</a></li>
-                                        <li><a href="?act=doimk&ma_tk=<?=$_SESSION['id']?>">Đổi mật khẩu</a></li>
-                                        <li><a href="?act=ch-dd&ma_tk=<?=$_SESSION['id']?>">Căn hộ của tôi</a></li>
-                                        <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
-                                    </ul>
+                            <li><a href='?act=thongtintk&ma_tk=<?= $_SESSION['id'] ?>'><?= $_SESSION['user'] ?></a>
+                                <ul class="sub-menu">
+                                    <li><a href="?act=thongtintk&ma_tk=<?= $_SESSION['id'] ?>">Thông tin tài khoản</a></li>
+                                    <li><a href="?act=doimk&ma_tk=<?= $_SESSION['id'] ?>">Đổi mật khẩu</a></li>
+                                    <li><a href="?act=ch-dd&ma_tk=<?= $_SESSION['id'] ?>">Căn hộ của tôi</a></li>
+                                    <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
+                                </ul>
                             </li>
                         <?php } else { ?>
                             <li><a href="?act=dangnhap">Đăng nhập</a></li>
@@ -68,11 +68,11 @@
                             <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                             <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                             <?php if (isset($_SESSION['user']) == true) { ?>
-                                <li><a  href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>"><?= $_SESSION['user'] ?> <i class="fa fa-caret-down"></i></a>
+                                <li><a href="?act=thongtintk&ma_tk=<?= $_SESSION['id'] ?>"><?= $_SESSION['user'] ?> <i class="fa fa-caret-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href="?act=thongtintk&ma_tk=<?=$_SESSION['id']?>">Thông tin tài khoản</a></li>
-                                        <li><a href="?act=doimk&ma_tk=<?=$_SESSION['id']?>">Đổi mật khẩu</a></li>
-                                        <li><a href="?act=ch-dd&ma_tk=<?=$_SESSION['id']?>">Căn hộ của tôi</a></li>
+                                        <li><a href="?act=thongtintk&ma_tk=<?= $_SESSION['id'] ?>">Thông tin tài khoản</a></li>
+                                        <li><a href="?act=doimk&ma_tk=<?= $_SESSION['id'] ?>">Đổi mật khẩu</a></li>
+                                        <li><a href="?act=ch-dd&ma_tk=<?= $_SESSION['id'] ?>">Căn hộ của tôi</a></li>
                                         <li><a href="?ctrl=home&act=dangxuat&logout=1">Đăng xuất</a></li>
                                     </ul>
                                 </li>
@@ -145,83 +145,85 @@
     <?php if (isset($view) == true) {
         require_once $view;
     } else { ?>
-        <div class="danhsach " >
+        <div class="danhsach ">
             <div class="tieude">
                 <h3 style="font-weight: bold; color: orange;color:black;">DANH SÁCH</h3>
                 <h2 style="font-size: 30pt;">Nhà cho thuê nhiều nhất</h2>
             </div>
             <div class="loc-canho">
-                <select name="" id="" class="select">
-                    <option value="">Giá từ thấp đến cao</option>
-                    <option value="">Giá từ cao đến thấp</option>
-                    <option value="">Mới nhất</option>
-                </select>
-                <select name="" id="" class="select">
-                    <option value="">Mức giá</option>
-                    <option value="">Dưới 3 triệu</option>
-                    <option value="">3 triệu - 5 triệu</option>
-                    <option value="">5 triệu - 8 triệu</option>
-                    <option value="">8 triệu - 10 triệu</option>
-                    <option value="">10 triệu - 15 triệu</option>
-                    <option value="">15 triệu - 20 triệu</option>
-                    <option value="">Trên 20 triệu</option>
-                </select>
-                <select name="" id="" class="select">
-                    <option value="">Loại căn hộ</option>
-                    <option value="">Chung cư</option>
-                    <option value="">Nhà ở</option>
-                </select>
-                <select name="" id="" class="select">
-                    <option value="">Tp. Hồ Chí Minh</option>
-                </select>
-                <button class="btn-loc"><i class="fas fa-search"></i></button>
+                <form action="" method="get">
+                    <select name="" id="" class="select">
+                        <option value="">Giá từ thấp đến cao</option>
+                        <option value="">Giá từ cao đến thấp</option>
+                        <option value="">Mới nhất</option>
+                    </select>
+                    <select name="" id="" class="select">
+                        <option value="">Mức giá</option>
+                        <option value="">Dưới 3 triệu</option>
+                        <option value="">3 triệu - 5 triệu</option>
+                        <option value="">5 triệu - 8 triệu</option>
+                        <option value="">8 triệu - 10 triệu</option>
+                        <option value="">10 triệu - 15 triệu</option>
+                        <option value="">15 triệu - 20 triệu</option>
+                        <option value="">Trên 20 triệu</option>
+                    </select>
+                    <select name="" id="" class="select">
+                        <option value="">Loại căn hộ</option>
+                        <option value="1">Chung cư</option>
+                        <option value="2">Nhà ở</option>
+                    </select>
+                    <select name="" id="" class="select">
+                        <option value="">Tp. Hồ Chí Minh</option>
+                    </select>
+                    <button class="btn-loc" type="submit"><i class="fas fa-search"></i></button>
+                </form>
             </div>
             <div class="boxcenter ">
-                
-            <div class="canho slider1">
-                   <?php foreach ($ds_ch as $ch) { ?>
-                    <div class="box2"  id="box2" data-toggle="modal"  data-target="#myModal" data-id=<?=$ch["ma_can"]?>>
-                    <div class='click' style="display: none;"><?=$ch["ma_can"]?></div>
-                    <div class="img-click">
-                            <img src="../uploaded/<?=$ch['hinh']?>" alt="" >
-                            <input type="hidden" name="ma_can" id="ma_can" value="<?=$ch["ma_can"]?>">
 
-                            <div class="box2text">
-                                <span><?=$ch['ten_can_ho']?></span>
-                            </div>
-                            <div class="gia">
-                                <a href="#" style="color:orange;font-size:18px;"> Giá </a>: <?=number_format($ch['gia_thue'],0,' ','.')?> VNĐ
-                            </div>
-                            <div class="datlich">
-                            <span>Xem căn hộ</span>
+                <div class="canho slider1">
+                    <?php foreach ($ds_ch as $ch) { ?>
+                        <div class="box2" id="box2" data-toggle="modal" data-target="#myModal" data-id=<?= $ch["ma_can"] ?>>
+                            <div class='click' style="display: none;"><?= $ch["ma_can"] ?></div>
+                            <div class="img-click">
+                                <img src="../uploaded/<?= $ch['hinh'] ?>" alt="">
+                                <input type="hidden" name="ma_can" id="ma_can" value="<?= $ch["ma_can"] ?>">
+
+                                <div class="box2text">
+                                    <span><?= $ch['ten_can_ho'] ?></span>
+                                </div>
+                                <div class="gia">
+                                    <a href="#" style="color:orange;font-size:18px;"> Giá </a>: <?= number_format($ch['gia_thue'], 0, ' ', '.') ?> VNĐ
+                                </div>
+                                <div class="datlich">
+                                    <span>Xem căn hộ</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                   <?php } ?>
-                   <!--show cái 2-->
-            </div>
-            <div class="canho slider2">
-                <?php foreach($ds_ch2 as $ch){ ?>
-                    <div class="box2" data-toggle="modal" data-target="#myModal" data-id=<?=$ch["ma_can"]?>>
-                    <div class='click' style="display: none;"><?=$ch["ma_can"]?></div>
-                        <div class="img-click">
-                            <img src="../uploaded/<?=$ch['hinh']?>" alt="" >
-                            <input type="hidden" name="ma_can" id="ma_can" value="<?=$ch["ma_can"]?>">
-                            <div class="box2text">
-                                <span><?=$ch['ten_can_ho']?></span>
-                            </div>
-                            <div class="gia">
-                                <a href="#" style="color:orange;font-size:18px;"> Giá </a>: <?=number_format($ch['gia_thue'],0,' ','.')?> VNĐ
-                            </div>
-                            <div class="datlich">
-                                <span>Xem căn hộ</span>
+                    <?php } ?>
+                    <!--show cái 2-->
+                </div>
+                <div class="canho slider2">
+                    <?php foreach ($ds_ch2 as $ch) { ?>
+                        <div class="box2" data-toggle="modal" data-target="#myModal" data-id=<?= $ch["ma_can"] ?>>
+                            <div class='click' style="display: none;"><?= $ch["ma_can"] ?></div>
+                            <div class="img-click">
+                                <img src="../uploaded/<?= $ch['hinh'] ?>" alt="">
+                                <input type="hidden" name="ma_can" id="ma_can" value="<?= $ch["ma_can"] ?>">
+                                <div class="box2text">
+                                    <span><?= $ch['ten_can_ho'] ?></span>
+                                </div>
+                                <div class="gia">
+                                    <a href="#" style="color:orange;font-size:18px;"> Giá </a>: <?= number_format($ch['gia_thue'], 0, ' ', '.') ?> VNĐ
+                                </div>
+                                <div class="datlich">
+                                    <span>Xem căn hộ</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                  
-                <?php } ?>  
 
-            </div>
+                    <?php } ?>
+
+                </div>
 
                 <div class="xemthem">
                     <a href="?ctrl=home&act=danhsach&loai_can=1">Xem thêm </a>
@@ -352,21 +354,22 @@
             </div>
             <div class="textquan">
                 <div class="quan1 l1">
-                    <?php foreach( $quan as $q){ $stt+=1;?>
-                    <p><?=$q["ten_quan"]?></p>
-                    
-                    <?php
-                    if ($stt==10) {
-                        ?>
-                        </div>
-                <div class="quan1 l2">
+                    <?php foreach ($quan as $q) {
+                        $stt += 1; ?>
+                        <p><?= $q["ten_quan"] ?></p>
+
                         <?php
-                    }
-                }?>
-                    
-                <!-- </div>
+                        if ($stt == 10) {
+                        ?>
+                </div>
+                <div class="quan1 l2">
+            <?php
+                        }
+                    } ?>
+
+            <!-- </div>
                 <div class="quan1 l2"> -->
-                    
+
                 </div>
             </div>
         </div>
@@ -376,18 +379,18 @@
         </div>
     </footer>
     <div class="modal fade" id="myModal" role="dialog">
-       
+
     </div>
-<!-- end căn ho ct -->
+    <!-- end căn ho ct -->
 
     <div class="modal fade dl" id="datlich" role="dialog">
-        
+
     </div>
     <div class="divcuoi">
         <span> 2020 © Bản quyền GoldenHome. Đã đăng ký Bản quyền.</span>
     </div>
 
- 
+
 
 </body>
 
@@ -395,36 +398,38 @@
 <script src="./views/js/index.js"></script>
 <script>
     //lấy id căn hộ để show lên
-    $(".img-click").click(function (e) { 
+    $(".img-click").click(function(e) {
         var btnClick = $(this);
-        
-       var id = btnClick.prev().html();
-    //    alert(id);
-       $.get("?ctrl=home&act=chi_tiet", {'canhoid': id},
-       function (data) {
-                    $('#myModal').html(data);
-                });
+
+        var id = btnClick.prev().html();
+        //    alert(id);
+        $.get("?ctrl=home&act=chi_tiet", {
+                'canhoid': id
+            },
+            function(data) {
+                $('#myModal').html(data);
+            });
     });
 
-  
+
 
     function showimages(x) {
-    var img = document.getElementById('images');
-    switch (x) {
-        case 1:
-            img.src = "../uploaded/b1.jpg";
-            break;
-        case 2:
-            img.src = "../uploaded/b2.jpg";
-            break;
-        case 3:
-            img.src = "../uploaded/b3.jpg";
-            break;
-        case 4:
-            img.src = "../uploaded/b4.jpg";
-            break;
-        default:
-            break;
+        var img = document.getElementById('images');
+        switch (x) {
+            case 1:
+                img.src = "../uploaded/b1.jpg";
+                break;
+            case 2:
+                img.src = "../uploaded/b2.jpg";
+                break;
+            case 3:
+                img.src = "../uploaded/b3.jpg";
+                break;
+            case 4:
+                img.src = "../uploaded/b4.jpg";
+                break;
+            default:
+                break;
+        }
     }
-}
 </script>
