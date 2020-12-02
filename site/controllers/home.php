@@ -216,7 +216,7 @@ switch ($act) {
     require_once 'views/dangtin.php';
     break;
   case 'danhsach':
-    if (isset($_GET['loai_can']) == true)
+    if (isset($_GET['loai_can']) == true )
     { $loaican = $_GET['loai_can'];
     $page_num = 1;
     if (isset($_GET['page']) == true) $page_num = $_GET['page'];
@@ -227,7 +227,7 @@ switch ($act) {
     $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
   }
 
-    elseif (isset($_GET['ma_quan']) == true)
+    elseif (isset($_GET['ma_quan']) == true && isset($_GET['id']) == false)
     { $ma_quan = $_GET['ma_quan'];
     $page_num = 1;
     if (isset($_GET['page']) == true) $page_num = $_GET['page'];
@@ -235,8 +235,25 @@ switch ($act) {
     $dsch_tl = getCanho_theoquan($ma_quan, $page_num, $page_size);
     $toltal_rows = Demcanhotheoquan($ma_quan);
     $basrurl = SITE_URL . "/?act=danhsach&ma_quan={$ma_quan}";
-    $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);}
+    $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+  }
+
+  elseif (isset($_GET['id']) == true && isset($_GET['ma_quan']) == true)
+  { $ma_quan = $_GET['ma_quan'];
+    $id=$_GET["id"];
+  $page_num = 1;
+  if (isset($_GET['page']) == true) $page_num = $_GET['page'];
+  $page_size = PATH_SITE;
+  $dsch_tl = getCanho_theophuong($id, $page_num, $page_size);
+  $toltal_rows = Demcanhotheophuong($id);
+  $basrurl = SITE_URL . "/?act=danhsach&phuong={$id}";
+  $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+}
+
     $quan = getallquan();
+    $quanz = getallquan();
+    $quanzz = getallquan();
+    $loaican=getallloai_can();
     require_once 'views/danhsach.php';
     break;
   case 'phuong':
@@ -263,6 +280,7 @@ switch ($act) {
     $row = getcan_hoByid($ma_can);
     $quanall = getallquan();
     $quan = getallquan();
+      $loaican=getallloai_can();
     require_once 'views/chitiet.php';
     break;
   case 'ch-dd':
@@ -517,4 +535,33 @@ switch ($act) {
       DeleteCanho_dd($ma_can);
       header('location: index.php?act=ch-dd&ma_tk='.$_SESSION['id'].'');
       break;
+
+      //tìm kiếm nhanh
+      case 'timkiemnhanh':
+        if (isset($_POST["timnhanh"])) {
+        if(isset($_POST["ma_quan"]) == true && isset($_POST["loai_can"]) == true){
+          $ma_quan=$_POST["ma_quan"];
+          $loaican=$_POST["loai_can"];
+          $page_num = 1;
+          if (isset($_GET['page']) == true) $page_num = $_GET['page'];
+          $page_size = PATH_SITE;
+          $dsch_tl = getCanho_theoquanvaloaican($loaican, $ma_quan, $page_num, $page_size);
+          $toltal_rows = Demcanhotheoquanvaloaican($loaican , $ma_quan);
+          $basrurl = SITE_URL . "/?act=danhsach&ma_quan={$ma_quan}&ma_loai={$loaican}";
+          $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+        }
+        $quan = getallquan();
+        $quanz = getallquan();
+        $quanzz = getallquan();
+        $loaican=getallloai_can();
+        require_once 'views/danhsach.php';
+      }
+        break;
+
+        case 'deletedatlich':
+          $ma_dat=$_GET["ma_dat"];
+          xoadatlich($ma_dat);
+          $thongbao="Hủy thành công";
+          header("location: ".SITE_URL."/?ctrl=home&act=lichsu&ma_tk=".$_SESSION['id']."");
+        break;
 }

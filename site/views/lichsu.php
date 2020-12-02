@@ -42,13 +42,20 @@
                                 else{
                                     echo "Chưa xem nhà";
                                 }?></td>
-                                <td><a href="" style="color: white; background-color: orangered; padding: 2px 5px; border-radius: 10px;">Hủy lịch</a></td>
+                                <td><a href="javascript:Delete('<?=SITE_URL?>/?ctrl=home&act=deletedatlich&ma_dat=<?=$ds['ma_dat']?>')" style="color: white; background-color: orangered; padding: 2px 5px; border-radius: 10px;">Hủy lịch</a></td>
                                 
                             </tr>
                             <?php
                             }?>
-
+                                    
                         </tbody>
                     </table>
                 </div>
-            
+            <script>
+                    function Delete(url) {
+                if (confirm('Bạn muốn hủy lịch này')) {
+                    document.location = url;
+                }
+                return false;
+    }
+            </script>

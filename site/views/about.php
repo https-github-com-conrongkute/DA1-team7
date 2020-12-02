@@ -19,7 +19,7 @@
             <div class="nav-menu3">
                 <ul>
                     <li><a href="index.php">Trang chủ </a> </li>
-                    <li><a href="?ctrl=home&act=danhsach&loai_can=1">Danh sách nhà thuê</a> </li>
+                    <li><a href="?ctrl=home&act=danhsach&ma_quan=4">Danh sách nhà thuê</a> </li>
                     <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                     <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                     <?php if (isset($_SESSION['user']) == true) { ?>

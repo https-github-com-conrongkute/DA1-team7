@@ -111,7 +111,7 @@ body {
 }
 
 .sub-menu>li>a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 5px 10px;
 }
@@ -1312,91 +1312,6 @@ a {
     width: 68%;
     float: left;
 }
-
-
-/*Tièm kiếm*/
-
-
-/* .tiemkiemtrong {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.tiemkiemtrong h4 {
-    float: left;
-    color: #ef7733;
-}
-
-.formtimkiem {
-    float: left;
-    width: 100%;
-    height: 400px;
-    background-color: white;
-    box-shadow: 0 2px 13px rgba(0, 0, 0, .1);
-    color: black;
-}
-
-.select {
-    height: 50px;
-}
-
-.select1 {
-    height: 40px;
-    border: 1px rgb(211, 211, 211) solid;
-    width: 90%;
-    padding: 0px 10px;
-}
-
-.pad {
-    padding: 0px 10px;
-    border: none;
-    border-bottom: 1px rgb(132, 132, 132) solid;
-    outline: none;
-    box-shadow: 0 2px 13px rgba(0, 0, 0, .1);
-}
-
-.bgcam {
-    background-color: #ef7733;
-    border: none;
-}
-
-.menutimkiem {
-    float: left;
-    width: 100%;
-    margin-top: 80px;
-    height: 50px;
-    background-color: rgb(211, 211, 211);
-    text-align: center;
-}
-
-.menutimkiem a {
-    margin: 0 auto;
-    width: 100%;
-    line-height: 50px;
-    font-size: 150%;
-    color: black;
-    font-weight: bolder;
-}
-
-.menutimkiem a i {
-    background-color: #ef7733;
-    padding: 9px;
-    border-radius: 50%;
-    color: white;
-}
-
-.boxtim {
-    height: 500px;
-    background-color: #FFF;
-    margin: 0 auto;
-    top: 50px;
-    left: 0;
-    display: none;
-}
-
-#hien {
-    display: none;
-} */
 
 .nav-menu>ul>li:hover .sub-menu {
     display: block;

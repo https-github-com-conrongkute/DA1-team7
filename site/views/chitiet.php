@@ -38,7 +38,7 @@
             <div class="nav-menu">
                 <ul>
                     <li><a href="index.php">Trang chủ </a> </li>
-                    <li><a href="?ctrl=home&act=danhsach&loai_can=1">Danh sách nhà thuê</a> </li>
+                    <li><a href="?ctrl=home&act=danhsach&ma_quan=4">Danh sách nhà thuê</a> </li>
                     <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                     <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
                     <?php if (isset($_SESSION['user']) == true) { ?>
@@ -307,14 +307,13 @@
                 <div class="div-text">
                     <p>Tìm nhanh</p>
                 </div>
-                <form action="#" method="post" class="tim-kiemm">
+                <form action="?ctrl=home&act=timkiemnhanh" method="post" class="tim-kiemm1">
                     <label for="" class="form-txt">Loại căn hộ :</label>
                     <div class="div">
-                        <select name="" id="" style="font-size: 10pt;">
-                            <option value="" checked>Nhà Riêng</option>
-                            <option value="">Đất Nền</option>
-                            <option value="">Chung Cư/Căn Hộ</option>
-                            <option value="">Đất Nền Dự Án</option>
+                        <select name="loai_can" id="" style="font-size: 10pt;">
+                            <?php foreach($loaican as $ls){?>
+                                <option value="<?=$ls["ma_loai"]?>"><?=$ls["ten_can"]?></option>
+                            <?php }?>
                         </select>
                     </div>
                     <div class="div">
@@ -323,19 +322,19 @@
                         </select>
                     </div>
                     <div class="div">
-                        <select name="" id="" style="font-size: 10pt;">
+                        <select name="ma_quan" id="" style="font-size: 10pt;">
                             <?php foreach ($quanall as $q) { ?>
-                                <option value="<?= $q['ma_quan'] ?>"><?= $q['ten_quan'] ?></option>
+                                <option value="<?=$q['ma_quan'] ?>"><?= $q['ten_quan'] ?></option>
                             <?php } ?>
                         </select>
                     </div>
                     <div class="sub">
-                        <input type="submit" value="Tìm nhanh">
+                        <input type="submit" name="timnhanh" value="Tìm nhanh">
                     </div>
                 </form>
             </div>
 
-            <div class="form-timkiem">
+            <div class="form-timkiemlancan">
                 <div class="div-text">
                     <p>Các quận lân cận</p>
                 </div>
@@ -344,62 +343,22 @@
 
                     <ul class="lancan">
                     
+                    <?php foreach($quan as $q) {
+                        $soluong=soluongcanhoinquan($q["ma_quan"]);
+                       ?>
                         <li>
 
-                            <a href="#"> <span class=""> Quận 2 </span> <span class="count">(1186)</span> </a>
+
+                            <a href="?ctrl=home&act=danhsach&ma_quan=<?= $q["ma_quan"]?>"> <span class=""> <?=$q["ten_quan"]?> </span> <span class="count">SL: (<?php echo $soluong["soluong"]?>)</span> </a>
 
                         </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận 7 </span> <span class="count">(652)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận 9 </span> <span class="count">(611)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận 4 </span> <span class="count">(514)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận Bình Thạnh </span> <span class="count">(496)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận Tân Phú </span> <span class="count">(381)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận 1 </span> <span class="count">(312)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận 10 </span> <span class="count">(278)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Huyện Nhà Bè </span> <span class="count">(223)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận Bình Tân </span> <span class="count">(212)</span> </a>
-
-                        </li>
+                    <?php }?>
                     </ul>
 
 
                 </form>
             </div>
-            <div class="form-timkiemlancan ">
+            <div class="form-timkiemlancan " style="overflow: hidden;">
                 <div class="div-text" >
                     <p>Các phường trong quận</p>
                 </div>
@@ -412,7 +371,7 @@
                         ?>
                         <li>
 
-                            <a href="#"> <span class=""> <?=$p["phuong"]?> </span> <span class="count"></span> </a>
+                            <a href="?ctrl=home&act=danhsach&ma_quan=<?=$row["ma_quan"]?>&id=<?=$p["id"]?>"> <span class=""> <?=$p["phuong"]?> </span> <span class="count"></span> </a>
 
                         </li>
                         <?php }?>

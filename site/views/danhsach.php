@@ -183,8 +183,9 @@
             </div>
 
             <div id="view-as-grid" class="row list-layout-0 list-item">
-                <?php foreach ($dsch_tl as $ch) { ?>
-                    
+                <?php foreach ($dsch_tl as $ch) {
+                    ?>   
+                      
                     <div class="col-6 col-lg-4">
                     <a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>">
                         <div class="item is-feature">
@@ -224,13 +225,13 @@
                 <div class="div-text">
                     <p>Tìm nhanh</p>
                 </div>
-                <form action="#" method="post" class="tim-kiemm">
+                <form action="?ctrl=home&act=timkiemnhanh" method="post" class="tim-kiemm">
                     <label for="" class="form-txt">Loại căn hộ :</label>
                     <div class="div">
-                        <select name="" id="" style="font-size: 10pt;">
-                            <option value="" checked>Nhà Riêng</option>
-                            <option value="">Nhà trọ</option>
-                            <option value="">Chung Cư/Căn Hộ</option>
+                        <select name="loai_can" id="" style="font-size: 10pt;">
+                        <?php foreach( $loaican as $ls) {?>
+                            <option value="<?=$ls["ma_loai"]?>"><?=$ls["ten_can"]?></option>
+                        <?php }?>
                         </select>
                     </div>
                     <div class="div">
@@ -239,150 +240,59 @@
                         </select>
                     </div>
                     <div class="div">
-                        <select name="" id="" style="font-size: 10pt;">
-                            <option value="" checked>Quận 1</option>
-                            <option value="">Quận 2</option>
-                            <option value="">Quận 3</option>
-                            <option value="">Quận 4</option>
-                            <option value="">Quận 5</option>
-                            <option value="">Quận 6</option>
-                            <option value="">Quận 7</option>
-                            <option value="">Quận 8</option>
-                            <option value="">Quận 9</option>
-                            <option value="">Quận 10</option>
-                            <option value="">Quận 11</option>
-                            <option value="">Quận 12</option>
-                            <option value="">Quận Gò Vấp</option>
+                        <select name="ma_quan" id="" style="font-size: 10pt;">
+                        <?php foreach($quan as $q) {?>
+                            <option value="<?=$q["ma_quan"]?>"><?=$q["ten_quan"]?></option>
+                        <?php }?>
                         </select>
                     </div>
                     <div class="sub">
-                        <input type="submit" value="Tìm nhanh">
+                        <input type="submit" name="timnhanh" value="Tìm nhanh">
                     </div>
                 </form>
             </div>
 
-            <div class="form-timkiem">
+            <div class="form-timkiem" style="overflow: hidden;">
                 <div class="div-text">
                     <p>Các quận lân cận</p>
                 </div>
-                <form action="#" method="post" class="tim-kiemm">
+                <form action="#" method="post" class="tim-kiemmphuong">
 
 
                     <ul class="lancan">
+                    <?php foreach($quanz as $q) {
+                        $soluong=soluongcanhoinquan($q["ma_quan"]);
+                       ?>
                         <li>
 
-                            <a href="#"> <span class=""> Quận 2 </span> <span class="count">(1186)</span> </a>
+
+                            <a href="?ctrl=home&act=danhsach&ma_quan=<?= $q["ma_quan"]?>"> <span class=""> <?=$q["ten_quan"]?> </span> <span class="count">SL: (<?php echo $soluong["soluong"]?>)</span> </a>
 
                         </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận 7 </span> <span class="count">(652)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận 9 </span> <span class="count">(611)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận 4 </span> <span class="count">(514)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận Bình Thạnh </span> <span class="count">(496)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận Tân Phú </span> <span class="count">(381)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận 1 </span> <span class="count">(312)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận 10 </span> <span class="count">(278)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Huyện Nhà Bè </span> <span class="count">(223)</span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Quận Bình Tân </span> <span class="count">(212)</span> </a>
-
-                        </li>
+                    <?php }?>
                     </ul>
 
 
                 </form>
             </div>
             <!-- Phường -->
-            <div class="form-timkiem">
+            <div class="form-timkiem" style="overflow: hidden;">
                 <div class="div-text">
                     <p>Các phường trong Quận</p>
                 </div>
-                <form action="#" method="post" class="tim-kiemm">
-
-
-                    <ul class="lancan">
+                <form action="#" method="post" class="tim-kiemmphuong">
+                <ul class="lancan">
+                    <?php if (isset($ma_quan)&& ($ma_quan !=Null)) {
+                        $phuong=getphuongbyidquan($ma_quan);
+                        foreach($phuong as $p){
+                        ?>
+                    
                         <li>
 
-                            <a href="#"> <span class=""> Phường 1 </span> </a>
+                            <a href="?ctrl=home&act=danhsach&ma_quan=<?=$ma_quan?>&id=<?=$p["id"]?>"> <span class=""> <?=$p["phuong"]?> </span> </a>
 
                         </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 2 </span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 3 </span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 4 </span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 5 </span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 6 </span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 7 </span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 8 </span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 9 </span> </a>
-
-                        </li>
-                        <li>
-
-                            <a href="#"> <span class=""> Phường 10</span> </a>
-
-                        </li>
+                    <?php } }?>
                     </ul>
 
 
@@ -447,7 +357,7 @@
             </div>
             <div class="textquan">
                 <div class="quan1 l1">
-                    <?php foreach ($quan as $q) {
+                    <?php foreach ($quanzz as $q) {
                         $stt += 1; ?>
                         <p><a href="?ctrl=home&act=danhsach&ma_quan=<?= $q["ma_quan"]?>"><?= $q["ten_quan"]?></a></p>
 

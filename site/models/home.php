@@ -31,6 +31,19 @@ function getCanho_theoquan($ma_quan, $page_num, $path_size){
     $sql = "SELECT * FROM can_ho WHERE ma_quan='$ma_quan' AND an_hien = 1 LIMIT $start_list,$path_size";
     return query($sql);
 }
+//Xem căn hộ theo phường
+function getCanho_theophuong($id, $page_num, $path_size){
+    $start_list = ceil($page_num - 1) * $path_size;
+    $sql = "SELECT * FROM can_ho WHERE id='$id' AND an_hien = 1 LIMIT $start_list,$path_size";
+    return query($sql);
+}
+//Xem căn hộ theo quận và loại căn
+function getCanho_theoquanvaloaican($loaican, $ma_quan, $page_num, $path_size){
+    $start_list = ceil($page_num - 1) * $path_size;
+    $sql = "SELECT * FROM can_ho WHERE ma_quan='$ma_quan' AND ma_loai='$loaican' AND an_hien = 1 LIMIT $start_list,$path_size";
+    return query($sql);
+}
+
 // Xem căn hộ theo loại giá giảm dàn
 function getCanho_theogia_giam($loaican, $page_num, $path_size){
     $start_list = ceil($page_num - 1) * $path_size;
@@ -42,12 +55,15 @@ function getCanho_theogia_tang($loaican, $page_num, $path_size){
     $sql = "SELECT * FROM can_ho WHERE ma_loai='$loaican' AND an_hien = 1 ORDER BY gia_thue ASC LIMIT $start_list,$path_size";
     return query($sql);
 }
-//Xem quận
+
+//Xem tất cả các quận
 function getALL_Quan(){
     $sql = "SELECT * FROM quan";
     return query($sql);
 }
-//Đếm căn hộ theo loại căn
+
+
+//Đếm căn hộ theo loại căn theo quận và theo phuòng
 function Demcanhotheoloai($loaican){
     $sql = "SELECT count(*) as sodong FROM can_ho WHERE ma_loai='$loaican'";
     $row = query($sql);
@@ -60,6 +76,21 @@ function Demcanhotheoquan($ma_quan){
     $kq = $row->fetch();
     return $kq['sodong'];
 }
+function Demcanhotheophuong($id){
+    $sql = "SELECT count(*) as sodong FROM can_ho WHERE id='$id'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['sodong'];
+}
+//Đếm căn hộ theo quận và loại căn
+function Demcanhotheoquanvaloaican($loaican,$ma_quan){
+    $sql = "SELECT count(*) as sodong FROM can_ho WHERE ma_quan='$ma_quan' AND ma_loai='$loaican'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['sodong'];
+}
+
+
 // Xem 1 căn hộ
 function getcan_hoByid($ma_can){
     $sql = "SELECT * FROM can_ho WHERE ma_can='$ma_can'";
@@ -233,13 +264,20 @@ function datlichid($ma_can, $ma_tk, $ngay_xem, $ngay_dat){
     execute($sql);
 
 }
-//checklichdat
-// function checklich($ma_can, $ma_tk){
-//     $sql = "SELECT count(*) as soluong FROM dat_lich WHERE ma_can = '$ma_can' and ma_tk='$ma_tk'";
-//     $row = query($sql);
-//     $kq = $row->fetch();
-//     return $kq['soluong'];
-// }
+
+//đếm số lượng căn hộ trong 1 quận
+function soluongcanhoinquan($ma_quan){
+    $sql = "SELECT count(*) as soluong FROM can_ho WHERE ma_quan = '$ma_quan'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['soluong'];
+}
+//xóa đặt lịch
+function xoadatlich($id){
+    $sql="DELETE FROM dat_lich where ma_dat='$id'";
+    execute($sql);
+}
+
 
 
 ?> 

@@ -42,6 +42,13 @@
     color: white;
 }
 
+.tim-kiemmphuong {
+    overflow: scroll;
+    width: 98%;
+    margin: 0px 10px;
+    height: 300px;
+}
+
 
 /*Tièm kiếm*/
 
@@ -81,6 +88,11 @@
     border-bottom: 1px rgb(132, 132, 132) solid;
     outline: none;
     box-shadow: 0 2px 13px rgba(0, 0, 0, .1);
+}
+
+.count {
+    margin-left: 10px;
+    color: #bababa;
 }
 
 .bgcam {
@@ -325,7 +337,7 @@ body {
     list-style: none;
 }
 
-.sub-menu>li:hover {
+.sub-menu>li:hover a {
     background-color: white;
     padding: 5px;
     width: 100%;
