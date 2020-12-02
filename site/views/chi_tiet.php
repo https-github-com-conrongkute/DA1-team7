@@ -56,7 +56,7 @@
           </div>
           <div class="divmota3">
               Giá: <a><?=number_format($can_ho["gia_thue"],0,'','.')?> VND - <?=$can_ho["dien_tich"]?> m²</a>
-              
+              <span style="display: none;"><?=$can_ho["ma_can"]?></span>
               <input type="button" value="Đặt lịch xem" class="datlichid" data-toggle="modal" data-target="#datlich" data-dismiss="modal">
               
           </div>
@@ -68,7 +68,7 @@
         var btnClick = $(this);
         
        var id = btnClick.prev().html();
-      
+      alert(id);
        $.get("?ctrl=home&act=dat_lich", {'canhoid': id},
        function (data) {
                     $('#datlich').html(data);

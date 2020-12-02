@@ -193,12 +193,12 @@
                             <div class="divtext ">
                                 <h2 class="height-search"><a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>" class="title"><?= $ch['ten_can_ho'] ?></a></h2>
                                 <div class="imeta-1"> <b><?= $ch['dia_chi'] ?></b> </div>
-                                <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong>1</strong></span> </div>
+                                <div class="imeta-3"> <span><i class="fa fa-compass"></i> <strong></strong></span> <span><i class="fa fa-bed"></i> <strong>1</strong></span> <span><i class="fa fa-building"></i> <strong><?=$ch['tang']?></strong></span> </div>
                                 <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
-                                    <div class="price2"><b><?= $ch['dien_tich'] ?>/m²</b></div>
+                                  
                                 </div>
                                 <div class="wprice">
-                                    <div class="imeta-2"> <span><b><?=number_format($ch['gia_thue'],0,'','.') ?> VNĐ</b></span> <span><b>45 m²</b></span> </div>
+                                    <div class="imeta-2"> <span><b><?=number_format($ch['gia_thue'],0,'','.') ?> VNĐ</b></span> <span><b><?=$ch['dien_tich']?> m²</b></span> </div>
                                     <div link="thue/can-ho/hcm/quan-3/id277377" listingid="277377" object='{"id":277377 }' class="btnlike  save-listing save-listing-277377"> <span> </span> </div>
                                 </div>
                             </div>

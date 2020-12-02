@@ -396,6 +396,7 @@ switch ($act) {
       if (isset($_POST["dat"])) {
 
         $ma_can = $_POST['ma_can'];
+        
         $ma_tk = $_POST['ma_tk'];
         $ngay_xem = $_POST["ngay_xem"];
         $ngay_dat = $_POST["ngay_dat"];

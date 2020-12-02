@@ -404,7 +404,12 @@ label {
 }
 
 .tt-right::-webkit-scrollbar {
-    display: none;
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+    width: 5px;
+}
+.tt-right::-webkit-scrollbar-thumb {
+    background-color: #000000;
 }
 
 .thongbaoch {
