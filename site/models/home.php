@@ -470,11 +470,9 @@ function datlichid($ma_can, $ma_tk, $ngay_xem, $ngay_dat){
 }
 
 //đếm số lượng căn hộ trong 1 quận
-function soluongcanhoinquan($ma_quan){
-    $sql = "SELECT count(*) as soluong FROM can_ho WHERE ma_quan = '$ma_quan' AND an_hien=1";
-    $row = query($sql);
-    $kq = $row->fetch();
-    return $kq['soluong'];
+function soluongcanhoinquan($id){
+    $sql = "SELECT count(*) as soluong FROM can_ho where ma_quan='$id' and an_hien=1";
+    return queryOne($sql);
 }
 //xóa đặt lịch
 function xoadatlich($id){
