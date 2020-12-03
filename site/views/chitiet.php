@@ -63,16 +63,17 @@
                 <!--Tiềm kiếm ẩn-->
                 <div class="tiemkiemtrong">
                     <h4>Thuê</h4>
-                    <form action="" class="formtimkiem1">
+                    <form action="?ctrl=home&act=timkiemall" class="formtimkiem1" method="POST">
                         <div class="row mtop">
                             <div class="col-3">
-                                <select name="" id="" class="w-75 select pad" style="font-size: 10pt;">
-                                    <option value="">Căn hộ/Chung cư</option>
-                                    <option value="">Nhà ở</option>
-                                </select>
+                            <select name="loai_can" id="" class="w-75 select pad">
+                                        <?php foreach($loaicanz as $lc) {?>
+                                        <option value="<?=$lc["ma_loai"]?>"><?=$lc["ten_can"]?></option>
+                                        <?php }?>
+                            </select>
                             </div>
                             <div class="col-6">
-                                <input type="text" class="w-100 select2 pad" style="border: none; font-size: 12pt; height: 50px; border-bottom: 1px gray solid;" placeholder="Nhập địa chỉ để tiềm kiếm căn hộ...">
+                                <input type="text" name="key" class="w-100 select2 pad" style="border: none; font-size: 12pt; height: 50px; border-bottom: 1px gray solid;" placeholder="Nhập địa chỉ để tiềm kiếm căn hộ...">
                             </div>
                             <div class="col-3">
                                 <button class="w-75 select2 bgcam" style="font-size: 10pt; color: white;">Tìm kiếm <i class="fa fa-search"></i></button>
@@ -87,72 +88,68 @@
 
                                 </select></div>
                             <div class="col-3">
-                                <select name="" id="" class="select1 " style="font-size: 10pt;">
-                                    <option value="">Quận/Huyện</option>
-                                    <option value="">Quận 1</option>
-                                    <option value="">Quận 2</option>
-                                    <option value="">Quận 3</option>
-                                </select>
+                            <select name="ma_quan" id="" class="select1 " style="font-size: 10pt;">
+                                        <option value="0">Quận</option>
+                                        <?php foreach($quanz as $q) {?>
+                                            <option value="<?=$q["ma_quan"]?>"><?=$q["ten_quan"]?></option>
+                                        <?php }?>
+                                    </select>
                             </div>
                             <div class="col-3">
-                                <select name="" id="" class="select1" style="font-size: 10pt;">
-                                    <option value="">Mức giá</option>
-                                    <option value="">Dưới 3 triệu</option>
-                                    <option value="">3 triệu - 5 triệu</option>
-                                    <option value="">5 triệu - 8 triệu</option>
-                                    <option value="">8 triệu - 10 triệu</option>
-                                    <option value="">10 triệu - 15 triệu</option>
-                                    <option value="">15 triệu - 20 triệu</option>
-                                    <option value="">Trên 20 triệu</option>
-                                </select>
+                            <select name="mucgia" id="" class="select1" style="font-size: 10pt;">
+                                    <option value="0">Mức giá</option>
+                                    <option value="1">Dưới 3 triệu</option>
+                                    <option value="2">3 triệu - 5 triệu</option>
+                                    <option value="3">5 triệu - 8 triệu</option>
+                                    <option value="4">8 triệu - 10 triệu</option>
+                                    <option value="5">10 triệu - 15 triệu</option>
+                                    <option value="6">15 triệu - 20 triệu</option>
+                                    <option value="7">Trên 20 triệu</option>
+                                    </select>
                             </div>
                             <div class="col-3">
-                                <select name="" id="" class="select1 " style="font-size: 10pt;">
-                                    <option value="">Diện tích</option>
-                                    <option value="">10 - 20 m2</option>
-                                    <option value="">20 - 30 m2</option>
-                                </select>
+                            <select name="dientich" id="" class="select1 " style="font-size: 10pt;">
+                                        <option value="0">Diện tích</option>
+                                        <option value="1">10 - 50 m²</option>
+                                        <option value="2">50 - 100 m²</option>
+                                        <option value="3">100 - 200 m²</option>
+                                    </select>
                             </div>
 
                         </div>
                         <div class="row mtop">
-                            <div class="col-3">
-                                <select name="" id="" class="select1 " style="font-size: 10pt;">
-                                    <option value="">Số tầng</option>
-                                    <?php for ($i = 1; $i <= 10; $i++) {
-                                    ?>
-                                        <option value=""><?= $i ?></option>
-                                    <?php
-                                    } ?>
-                                </select>
-                            </div>
-                            <div class="col-3">
-                                <select name="" id="" class="select1 " style="font-size: 10pt;">
+
+                            <div class="col-4">
+                                <select name="sophongngu" id="" class="select1 " style="font-size: 10pt;">
                                     <option value="">Số phòng ngủ</option>
                                     <?php for ($i = 1; $i <= 10; $i++) {
                                     ?>
-                                        <option value=""><?= $i ?></option>
+                                        <option value="<?= $i ?>"><?= $i ?></option>
                                     <?php
                                     } ?>
                                 </select>
                             </div>
-                            <div class="col-3">
-                                <select name="" id="" class="select1 " style="font-size: 10pt;">
+                            <div class="col-4">
+                                <select name="sophongvs" id="" class="select1 " style="font-size: 10pt;">
                                     <option value="">Số phòng vệ sinh</option>
                                     <?php for ($i = 1; $i <= 10; $i++) {
                                     ?>
-                                        <option value=""><?= $i ?></option>
+                                        <option value="<?= $i ?>"><?= $i ?></option>
                                     <?php
                                     } ?>
                                 </select>
                             </div>
-                            <div class="col-3">
-                                <select name="" id="" class="select1 " style="font-size: 10pt;">
-                                    <option value="">Hướng nhà</option>
-                                    <option value="">Đông</option>
-                                    <option value="">Tây</option>
-                                    <option value="">Nam</option>
-                                    <option value="">Bắc</option>
+                            <div class="col-4">
+                                <select name="huongnha" id="" class="select1 " style="font-size: 10pt;">
+                                <option value="0">Hướng nhà</option>
+                                        <option value="1">Đông</option>
+                                        <option value="2">Tây</option>
+                                        <option value="3">Nam</option>
+                                        <option value="4">Bắc</option>
+                                        <option value="5">Đông Bắc </option>
+                                        <option value="6">Đông Nam</option>
+                                        <option value="7">Tây Bắc</option>
+                                        <option value="8">Tây Bắc</option>
                                 </select>
                             </div>
                         </div>

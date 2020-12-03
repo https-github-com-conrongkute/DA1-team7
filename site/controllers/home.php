@@ -213,7 +213,9 @@ switch ($act) {
   case 'dangtin':
     $quan = getallquan();
     $loaican = getallloai_can();
+    $loaican1 = getallloai_can();
     $quanall = getallquan();
+    $quanallz = getallquan();
     require_once 'views/dangtin.php';
     break;
   case 'danhsach':
@@ -254,7 +256,10 @@ switch ($act) {
     $quan = getallquan();
     $quanz = getallquan();
     $quanzz = getallquan();
+    $quanzzz = getallquan();
     $loaican=getallloai_can();
+    $loaicanz=getallloai_can();
+    
     require_once 'views/danhsach.php';
     break;
   case 'phuong':
@@ -281,7 +286,9 @@ switch ($act) {
     $row = getcan_hoByid($ma_can);
     $quanall = getallquan();
     $quan = getallquan();
-      $loaican=getallloai_can();
+    $quanz = getallquan();
+    $loaican=getallloai_can();
+    $loaicanz=getallloai_can();
     require_once 'views/chitiet.php';
     break;
   case 'ch-dd':
@@ -600,6 +607,32 @@ switch ($act) {
           }
           
         require_once 'views/danhsach.php';
+        break;
+
+        //timkiemall
+        case 'timkiemall':
+          $loai_can=$_POST["loai_can"];
+          $key=$_POST["key"];
+          $ma_quan=$_POST["ma_quan"];
+          $mucgia=$_POST["mucgia"];
+          $dien_tich=$_POST["dientich"];
+          $sophongngu=$_POST["sophongngu"];
+          $sophongvs=$_POST["sophongvs"];
+          $huongnha=$_POST["huongnha"];
+          $page_num = 1;
+          if (isset($_GET['page']) == true) $page_num = $_GET['page'];
+          $page_size = PATH_SITE;
+          $dsch_tl = getCanho_all($loai_can, $key, $ma_quan, $mucgia, $dien_tich, $sophongngu, $sophongvs, $huongnha, $page_num, $page_size);
+          $toltal_rows = Demcanhoall($loai_can, $key, $ma_quan, $mucgia, $dien_tich, $sophongngu, $sophongvs, $huongnha);
+          $basrurl = SITE_URL . "/?act=danhsach&key={$key}";
+          $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+          $quan = getallquan();
+          $quanz = getallquan();
+          $quanzz = getallquan();
+          $quanzzz = getallquan();
+          $loaican=getallloai_can();
+          $loaicanz=getallloai_can();
+          require_once 'views/danhsach.php';
         break;
 
 

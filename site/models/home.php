@@ -92,6 +92,69 @@ function getCanho_theosx($sapxep, $loai_can, $page_num, $path_size){
     return query($sql);
 }
 
+//Tìm kiêm căn hộ ở trang đăng tin
+function getCanho_all($loai_can, $key, $ma_quan, $mucgia, $dien_tich, $sophongngu, $sophongvs, $huongnha, $page_num, $path_size){
+    $start_list = ceil($page_num - 1) * $path_size;
+    $sql = "SELECT * FROM can_ho WHERE ma_loai='$loai_can'";
+    //key search
+    if (isset($key)&&($key!="")) {
+        $sql.=" AND ten_can_ho like '%".$key."%' ";
+    }
+    //Quận
+    if (isset($ma_quan)&&($ma_quan != 0)){
+        $sql.=" AND ma_quan = '$ma_quan' ";
+    }
+    //Mức giá
+    if($mucgia==0){
+        $sql.="";
+    }
+    elseif ($mucgia==1) {
+        $sql.=" AND gia_thue < 3000000";
+    }
+    elseif ($mucgia==2) {
+        $sql.=" AND 3000000 <= gia_thue AND gia_thue <= 5999999";
+    }
+    elseif ($mucgia==3) {
+        $sql.=" AND 5000000 <= gia_thue AND gia_thue <= 8999999";
+    }
+    elseif ($mucgia==4) {
+        $sql.=" AND 8000000 < gia_thue AND gia_thue <= 19999999";
+    }
+    elseif ($mucgia==5) {
+        $sql.=" AND 10000000 <= gia_thue AND gia_thue <= 15999999";
+    }
+    elseif ($mucgia==6) {
+        $sql.=" AND 15000000 <= gia_thue AND gia_thue <= 29999999";
+    }
+    elseif ($mucgia==7) {
+        $sql.=" AND  gia_thue >= 20000000";
+    }
+    if($dien_tich==0){
+        $sql.=" ";
+    }
+    elseif ($dien_tich==1) {
+        $sql.=" AND dien_tich <= 50";
+    }
+    elseif ($dien_tich==2) {
+        $sql.=" AND dien_tich >= 50  AND dien_tich <= 100 ";
+    }
+    elseif ($dien_tich==3) {
+        $sql.=" AND dien_tich >= 100 ";
+    }
+    //số phòng ngủ
+    if (isset($sophongngu)&&($sophongngu != 0)){
+        $sql.=" AND so_phong_ngu = '$sophongngu' ";
+    }
+    if (isset($sophongvs)&&($sophongvs != 0)){
+        $sql.=" AND so_phong_vs = '$sophongvs' ";
+    }
+    if (isset($huongnha)&&($huongnha != 0)){
+        $sql.=" AND huong_nha = '$huongnha' ";
+    }
+    $sql.=" AND an_hien = 1 ORDER BY gia_thue asc LIMIT $start_list,$path_size";
+    return query($sql);
+}
+
 
 // Xem căn hộ theo loại giá giảm dàn
 function getCanho_theogia_giam($loaican, $page_num, $path_size){
@@ -167,7 +230,68 @@ function Demcanhotheogia( $loai_can, $mucgia){
     $kq = $row->fetch();
     return $kq['sodong'];
 }
-
+//dem căn hộ khi tim kiếm all
+function Demcanhoall($loai_can, $key, $ma_quan, $mucgia, $dien_tich, $sophongngu, $sophongvs, $huongnha){
+    $sql = "SELECT count(*) as sodong FROM can_ho WHERE ma_loai='$loai_can'";
+    if (isset($key)&&($key!="")) {
+        $sql.=" AND ten_can_ho like '%".$key."%' ";
+    }
+    //Quận
+    if (isset($ma_quan)&&($ma_quan != 0)){
+        $sql.=" AND ma_quan = '$ma_quan' ";
+    }
+    //Mức giá
+    if($mucgia==0){
+        $sql.="";
+    }
+    elseif ($mucgia==1) {
+        $sql.=" AND gia_thue < 3000000";
+    }
+    elseif ($mucgia==2) {
+        $sql.=" AND 3000000 <= gia_thue AND gia_thue <= 5999999";
+    }
+    elseif ($mucgia==3) {
+        $sql.=" AND 5000000 <= gia_thue AND gia_thue <= 8999999";
+    }
+    elseif ($mucgia==4) {
+        $sql.=" AND 8000000 < gia_thue AND gia_thue <= 19999999";
+    }
+    elseif ($mucgia==5) {
+        $sql.=" AND 10000000 <= gia_thue AND gia_thue <= 15999999";
+    }
+    elseif ($mucgia==6) {
+        $sql.=" AND 15000000 <= gia_thue AND gia_thue <= 29999999";
+    }
+    elseif ($mucgia==7) {
+        $sql.=" AND  gia_thue >= 20000000";
+    }
+    if($dien_tich==0){
+        $sql.=" ";
+    }
+    elseif ($dien_tich==1) {
+        $sql.=" AND dien_tich <= 50";
+    }
+    elseif ($dien_tich==2) {
+        $sql.=" AND dien_tich >= 50  AND dien_tich <= 100 ";
+    }
+    elseif ($dien_tich==3) {
+        $sql.=" AND dien_tich >= 100 ";
+    }
+    //số phòng ngủ
+    if (isset($sophongngu)&&($sophongngu != 0)){
+        $sql.=" AND so_phong_ngu = '$sophongngu' ";
+    }
+    if (isset($sophongvs)&&($sophongvs != 0)){
+        $sql.=" AND so_phong_vs = '$sophongvs' ";
+    }
+    if (isset($huongnha)&&($huongnha != 0)){
+        $sql.=" AND huong_nha = '$huongnha' ";
+    }
+    $sql.=" AND an_hien = 1";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['sodong'];
+}
 
 
 
@@ -347,7 +471,7 @@ function datlichid($ma_can, $ma_tk, $ngay_xem, $ngay_dat){
 
 //đếm số lượng căn hộ trong 1 quận
 function soluongcanhoinquan($ma_quan){
-    $sql = "SELECT count(*) as soluong FROM can_ho WHERE ma_quan = '$ma_quan'";
+    $sql = "SELECT count(*) as soluong FROM can_ho WHERE ma_quan = '$ma_quan' AND an_hien=1";
     $row = query($sql);
     $kq = $row->fetch();
     return $kq['soluong'];
