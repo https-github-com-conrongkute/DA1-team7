@@ -134,26 +134,25 @@
                 <h2 style="font-size: 30pt;">Nhà cho thuê mới nhất</h2>
             </div>
             <div class="loc-canho">
-                <form action="" method="get">
-                    <select name="" id="" class="select">
-                        <option value="">Giá từ thấp đến cao</option>
-                        <option value="">Giá từ cao đến thấp</option>
-                        <option value="">Mới nhất</option>
+                <form action="?ctrl=home&act=timkiemtheogia" method="post">
+                    <select name="sxgia" id="" class="select">
+                        <option value="1">Giá từ thấp đến cao</option>
+                        <option value="2">Giá từ cao đến thấp</option>
                     </select>
-                    <select name="" id="" class="select">
+                    <select name="mucgia" id="" class="select">
                         <option value="">Mức giá</option>
-                        <option value="">Dưới 3 triệu</option>
-                        <option value="">3 triệu - 5 triệu</option>
-                        <option value="">5 triệu - 8 triệu</option>
-                        <option value="">8 triệu - 10 triệu</option>
-                        <option value="">10 triệu - 15 triệu</option>
-                        <option value="">15 triệu - 20 triệu</option>
-                        <option value="">Trên 20 triệu</option>
+                        <option value="1">Dưới 3 triệu</option>
+                        <option value="2">3 triệu - 5 triệu</option>
+                        <option value="3">5 triệu - 8 triệu</option>
+                        <option value="4">8 triệu - 10 triệu</option>
+                        <option value="5">10 triệu - 15 triệu</option>
+                        <option value="6">15 triệu - 20 triệu</option>
+                        <option value="7">Trên 20 triệu</option>
                     </select>
-                    <select name="" id="" class="select">
-                        <option value="">Loại căn hộ</option>
-                        <option value="1">Chung cư</option>
-                        <option value="2">Nhà ở</option>
+                    <select name="loai_can" id="" class="select">
+                        <?php foreach($loaican as $lc) {?>
+                            <option value="<?=$lc["ma_loai"]?>"><?=$lc["ten_can"]?></option>
+                        <?php }?>
                     </select>
                     <select name="" id="" class="select">
                         <option value="">Tp. Hồ Chí Minh</option>

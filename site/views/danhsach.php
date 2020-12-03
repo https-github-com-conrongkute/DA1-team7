@@ -292,7 +292,16 @@
                             <a href="?ctrl=home&act=danhsach&ma_quan=<?=$ma_quan?>&id=<?=$p["id"]?>"> <span class=""> <?=$p["phuong"]?> </span> </a>
 
                         </li>
-                    <?php } }?>
+                    <?php } } else {
+                        $phuong=getphuongbyidquan(1);
+                        foreach($phuong as $p){
+                        ?>
+                    <li>
+
+                    <a href="?ctrl=home&act=danhsach&ma_quan=<?=$ma_quan?>&id=<?=$p["id"]?>"> <span class=""> <?=$p["phuong"]?> </span> </a>
+
+                    </li>
+                        <?php } }?>
                     </ul>
 
 

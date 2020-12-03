@@ -43,6 +43,55 @@ function getCanho_theoquanvaloaican($loaican, $ma_quan, $page_num, $path_size){
     $sql = "SELECT * FROM can_ho WHERE ma_quan='$ma_quan' AND ma_loai='$loaican' AND an_hien = 1 LIMIT $start_list,$path_size";
     return query($sql);
 }
+//timkiemcan ho theo gia
+function getCanho_theogia($sapxep, $loaican, $mucgia, $page_num, $path_size){
+    $start_list = ceil($page_num - 1) * $path_size;
+    $sql = "SELECT * FROM can_ho WHERE  ma_loai='$loaican'";
+    if ($mucgia==1) {
+        $sql.=" AND gia_thue < 3000000";
+    }
+    elseif ($mucgia==2) {
+        $sql.=" AND 3000000 <= gia_thue AND gia_thue <= 5999999";
+    }
+    elseif ($mucgia==3) {
+        $sql.=" AND 5000000 <= gia_thue AND gia_thue <= 8999999";
+    }
+    elseif ($mucgia==4) {
+        $sql.=" AND 8000000 < gia_thue AND gia_thue <= 19999999";
+    }
+    elseif ($mucgia==5) {
+        $sql.=" AND 10000000 <= gia_thue AND gia_thue <= 15999999";
+    }
+    elseif ($mucgia==6) {
+        $sql.=" AND 15000000 <= gia_thue AND gia_thue <= 29999999";
+    }
+    elseif ($mucgia==7) {
+        $sql.=" AND  gia_thue >= 20000000";
+    }
+   
+    if ($sapxep==1) {
+        $sql.=" AND an_hien = 1 ORDER BY gia_thue asc LIMIT $start_list,$path_size";
+    }
+    elseif ($mucgia==2) {
+        $sql.=" AND an_hien = 1 ORDER BY gia_thue desc LIMIT $start_list,$path_size";
+    }
+    $sql.="";
+    return query($sql);
+}
+//tìm kiếm căn hộ theo loại căn và sắp xếp
+function getCanho_theosx($sapxep, $loai_can, $page_num, $path_size){
+    $start_list = ceil($page_num - 1) * $path_size;
+    $sql="";
+    if ($sapxep==1) {
+        $sql .= "SELECT * FROM can_ho WHERE  ma_loai='$loai_can' AND an_hien = 1 ORDER BY gia_thue asc LIMIT $start_list,$path_size";
+    }
+    else{
+        $sql .= "SELECT * FROM can_ho WHERE  ma_loai='$loai_can' AND an_hien = 1 ORDER BY gia_thue desc LIMIT $start_list,$path_size";
+    }
+    $sql.="";
+    return query($sql);
+}
+
 
 // Xem căn hộ theo loại giá giảm dàn
 function getCanho_theogia_giam($loaican, $page_num, $path_size){
@@ -89,6 +138,37 @@ function Demcanhotheoquanvaloaican($loaican,$ma_quan){
     $kq = $row->fetch();
     return $kq['sodong'];
 }
+//Đếm căn hộ theo giá
+function Demcanhotheogia( $loai_can, $mucgia){
+    $sql = "SELECT count(*) as sodong FROM can_ho WHERE ma_loai='$loai_can'";
+    if ($mucgia==1) {
+        $sql.=" AND gia_thue < 3000000";
+    }
+    elseif ($mucgia==2) {
+        $sql.=" AND 3000000 <= gia_thue AND gia_thue <= 5999999";
+    }
+    elseif ($mucgia==3) {
+        $sql.=" AND 5000000 <= gia_thue AND gia_thue <= 8999999";
+    }
+    elseif ($mucgia==4) {
+        $sql.=" AND 8000000 < gia_thue AND gia_thue <= 19999999";
+    }
+    elseif ($mucgia==5) {
+        $sql.=" AND 10000000 <= gia_thue AND gia_thue <= 15999999";
+    }
+    elseif ($mucgia==6) {
+        $sql.=" AND 15000000 <= gia_thue AND gia_thue <= 29999999";
+    }
+    elseif ($mucgia==7) {
+        $sql.=" AND  gia_thue >= 20000000";
+    }
+    $sql.="";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['sodong'];
+}
+
+
 
 
 // Xem 1 căn hộ

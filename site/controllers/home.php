@@ -10,6 +10,7 @@ switch ($act) {
     $ds_ch = getALLcan_hoNew();
     $ds_ch2 = getALL_canhoNew2();
     $quan = getallquan();
+    $loaican=getallloai_can();
     require_once 'views/layout.php';
     break;
   case 'chi_tiet':
@@ -535,6 +536,14 @@ switch ($act) {
       DeleteCanho_dd($ma_can);
       header('location: index.php?act=ch-dd&ma_tk='.$_SESSION['id'].'');
       break;
+      
+      //Hủy lịch đả đặt
+      case 'deletedatlich':
+        $ma_dat=$_GET["ma_dat"];
+        xoadatlich($ma_dat);
+        $thongbao="Hủy thành công";
+        header("location: ".SITE_URL."/?ctrl=home&act=lichsu&ma_tk=".$_SESSION['id']."");
+      break;
 
       //tìm kiếm nhanh
       case 'timkiemnhanh':
@@ -558,10 +567,41 @@ switch ($act) {
       }
         break;
 
-        case 'deletedatlich':
-          $ma_dat=$_GET["ma_dat"];
-          xoadatlich($ma_dat);
-          $thongbao="Hủy thành công";
-          header("location: ".SITE_URL."/?ctrl=home&act=lichsu&ma_tk=".$_SESSION['id']."");
+        //Tìm kiếm ở trang chủ
+        case 'timkiemtheogia':
+          $sapxep=$_POST["sxgia"];
+          $loai_can=$_POST["loai_can"];
+          $page_num = 1;
+          if (isset($_POST["mucgia"]) && ($_POST["mucgia"]!=NULL)) {
+          $mucgia=$_POST["mucgia"];
+            if (isset($_GET['page']) == true) $page_num = $_GET['page'];
+          $page_size = PATH_SITE;
+          $dsch_tl = getCanho_theogia($sapxep, $loai_can, $mucgia, $page_num, $page_size);
+          $toltal_rows = Demcanhotheogia( $loai_can, $mucgia);
+          $basrurl = SITE_URL . "/?act=danhsach&ma_loai={$loai_can}";
+          $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+          $quan = getallquan();
+          $quanz = getallquan();
+          $quanzz = getallquan();
+          $loaican=getallloai_can();
+          }
+          else{
+
+            if (isset($_GET['page']) == true) $page_num = $_GET['page'];
+          $page_size = PATH_SITE;
+          $dsch_tl = getCanho_theosx($sapxep, $loai_can, $page_num, $page_size);
+          $toltal_rows = Demcanhotheoloai($loai_can);
+          $basrurl = SITE_URL . "/?act=danhsach&ma_loai={$loai_can}";
+          $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+          $quan = getallquan();
+          $quanz = getallquan();
+          $quanzz = getallquan();
+          $loaican=getallloai_can();
+          }
+          
+        require_once 'views/danhsach.php';
         break;
+
+
+        
 }
