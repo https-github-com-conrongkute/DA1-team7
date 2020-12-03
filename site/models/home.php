@@ -481,7 +481,11 @@ function xoadatlich($id){
     $sql="DELETE FROM dat_lich where ma_dat='$id'";
     execute($sql);
 }
-
+//đang ký tìm nhanh
+function themdangky($ho_ten, $email, $sdt){
+    $sql="INSERT into dangkytimnha (ho_ten, email, sdt, trangthai) value ('$ho_ten', '$email', '$sdt', 0)";
+    execute($sql);
+}
 
 
 ?> 

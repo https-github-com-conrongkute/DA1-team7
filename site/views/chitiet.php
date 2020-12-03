@@ -270,7 +270,7 @@
                     </div>
                     <?php if (isset($_SESSION["id"])) {
                         ?>
-                        <form action="?ctrl=home&act=datlichxem" name="myform" method="post" class="form-tuvan"  onsubmit="return validateform()">
+                        <form action="?ctrl=home&act=datlichxem" method="post" class="form-tuvan"  name="myform"  onsubmit="return validateform()">
                         <div class="fiel">
                             <input type="hidden" name="ma_can" value="<?= $row['ma_can'] ?>" id="" style="font-size: 10pt;" placeholder="Nhập tên của bạn">
                         </div>

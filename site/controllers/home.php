@@ -93,7 +93,7 @@ switch ($act) {
         $mail->addAddress($email, $user); //mail và tên người nhận       
         $mail->isHTML(true);  // Set email format to HTML
         $mail->Subject = 'Kích hoạt tài khoản';
-        $linkKH = "<a href='http://localhost:/Github/DA1-team7/site/?act=kichhoat&id=" . $idUser . "'>Nhấp vào đây</a>";
+        $linkKH = "<a href='http://localhost:8888/Github/DA1-team7/site/?act=kichhoat&id=" . $idUser . "'>Nhấp vào đây</a>";
         // $linKH = sprintf($linkKH, $idUser);
         $mail->Body = "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản: " . $linkKH;
         $mail->send();
@@ -635,6 +635,13 @@ switch ($act) {
           require_once 'views/danhsach.php';
         break;
 
-
-        
+        case 'dangkytim';
+        if (isset($_POST["dangky"])) {
+         $ho_ten=$_POST["ho_ten"];
+         $email=$_POST["email"];
+         $sdt=$_POST["sdt"];
+         themdangky($ho_ten, $email, $sdt);
+        header("location: ".SITE_URL."?ctrl=home&act=index");
+      }
+      break;
 }

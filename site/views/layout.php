@@ -90,10 +90,12 @@
             </div>
             <div class="dangky">
                 <h3>Đăng ký tìm nhà siêu tốc !</h3>
-                <input type="text" placeholder="Họ và tên">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Số điện thoại">
-                <input class="submit" type="submit" value="Tham gia ngay">
+                <form action="?ctrl=home&act=dangkytim" method="post" name="myform"  onsubmit="return validateform()">
+                <input type="text" name="ho_ten" placeholder="Họ và tên">
+                <input type="email" name="email" placeholder="Email">
+                <input type="number"name="sdt" placeholder="Số điện thoại">
+                <input class="submit" name="dangky" type="submit" value="Tham gia ngay">
+                </form>
             </div>
             <div class="dangky2">
                 <div class="text1">
@@ -378,3 +380,28 @@
 
 </html>
 <script src="./views/js/index.js"></script>
+<script>
+        function validateform() {
+        var name = document.myform.ho_ten.value;
+        var email = document.myform.email.value;
+        var sdt = document.myform.sdt.value;
+        var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+        if (name == null || name == "" || name.length < 2) {
+          swal("Bạn chưa nhập tên", "Vui lòng nhập !", "warning");
+            return false;
+        }
+        if (email == null || email == "" ) {
+          swal("Bạn chưa nhập email", "Vui lòng nhập !", "warning");
+            return false;
+        }  
+        if (sdt == null || sdt == "" || vnf_regex.test(sdt) == false ) {
+          swal("Số điện thoại không hợp lệ", "Vui lòng nhập lại!", "warning");
+            return false;
+        }
+        else{
+            swal("Gửi thành công", "Nhân viên của chúng tôi sẽ gọi cho bạn!", "success");
+            
+            return true;
+        }  
+    }
+</script>
