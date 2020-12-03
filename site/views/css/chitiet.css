@@ -851,3 +851,43 @@ input[type="date"] {
 .count {
     color: rgb(167, 167, 167);
 }
+
+.thongbao {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 900px;
+    background-color: rgb(189, 189, 189, 0.5);
+    left: 0;
+    z-index: 999999999999999999999999;
+    display: none;
+    transition: 2s;
+}
+
+.thongbao form {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    height: 250px;
+    background-color: white;
+    margin-top: 15%;
+    border-radius: 20px;
+}
+
+.boxcenter {
+    padding: 50px 20px;
+}
+
+.tbdn {
+    font-size: 20pt;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tbdn1 {
+    color: white;
+    font-size: 20pt;
+    background-color: orangered;
+    padding: 10px;
+    border-radius: 50px;
+}
