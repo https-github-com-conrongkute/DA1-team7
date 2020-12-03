@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"> </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
@@ -264,25 +266,41 @@
                 </div>
                 <div class="tuvan ">
                     <div class="div-text">
-                        <p>Đăng ký tư vấn</p>
+                        <p>Đăng lịch xem căn hộ này</p>
                     </div>
-                    <form action="#" method="post" class="form-tuvan">
+                    <?php if (isset($_SESSION["id"])) {
+                        ?>
+                        <form action="?ctrl=home&act=datlichxem" name="myform" method="post" class="form-tuvan"  onsubmit="return validateform()">
                         <div class="fiel">
-                            <input type="text" name="" id="" style="font-size: 10pt;" placeholder="Nhập tên của bạn">
+                            <input type="hidden" name="ma_can" value="<?= $row['ma_can'] ?>" id="" style="font-size: 10pt;" placeholder="Nhập tên của bạn">
                         </div>
                         <div class="fiel">
-                            <input type="email" name="" id="" style="font-size: 10pt;" placeholder="Nhập Email">
+                            <input type="hidden" name="ma_tk" value="<?= $_SESSION['id'] ?>" id="" style="font-size: 10pt;" placeholder="Nhập Email">
                         </div>
                         <div class="fiel">
-                            <input type="number" name="" id="" style="font-size: 10pt;" placeholder="Nhập Số Điện Thoại">
+                            <input type="hidden" name="ngay_dat" value="<?=date("Y-m-d")?>" id="" style="font-size: 10pt;" placeholder="Nhập Số Điện Thoại">
                         </div>
-                        <div class="fiel">
-                            <input type="date" name="" id="" style="font-size: 10pt;" placeholder="">
+                        <div class="fiel" style="margin-top: 50px;">
+                            <input type="date" min="<?=date("Y-m-d")?>" name="ngay_xem" id="" style="font-size: 10pt;" >
                         </div>
                         <div class="fiel-sub">
-                            <input type="submit" value="Đặt lịch xem" style="font-size: 10pt;">
+                            <input type="submit" name="dat" value="Đặt lịch xem" style="font-size: 10pt;">
                         </div>
                     </form>
+                    <?php
+                    } else{
+                        ?>
+                        <div  class="form-tuvan">
+                        <div class="fiel" >
+                            <input type="date" name="" id="" style="font-size: 10pt; margin-left: 25px;" placeholder="">
+                        </div>
+                        <div class="fiel-sub">
+                            <input type="submit" name="dat" onclick="Show()"  value="Đặt lịch xem" style="font-size: 10pt; margin-left: 25px;">
+                        </div>
+                    </div>
+                    
+                        <?php
+                    }?>
                 </div>
             </div>
             <!-- thông tin chi tiết hơn -->
@@ -466,6 +484,21 @@
     <div class="divcuoi">
         <span> 2020 © Bản quyền GoldenHome. Đã đăng ký Bản quyền.</span>
     </div>
+    <div class="thongbao" id="thongbao">
+                <form action="">
+                    <div class="boxcenter">
+                    <div class="row">
+                        <div class="col-12" style="text-align: center;">
+                        <p class="tbdn">Đăng nhập để tiếp tục</p>
+                        </div>
+                    </div>
+                    <div class="row mt-5" >
+                        <div class="col-6"><a href="?ctrl=home&act=dangnhap" class="tbdn1">OK</a></div>
+                        <div class="col-6"><span onclick="dong()" class="tbdn1" style="cursor: pointer;">Thoát</span></div>
+                    </div>
+                    </div>
+                </form>
+    </div>
     <script src="./views/js/index.js"></script>
 </body>
 
@@ -473,3 +506,21 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<script>
+    var thongbao=document.getElementById("thongbao");
+    function Show(){
+        thongbao.style.display="block";
+    }
+    function dong(){
+        thongbao.style.display="none";
+    }
+
+    function validateform() {
+        var name = document.myform.ngay_xem.value;
+        if (name == null || name == "") {
+          swal("Bạn chưa chọn ngày", "Vui lòng đặt lại !", "warning");
+            return false;
+        } 
+    }
+</script>
+
