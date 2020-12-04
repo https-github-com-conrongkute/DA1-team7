@@ -173,11 +173,13 @@
                 <div class="col-6">
                     <h2 style="font-weight: bold; color: orangered; font-family: sans-serif;">// DANH SÁCH CÁC CĂN HỘ  </h2>
                 </div>
-                <div class="col-6"><select name="" id="gia_ds" class="form-control" style="width: 70%; float: right; font-size: 10pt;">
+                <div class="col-6">
+                    <!-- <select name="" id="gia_ds" class="form-control" style="width: 70%; float: right; font-size: 10pt;">
                         <option value="0">Sắp xếp</option>
                         <option value="1">Tăng dần</option>
                         <option value="2">Giảm dần</option>
-                    </select></div>
+                    </select> -->
+                </div>
             </div>
 
             <div id="view-as-grid" class="row list-layout-0 list-item">
