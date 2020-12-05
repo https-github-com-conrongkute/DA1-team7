@@ -1,5 +1,7 @@
 <?php
 session_start();
+require_once "PHPMailer-master/src/PHPMailer.php";
+require_once "PHPMailer-master/src/SMTP.php";
 require_once 'models/home.php';
 $act = "index";
 if (isset($_GET['act']) == true) $act = $_GET['act'];
@@ -72,12 +74,12 @@ switch ($act) {
 
     if (empty($erro)) {
       // lưu thông tin đăng nhập
-      // GỬi mail
       $message = "Thành công !";
-      $random = substr(md5('adhwe$#&^'), 12);
+      $random = substr(md5(rand()), 20);
       $idUser = Luuthongtintk($ho_ten, $user, $pass, $email, $random);
-      require_once "PHPMailer-master/src/PHPMailer.php";
-      require_once "PHPMailer-master/src/SMTP.php";
+      // GỬi mail
+      // require_once "PHPMailer-master/src/PHPMailer.php";
+      // require_once "PHPMailer-master/src/SMTP.php";
       $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
       try {
         $mail->SMTPDebug = 0;  // Enable verbose debug output
@@ -97,11 +99,44 @@ switch ($act) {
         // $linKH = sprintf($linkKH, $idUser);
         $mail->Body = "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản: " . $linkKH;
         $mail->send();
-        $message = 'kích hoạt tài khoản !';
+        // $message = 'kích hoạt tài khoản !';
+       
       } catch (Exception $e) {
-        echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
+        $message = "Mail không được gửi !";
+         echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
       }
+     
       require_once 'views/login.php';
+    }
+    require_once 'views/login.php';
+    break;
+  case 'gui_lmail':
+    $ma_tk = khachhang($_POST['ma_id']);
+    $idUser = $ma_tk['ma_tk'];
+    $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
+    try {
+      $mail->SMTPDebug = 0;  // Enable verbose debug output
+      $mail->isSMTP();
+      $mail->CharSet  = "utf-8";
+      $mail->Host = 'smtp.gmail.com';  //SMTP servers
+      $mail->SMTPAuth = true; // Enable authentication
+      $mail->Username = 'longdhai2@gmail.com';  // SMTP username
+      $mail->Password = 'hailong289';   // SMTP password
+      $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
+      $mail->Port = 465;  // port to connect to                
+      $mail->setFrom('longdhai2@gmail.com', 'goldenhome');
+      $mail->addAddress($ma_tk['email'], $ma_tk['ho_ten']); //mail và tên người nhận       
+      $mail->isHTML(true);  // Set email format to HTML
+      $mail->Subject = 'Kích hoạt tài khoản';
+      $linkKH = "<a href='http://localhost:/Github/DA1-team7/site/?act=kichhoat&id=" . $idUser . "'>Nhấp vào đây</a>";
+      // $linKH = sprintf($linkKH, $idUser);
+      $mail->Body = "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản: " . $linkKH;
+      $mail->send();
+      // $message = 'kích hoạt tài khoản !';
+      $message = "Thành công !";
+    } catch (Exception $e) {
+       $message = "Mail không được gửi !";
+       echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
     }
     require_once 'views/login.php';
     break;
@@ -116,7 +151,7 @@ switch ($act) {
         updateThongtintk($idUser, $kich_hoat);
         require_once 'views/login.php';
       } else {
-        $error_tk = "Tài khoản đã được kích hoạt !";
+        $error_tk = "Tài khoản của bạn đã được kích hoạt !";
         require_once 'views/login.php';
       }
     }
@@ -380,6 +415,7 @@ switch ($act) {
     }
     # code...
     break;
+  
     //phần thông báo
   case 'ds-ld':
     $ma_tk = $_GET["ma_tk"];
@@ -511,6 +547,7 @@ switch ($act) {
       settype($huong_nha, "int");
       themcanho($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien);
       header("location: " . SITE_URL . "/?ctrl=home&act=ch-dd&ma_tk=" . $_SESSION["id"] . "");
+      
     } else {
       header("location: " . SITE_URL . "/?ctrl=home&act=dangtin");
     }

@@ -20,7 +20,24 @@ p#checkid3{
     float: left;
     width: 100%;
     display: none;
+  
     margin: 5px 0px;
+}
+.ps_gm{
+   position: fixed;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   width: 30%;
+   height: 300px;
+   z-index: 99999999999;
+}
+.bg_gm{
+    box-shadow: 2px 2px 5px #ccc;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    float: left;
 }
 #checkid1>span{
     padding: 0px 8px;
