@@ -4,7 +4,7 @@
             <div class="tt-left">
                 <center style="margin-top: 50px;">
                     <div style="width: 100px;height: 100px;border-radius: 50%; overflow: hidden;">
-                    <img src="../uploaded/<?php if ($_SESSION['shinh']=="") echo "user.png";else echo $_SESSION['shinh'];?>" style="width: 100%;" alt="">
+                    <img src="../uploaded/<?php if ($kh['hinh']=="") echo "user.png";else echo $kh['hinh'];?>" style="width: 100%;" alt="">
                    </div>
                    <h4><?=$_SESSION["user"]?></h4>
                 </center>
@@ -27,18 +27,18 @@
             else{
                 ?>
                 
-                <form action="" method="post" class="form-tk">
+                <form action="?act=updatetk" method="post" class="form-tk">
                    <h4 style="margin-top: 50px; margin-bottom: 20px; font-weight: bold;font-size: 16pt;">Thông tin cá nhân</h4>
                    <div class="tt-right-row">
                        <label>Họ và tên</label>
-                       <input type="text" name="tenkh" id="" value="<?=$_SESSION['name']?>">
-                       <input type="hidden" name="ma_tk" value="<?=$_SESSION['id']?>">
+                       <input type="text" name="tenkh" id="" value="<?=$kh['ho_ten']?>">
+                       <input type="hidden" name="ma_tk" value="<?=$kh['ma_tk']?>">
                    </div>
                    
                    <div class="tt-right-row">
                      <label>Mật khẩu</label>
                      <p><?php
-                     for($i=0; $i<strlen($_SESSION['mat_khau']); $i++){
+                     for($i=0; $i<strlen($kh['mat_khau']); $i++){
                          echo "*";
                      }
                      ?></p>
@@ -46,11 +46,11 @@
                    </div>
                    <div class="tt-right-row">
                        <label>Email</label>
-                       <input type="email" name="email" id=""  value="<?=$_SESSION['email']?>">
+                       <input type="email" name="email" id=""  value="<?=$kh['email']?>">
                    </div>
                    <div class="tt-right-row">
                        <label>Số điện thoại</label>
-                       <input type="text" name="sdt" id=""  value="0<?=$_SESSION['sdt']?>">
+                       <input type="text" name="sdt" id=""  value="0<?=$kh['sdt']?>">
                    </div>
                    <button class="btn-tk">Lưu</button>
                 </form>

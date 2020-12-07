@@ -36,6 +36,7 @@
             <div class="nav-logo">
                 <img src="../uploaded/logo.png" alt="">
             </div>
+            <p class="mn_bar"><i class="fas fa-bars"></i></p>
             <div class="nav-menu">
                 <ul>
                     <li><a href="index.php">Trang chủ </a> </li>

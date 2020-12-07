@@ -43,7 +43,7 @@ body {
 }
 
 .nav-logo {
-    width: 30%;
+    width: 10%;
     float: left;
     height: 80px;
 }
@@ -57,7 +57,7 @@ body {
 
 .nav-menu {
     float: right;
-    width: 70%;
+    width: 90%;
     height: 80px;
 }
 
@@ -109,7 +109,7 @@ body {
 .nav-menu>ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .nav-menu>ul>li {
@@ -134,11 +134,9 @@ body {
 }
 
 .menu-logo-bg {
-    width: 90%;
+    width: 80%;
+    margin: 0 auto;
     /* margin-top: 20px; */
-    position: relative;
-    left: 5%;
-    top: 0;
 }
 
 .menutimkiem {

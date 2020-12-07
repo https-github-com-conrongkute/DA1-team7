@@ -12,7 +12,7 @@ switch ($act) {
     $ds_ch = getALLcan_hoNew();
     $ds_ch2 = getALL_canhoNew2();
     $quan = getallquan();
-    $loaican=getallloai_can();
+    $loaican = getallloai_can();
     require_once 'views/layout.php';
     break;
   case 'chi_tiet':
@@ -75,8 +75,9 @@ switch ($act) {
     if (empty($erro)) {
       // lưu thông tin đăng nhập
       $message = "Thành công !";
-      $random = substr(md5(rand()), 20);
-      $idUser = Luuthongtintk($ho_ten, $user, $pass, $email, $random);
+      $salt = substr($user, 3);
+      $pass_mh = md5($pass.$salt);
+      $idUser = Luuthongtintk($ho_ten, $user, $pass_mh, $email);
       // GỬi mail
       // require_once "PHPMailer-master/src/PHPMailer.php";
       // require_once "PHPMailer-master/src/SMTP.php";
@@ -100,12 +101,12 @@ switch ($act) {
         $mail->Body = "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản: " . $linkKH;
         $mail->send();
         // $message = 'kích hoạt tài khoản !';
-       
+
       } catch (Exception $e) {
         $message = "Mail không được gửi !";
-         echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
+        echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
       }
-     
+
       require_once 'views/login.php';
     }
     require_once 'views/login.php';
@@ -135,8 +136,8 @@ switch ($act) {
       // $message = 'kích hoạt tài khoản !';
       $message = "Thành công !";
     } catch (Exception $e) {
-       $message = "Mail không được gửi !";
-       echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
+      $message = "Mail không được gửi !";
+      echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
     }
     require_once 'views/login.php';
     break;
@@ -191,7 +192,9 @@ switch ($act) {
   case 'dangnhap_':
     $tentk = $_POST['tentk'];
     $pass = $_POST['pass'];
-    $checktk = checktk($tentk, $pass);
+    $salt = substr($tentk, 3);
+    $pass_mh = md5($pass.$salt);
+    $checktk = checktk($tentk, $pass_mh);
     if (is_array($checktk)) {
       $_SESSION['user'] = $checktk['ten_tk'];
       $_SESSION['name'] = $checktk['ho_ten'];
@@ -254,47 +257,43 @@ switch ($act) {
     require_once 'views/dangtin.php';
     break;
   case 'danhsach':
-    if (isset($_GET['loai_can']) == true )
-    { $loaican = $_GET['loai_can'];
-    $page_num = 1;
-    if (isset($_GET['page']) == true) $page_num = $_GET['page'];
-    $page_size = PATH_SITE;
-    $dsch_tl = getCanho_theoloai($loaican, $page_num, $page_size);
-    $toltal_rows = Demcanhotheoloai($loaican);
-    $basrurl = SITE_URL . "/?act=danhsach&loai_can={$loaican}";
-    $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
-  }
-
-    elseif (isset($_GET['ma_quan']) == true && isset($_GET['id']) == false)
-    { $ma_quan = $_GET['ma_quan'];
-    $page_num = 1;
-    if (isset($_GET['page']) == true) $page_num = $_GET['page'];
-    $page_size = PATH_SITE;
-    $dsch_tl = getCanho_theoquan($ma_quan, $page_num, $page_size);
-    $toltal_rows = Demcanhotheoquan($ma_quan);
-    $basrurl = SITE_URL . "/?act=danhsach&ma_quan={$ma_quan}";
-    $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
-  }
-
-  elseif (isset($_GET['id']) == true && isset($_GET['ma_quan']) == true)
-  { $ma_quan = $_GET['ma_quan'];
-    $id=$_GET["id"];
-  $page_num = 1;
-  if (isset($_GET['page']) == true) $page_num = $_GET['page'];
-  $page_size = PATH_SITE;
-  $dsch_tl = getCanho_theophuong($id, $page_num, $page_size);
-  $toltal_rows = Demcanhotheophuong($id);
-  $basrurl = SITE_URL . "/?act=danhsach&phuong={$id}";
-  $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
-}
+    if (isset($_GET['loai_can']) == true) {
+      $loaican = $_GET['loai_can'];
+      $page_num = 1;
+      if (isset($_GET['page']) == true) $page_num = $_GET['page'];
+      $page_size = PATH_SITE;
+      $dsch_tl = getCanho_theoloai($loaican, $page_num, $page_size);
+      $toltal_rows = Demcanhotheoloai($loaican);
+      $basrurl = SITE_URL . "/?act=danhsach&loai_can={$loaican}";
+      $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+    } elseif (isset($_GET['ma_quan']) == true && isset($_GET['id']) == false) {
+      $ma_quan = $_GET['ma_quan'];
+      $page_num = 1;
+      if (isset($_GET['page']) == true) $page_num = $_GET['page'];
+      $page_size = PATH_SITE;
+      $dsch_tl = getCanho_theoquan($ma_quan, $page_num, $page_size);
+      $toltal_rows = Demcanhotheoquan($ma_quan);
+      $basrurl = SITE_URL . "/?act=danhsach&ma_quan={$ma_quan}";
+      $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+    } elseif (isset($_GET['id']) == true && isset($_GET['ma_quan']) == true) {
+      $ma_quan = $_GET['ma_quan'];
+      $id = $_GET["id"];
+      $page_num = 1;
+      if (isset($_GET['page']) == true) $page_num = $_GET['page'];
+      $page_size = PATH_SITE;
+      $dsch_tl = getCanho_theophuong($id, $page_num, $page_size);
+      $toltal_rows = Demcanhotheophuong($id);
+      $basrurl = SITE_URL . "/?act=danhsach&phuong={$id}";
+      $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+    }
 
     $quan = getallquan();
     $quanz = getallquan();
     $quanzz = getallquan();
     $quanzzz = getallquan();
-    $loaican=getallloai_can();
-    $loaicanz=getallloai_can();
-    
+    $loaican = getallloai_can();
+    $loaicanz = getallloai_can();
+
     require_once 'views/danhsach.php';
     break;
   case 'phuong':
@@ -313,7 +312,7 @@ switch ($act) {
 
     break;
   case 'about':
-    $quan=getallquan();
+    $quan = getallquan();
     require_once 'views/about.php';
     break;
   case 'chitiet':
@@ -322,8 +321,8 @@ switch ($act) {
     $quanall = getallquan();
     $quan = getallquan();
     $quanz = getallquan();
-    $loaican=getallloai_can();
-    $loaicanz=getallloai_can();
+    $loaican = getallloai_can();
+    $loaicanz = getallloai_can();
     require_once 'views/chitiet.php';
     break;
   case 'ch-dd':
@@ -335,13 +334,13 @@ switch ($act) {
     break;
   case 'edit_ch':
     $ma_can = $_GET['ma_can'];
-    settype($ma_can,'int');
+    settype($ma_can, 'int');
     $quan = getallquan();
     $loaican = getallloai_can();
     $can_ho = canho($ma_can);
     require_once 'views/can_ho-edit.php';
     break;
-  // update căn hô
+    // update căn hô
   case 'update_ch':
     if (isset($_POST["ten_can_ho"]) && $_POST["ten_can_ho"] != "") {
       $ten_can_ho = trim(strip_tags($_POST["ten_can_ho"]));
@@ -363,38 +362,38 @@ switch ($act) {
       $an_hien = 0;
       $ma_phuong = $_POST["phuong"];
       // Hình
-      if($_FILES['hinh']['name'] != null){
-      $hinh = $_FILES['hinh']['name'];
-      $pathimg = '../uploaded/';
-      $target_files = $pathimg . basename($hinh);
-      move_uploaded_file($_FILES['hinh']['tmp_name'], $target_files);
-      }else{
-         $hinh = $_POST['img'];
+      if ($_FILES['hinh']['name'] != null) {
+        $hinh = $_FILES['hinh']['name'];
+        $pathimg = '../uploaded/';
+        $target_files = $pathimg . basename($hinh);
+        move_uploaded_file($_FILES['hinh']['tmp_name'], $target_files);
+      } else {
+        $hinh = $_POST['img'];
       }
-      if($_FILES['hinha']['name'] != null){
-      $hinha = $_FILES['hinha']['name'];
-      $pathimg = '../uploaded/';
-      $target_files = $pathimg . basename($hinha);
-      move_uploaded_file($_FILES['hinha']['tmp_name'], $target_files);
-      }else{
-         $hinha = $_POST['imga'];
+      if ($_FILES['hinha']['name'] != null) {
+        $hinha = $_FILES['hinha']['name'];
+        $pathimg = '../uploaded/';
+        $target_files = $pathimg . basename($hinha);
+        move_uploaded_file($_FILES['hinha']['tmp_name'], $target_files);
+      } else {
+        $hinha = $_POST['imga'];
       }
-     
-      if($_FILES['hinhb']['name'] != null){
-      $hinhb = $_FILES['hinhb']['name'];
-      $pathimg = '../uploaded/';
-      $target_files = $pathimg . basename($hinhb);
-      move_uploaded_file($_FILES['hinhb']['tmp_name'], $target_files);
-      }else{
+
+      if ($_FILES['hinhb']['name'] != null) {
+        $hinhb = $_FILES['hinhb']['name'];
+        $pathimg = '../uploaded/';
+        $target_files = $pathimg . basename($hinhb);
+        move_uploaded_file($_FILES['hinhb']['tmp_name'], $target_files);
+      } else {
         $hinhb = $_POST['imgb'];
       }
 
-      if($_FILES['hinhc']['name'] != null){
-      $hinhc = $_FILES['hinhc']['name'];
-      $pathimg = '../uploaded/';
-      $target_files = $pathimg . basename($hinhc);
-      move_uploaded_file($_FILES['hinhc']['tmp_name'], $target_files);
-      }else{
+      if ($_FILES['hinhc']['name'] != null) {
+        $hinhc = $_FILES['hinhc']['name'];
+        $pathimg = '../uploaded/';
+        $target_files = $pathimg . basename($hinhc);
+        move_uploaded_file($_FILES['hinhc']['tmp_name'], $target_files);
+      } else {
         $hinhc = $_POST['imgc'];
       }
       settype($ma_can, 'int');
@@ -408,14 +407,14 @@ switch ($act) {
       settype($ma_tk, "int");
       settype($ma_phuong, "int");
       settype($huong_nha, "int");
-      Update_chdt($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien,$ma_can);
+      Update_chdt($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien, $ma_can);
       header("location: " . SITE_URL . "/?ctrl=home&act=ch-dd&ma_tk=" . $_SESSION["id"] . "");
     } else {
       header("location: " . SITE_URL . "/?ctrl=home&act=edit_ch");
     }
     # code...
     break;
-  
+
     //phần thông báo
   case 'ds-ld':
     $ma_tk = $_GET["ma_tk"];
@@ -474,9 +473,18 @@ switch ($act) {
     require_once 'views/layout.php';
     break;
   case 'thongtintk':
-    $quan=getallquan();
+    $quan = getallquan();
+    $kh = khachhang($_SESSION['id']);
     $view = 'views/thongtintk.php';
     require_once 'views/layout.php';
+    break;
+  case 'updatetk':
+    $ten = $_POST['tenkh'];
+    $ma_tk = $_POST['ma_tk'];
+    $email = $_POST['email'];
+    $sdt = $_POST['sdt'];
+    update_ttKH($ten, $ma_tk, $email, $sdt);
+    header('location: ?act=thongtintk&ma_tk=' . $ma_tk . '');
     break;
   case 'doimk':
     $rows = 'views/doimk.php';
@@ -547,7 +555,6 @@ switch ($act) {
       settype($huong_nha, "int");
       themcanho($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien);
       header("location: " . SITE_URL . "/?ctrl=home&act=ch-dd&ma_tk=" . $_SESSION["id"] . "");
-      
     } else {
       header("location: " . SITE_URL . "/?ctrl=home&act=dangtin");
     }
@@ -557,7 +564,7 @@ switch ($act) {
       if (isset($_POST["dat"])) {
 
         $ma_can = $_POST['ma_can'];
-        
+
         $ma_tk = $_POST['ma_tk'];
         $ngay_xem = $_POST["ngay_xem"];
         $ngay_dat = $_POST["ngay_dat"];
@@ -574,111 +581,110 @@ switch ($act) {
     }
 
     break;
-    case 'delete_ch':
-      $ma_can = $_GET['ma_can'];
-      settype($ma_can,'int');
-      DeleteCanho_dd($ma_can);
-      header('location: index.php?act=ch-dd&ma_tk='.$_SESSION['id'].'');
-      break;
-      
-      //Hủy lịch đả đặt
-      case 'deletedatlich':
-        $ma_dat=$_GET["ma_dat"];
-        xoadatlich($ma_dat);
-        $thongbao="Hủy thành công";
-        header("location: ".SITE_URL."/?ctrl=home&act=lichsu&ma_tk=".$_SESSION['id']."");
-      break;
+  case 'delete_ch':
+    $ma_can = $_GET['ma_can'];
+    settype($ma_can, 'int');
+    DeleteCanho_dd($ma_can);
+    header('location: index.php?act=ch-dd&ma_tk=' . $_SESSION['id'] . '');
+    break;
 
-      //tìm kiếm nhanh
-      case 'timkiemnhanh':
-        if (isset($_POST["timnhanh"])) {
-        if(isset($_POST["ma_quan"]) == true && isset($_POST["loai_can"]) == true){
-          $ma_quan=$_POST["ma_quan"];
-          $loaican=$_POST["loai_can"];
-          $page_num = 1;
-          if (isset($_GET['page']) == true) $page_num = $_GET['page'];
-          $page_size = PATH_SITE;
-          $dsch_tl = getCanho_theoquanvaloaican($loaican, $ma_quan, $page_num, $page_size);
-          $toltal_rows = Demcanhotheoquanvaloaican($loaican , $ma_quan);
-          $basrurl = SITE_URL . "/?act=danhsach&ma_quan={$ma_quan}&ma_loai={$loaican}";
-          $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
-        }
-        $quan = getallquan();
-        $quanz = getallquan();
-        $quanzz = getallquan();
-        $loaican=getallloai_can();
-        require_once 'views/danhsach.php';
+    //Hủy lịch đả đặt
+  case 'deletedatlich':
+    $ma_dat = $_GET["ma_dat"];
+    xoadatlich($ma_dat);
+    $thongbao = "Hủy thành công";
+    header("location: " . SITE_URL . "/?ctrl=home&act=lichsu&ma_tk=" . $_SESSION['id'] . "");
+    break;
+
+    //tìm kiếm nhanh
+  case 'timkiemnhanh':
+    if (isset($_POST["timnhanh"])) {
+      if (isset($_POST["ma_quan"]) == true && isset($_POST["loai_can"]) == true) {
+        $ma_quan = $_POST["ma_quan"];
+        $loaican = $_POST["loai_can"];
+        $page_num = 1;
+        if (isset($_GET['page']) == true) $page_num = $_GET['page'];
+        $page_size = PATH_SITE;
+        $dsch_tl = getCanho_theoquanvaloaican($loaican, $ma_quan, $page_num, $page_size);
+        $toltal_rows = Demcanhotheoquanvaloaican($loaican, $ma_quan);
+        $basrurl = SITE_URL . "/?act=danhsach&ma_quan={$ma_quan}&ma_loai={$loaican}";
+        $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
       }
-        break;
+      $quan = getallquan();
+      $quanz = getallquan();
+      $quanzz = getallquan();
+      $loaican = getallloai_can();
+      require_once 'views/danhsach.php';
+    }
+    break;
 
-        //Tìm kiếm ở trang chủ
-        case 'timkiemtheogia':
-          $sapxep=$_POST["sxgia"];
-          $loai_can=$_POST["loai_can"];
-          $page_num = 1;
-          if (isset($_POST["mucgia"]) && ($_POST["mucgia"]!=NULL)) {
-          $mucgia=$_POST["mucgia"];
-            if (isset($_GET['page']) == true) $page_num = $_GET['page'];
-          $page_size = PATH_SITE;
-          $dsch_tl = getCanho_theogia($sapxep, $loai_can, $mucgia, $page_num, $page_size);
-          $toltal_rows = Demcanhotheogia( $loai_can, $mucgia);
-          $basrurl = SITE_URL . "/?act=danhsach&ma_loai={$loai_can}";
-          $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
-          $quan = getallquan();
-          $quanz = getallquan();
-          $quanzz = getallquan();
-          $loaican=getallloai_can();
-          }
-          else{
+    //Tìm kiếm ở trang chủ
+  case 'timkiemtheogia':
+    $sapxep = $_POST["sxgia"];
+    $loai_can = $_POST["loai_can"];
+    $page_num = 1;
+    if (isset($_POST["mucgia"]) && ($_POST["mucgia"] != NULL)) {
+      $mucgia = $_POST["mucgia"];
+      if (isset($_GET['page']) == true) $page_num = $_GET['page'];
+      $page_size = PATH_SITE;
+      $dsch_tl = getCanho_theogia($sapxep, $loai_can, $mucgia, $page_num, $page_size);
+      $toltal_rows = Demcanhotheogia($loai_can, $mucgia);
+      $basrurl = SITE_URL . "/?act=danhsach&ma_loai={$loai_can}";
+      $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+      $quan = getallquan();
+      $quanz = getallquan();
+      $quanzz = getallquan();
+      $loaican = getallloai_can();
+    } else {
 
-            if (isset($_GET['page']) == true) $page_num = $_GET['page'];
-          $page_size = PATH_SITE;
-          $dsch_tl = getCanho_theosx($sapxep, $loai_can, $page_num, $page_size);
-          $toltal_rows = Demcanhotheoloai($loai_can);
-          $basrurl = SITE_URL . "/?act=danhsach&ma_loai={$loai_can}";
-          $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
-          $quan = getallquan();
-          $quanz = getallquan();
-          $quanzz = getallquan();
-          $loaican=getallloai_can();
-          }
-          
-        require_once 'views/danhsach.php';
-        break;
+      if (isset($_GET['page']) == true) $page_num = $_GET['page'];
+      $page_size = PATH_SITE;
+      $dsch_tl = getCanho_theosx($sapxep, $loai_can, $page_num, $page_size);
+      $toltal_rows = Demcanhotheoloai($loai_can);
+      $basrurl = SITE_URL . "/?act=danhsach&ma_loai={$loai_can}";
+      $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+      $quan = getallquan();
+      $quanz = getallquan();
+      $quanzz = getallquan();
+      $loaican = getallloai_can();
+    }
 
-        //timkiemall
-        case 'timkiemall':
-          $loai_can=$_POST["loai_can"];
-          $key=$_POST["key"];
-          $ma_quan=$_POST["ma_quan"];
-          $mucgia=$_POST["mucgia"];
-          $dien_tich=$_POST["dientich"];
-          $sophongngu=$_POST["sophongngu"];
-          $sophongvs=$_POST["sophongvs"];
-          $huongnha=$_POST["huongnha"];
-          $page_num = 1;
-          if (isset($_GET['page']) == true) $page_num = $_GET['page'];
-          $page_size = PATH_SITE;
-          $dsch_tl = getCanho_all($loai_can, $key, $ma_quan, $mucgia, $dien_tich, $sophongngu, $sophongvs, $huongnha, $page_num, $page_size);
-          $toltal_rows = Demcanhoall($loai_can, $key, $ma_quan, $mucgia, $dien_tich, $sophongngu, $sophongvs, $huongnha);
-          $basrurl = SITE_URL . "/?act=danhsach&key={$key}";
-          $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
-          $quan = getallquan();
-          $quanz = getallquan();
-          $quanzz = getallquan();
-          $quanzzz = getallquan();
-          $loaican=getallloai_can();
-          $loaicanz=getallloai_can();
-          require_once 'views/danhsach.php';
-        break;
+    require_once 'views/danhsach.php';
+    break;
 
-        case 'dangkytim';
-        if (isset($_POST["dangky"])) {
-         $ho_ten=$_POST["ho_ten"];
-         $email=$_POST["email"];
-         $sdt=$_POST["sdt"];
-         themdangky($ho_ten, $email, $sdt);
-        header("location: ".SITE_URL."?ctrl=home&act=index");
-      }
-      break;
+    //timkiemall
+  case 'timkiemall':
+    $loai_can = $_POST["loai_can"];
+    $key = $_POST["key"];
+    $ma_quan = $_POST["ma_quan"];
+    $mucgia = $_POST["mucgia"];
+    $dien_tich = $_POST["dientich"];
+    $sophongngu = $_POST["sophongngu"];
+    $sophongvs = $_POST["sophongvs"];
+    $huongnha = $_POST["huongnha"];
+    $page_num = 1;
+    if (isset($_GET['page']) == true) $page_num = $_GET['page'];
+    $page_size = PATH_SITE;
+    $dsch_tl = getCanho_all($loai_can, $key, $ma_quan, $mucgia, $dien_tich, $sophongngu, $sophongvs, $huongnha, $page_num, $page_size);
+    $toltal_rows = Demcanhoall($loai_can, $key, $ma_quan, $mucgia, $dien_tich, $sophongngu, $sophongvs, $huongnha);
+    $basrurl = SITE_URL . "/?act=danhsach&key={$key}";
+    $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
+    $quan = getallquan();
+    $quanz = getallquan();
+    $quanzz = getallquan();
+    $quanzzz = getallquan();
+    $loaican = getallloai_can();
+    $loaicanz = getallloai_can();
+    require_once 'views/danhsach.php';
+    break;
+
+  case 'dangkytim';
+    if (isset($_POST["dangky"])) {
+      $ho_ten = $_POST["ho_ten"];
+      $email = $_POST["email"];
+      $sdt = $_POST["sdt"];
+      themdangky($ho_ten, $email, $sdt);
+      header("location: " . SITE_URL . "?ctrl=home&act=index");
+    }
+    break;
 }
