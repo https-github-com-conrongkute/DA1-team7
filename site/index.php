@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-define('ARR_CONTROLLER', ["home"]);
+define('ARR_CONTROLLER', ["home", "vnpay_php"]);
 $ctrl='home';
 if (isset($_GET['ctrl'])==true) {
     $ctrl=$_GET['ctrl'];

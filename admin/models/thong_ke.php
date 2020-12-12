@@ -26,9 +26,10 @@ function ThongkeQuan(){
     $sql = "SELECT count(*) as soluong FROM quan";
     return  queryOne($sql);   
 }
-function ThongkeBinhluan(){
-    $sql = "SELECT count(*) as soluong FROM binh_luan";
+function Thongkehoadon(){
+    $sql = "SELECT count(*) as soluong FROM payments";
     return  queryOne($sql);   
 }
+
 
 ?>

@@ -30,7 +30,7 @@
                 <div class="nav-menu2">
                     <ul>
                         <li><a href="index.php">Trang chủ </a> </li>
-                        <li><a href="?ctrl=home&act=danhsach&ma_quan=4">Danh sách nhà thuê</a> </li>
+                        <li><a href="?ctrl=home&act=danhsach&loai_can=1">Danh sách nhà thuê</a> </li>
                         <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                         <li><a href="?act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                         <?php if (isset($_SESSION['user']) == true) { ?>
@@ -62,7 +62,7 @@
                     <div class="nav-menu">
                         <ul>
                             <li><a href="index.php">Trang chủ </a> </li>
-                            <li><a href="?ctrl=home&act=danhsach&ma_quan=4">Danh sách nhà thuê</a> </li>
+                            <li><a href="?ctrl=home&act=danhsach&loai_can=1">Danh sách nhà thuê</a> </li>
                             <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                             <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
                             <?php if (isset($_SESSION['user']) == true) { ?>
@@ -210,7 +210,7 @@
                 </div>
 
                 <div class="xemthem">
-                    <a href="?ctrl=home&act=danhsach&ma_quan=4">Xem thêm </a>
+                    <a href="?ctrl=home&act=danhsach&loai_can=1">Xem thêm </a>
                 </div>
             </div>
         </div>
@@ -403,5 +403,14 @@
             
             return true;
         }  
+    }
+</script>
+<script>
+    function validatefor() {
+        var name = document.myfor.ngay_xem.value;
+        if (name == null || name == "") {
+          swal("Bạn chưa chọn ngày", "Vui lòng đặt lại !", "warning");
+            return false;
+        } 
     }
 </script>

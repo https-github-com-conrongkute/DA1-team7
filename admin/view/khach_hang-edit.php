@@ -1,7 +1,7 @@
 <div class="right__title">Bảng khách hàng</div>
 <p class="right__desc">Sửa khách hàng</p>
 <div class="right__formWrapper">
-    <form action="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=update" method="post" enctype="multipart/form-data">
+    <form action="/admin/?ctrl=tai_khoan&act=update" method="post" enctype="multipart/form-data">
         <div class="right__inputWrapper">
             <label for="title">Tên khách hàng</label>
             <input type="text" name="tenkh" id="tenkh" placeholder="Họ và tên" value="<?=$kh['ho_ten']?>">
@@ -27,7 +27,7 @@
         </div>
         <div class="right__inputWrapper">
             <label for="title">Mật khẩu</label>
-            <input type="password" name="pass" id="mk" placeholder="Mật khẩu" value="<?=$kh['mat_khau']?>">
+            <input type="password" name="pass" id="mk" placeholder="Mật khẩu" >
             <!-- <span id="pass"></span> -->
         </div>
         <div class="right__inputWrapper">
@@ -36,7 +36,7 @@
             <label for="file"><i class="fas fa-upload"></i> Tải hình ảnh mới lên</label>
         </div>
         <div class="right__inputWrapper">
-            <img src="../uploaded/<?=$kh['hinh']?>" id="loada" alt="" style="height: 150px;width: 20%; object-fit: cover;">
+            <img src="../uploaded/<?php if($kh['hinh']=="") echo "user.jpg"; else echo $kh['hinh'];?>" id="loada" alt="" style="height: 150px;width: 20%; object-fit: cover;">
             <script>
                 // Load hình ảnh lên khi chọn file upload
                 $(document).ready(function () {

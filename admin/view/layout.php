@@ -54,44 +54,50 @@
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-edit.svg" alt="">Danh sách loại căn hộ<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=loai_can&act=index">Danh sách loại căn</a>
+                                    <a class="left__link" href="/admin/?ctrl=loai_can&act=index">Danh sách loại căn</a>
                                     <a class="left__link" href="?ctrl=loai_can&act=addnew">Thêm loại căn hộ</a>
                                 </div>
                             </li>
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-edit.svg" alt="">Quản lý căn hộ<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=can_ho&act=index">Danh sách căn hộ</a>
-                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=can_ho&act=addnew">Thêm căn hộ</a>
+                                    <a class="left__link" href="/admin/?ctrl=can_ho&act=index">Danh sách căn hộ</a>
+                                    <a class="left__link" href="/admin/?ctrl=can_ho&act=addnew">Thêm căn hộ</a>
                                 </div>
                             </li>
 
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-edit.svg" alt="">Quản lý các quận<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=quan&act=index">Danh sách quận</a>
-                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=quan&act=addnew">Thêm các quận</a>
+                                    <a class="left__link" href="/admin/?ctrl=quan&act=index">Danh sách quận</a>
+                                    <a class="left__link" href="/admin/?ctrl=quan&act=addnew">Thêm các quận</a>
                                 </div>
                             </li>
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-users.svg" alt="">Quản lý tài khoản<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=index">Danh sách </a>
-                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=addnew">Thêm tài khoản</a>
+                                    <a class="left__link" href="/admin/?ctrl=tai_khoan&act=index">Danh sách </a>
+                                    <a class="left__link" href="/admin/?ctrl=tai_khoan&act=addnew">Thêm tài khoản</a>
                                 </div>
                             </li>
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-book.svg" alt="">Quản lý đặt lịch<img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=dat_lich&act=index">Danh sách lịch đặt</a>
-                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=dat_lich&act=addnew">Thêm lịch đặt</a>
+                                    <a class="left__link" href="/admin/?ctrl=dat_lich&act=index">Danh sách lịch đặt</a>
+                                    <a class="left__link" href="/admin/?ctrl=dat_lich&act=addnew">Thêm lịch đặt</a>
+                                </div>
+                            </li>
+                            <li class="left__menuItem">
+                                <div class="left__title"><img src="./view/assets/icon-book.svg" alt="">Dang sách hóa đơn <img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
+                                <div class="left__text">
+                                    <a class="left__link" href="/admin/?ctrl=hoadon&act=index">Danh sách</a>
                                 </div>
                             </li>
 
                             <li class="left__menuItem">
                                 <div class="left__title"><img src="./view/assets/icon-book.svg" alt="">Đăng ký tìm nhà <img class="left__iconDown" src="./view/assets/arrow-down.svg" alt=""></div>
                                 <div class="left__text">
-                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=dangkytim&act=index">Danh sách</a>
+                                    <a class="left__link" href="/admin/?ctrl=dangkytim&act=index">Danh sách</a>
                                 </div>
                             </li>
 
@@ -102,11 +108,11 @@
                                 </div>
                                 <div class="left__text">
 
-                                    <a class="left__link" href="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=admin&sid=<?= $_SESSION['sid'] ?>">Xem Admins</a>
+                                    <a class="left__link" href="/admin/?ctrl=tai_khoan&act=admin&sid=<?= $_SESSION['sid'] ?>">Xem Admins</a>
                                 </div>
                             </li>
                             <li class="left__menuItem">
-                                <a href="<?= ADMIN_URL ?>?ctrl=tai_khoan&act=dangxuat&quantri=1" class="left__title"><img src="./view/assets/icon-logout.svg" alt="">Đăng Xuất</a>
+                                <a href="?ctrl=tai_khoan&act=dangxuat&quantri=1" class="left__title"><img src="./view/assets/icon-logout.svg" alt="">Đăng Xuất</a>
                             </li>
                         </ul>
                     </div>
@@ -119,24 +125,24 @@
                             <div class="right__title">Bảng thống kê</div>
 
                             <div class="right__cards">
-                                <a class="right__card bg-success" href="view_product.html">
+                                <a class="right__card bg-success" href="/admin/?ctrl=can_ho&act=index">
                                     <div class="right__cardTitle">Số căn hộ</div>
                                     <div class="right__cardNumber"><?= $ds_ch['soluong'] ?></div>
                                     <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
                                 </a>
-                                <a class="right__card bg-danger" href="view_customers.html">
+                                <a class="right__card bg-danger" href="/admin/?ctrl=tai_khoan&act=index">
                                     <div class="right__cardTitle">Số khách Hàng</div>
                                     <div class="right__cardNumber"><?= $ds_kh['soluong'] ?></div>
                                     <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
                                 </a>
-                                <a class="right__card" href="view_p_category.html">
+                                <a class="right__card" href="/admin/?ctrl=dat_lich&act=index">
                                     <div class="right__cardTitle">Số lịch đặt</div>
                                     <div class="right__cardNumber"><?= $ds_ld['soluong'] ?></div>
                                     <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
                                 </a>
-                                <a class="right__card" href="view_orders.html">
-                                    <div class="right__cardTitle">Số bình luận</div>
-                                    <div class="right__cardNumber"><?= $ds_bl['soluong'] ?></div>
+                                <a class="right__card" href="/admin/?ctrl=hoadon&act=index">
+                                    <div class="right__cardTitle">Số hóa đơn </div>
+                                    <div class="right__cardNumber"><?= $ds_hd['soluong'] ?></div>
                                     <div class="right__cardDesc">Xem Chi Tiết <img src="./view/assets/arrow-right.svg" alt=""></div>
                                 </a>
                             </div>
@@ -205,8 +211,8 @@
             ['Loại căn', <?= $ds_lc['soluong'] ?>],
             ['Khách hàng', <?= $ds_kh['soluong'] ?>],
             ['Quận', <?= $ds_q['soluong'] ?>],
-            ['Bình luận', <?= $ds_bl['soluong'] ?>],
-            ['Lịch đặt', <?= $ds_ld['soluong'] ?>]
+            ['Lịch đặt', <?= $ds_ld['soluong'] ?>],
+            ['Hóa đơn', <?= $ds_hd['soluong'] ?>]
         ]);
         var options = { // Set option của biểu đồ
             'title': 'Thống kê',

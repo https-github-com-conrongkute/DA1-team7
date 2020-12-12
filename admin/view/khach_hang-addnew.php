@@ -1,7 +1,7 @@
 <div class="right__title">Bảng khách hàng</div>
 <p class="right__desc">Chèn khách hàng</p>
 <div class="right__formWrapper">
-    <form action="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=insert" method="post" enctype="multipart/form-data">
+    <form action="/admin/?ctrl=tai_khoan&act=insert" method="post" enctype="multipart/form-data">
         <div class="right__inputWrapper hienloi">
             <label for="title">Tên khách hàng</label>
             <input type="text" name="tenkh" id="tenkh" placeholder="Họ và tên">
@@ -104,31 +104,31 @@
         $('#tenkh').blur(function (e) { 
             var user = $(this).val();
             $('.bage-check-kh').css('display','block');
-            $('.bage-check-kh').load('<?=ADMIN_URL?>/?ctrl=tai_khoan&act=kiemloi&username=' + user);
+            $('.bage-check-kh').load('<?=ADMIN_URL?>/admin/?ctrl=tai_khoan&act=kiemloi&username=' + user);
             $('.bage-check-php').css('display','none');
         });
         $('#email').blur(function (e) { 
             var email = $(this).val();
             $('.bage-check-email').css('display','block');
-            $('.bage-check-email').load('<?=ADMIN_URL?>/?ctrl=tai_khoan&act=kiemloi&email=' + email);
+            $('.bage-check-email').load('<?=ADMIN_URL?>/admin/?ctrl=tai_khoan&act=kiemloi&email=' + email);
             $('.bage-check-php').css('display','none');
         });
         $('#tendn').blur(function (e) { 
             var tendn = $(this).val();
             $('.bage-check-dn').css('display','block');
-            $('.bage-check-dn').load('<?=ADMIN_URL?>/?ctrl=tai_khoan&act=kiemloi&ten_dn=' + tendn);
+            $('.bage-check-dn').load('<?=ADMIN_URL?>/admin/?ctrl=tai_khoan&act=kiemloi&ten_dn=' + tendn);
             $('.bage-check-php').css('display','none');
         });
         $('#sdt').blur(function (e) { 
             var sdt = $(this).val();
             $('.bage-check-sdt').css('display','block');
-            $('.bage-check-sdt').load('<?=ADMIN_URL?>/?ctrl=tai_khoan&act=kiemloi&sdt=' + sdt);
+            $('.bage-check-sdt').load('<?=ADMIN_URL?>/admin/?ctrl=tai_khoan&act=kiemloi&sdt=' + sdt);
             $('.bage-check-php').css('display','none');
         });
         $('#mk').blur(function (e) { 
             var sdt = $(this).val();
             $('.bage-check-pass').css('display','block');
-            $('.bage-check-pass').load('<?=ADMIN_URL?>/?ctrl=tai_khoan&act=kiemloi&pass=' + sdt);
+            $('.bage-check-pass').load('<?=ADMIN_URL?>/admin/?ctrl=tai_khoan&act=kiemloi&pass=' + sdt);
             $('.bage-check-php').css('display','none');
         });
     });

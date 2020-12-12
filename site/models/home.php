@@ -394,7 +394,7 @@ function getlichdatbyid($ma_tk){
 //thực hiện inner join 3 bảng căn hộ khách hàng và đặt lịch
 
 function getthongbao($id){
-    $sql="SELECT ch.ten_can_ho, ch.ma_tk, dl.ma_can ,dl.ma_tk, kh.ho_ten, ngay_xem , ngay_dat, sdt, ma_dat
+    $sql="SELECT ch.ten_can_ho, ch.ma_tk, dl.ma_can ,dl.ma_tk, kh.ho_ten, ngay_xem , ngay_dat, sdt, ma_dat, dl.trang_thai
     FROM can_ho ch INNER JOIN dat_lich dl ON ch.ma_can = dl.ma_can 
     INNER JOIN khach_hang kh ON kh.ma_tk=dl.ma_tk WHERE ch.ma_tk='$id' and ch.an_hien = 1 order by  ma_dat  desc";
     return query($sql);
@@ -443,6 +443,10 @@ function getallquan(){
     $sql="SELECT * FROM quan";
     return query($sql);
 }
+function getquanbyid($id){
+    $sql="SELECT * FROM quan where ma_quan='$id'";
+    return queryOne($sql);
+}
 function getallloai_can(){
     $sql="SELECT * FROM loai_can";
     return query($sql);
@@ -484,6 +488,13 @@ function themdangky($ho_ten, $email, $sdt){
     $sql="INSERT into dangkytimnha (ho_ten, email, sdt, trangthai) value ('$ho_ten', '$email', '$sdt', 0)";
     execute($sql);
 }
-
-
+//sửa lịch đặt
+function updatedl($ma_dat, $trang_thai){
+    $sql = "UPDATE dat_lich SET trang_thai ='$trang_thai'  WHERE ma_dat='$ma_dat'";
+    execute($sql);
+}
+function updatematkhau($email, $pass){
+    $sql = "UPDATE khach_hang SET mat_khau ='$pass'  WHERE email='$email'";
+    execute($sql);
+}
 ?> 

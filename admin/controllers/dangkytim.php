@@ -14,7 +14,7 @@ switch ($act) {
           $id=$_GET["id"];
           $trangthai=1;
           capnhatdangky($id, $trangthai);
-          header("location: ".ADMIN_URL."?ctrl=dangkytim&act=index");
+          header("location: /admin/?ctrl=dangkytim&act=index");
           break;
 }
 ?>

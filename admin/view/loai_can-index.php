@@ -23,10 +23,10 @@
                     <td><?=$ds["ten_can"]?></td>
 
                     <td>
-                        <a href="<?=ADMIN_URL?>/?ctrl=loai_can&act=edit&ma_loai=<?=$ds['ma_loai']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
+                        <a href="/admin/?ctrl=loai_can&act=edit&ma_loai=<?=$ds['ma_loai']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
                     </td>
                     <td>
-                    <a href="javascript:Delete('?ctrl=loai_can&act=delete&ma_loai=<?=$ds['ma_loai']?>')" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
+                    <a href="javascript:Delete('/admin/?ctrl=loai_can&act=delete&ma_loai=<?=$ds['ma_loai']?>')" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>
                     </td>
                 </tr>
             <?php }?>

@@ -6,13 +6,12 @@
                               <tr>
                                         <th scope="col">STT</th>
                                         <th scope="col">Tên khách hàng</th>
-                                        <th scope="col" style="width: 40%;">Căn hộ</th>
+                                        <th scope="col" style="width: 30%;">Căn hộ</th>
                                         <th scope="col">Ngày xem</th>
                                         <th scope="col">Ngày đặt</th>
                                         <th scope="col">Ghi chú</th>
-                                        <!-- <th scope="col">Trạng thái</th> -->
-                                        <!-- <th scope="col">Sửa</th>
-                                <th scope="col">Xóa</th> -->
+                                        <th scope="col">Duyệt</th>
+                                        
                               </tr>
                     </thead>
                     <tbody>
@@ -39,6 +38,29 @@
                                 else{
                                     echo "Chưa xem nhà";
                                 }?></td>
+                                <td>
+                                  <?php
+                                  if ($ds["ngay_xem"] < date("Y-m-d")) {
+                                    echo "";
+                                  }
+                                  else{
+                                    ?>
+                                    <?php 
+                                        if($ds['trang_thai'] == 0){
+                                        ?>
+                                        <p style="color: blue;">Click <i class='fas fa-hand-point-down'></i></p>
+                                        <a href="?act=updatedl&ma_dat=<?=$ds["ma_dat"]?>" style="background-color: orangered; color: white; padding: 5px; border-radius: 10px;">Đồng ý</a>
+                                        <?php
+                                      }
+                                      else{
+                                      ?>
+                                      <p style="color: green;">Đả đồng ý lịch hẹn</p>
+                                      <a href="?act=huydatlich&ma_dat=<?=$ds["ma_dat"]?>" style="background-color: orangered; color: white; padding: 5px; border-radius: 10px;">Hủy hẹn</a>
+                                   <?php
+                                    }
+                                  }
+                                  ?>
+                                </td>
 
                               </tr>
                               <?php

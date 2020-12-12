@@ -26,7 +26,7 @@
                     <td>1</td>
                     <td><?=$ds['ho_ten']?></td>
                     <td><?=$ds['ten_tk']?></td>
-                    <td>(+84) <?=$ds['sdt']?></td>
+                    <td>0<?=$ds['sdt']?></td>
                     <td><?=$ds['email']?></td>
                     <td><?=($ds['vai_tro']==1) ? 'Quản trị':"khách hàng"?></td>
                     <td><?=($ds['kich_hoat']==1)? 'Đã kích hoạt':"Đã bị khóa"?></td>

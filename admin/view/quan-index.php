@@ -23,7 +23,7 @@
                     <td><?=$ds["ten_quan"]?></td>
                     
                     <td>
-                        <a href="<?=ADMIN_URL?>/?ctrl=quan&act=edit&ma_quan=<?=$ds['ma_quan']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
+                        <a href="<?=ADMIN_URL?>/admin/?ctrl=quan&act=edit&ma_quan=<?=$ds['ma_quan']?>" style="color: #455A64;"><i class="fas fa-edit"></i></a>
                     </td>
                     <td>
                     <a href="javascript:Delete('?ctrl=quan&act=delete&ma_quan=<?=$ds['ma_quan']?>')" style="color: #455A64;"><i class="fas fa-trash-alt"></i></a>

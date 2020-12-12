@@ -1,7 +1,7 @@
 <div class="right__title">Bảng căn hộ</div>
 <p class="right__desc">Chèn khách hàng</p>
 <div class="right__formWrapper">
-    <form action="<?= ADMIN_URL ?>/?ctrl=can_ho&act=insert" method="post" enctype="multipart/form-data">
+    <form action="/admin/?ctrl=can_ho&act=insert" method="post" enctype="multipart/form-data">
     <input type="hidden" name="ma_tk" value="<?=$_SESSION["sid"]?>">
         <div class="right__inputWrapper">
             <label for="title">Tiêu đề cho thuê</label>

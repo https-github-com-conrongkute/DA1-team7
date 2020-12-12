@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+}
+
+.clearfix {
+    width: 100%;
+    background-color: orangered;
+    text-align: center;
+    height: 50px;
+}
+
+.clearfix h3 {
+    line-height: 50px;
+    color: aliceblue;
+}
+
+.table-responsive {
+    background-color: rgb(244, 244, 244);
+    padding: 100px;
+}
+
+label {
+    font-size: 14pt;
+}

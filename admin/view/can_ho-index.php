@@ -94,19 +94,19 @@
                                         else echo "Hiện" ?></p>
                             <?php if ($ds["an_hien"] == 0) {
                             ?>
-                                <p><a href="<?= ADMIN_URL ?>/?ctrl=can_ho&act=duyetbai&ma_can=<?= $ds['ma_can'] ?>"><button style="background-color: orangered; color: white; padding: 2px 5px; border-radius: 10%;">Duyệt bài</button></a></p>
+                                <p><a href="/admin/?ctrl=can_ho&act=duyetbai&ma_can=<?= $ds['ma_can'] ?>"><button style="background-color: orangered; color: white; padding: 2px 5px; border-radius: 10%;">Duyệt bài</button></a></p>
                             <?php
                             } else {
                                 ?>
                                 <p style="color: orangered;">Đã duyệt bài</p>
-                                <p><a href="<?= ADMIN_URL ?>/?ctrl=can_ho&act=anbai&ma_can=<?= $ds['ma_can'] ?>"><button style="background-color: green; color: white; padding: 2px 5px; border-radius: 10%;">Ẩn bài đăng</button></a></p>
+                                <p><a href="/admin/?ctrl=can_ho&act=anbai&ma_can=<?= $ds['ma_can'] ?>"><button style="background-color: green; color: white; padding: 2px 5px; border-radius: 10%;">Ẩn bài đăng</button></a></p>
 
                                 <?php
                             } ?>
 
                             <?php if ($_SESSION["sid"] == $ds["ma_tk"]) {
                             ?>
-                                <p><a href="<?= ADMIN_URL ?>/?ctrl=can_ho&act=edit&ma_can=<?= $ds['ma_can'] ?>" style="color: #455A64;">Sửa<i class="fas fa-edit"></i></a></p>
+                                <p><a href="/admin/?ctrl=can_ho&act=edit&ma_can=<?= $ds['ma_can'] ?>" style="color: #455A64;">Sửa<i class="fas fa-edit"></i></a></p>
                             <?php
                             } ?>
                         </td>

@@ -1,7 +1,7 @@
 <div class="right__title">Sửa thông tin ADMIN</div>
 
 <div class="right__formWrapper">
-    <form action="<?= ADMIN_URL ?>/?ctrl=tai_khoan&act=updateadmin" method="post" enctype="multipart/form-data">
+    <form action="/admin/?ctrl=tai_khoan&act=updateadmin" method="post" enctype="multipart/form-data">
         <div class="right__inputWrapper">
             <label for="title">Tên Admin</label>
             <input type="text" name="tenkh" id="tenkh" placeholder="Họ và tên" value="<?=$kh['ho_ten']?>">
@@ -22,12 +22,12 @@
         </div>
         <div class="right__inputWrapper">
             <label for="title">Số điện thoại</label>
-            <input type="number" name="sdt" id="sdt" placeholder="số điện thoại" value="<?=$kh['sdt']?>">
+            <input type="number" name="sdt" id="sdt" placeholder="số điện thoại" value="0<?=$kh['sdt']?>">
             <!-- <span id="sdt"></span> -->
         </div>
         <div class="right__inputWrapper">
             <label for="title">Mật khẩu</label>
-            <input type="password" name="pass" id="mk" placeholder="Mật khẩu" value="<?=$kh['mat_khau']?>">
+            <input type="password" name="pass" id="mk" placeholder="Mật khẩu" >
             <!-- <span id="pass"></span> -->
         </div>
         <div class="right__inputWrapper">

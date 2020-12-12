@@ -84,9 +84,9 @@ switch ($act) {
             settype($ma_phuong, "int");
             settype($huong_nha, "int");
             themcanho($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien);
-            header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=index");
+            header("location: /admin/?ctrl=can_ho&act=index");
         } else {
-            header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=addnew");
+            header("location: /admin/?ctrl=can_ho&act=addnew");
         }
         break;
 
@@ -168,9 +168,9 @@ switch ($act) {
             settype($ma_phuong, "int");
             settype($huong_nha, "int");
             updatecanho($ma_can, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien);
-            header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=index");
+            header("location: /admin/?ctrl=can_ho&act=index");
         } else {
-            header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=addnew");
+            header("location: /admin/?ctrl=can_ho&act=addnew");
         }
         break;
 
@@ -178,21 +178,21 @@ switch ($act) {
         $ma_can = $_GET["ma_can"];
         settype($ma_can, "int");
         deletecanho($ma_can);
-        header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=index");
+        header("location: /admin/?ctrl=can_ho&act=index");
         break;
     case 'duyetbai':
         $ma_can = $_GET["ma_can"];
         settype($ma_can, "int");
         $an_hien = 1;
         duyetcanho($ma_can, $an_hien);
-        header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=index");
+        header("location: /admin/?ctrl=can_ho&act=index");
         break;
         case 'anbai':
             $ma_can = $_GET["ma_can"];
             settype($ma_can, "int");
             $an_hien = 0;
             duyetcanho($ma_can, $an_hien);
-            header("location: " . ADMIN_URL . "/?ctrl=can_ho&act=index");
+            header("location: /admin/?ctrl=can_ho&act=index");
             break;
     case 'phuong':
         // require_once "models/can_ho.php";

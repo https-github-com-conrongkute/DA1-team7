@@ -2,7 +2,7 @@
 <div class="right__title">Bảng đặt lịch</div>
 <p class="right__desc">Thêm dặt lịch xem</p>
 <div class="right__formWrapper">
-    <form action="<?= ADMIN_URL ?>/?ctrl=dat_lich&act=insert" method="post" enctype="multipart/form-data">
+    <form action="/admin/?ctrl=dat_lich&act=insert" method="post" enctype="multipart/form-data">
     
         <div class="right__inputWrapper hienloi">
         <label for="title">Căn hộ</label>
@@ -33,7 +33,7 @@
         </div>
         <div class="right__inputWrapper hienloi">
             <label for="title">Ngày đi xem</label>
-            <input type="date" name="ngay_di_xem" id="email" >
+            <input type="date" name="ngay_di_xem" min="<?=date("Y-m-d")?>" id="email" >
             <?php if(isset($ngay_di_xem_tt)==true){ ?>
              <p class="bage-check-php"><?=$ngay_di_xem_tt?></p>
              <?php } ?>

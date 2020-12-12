@@ -21,7 +21,7 @@
             <div class="nav-menu">
                 <ul>
                     <li><a href="index.php">Trang chủ </a> </li>
-                    <li><a href="?ctrl=home&act=danhsach&ma_quan=4">Danh sách nhà thuê</a> </li>
+                    <li><a href="?ctrl=home&act=danhsach&loai_can=1">Danh sách nhà thuê</a> </li>
                     <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                     <!-- <li><a href="?act=danhnhap">Đăng nhập </a></li> -->
                     <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px;">Đăng tin</a></li>
@@ -31,6 +31,7 @@
         </div>
     </nav>
     <div class="container mt" style="margin-top: 160px;" id="container">
+    <?php if(isset($row) != true) {?>
         <div class="form-container sign-up-container">
             <form action="?act=dangky" method="post">
                 <h1>Đăng ký </h1>
@@ -81,6 +82,16 @@
                 swal("Kiểm tra email để kích hoạt");
             </script>
         <?php } ?>
+        <?php if (isset($messagequen) == true) { ?>
+            <script>
+                swal("Kiểm tra email để xác nhận tài khoản");
+            </script>
+        <?php } ?>
+        <?php if (isset($messagethanhcong) == true) { ?>
+            <script>
+                swal(" Đổi mật khẩu thành công ","Đăng nhập ngay nào", "success");
+            </script>
+        <?php } ?>
         <?php if (isset($kichhoattk) == true) { ?>
             <script>
                 swal("<?=$kichhoattk?>", "Đăng nhập thôi nào !", "success");
@@ -101,7 +112,7 @@
                 <span>hoặc sử dụng tài khoản của bạn</span>
                 <input type="text" placeholder="Tên đăng nhập" name="tentk" value="<?php if(isset($tentk)==true) echo $tentk;?>" />
                 <input type="password" placeholder="Mật khẩu" name="pass" />
-                <a href="#">quên mật khâu ?</a>
+                <a href="?act=quenmk">Quên mật khâu ?</a>
                 <button type="submit">Đăng nhập</button>
 
                 <?php if (isset($error_dn) && ($error_dn != "")) { ?>
@@ -125,6 +136,11 @@
                 </div>
             </div>
         </div>
+                <?php }
+                else {
+                    require_once $row;
+                }
+                ?>
     </div>
 
 

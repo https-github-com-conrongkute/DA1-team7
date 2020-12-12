@@ -8,7 +8,7 @@
                 <th scope="col">Vị tí</th>
                 <!-- <th scope="col">Hình</th> -->
                 <!-- <th scope="col">Giá thuê</th> -->
-                <th scope="col">Trạng thái</th>
+                <th scope="col" style="width: 17%;">Trạng thái</th>
                 <th scope="col">Sửa</th>
                 <th scope="col">Xóa</th>
             </tr>
@@ -59,7 +59,17 @@
                     </td>
                     <td>
                         
-                        <p><em><?= ($c['an_hien'] == 0) ? "Chờ xét duyệt" : "Đã duyệt" ?></em></p>
+                        <p style="margin-top: 40px;"><em><?= ($c['an_hien'] == 0) ? "<span class='nono' style='background-color: orangered; padding: 5px; color: white; width: 100%; border-radius: 10px;'>Chờ xét duyệt</span>" : "<span class='yesyes' style='background-color: green; padding: 5px; color: white; width: 100%; border-radius: 10px;'>Đã duyệt</span>" ?></em></p>
+                        <p style="margin-top: 20px;"><?php if ($c["an_hien"]==0) {
+                            ?>
+                            <a style="background-color: orangered; padding: 5px; color: white; width: 100%; border-radius: 10px;" href="?act=thanhtoan&ma_can=<?=$c["ma_can"]?>">Thanh toán</a>
+                            <?php
+                        }
+                        else{
+                            ?>
+                            <span class="yesyes" style="background-color: green; padding: 5px; color: white; width: 100%; border-radius: 10px;">Đã thanh toán</span>
+                            <?php
+                        }?></p>
                     </td>
                     <td><a href="?act=edit_ch&ma_can=<?=$c['ma_can']?>"><i class="fas fa-edit"></i></a></td>
                     <td><a class="btn_delete_ch" href="?act=delete_ch&ma_can=<?= $c['ma_can'] ?>"><i class="fas fa-trash-alt"></i></a></td>

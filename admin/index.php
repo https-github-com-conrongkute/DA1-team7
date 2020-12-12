@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['vai_tro']) && $_SESSION['vai_tro']==1){
-define('ARR_CONTROLLER', ["home","dangkytim", "quan", "hinh", "can_ho", "dat_lich", "tai_khoan", "thong_ke", "binhluan", "login", "loai_can"]);
+define('ARR_CONTROLLER', ["home","dangkytim", "quan", "hinh", "can_ho", "dat_lich", "tai_khoan", "thong_ke", "login", "loai_can", "hoadon"]);
 $ctrl='home';
 if (isset($_GET['ctrl'])==true) {
     $ctrl=$_GET['ctrl'];

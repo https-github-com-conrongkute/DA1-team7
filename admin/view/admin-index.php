@@ -1,6 +1,6 @@
-<div class="right__title">Bảng khách hàng</div>
+<div class="right__title">Thông tin ADMIN   </div>
 <div class="right__table">
-    <p class="right__tableTitle">Danh sách khách hàng</p>
+    <p class="right__tableTitle">Danh sách admin</p>
     <div class="right__tableWrapper">
         <table>
             <thead>
@@ -26,7 +26,7 @@
                     <td>1</td>
                     <td><?=$ds['ho_ten']?></td>
                     <td><?=$ds['ten_tk']?></td>
-                    <td><?=$ds['sdt']?></td>
+                    <td>0<?=$ds['sdt']?></td>
                     <td><?=$ds['email']?></td>
                     <td><?=($ds['vai_tro']==1) ? 'Quản trị':"khách hàng"?></td>
                     <td><?=($ds['kich_hoat']==1)? 'Đã kích hoạt':"Đã bị khóa"?></td>

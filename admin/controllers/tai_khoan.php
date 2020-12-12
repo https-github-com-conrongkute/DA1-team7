@@ -92,7 +92,7 @@ switch ($act) {
         if ($thongbao == true) {
             $message = "Thêm thành công";
             $tk=1;
-            addnewKhachhang($tenkh, $email, $sdt, $pass, $hinh, $tendn, $kich_hoat, $vai_tro, $random_key);
+            addnewKhachhang($tenkh, $email, $sdt, md5($pass), $hinh, $tendn, $kich_hoat, $vai_tro, $random_key);
             $view = 'view/khach_hang-addnew.php';
             require_once 'view/layout.php';
         }
@@ -117,7 +117,12 @@ switch ($act) {
         $email = $_POST['email'];
         $kich_hoat = 1;
         $sdt = $_POST['sdt'];
-        $pass = $_POST['pass'];
+        if(isset($_POST["pass"])&&($_POST["pass"]=="")){
+            $pass=$_SESSION["pass"];
+        }
+        else{
+            $pass=md5($_POST["pass"]);
+        }
         $vai_tro = $_POST['vai_tro'];
         if ($_FILES['file']['name'] != null) {
             $pathimg = '../uploaded/';
@@ -137,7 +142,7 @@ switch ($act) {
         $ma_kh = $_GET['ma_kh'];
         settype($ma_kh, "int");
         DeleteKhachhang($ma_kh);
-        header("location: ".ADMIN_URL."/?ctrl=tai_khoan&act=index");
+        header("location: /admin/?ctrl=tai_khoan&act=index");
         break;
     case 'dangxuat':
         if (isset($_GET['quantri']) && $_GET['quantri'] == 1) {
@@ -220,8 +225,13 @@ switch ($act) {
         $email = $_POST['email'];
         $kich_hoat = 1;
         $sdt = $_POST['sdt'];
-        $pass = $_POST['pass'];
-        $vai_tro = $_POST['vai_tro'];
+        if(isset($_POST["pass"])&&($_POST["pass"]=="")){
+            $pass=$_SESSION["pass"];
+        }
+        else{
+            $pass=md5($_POST["pass"]);
+        }
+        $vai_tro = 1;
         if ($_FILES['file']['name'] != null) {
             $pathimg = '../uploaded/';
             $hinh = $_FILES['file']['name'];

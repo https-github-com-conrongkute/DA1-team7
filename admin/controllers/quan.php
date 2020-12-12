@@ -19,10 +19,10 @@ switch ($act) {
             if (isset($_POST["ten_quan"])&&$_POST["ten_quan"]!="") {
                 $ten_quan=trim(strip_tags( $_POST["ten_quan"]));
                 themquan($ten_quan);
-            header("location: ".ADMIN_URL."/?ctrl=quan&act=index");
+            header("location: /admin/?ctrl=quan&act=index");
             }
             else{
-                header("location: ".ADMIN_URL."/?ctrl=quan&act=addnew");
+                header("location: /admin/?ctrl=quan&act=addnew");
             }
             break;
         
@@ -39,14 +39,14 @@ switch ($act) {
             settype($ma_quan, "int");
             $ten_quan=trim(strip_tags( $_POST["ten_quan"]));
             capnhatquan($ma_quan, $ten_quan);
-            header("location: ".ADMIN_URL."/?ctrl=quan&act=index");
+            header("location: /admin/?ctrl=quan&act=index");
         break;
 
         case 'delete':
             $ma_quan=$_GET["ma_quan"];
             settype($ma_quan, "int");
             deletequan($ma_quan);
-            header("location: ".ADMIN_URL."/?ctrl=quan&act=index");
+            header("location: /admin/?ctrl=quan&act=index");
         break;
 
 }

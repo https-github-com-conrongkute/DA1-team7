@@ -75,7 +75,7 @@ switch ($act) {
       // GỬi mail
       $message = "Thành công !";
       $random = substr(md5('adhwe$#&^'), 12);
-      $idUser = Luuthongtintk($ho_ten, $user, $pass, $email, $random);
+      $idUser = Luuthongtintk($ho_ten, $user,md5($pass) , $email, $random);
       require_once "PHPMailer-master/src/PHPMailer.php";
       require_once "PHPMailer-master/src/SMTP.php";
       $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
@@ -93,7 +93,7 @@ switch ($act) {
         $mail->addAddress($email, $user); //mail và tên người nhận       
         $mail->isHTML(true);  // Set email format to HTML
         $mail->Subject = 'Kích hoạt tài khoản';
-        $linkKH = "<a href='http://localhost:8888/Github/DA1-team7/site/?act=kichhoat&id=" . $idUser . "'>Nhấp vào đây</a>";
+        $linkKH = "<a href='dangtinabc.com/site/?ctrl=home&act=kichhoat&id=" . $idUser . "'>Nhấp vào đây</a>";
         // $linKH = sprintf($linkKH, $idUser);
         $mail->Body = "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản: " . $linkKH;
         $mail->send();
@@ -155,7 +155,7 @@ switch ($act) {
     break;
   case 'dangnhap_':
     $tentk = $_POST['tentk'];
-    $pass = $_POST['pass'];
+    $pass = md5($_POST['pass']);
     $checktk = checktk($tentk, $pass);
     if (is_array($checktk)) {
       $_SESSION['user'] = $checktk['ten_tk'];
@@ -193,20 +193,23 @@ switch ($act) {
     $pass_new = $_POST['passnew'];
     $repass = $_POST['repassnew'];
     $ma_tk = $_POST['ma_tk'];
-    if (checkmkcu($pass_cu, $ma_tk)) {
+    if (checkmkcu(md5($pass_cu), $ma_tk)) {
       if ($pass_new == $repass) {
-        UpdatePassnew($pass_new, $ma_tk);
+        UpdatePassnew(md5($pass_new), $ma_tk);
         $message = 'Đổi mật khẩu thành công !';
-        $view = 'views/doimk.php';
+        $rows = 'views/doimk.php';
+        $view = 'views/thongtintk.php';
         require_once 'views/layout.php';
       } else {
         $message = 'Mật khẩu mới không trùng khớp !';
-        $view = 'views/doimk.php';
+        $rows = 'views/doimk.php';
+        $view = 'views/thongtintk.php';
         require_once 'views/layout.php';
       }
     } else {
       $message = 'Mật khẩu cũ không trùng khớp !';
-      $view = 'views/doimk.php';
+      $rows = 'views/doimk.php';
+    $view = 'views/thongtintk.php';
       require_once 'views/layout.php';
     }
     break;
@@ -226,7 +229,7 @@ switch ($act) {
     $page_size = PATH_SITE;
     $dsch_tl = getCanho_theoloai($loaican, $page_num, $page_size);
     $toltal_rows = Demcanhotheoloai($loaican);
-    $basrurl = SITE_URL . "/?act=danhsach&loai_can={$loaican}";
+    $basrurl = "?act=danhsach&loai_can={$loaican}";
     $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
   }
 
@@ -237,7 +240,7 @@ switch ($act) {
     $page_size = PATH_SITE;
     $dsch_tl = getCanho_theoquan($ma_quan, $page_num, $page_size);
     $toltal_rows = Demcanhotheoquan($ma_quan);
-    $basrurl = SITE_URL . "/?act=danhsach&ma_quan={$ma_quan}";
+    $basrurl = "?act=danhsach&ma_quan={$ma_quan}";
     $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
   }
 
@@ -249,7 +252,7 @@ switch ($act) {
   $page_size = PATH_SITE;
   $dsch_tl = getCanho_theophuong($id, $page_num, $page_size);
   $toltal_rows = Demcanhotheophuong($id);
-  $basrurl = SITE_URL . "/?act=danhsach&phuong={$id}";
+  $basrurl = "?act=danhsach&phuong={$id}";
   $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
 }
 
@@ -374,9 +377,9 @@ switch ($act) {
       settype($ma_phuong, "int");
       settype($huong_nha, "int");
       Update_chdt($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien,$ma_can);
-      header("location: " . SITE_URL . "/?ctrl=home&act=ch-dd&ma_tk=" . $_SESSION["id"] . "");
+      header("location: ?ctrl=home&act=ch-dd&ma_tk=" . $_SESSION["id"] . "");
     } else {
-      header("location: " . SITE_URL . "/?ctrl=home&act=edit_ch");
+      header("location: ?ctrl=home&act=edit_ch");
     }
     # code...
     break;
@@ -510,9 +513,9 @@ switch ($act) {
       settype($ma_phuong, "int");
       settype($huong_nha, "int");
       themcanho($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien);
-      header("location: " . SITE_URL . "/?ctrl=home&act=ch-dd&ma_tk=" . $_SESSION["id"] . "");
+      header("location: ?ctrl=home&act=ch-dd&ma_tk=" . $_SESSION["id"] . "");
     } else {
-      header("location: " . SITE_URL . "/?ctrl=home&act=dangtin");
+      header("location: ?ctrl=home&act=dangtin");
     }
     break;
   case 'datlichxem';
@@ -525,7 +528,7 @@ switch ($act) {
         $ngay_xem = $_POST["ngay_xem"];
         $ngay_dat = $_POST["ngay_dat"];
         datlichid($ma_can, $ma_tk, $ngay_xem, $ngay_dat);
-        header("location: " . SITE_URL . "?ctrl=home&act=lichsu&ma_tk=$ma_tk");
+        header("location: " . "?ctrl=home&act=lichsu&ma_tk=$ma_tk");
         break;
       }
     } else {
@@ -549,7 +552,7 @@ switch ($act) {
         $ma_dat=$_GET["ma_dat"];
         xoadatlich($ma_dat);
         $thongbao="Hủy thành công";
-        header("location: ".SITE_URL."/?ctrl=home&act=lichsu&ma_tk=".$_SESSION['id']."");
+        header("location: ?ctrl=home&act=lichsu&ma_tk=".$_SESSION['id']."");
       break;
 
       //tìm kiếm nhanh
@@ -563,7 +566,7 @@ switch ($act) {
           $page_size = PATH_SITE;
           $dsch_tl = getCanho_theoquanvaloaican($loaican, $ma_quan, $page_num, $page_size);
           $toltal_rows = Demcanhotheoquanvaloaican($loaican , $ma_quan);
-          $basrurl = SITE_URL . "/?act=danhsach&ma_quan={$ma_quan}&ma_loai={$loaican}";
+          $basrurl = "?act=danhsach&ma_quan={$ma_quan}&ma_loai={$loaican}";
           $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
         }
         $quan = getallquan();
@@ -585,7 +588,7 @@ switch ($act) {
           $page_size = PATH_SITE;
           $dsch_tl = getCanho_theogia($sapxep, $loai_can, $mucgia, $page_num, $page_size);
           $toltal_rows = Demcanhotheogia( $loai_can, $mucgia);
-          $basrurl = SITE_URL . "/?act=danhsach&ma_loai={$loai_can}";
+          $basrurl = "?act=danhsach&loai_can={$loai_can}";
           $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
           $quan = getallquan();
           $quanz = getallquan();
@@ -598,7 +601,7 @@ switch ($act) {
           $page_size = PATH_SITE;
           $dsch_tl = getCanho_theosx($sapxep, $loai_can, $page_num, $page_size);
           $toltal_rows = Demcanhotheoloai($loai_can);
-          $basrurl = SITE_URL . "/?act=danhsach&ma_loai={$loai_can}";
+          $basrurl = "?act=danhsach&loai_can  ={$loai_can}";
           $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
           $quan = getallquan();
           $quanz = getallquan();
@@ -624,7 +627,13 @@ switch ($act) {
           $page_size = PATH_SITE;
           $dsch_tl = getCanho_all($loai_can, $key, $ma_quan, $mucgia, $dien_tich, $sophongngu, $sophongvs, $huongnha, $page_num, $page_size);
           $toltal_rows = Demcanhoall($loai_can, $key, $ma_quan, $mucgia, $dien_tich, $sophongngu, $sophongvs, $huongnha);
-          $basrurl = SITE_URL . "/?act=danhsach&key={$key}";
+          if (isset($ma_quan)&&($ma_quan!="")) {
+            $basrurl = "?act=danhsach&key={$key}&ma_quan={$ma_quan}";
+          }
+          if (isset($dien_tich)&&($dien_tich!="")) {
+            $basrurl = "?act=danhsach&key={$key}&ma_quan={$ma_quan}&dien_tich={$dien_tich}";
+
+          }
           $links = taolinks($basrurl, $page_num, $page_size, $toltal_rows);
           $quan = getallquan();
           $quanz = getallquan();
@@ -641,7 +650,110 @@ switch ($act) {
          $email=$_POST["email"];
          $sdt=$_POST["sdt"];
          themdangky($ho_ten, $email, $sdt);
-        header("location: ".SITE_URL."?ctrl=home&act=index");
+        header("location: ?ctrl=home&act=index");
       }
       break;
+
+      case 'thanhtoan':
+        $_SESSION["ma_can"]=$_GET["ma_can"];
+        header("location: /vnpay_php/index.php") ;
+      break;
+
+      //update lịch dat
+      case 'updatedl':
+        $ma_dat=$_GET["ma_dat"];
+        $trang_thai=1;
+        updatedl($ma_dat, $trang_thai);
+        header("location: ?ctrl=home&act=ds-ld&ma_tk=".$_SESSION['id']."");
+      break;
+      case 'huydatlich':
+        $ma_dat=$_GET["ma_dat"];
+        $trang_thai=0;
+        updatedl($ma_dat, $trang_thai);
+        header("location: ?ctrl=home&act=ds-ld&ma_tk=".$_SESSION['id']."");
+      break;
+
+      //Quên mật khẩu
+      case 'quenmk':
+        $row="views/quenmk.php";
+        require_once "views/login.php";
+      break;
+
+      //đổi mật khẩu mới
+
+      case 'quenmk_':
+        if (isset($_POST['guiemail'])) {
+        if (isset($_POST["email"])&& ($_POST["email"]!="")){ 
+        //  elseif (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        //   $erro['email'] = 'Email không hợp lệ !';
+        // } 
+        if (checktkemail($_POST["email"])==true) {
+          $email=$_POST["email"];
+          $messagequen = "Gửi hành công !";
+          // $random = substr(md5('adhwe$#&^'), 12);
+          // $idUser = Luuthongtintk($ho_ten, $user,md5($pass) , $email, $random);
+          require_once "PHPMailer-master/src/PHPMailer.php";
+          require_once "PHPMailer-master/src/SMTP.php";
+          $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
+          try {
+            $mail->SMTPDebug = 0;  // Enable verbose debug output
+            $mail->isSMTP();
+            $mail->CharSet  = "utf-8";
+            $mail->Host = 'smtp.gmail.com';  //SMTP servers
+            $mail->SMTPAuth = true; // Enable authentication
+            $mail->Username = 'ngoanhquoc5@gmail.com';  // SMTP username
+            $mail->Password = 'quoc201201';   // SMTP password
+            $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
+            $mail->Port = 465;  // port to connect to                
+            $mail->setFrom('ngoanhquoc5@gmail.com', 'goldenhome');
+            $mail->addAddress($email); //mail và tên người nhận       
+            $mail->isHTML(true);  // Set email format to HTML
+            $mail->Subject = 'Xác nhận tài khoản';
+            $linkKH = "<a href='dangtinabc.com/site/?ctrl=home&act=nhapmkmoi&email=" . $email . "'>Nhấp vào đây</a>";
+            // $linKH = sprintf($linkKH, $idUser);
+            $mail->Body = "<h4>Chào mừng bạn trở lại</h4> Click vào đây để xác nhận tài khoản: " . $linkKH;
+            $mail->send();
+            $messagequen = 'Cập nhật mật khẩu !';
+          } catch (Exception $e) {
+            echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
+          }
+          require_once 'views/login.php';
+        }
+        else{
+          $erro['email'] = 'Không có tài khoản này !';
+          $row='views/quenmk.php';
+          require_once 'views/login.php';
+        }
+        }
+      }
+      require_once 'views/login.php';
+      break;
+
+      case 'nhapmkmoi':
+        $mke="views/nhapmkmoi.php";
+        $row="views/quenmk.php";
+        require_once "views/login.php";
+      break;
+
+      case 'doipassemail':
+        if (isset($_POST["gui"])) {
+          $email=$_GET["email"];
+          $pass=$_POST["pass"];
+          $repass=$_POST["repass"];
+          if ($pass !="" && $pass == $repass) {
+            updatematkhau($email, md5($pass));
+            $messagethanhcong="Đổi mật khẩu thành công";
+            require_once "views/login.php";
+          }
+          else{
+            $messagethatbai="Đổi mật khẩu thất bại";
+            $mke="views/nhapmkmoi.php";
+            $row="views/quenmk.php";
+            require_once "views/login.php";
+          }
+          
+        }
+
+      break;
+      
 }

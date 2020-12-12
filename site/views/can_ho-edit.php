@@ -39,7 +39,7 @@
                     <ul>
                         <li><a href="index.php">Trang chủ </a> </li>
                         <li><a href="#">Dịch vụ </a></li>
-                        <li><a href="?ctrl=home&act=danhsach&ma_quan=4">Danh sách nhà thuê</a> </li>
+                        <li><a href="?ctrl=home&act=danhsach&loai_can=1">Danh sách nhà thuê</a> </li>
                         <li><a href="?ctrl=home&act=about">Giới thiệu </a></li>
                         <li><a href="?ctrl=home&act=dangtin" style="padding: 5px 10px;background-color: orange;border-radius: 12px; color: rgb(255, 255, 255) !important;">Đăng tin</a></li>
                         <?php if (isset($_SESSION['user']) == true) { ?>

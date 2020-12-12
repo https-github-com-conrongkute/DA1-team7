@@ -34,16 +34,6 @@
                        <input type="text" name="tenkh" id="" value="<?=$_SESSION['name']?>">
                        <input type="hidden" name="ma_tk" value="<?=$_SESSION['id']?>">
                    </div>
-                   
-                   <div class="tt-right-row">
-                     <label>Mật khẩu</label>
-                     <p><?php
-                     for($i=0; $i<strlen($_SESSION['mat_khau']); $i++){
-                         echo "*";
-                     }
-                     ?></p>
-                      
-                   </div>
                    <div class="tt-right-row">
                        <label>Email</label>
                        <input type="email" name="email" id=""  value="<?=$_SESSION['email']?>">

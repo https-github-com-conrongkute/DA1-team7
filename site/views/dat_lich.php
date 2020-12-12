@@ -4,7 +4,7 @@
             <?php if (isset($_SESSION["id"])) {
                    
                       ?>
-                      <form action="?ctrl=home&act=datlichxem" name="myform" method="post" onsubmit="return validateform()">
+                      <form action="?ctrl=home&act=datlichxem"  method="post" name="myfor"  onsubmit="return validatefor()">
                               <input type="hidden" name="ma_can" value="<?=$idcanho["ma_can"]?>">
                               <input type="hidden" name="ngay_dat" value="<?=date("Y-m-d")?>">
                               <input class="ipdl4" id="ngay_xem" name="ngay_xem" min="<?=date("Y-m-d")?>" type="date" placeholder="Chọn ngày">
@@ -32,12 +32,4 @@
 
             
         </div>
-        <script>
-    function validateform() {
-        var name = document.myform.ngay_xem.value;
-        if (name == null || name == "") {
-          swal("Bạn chưa chọn ngày", "Vui lòng đặt lại !", "warning");
-            return false;
-        } 
-    }
-</script>
+

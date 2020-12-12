@@ -9,7 +9,7 @@
                                 <th scope="col">Ngày xem</th>
                                 <th scope="col">Ngày đặt</th>
                                 <th scope="col">Ghi chú</th>
-                                <th scope="col">Khác</th>
+                                <th scope="col" style="width: 10%;">Khác</th>
                                 <!-- <th scope="col">Trạng thái</th> -->
                                 <!-- <th scope="col">Sửa</th>
                                 <th scope="col">Xóa</th> -->
@@ -36,12 +36,25 @@
                               </td>
                                 <td><?=date_format(date_create($ds['ngay_xem']), "d/m/yy")?></td>
                                 <td><?=date_format(date_create($ds['ngay_dat']), "d/m/yy")?></td>
-                                <td><?php if (date("Y-m-d") >= date_format(date_create($ds['ngay_xem']), "Y-m-d")) {
+                                <td><?php if (date("Y-m-d") > date_format(date_create($ds['ngay_xem']), "Y-m-d")) {
                                     echo "Đã hết hạn";
                                 }
                                 else{
                                     echo "Chưa xem nhà";
-                                }?></td>
+                                }?>
+                                <p style="margin-top: 20px;"><?php
+                                if ($ds["trang_thai"]==0) {
+                                    ?>
+                                    <span style="color: orangered;">Chủ căn hộ chưa duyệt</span>
+                                    <?php
+                                }
+                                else{
+                                    ?>
+                                    <span style="color: green;">Chủ căn hộ đả đồng ý</span>
+                                    <?php
+                                }
+                                ?></p>    
+                            </td>
                                 <td><a href="javascript:Delete('<?=SITE_URL?>/?ctrl=home&act=deletedatlich&ma_dat=<?=$ds['ma_dat']?>')" style="color: white; background-color: orangered; padding: 2px 5px; border-radius: 10px;">Hủy lịch</a></td>
                                 
                             </tr>

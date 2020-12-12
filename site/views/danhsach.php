@@ -254,7 +254,7 @@
 
             <div class="form-timkiem" style="overflow: hidden;">
                 <div class="div-text">
-                    <p>Các quận lân cận</p>
+                    <p>Các quận lân cận </p>
                 </div>
                 <form action="#" method="post" class="tim-kiemmphuong">
 
@@ -264,26 +264,31 @@
                         $soluong=soluongcanhoinquan($q["ma_quan"]);
                        ?>
                         <li>
-
-
                             <a href="?ctrl=home&act=danhsach&ma_quan=<?= $q["ma_quan"]?>"> <span class=""> <?=$q["ten_quan"]?> </span> <span class="count">SL: (<?php echo $soluong["soluong"]?>)</span> </a>
-
                         </li>
                     <?php }?>
                     </ul>
-
-
                 </form>
+
+
             </div>
             <!-- Phường -->
             <div class="form-timkiem" style="overflow: hidden;">
                 <div class="div-text">
-                    <p>Các phường trong Quận</p>
+                    <p>Các phường trong <?php if(isset($_GET["ma_quan"]))
+                     { $q=getquanbyid($_GET["ma_quan"]); 
+                    echo $q["ten_quan"];
+                } 
+                    else{
+
+                        echo "Quận 1";
+                    }
+                    ?></p>
                 </div>
                 <form action="#" method="post" class="tim-kiemmphuong">
                 <ul class="lancan">
-                    <?php if (isset($ma_quan) && ($ma_quan !=Null)) {
-                        $phuong=getphuongbyidquan($ma_quan);
+                    <?php if (isset($_GET["ma_quan"])) {
+                        $phuong=getphuongbyidquan($_GET["ma_quan"]);
                         foreach($phuong as $p){
                         ?>
                     
@@ -293,7 +298,8 @@
 
                         </li>
                     <?php } } else {
-                        $phuong=getphuongbyidquan(1);
+                        $ma_quan=1;
+                        $phuong=getphuongbyidquan($ma_quan);
                         foreach($phuong as $p){
                         ?>
                     <li>

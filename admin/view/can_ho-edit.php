@@ -1,7 +1,7 @@
 <div class="right__title">Bảng căn hộ</div>
 <p class="right__desc">Sửa căn hộ</p>
 <div class="right__formWrapper">
-    <form action="<?= ADMIN_URL ?>/?ctrl=can_ho&act=update" method="post" enctype="multipart/form-data">
+    <form action="/admin/?ctrl=can_ho&act=update" method="post" enctype="multipart/form-data">
         <div class="right__inputWrapper">
             <label for="title">Tiêu đề cho thuê</label>
             <input type="text" name="ten_can_ho" id="ten_can_ho" value="<?=$ds["ten_can_ho"]?>">
