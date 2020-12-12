@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -29,6 +30,7 @@ body {
 }
 
 .banner img {
+    width: 100%;
     opacity: 0.8;
 }
 
@@ -46,9 +48,13 @@ body {
 }
 
 .nav-logo {
-    width: 30%;
+    width: 10%;
     float: left;
     height: 80px;
+}
+
+.mn_bar {
+    display: none;
 }
 
 .nav-logo>img {
@@ -59,6 +65,12 @@ body {
 }
 
 .nav-menu {
+    float: right;
+    width: 90%;
+    height: 80px;
+}
+
+.nav-menu2 {
     float: right;
     width: 70%;
     height: 80px;
@@ -79,7 +91,7 @@ body {
 .nav-menu>ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .nav-menu>ul>li {
@@ -123,10 +135,14 @@ body {
     text-decoration: none;
 }
 
+.nav-menu>ul>li>a.cl {
+    color: black;
+}
+
 .nav-menu2>ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .nav-menu2>ul>li {
@@ -158,11 +174,8 @@ body {
 }
 
 .menu-logo-bg {
-    width: 90%;
-    /* margin-top: 20px; */
-    position: relative;
-    left: 5%;
-    top: 0;
+    width: 80%;
+    margin: 0 auto;
 }
 
 
@@ -280,13 +293,7 @@ label {
     overflow-y: scroll;
 }
 
-.menu-logo-bg {
-    width: 90%;
-    /* margin-top: 20px; */
-    position: relative;
-    left: 5%;
-    top: 0;
-}
+
 
 
 /* end */
@@ -458,15 +465,23 @@ label {
     font-size: 17px;
     letter-spacing: 1.5px;
     color: white;
-    line-height: 27px;
+    /* line-height: 27px; */
+}
+
+.rp-dk-dk2 {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 440px;
 }
 
 .dangky {
-    width: 23%;
+    width: 30%;
     height: 400px;
-    position: absolute;
-    top: 440px;
-    left: 150px;
+    float: left;
+    /* position: absolute; */
+    /* top: 440px;
+    left: 150px; */
     background-color: orange;
     border-radius: 19px;
     text-align: center;
@@ -505,11 +520,13 @@ label {
 }
 
 .dangky2 {
-    width: 54.8%;
+    width: 70%;
+    margin-top: 45px;
     height: 310px;
-    top: 485px;
+    float: right;
+    /* top: 485px;
     right: 150px;
-    position: absolute;
+    position: absolute; */
     background-color: white;
     border-radius: 0px 20px 20px 0px;
     box-shadow: #ccc 8px 20px 20px;
@@ -527,11 +544,12 @@ label {
     display: flex;
     width: 100%;
     height: 260px;
+    justify-content: space-between;
     text-align: center;
 }
 
 .dangky2 .box1 {
-    width: calc(100%/3);
+    width: 100%;
 }
 
 .dangky2 .box1 a {
@@ -539,16 +557,15 @@ label {
 }
 
 .dangky2 .box1 p {
-    margin-top: 15px;
+    margin: 10px auto;
+    width: 60%;
     line-height: 25px;
     font-size: 13px;
 }
 
 .icon1 {
     width: 65px;
-    margin-left: 90px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin: 15px auto;
     text-align: center;
     line-height: 50px;
     height: 65px;
@@ -579,6 +596,12 @@ label {
     margin-bottom: 50px;
     text-align: center;
     overflow: hidden;
+}
+
+.loc_canho_fl {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .select {
@@ -638,11 +661,18 @@ label {
     font-size: 16px;
 }
 
-.danhsach .tieude h2 {
-    font-size: 32px;
+.danhsach .tieude>h2 {
+    font-size: 30pt;
     letter-spacing: 2px;
     color: orange;
 }
+
+.danhsach .tieude>h3 {
+    font-weight: bold;
+    color: orange;
+    color: black;
+}
+
 
 .danhsach .canho {
     /* height: 760px; */
@@ -749,7 +779,7 @@ a {
 .gioithieu {
     margin-top: 60px;
     width: 100%;
-    height: 450px;
+    min-height: 450px;
     background-color: orange;
 }
 
@@ -799,15 +829,16 @@ a {
 
 .thuenhatext {
     display: flex;
-    flex-wrap: wrap;
     margin-top: 20px;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .box3 {
-    width: 31.6%;
+    width: 100%;
     height: 350px;
-    margin-right: 20px;
+    border-top: 4px solid orange;
+    border-radius: 20px;
+    margin-right: 30px;
     /* background-color: #f0f0f0; */
     box-shadow: #ccc 2px 1px 8px 4px;
 }
@@ -882,12 +913,20 @@ a {
 .tuvan {
     width: 100%;
     margin-top: 90px;
+    height: 400px;
 }
 
 .tuvanimg {
     position: relative;
     width: 100%;
     text-align: center;
+    height: 400px;
+}
+
+.tuvanimg>img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
 
 .tuvantext {
@@ -1328,4 +1367,538 @@ a {
 .hethang {
     color: #FF4500;
     font-weight: bold;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .menu {
+        height: 1200px;
+        margin-bottom: 200px;
+    }
+
+    .menu-logo {
+        background-color: white;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        height: 80px;
+        /* background-color: #ccc; */
+        top: 0px;
+        z-index: 99;
+    }
+
+    .menu-logo-bg {
+        width: 100%;
+        float: left;
+        position: relative;
+    }
+
+    .hienra {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        height: 80px;
+        background-color: white;
+        color: black;
+        box-shadow: 5px 5px 5px #ccc;
+        top: 0;
+        z-index: 99;
+    }
+
+    .nav-menu {
+        position: absolute;
+        width: 50%;
+        right: -50%;
+        transition: all 1s;
+        top: 80px;
+    }
+
+    .nav-menu2 {
+        position: absolute;
+        width: 50%;
+        right: -50%;
+        transition: all 1s;
+        top: 80px;
+    }
+
+    .nav-menu2>ul {
+        width: 100%;
+        flex-direction: column;
+        justify-content: right;
+        background-color: white;
+        height: 100vh;
+    }
+
+    .nav-menu2>ul>li {
+        line-height: 60px;
+        border-bottom: 0.5px solid #ccc;
+    }
+
+    .nav-menu>ul {
+        width: 100%;
+        flex-direction: column;
+        justify-content: right;
+        background-color: white;
+        height: 100vh;
+    }
+
+    .nav-menu>ul>li {
+        line-height: 60px;
+        border-bottom: 0.5px solid #ccc;
+    }
+
+    .main {
+        right: 0%;
+    }
+
+    .nav-menu>ul>li>a {
+        color: black;
+    }
+
+    .nav-logo {
+        margin-left: 10%;
+    }
+
+    .mn_bar {
+        display: block;
+        float: right;
+        font-size: 20pt;
+        margin-right: 10%;
+        line-height: 80px;
+    }
+
+    .navtext h1 {
+        color: orange;
+        font-size: 25px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .navtext p {
+        margin-top: 10px;
+        font-size: 8px;
+        letter-spacing: 1px;
+        color: white;
+
+    }
+
+    .dangky {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .dangky2 {
+        width: 100%;
+    }
+
+    .rp-dk-dk2 {
+        top: 350px;
+    }
+
+    .dangky2 {
+        min-height: 480px;
+        box-shadow: 5px 5px 20px #ccc;
+        border-radius: 20px;
+    }
+
+    .dangky2 .text1 {
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+    }
+
+    .text1>h2 {
+        font-size: 20px;
+    }
+
+    .danhsach .tieude>h2 {
+        font-size: 20px;
+    }
+
+    .danhsach .tieude>h3 {
+        font-size: 20px;
+    }
+
+    .tieude2>h3 {
+        font-size: 20px;
+    }
+
+    .tieude2 h2 {
+        font-size: 20px;
+        color: orange;
+    }
+
+    .tieude3>h2 {
+        font-size: 20px;
+    }
+
+    .dangky2 .text2 {
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .icon1 {
+        width: 65px;
+        margin: 10px 20px;
+        float: left;
+        line-height: 50px;
+        height: 65px;
+        border-radius: 100%;
+        background-color: orangered;
+    }
+
+    .icon1 img {
+        margin-top: 19px;
+    }
+
+    .dangky2 .box1 {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .dangky2 .box1 a {
+        font-weight: bold;
+
+    }
+
+    .dangky2 .box1 p {
+        width: calc(100% - 115px);
+        line-height: 25px;
+        font-size: 11px;
+    }
+
+    .loc_canho_fl {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .select {
+        width: 100%;
+        margin: 0 0px;
+        margin-bottom: 10px;
+    }
+
+    .loc-canho>select>option {
+        width: 100%;
+        /* border-radius: 8px; */
+    }
+
+    .btn-loc {
+        width: 100%;
+    }
+
+    .box2text {
+        height: 60px;
+    }
+
+    .box2text span {
+        font-size: 10pt;
+    }
+
+    .gia {
+        width: 96%;
+        margin-top: 5px;
+    }
+
+    .datlich {
+        width: 90%;
+        margin-top: 0px;
+        margin-left: 5%;
+        /* border-radius: 20px;
+        margin-left: 3%;
+        float: left;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        color: white;
+        font-size: 15px;
+        background-color: orangered; */
+    }
+
+    .datlich span {
+        color: white;
+        font-size: 14px;
+    }
+
+    .gioithieu {
+        min-height: 900px;
+    }
+
+    .gioithieu img {
+        width: 100%;
+        height: 450px;
+        float: left;
+    }
+
+    .textgt {
+        float: left;
+        width: 100%;
+        height: 450px;
+        padding: 30px;
+        line-height: 23px;
+        font-size: 14px;
+        color: rgb(240, 236, 236);
+    }
+
+    .textgt>h1 {
+        font-size: 20px;
+        margin: 20px 0px;
+    }
+
+    .textgt>p {
+        font-size: 12px;
+    }
+
+    /* .textgt h1 {
+        color: rgb(238, 78, 20);
+        margin: 15px;
+    } */
+    .thuenhatext {
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .box3 {
+        margin-bottom: 30px;
+        margin-right: 0px;
+    }
+
+    .tuvan {
+        width: 100%;
+        margin-top: 90px;
+    }
+
+    .tuvanimg {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    .tuvantext {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+    }
+
+    .tuvantext>h1 {
+        margin-bottom: 20px;
+        font-size: 22px;
+        color: white;
+    }
+
+    .tuvantext>p {
+        margin-bottom: 20px;
+
+        width: 80%;
+        margin: 0 auto;
+        color: white;
+        font-size: 12px;
+        /* line-height: 25px; */
+    }
+
+    .tuvan2 {
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 150px;
+        font-size: 12px;
+        height: 50px;
+        border-radius: 5px;
+        background-color: orangered;
+    }
+
+    .tuvan2>a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 50px;
+    }
+
+    .box5 {
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: 800px;
+    }
+
+    .footer .box4 {
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+    }
+
+    .footer .box4 .tieude4 {
+        margin-left: 0;
+    }
+
+    .footer .textquan {
+        display: flex;
+        justify-content: flex-end;
+        /* background: chartreuse; */
+    }
+
+    .quan1 {
+        width: 100%;
+        margin-top: 0px;
+        color: #333333;
+    }
+
+    .quan1>p {
+        margin: 0;
+    }
+
+    /* Thông tin tài khoản */
+    .tt-left {
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+        height: 600px;
+        border-right: 2px solid #ccc;
+    }
+
+    .tt-left>ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .tt-bg {
+        height: 1120px;
+    }
+
+    .tt-back-gr {
+        height: 1200px;
+    }
+
+    /* .tt-left>ul>li {
+        list-style: none;
+        line-height: 50px;
+        height: 50px;
+        width: 90%;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .tt-left>ul>li>i {
+        font-size: 15px;
+        margin: 0 10px;
+        color: black;
+    }
+    
+    .tt-left>ul>li>a {
+        text-decoration: none;
+        color: black;
+        padding: 0px 10px;
+    } */
+
+    .tt-right {
+        width: 100%;
+        float: left;
+        height: 600px;
+        padding: 0;
+        overflow-y: scroll;
+    }
+
+    .tt-right-row>input[type='password'] {
+        width: 100%;
+    }
+
+    .btn-tk {
+        width: 100%;
+    }
+
+    /* end */
+    /* Chi tiêt  */
+    .divlon {
+        width: 80%;
+        margin: 20px auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        background: white;
+        height: 500px;
+    }
+
+    .divlon .div1 {
+        width: 100%;
+        float: left;
+        height: 600px;
+
+    }
+
+    .divtext1>ul>li {
+        list-style: none;
+    }
+
+    .divlon .divtext {
+        margin: 20px;
+    }
+
+    .divlon .div2 {
+        width: 100%;
+        float: left;
+        height: 600px;
+        background: white;
+    }
+
+    .divimg .imglon {
+        width: 100%;
+    }
+
+    .imgnho img {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .div2 i {
+        position: absolute;
+        content: '';
+        top: 5px;
+        right: 2px;
+    }
+
+    .divmota1 input {
+        width: 85px;
+    }
+
+    .divmota3 a {
+        font-size: 12pt;
+    }
+
+    .divmota3 input {
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .dl{
+        margin-left: 0%;
+        margin-top: 50%;
+    }
+    .divdl {
+        background-color: white;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 10px;
+    }
+    .guitt{
+        width: 60%;
+        left: 20%;
+    }
+    /* End */
 }

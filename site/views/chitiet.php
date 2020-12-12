@@ -68,11 +68,11 @@
                     <form action="?ctrl=home&act=timkiemall" class="formtimkiem1" method="POST">
                         <div class="row mtop">
                             <div class="col-3">
-                            <select name="loai_can" id="" class="w-75 select pad">
-                                        <?php foreach($loaicanz as $lc) {?>
-                                        <option value="<?=$lc["ma_loai"]?>"><?=$lc["ten_can"]?></option>
-                                        <?php }?>
-                            </select>
+                                <select name="loai_can" id="" class="w-75 select pad">
+                                    <?php foreach ($loaicanz as $lc) { ?>
+                                        <option value="<?= $lc["ma_loai"] ?>"><?= $lc["ten_can"] ?></option>
+                                    <?php } ?>
+                                </select>
                             </div>
                             <div class="col-6">
                                 <input type="text" name="key" class="w-100 select2 pad" style="border: none; font-size: 12pt; height: 50px; border-bottom: 1px gray solid;" placeholder="Nhập địa chỉ để tiềm kiếm căn hộ...">
@@ -90,15 +90,15 @@
 
                                 </select></div>
                             <div class="col-3">
-                            <select name="ma_quan" id="" class="select1 " style="font-size: 10pt;">
-                                        <option value="0">Quận</option>
-                                        <?php foreach($quanz as $q) {?>
-                                            <option value="<?=$q["ma_quan"]?>"><?=$q["ten_quan"]?></option>
-                                        <?php }?>
-                                    </select>
+                                <select name="ma_quan" id="" class="select1 " style="font-size: 10pt;">
+                                    <option value="0">Quận</option>
+                                    <?php foreach ($quanz as $q) { ?>
+                                        <option value="<?= $q["ma_quan"] ?>"><?= $q["ten_quan"] ?></option>
+                                    <?php } ?>
+                                </select>
                             </div>
                             <div class="col-3">
-                            <select name="mucgia" id="" class="select1" style="font-size: 10pt;">
+                                <select name="mucgia" id="" class="select1" style="font-size: 10pt;">
                                     <option value="0">Mức giá</option>
                                     <option value="1">Dưới 3 triệu</option>
                                     <option value="2">3 triệu - 5 triệu</option>
@@ -107,15 +107,15 @@
                                     <option value="5">10 triệu - 15 triệu</option>
                                     <option value="6">15 triệu - 20 triệu</option>
                                     <option value="7">Trên 20 triệu</option>
-                                    </select>
+                                </select>
                             </div>
                             <div class="col-3">
-                            <select name="dientich" id="" class="select1 " style="font-size: 10pt;">
-                                        <option value="0">Diện tích</option>
-                                        <option value="1">10 - 50 m²</option>
-                                        <option value="2">50 - 100 m²</option>
-                                        <option value="3">100 - 200 m²</option>
-                                    </select>
+                                <select name="dientich" id="" class="select1 " style="font-size: 10pt;">
+                                    <option value="0">Diện tích</option>
+                                    <option value="1">10 - 50 m²</option>
+                                    <option value="2">50 - 100 m²</option>
+                                    <option value="3">100 - 200 m²</option>
+                                </select>
                             </div>
 
                         </div>
@@ -143,15 +143,15 @@
                             </div>
                             <div class="col-4">
                                 <select name="huongnha" id="" class="select1 " style="font-size: 10pt;">
-                                <option value="0">Hướng nhà</option>
-                                        <option value="1">Đông</option>
-                                        <option value="2">Tây</option>
-                                        <option value="3">Nam</option>
-                                        <option value="4">Bắc</option>
-                                        <option value="5">Đông Bắc </option>
-                                        <option value="6">Đông Nam</option>
-                                        <option value="7">Tây Bắc</option>
-                                        <option value="8">Tây Bắc</option>
+                                    <option value="0">Hướng nhà</option>
+                                    <option value="1">Đông</option>
+                                    <option value="2">Tây</option>
+                                    <option value="3">Nam</option>
+                                    <option value="4">Bắc</option>
+                                    <option value="5">Đông Bắc </option>
+                                    <option value="6">Đông Nam</option>
+                                    <option value="7">Tây Bắc</option>
+                                    <option value="8">Tây Bắc</option>
                                 </select>
                             </div>
                         </div>
@@ -208,24 +208,24 @@
                         <button class="button-cs3"><p class="txt3">ID 277418</p></button> -->
                         <label for="" class="label1">Thuê</label>
                         <label for="" class="label2">Đã thẩm định</label>
-                        <label for="" class="label3">ID <?=$row["ma_can"]?></label>
+                        <label for="" class="label3">ID <?= $row["ma_can"] ?></label>
                     </div>
-                    <p class="txt3"><?=number_format($row['gia_thue'], 0, '', '.')?> VNĐ - <?= $row['dien_tich'] ?>m²</p>
-                    <p class="txt4">Giá : <?php $gia = $row['gia_thue'] / $row['dien_tich']; echo number_format($gia,0,'','.')?> VNĐ/m²</p>
+                    <p class="txt3"><?= number_format($row['gia_thue'], 0, '', '.') ?> VNĐ - <?= $row['dien_tich'] ?>m²</p>
+                    <p class="txt4">Giá : <?php $gia = $row['gia_thue'] / $row['dien_tich'];
+                                            echo number_format($gia, 0, '', '.') ?> VNĐ/m²</p>
                 </div>
                 <div class="btn">
-                    <?php if (isset($_SESSION['cart']) == true) {
-
-                        if ($_SESSION['cart'][$row['ma_can']]['ma_can'] == $row['ma_can']) {
-                            echo ' <div><button class="btn1" style="background-color: orangered;"><a href="?act=delete-gh&id='.$_SESSION['cart'][$row['ma_can']]['ma_can'].'" style="color: white;">ĐÃ LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
-                        }else{
-                            echo '<div><button class="btn1" ><a href="?act=add-gh&id='.$row['ma_can'].'" style="color: orangered;">LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
+                    <?php
+                    if ($_SESSION['cart'][$row['ma_can']]['ma_can'] == $row['ma_can']) {
+                        echo ' <div><button class="btn1" style="background-color: orangered;"><a href="?act=delete-gh&id=' . $_SESSION['cart'][$row['ma_can']]['ma_can'] . '" style="color: white;">ĐÃ LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
+                    } else {
+                        if (isset($_SESSION['id']) == true) {
+                            echo '<div><button class="btn1" ><a href="?act=add-gh&id=' . $row['ma_can'] . '" style="color: orangered;">LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
+                        } else {
+                            echo '<div><button class="btn1" ><a href="?act=dangnhap" style="color: orangered;">LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
                         }
                     }
                     ?>
-                    <?php if (isset($_SESSION['cart']) == false) { ?>
-                        <div><button class="btn1" style="color: orangered;"><a href="?act=add-gh&id=<?= $row['ma_can'] ?>" style="color: orangered;">LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>
-                    <?php } ?>
                     <div><button class="btn1">CHIA SẺ <i class="fa fa-share" style="margin-left:5px;"></i></button></div>
                     <div><button class="btn1">VỊ TRÍ <i class="fa fa-map-marker" style="margin-left:5px;"></i></button></div>
                 </div>
@@ -240,14 +240,14 @@
                             <div class="col-6 txtx">
                                 <ul>
                                     <li class="li1">Hướng: <?php if ($row["huong_nha"] == 1) echo "Đông";
-                                        elseif ($c["huong_nha"] == 2) echo "Tây";
-                                        elseif ($c["huong_nha"] == 3) echo "Nam";
-                                        elseif ($c["huong_nha"] == 4) echo "Bắc";
-                                        elseif ($c["huong_nha"] == 5) echo "Tây Bắc";
-                                        elseif ($c["huong_nha"] == 6) echo "Tây Nam";
-                                        elseif ($c["huong_nha"] == 7) echo "Đông Bắc";
-                                        elseif ($c["huong_nha"] == 8) echo "Đông Nam";
-                                        ?></li>
+                                                            elseif ($c["huong_nha"] == 2) echo "Tây";
+                                                            elseif ($c["huong_nha"] == 3) echo "Nam";
+                                                            elseif ($c["huong_nha"] == 4) echo "Bắc";
+                                                            elseif ($c["huong_nha"] == 5) echo "Tây Bắc";
+                                                            elseif ($c["huong_nha"] == 6) echo "Tây Nam";
+                                                            elseif ($c["huong_nha"] == 7) echo "Đông Bắc";
+                                                            elseif ($c["huong_nha"] == 8) echo "Đông Nam";
+                                                            ?></li>
                                     <li>Phòng ngủ: <?= $row['so_phong_ngu'] ?></li>
                                     <li>Phòng tắm: <?= $row['so_phong_vs'] ?></li>
                                     <li>Tầng: <?= $row['tang'] ?> </li>
@@ -269,38 +269,38 @@
                         <p>Đăng lịch xem căn hộ này</p>
                     </div>
                     <?php if (isset($_SESSION["id"])) {
-                        ?>
-                        <form action="?ctrl=home&act=datlichxem" method="post" class="form-tuvan"  name="myform"  onsubmit="return validateform()">
-                        <div class="fiel">
-                            <input type="hidden" name="ma_can" value="<?= $row['ma_can'] ?>" id="" style="font-size: 10pt;" placeholder="Nhập tên của bạn">
-                        </div>
-                        <div class="fiel">
-                            <input type="hidden" name="ma_tk" value="<?= $_SESSION['id'] ?>" id="" style="font-size: 10pt;" placeholder="Nhập Email">
-                        </div>
-                        <div class="fiel">
-                            <input type="hidden" name="ngay_dat" value="<?=date("Y-m-d")?>" id="" style="font-size: 10pt;" placeholder="Nhập Số Điện Thoại">
-                        </div>
-                        <div class="fiel" style="margin-top: 50px;">
-                            <input type="date" min="<?=date("Y-m-d")?>" name="ngay_xem" id="" style="font-size: 10pt;" >
-                        </div>
-                        <div class="fiel-sub">
-                            <input type="submit" name="dat" value="Đặt lịch xem" style="font-size: 10pt;">
-                        </div>
-                    </form>
+                    ?>
+                        <form action="?ctrl=home&act=datlichxem" method="post" class="form-tuvan" name="myform" onsubmit="return validateform()">
+                            <div class="fiel">
+                                <input type="hidden" name="ma_can" value="<?= $row['ma_can'] ?>" id="" style="font-size: 10pt;" placeholder="Nhập tên của bạn">
+                            </div>
+                            <div class="fiel">
+                                <input type="hidden" name="ma_tk" value="<?= $_SESSION['id'] ?>" id="" style="font-size: 10pt;" placeholder="Nhập Email">
+                            </div>
+                            <div class="fiel">
+                                <input type="hidden" name="ngay_dat" value="<?= date("Y-m-d") ?>" id="" style="font-size: 10pt;" placeholder="Nhập Số Điện Thoại">
+                            </div>
+                            <div class="fiel" style="margin-top: 50px;">
+                                <input type="date" min="<?= date("Y-m-d") ?>" name="ngay_xem" id="" style="font-size: 10pt;">
+                            </div>
+                            <div class="fiel-sub">
+                                <input type="submit" name="dat" value="Đặt lịch xem" style="font-size: 10pt;">
+                            </div>
+                        </form>
                     <?php
-                    } else{
-                        ?>
-                        <div  class="form-tuvan">
-                        <div class="fiel" >
-                            <input type="date" name="" id="" style="font-size: 10pt; margin-left: 25px;" placeholder="">
+                    } else {
+                    ?>
+                        <div class="form-tuvan">
+                            <div class="fiel">
+                                <input type="date" name="" id="" style="font-size: 10pt; margin-left: 25px;" placeholder="">
+                            </div>
+                            <div class="fiel-sub">
+                                <input type="submit" name="dat" onclick="Show()" value="Đặt lịch xem" style="font-size: 10pt; margin-left: 25px;">
+                            </div>
                         </div>
-                        <div class="fiel-sub">
-                            <input type="submit" name="dat" onclick="Show()"  value="Đặt lịch xem" style="font-size: 10pt; margin-left: 25px;">
-                        </div>
-                    </div>
-                    
-                        <?php
-                    }?>
+
+                    <?php
+                    } ?>
                 </div>
             </div>
             <!-- thông tin chi tiết hơn -->
@@ -312,7 +312,7 @@
 
                     <p class="txt77"> Diện tích <?= $row['dien_tich'] ?>m2. </p>
 
-                    <p class="txt77"> <?=$row["tien_ich"]?></p>
+                    <p class="txt77"> <?= $row["tien_ich"] ?></p>
 
                 </p>
             </div>
@@ -326,9 +326,9 @@
                     <label for="" class="form-txt">Loại căn hộ :</label>
                     <div class="div">
                         <select name="loai_can" id="" style="font-size: 10pt;">
-                            <?php foreach($loaican as $ls){?>
-                                <option value="<?=$ls["ma_loai"]?>"><?=$ls["ten_can"]?></option>
-                            <?php }?>
+                            <?php foreach ($loaican as $ls) { ?>
+                                <option value="<?= $ls["ma_loai"] ?>"><?= $ls["ten_can"] ?></option>
+                            <?php } ?>
                         </select>
                     </div>
                     <div class="div">
@@ -339,7 +339,7 @@
                     <div class="div">
                         <select name="ma_quan" id="" style="font-size: 10pt;">
                             <?php foreach ($quanall as $q) { ?>
-                                <option value="<?=$q['ma_quan'] ?>"><?= $q['ten_quan'] ?></option>
+                                <option value="<?= $q['ma_quan'] ?>"><?= $q['ten_quan'] ?></option>
                             <?php } ?>
                         </select>
                     </div>
@@ -357,39 +357,39 @@
 
 
                     <ul class="lancan">
-                    
-                    <?php foreach($quan as $q) {
-                        $soluong=soluongcanhoinquan($q["ma_quan"]);
-                       ?>
-                        <li>
+
+                        <?php foreach ($quan as $q) {
+                            $soluong = soluongcanhoinquan($q["ma_quan"]);
+                        ?>
+                            <li>
 
 
-                            <a href="?ctrl=home&act=danhsach&ma_quan=<?= $q["ma_quan"]?>"> <span class=""> <?=$q["ten_quan"]?> </span> <span class="count">SL: (<?php echo $soluong["soluong"]?>)</span> </a>
+                                <a href="?ctrl=home&act=danhsach&ma_quan=<?= $q["ma_quan"] ?>"> <span class=""> <?= $q["ten_quan"] ?> </span> <span class="count">SL: (<?php echo $soluong["soluong"] ?>)</span> </a>
 
-                        </li>
-                    <?php }?>
+                            </li>
+                        <?php } ?>
                     </ul>
 
 
                 </form>
             </div>
             <div class="form-timkiemlancan " style="overflow: hidden;">
-                <div class="div-text" >
+                <div class="div-text">
                     <p>Các phường trong quận</p>
                 </div>
                 <form action="#" method="post" class="tim-kiemm">
 
 
-                    <ul class="lancan" >
-                    <?php $phuong=getphuongbyidquan($row["ma_quan"]);
-                        foreach($phuong as $p){
+                    <ul class="lancan">
+                        <?php $phuong = getphuongbyidquan($row["ma_quan"]);
+                        foreach ($phuong as $p) {
                         ?>
-                        <li>
+                            <li>
 
-                            <a href="?ctrl=home&act=danhsach&ma_quan=<?=$row["ma_quan"]?>&id=<?=$p["id"]?>"> <span class=""> <?=$p["phuong"]?> </span> <span class="count"></span> </a>
+                                <a href="?ctrl=home&act=danhsach&ma_quan=<?= $row["ma_quan"] ?>&id=<?= $p["id"] ?>"> <span class=""> <?= $p["phuong"] ?> </span> <span class="count"></span> </a>
 
-                        </li>
-                        <?php }?>
+                            </li>
+                        <?php } ?>
                     </ul>
 
 
@@ -457,7 +457,7 @@
                 <div class="quan1 l1">
                     <?php foreach ($quan as $q) {
                         $stt += 1; ?>
-                        <p><a href="?ctrl=home&act=danhsach&ma_quan=<?= $q["ma_quan"]?>"><?= $q["ten_quan"]?></a></p>
+                        <p><a href="?ctrl=home&act=danhsach&ma_quan=<?= $q["ma_quan"] ?>"><?= $q["ten_quan"] ?></a></p>
 
                         <?php
                         if ($stt == 10) {
@@ -485,19 +485,19 @@
         <span> 2020 © Bản quyền GoldenHome. Đã đăng ký Bản quyền.</span>
     </div>
     <div class="thongbao" id="thongbao">
-                <form action="">
-                    <div class="boxcenter">
-                    <div class="row">
-                        <div class="col-12" style="text-align: center;">
+        <form action="">
+            <div class="boxcenter">
+                <div class="row">
+                    <div class="col-12" style="text-align: center;">
                         <p class="tbdn">Đăng nhập để tiếp tục</p>
-                        </div>
                     </div>
-                    <div class="row mt-5" >
-                        <div class="col-6"><a href="?ctrl=home&act=dangnhap" class="tbdn1">OK</a></div>
-                        <div class="col-6"><span onclick="dong()" class="tbdn1" style="cursor: pointer;">Thoát</span></div>
-                    </div>
-                    </div>
-                </form>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6"><a href="?ctrl=home&act=dangnhap" class="tbdn1">OK</a></div>
+                    <div class="col-6"><span onclick="dong()" class="tbdn1" style="cursor: pointer;">Thoát</span></div>
+                </div>
+            </div>
+        </form>
     </div>
     <script src="./views/js/index.js"></script>
 </body>
@@ -507,20 +507,21 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 <script>
-    var thongbao=document.getElementById("thongbao");
-    function Show(){
-        thongbao.style.display="block";
+    var thongbao = document.getElementById("thongbao");
+
+    function Show() {
+        thongbao.style.display = "block";
     }
-    function dong(){
-        thongbao.style.display="none";
+
+    function dong() {
+        thongbao.style.display = "none";
     }
 
     function validateform() {
         var name = document.myform.ngay_xem.value;
         if (name == null || name == "") {
-          swal("Bạn chưa chọn ngày", "Vui lòng đặt lại !", "warning");
+            swal("Bạn chưa chọn ngày", "Vui lòng đặt lại !", "warning");
             return false;
-        } 
+        }
     }
 </script>
-

@@ -4,14 +4,20 @@ $(document).ready(function() {
         // console.log(body);
         if (body > 50) {
             $('nav').addClass('hienra');
-            $('.nav-menu ul li a').css('color', 'black');
-            $('.nav-menu3 ul li a').css('color', 'black');
+            $('.nav-menu ul li a').addClass('cl');
+            $('.nav-menu3 ul li a').addClass('cl');
         } else {
             $('nav').removeClass('hienra');
-            $('.nav-menu ul li a').css('color', 'white');
-            $('.nav-menu3 ul li a').css('color', 'white');
+            $('.nav-menu ul li a').removeClass('cl');
+            $('.nav-menu3 ul li a').removeClass('cl');
             // $('.sum-menu ul li a').css('color', 'black');
         }
+    });
+    $('.mn_bar').click(function (e) { 
+        $('.nav-menu').toggleClass('main');
+    });
+    $('.mn_bar').click(function (e) { 
+        $('.nav-menu2').toggleClass('main');
     });
     $('.btn_delete_ch').on('click', function(e) {
         e.preventDefault();

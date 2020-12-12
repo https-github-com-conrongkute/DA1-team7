@@ -358,9 +358,9 @@ function kichhoattk($ma_tk){
     $kq = $row->fetch();
     return $kq['soluong'];
 }
-function Luuthongtintk($ho_ten,$user, $pass, $email, $random){
+function Luuthongtintk($ho_ten,$user, $pass, $email){
     $conn = getConnection();
-    $sql = "INSERT INTO khach_hang (ho_ten,ten_tk, mat_khau, email, random_key) VALUES ('$ho_ten','$user','$pass','$email','$random')";
+    $sql = "INSERT INTO khach_hang (ho_ten,ten_tk, mat_khau, email) VALUES ('$ho_ten','$user','$pass','$email')";
     $conn->exec($sql);
     $idUser = $conn->lastInsertId();
     return $idUser;
@@ -368,6 +368,10 @@ function Luuthongtintk($ho_ten,$user, $pass, $email, $random){
 // Kích hoạt tk
 function updateThongtintk($idUser, $kich_hoat){
     $sql = "UPDATE khach_hang SET kich_hoat='$kich_hoat' WHERE ma_tk = '$idUser'";
+    execute($sql);
+}
+function update_ttKH($ten, $ma_tk, $email, $sdt){
+    $sql = "UPDATE khach_hang SET ho_ten ='$ten', email='$email', sdt='$sdt' WHERE ma_tk = '$ma_tk'";
     execute($sql);
 }
 // check tài khoản dang nhap
