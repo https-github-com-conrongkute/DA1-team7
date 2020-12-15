@@ -27,7 +27,6 @@
                 <div class="nav-logo">
                     <img src="../uploaded/logo.png" alt="">
                 </div>
-                <p class="mn_bar"><i class="fas fa-bars"></i></p>
                 <div class="nav-menu2">
                     <ul>
                         <li><a href="index.php">Trang chủ </a> </li>
@@ -60,7 +59,6 @@
                     <div class="nav-logo">
                         <img src="../uploaded/logo.png" alt="">
                     </div>
-                    <p class="mn_bar"><i class="fas fa-bars"></i></p>
                     <div class="nav-menu">
                         <ul>
                             <li><a href="index.php">Trang chủ </a> </li>
@@ -88,9 +86,8 @@
 
             <div class="navtext">
                 <h1 style="text-shadow: 2px 2px 2px black;">THUÊ CĂN HỘ SIÊU TỐC</h1>
-                <p>Hơn 16.000 nhà riêng, chung cư, căn hộ đang cho thuê. Cam kết luôn có 10 căn hộ trong 48 giờ.</p>
+                <p>Hơn 16.000 nhà riêng, chung cư, căn hộ đang cho thuê. Cam kết luôn có 10 <br> căn hộ trong 48 giờ.</p>
             </div>
-            <div class="rp-dk-dk2">
             <div class="dangky">
                 <h3>Đăng ký tìm nhà siêu tốc !</h3>
                 <form action="?ctrl=home&act=dangkytim" method="post" name="myform"  onsubmit="return validateform()">
@@ -110,24 +107,23 @@
                             <img src="../uploaded/fast.png" alt="">
                         </div>
                         <a href="#">Tận tâm</a>
-                        <p>Golden luôn đồng hành, hỗ trợ mọi vấn đề mọi lúc trong thời gian ngắn nhất.</p>
+                        <p>Golden luôn đồng <br> hành, hỗ trợ mọi vấn <br> đề mọi lúc trong thời <br> gian ngắn nhất.</p>
                     </div>
                     <div class="box1">
                         <div class="icon1">
                             <img src="../uploaded/guard.png" alt="">
                         </div>
                         <a href="#">Đáng tin cậy</a>
-                        <p>Tất cả nhà thuê chính chủ, không trung gian, cam kết an tâm khi thuê.</p>
+                        <p>Tất cả nhà thuê <br> chính chủ, không trung <br> gian, cam kết an <br> tâm khi thuê.</p>
                     </div>
                     <div class="box1">
                         <div class="icon1">
                             <img src="../uploaded/like.png" alt="">
                         </div>
                         <a href="#">Dịch vụ miễn phí</a>
-                        <p>Dịch vụ tìm nhà và dẫn đi xem hoàn toàn miễn phí.</p>
+                        <p>Dịch vụ tìm nhà <br> và dẫn đi xem hoàn <br> toàn miễn phí.</p>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     <?php } ?>
@@ -136,12 +132,11 @@
     } else { ?>
         <div class="danhsach ">
             <div class="tieude">
-                <h3>DANH SÁCH</h3>
-                <h2>Nhà cho thuê mới nhất</h2>
+                <h3 style="font-weight: bold; color: orange;color:black;">DANH SÁCH</h3>
+                <h2 style="font-size: 30pt;">Nhà cho thuê mới nhất</h2>
             </div>
             <div class="loc-canho">
                 <form action="?ctrl=home&act=timkiemtheogia" method="post">
-                    <div class="loc_canho_fl">
                     <select name="sxgia" id="" class="select">
                         <option value="1">Giá từ thấp đến cao</option>
                         <option value="2">Giá từ cao đến thấp</option>
@@ -165,7 +160,6 @@
                         <option value="">Tp. Hồ Chí Minh</option>
                     </select>
                     <button class="btn-loc" type="submit"><i class="fas fa-search"></i></button>
-                    </div>
                 </form>
             </div>
             <div class="boxcenter ">
@@ -224,10 +218,10 @@
             <img src="../uploaded/gioithieu.jpg" alt="">
             <div class="textgt">
                 <h1 style="color: white; font-weight: bold;">Về chúng tôi</h1>
-               <p> Đội ngũ chuyên viên tư vấn của chúng tôi với kinh nghiệm dày dặn và nắm vững thị trường sẽ giúp bạn tìm kiếm căn hộ phù hợp với nhu cầu của bạn. Bạn chỉ cần đưa ra thông tin, chúng tôi sẽ tư vấn hỗ trợ bạn tìm ra căn hộ như mình mong muốn. Tùy theo diện
+                Đội ngũ chuyên viên tư vấn của chúng tôi với kinh nghiệm dày dặn và nắm vững thị trường sẽ giúp bạn tìm kiếm căn hộ phù hợp với nhu cầu của bạn. Bạn chỉ cần đưa ra thông tin, chúng tôi sẽ tư vấn hỗ trợ bạn tìm ra căn hộ như mình mong muốn. Tùy theo diện
                 tích của phòng ngủ rộng hay chật hẹp, có vuông vắn hay không mà chúng ta lựa chọn cách bài trí nội thất và trang trí sao cho phù hợp nhất. Chính vì vậy trước khi bắt tay vào thiết kế phòng ngủ bạn nên nghiên cứu thật kỹ kết cấu và diện tích
                 căn phòng để đưa ra ý tưởng Decor hợp lý nhất. Thiết kế phòng ngủ có diện tích nhỏ siêu đẹp: sử dụng các đồ nội thất đa năng để tiết kiệm diện tích vừa mang lại công năng sử dụng tuyệt vời. Chúng ta nên lựa chọn phong cách thiết kế nội thất
-                tối giản với 3 tông màu tối đa trong căn phòng.</p>
+                tối giản với 3 tông màu tối đa trong căn phòng.
             </div>
         </div>
         <div class="thuenha">
@@ -323,7 +317,8 @@
                 <img src="../uploaded/banner-f.jpg" width="100%" alt="">
                 <div class="tuvantext">
                     <h1>Bạn vẫn chưa tìm được nhà ưng ý?</h1>
-                    <p>Còn rất nhiều nhà riêng, căn hộ, chung cư chưa được đăng lên, hãy để Propzy tư vấn chọn giúp bạn!</p>
+                    <p>Còn rất nhiều nhà riêng, căn hộ, chung cư chưa được đăng lên, hãy để Propzy tư vấn chọn
+                        <br> giúp bạn!</p>
                     <div class="tuvan2">
                         <a href="#">TƯ VẤN MIỄN PHÍ</a>
                     </div>

@@ -11,7 +11,31 @@ p#checkid1 {
     width: 100%;
     margin: 0px;
 }
-
+.g_l-mail-px{
+    position: fixed;
+    z-index: 9999999999999999;
+    top: 50%;
+    left: 50%;
+    height: 250px;
+    width: 35%;
+    transform: translate(-50%,-50%);
+}
+.form__glm{
+    background-color: white;
+    box-shadow: 5px 5px 10px #f0f0f0;
+    border-radius: 20px;
+    width: 100%;
+    height: 250px;
+}
+.form__glm>input[type='submit']{
+    width: 40%;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    margin: 0px 30%;
+    background-color: #ff6347;
+}
 p#checkid2 {
     float: left;
     width: 100%;
@@ -23,31 +47,10 @@ p#checkid3 {
     float: left;
     width: 100%;
     display: none;
-  
     margin: 5px 0px;
 }
-<<<<<<< HEAD
 
 #checkid1>span {
-=======
-.ps_gm{
-   position: fixed;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%,-50%);
-   width: 30%;
-   height: 300px;
-   z-index: 99999999999;
-}
-.bg_gm{
-    box-shadow: 2px 2px 5px #ccc;
-    background-color: white;
-    border-radius: 20px;
-    width: 100%;
-    float: left;
-}
-#checkid1>span{
->>>>>>> c2580da6053426565ce976a00a8f4af4f6180dea
     padding: 0px 8px;
     float: left;
     height: 12px;

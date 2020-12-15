@@ -215,17 +215,18 @@
                                             echo number_format($gia, 0, '', '.') ?> VNĐ/m²</p>
                 </div>
                 <div class="btn">
-                    <?php
-                    if ($_SESSION['cart'][$row['ma_can']]['ma_can'] == $row['ma_can']) {
-                        echo ' <div><button class="btn1" style="background-color: orangered;"><a href="?act=delete-gh&id=' . $_SESSION['cart'][$row['ma_can']]['ma_can'] . '" style="color: white;">ĐÃ LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
-                    } else {
-                        if (isset($_SESSION['id']) == true) {
-                            echo '<div><button class="btn1" ><a href="?act=add-gh&id=' . $row['ma_can'] . '" style="color: orangered;">LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
+                    <?php if (isset($_SESSION['cart']) == true) {
+
+                        if ($_SESSION['cart'][$row['ma_can']]['ma_can'] == $row['ma_can']) {
+                            echo ' <div><button class="btn1" style="background-color: orangered;"><a href="?act=delete-gh&id=' . $_SESSION['cart'][$row['ma_can']]['ma_can'] . '" style="color: white;">ĐÃ LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
                         } else {
-                            echo '<div><button class="btn1" ><a href="?act=dangnhap" style="color: orangered;">LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
+                            echo '<div><button class="btn1" ><a href="?act=add-gh&id=' . $row['ma_can'] . '" style="color: orangered;">LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>';
                         }
                     }
                     ?>
+                    <?php if (isset($_SESSION['cart']) == false) { ?>
+                        <div><button class="btn1" style="color: orangered;"><a href="?act=add-gh&id=<?= $row['ma_can'] ?>" style="color: orangered;">LƯU<i class="fa fa-download" style="margin-left:5px;"></i></a></button></div>
+                    <?php } ?>
                     <div><button class="btn1">CHIA SẺ <i class="fa fa-share" style="margin-left:5px;"></i></button></div>
                     <div><button class="btn1">VỊ TRÍ <i class="fa fa-map-marker" style="margin-left:5px;"></i></button></div>
                 </div>
@@ -295,7 +296,7 @@
                                 <input type="date" name="" id="" style="font-size: 10pt; margin-left: 25px;" placeholder="">
                             </div>
                             <div class="fiel-sub">
-                                <input type="submit" name="dat" onclick="Show()" value="Đặt lịch xem" style="font-size: 10pt; margin-left: 25px;">
+                                <input type="submit" name="dat" id="tb_dl" value="Đặt lịch xem" style="font-size: 10pt; margin-left: 25px;">
                             </div>
                         </div>
 
@@ -507,21 +508,35 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 <script>
-    var thongbao = document.getElementById("thongbao");
+    // var thongbao=document.getElementById("thongbao");
+    // function Show(){
+    //     thongbao.style.display="block";
+    // }
+    // function dong(){
+    //     thongbao.style.display="none";
+    // }
 
-    function Show() {
-        thongbao.style.display = "block";
-    }
-
-    function dong() {
-        thongbao.style.display = "none";
-    }
-
-    function validateform() {
-        var name = document.myform.ngay_xem.value;
-        if (name == null || name == "") {
-            swal("Bạn chưa chọn ngày", "Vui lòng đặt lại !", "warning");
-            return false;
-        }
-    }
+    // function validateform() {
+    //     var name = document.myform.ngay_xem.value;
+    //     if (name == null || name == "") {
+    //       swal("Bạn chưa chọn ngày", "Vui lòng đặt lại !", "warning");
+    //         return false;
+    //     } 
+    // }
+    $('#tb_dl').click(function(e) {
+        e.preventDefault();
+        swal({
+                title: "Đăng nhập để tiếp tục",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-info",
+                confirmButtonText: "Ok",
+                cancelButtonText: "Thoát",
+                closeOnConfirm: false
+            },
+            function() {
+                document.location = 'index.php?act=dangnhap';
+                // swal("Deleted!", "Your imaginary file has been deleted.", "success");
+            });
+    });
 </script>

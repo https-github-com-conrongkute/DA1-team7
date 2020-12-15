@@ -36,7 +36,6 @@
             <div class="nav-logo">
                 <img src="../uploaded/logo.png" alt="">
             </div>
-            <p class="mn_bar"><i class="fas fa-bars"></i></p>
             <div class="nav-menu">
                 <ul>
                     <li><a href="index.php">Trang chủ </a> </li>
@@ -195,7 +194,7 @@
                                 <h2 class="height-search"><a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>" class="title"><?= $ch['ten_can_ho'] ?></a></h2>
                                 <div class="imeta-1"> <b><?= $ch['dia_chi'] ?></b> </div>
                                 <div class="imeta-3"> <span><i class="fa fa-bath"></i> <strong><?=$ch['so_phong_vs']?></strong></span> <span><i class="fa fa-bed"></i> <strong><?=$ch['so_phong_ngu']?></strong></span> <span><i class="fa fa-building"></i> <strong><?=$ch['tang']?></strong></span> </div>
-                                <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="#" style="color: white;">Thuê</a></span>
+                                <div class="label"> <span class="label-1" style="background-color: orangered;"><a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>" style="color: white;">Thuê</a></span>
                                   
                                 </div>
                                 <div class="wprice">

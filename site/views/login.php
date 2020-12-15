@@ -31,141 +31,121 @@
         </div>
     </nav>
     <div class="container mt" style="margin-top: 160px;" id="container">
-<<<<<<< HEAD
-    <?php if(isset($row) != true) {?>
-=======
-    <?php if (isset($message) == true) { ?>
-            <!-- <script>
-                swal("Kiểm tra email để kích hoạt");
-            </script> -->
-            <div class="ps_gm">
-                <form action="?act=gui_lmail" method="post" class="bg_gm">
-                    <input type="hidden" name="ma_id" value="<?=$idUser?>">
-                    <div style="width: 100%;height: 100px;float: left;">
-                    <h2 style="text-align: center;">Kiểm tra email của bạn để kích hoạt !</h2>
+        <?php if (isset($row) != true) { ?>
+            <div class="form-container sign-up-container">
+                <form action="?act=dangky" method="post">
+                    <h1>Đăng ký </h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                     </div>
-                    <div style="width: 100%;float: left;">
-                    <input type="submit" value="Gửi lại mail" style="width: 30%;margin: 0 auto;background-color: #f17423;color: white;font-weight: bold;cursor: pointer;border-radius: 20px;">
-                    </div>
+                    <span>hoặc sửa dụng email để đăng ký</span>
+                    <input type="text" placeholder="Họ và tên" name="ho_ten" id="ho_ten" value="<?php if (isset($ho_ten) == true) echo $ho_ten; ?>" />
+                    <p id="checkid1"></p>
+                    <input type="text" placeholder="Tên đăng nhập" name="user" id="user" value="<?php if (isset($user) == true) echo $user; ?>" />
+                    <p id="checkid2"></p>
+                    <input type="text" placeholder="Email" name="email" value="<?php if (isset($email) == true) echo $email; ?>" />
+                    <!-- <p id="checkid"></p> -->
+                    <input type="password" id="mk" placeholder="Mật khẩu" name="pass" />
+                    <p id="checkid3"></p>
+                    <script>
+                        $(document).ready(function() {
+                            $('#mk').blur(function(e) {
+                                var u = $(this).val();
+                                $('#checkid3').css('display', 'block');
+                                $('#checkid3').load('?act=kiemloi&pass=' + u);
+                            });
+                            $('#user').blur(function(e) {
+                                var u = $(this).val();
+                                $('#checkid2').css('display', 'block');
+                                $('#checkid2').load('?act=kiemloi&user=' + u);
+                            });
+                            $('#ho_ten').blur(function(e) {
+                                var u = $(this).val();
+                                $('#checkid1').css('display', 'block');
+                                $('#checkid1').load('?act=kiemloi&ho_ten=' + u);
+                            });
+                        });
+                    </script>
+                    <button id="btn_submit_dk" type="submit">Đăng ký</button>
                 </form>
             </div>
-        <?php } ?>
->>>>>>> c2580da6053426565ce976a00a8f4af4f6180dea
-        <div class="form-container sign-up-container">
-            <form action="?act=dangky" method="post">
-                <h1>Đăng ký </h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                </div>
-                <span>hoặc sửa dụng email để đăng ký</span>
-                <input type="text" placeholder="Họ và tên" name="ho_ten" id="ho_ten" value="<?php if (isset($ho_ten) == true) echo $ho_ten; ?>" />
-                <p id="checkid1"></p>
-                <input type="text" placeholder="Tên đăng nhập" name="user" id="user" value="<?php if (isset($user) == true) echo $user; ?>" />
-                <p id="checkid2"></p>
-                <input type="text" placeholder="Email" name="email" value="<?php if (isset($email) == true) echo $email; ?>" />
-                <!-- <p id="checkid"></p> -->
-                <input type="password" id="mk" placeholder="Mật khẩu" name="pass" />
-                <p id="checkid3"></p>
+            <!-- Thông báo email -->
+            <?php if (isset($erro['email']) == true) { ?>
                 <script>
-                    $(document).ready(function() {
-                        $('#mk').blur(function(e) {
-                            var u = $(this).val();
-                            $('#checkid3').css('display', 'block');
-                            $('#checkid3').load('?act=kiemloi&pass=' + u);
-                        });
-                        $('#user').blur(function(e) {
-                            var u = $(this).val();
-                            $('#checkid2').css('display', 'block');
-                            $('#checkid2').load('?act=kiemloi&user=' + u);
-                        });
-                        $('#ho_ten').blur(function(e) {
-                            var u = $(this).val();
-                            $('#checkid1').css('display', 'block');
-                            $('#checkid1').load('?act=kiemloi&ho_ten=' + u);
-                        });
-                    });
+                    swal("<?= $erro['email'] ?>", "Nhấn để tiếp tục !", "error");
                 </script>
-                <button id="btn_submit_dk" type="submit">Đăng ký</button>
-            </form>
-        </div>
-        <!-- Thông báo email -->
-        <?php if (isset($erro['email']) == true) { ?>
-            <script>
-                swal("<?= $erro['email'] ?>", "Nhấn để tiếp tục !", "error");
-            </script>
-        <?php } ?>
-        <!-- THông báo đăng ký thành công -->
-<<<<<<< HEAD
-        <?php if (isset($message) == true) { ?>
-            <script>
-                swal("Kiểm tra email để kích hoạt");
-            </script>
-        <?php } ?>
-        <?php if (isset($messagequen) == true) { ?>
-            <script>
-                swal("Kiểm tra email để xác nhận tài khoản");
-            </script>
-        <?php } ?>
-        <?php if (isset($messagethanhcong) == true) { ?>
-            <script>
-                swal(" Đổi mật khẩu thành công ","Đăng nhập ngay nào", "success");
-            </script>
-        <?php } ?>
-=======
-        
->>>>>>> c2580da6053426565ce976a00a8f4af4f6180dea
-        <?php if (isset($kichhoattk) == true) { ?>
-            <script>
-                swal("<?= $kichhoattk ?>", "Đăng nhập thôi nào !", "success");
-            </script>
-        <?php } ?>
-        <?php if (isset($error_tk) == true) { ?>
-            <script>
-                swal("<?= $error_tk ?>", "Nhấp vào đây để tiếp tục !", "error");
-            </script>
-        <?php } ?>
-        <div class="form-container sign-in-container">
-            <form action="?act=dangnhap_" method="post">
-                <h1>Đăng nhập </h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <?php } ?>
+            <!-- THông báo đăng ký thành công -->
+            <?php if (isset($message) == true) { ?>
+                <div class="g_l-mail-px g_l-mail-bg">
+                    <form action="?act=gui_lmail" method="post" class="form__glm">
+                        <input type="hidden" name="ma_tk" value="<?= $idUser ?>">
+                        <h2 style="margin-bottom: 50px;width: 100%;text-align: center;">Kiểm tra email để kích hoạt tài khoản</h2>
+                        <input type="submit" value="Gửi lại mail">
+                    </form>
                 </div>
-                <span>hoặc sử dụng tài khoản của bạn</span>
-                <input type="text" placeholder="Tên đăng nhập" name="tentk" value="<?php if (isset($tentk) == true) echo $tentk; ?>" />
-                <input type="password" placeholder="Mật khẩu" name="pass" />
-                <a href="?act=quenmk">Quên mật khâu ?</a>
-                <button type="submit">Đăng nhập</button>
+            <?php } ?>
+            <?php if (isset($messagequen) == true) { ?>
+                <script>
+                    swal("Kiểm tra email để xác nhận tài khoản");
+                </script>
+            <?php } ?>
+            <?php if (isset($messagethanhcong) == true) { ?>
+                <script>
+                    swal(" Đổi mật khẩu thành công ", "Đăng nhập ngay nào", "success");
+                </script>
+            <?php } ?>
+            <?php if (isset($kichhoattk) == true) { ?>
+                <script>
+                    swal("<?= $kichhoattk ?>", "Đăng nhập thôi nào !", "success");
+                </script>
+            <?php } ?>
+            <?php if (isset($error_tk) == true) { ?>
+                <script>
+                    swal("<?= $error_tk ?>", "Nhấp vào đây để tiếp tục !", "error");
+                </script>
+            <?php } ?>
+            <div class="form-container sign-in-container">
+                <form action="?act=dangnhap_" method="post">
+                    <h1>Đăng nhập </h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    </div>
+                    <span>hoặc sử dụng tài khoản của bạn</span>
+                    <input type="text" placeholder="Tên đăng nhập" name="tentk" value="<?php if (isset($tentk) == true) echo $tentk; ?>" />
+                    <input type="password" placeholder="Mật khẩu" name="pass" />
+                    <a href="?act=quenmk">Quên mật khâu ?</a>
+                    <button type="submit">Đăng nhập</button>
 
-                <?php if (isset($error_dn) && ($error_dn != "")) { ?>
-                    <script>
-                        swal("<?= $error_dn ?>", "Nhập lại !", "warning");
-                    </script>
-                <?php  } ?>
-            </form>
-        </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Chào mừng trở lại!</h1>
-                    <p>Để giữ kết nối với chúng tôi bạn hãy đăng nhập</p>
-                    <button class="ghost" id="signIn">Đăng nhập</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Hello, bạn!</h1>
-                    <p>Nếu bạn chưa có tài khoản hãy ấn vào đăng ký</p>
-                    <button class="ghost" id="signUp">Đăng ký</button>
+                    <?php if (isset($error_dn) && ($error_dn != "")) { ?>
+                        <script>
+                            swal("<?= $error_dn ?>", "Nhập lại !", "warning");
+                        </script>
+                    <?php  } ?>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Chào mừng trở lại!</h1>
+                        <p>Để giữ kết nối với chúng tôi bạn hãy đăng nhập</p>
+                        <button class="ghost" id="signIn">Đăng nhập</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hello, bạn!</h1>
+                        <p>Nếu bạn chưa có tài khoản hãy ấn vào đăng ký</p>
+                        <button class="ghost" id="signUp">Đăng ký</button>
+                    </div>
                 </div>
             </div>
-        </div>
-                <?php }
-                else {
-                    require_once $row;
-                }
-                ?>
+        <?php } else {
+            require_once $row;
+        }
+        ?>
     </div>
-   
+
 
     <!-- <script src="jq/jquery.js"></script> -->
     <script>

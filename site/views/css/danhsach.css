@@ -284,7 +284,7 @@ body {
 }
 
 .nav-logo {
-    width: 10%;
+    width: 30%;
     float: left;
     height: 80px;
 }
@@ -358,7 +358,7 @@ body {
 .nav-menu>ul {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .nav-menu>ul>li {
@@ -379,8 +379,11 @@ body {
 }
 
 .menu-logo-bg {
-   width: 80%;
-   margin: 0 auto;
+    width: 90%;
+    /* margin-top: 20px; */
+    position: relative;
+    left: 5%;
+    top: 0;
 }
 
 
@@ -972,9 +975,7 @@ input[type="date"] {
 .imeta-2 {
     font-size: 9pt;
 }
-.mn_bar{
-    display: none;
-}
+
 .col-lg-4 {
     height: 420px;
 }

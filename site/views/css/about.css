@@ -10,9 +10,7 @@ body {
     margin: 0 auto;
 }
 
-.nav-menu3>ul>li>a.cl{
-    color: black;
-}
+
 /* menu */
 
 .menu-logo {
@@ -26,7 +24,7 @@ body {
 }
 
 .nav-logo {
-    width: 10%;
+    width: 30%;
     float: left;
     height: 80px;
 }
@@ -59,7 +57,7 @@ body {
 .nav-menu>ul {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .nav-menu3>ul>li {
@@ -110,7 +108,7 @@ body {
 .nav-menu3>ul {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .nav-menu3>ul>li {
@@ -131,8 +129,11 @@ body {
 }
 
 .menu-logo-bg {
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
+    /* margin-top: 20px; */
+    position: relative;
+    left: 5%;
+    top: 0;
 }
 
 

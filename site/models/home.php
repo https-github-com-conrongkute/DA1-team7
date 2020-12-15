@@ -91,7 +91,117 @@ function getCanho_theosx($sapxep, $loai_can, $page_num, $path_size){
     $sql.="";
     return query($sql);
 }
-
+function getDIentichall($dien_tich, $page_num, $page_size){
+    $start_list = ceil($page_num - 1) * $page_size;
+    if($dien_tich ==2){
+       $sql = "SELECT * FROM can_ho WHERE  dien_tich >= 50 AND dien_tich <= 100 AND an_hien = 1 ORDER BY gia_thue asc LIMIT $start_list,$page_size";
+    }elseif($dien_tich==3){
+        $sql = "SELECT * FROM can_ho WHERE  dien_tich >= 100 AND an_hien = 1 ORDER BY gia_thue asc LIMIT $start_list,$page_size";
+    }else{
+        $sql = "SELECT * FROM can_ho WHERE  dien_tich <= 50 AND an_hien = 1 ORDER BY gia_thue asc LIMIT $start_list,$page_size";
+    }
+    return query($sql);
+}
+function DemcanhotheoDientich($dien_tich){
+    if($dien_tich==2){
+       $sql = "SELECT count(*) as sodong FROM can_ho WHERE dien_tich >=50 AND dien_tich <=100";
+    }elseif($dien_tich==3){
+        $sql = "SELECT count(*) as sodong FROM can_ho WHERE dien_tich >=100";
+    }else{
+        $sql = "SELECT count(*) as sodong FROM can_ho WHERE dien_tich <=100";
+    }
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['sodong'];
+}
+// phan trang khi tim kiem so phong vs
+function getSopVS($so_phong_vs, $page_num, $page_size){
+    $start_list = ceil($page_num - 1) * $page_size;
+    $sql = "SELECT * FROM can_ho WHERE  so_phong_vs = '$so_phong_vs' AND an_hien = 1 LIMIT $start_list,$page_size";
+    return query($sql);
+}
+function DemSop_vs($so_phong_vs){
+    $sql = "SELECT count(*) as sodong FROM can_ho WHERE so_phong_vs = '$so_phong_vs'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['sodong'];
+}
+// Phân trang ki tìm kiếm huong nha
+function getHuong_nha($huong_nha, $page_num, $page_size){
+    $start_list = ceil($page_num - 1) * $page_size;
+    $sql = "SELECT * FROM can_ho WHERE  huong_nha = '$huong_nha' AND an_hien = 1 LIMIT $start_list,$page_size";
+    return query($sql);
+}
+function DemHuong_nha($huong_nha){
+    $sql = "SELECT count(*) as sodong FROM can_ho WHERE huong_nha = '$huong_nha'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['sodong'];
+}
+// phan trang khi tìm kiếm theo huong nha
+function getSop_n($so_phong_ngu,$page_num, $page_size){
+    $start_list = ceil($page_num - 1) * $page_size;
+    $sql = "SELECT * FROM can_ho WHERE  so_phong_ngu = '$so_phong_ngu' AND an_hien = 1 LIMIT $start_list,$page_size";
+    return query($sql);
+}
+function DemchB_spn($so_phong_ngu){
+    $sql = "SELECT count(*) as sodong FROM can_ho WHERE so_phong_ngu = '$so_phong_ngu'";
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['sodong'];
+}
+// phân trang tim kiem theo gia
+function getch_tgia($mucgia, $page_num, $page_size){
+    $start_list = ceil($page_num - 1) * $page_size;
+    if ($mucgia==1) {
+        $sql="SELECT * FROM can_ho WHERE gia_thue < 3000000 LIMIT $start_list,$page_size";
+    }
+    elseif ($mucgia==2) {
+        $sql="SELECT * FROM can_ho WHERE gia_thue => 3000000 AND gia_thue <= 5999999 AND an_hien = 1 LIMIT $start_list,$page_size";
+    }
+    elseif ($mucgia==3) {
+        $sql ="SELECT * FROM can_ho WHERE gia_thue >= 5000000 AND gia_thue <= 8999999 AND an_hien = 1 LIMIT $start_list,$page_size";
+    }
+    elseif ($mucgia==4) {
+        $sql ="SELECT * FROM can_ho WHERE gia_thue >= 8000000 AND gia_thue <= 19999999 AND an_hien = 1 LIMIT $start_list,$page_size";
+    }
+    elseif ($mucgia==5) {
+        $sql ="SELECT * FROM can_ho WHERE gia_thue >= 10000000 AND gia_thue <= 15999999 AND an_hien = 1 LIMIT $start_list,$page_size";
+    }
+    elseif ($mucgia==6) {
+        $sql ="SELECT * FROM can_ho WHERE gia_thue >= 15000000 AND gia_thue <= 29999999 AND an_hien = 1 LIMIT $start_list,$page_size";
+    }
+    elseif ($mucgia==7) {
+        $sql ="SELECT * FROM can_ho WHERE gia_thue >= 20000000 AND an_hien = 1 LIMIT $start_list,$page_size";
+    }
+    return query($sql);
+}
+function Demcanhotheogia2($mucgia){
+    if ($mucgia==1) {
+        $sql ="SELECT count(*) as sodong FROM can_ho WHERE gia_thue < 3000000 AND an_hien = 1";
+    }
+    elseif ($mucgia==2) {
+        $sql ="SELECT count(*) as sodong FROM can_ho WHERE gia_thue >= 3000000 AND gia_thue <= 5999999 AND an_hien = 1";
+    }
+    elseif ($mucgia==3) {
+        $sql ="SELECT count(*) as sodong FROM can_ho WHERE gia_thue >= 5000000 AND gia_thue <= 8999999 AND an_hien = 1";
+    }
+    elseif ($mucgia==4) {
+        $sql ="SELECT count(*) as sodong FROM can_ho WHERE gia_thue >= 8000000 AND gia_thue <= 19999999 AND an_hien = 1";
+    }
+    elseif ($mucgia==5) {
+        $sql ="SELECT count(*) as sodong FROM can_ho WHERE gia_thue >= 10000000 AND gia_thue <= 15999999 AND an_hien = 1";
+    }
+    elseif ($mucgia==6) {
+        $sql ="SELECT count(*) as sodong FROM can_ho WHERE gia_thue >= 15000000 AND gia_thue <= 29999999 AND an_hien = 1";
+    }
+    elseif ($mucgia==7) {
+        $sql ="SELECT count(*) as sodong FROM can_ho WHERE gia_thue >= 20000000";
+    }
+    $row = query($sql);
+    $kq = $row->fetch();
+    return $kq['sodong'];
+}
 //Tìm kiêm căn hộ ở trang đăng tin
 function getCanho_all($loai_can, $key, $ma_quan, $mucgia, $dien_tich, $sophongngu, $sophongvs, $huongnha, $page_num, $path_size){
     $start_list = ceil($page_num - 1) * $path_size;
@@ -358,9 +468,14 @@ function kichhoattk($ma_tk){
     $kq = $row->fetch();
     return $kq['soluong'];
 }
-function Luuthongtintk($ho_ten,$user, $pass, $email){
+// update tk
+function  updatekh($tentk, $ma_tk, $email, $sdt){
+    $sql = "UPDATE khach_hang SET ho_ten='$tentk', email='$email', sdt='$sdt' WHERE ma_tk='$ma_tk'";
+    execute($sql);
+}
+function Luuthongtintk($ho_ten,$user, $pass, $email, $random){
     $conn = getConnection();
-    $sql = "INSERT INTO khach_hang (ho_ten,ten_tk, mat_khau, email) VALUES ('$ho_ten','$user','$pass','$email')";
+    $sql = "INSERT INTO khach_hang (ho_ten,ten_tk, mat_khau, email, random_key) VALUES ('$ho_ten','$user','$pass','$email','$random')";
     $conn->exec($sql);
     $idUser = $conn->lastInsertId();
     return $idUser;
@@ -368,10 +483,6 @@ function Luuthongtintk($ho_ten,$user, $pass, $email){
 // Kích hoạt tk
 function updateThongtintk($idUser, $kich_hoat){
     $sql = "UPDATE khach_hang SET kich_hoat='$kich_hoat' WHERE ma_tk = '$idUser'";
-    execute($sql);
-}
-function update_ttKH($ten, $ma_tk, $email, $sdt){
-    $sql = "UPDATE khach_hang SET ho_ten ='$ten', email='$email', sdt='$sdt' WHERE ma_tk = '$ma_tk'";
     execute($sql);
 }
 // check tài khoản dang nhap
