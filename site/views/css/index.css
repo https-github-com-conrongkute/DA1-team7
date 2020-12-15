@@ -716,6 +716,7 @@ a {
     margin-top: 30px;
     height: 40px;
     float: left;
+    /* font-size: 12pt; */
 }
 
 .neww {
@@ -943,6 +944,7 @@ a {
     line-height: 50px;
     text-align: center;
     padding: 0px 30%;
+    font-family: sans-serif;
 }
 
 .xemthem:hover {

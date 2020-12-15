@@ -85,7 +85,7 @@
 
 
             <div class="navtext">
-                <h1 style="text-shadow: 2px 2px 2px black;">THUÊ CĂN HỘ SIÊU TỐC</h1>
+                <h1 style="text-shadow: 2px 2px 2px black; font-family: sans-serif;">THUÊ CĂN HỘ SIÊU TỐC</h1>
                 <p>Hơn 16.000 nhà riêng, chung cư, căn hộ đang cho thuê. Cam kết luôn có 10 <br> căn hộ trong 48 giờ.</p>
             </div>
             <div class="dangky">

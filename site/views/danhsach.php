@@ -187,10 +187,10 @@
                     ?>   
                       
                     <div class="col-6 col-lg-4">
-                    <a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>">
-                        <div class="item is-feature">
-                            <a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>" class="img tRes_82"> <img class="lazy-hidden" src="../uploaded/<?=$ch["hinh"]?>" > </a>
-                            <div class="divtext ">
+                        <a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>">
+                            <div class="item is-feature">
+                                <a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>" class="img tRes_82"> <img class="lazy-hidden" src="../uploaded/<?=$ch["hinh"]?>" > </a>
+                                <div class="divtext ">
                                 <h2 class="height-search"><a href="?ctrl=home&act=chitiet&ma_can=<?=$ch["ma_can"]?>" class="title"><?= $ch['ten_can_ho'] ?></a></h2>
                                 <div class="imeta-1"> <b><?= $ch['dia_chi'] ?></b> </div>
                                 <div class="imeta-3"> <span><i class="fa fa-bath"></i> <strong><?=$ch['so_phong_vs']?></strong></span> <span><i class="fa fa-bed"></i> <strong><?=$ch['so_phong_ngu']?></strong></span> <span><i class="fa fa-building"></i> <strong><?=$ch['tang']?></strong></span> </div>
@@ -202,8 +202,8 @@
                                     <div link="thue/can-ho/hcm/quan-3/id277377" listingid="277377" object='{"id":277377 }' class="btnlike  save-listing save-listing-277377"> <span> </span> </div>
                                 </div>
                             </div>
-                            <a href="#"> </a>
-                        </div>
+                            
+                            </div>
                         </a>
                     </div>
                    
@@ -362,7 +362,7 @@
     </div>
     <div class="footer">
         <div class="box4 b1">
-            <img src="./uploaded/logo.png" alt="">
+            <img src="../uploaded/logo.png" alt="">
             <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
             <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
         </div>

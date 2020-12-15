@@ -293,7 +293,7 @@
     </div>
     <div class="footer">
         <div class="box4 b1">
-            <img src="./uploaded/logo.png" alt="">
+            <img src="../uploaded/logo.png" alt="">
             <p>Golden công ty dịch vụ BĐS hiện đại, cung cấp nguồn bất động sản an toàn, 100% được thẩm định pháp lý cho người dùng có nhu cầu mua, bán và thuê BĐS.</p>
             <p>Tầng 4, Tòa nhà Flemington, 182 Lê Đại Hành, Phường 15, Quận 11, TP. Hồ Chí Minh</p>
         </div>

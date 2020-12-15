@@ -526,7 +526,7 @@ function lichsu($id){
     return query($sql);
 }
 function canho($id){
-    $sql="SELECT * FROM can_ho WHERE ma_can='$id' and an_hien= 1";
+    $sql="SELECT * FROM can_ho WHERE ma_can='$id'";
     return queryOne($sql);
 }
 function khachhang($id){
@@ -578,8 +578,8 @@ function themcanho($ma_tk, $ma_loai, $ma_quan,$ma_phuong, $dia_chi, $ten_can_ho,
     execute($sql);
 }
 // update căn hộ
-function  Update_chdt($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien,$ma_can){
-    $sql = "UPDATE can_ho SET ma_tk='$ma_tk', ma_quan='$ma_quan', id='$ma_phuong', ma_loai='$ma_loai', dia_chi='$dia_chi', ten_can_ho='$ten_can_ho', nam_xd='$nam_xd', dien_tich='$dien_tich', tang='$tang', huong_nha='$huong_nha',tien_ich='$tien_ich', chi_phi_khac='$chi_phi' , so_phong_ngu='$so_phong_ngu', so_phong_vs='$so_phong_vs', gia_thue='$gia_thue',hinh='$hinh', hinha='$hinha', hinhb='$hinhb', hinhc='$hinhc',an_hien='$an_hien', ghi_chu='$ghi_chu' WHERE ma_can='$ma_can'";
+function  Update_chdt($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich,$ma_can){
+    $sql = "UPDATE can_ho SET ma_tk='$ma_tk', ma_quan='$ma_quan', id='$ma_phuong', ma_loai='$ma_loai', dia_chi='$dia_chi', ten_can_ho='$ten_can_ho', nam_xd='$nam_xd', dien_tich='$dien_tich', tang='$tang', huong_nha='$huong_nha',tien_ich='$tien_ich', chi_phi_khac='$chi_phi' , so_phong_ngu='$so_phong_ngu', so_phong_vs='$so_phong_vs', gia_thue='$gia_thue',hinh='$hinh', hinha='$hinha', hinhb='$hinhb', hinhc='$hinhc', ghi_chu='$ghi_chu' WHERE ma_can='$ma_can'";
     execute($sql);
 }
 function datlichid($ma_can, $ma_tk, $ngay_xem, $ngay_dat){

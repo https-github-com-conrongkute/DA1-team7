@@ -200,8 +200,8 @@
             </div>
         </div>
         <div class="dangtin">
-            <h3>ĐĂNG TIN CĂN HỘ</h3>
-            <form onsubmit="return validateform()" name="myform" action="?ctrl=home&act=update_ch&ma_tk=<?= $_SESSION["id"] ?>" class="formdangtin" method="POST" enctype="multipart/form-data">
+            <h3 style="font-family: sans-serif;">ĐĂNG TIN CĂN HỘ</h3>
+            <form onsubmit="return validateform()" name="myform" action="?act=update_ch&ma_tk=<?= $_SESSION["id"] ?>" class="formdangtin" method="POST" enctype="multipart/form-data">
                 <div class="row thongtincan">
                     <h4 class="w-75 ml-5">* Thông tin căn hộ</h4>
                     <div class="col-6 ml-5">
@@ -353,7 +353,7 @@
                                 <div class="col-6 anh">
                                     <input type="file" name="hinh" class="form-control " id="img" style="overflow: hidden; display: none;">
                                     <label for="img" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 30%; margin: 0 auto;" alt=""></label>
-                                    <div class="hinhanh"><img src="../uploaded/<?= $can_ho['hinh'] ?>" alt="" id="loadha" class="loadh1" style="width: 35%; height: 70px; object-fit: cover;"><input type="hidden" name="img" value="<?=$can_ho['hinh']?>"></div>
+                                    <div class="hinhanh"><img src="../uploaded/<?=$can_ho['hinh'] ?>" alt="" id="loadha" class="loadh1" style="width: 35%; height: 70px; object-fit: cover;"><input type="hidden" name="img" value="<?=$can_ho['hinh']?>"></div>
                                     <script>
                                         // Load hình ảnh lên khi chọn file upload
                                         $(document).ready(function() {
@@ -376,7 +376,7 @@
                                 <div class="col-6">
                                     <input type="file" name="hinha" class="form-control " id="img1" style="overflow: hidden; display: none;">
                                     <label for="img1" class="w-100 tailen"><img src="../uploaded/uploadhinh.png" style="width: 30%; margin: 0 auto;" alt=""></label>
-                                    <div class="hinhanh"><img src="../uploaded/<?= $can_ho['hinha'] ?>" alt="" id="loadha1" class="loadh1" style="width: 35%; height: 70px; object-fit: cover;"><input type="hidden" name="imga" value="<?=$can_ho['hinha']?>"></div>
+                                    <div class="hinhanh"><img src="../uploaded/<?=$can_ho['hinha'] ?>" alt="" id="loadha1" class="loadh1" style="width: 35%; height: 70px; object-fit: cover;"><input type="hidden" name="imga" value="<?=$can_ho['hinha']?>"></div>
                                     <script>
                                         // Load hình ảnh lên khi chọn file upload
                                         $(document).ready(function() {
@@ -493,32 +493,26 @@
         </div>
         <div class="box4 b2">
             <div class="tieude4">
-                <h4>Danh sách thuê nhà</h4>
+                <h4>Danh sách các quận</h4>
             </div>
             <div class="textquan">
                 <div class="quan1 l1">
-                    <P>Quận 1</P>
-                    <P>Quận 2</P>
-                    <P>Quận 3</P>
-                    <P>Quận 4</P>
-                    <P>Quận 5</P>
-                    <P>Quận 6</P>
-                    <P>Quận 7</P>
-                    <P>Quận 8</P>
-                    <P>Quận 9</P>
-                    <P>Quận 10</P>
+                    <?php foreach ($quanall as $q) {
+                        $stt += 1; ?>
+                        <p><a href="?ctrl=home&act=danhsach&ma_quan=<?= $q["ma_quan"]?>"><?= $q["ten_quan"]?></a></p>
+
+                        <?php
+                        if ($stt == 10) {
+                        ?>
                 </div>
                 <div class="quan1 l2">
-                    <P>Quận 11</P>
-                    <P>Quận 12</P>
-                    <P>Quận Bình Thạnh</P>
-                    <P>Quận Phú Nhuận</P>
-                    <p>Quận Tân Bình</p>
-                    <p>Quận Tân Phú</p>
-                    <p>Quận Bình Tân</p>
-                    <p>Huyện Nhà Bè</p>
-                    <p>Huyện Hóc Môn</p>
-                    <p>Huyện Bình Chánh</p>
+            <?php
+                        }
+                    } ?>
+
+            <!-- </div>
+                <div class="quan1 l2"> -->
+
                 </div>
             </div>
         </div>

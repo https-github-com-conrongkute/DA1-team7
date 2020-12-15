@@ -195,7 +195,7 @@
             </div>
         </div>
         <div class="dangtin">
-            <h3>ĐĂNG TIN CĂN HỘ</h3>
+            <h3 style="font-family: sans-serif;">ĐĂNG TIN CĂN HỘ</h3>
             <form onsubmit="return validateform()" name="myform" action="?ctrl=home&act=dangtincanho&ma_tk=<?=$_SESSION["id"]?>" class="formdangtin" method="POST" enctype="multipart/form-data">
                 <div class="row thongtincan">
                     <h4 class="w-75 ml-5">* Thông tin căn hộ</h4>

@@ -18,10 +18,10 @@ switch ($act) {
             if (isset($_POST["tenloai"])&&$_POST["tenloai"]!="") {
                 $tenloai=trim(strip_tags( $_POST["tenloai"]));
                 themloaicanho($tenloai);
-            header("location: ".ADMIN_URL."/?ctrl=loai_can&act=index");
+            header("location: /admin/?ctrl=loai_can&act=index");
             }
             else{
-                header("location: ".ADMIN_URL."/?ctrl=loai_can&act=addnew");
+                header("location: /admin/?ctrl=loai_can&act=addnew");
             }
             break;
         
@@ -38,14 +38,14 @@ switch ($act) {
             settype($ma_loai, "int");
             $tenloai=trim(strip_tags( $_POST["tenloai"]));
             capnhaploaican($ma_loai, $tenloai);
-            header("location: ".ADMIN_URL."/?ctrl=loai_can&act=index");
+            header("location: /admin/?ctrl=loai_can&act=index");
         break;
 
         case 'delete':
             $ma_loai=$_GET["ma_loai"];
             settype($ma_loai, "int");
             deleteloaican($ma_loai);
-            header("location: ".ADMIN_URL."/?ctrl=loai_can&act=index");
+            header("location: /admin/?ctrl=loai_can&act=index");
         break;
 
 }

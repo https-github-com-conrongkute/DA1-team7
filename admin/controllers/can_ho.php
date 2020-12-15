@@ -22,6 +22,7 @@ switch ($act) {
         break;
 
     case 'insert':
+        if(isset($_POST["canho"])){
         if (isset($_POST["ten_can_ho"]) && $_POST["ten_can_ho"] != "") {
             $ten_can_ho = trim(strip_tags($_POST["ten_can_ho"]));
             $ma_loai = $_POST["ma_loai"];
@@ -88,6 +89,7 @@ switch ($act) {
         } else {
             header("location: /admin/?ctrl=can_ho&act=addnew");
         }
+    }
         break;
 
     case 'edit':

@@ -66,3 +66,9 @@ function validateform() {
     }
 
 }
+// onsubmit = "return validateform()"
+// name = "myform"
+// <
+// script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js" > < /script> <
+// link rel = "stylesheet"
+// href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css" >

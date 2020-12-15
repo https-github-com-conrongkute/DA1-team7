@@ -55,7 +55,7 @@
                                 }
                                 ?></p>    
                             </td>
-                                <td><a href="javascript:Delete('<?=SITE_URL?>/?ctrl=home&act=deletedatlich&ma_dat=<?=$ds['ma_dat']?>')" style="color: white; background-color: orangered; padding: 2px 5px; border-radius: 10px;">Hủy lịch</a></td>
+                                <td><a href="javascript:Delete('?act=deletedatlich&ma_dat=<?=$ds['ma_dat']?>')" style="color: white; background-color: orangered; padding: 2px 5px; border-radius: 10px;">Hủy lịch</a></td>
                                 
                             </tr>
                             <?php

@@ -331,6 +331,7 @@ switch ($act) {
     $quanzzz = getallquan();
     $loaican = getallloai_can();
     $loaicanz = getallloai_can();
+    
 
     require_once 'views/danhsach.php';
     break;
@@ -376,6 +377,7 @@ switch ($act) {
     $quan = getallquan();
     $loaican = getallloai_can();
     $can_ho = canho($ma_can);
+    $quanall= getallquan();
     require_once 'views/can_ho-edit.php';
     break;
     // update căn hô
@@ -445,10 +447,10 @@ switch ($act) {
       settype($ma_tk, "int");
       settype($ma_phuong, "int");
       settype($huong_nha, "int");
-      Update_chdt($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $an_hien, $ma_can);
-      header("location: ?ctrl=home&act=ch-dd&ma_tk=" . $_SESSION["id"] . "");
+      Update_chdt($ma_tk, $ma_loai, $ma_quan, $ma_phuong, $dia_chi, $ten_can_ho, $nam_xd, $dien_tich, $tang, $so_phong_ngu, $so_phong_vs, $gia_thue, $chi_phi, $huong_nha, $hinh, $hinha, $hinhb, $hinhc, $ghi_chu, $tien_ich, $ma_can);
+      header("location: ?act=ch-dd&ma_tk=" . $_SESSION["id"] . "");
     } else {
-      header("location: ?ctrl=home&act=edit_ch");
+      header("location: ?act=edit_ch");
     }
     # code...
     break;
@@ -614,7 +616,7 @@ switch ($act) {
     $ma_can = $_GET['ma_can'];
     settype($ma_can, 'int');
     DeleteCanho_dd($ma_can);
-    header('location: index.php?act=ch-dd&ma_tk=' . $_SESSION['id'] . '');
+    header('location: ?act=ch-dd&ma_tk=' . $_SESSION['id'] . '');
     break;
 
     //Hủy lịch đả đặt
@@ -622,7 +624,7 @@ switch ($act) {
     $ma_dat = $_GET["ma_dat"];
     xoadatlich($ma_dat);
     $thongbao = "Hủy thành công";
-    header("location: ?ctrl=home&act=lichsu&ma_tk=" . $_SESSION['id'] . "");
+    header("location: ?act=lichsu&ma_tk=" . $_SESSION['id'] . "");
     break;
 
     //tìm kiếm nhanh
@@ -643,6 +645,7 @@ switch ($act) {
       $quanz = getallquan();
       $quanzz = getallquan();
       $loaican = getallloai_can();
+      $loaicanz=getallloai_can();
       require_once 'views/danhsach.php';
     }
     break;

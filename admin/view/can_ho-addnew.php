@@ -1,7 +1,7 @@
 <div class="right__title">Bảng căn hộ</div>
 <p class="right__desc">Chèn khách hàng</p>
 <div class="right__formWrapper">
-    <form action="/admin/?ctrl=can_ho&act=insert" method="post" enctype="multipart/form-data">
+    <form action="/admin/?ctrl=can_ho&act=insert"  onsubmit = "return validateformedit()" name ="myformedit" method="post" enctype="multipart/form-data">
     <input type="hidden" name="ma_tk" value="<?=$_SESSION["sid"]?>">
         <div class="right__inputWrapper">
             <label for="title">Tiêu đề cho thuê</label>
@@ -75,7 +75,7 @@
         </div>
         <div class="col-6">
             <label for="title">Số phòng vệ sinh</label>
-            <input type="number" name="so_phong_vs" class="form-control" id="so_phong_ngu" >
+            <input type="number" name="so_phong_vs" class="form-control" id="so_phong_vs" >
             <!-- <span id="sdt"></span> -->
         </div>
         </div>
@@ -212,7 +212,7 @@
         </div>
         <div class="right__inputWrapper">
             <label for="title">Các tiện ích</label>
-            <textarea name="noi_dung" id="" cols="30" rows="3" ></textarea>
+            <textarea name="noi_dung"  cols="30" rows="3" id="noi_dung" ></textarea>
             <!-- <span id="email"></span> -->
         </div>
 
@@ -221,7 +221,7 @@
             <label for="" style="margin-right: 10px;"><input type="radio" name="an_hien" id="" style="margin-right: 5px;" value="1" checked>Hiện</label>
             <label for=""><input type="radio" name="an_hien" id="" style="margin-right: 5px;" value="0">Ẩn</label>
         </div>
-        <button class="btn" type="submit">Thêm căn hộ</button>
+        <input class="btn" name="canho" type="submit" value="Thêm căn hộ">
     </form>
 
 </div>
@@ -236,4 +236,71 @@
         });
     });
 </script>
+<script>
+    function validateformedit() {
+    var ten = document.myformedit.ten_can_ho.value;
+    var gia = document.myformedit.gia_thue.value;
+    var dia_chi = document.myformedit.dia_chi.value;
+    var dien_tich = document.myformedit.dien_tich.value;
+    var tang = document.myformedit.tang.value;
+    var so_phong_ngu = document.myformedit.so_phong_ngu.value;
+    var so_phong_vs = document.myformedit.so_phong_vs.value;
+    var hinh = document.myformedit.hinh.value;
+    var hinha = document.myformedit.hinha.value;
+    var hinhb = document.myformedit.hinhb.value;
+    var hinhc = document.myformedit.hinhc.value;
+    var tien_ich = document.myformedit.noi_dung.value;
+
+    if (ten == null || ten == "" || ten.length < 10) {
+        swal("Tiêu đề căn hộ không hợp lệ", "Vui lòng đặt lại !", "warning");
+        return false;
+    }
+    else if (dia_chi == null || dia_chi == "" || dia_chi.length < 10) {
+        swal("Địa chỉ không hợp lệ", "Vui lòng nhập lại !", "warning");
+        return false;
+    
+     } else if (Number(dien_tich) < 1) {
+        swal("Diện tích không hợp lệ", "Vui lòng đặt lại !", "warning");
+        return false;
+    } else if (Number(tang) < 0 || tang == "") {
+        swal("Số tầng không hợp lệ", "Vui lòng đặt lại !", "warning");
+        return false;
+    } else if (Number(so_phong_ngu) < 0 || so_phong_ngu == "") {
+        swal("Số phòng ngủ hợp lệ", "Vui lòng đặt lại !", "warning");
+        return false;
+    }
+    
+    else if (Number(so_phong_vs) < 0 || so_phong_vs == "") {
+        swal("Số phòng vệ sinh không hợp lệ", "Vui lòng đặt lại !", "warning");
+        return false;
+    }
+    else if (Number(gia) < 100000) {
+        swal("Giá thuê không hợp lệ", "Vui lòng đặt lại !", "warning");
+        return false;
+    }
+     else if (hinh == null || hinh == "") {
+        swal("Bạn chưa tải hình 1", "Vui lòng tải hình !", "warning");
+        return false;
+    } else if (hinha == null || hinha == "") {
+        swal("Bạn chưa tải hình 2", "Vui lòng tải hình !", "warning");
+        return false;
+    } else if (hinhb == null || hinhb == "") {
+        swal("Bạn chưa tải hình 3", "Vui lòng tải hình !", "warning");
+        return false;
+    } else if (hinhc == null || hinhc == "") {
+        swal("Bạn chưa tải hình 4", "Vui lòng tải hình !", "warning");
+        return false;
+    }
+    else if (tien_ich == null || tien_ich == "") {
+        swal("Tiện ích rỗng", "Vui lòng nhập lại !", "warning");
+        return false;
+    } 
+
+}
+// onsubmit = "return validateform()" name = "myformedit"
+
+</script>
+
+
+
 
